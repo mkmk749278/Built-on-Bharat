@@ -63,6 +63,9 @@ Then:
   Google Drive connector. The `Creator` folder belongs to the other channel: never write there.
 - **All work lands on `main`.** Each session works on its own branch, opens a PR to `main` and merges it the same day.
   Sessions can't delete branches: tell the owner which ones to delete.
+- **Standing permission (owner, 2026-10-24):** open and archive cloud sessions and run any command without asking
+  each time, until the owner says no (usage limits). Allow rules are in `.claude/settings.json`. Still ask before
+  anything paid, anything outward-facing beyond our repos and Drive, and anything destructive.
 - Build in phases. At the end of each phase, stop and report what was built, what was checked and what is left.
 - Once the owner approves a cut, stop editing it.
 - **Package first:** the title, thumbnail idea and the search terms (from YouTube autocomplete `gl=IN` and the top
