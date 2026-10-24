@@ -204,7 +204,7 @@ That flight is the start of an airline. Tata Airlines. Later, Air India.
 For twenty years he builds it, plane by plane. But in nineteen fifty three, the government takes over the airlines.
 ```
 
-**Block 8 of 15** · 1451 characters · save as `vo/tata-history-b08.mp3`
+**Block 8 of 15** · 1450 characters · save as `vo/tata-history-b08.mp3`
 
 ```
 J.R.D. thinks it's a mistake, and he says so. So what does he do when they ask him to stay on and run Air India?
@@ -233,9 +233,7 @@ But not every Tata story ends kindly.
 
 February, nineteen seventy eight. A new government removes J.R.D. from Air India. He is not even told directly. He hears it from the man who is replacing him.
 
-That night, someone asks how he feels.
-
-He says, I feel as you would feel if your favourite child was taken away.
+That night, someone asks how he feels. He says, I feel as you would feel if your favourite child was taken away.
 ```
 
 **Block 9 of 15** · 1379 characters · save as `vo/tata-history-b09.mp3`
