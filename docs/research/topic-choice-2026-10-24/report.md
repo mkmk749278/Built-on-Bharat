@@ -1,5 +1,11 @@
 # First film: which topic? (research, 2026-10-24)
 
+> **Update, same day:** the owner sent his own Tata research (a fact-checked dossier for "the entire history of Tata
+> in 20 minutes", `docs/research/owner-tata-2026-10-24/`). A second demand check (`topics2.tsv`, `raw2/`) showed the
+> full history has even stronger demand ("tata group history in english", "who owns tata now", "tata trusts vs tata
+> sons") with old English supply (7–10 years) and a live news window. **Owner's decision:** film 1 is the full Tata
+> history, with the diamond below as its spine, ending on the open 2026 question. Folder: `films/tata-history/`.
+
 **Answer.** Film 1 is **Tata Steel and Jamshedpur**, told through one object: the diamond a couple handed to a bank in
 1924 to keep India's first steel plant alive. It has proven demand, no cinematic English film yet, the strongest fit
 with our brand world (furnaces, sparks, metal, blueprints), and the most Indian humanity of all 26 candidates: eight
