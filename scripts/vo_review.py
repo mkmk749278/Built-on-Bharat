@@ -150,7 +150,9 @@ def transcribe(path: str, m) -> list[dict]:
         clip = Path(path).with_name(Path(path).stem + "_retry.wav")
         subprocess.run(["ffmpeg", "-v", "error", "-y", "-ss", f"{t0:.2f}", "-to", f"{t1:.2f}", "-i", path, str(clip)],
                        check=True)
+        lo_t, hi_t = words[a]["start"] - 0.1, words[b - 1]["end"] + 0.1
         again = [{**w, "start": w["start"] + t0, "end": w["end"] + t0} for w in transcribe_once(str(clip), m)]
+        again = [w for w in again if w["start"] >= lo_t and w["end"] <= hi_t]  # the padding catches neighbours
         clip.unlink()
         if len(again) > b - a:  # it found the missing words
             words[a:b] = again
@@ -172,7 +174,16 @@ def transcribe_once(path: str, m) -> list[dict]:
                 words[-1]["end"] = w.end
             else:
                 words.append({"w": t, "start": w.start, "end": w.end})
-    return words
+    # money spans words ("Rs" "21,000", "$2.3" "billion"): one word, so the normaliser sees the whole amount
+    out = []
+    for w in words:
+        if out and (re.fullmatch(r"(?i)rs\.?|₹|\$", out[-1]["w"]) or (
+                re.search(r"(?i)^(rs\.?|₹|\$)\s*[\d,.]+$", out[-1]["w"])
+                and re.fullmatch(r"(?i)(thousand|lakh|crore|million|billion|trillion)[.,?]?", w["w"]))):
+            out[-1] = {"w": out[-1]["w"] + " " + w["w"], "start": out[-1]["start"], "end": w["end"]}
+        else:
+            out.append(w)
+    return out
 
 
 def voice_features(y: np.ndarray, sr: int) -> dict:
