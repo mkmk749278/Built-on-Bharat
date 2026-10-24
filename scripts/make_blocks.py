@@ -20,6 +20,8 @@ def main() -> None:
     ap.add_argument("slug")
     ap.add_argument("out")
     ap.add_argument("--max", type=int, default=1500)
+    ap.add_argument("--voice", default=VOICE, help="voice and settings line for the block headings")
+    ap.add_argument("--suffix", default="", help="file-name suffix, e.g. -perf for the tagged performance take")
     a = ap.parse_args()
     beats: list[tuple[bool, str]] = []  # (chapter break before this beat, text)
     brk = True
@@ -46,11 +48,11 @@ def main() -> None:
         size += add
     if cur:
         blocks.append(cur)
-    out = [f"# Recording blocks: {a.slug}\n", f"{len(blocks)} blocks · voice: {VOICE}\n"]
+    out = [f"# Recording blocks: {a.slug}{a.suffix}\n", f"{len(blocks)} blocks · voice: {a.voice}\n"]
     for n, b in enumerate(blocks, 1):
         body = "\n\n".join(b)
         assert len(body) <= a.max, f"block {n} is {len(body)} characters"
-        out.append(f"**Block {n} of {len(blocks)}** · {len(body)} characters · save as `vo/{a.slug}-b{n:02d}.mp3`\n")
+        out.append(f"**Block {n} of {len(blocks)}** · {len(body)} characters · save as `vo/{a.slug}{a.suffix}-b{n:02d}.mp3`\n")
         out.append("```\n" + body + "\n```\n")
     Path(a.out).write_text("\n".join(out))
     print(f"{len(blocks)} blocks, sizes: {[len(chr(10).join(b)) for b in blocks]}")

@@ -416,25 +416,72 @@ paragraph. Then check each paragraph:
 - [ ] Can it go without the film losing anything? Then it goes.
 - [ ] Does the last line pull into the next paragraph?
 
-### 7.5 VO text format (for the TTS)
-- Numbers and amounts as words ("nineteen oh seven", "two thousand crore rupees"); no digits, `₹`, `!`, double quotes,
-  brackets, `&` or semicolons. Units in words.
-- **Letter-by-letter acronyms with dots** (U.P.I., R.B.I., O.N.G.C., H.A.L.); acronyms said as a word stay a word (Isro,
-  Amul, Nasscom). Names the TTS may misread get a phonetic spelling in the VO text, listed in the film's
-  `script/phonetics.md` (Indian names especially: check each one by ear on the first take).
-- One beat per line; a blank line between beats in the recording blocks (the engine breathes there).
-- No audio tags or emotion cues in the text; the words and punctuation carry the feeling.
-- Pace: **varied, not fixed**. About 140–155 words a minute on average, slower in the emotional moments, quicker in
-  the chase. Measure on the real take.
+### 7.5 Writing for Eleven v4 and Akash: text that performs (owner, 2026-10-24)
+> "Fully understand ElevenLabs, the v4 model, Akash English confident and natural voice; optimise our text for that,
+> to take breaths, long sentence reading, where to speak louder, where to speak low, depth in bass, to get a more
+> realistic voice." (owner, 2026-10-24)
+
+**What the model does (ElevenLabs' own docs and launch post, read 2026-10-24; sources below).**
+- Eleven v4 is a new architecture that "can interpret the intended tone, how the speech should be paced, the character
+  of the writing, and context from the text". **So the words and their order are the first direction**: a well-written
+  scene performs itself; a report-like paragraph drones (Creator's measured lesson, §7.3).
+- **Audio tags in square brackets** steer delivery, and v4 "follows audio tags and direction prompts more accurately than
+  prior models". Tags are free-form plain English: a named emotion (`[curious]`, `[sad]`), a delivery (`[whispers]`,
+  `[slowly]`, `[rushed]`), a reaction (`[sighs]`, `[exhales]`), a pause (`[pause]`, `[long pause]`) or a description
+  of the voice (`[low, steady voice]`, `[low, gravelly voice]`). A tag works best **right before the words it changes**;
+  two can be stacked (`[pause] [softly]`). "Tags land more readily when the delivery is already in the voice's training
+  data": a confident, natural narrator like Akash takes narrator directions (low, warm, serious, curious, quiet pride)
+  far better than acting ones (crying, shouting).
+- **Punctuation:** ellipses "add pauses and weight"; "capitalization increases emphasis"; dashes give short, less
+  predictable pauses; standard punctuation sets the rhythm. **No SSML break tags** in v3/v4.
+- **Pronunciation:** v4 has improved IPA support between slashes ((for example a name written in IPA)); use it only for a name the first
+  take gets wrong, and check it by ear.
+- **Settings:** lower stability = more expressive and more variation between takes; higher = steadier and more
+  uniform. v4 guides report no style or speed sliders in v4 (if the app still shows them, leave style at 0 and speed at
+  1.0). Generate **2–3 takes** of a block and keep the best; tags are guidance, not guarantees.
+
+**How we write for it (the performance layer).** The fact-checked `vo.txt` stays tag-free; a second file,
+`vo_performance.txt`, adds direction from `performance_map.tsv`. A script checks that the spoken words are identical.
+1. **Breath:** a blank line between beats (the engine resets there); one beat = one breath (§7.3, ≤ 25 words); long
+   flowing sentences are fine when commas sit where a person would breathe. `[exhales]` only after the 2–3 heaviest
+   moments of a film (it reads as a real breath, overuse sounds like sighing).
+2. **Low and high (the dynamics map):** each chapter opens **low and steady** (`[low, steady voice]`), the gravity
+   that gives a narrator depth. Intimate or sad beats go **soft** (`[softly]`, `[quietly]`). Proud and human beats go
+   **warm** (`[warmly]`, `[with quiet pride]`). Questions to the viewer go **curious**. Turns and war go **up**
+   (`[with energy]`, `[building intensity]`, `[urgent]`). Light beats go **dry or amused**. Never shout, never whisper a
+   fact the viewer must hear on a noisy bus.
+3. **Stress:** CAPITALS on **one word** at most in a beat, and only where a person would hit it ("ANY rich list", "HER
+   diamond"); 3–6 in a whole film.
+4. **Silence:** `[pause]` before a reveal, `[long pause]` before a chapter turn or a solemn passage; `...` for a held
+   breath inside a sentence. The music edit does the rest (§12).
+5. **Density:** about one tag per 40–50 words. A tag on every line makes the read theatrical and raises the risk of a
+   tag being spoken aloud.
+6. **Depth and bass** come mostly from the voice, so pick the voice for it (§7.6). In the mix: a gentle low shelf
+   (+1.5 to +2.5 dB around 120 Hz), a high-pass at 70 Hz to remove rumble, a de-esser around 6–8 kHz, light compression
+   (2:1 to 3:1) and room tone so the voice sits in a space, not in a vacuum. Never pitch-shift a voice.
+7. **Text rules still apply:** numbers and amounts as words, no digits, `₹`, `!`, double quotes or semicolons;
+   letter-by-letter acronyms with dots (U.P.I., R.B.I., T.C.S.), word acronyms as words (Isro); names the first take
+   gets wrong get a phonetic spelling or IPA in `script/phonetics.md`.
+
+**The test pack (before the full recording).** Block 1 is recorded three ways: (A) the clean text at stability 0.65,
+(B) the tagged text at stability 0.50, (C) the tagged text at 0.40. 2 takes each. The owner picks by ear; record the
+winner and settings here. If any tag is spoken aloud, move it closer to its words or describe the voice instead
+(`[low, steady voice]` rather than `[deep]`); if it keeps happening, record the clean blocks.
+
+Sources: ElevenLabs TTS best practices (https://elevenlabs.io/docs/overview/capabilities/text-to-speech/best-practices),
+Eleven v4 launch (https://elevenlabs.io/blog/eleven-v4), Eleven v3 prompting (https://elevenlabs.io/docs/best-practices/prompting/eleven-v3),
+Morphic's v4 guide (https://morphic.com/resources/how-to/eleven-v4-guide, third-party: 3,000 characters per request,
+tag placement, no style/speed sliders), and Creator's measured Akash lessons (pitch drop on uniform sentences,
+acronyms, ~10% faster than estimates).
 
 ### 7.6 Voice and performance
-**Akash for now (owner, 2026-10-24),** on Eleven v4; a thorough voice-library search comes later (§17). A real Indian voice builds
-trust faster (Creator research, 2026-10-21); never synthesise a real person's voice. **Choose the voice by its acting:**
-audition 3–4 voices on the same storyteller paragraph (§7.1) and listen for warmth, range (can it whisper, can it
-lift), and whether it varies pace by itself. Creator uses Akash on Eleven v4 for explainers (stability 0.65,
-similarity 0.85, style 0.15); a story voice may need lower stability for more expression: test 0.45–0.65 by ear and
-record the pick here. Generate in short blocks; **regenerate any line that comes out flat**, and keep the best take of
-each block. Never ship a flat take because the rest of the block is good: split the block instead.
+**Akash for now (owner, 2026-10-24),** on Eleven v4; a thorough voice-library search comes later (§17). Settings for
+the tagged read: **stability 0.50** (more life than Creator's 0.65, which suits an explainer), similarity 0.80, speed
+1.0, speaker boost on; style 0 if the app shows it. Confirm with the test pack (§7.5). When the search happens, audition
+on the same storyteller paragraph for warmth, depth (chest resonance in the low register), range (can it go soft and
+lift) and whether it varies pace on its own. A real Indian voice builds trust faster (Creator research, 2026-10-21);
+never synthesise a real person's voice. Generate in short blocks; regenerate any line that comes out flat, and keep the
+best take of each block.
 
 ### 7.7 Recording blocks in the chat
 Whenever a VO is ready or changes, the reply carries **every block as its own fenced code block** (one-tap copy on the
