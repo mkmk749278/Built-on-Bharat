@@ -39,6 +39,10 @@ TAG_WORDS = {"pause", "long", "softly", "warmly", "curious", "serious", "amused"
              "voice", "low", "steady", "quietly", "slowly", "dry", "energy"}
 ONES = "zero one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen " \
        "seventeen eighteen nineteen".split()
+ORDINAL = dict(enumerate("_ first second third fourth fifth sixth seventh eighth ninth tenth eleventh twelfth "
+                         "thirteenth fourteenth fifteenth sixteenth seventeenth eighteenth nineteenth twentieth "
+                         "twenty-first twenty-second twenty-third twenty-fourth twenty-fifth twenty-sixth "
+                         "twenty-seventh twenty-eighth twenty-ninth thirtieth thirty-first".split()))
 TENS = "_ _ twenty thirty forty fifty sixty seventy eighty ninety".split()
 
 
@@ -65,6 +69,7 @@ def say_int(n: int, year: bool = True) -> str:
     return say_int(cr) + " crore" + ("" if r == 0 else " " + say_int(r))
 
 
+NUM_WORDS = set(ONES) | set(TENS[2:]) | {"hundred", "thousand", "lakh", "crore", "million", "billion", "oh", "point"}
 WIN_FAR = 0.05  # a 3 s window this far from the reference voice is worth a listen (same-voice windows sit under ~0.04)
 PAUSE = "\x00"  # marks a pause cue ([pause], [long pause], ...) in the script
 
@@ -75,6 +80,11 @@ def norm_words(text: str, cues: bool = False) -> list[str]:
     text = re.sub(r"\[(?:long )?pause\]|\.\.\.|\u2026", f" {PAUSE} " if cues else " ", text)
     text = re.sub(r"\[[^\]]+\]", " ", text)                      # tags are not spoken
     text = text.replace("%", " percent")
+    text = re.sub(r"\b(?:Rs\.?|INR|₹)\s*([\d,]+(?:\.\d+)?)(\s+(?:lakh|crore|thousand|million|billion))?",
+                  r"\1\2 rupees", text)                          # Rs 21,000 -> 21,000 rupees
+    text = re.sub(r"\$\s*([\d,]+(?:\.\d+)?)(\s+(?:thousand|million|billion|trillion))?", r"\1\2 dollars", text)
+    text = re.sub(r"\b(\d+)(st|nd|rd|th)\b", lambda m: ORDINAL.get(int(m.group(1)), m.group(1)), text)
+    text = re.sub(r"(\d)\.(\d)", lambda m: m.group(1) + " point " + " ".join(m.group(2)), text)
     text = re.sub(r"\d{1,3}(?:,\d{2,3})+", lambda m: " " + say_int(int(m.group(0).replace(",", "")), year=False) + " ",
                   text)  # 1,500 is a quantity, never a year
     text = re.sub(r"\d+", lambda m: " " + say_int(int(m.group(0))) + " ", text)
@@ -127,6 +137,30 @@ def pauses(path: str, thresh: float = -35, dur: float = 0.25) -> list[tuple[floa
 
 
 def transcribe(path: str, m) -> list[dict]:
+    """Word list with times. The transcriber sometimes stretches one word over a second or more and skips the words
+    under it (a 7-word line vanished this way, 2026-10-24); each such stretch is transcribed again on its own."""
+    words = transcribe_once(path, m)
+    k = 0
+    while k < len(words):
+        if words[k]["end"] - words[k]["start"] <= 1.0:
+            k += 1
+            continue
+        a, b = max(k - 3, 0), min(k + 4, len(words))
+        t0, t1 = max(words[a]["start"] - 0.2, 0.0), words[b - 1]["end"] + 0.2
+        clip = Path(path).with_name(Path(path).stem + "_retry.wav")
+        subprocess.run(["ffmpeg", "-v", "error", "-y", "-ss", f"{t0:.2f}", "-to", f"{t1:.2f}", "-i", path, str(clip)],
+                       check=True)
+        again = [{**w, "start": w["start"] + t0, "end": w["end"] + t0} for w in transcribe_once(str(clip), m)]
+        clip.unlink()
+        if len(again) > b - a:  # it found the missing words
+            words[a:b] = again
+            k = a + len(again)
+        else:
+            k += 1
+    return words
+
+
+def transcribe_once(path: str, m) -> list[dict]:
     segs, _ = m.transcribe(path, language="en", word_timestamps=True, vad_filter=False, beam_size=5)
     words = []
     for s in segs:
@@ -186,6 +220,7 @@ def review(take: str, script_raw: str, out: Path, words: list[dict], ref: dict |
     lo = loudness(take)
     ps = pauses(take)
     speech = dur - sum(e - s for s, e in ps)
+    # pace = words over the spoken span (first word to last), pauses included: what the 145-160 wpm target means
 
     heard, at = [], []  # heard tokens and the whisper word each came from
     for k, w in enumerate(words):
@@ -215,6 +250,8 @@ def review(take: str, script_raw: str, out: Path, words: list[dict], ref: dict |
             matched += i2 - i1
             continue
         said = heard[j1:j2]
+        if op == "replace" and set(script[i1:i2]) | set(said) <= NUM_WORDS:
+            op = "number (spelled differently? check by ear)"
         tagish = op == "insert" and said and all(w in TAG_WORDS for w in said)
         t0 = words[at[j1]]["start"] if j1 < len(at) else None
         issues.append({"op": "TAG READ ALOUD?" if tagish else op, "t": t0, "script": clip(script[i1:i2]),
@@ -236,6 +273,8 @@ def review(take: str, script_raw: str, out: Path, words: list[dict], ref: dict |
     vf = voice_features(y, sr)
     f0 = vf["f0"]
     med = float(np.nanmedian(f0)) if np.any(~np.isnan(f0)) else float("nan")
+    # fold the tracker's octave jumps back (a value near double or half the median is the same note an octave off)
+    f0 = np.where(f0 > 1.7 * med, f0 / 2, np.where(f0 < med / 1.7, f0 * 2, f0))
     # pitch range per 6 s window, in semitones (P10..P90): narrow = flat
     win = []
     for s in np.arange(0, dur, 6.0):
@@ -283,11 +322,13 @@ def review(take: str, script_raw: str, out: Path, words: list[dict], ref: dict |
     fig.tight_layout()
     fig.savefig(out / "review.png", dpi=110)
 
+    span = (words[-1]["end"] - words[0]["start"]) if words else dur
+    wpm = len(heard) / (span / 60)
     long_p = sorted(ps, key=lambda p: p[1] - p[0], reverse=True)[:6]
     flat = [w for w in win if w[1] < 3.0]
     rep = [f"# VO review: {Path(take).name}", "",
-           f"- **Length** {dur:.1f} s · speech {speech:.1f} s · **pace {len(heard) / (speech / 60):.0f} wpm** "
-           f"(target 145–160)",
+           f"- **Length** {dur:.1f} s · **pace {wpm:.0f} wpm** (target 145–160) · articulation "
+           f"{len(heard) / (speech / 60):.0f} wpm over {speech:.1f} s of sound",
            f"- **Words** {match * 100:.1f}% of the script heard as written (script words {lo_i + 1}–{hi_i} of "
            f"{len(script)} are in this take; {len(heard)} words heard)",
            f"- **Loudness** {lo['lufs']} LUFS integrated · true peak {lo['true_peak']} dBTP"
@@ -312,7 +353,7 @@ def review(take: str, script_raw: str, out: Path, words: list[dict], ref: dict |
             f"- end {i['op']}: «{i['script']}» → «{i['heard']}»" for i in issues] or ["- none"]
     rep += ["", "_Speech-to-text mishears names and numbers now and then: listen to each flagged spot before re-recording._"]
     (out / "report.md").write_text("\n".join(rep) + "\n")
-    return {"take": Path(take).name, "dur": dur, "wpm": len(heard) / (speech / 60), "match": match,
+    return {"take": Path(take).name, "dur": dur, "wpm": wpm, "match": match,
             "issues": len(issues), "cues": f"{sum(g >= 0.25 for *_, g in cue_rep)}/{len(cue_rep)}",
             "f0": med, "flat": len(flat), "lufs": lo["lufs"], "peak": lo["true_peak"], "cmp": cmp, "far": len(far),
             "report": "\n".join(rep)}
