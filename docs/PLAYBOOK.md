@@ -448,22 +448,23 @@ never describe the voice in a tag.** Use only short emotion and pause words that
 **How we write for it (the performance layer).** The fact-checked `vo.txt` stays tag-free. A second file,
 `vo_performance.txt`, adds direction from `performance_map.tsv`, and a script checks that the spoken words are
 identical.
-1. **Allowed tags (one word, emotion or pause):** `[pause]`, `[long pause]`, `[curious]`, `[serious]`, `[warmly]`,
-   `[softly]` (only for the 3–5 heaviest moments: overused, it sinks the read), `[amused]`, `[urgent]`, `[relieved]`,
-   `[exhales]` (once or twice a film). **Banned:** any voice description (low, deep, steady, gravelly, warm voice,
-   confident), stacked adjectives, `[whispers]`, `[shouting]`, `[slowly]`/`[rushed]` (they change the voice's pace too
-   much). Add a tag to this list only after the owner hears it work with Akash.
+1. **Allowed tags: pauses only** — `[short pause]` (a held breath inside a sentence), `[pause]` (before a reveal),
+   `[long pause]` (a chapter turn or a solemn passage). **Banned:** every emotion tag (`[curious]`, `[serious]`,
+   `[warmly]`, `[softly]`, `[amused]`, `[urgent]`, `[relieved]`, `[exhales]`: owner's ear, 2026-10-24, "emotional cues
+   not coming best, it's changing feeling, synthetic"), any voice description, `[whispers]`, `[shouting]`,
+   `[slowly]`/`[rushed]`. Add a tag only after the owner hears it work with Akash.
 2. **Breath:** a blank line between beats (the engine resets there); one beat = one breath (§7.3, ≤ 25 words); long
    flowing sentences are fine when commas sit where a person would breathe.
-3. **Low and high come from the writing first:** short, quiet sentences read low; questions lift; a run of short beats
-   builds energy. Tags only nudge: `[serious]` for gravity, `[softly]` for grief, `[warmly]` for pride, `[curious]` for
-   questions, `[urgent]` for a crisis line, `[amused]` for a light beat.
+3. **Low and high come only from the writing:** short, quiet sentences read low; questions lift; a run of short beats
+   builds energy; a concrete image (a name, a number, an object) slows Akash down by itself. If a line comes out with
+   the wrong feeling, rewrite the line, never tag it.
 4. **Stress:** CAPITALS on one word at most in a beat, and only where a person would hit it ("ANY rich list", "HER
    diamond"); 3–6 in a whole film.
-5. **Silence:** `[pause]` before a reveal, `[long pause]` before a chapter turn or a solemn passage; `...` for a held
-   breath inside a sentence. The music edit does the rest (§12).
-6. **Density:** about one tag per 60–70 words (Tata film v2: 38 tags in about 2,470 words). More makes the read
-   theatrical and raises the risk of a tag being spoken aloud.
+5. **Silence:** `[short pause]` for a held breath inside a sentence, `[pause]` before a reveal, `[long pause]` before
+   a chapter turn or a solemn passage. **Never `...` for a pause:** measured with `vo_review.py` on the first full
+   recording (11 takes), Akash gave 0.00–0.16 s at every mid-sentence `...` (9 of 9), against 0.6–1.0 s at `[pause]`.
+   The music edit does the rest (§12).
+6. **Density:** a pause tag where a storyteller would stop, about one per 80–120 words. A pause everywhere is no pause.
 7. **Depth and bass** come from the voice, never from a tag. In the mix: a gentle low shelf (+1.5 to +2.5 dB around
    120 Hz), a high-pass at 70 Hz to remove rumble, a de-esser around 6–8 kHz, light compression (2:1 to 3:1) and room
    tone so the voice sits in a space. Never pitch-shift a voice.
@@ -471,10 +472,9 @@ identical.
    letter-by-letter acronyms with dots (U.P.I., R.B.I., T.C.S.), word acronyms as words (Isro); names the first take
    gets wrong get a phonetic spelling or IPA in `script/phonetics.md`.
 
-**The test pack (before the full recording).** Block 1 is recorded three ways: (A) the clean text at stability 0.65,
-(B) the tagged text at stability 0.50, (C) the tagged text at 0.40. 2 takes each. The owner picks by ear; record the
-winner and settings here. If any tag is spoken aloud or changes the voice, remove it from the allowed list; if it
-keeps happening, record the clean blocks.
+**The test pack (before the full recording).** Block 1 is recorded at stability 0.50, 2 takes; `vo_review.py` checks
+that every pause tag gave a pause and that no tag was read aloud; the owner listens. *History:* v1 voice-description
+tags changed the voice; v2 emotion tags made the feeling shift and sound synthetic; v3 (pause tags only) is the rule.
 
 Sources: ElevenLabs TTS best practices (https://elevenlabs.io/docs/overview/capabilities/text-to-speech/best-practices),
 Eleven v4 launch (https://elevenlabs.io/blog/eleven-v4), Eleven v3 prompting (https://elevenlabs.io/docs/best-practices/prompting/eleven-v3),
@@ -514,6 +514,31 @@ phone), each with a heading line above it: block number, character count, voice 
    Apply the fixes that keep every fact true, re-check, save `films/<slug>/review/audience_vN.md`, archive the session.
    If any viewer drifts in the first minute, fix and review again. *Why:* the writer can't hear the script as a
    stranger.
+
+### 7.9 Reviewing the recorded takes (owner, 2026-10-24)
+Claude can't hear audio, and no connector listens to it (the ElevenLabs connector only manages voice agents). So every
+take is **measured** with `scripts/vo_review.py` before it goes into the edit, and before Claude says a word about it.
+- **Speech-to-text, for checking only (owner chose "local open model", 2026-10-24):** faster-whisper `small.en` runs on
+  the session's CPU, offline, free. It is used **only to check our own VO against its locked script**: never for timing
+  (§10.4 stays forced alignment), never for captions, never on anyone else's footage. Nothing leaves the session.
+- **Run:** `scripts/vo_review.py TAKES*.mp3 --blocks films/<slug>/script/blocks_performance.md --out DIR` (about 45 s
+  of CPU per minute of audio; transcripts are cached in `DIR/<take>/words.json`). Each take is matched to its block on
+  its own, so the owner never has to name files. Venv: `av==14.2.0 faster-whisper==1.1.1 librosa==0.10.2.post1
+  soundfile==0.12.1 matplotlib==3.9.2`.
+- **What it reports** (per take `report.md` + `review.png`, and `summary.md` in block order):
+  - **Words as written:** dropped, added or changed words against the script, with times. Spelling variants (disc/disk,
+    H-A-L/HAL, can't/cant) and numbers split by the transcriber are normalised away. Added words that match our tag
+    vocabulary are flagged **TAG READ ALOUD?** Speech-to-text still mishears names now and then: listen before re-recording.
+  - **Pace** over speech time (target 145–160 wpm) and every pause over 0.25 s.
+  - **Pause cues kept:** for each `[pause]`, `[long pause]` and `...`, the silence measured just before the next word.
+  - **Pitch:** median, and the range per 6 s window in semitones (under 3 = a flat stretch).
+  - **Voice drift:** median pitch shift and MFCC timbre distance against the batch (or `--ref` takes). Over 1.5 semitones
+    or 0.02 for the whole take = **VOICE CHANGED** (the `[low, steady voice]` problem); 3 s windows over 0.05 are listed
+    to listen to. Measured on a real Akash take: the same voice sits at 0.003, a take shifted 3 semitones at 0.056.
+  - **Loudness:** integrated LUFS and true peak (the mix normalises later; a peak over −1 dBTP is flagged).
+- **Then:** keep the best take of each block, list the lines to regenerate with the reason (a word wrong, a tag read
+  aloud, a missed pause, a voice change, a flat stretch), and tell the owner in plain words. The owner sends takes
+  straight in the Claude app, or saves them in Drive `Built-on-Bharat/<slug>/vo/`.
 
 ## 8. Visual storytelling toolkit
 
@@ -1086,6 +1111,18 @@ To port when needed (Creator path → what to change):
 
 ## 16. Lessons log
 *(Newest first. Each lesson: what happened, the rule, why.)*
+
+**First full recording, Tata film (2026-10-24).**
+- *Emotion tags sound synthetic on Akash v4:* the owner heard the feeling change at each `[curious]`/`[warmly]`/
+  `[serious]`. Rule: pause tags only; the feeling comes from the writing (§7.5).
+- *`...` gives no pause:* measured on all 11 takes, every mid-sentence `...` got under 0.2 s; `[pause]` got 0.6–1.0 s.
+  Rule: `[short pause]`, `[pause]`, `[long pause]` only.
+- *The voice held:* with no voice-description tags, all 11 takes sat within 0.6 semitones and 0.003 timbre distance of
+  each other. Pace measured 155–181 wpm; the faster blocks were the ones dense with dates and numbers.
+- *Speech-to-text can skip:* faster-whisper stretched one word over 2 s and dropped a 7-word line that Akash did say;
+  `vo_review.py` now re-transcribes any word longer than 1 s on its own (§7.9).
+- *Length:* the owner wants the Tata film at about 20 minutes, richer and with no dull stretch (2026-10-24). The topic
+  carries it: a 150-year story with five eras.
 
 **Brand rebuild, sting and first-film research (2026-10-24).**
 - *The generator's sparkle mark:* a straight texture copy left a lighter patch on the logo (the vignette makes
