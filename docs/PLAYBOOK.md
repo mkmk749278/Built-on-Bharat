@@ -1006,6 +1006,22 @@ To port when needed (Creator path → what to change):
 ## 16. Lessons log
 *(Newest first. Each lesson: what happened, the rule, why.)*
 
+**Brand rebuild, sting and first-film research (2026-10-24).**
+- *The generator's sparkle mark:* a straight texture copy left a lighter patch on the logo (the vignette makes
+  nearby texture brighter), and on the banner the copied patch pulled in part of the wafer. Fixes: Poisson blending on
+  the logo; on the banner, a horizontal shift that lines the blueprint's vertical line up with its neighbour, with
+  inpainting only where the source overlapped the star (`scripts/brand_clean.py`).
+- *Cutting the medallion out:* a fitted circle found only the face and missed the side wall. The outermost strong
+  edge on 1,440 rays, median-smoothed, then an ellipse, fits within ~2 px all round (`scripts/brand_medallion.py`).
+- *Remotion 4.0.534 in the cloud:* `remotion still` and `render` found a browser on their own; 4K (`--scale=2`) at 60 fps
+  rendered at ~3.5 frames a second for a 2D scene with ~140 animated elements.
+- *Sting review:* a ring-shaped "strike flash" read as a flat cream band, and equal-speed sparks read as a sunburst
+  graphic. A blurred, warm copy of the metal as a bloom, and sparks with skewed speeds, delays and gravity biased to the
+  lower rim look real. Look at real frames, not the code.
+- *Topic research:* YouTube search and autocomplete answer from the container (desktop User-Agent; a mobile one
+  returns a page without `ytInitialData`). `scripts/yt_demand.py`. Many Hindi channels use English titles, so judge
+  language by channel.
+
 **YouTube algorithm analysis and narration rules (2026-10-24).** The owner asked for a full analysis of how YouTube
 search, suggested and browse work before any film, and made narration and curiosity the top priorities. Read YouTube's
 own help pages and its discovery lead's interviews (§13.12). Main findings: recommendations pull per viewer, not push;
@@ -1033,7 +1049,9 @@ only. Both carry the generator's sparkle mark bottom-right (clean before use, §
 - **Description:** 2–4 plain search-built lines, chapters, the series playlist link and up to 3 hashtags (§13.6).
 - **Logo:** Claude removes the generator's mark and rebuilds a clean transparent medallion and an animated outro sting
   from it, at production quality.
-- **First film:** Claude chooses by research (demand × weak supply, §4.3) and pitches it with a treatment and package.
+- **First film:** "The Entire History of Tata, and the Diamond That Saved It" (`films/tata-history/`): the full
+  history with the 1924 Jubilee Diamond as its spine, ending on the open 2026 Trusts–Sons question (owner's choice
+  after the research and his own dossier).
 - Length: topic decides, about 10–16 min as a guide. 4K at 60 fps via `--scale=2`. No fixed sign-off line yet.
 
 **Open:**
