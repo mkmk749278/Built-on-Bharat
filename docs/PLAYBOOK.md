@@ -515,6 +515,32 @@ SwiftShader hash noise): read them before building 3D.
 Name lower-third: "NAME · role · years". Place/date stamp: "BOMBAY · 1903" in the display serif. Chapter cards are
 **in-world** (a stamped date over moving footage, a word engraved on metal), never a black slide.
 
+### 8.9 INK figures: drawn people for the moments no camera caught (2026-10-24)
+*Why:* Creator's owner approved hand-drawn acting characters on 2026-10-24 (Creator PLAYBOOK §4a-3 item 3, after its
+stick-man demo `video/stickman/`), and our first priority is Indian humanity (§4.1). History rarely photographed the
+ordinary people who made it happen: the 8,000 investors, the steelworkers at the pay window, the family on a scooter.
+Drawn figures let us show them, honestly, as drawings.
+- **Our look, not Creator's:** bronze-ink line figures on charcoal blueprint paper, with a 12 fps line boil, a soft
+  ember rim light where they are lit, Indian clothing and props for the era (dhoti, turban, nine-yard saree, Parsi
+  *pheta*, mill cap, steelworker's vest and tongs). Each film designs its own cast inside this look.
+- **Who they can be:** only anonymous, everyday Indians (the crowd, workers, a family, "you" the viewer). **Never a
+  real, named person** (founders and officials appear only in real photographs) and never a caricature. A figure never
+  stands in for footage or a photo that exists.
+- **What they do:** act out the viewer's situation, the crowd's feeling, a hypothetical, or a mechanism with a human in
+  it. They can walk *into* real archive photos (composited), so drawing and history meet.
+- **Craft bar (from Creator's rig):** planted feet, 2-bone IK for arms and legs, anticipation and follow-through, eyes
+  and head that look at what matters, a face that changes with every beat, secondary motion (dupatta, scarf) from
+  velocity, a soft contact shadow, a sound on every action; the figure fills ≥ 40% of frame height in close shots.
+- **Tone (from the owner's render of Creator's demo, `stickman_paper_plane_v2.mp4`, reviewed 2026-10-24):** its acting is
+  the bar (a face that changes every beat, the idea bulb, the "!", anticipation before the throw, motion-trail arcs,
+  planted feet). Its look (cream paper, red scarf, big cartoon grin, ukulele) is a comedy look: we keep the acting and
+  change the costume. In emotional beats (the pay window, the investor queue, the hospital) figures are dignified:
+  smaller eyes, held poses, no grins. Comic acting only for light beats (Upcott's "indigestion", the licence-raj file
+  wall, the Ford table flipping).
+- **How:** a Remotion port of Creator's rig (`video/stickman/stick.js`: walk, IK, face, look-at, all pure functions of
+  time) into `lib/remotion/ink/`, drawn as SVG paths with seeded jitter for the line boil. Build it with the first film
+  that needs it and keep scenes as data.
+
 ---
 
 # Part C: Production
