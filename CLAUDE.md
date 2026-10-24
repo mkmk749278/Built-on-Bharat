@@ -100,11 +100,16 @@ Then:
 - **The lean-in test:** every paragraph has a Q column (the question the viewer is holding). Empty Q = cut or rewrite.
 - No "Welcome to…", "In this video…", "Today we'll…", "Let us understand…". No hype words ("SHOCKED the world",
   "China is TERRIFIED"). No Hindi tags ("na", "yaar"): the film belongs to every state.
-- VO text: numbers and amounts as words, rupees and lakh/crore, no digits, `₹`, `!`, double quotes or brackets;
-  letter-by-letter acronyms with dots (U.P.I., R.B.I., O.N.G.C.); acronyms people say as a word are written as a word
-  (Isro, Amul, Nasscom). Recording blocks go in the
-  chat as click-to-copy code blocks, every time a VO is ready or changes.
-- **Voice: Akash** (ElevenLabs, Eleven v4) for now; a thorough voice-library search comes later (owner, 2026-10-24).
+- VO text: numbers and amounts as words, rupees and lakh/crore, no digits, `₹`, `!`, double quotes or brackets in the
+  fact-checked `vo.txt`; letter-by-letter acronyms with dots (U.P.I., R.B.I., O.N.G.C.); acronyms people say as a word
+  are written as a word (Isro, Amul, Nasscom).
+- **Performance layer for Eleven v4 (owner, 2026-10-24; PLAYBOOK §7.5):** a tagged `vo_performance.txt` adds direction
+  with v4 audio tags (`[low, steady voice]`, `[softly]`, `[warmly]`, `[curious]`, `[pause]`, `[long pause]`,
+  `[exhales]`), CAPS on one stressed word at most, about one tag per 40–50 words; the spoken words stay identical to the
+  fact-checked text (checked by script). Test block 1 three ways before the full recording.
+- **Recording blocks go in the chat** as click-to-copy code blocks, every time a VO is ready or changes.
+- **Voice: Akash** (ElevenLabs, Eleven v4), stability 0.50 for the tagged read, for now; a thorough voice-library search
+  comes later (owner, 2026-10-24).
 - Every narration passes the lean-in test, the spoken-English check and an **independent audience review** (a new cloud
   session with no repo, with a lean-in map of where viewers drift; PLAYBOOK §7.8) before the owner sees it.
 
