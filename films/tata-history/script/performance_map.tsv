@@ -1,6 +1,5 @@
 # (exact text in vo.txt)	(the same text with its pause tag)
-# v4 (2026-10-24): 20-minute rewrite; pause tags only ([short pause], [pause], [long pause]); no emotion tags, no '...';
-# CAPS only where a person would hit the word (none in v4)
+# v4 (2026-10-24): pause tags only ([short pause], [pause], [long pause]); no emotion tags, no '...'
 The plane over your head. Tata.	The plane over your head. [pause] Tata.
 Two hundred and forty five carats. More than twice	Two hundred and forty five carats. [short pause] More than twice
 Why send our cotton away, when we can spin	Why send our cotton away, [short pause] when we can spin
@@ -8,7 +7,7 @@ But healthy workers were the sure foundation	But healthy workers [short pause] w
 It's a great story, isn't it? But historians	It's a great story, isn't it? [short pause] But historians
 Hold on to this hotel. It comes back	Hold on to this hotel. [short pause] It comes back
 But three months later, on a trip to Germany, Jamsetji Tata dies.	[pause] But three months later, on a trip to Germany, [short pause] Jamsetji Tata dies.
-So in nineteen oh seven, the Tatas take a huge risk. They ask India.	So in nineteen oh seven, the Tatas take a huge risk. [short pause] They ask India.
+the Tatas take a huge risk. They ask India.	the Tatas take a huge risk. [short pause] They ask India.
 about eight thousand Indians put up the entire capital. Two crore	about eight thousand Indians put up the entire capital. [short pause] Two crore
 If he had kept his promise, he would have	If he had kept his promise, [short pause] he would have
 Jamshedpur. After the man who never saw it.	Jamshedpur. [short pause] After the man who never saw it.
@@ -19,10 +18,10 @@ And here is the turn in this whole story.	[pause] And here is the turn in this w
 So the diamond became a hospital.	[pause] So the diamond became a hospital.
 A charity now owns a big piece of the empire.	[short pause] A charity now owns a big piece of the empire.
 He lands at ten to two in the afternoon.	[short pause] He lands at ten to two in the afternoon.
+Remember that name. One day	Remember that name. [short pause] One day
 You may know her name. Sudha Murty.	You may know her name. [short pause] Sudha Murty.
 He says, I feel as you would feel	[pause] He says, [short pause] I feel as you would feel
-Remember that name. One day	Remember that name. [short pause] One day
-Can you imagine that flight? Hold on to that silence.	Can you imagine that flight? [pause] Hold on to that silence.
+A long, quiet flight home. Hold on to that silence.	[pause] A long, quiet flight home. [short pause] Hold on to that silence.
 His hardest defeat. And his darkest night.	His hardest defeat. [short pause] And his darkest night.
 And who do you think buys them? Tata.	And who do you think buys them? [short pause] Tata.
 Bill Ford told Ratan Tata, you are doing us	Bill Ford told Ratan Tata, [short pause] you are doing us
@@ -34,4 +33,4 @@ J.R.D. did not live to see it.	[short pause] J.R.D. did not live to see it.
 June, twenty twenty five. Air India flight	[long pause] June, twenty twenty five. Air India flight
 Because the Tata family doesn't own Tata.	[pause] Because the Tata family doesn't own Tata.
 Then, in October twenty twenty four, Ratan Tata died.	[long pause] Then, in October twenty twenty four, Ratan Tata died.
-Who should a company built for India really belong to?	[pause] Who should a company built for India really belong to?
+Who should a company like this really belong to?	[pause] Who should a company like this really belong to?

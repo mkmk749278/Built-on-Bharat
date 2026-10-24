@@ -1,23 +1,23 @@
 # Recording blocks: tata-history
 
-14 blocks · voice: Akash · Eleven v4 · clean text (reference only; record blocks_performance.md)
+15 blocks · voice: clean text, reference only: record blocks_performance.md
 
-**Block 1 of 14** · 1163 characters · save as `vo/tata-history-b01.mp3`
+**Block 1 of 15** · 1163 characters · save as `vo/tata-history-b01.mp3`
 
 ```
 Bombay. Nineteen twenty four.
 
 A man walks into a bank, carrying his wife's diamond.
 
-Two hundred and forty five carats. More than twice the size of the Kohinoor.
+Two hundred and forty five carats. More than twice the size of the Kohinoor, as it is today.
 
-He isn't here to sell it. He's here to borrow against it.
+He isn't here to sell it. He wants a loan, with the diamond as the guarantee.
 
 Why would a man do that?
 
 Because more than fourteen hundred kilometres away, in a steel town cut out of the jungle, thousands of workers are waiting for their wages. And the company that pays them is almost out of money.
 
-The man is Sir Dorabji Tata. The company is Tata Steel.
+You may never have heard his name. Sir Dorabji Tata. The company is Tata Steel.
 
 Now look around you today. The salt in your kitchen. The tea in your cup. The steel in our bridges. The plane over your head. Tata.
 
@@ -25,12 +25,12 @@ And yet you won't find a single Tata at the top of any rich list.
 
 How is that possible?
 
-The answer is in this bank. In what happens to that diamond. Because the choice this man makes, eight years from now, still decides who controls Tata today. And in twenty twenty six, that choice has turned into a fight.
+The answer is in this bank. In what happens to that diamond. Because a choice this man makes, eight years later, still decides who controls Tata today. And in twenty twenty six, that choice has turned into a fight.
 
-I'll show you how, by the end. I promise it's worth the wait. But first, ask yourself this. Why would a man pawn his wife's diamond for a steel plant? To understand that, we have to go back to the man who dreamed it.
+By the end of this film, you'll see how. But why would a man pawn his wife's diamond for a steel plant? To understand that, we go back to the man who dreamed it.
 ```
 
-**Block 2 of 14** · 1423 characters · save as `vo/tata-history-b02.mp3`
+**Block 2 of 15** · 1423 characters · save as `vo/tata-history-b02.mp3`
 
 ```
 Eighteen sixty eight. Bombay is a city of ships and cotton, and most of the money flows one way. Out.
@@ -56,7 +56,7 @@ Now, you've probably heard the most famous Tata story. Jamsetji is turned away f
 It's a great story, isn't it? But historians have found no record that it ever happened.
 ```
 
-**Block 3 of 14** · 1456 characters · save as `vo/tata-history-b03.mp3`
+**Block 3 of 15** · 1466 characters · save as `vo/tata-history-b03.mp3`
 
 ```
 What is on record is the hotel itself. It opens in December, nineteen oh three, on the Bombay waterfront. Designed by an Indian architect. Lit by electricity. Hold on to this hotel. It comes back in this story, on the worst night of its life.
@@ -71,7 +71,7 @@ The hardest of the three is steel. Why? Because to make steel, you need iron ore
 
 One site has ore, but the coal is useless. Another has coal, but no water.
 
-Jamsetji even crosses the world to America, to find the right engineer. In a small, crowded office in New York, he finds him. Charles Page Perin.
+Jamsetji even crosses the world to America, to find the right engineer. In a small, crowded office in New York, he finds his man. An American steel expert.
 
 Then, in February nineteen oh four, a letter reaches him.
 
@@ -86,7 +86,7 @@ He never sees those hills. No steel plant. No power company. No institute.
 So who carries the dream now? His son. Dorabji.
 ```
 
-**Block 4 of 14** · 1457 characters · save as `vo/tata-history-b04.mp3`
+**Block 4 of 15** · 1493 characters · save as `vo/tata-history-b04.mp3`
 
 ```
 And Dorabji does not run it from an office. He has already been out in the jungle himself, with the men searching for iron. Now they go back, looking for one perfect spot.
@@ -103,9 +103,9 @@ Bombay, nineteen oh seven. The share office opens.
 
 And the people come. Who were they?
 
-A man who saw it, Axel Sahlin, wrote it down. Old and young, rich and poor, men and women, they came, offering their mites.
+One man who was there wrote it down. Old and young, he said. Rich and poor. Men and women. They came, offering their mites.
 
-Their mites. Their small savings.
+Their mites. Their small savings. A little from each of them.
 
 In a matter of weeks, about eight thousand Indians put up the entire capital. Two crore thirty one lakh rupees.
 
@@ -117,10 +117,10 @@ Not everyone believed, of course. According to Tata's own histories, a senior Br
 
 So how do you turn a hill of red rock into steel? You build a tower of fire.
 
-Iron ore, coke made from coal, and limestone go in at the top. Hot air blasts in at the bottom. And out comes iron, as a glowing liquid. Refine it, and you have steel.
+Iron ore, limestone, and coke, a kind of baked coal, go in at the top. Hot air blasts in at the bottom. And out comes iron, as a glowing liquid. Refine it, and you have steel.
 ```
 
-**Block 5 of 14** · 846 characters · save as `vo/tata-history-b05.mp3`
+**Block 5 of 15** · 846 characters · save as `vo/tata-history-b05.mp3`
 
 ```
 The first iron flows in December nineteen eleven. The first steel, in nineteen twelve.
@@ -138,10 +138,10 @@ So the dreamer is gone, but every dream is alive. It should be a happy ending, s
 It isn't.
 ```
 
-**Block 6 of 14** · 1493 characters · save as `vo/tata-history-b06.mp3`
+**Block 6 of 15** · 1472 characters · save as `vo/tata-history-b06.mp3`
 
 ```
-A steel town is no fairy tale. In nineteen twenty two, the workers go on strike. Real people, with real demands about their pay and their lives.
+A steel town is no fairy tale. In nineteen twenty two, the workers go on strike.
 
 Then the good years end. Prices fall. Cheap iron and steel pour in from abroad.
 
@@ -149,7 +149,7 @@ By nineteen twenty four, the company needs close to two crore rupees, to pay its
 
 Where do you find that kind of money, fast?
 
-The banks want security.
+The banks want a guarantee. Something valuable.
 
 So we're back in that bank in Bombay.
 
@@ -157,7 +157,7 @@ The diamond on the counter is called the Jubilee. It was found in South Africa i
 
 Around nineteen hundred, Dorabji bought it for his wife, Meherbai. She wore it at royal courts and grand occasions.
 
-Now Dorabji pledges it, with the rest of her jewellery, to the Imperial Bank of India. Today you know that bank as the State Bank of India.
+Now Dorabji hands it over as the guarantee, with the rest of her jewellery, to the Imperial Bank of India. Today you know that bank as the State Bank of India.
 
 The loan comes through. The furnaces stay lit. The workers get paid.
 
@@ -174,12 +174,12 @@ And here is the turn in this whole story. He leaves everything to a charitable t
 The Sir Dorabji Tata Trust.
 ```
 
-**Block 7 of 14** · 1478 characters · save as `vo/tata-history-b07.mp3`
+**Block 7 of 15** · 1408 characters · save as `vo/tata-history-b07.mp3`
 
 ```
 A few years later, the trust sells the jewels. And that money helps build a hospital for the disease that took her. The Tata Memorial Hospital, for cancer, opens in Bombay in nineteen forty one.
 
-So the diamond became a hospital.
+So the diamond became a hospital. If you, or someone you love, has ever been treated at Tata Memorial, you've been inside what that diamond helped build.
 
 But the shares in Tata Sons? Those the trust keeps.
 
@@ -187,7 +187,7 @@ And that means something no one had planned. A charity now owns a big piece of t
 
 Now the story needs a new captain. And this one flies.
 
-Jehangir Ratanji Dadabhoy Tata. Everyone calls him J.R.D.
+His full name is long, so everyone just calls him J.R.D.
 
 In nineteen twenty nine, he gets India's first pilot licence.
 
@@ -201,21 +201,29 @@ There is no proper airport. Just a mud flat at Juhu, by the sea. He lands at ten
 
 That flight is the start of an airline. Tata Airlines. Later, Air India.
 
-For twenty years he builds it like a man possessed. But in nineteen fifty three, the government takes over the airlines.
+For twenty years he builds it, plane by plane. But in nineteen fifty three, the government takes over the airlines.
+```
 
+**Block 8 of 15** · 1451 characters · save as `vo/tata-history-b08.mp3`
+
+```
 J.R.D. thinks it's a mistake, and he says so. So what does he do when they ask him to stay on and run Air India?
 
 He says yes. And he does it without a salary, for twenty five years.
-```
 
-**Block 8 of 14** · 1309 characters · save as `vo/tata-history-b08.mp3`
+In these years, a company needs the government's permission to grow. What it makes. How much. So Tata grows slowly.
 
-```
-In those years, he gets a postcard he will never forget.
+But in nineteen sixty eight, almost quietly, it starts a small computer unit. Its first jobs are punched cards for its own companies.
+
+It's called Tata Consultancy Services. T.C.S.
+
+Remember that name. One day it will carry the whole empire.
+
+And in those years, J.R.D. gets a postcard he will never forget.
 
 April, nineteen seventy four. A young engineering student in Bangalore sees a job notice from a Tata company, Telco. At the bottom, one line. Lady candidates need not apply.
 
-What would you do? She is angry. So she writes a postcard. To the man at the top of the Tata group. How can a company like Telco treat people differently because of their gender?
+She is angry. So she writes a postcard. To the man at the top of the Tata group. How can a company like Telco treat people differently because of their gender?
 
 Less than ten days later, a telegram arrives. Come for an interview. In Pune.
 
@@ -228,17 +236,9 @@ February, nineteen seventy eight. A new government removes J.R.D. from Air India
 That night, someone asks how he feels.
 
 He says, I feel as you would feel if your favourite child was taken away.
-
-These are hard years for big business. A company needs the government's permission to grow. What it can make. How much. Tata grows slowly.
-
-But in nineteen sixty eight, almost quietly, Tata had started a small computer unit. Its first jobs were punched cards for its own companies.
-
-It's called Tata Consultancy Services. T.C.S.
-
-Remember that name. One day it will carry the whole empire.
 ```
 
-**Block 9 of 14** · 1381 characters · save as `vo/tata-history-b09.mp3`
+**Block 9 of 15** · 1379 characters · save as `vo/tata-history-b09.mp3`
 
 ```
 Nineteen ninety one. India comes close to running out of foreign money, and the economy is thrown open.
@@ -257,7 +257,7 @@ Tata veteran Pravin Kadle was in that room. According to him, the Ford people as
 
 The deal is off. They fly back the same evening. Kadle says Ratan Tata hardly spoke, the whole ninety minute flight.
 
-Can you imagine that flight? Hold on to that silence.
+A long, quiet flight home. Hold on to that silence.
 
 So what does Tata do? It does not sell. It fixes the car. And it starts buying.
 
@@ -266,7 +266,7 @@ In two thousand, Tata buys Tetley, the British tea company. An Indian company bu
 Then, in two thousand seven, the biggest bet of all. Tata Steel wins Corus, the company that included British Steel, for about twelve billion dollars.
 ```
 
-**Block 10 of 14** · 1481 characters · save as `vo/tata-history-b10.mp3`
+**Block 10 of 15** · 1481 characters · save as `vo/tata-history-b10.mp3`
 
 ```
 Remember Upcott, the man who would eat every rail? A hundred years later, an Indian steel company has bought what was once British Steel.
@@ -304,7 +304,7 @@ The twenty sixth of November, two thousand eight. Night. Terrorists storm the Ta
 Jamsetji's hotel. The one he opened in nineteen oh three.
 ```
 
-**Block 11 of 14** · 1461 characters · save as `vo/tata-history-b11.mp3`
+**Block 11 of 15** · 1478 characters · save as `vo/tata-history-b11.mp3`
 
 ```
 Inside, the staff could run. They know every back exit. But many of them stay, to get the guests out.
@@ -327,15 +327,15 @@ A year after the Corus deal, the world economy crashes. Years of losses follow i
 
 And the Nano? People did not want to be seen in the cheapest car in the world. Tata itself admitted that calling it cheap was a mistake. Production ended in twenty eighteen.
 
-In twenty twelve, Ratan Tata retires. And four years later comes a boardroom war. His successor, Cyrus Mistry, is removed. The fight goes all the way to the Supreme Court, which sides with Tata Sons in twenty twenty one.
+In twenty twelve, Ratan Tata retires. And four years later comes a boardroom war. The man who took over from him, Cyrus Mistry, is removed. The fight goes all the way to the Supreme Court, which sides with Tata Sons in twenty twenty one.
 
 The new chairman is N. Chandrasekaran. He joined T.C.S. as a young engineer.
 ```
 
-**Block 12 of 14** · 862 characters · save as `vo/tata-history-b12.mp3`
+**Block 12 of 15** · 862 characters · save as `vo/tata-history-b12.mp3`
 
 ```
-And T.C.S.? That little punched card unit? It's now the engine. In the last financial year, it brought in about eighty seven percent of all the dividend money Tata Sons received.
+And T.C.S.? That little punched card unit? It's now the engine. Last year, about eighty seven percent of the profit share Tata Sons got from its companies came from T.C.S. alone.
 
 Then, in twenty twenty two, the favourite child comes home. Air India returns to Tata, sixty nine years after it was taken away. J.R.D. did not live to see it.
 
@@ -348,7 +348,7 @@ The final report is not out yet, and the cause has not been established. We reme
 And the bets go on. Tata now assembles iPhones in India. It's building one of India's first big chip factories, in Dholera, Gujarat. When it will make chips at full scale is still an open question.
 ```
 
-**Block 13 of 14** · 1411 characters · save as `vo/tata-history-b13.mp3`
+**Block 13 of 15** · 1282 characters · save as `vo/tata-history-b13.mp3`
 
 ```
 So. Back to the bank in nineteen twenty four, and the question we started with.
@@ -357,7 +357,7 @@ Why is no Tata on top of a rich list?
 
 Because the Tata family doesn't own Tata. About two thirds of Tata Sons, the company at the top, belongs to charitable trusts.
 
-And the biggest of them is the Sir Dorabji Tata Trust. The trust of the man with the diamond. It holds about twenty eight percent of Tata Sons.
+And the biggest of them is the Sir Dorabji Tata Trust. The trust of the man with the diamond. It holds about twenty eight percent of Tata Sons. And who owns the rest? Most of it belongs to the Shapoorji Pallonji group, owned by the Mistry family, and to Tata's own companies.
 
 So when you buy that salt, or that tea, a share of the profit flows up to those trusts. And out, into hospitals, research and scholarships.
 
@@ -371,26 +371,32 @@ His half brother, Noel Tata, now leads the trusts.
 
 And in twenty twenty six, the cracks are out in the open.
 
-In September, the Tata Sons board voted to give Chandrasekaran another term. Noel Tata voted no. The trusts say that decision doesn't count. Tata Sons says it does.
+So what is the fight about? Who runs Tata, and who decides that.
 
-And there's one more problem. Tata Sons asked the R.B.I. to let it stay out of certain rules. The R.B.I. said no. And those rules push Tata Sons towards the stock market. Selling its shares to the public, for the very first time.
+This September, the Tata Sons board voted to give Chandrasekaran another term. Noel Tata voted no. The trusts say that decision doesn't count. Tata Sons says it does.
+```
+
+**Block 14 of 15** · 848 characters · save as `vo/tata-history-b14.mp3`
+
+```
+And there's one more problem. Tata Sons holds shares in so many companies that the R.B.I. treats it like a big finance company. And big finance companies must list on the stock market. Tata Sons asked to be let off. The R.B.I. said no. So Tata Sons may have to sell its shares to the public, for the very first time.
 
 As this film goes out, that fight is not over. Who wins? I honestly don't know. Nobody does yet.
-```
 
-**Block 14 of 14** · 585 characters · save as `vo/tata-history-b14.mp3`
-
-```
-So in the end, this fight goes back to one choice. A man who had no children gave everything to a trust, so the money would serve India.
+So in the end, this fight goes back to one choice. A man who had no children gave everything to a trust, so the money would go to charity, not to a family.
 
 Eight thousand Indians bet their savings on a steel plant. A husband and wife put up their diamond to keep it alive.
 
 And a hundred years later, the question is still the same one.
 
-Who should a company built for India really belong to?
+Who should a company like this really belong to?
 
 What do you think? Tell me in the comments.
+```
 
+**Block 15 of 15** · 164 characters · save as `vo/tata-history-b15.mp3`
+
+```
 This is Built on Bharat. The empires, and the habits, that built a nation.
 
 Next in Empires of India. How did a group of farmers in a small Gujarat town build Amul?
