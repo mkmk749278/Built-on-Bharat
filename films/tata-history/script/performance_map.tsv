@@ -1,55 +1,37 @@
-# paragraph prefix (exact)	replacement prefix (tags added; spoken words unchanged except CAPS for stress)
-# v2 (2026-10-24): one-word emotion and pause tags only; voice-description tags removed (owner: 'too low and totally different')
-Nineteen twenty four. Bombay.	Nineteen twenty four. Bombay.
-Now look around you today.	Now look around you today.
-And yet, you won't find a single Tata at the top of any rich list.	[pause] And yet, you won't find a single Tata at the top of ANY rich list.
-How is that even possible?	[curious] How is that even possible?
-Eighteen sixty eight.	Eighteen sixty eight.
-Now, like many traders	[serious] Now, like many traders
-Was it pure kindness?	[curious] Was it pure kindness?
-Now, you've probably heard	Now, you've probably heard
-It's a great story. Here's the catch.	It's a great story. [pause] Here's the catch.
-Then, in May nineteen oh four	[softly] Then, in May nineteen oh four
-No steel plant. No power company. No institute.	No steel plant. No power company. No institute.
-His son, Dorabji.	His son, Dorabji.
-And India answers.	[pause] [warmly] And India answers.
-In a matter of weeks, about eight thousand	[warmly] In a matter of weeks, about eight thousand
-Now imagine you're standing in that line.	Now imagine you're standing in that line.
-Would you have done it?	[curious] Would you have done it?
-Not everyone believed it, of course.	Not everyone believed it, of course.
-So how do you turn a hill	[curious] So how do you turn a hill
-Then, nineteen fourteen. War.	[serious] Then, nineteen fourteen. War.
-Years later, as the Tata story goes	[amused] Years later, as the Tata story goes
-And his other two dreams?	[warmly] And his other two dreams?
-But a steel town is no fairy tale.	[serious] But a steel town is no fairy tale.
-And after the war, the good years end.	And after the war, the good years end.
-Where do you find that kind of money, fast?	[urgent] Where do you find that kind of money, fast?
-Which brings us back...	[pause] Which brings us back...
-You're looking at the Jubilee diamond.	You're looking at the Jubilee diamond.
-The loan comes through. The furnaces stay lit.	[relieved] The loan comes through. [pause] The furnaces stay lit.
-It was her diamond.	It was HER diamond.
-Did they ever get it back?	[curious] Did they ever get it back?
-In nineteen thirty one, Meherbai dies	[exhales] [softly] In nineteen thirty one, Meherbai dies
-And here is the turn in this whole story.	[long pause] And here is the turn in this whole story.
-So the diamond became a hospital.	So the diamond became a hospital.
-Now a young man takes the controls.	Now a young man takes the controls.
-He says yes.	[warmly] He says yes.
-Until nineteen seventy eight	Until nineteen seventy eight
-Remember that name.	Remember that name.
-Nineteen ninety one.	Nineteen ninety one.
-And buying it, he said,	And buying it, he said,
-Nine years later... the story flips.	[pause] Nine years later... [amused] the story flips.
-Remember Upcott	[warmly] Remember Upcott
-But here's the honest part.	[serious] But here's the honest part.
-Big bets. Some won.	Big bets. Some won.
-And there's one more moment we have to stop for.	[long pause] [softly] And there's one more moment we have to stop for.
-June twenty twenty five.	June twenty twenty five.
-So. Back to the question	[pause] So. Back to the question
-Then, in October twenty twenty four, Ratan Tata died.	Then, in October twenty twenty four, Ratan Tata died.
-And in twenty twenty six, the cracks are out in the open.	[serious] And in twenty twenty six, the cracks are out in the open.
-As this film goes out	As this film goes out
-So in the end, this fight goes back	[warmly] So in the end, this fight goes back
-Eight thousand Indians bet	[warmly] Eight thousand Indians bet
-Who should a company built for India really belong to?	[pause] [softly] Who should a company built for India really belong to?
-What do you think?	[warmly] What do you think?
-This is Built on Bharat.	[long pause] This is Built on Bharat.
+# (exact text in vo.txt)	(the same text with its pause tag)
+# v4 (2026-10-24): 20-minute rewrite; pause tags only ([short pause], [pause], [long pause]); no emotion tags, no '...';
+# CAPS only where a person would hit the word (none in v4)
+The plane over your head. Tata.	The plane over your head. [pause] Tata.
+Two hundred and forty five carats. More than twice	Two hundred and forty five carats. [short pause] More than twice
+Why send our cotton away, when we can spin	Why send our cotton away, [short pause] when we can spin
+But healthy workers were the sure foundation	But healthy workers [short pause] were the sure foundation
+It's a great story, isn't it? But historians	It's a great story, isn't it? [short pause] But historians
+Hold on to this hotel. It comes back	Hold on to this hotel. [short pause] It comes back
+But three months later, on a trip to Germany, Jamsetji Tata dies.	[pause] But three months later, on a trip to Germany, [short pause] Jamsetji Tata dies.
+So in nineteen oh seven, the Tatas take a huge risk. They ask India.	So in nineteen oh seven, the Tatas take a huge risk. [short pause] They ask India.
+about eight thousand Indians put up the entire capital. Two crore	about eight thousand Indians put up the entire capital. [short pause] Two crore
+If he had kept his promise, he would have	If he had kept his promise, [short pause] he would have
+Jamshedpur. After the man who never saw it.	Jamshedpur. [short pause] After the man who never saw it.
+It isn't.	[pause] It isn't.
+So we're back in that bank in Bombay.	[pause] So we're back in that bank in Bombay.
+It was her diamond. And it went into a bank	[pause] It was her diamond. And it went into a bank
+And here is the turn in this whole story.	[pause] And here is the turn in this whole story.
+So the diamond became a hospital.	[pause] So the diamond became a hospital.
+A charity now owns a big piece of the empire.	[short pause] A charity now owns a big piece of the empire.
+He lands at ten to two in the afternoon.	[short pause] He lands at ten to two in the afternoon.
+You may know her name. Sudha Murty.	You may know her name. [short pause] Sudha Murty.
+He says, I feel as you would feel	[pause] He says, [short pause] I feel as you would feel
+Remember that name. One day	Remember that name. [short pause] One day
+Can you imagine that flight? Hold on to that silence.	Can you imagine that flight? [pause] Hold on to that silence.
+His hardest defeat. And his darkest night.	His hardest defeat. [short pause] And his darkest night.
+And who do you think buys them? Tata.	And who do you think buys them? [short pause] Tata.
+Bill Ford told Ratan Tata, you are doing us	Bill Ford told Ratan Tata, [short pause] you are doing us
+arrives from the Chief Minister of Gujarat. Welcome.	arrives from the Chief Minister of Gujarat. [short pause] Welcome.
+The twenty sixth of November, two thousand eight.	[long pause] The twenty sixth of November, two thousand eight.
+At least thirty one people die at the Taj.	[pause] At least thirty one people die at the Taj.
+Twenty five days later, the Taj opens	[pause] Twenty five days later, the Taj opens
+J.R.D. did not live to see it.	[short pause] J.R.D. did not live to see it.
+June, twenty twenty five. Air India flight	[long pause] June, twenty twenty five. Air India flight
+Because the Tata family doesn't own Tata.	[pause] Because the Tata family doesn't own Tata.
+Then, in October twenty twenty four, Ratan Tata died.	[long pause] Then, in October twenty twenty four, Ratan Tata died.
+Who should a company built for India really belong to?	[pause] Who should a company built for India really belong to?

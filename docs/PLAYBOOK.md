@@ -448,22 +448,23 @@ never describe the voice in a tag.** Use only short emotion and pause words that
 **How we write for it (the performance layer).** The fact-checked `vo.txt` stays tag-free. A second file,
 `vo_performance.txt`, adds direction from `performance_map.tsv`, and a script checks that the spoken words are
 identical.
-1. **Allowed tags (one word, emotion or pause):** `[pause]`, `[long pause]`, `[curious]`, `[serious]`, `[warmly]`,
-   `[softly]` (only for the 3–5 heaviest moments: overused, it sinks the read), `[amused]`, `[urgent]`, `[relieved]`,
-   `[exhales]` (once or twice a film). **Banned:** any voice description (low, deep, steady, gravelly, warm voice,
-   confident), stacked adjectives, `[whispers]`, `[shouting]`, `[slowly]`/`[rushed]` (they change the voice's pace too
-   much). Add a tag to this list only after the owner hears it work with Akash.
+1. **Allowed tags: pauses only** — `[short pause]` (a held breath inside a sentence), `[pause]` (before a reveal),
+   `[long pause]` (a chapter turn or a solemn passage). **Banned:** every emotion tag (`[curious]`, `[serious]`,
+   `[warmly]`, `[softly]`, `[amused]`, `[urgent]`, `[relieved]`, `[exhales]`: owner's ear, 2026-10-24, "emotional cues
+   not coming best, it's changing feeling, synthetic"), any voice description, `[whispers]`, `[shouting]`,
+   `[slowly]`/`[rushed]`. Add a tag only after the owner hears it work with Akash.
 2. **Breath:** a blank line between beats (the engine resets there); one beat = one breath (§7.3, ≤ 25 words); long
    flowing sentences are fine when commas sit where a person would breathe.
-3. **Low and high come from the writing first:** short, quiet sentences read low; questions lift; a run of short beats
-   builds energy. Tags only nudge: `[serious]` for gravity, `[softly]` for grief, `[warmly]` for pride, `[curious]` for
-   questions, `[urgent]` for a crisis line, `[amused]` for a light beat.
+3. **Low and high come only from the writing:** short, quiet sentences read low; questions lift; a run of short beats
+   builds energy; a concrete image (a name, a number, an object) slows Akash down by itself. If a line comes out with
+   the wrong feeling, rewrite the line, never tag it.
 4. **Stress:** CAPITALS on one word at most in a beat, and only where a person would hit it ("ANY rich list", "HER
    diamond"); 3–6 in a whole film.
-5. **Silence:** `[pause]` before a reveal, `[long pause]` before a chapter turn or a solemn passage; `...` for a held
-   breath inside a sentence. The music edit does the rest (§12).
-6. **Density:** about one tag per 60–70 words (Tata film v2: 38 tags in about 2,470 words). More makes the read
-   theatrical and raises the risk of a tag being spoken aloud.
+5. **Silence:** `[short pause]` for a held breath inside a sentence, `[pause]` before a reveal, `[long pause]` before
+   a chapter turn or a solemn passage. **Never `...` for a pause:** measured with `vo_review.py` on the first full
+   recording (11 takes), Akash gave 0.00–0.16 s at every mid-sentence `...` (9 of 9), against 0.6–1.0 s at `[pause]`.
+   The music edit does the rest (§12).
+6. **Density:** a pause tag where a storyteller would stop, about one per 80–120 words. A pause everywhere is no pause.
 7. **Depth and bass** come from the voice, never from a tag. In the mix: a gentle low shelf (+1.5 to +2.5 dB around
    120 Hz), a high-pass at 70 Hz to remove rumble, a de-esser around 6–8 kHz, light compression (2:1 to 3:1) and room
    tone so the voice sits in a space. Never pitch-shift a voice.
@@ -471,10 +472,9 @@ identical.
    letter-by-letter acronyms with dots (U.P.I., R.B.I., T.C.S.), word acronyms as words (Isro); names the first take
    gets wrong get a phonetic spelling or IPA in `script/phonetics.md`.
 
-**The test pack (before the full recording).** Block 1 is recorded three ways: (A) the clean text at stability 0.65,
-(B) the tagged text at stability 0.50, (C) the tagged text at 0.40. 2 takes each. The owner picks by ear; record the
-winner and settings here. If any tag is spoken aloud or changes the voice, remove it from the allowed list; if it
-keeps happening, record the clean blocks.
+**The test pack (before the full recording).** Block 1 is recorded at stability 0.50, 2 takes; `vo_review.py` checks
+that every pause tag gave a pause and that no tag was read aloud; the owner listens. *History:* v1 voice-description
+tags changed the voice; v2 emotion tags made the feeling shift and sound synthetic; v3 (pause tags only) is the rule.
 
 Sources: ElevenLabs TTS best practices (https://elevenlabs.io/docs/overview/capabilities/text-to-speech/best-practices),
 Eleven v4 launch (https://elevenlabs.io/blog/eleven-v4), Eleven v3 prompting (https://elevenlabs.io/docs/best-practices/prompting/eleven-v3),
@@ -1111,6 +1111,18 @@ To port when needed (Creator path → what to change):
 
 ## 16. Lessons log
 *(Newest first. Each lesson: what happened, the rule, why.)*
+
+**First full recording, Tata film (2026-10-24).**
+- *Emotion tags sound synthetic on Akash v4:* the owner heard the feeling change at each `[curious]`/`[warmly]`/
+  `[serious]`. Rule: pause tags only; the feeling comes from the writing (§7.5).
+- *`...` gives no pause:* measured on all 11 takes, every mid-sentence `...` got under 0.2 s; `[pause]` got 0.6–1.0 s.
+  Rule: `[short pause]`, `[pause]`, `[long pause]` only.
+- *The voice held:* with no voice-description tags, all 11 takes sat within 0.6 semitones and 0.003 timbre distance of
+  each other. Pace measured 155–181 wpm; the faster blocks were the ones dense with dates and numbers.
+- *Speech-to-text can skip:* faster-whisper stretched one word over 2 s and dropped a 7-word line that Akash did say;
+  `vo_review.py` now re-transcribes any word longer than 1 s on its own (§7.9).
+- *Length:* the owner wants the Tata film at about 20 minutes, richer and with no dull stretch (2026-10-24). The topic
+  carries it: a 150-year story with five eras.
 
 **Brand rebuild, sting and first-film research (2026-10-24).**
 - *The generator's sparkle mark:* a straight texture copy left a lighter patch on the logo (the vignette makes
