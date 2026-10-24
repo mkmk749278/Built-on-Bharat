@@ -1,0 +1,26 @@
+# Built on Bharat brand tokens (owner's motion directive, PLAYBOOK Part G.1; brand world PLAYBOOK §6.1).
+# Scenes read these through a generated brand.ts; never type colours by hand in a scene.
+channel_name: "Built on Bharat"
+handle: "@BuiltOnBharat"
+tagline: "The empires and habits that built a nation"
+colors:
+  bg: "#0D0E11"          # deep matte charcoal (main)
+  bg_alt: "#121212"      # deep matte charcoal (alternate)
+  bronze: "#C57D3C"      # accent: the story's key thing
+  gold: "#D4AF37"        # accent: highlights, counters landing
+  ink: "#FFFFFF"         # text primary
+  muted: "#8E929B"       # text secondary, blueprint lines
+  ember: "#FF8A3D"       # sparks and furnace light (from the logo); atmosphere only, not text
+fonts:                   # proposal: vendored OFL fonts, confirm the look on the first film
+  display: "Cinzel"        # engraved capitals for place/date and chapter stamps (banner look)
+  text: "Inter"            # labels, lower-thirds (load the latin-ext subset for the ₹ glyph)
+  numbers: "JetBrains Mono" # counters, tabular figures
+logo:
+  emblem: assets/brand/logo_emblem_1024.jpg   # reference copy; 2048 px original in Drive _Channel/
+  banner: assets/brand/banner_1920.jpg        # reference copy; 2752x1536 original in Drive _Channel/
+  # Both originals carry the generator's sparkle mark bottom-right: clean before use (PLAYBOOK §6.5).
+video:
+  width: 1920            # authoring canvas
+  height: 1080
+  fps: 60                # owner's directive
+  render_scale: 2        # 4K via --scale=2
