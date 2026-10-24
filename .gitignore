@@ -10,3 +10,4 @@ films/*/assets/
 films/*/remotion/public/assets/
 films/*/remotion/out/
 docs/research/*/run.log
+__pycache__/

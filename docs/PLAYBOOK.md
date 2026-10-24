@@ -515,6 +515,31 @@ phone), each with a heading line above it: block number, character count, voice 
    If any viewer drifts in the first minute, fix and review again. *Why:* the writer can't hear the script as a
    stranger.
 
+### 7.9 Reviewing the recorded takes (owner, 2026-10-24)
+Claude can't hear audio, and no connector listens to it (the ElevenLabs connector only manages voice agents). So every
+take is **measured** with `scripts/vo_review.py` before it goes into the edit, and before Claude says a word about it.
+- **Speech-to-text, for checking only (owner chose "local open model", 2026-10-24):** faster-whisper `small.en` runs on
+  the session's CPU, offline, free. It is used **only to check our own VO against its locked script**: never for timing
+  (§10.4 stays forced alignment), never for captions, never on anyone else's footage. Nothing leaves the session.
+- **Run:** `scripts/vo_review.py TAKES*.mp3 --blocks films/<slug>/script/blocks_performance.md --out DIR` (about 45 s
+  of CPU per minute of audio; transcripts are cached in `DIR/<take>/words.json`). Each take is matched to its block on
+  its own, so the owner never has to name files. Venv: `av==14.2.0 faster-whisper==1.1.1 librosa==0.10.2.post1
+  soundfile==0.12.1 matplotlib==3.9.2`.
+- **What it reports** (per take `report.md` + `review.png`, and `summary.md` in block order):
+  - **Words as written:** dropped, added or changed words against the script, with times. Spelling variants (disc/disk,
+    H-A-L/HAL, can't/cant) and numbers split by the transcriber are normalised away. Added words that match our tag
+    vocabulary are flagged **TAG READ ALOUD?** Speech-to-text still mishears names now and then: listen before re-recording.
+  - **Pace** over speech time (target 145–160 wpm) and every pause over 0.25 s.
+  - **Pause cues kept:** for each `[pause]`, `[long pause]` and `...`, the silence measured just before the next word.
+  - **Pitch:** median, and the range per 6 s window in semitones (under 3 = a flat stretch).
+  - **Voice drift:** median pitch shift and MFCC timbre distance against the batch (or `--ref` takes). Over 1.5 semitones
+    or 0.02 for the whole take = **VOICE CHANGED** (the `[low, steady voice]` problem); 3 s windows over 0.05 are listed
+    to listen to. Measured on a real Akash take: the same voice sits at 0.003, a take shifted 3 semitones at 0.056.
+  - **Loudness:** integrated LUFS and true peak (the mix normalises later; a peak over −1 dBTP is flagged).
+- **Then:** keep the best take of each block, list the lines to regenerate with the reason (a word wrong, a tag read
+  aloud, a missed pause, a voice change, a flat stretch), and tell the owner in plain words. The owner sends takes
+  straight in the Claude app, or saves them in Drive `Built-on-Bharat/<slug>/vo/`.
+
 ## 8. Visual storytelling toolkit
 
 The owner's directive (Part G.1) sets the motion standard; these are our reusable building blocks (build each once in
