@@ -34,3 +34,26 @@ rules").
 | 6 | Flattery and classroom signposts | Cut "They didn't have to do this…", "Simple, right?", "Let me show you", "Hold on to that", "I read them" |
 | 7 | Heavy or foreign-sounding words | Quote turned into plain reported speech (verbatim on screen); "too small a reason"; "the Middle East and Africa"; "the story flips" |
 | + | Furnace too long; AI171 too sudden; "Tata, Tata, Tata" sounds like an ad | Furnace cut to two lines (the 3D cutaway carries it); "And there's one more moment we have to stop for."; "All of it... Tata." |
+
+---
+
+# Audience review v2 (same panel, 2026-10-24)
+
+**Verdict: ready to record once four lines are fixed.** No viewer has a swipe point any more.
+
+| Viewer | Scores (clarity · interest · emotion · trust · would-share) |
+|---|---|
+| Priya | 8 · 8 · 7 · 8 · 7 |
+| Ramesh | 8 · 8 · 8 · 8 · 8 |
+| Lakshmi | 8 · 9 · 8 · 8 · 8 |
+| Arjun | 8 · 8 · 6 · 8 · 7 |
+| Fatima | 8 · 8 · 8 · 8 · 7 |
+
+Earlier problems 1–7 fixed (praised: "Did they ever get it back? Yes. We know because… it shows up in Dorabji's will";
+"So the diamond became a hospital"). Final fixes applied (v3, the recorded text):
+"the man with that diamond" and "put up their diamond" (not "gave up": they got it back); the strike line restored to
+"Real people, with real demands about their pay and their lives"; the 1895 line made unambiguous ("He was no kinder…
+healthy workers were the sure foundation of his success"); "When it will make chips at full scale is still an open
+question" (no vague "some reports"); "Not the Tata family's own pockets"; "Here's what happens" cut; "Iron ore, coke made
+from coal, and limestone". Dates checked: IISc opened to students in 1911 (vested 1909), Khopoli 1915, Jamshedpur 1919.
+Left as is: Mistry stays one line (the reason he was removed is contested; one more line would need both sides).

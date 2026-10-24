@@ -2,7 +2,7 @@
 
 11 blocks · voice: Akash · Eleven v4 · stability 0.65 · similarity 0.85 · style 0.15 · speaker boost on
 
-**Block 1 of 11** · 1076 characters · save as `vo/tata-history-b01.mp3`
+**Block 1 of 11** · 1069 characters · save as `vo/tata-history-b01.mp3`
 
 ```
 Nineteen twenty four. Bombay.
@@ -23,12 +23,12 @@ And yet, you won't find a single Tata at the top of any rich list.
 
 How is that even possible?
 
-The answer goes back to the man who gave up that diamond. What he did with everything he owned still shapes who controls Tata today — and in twenty twenty six, that question has turned into a fight.
+The answer goes back to the man with that diamond. What he did with everything he owned still shapes who controls Tata today — and in twenty twenty six, that question has turned into a fight.
 
 I'll show you exactly how, by the end. But first, we need to go back a long way. To a young trader... with twenty one thousand rupees.
 ```
 
-**Block 2 of 11** · 1456 characters · save as `vo/tata-history-b02.mp3`
+**Block 2 of 11** · 1449 characters · save as `vo/tata-history-b02.mp3`
 
 ```
 Eighteen sixty eight. Bombay is a city of ships and cotton, and most of the money flows one way. Out.
@@ -47,7 +47,7 @@ It opens on the first of January, eighteen seventy seven — the same day Queen 
 
 And then he does something unusual for his time. He starts a pension fund for his workers. Later, he pays them when they're hurt on the job.
 
-Was it pure kindness? He said it himself, in eighteen ninety five. They were no kinder than anyone else. But the health of their workers... was the sure foundation of their success.
+Was it pure kindness? He said it himself, in eighteen ninety five. He was no kinder than anyone else, he said. But healthy workers... were the sure foundation of his success.
 
 Look after your workers, and they look after your business.
 
@@ -112,12 +112,12 @@ Would you have done it?
 Not everyone believed it, of course. According to Tata's own histories, a senior British railway official, Sir Frederick Upcott, laughed at the idea. He said he would eat every pound of steel rail they managed to make.
 ```
 
-**Block 5 of 11** · 1454 characters · save as `vo/tata-history-b05.mp3`
+**Block 5 of 11** · 1498 characters · save as `vo/tata-history-b05.mp3`
 
 ```
 So how do you turn a hill of red rock into steel? You build a tower of fire.
 
-Ore, coal and limestone go in at the top. Hot air blasts in at the bottom. And out comes iron — as a glowing liquid. Refine it, and you have steel.
+Iron ore, coke made from coal, and limestone go in at the top. Hot air blasts in at the bottom. And out comes iron — as a glowing liquid. Refine it, and you have steel.
 
 The first iron flows in December nineteen eleven. The first steel, in nineteen twelve.
 
@@ -129,7 +129,7 @@ In nineteen nineteen, the town gets a new name. Jamshedpur — after the man who
 
 And his other two dreams? They came true too. The institute opened in Bangalore in nineteen eleven. Today it's the Indian Institute of Science. And in nineteen fifteen, power from monsoon lakes in the Western Ghats started running Bombay's mills.
 
-But a steel town is no fairy tale. In nineteen twenty two, the workers went on strike. Built by people... and people push back.
+But a steel town is no fairy tale. In nineteen twenty two, the workers went on strike. Real people, with real demands about their pay and their lives.
 
 And after the war, the good years end. Prices fall. Cheaper iron and steel pour in from abroad.
 
@@ -142,7 +142,7 @@ The banks want security.
 Which brings us back... to that bank in Bombay.
 ```
 
-**Block 6 of 11** · 1417 characters · save as `vo/tata-history-b06.mp3`
+**Block 6 of 11** · 1396 characters · save as `vo/tata-history-b06.mp3`
 
 ```
 You're looking at the Jubilee diamond. It was found in South Africa in eighteen ninety five, and named for Queen Victoria's Diamond Jubilee.
@@ -157,7 +157,7 @@ It was her diamond. And it went to a bank, so that workers far away could get pa
 
 Did they ever get it back? Yes. We know because, eight years later, it shows up in Dorabji's will.
 
-Here's what happens. In nineteen thirty one, Meherbai dies of leukaemia, a cancer of the blood.
+In nineteen thirty one, Meherbai dies of leukaemia, a cancer of the blood.
 
 The next year, Dorabji dies too.
 
@@ -252,14 +252,14 @@ June twenty twenty five. Air India flight one seven one, bound for London, crash
 The final report is not out yet, and the cause has not been established. We remember every life that was lost.
 ```
 
-**Block 10 of 11** · 1442 characters · save as `vo/tata-history-b10.mp3`
+**Block 10 of 11** · 1449 characters · save as `vo/tata-history-b10.mp3`
 
 ```
-Tata now assembles iPhones in India. It's building one of India's first big chip factories, in Dholera, Gujarat — though some reports say full production may take longer than promised.
+Tata now assembles iPhones in India. It's building one of India's first big chip factories, in Dholera, Gujarat. When it will make chips at full scale is still an open question.
 
 So. Back to the question we started with. Who owns Tata?
 
-Not the Tata family. About two thirds of Tata Sons, the company at the top, belongs to charitable trusts.
+Not the Tata family's own pockets. About two thirds of Tata Sons, the company at the top, belongs to charitable trusts.
 
 And the biggest of them... is the Sir Dorabji Tata Trust. Dorabji's trust. It holds about twenty eight percent of Tata Sons.
 
@@ -282,10 +282,10 @@ As this film goes out, that fight is not over.
 So in the end, this fight goes back to Dorabji's choice. He gave it all to a trust, with a promise that the money would serve India.
 ```
 
-**Block 11 of 11** · 450 characters · save as `vo/tata-history-b11.mp3`
+**Block 11 of 11** · 449 characters · save as `vo/tata-history-b11.mp3`
 
 ```
-Eight thousand Indians bet their savings on a steel plant. A husband and wife gave up their diamond to keep it alive.
+Eight thousand Indians bet their savings on a steel plant. A husband and wife put up their diamond to keep it alive.
 
 And a hundred years later, the question is still the same one.
 
