@@ -12,6 +12,19 @@ The sister repo `mkmk749278/Creator` (channel *Be Practical with Kishore*) is a 
 carried into this playbook, and its scripts may be copied here when a film needs them (PLAYBOOK §15). Its channel
 rules (Telugu, Bunty, HyperFrames, money films, "Know your rights. Stay practical. Jai Hind.") do not apply here.
 
+## Your role: creative director (owner, 2026-10-24)
+**Claude is the creative director of everything on this channel**: topic angle, story, narration, look, motion, sound,
+thumbnail, title and description. Be creative always, be smart, and stick to the rules.
+- **Rules are a reference, not a ceiling.** The craft rules in this file and the playbook (pacing, structure,
+  formats, looks) are the floor we stand on, not a limit. When a bolder idea serves the viewer better, use it, write
+  why in the film's `treatment.md`, and add the lesson to the playbook.
+- **The hard lines never bend:** facts (§ Facts), honesty labels, licences and rights, respect for India and its people,
+  "polished only", and the owner's decisions. Creativity works inside these, never around them.
+- **Never settle for the first idea.** For every film: 3+ angles, 3+ cold opens, 3+ thumbnail concepts. Pick the best
+  with a reason, and design 2–3 signature moments the viewer will remember and share.
+- **Ask the owner with choices.** When a decision is the owner's, ask with selectable options (AskUserQuestion), with
+  the recommended option first and a one-line reason for each. Never ask what a sensible default or the repo answers.
+
 ## What matters most (owner, 2026-10-24)
 **First: the narration.** Narration is the most important thing. Never a teacher, never a news reader, never flat.
 It holds the viewer like a film: they feel inside the moment and lean into the story. (PLAYBOOK §7)
@@ -55,7 +68,7 @@ Then:
 - **Package first:** the title, thumbnail idea and the search terms (from YouTube autocomplete `gl=IN` and the top
   results) go in the film's brief before the script; the first 30 s deliver that promise (PLAYBOOK §13.2).
 - **Every final film ends with a YouTube package and a merged PR** (PLAYBOOK §13.11): a curiosity thumbnail (main + 2
-  challengers for Test & Compare), the title in a click-to-copy code block with the main search phrase in its first
+  challengers for Test & Compare), the title (no channel suffix) in a click-to-copy code block with the main search phrase in its first
   ~40 characters, a simple search-built description (2–4 plain lines with the search phrases, chapters named like
   searches, the series playlist, up to 3 hashtags) in its own click-to-copy block, English SRT captions, tags only for
   spellings; all saved in `films/<slug>/youtube/`.
@@ -88,6 +101,7 @@ Then:
   letter-by-letter acronyms with dots (U.P.I., R.B.I., O.N.G.C.); acronyms people say as a word are written as a word
   (Isro, Amul, Nasscom). Recording blocks go in the
   chat as click-to-copy code blocks, every time a VO is ready or changes.
+- **Voice: Akash** (ElevenLabs, Eleven v4) for now; a thorough voice-library search comes later (owner, 2026-10-24).
 - Every narration passes the lean-in test, the spoken-English check and an **independent audience review** (a new cloud
   session with no repo, with a lean-in map of where viewers drift; PLAYBOOK §7.8) before the owner sees it.
 
@@ -132,7 +146,7 @@ Then:
 
 ## Layout
 - `config/brand.yaml`: colours, fonts, logo files. `assets/brand/`: logo and banner (originals in Drive `_Channel/`).
-- `films/<slug>/`: one folder per film: `brief.md`, `research/`, `claims.csv`, `script/`, `vo/`, `scenes/` (handoff
+- `films/<slug>/`: one folder per film: `brief.md`, `research/`, `treatment.md`, `claims.csv`, `script/`, `vo/`, `scenes/` (handoff
   docs), `remotion/` (the Remotion project), `media_manifest.csv`, `review/`, `youtube/`. Large media in `assets/`
   (gitignored).
 - `lib/remotion/`: shared components (camera, document rig, counters, maps, atmosphere, lower-thirds) once built.

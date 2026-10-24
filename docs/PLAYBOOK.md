@@ -8,7 +8,7 @@ Many lessons come from the sister channel's repo, `mkmk749278/Creator` (*Be Prac
 rule came from there, it says so, with the measured reason. Its files are a reference only.
 
 **Contents**
-- Part A: How we work. 1 Owner and delivery · 2 Claude and effort · 3 Parallel sessions
+- Part A: How we work. 1 Owner and delivery · 2 Claude: creative director, and effort · 3 Parallel sessions
 - Part B: The channel. 4 Identity, audience, emotion and respect · 5 Story architecture · 6 The look ·
   7 Narration (the most important thing) · 8 Visual storytelling toolkit
 - Part C: Production. 9 Facts and honesty · 10 Remotion engine · 11 Media sourcing · 12 Sound ·
@@ -51,9 +51,55 @@ rule came from there, it says so, with the measured reason. Its files are a refe
 - **Ask, don't guess, on the owner's decisions** (voice, topic, anything paid), but never ask about things a sensible
   default or the repo answers.
 
-## 2. Claude and effort
+## 2. Claude: creative director, and effort
 
-- Sessions run on Claude Opus 5.5 (`claude-opus-5-5`). **Don't limit yourself (owner, 2026-10-24: "don't ever limit
+### 2.1 Creative director (owner, 2026-10-24)
+> "Always should be creative director for everything … rules not the ceiling, they are for reference … creative
+> brains don't have limits." (owner, 2026-10-24)
+
+Claude owns the creative vision of every film from topic to thumbnail. A director decides; a template follower
+repeats. *Why:* YouTube judges each video on its own and rewards what viewers are glad they watched (§13.1); a channel
+that looks like everyone else's, or like its own last film, gives them no reason to choose it.
+
+**How the rules work here.**
+- **Craft rules are a floor and a reference.** Pacing numbers, structure, chapter lengths, looks, formats: they record
+  what worked and what failed, with the reason. Know the reason; when a better idea serves the viewer more, break the
+  rule on purpose, write why in `treatment.md`, check it in review, and log the result in §16.
+- **Hard lines never bend:** every fact verified (§9), honesty labels (§9.4), licences and rights (§11), respect for
+  India and its people (§4.1), no fakes of real people, polished-only deliveries (§1), and the owner's decisions (§17).
+
+**The creative treatment** (`films/<slug>/treatment.md`, written after research, before the script, then shared with
+the owner as a finished one-page pitch):
+1. **Logline:** the film in one sentence with its tension ("A Parsi trader bets his fortune on a steel plant in a
+   jungle, while the empire that rules India says Indians can't make steel." Shape only; facts verified first).
+2. **The feeling:** what the viewer should feel at the start, the darkest moment and the end.
+3. **The angle:** why our film is different from every other film on this subject (3 angles considered, 1 chosen).
+4. **The visual world:** the film's own art direction inside the brand (§6.1): texture, light, colour temperature,
+   motif, the camera's personality.
+5. **Signature moments (2–3):** the shots people will remember and share: an impossible camera move, a match cut across
+   a century, a 3D cutaway that finally makes the mechanism click, a silence. Each gets a short design note.
+6. **Sound palette:** the instruments, the textures, where the music stops.
+7. **The package:** title, thumbnail concepts and search phrases (§13.2), written first, because they are the promise.
+
+**Creative habits.**
+- **Kill the first idea.** It's usually the one every other channel had. Write three, keep the one that surprises you.
+- **Steal from cinema, not from YouTube templates:** match cuts, sound bridges, a slow push into a face, a held wide
+  shot, a cut to black on the reveal, a shot that holds while the music drops out.
+- **Every chapter earns one "how did they do that?" moment.** Not more effects: one idea that lands.
+- **Surprise inside the brand:** the medallion world (bronze, charcoal, sparks) is the home; each film visits a new
+  room in it.
+- **Benchmark against the best:** before locking a treatment, look at the 3 strongest films on the subject (any
+  language) and write what ours does better. Competitors are a reference, never a ceiling.
+- **Smart, not just bold:** each creative choice must make the story clearer, the emotion stronger or the curiosity
+  sharper. If it only looks clever, cut it.
+
+**Asking the owner.** The owner answers by selecting options on the phone. When a decision is his (voice, topic,
+anything paid, a change to his rules), ask with the AskUserQuestion tool: 2–4 clear options, the recommended one first
+marked "(Recommended)", each with a one-line reason. Decide everything else yourself and say what you decided.
+
+### 2.2 Effort
+
+- **Don't limit yourself (owner, 2026-10-24: "don't ever limit
   yourself as Opus 5.5, you can do a lot").** It reads images precisely (use it on every contact sheet and frame), writes
   real engine code, holds a whole film's research in context, and rarely invents sources. So: build real 3D instead of
   flat icons, write a custom scene instead of reusing a template, review every frame instead of a sample.
@@ -196,8 +242,8 @@ The drop lined up with a welcome line, logo sting and title card at 0:25–0:45 
   with a bridge line to the next film over it (never a silent logo).
 
 ### 5.3 Story deliverables per film
-`films/<slug>/brief.md` (topic, angle, why now, demand check) → `research/` (sources, timeline, people) →
-`story.md` (protagonists, want, obstacles, turns, emotional beats, the chapter map) → `script/` (narration + screenplay)
+`films/<slug>/brief.md` (topic, angle, why now, demand check, package draft) → `research/` (sources, timeline,
+people, `search_terms.md`) → `treatment.md` (the creative director's pitch, §2.1) → `story.md` (protagonists, want, obstacles, turns, emotional beats, the chapter map) → `script/` (narration + screenplay)
 → `scenes/` (one handoff doc per scene, §10.3).
 
 ## 6. The look
@@ -382,7 +428,7 @@ paragraph. Then check each paragraph:
   the chase. Measure on the real take.
 
 ### 7.6 Voice and performance
-**To decide with the owner (§17):** an ElevenLabs voice or the owner's own recordings. A real Indian voice builds
+**Akash for now (owner, 2026-10-24),** on Eleven v4; a thorough voice-library search comes later (§17). A real Indian voice builds
 trust faster (Creator research, 2026-10-21); never synthesise a real person's voice. **Choose the voice by its acting:**
 audition 3–4 voices on the same storyteller paragraph (§7.1) and listen for warmth, range (can it whisper, can it
 lift), and whether it varies pace by itself. Creator uses Akash on Eleven v4 for explainers (stability 0.65,
@@ -792,8 +838,8 @@ Rules for the pair:
   in the same line. Phones cut long titles, so the part a phone shows must work on its own. Aim for ≤ 60 characters;
   100 is YouTube's hard limit.
 - No `!`, no ALL CAPS sentences (one capitalised word at most), no hype words, no emoji.
-- **Channel suffix: open decision (§17).** On the sister channel the one breakout title had no suffix, and the suffix
-  used about half of what a phone shows.
+- **No channel suffix (owner, 2026-10-24).** On the sister channel the one breakout title had no suffix, and the
+  suffix used about half of what a phone shows.
 - Deliver the title in a click-to-copy code block, plus two alternatives (each in its own block) for title testing.
 
 ### 13.5 Thumbnail (lessons from Creator, owner 2026-10-22: "we are failing at thumbnail, that's why low CTR")
@@ -975,26 +1021,24 @@ only. Both carry the generator's sparkle mark bottom-right (clean before use, §
 
 ## 17. Decisions and open questions
 
-**Decided (owner, 2026-10-24):** new channel Built on Bharat; Remotion stack; 60 fps; the motion directive in Part G.1;
-cinematic storytelling with fully checked facts; Indian emotion, humanity and respect first; polished deliveries only;
-Drive folder `Built-on-Bharat`.
+**Decided (owner, 2026-10-24):**
+- New channel Built on Bharat; Remotion stack; 60 fps; the motion directive in Part G.1; cinematic storytelling with
+  fully checked facts; Indian emotion, humanity and respect; polished deliveries only; Drive folder `Built-on-Bharat`.
+- **Narration and curiosity in the package come first** (§7, §13). **Claude is the creative director;** rules are a
+  reference, not a ceiling; the hard lines never bend (§2.1).
+- **Voice: Akash** (ElevenLabs, Eleven v4) for now. Later, a thorough search of the ElevenLabs voice library for a
+  better story voice; if none is better, Akash stays.
+- **Language:** English narration for all of India; Hindi/Telugu audio tracks later, once the channel qualifies.
+- **Titles:** no channel suffix.
+- **Description:** 2–4 plain search-built lines, chapters, the series playlist link and up to 3 hashtags (§13.6).
+- **Logo:** Claude removes the generator's mark and rebuilds a clean transparent medallion and an animated outro sting
+  from it, at production quality.
+- **First film:** Claude chooses by research (demand × weak supply, §4.3) and pitches it with a treatment and package.
+- Length: topic decides, about 10–16 min as a guide. 4K at 60 fps via `--scale=2`. No fixed sign-off line yet.
 
-**Defaults chosen, to confirm with the owner:**
-1. **Narration language:** English (pan-India), Hindi/Telugu audio tracks later. *Default because:* the tagline and
-   banner are English and English reaches every state.
-2. **Length:** topic decides, about 10–16 min as a guide.
-3. **4K at 60 fps** rendered with `--scale=2` from 1080p authoring.
-4. **Title format:** no channel suffix (Creator's breakout title had none and the suffix ate the phone title).
-5. **Description:** short and search-built (§13.6): 2–4 plain lines with the search phrases, chapters, the series
-   playlist link, up to three hashtags. No sources or credit roll.
-6. **Sign-off line:** none fixed yet (Creator's "Jai Hind" sign-off belongs to that channel).
-
-**Open, need the owner:**
-- Voice: an ElevenLabs voice (which one?) or the owner's own recordings? An ElevenLabs API key in the environment
-  (`ELEVENLABS_API_KEY`) would give exact word timings with each take.
-- A clean vector / transparent version of the medallion for the logo bug and the outro sting.
-- First film topic (candidates in §4.3).
-- Upload schedule and whether Shorts start from film 1.
+**Open:**
+- `ELEVENLABS_API_KEY` in the environment would give exact word timings with each take (otherwise alignment, §10.4).
+- Upload schedule, and whether Shorts start from film 1.
 
 ---
 
@@ -1088,3 +1132,12 @@ Drive folder `Built-on-Bharat`.
 > flat. We should hold audience, they should get immersive experience, they should lean into story.
 
 *(Lightly punctuated; "[when]" added for reading.)*
+
+## G.4 Owner's message (2026-10-24, third)
+
+> And Claude, yes, you only. Always should be creative director for everything. Be creative always and be smart and
+> always stick to rules. Rules not the ceiling, they are for reference. Creative brains don't have limits. And ask your
+> clarification, I do select answer. Finalise the Claude docs and also update Creator Claude and playbook with all of
+> this creativity things and YouTube algorithm things and curiosity things.
+
+*(Lightly punctuated for reading.) Answers he selected the same day are recorded in §17.*
