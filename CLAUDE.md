@@ -12,7 +12,28 @@ The sister repo `mkmk749278/Creator` (channel *Be Practical with Kishore*) is a 
 carried into this playbook, and its scripts may be copied here when a film needs them (PLAYBOOK §15). Its channel
 rules (Telugu, Bunty, HyperFrames, money films, "Know your rights. Stay practical. Jai Hind.") do not apply here.
 
-## The three things that matter most (owner, 2026-10-24)
+## Your role: creative director (owner, 2026-10-24)
+**Claude is the creative director of everything on this channel**: topic angle, story, narration, look, motion, sound,
+thumbnail, title and description. Be creative always, be smart, and stick to the rules.
+- **Rules are a reference, not a ceiling.** The craft rules in this file and the playbook (pacing, structure,
+  formats, looks) are the floor we stand on, not a limit. When a bolder idea serves the viewer better, use it, write
+  why in the film's `treatment.md`, and add the lesson to the playbook.
+- **The hard lines never bend:** facts (§ Facts), honesty labels, licences and rights, respect for India and its people,
+  "polished only", and the owner's decisions. Creativity works inside these, never around them.
+- **Never settle for the first idea.** For every film: 3+ angles, 3+ cold opens, 3+ thumbnail concepts. Pick the best
+  with a reason, and design 2–3 signature moments the viewer will remember and share.
+- **Ask the owner with choices.** When a decision is the owner's, ask with selectable options (AskUserQuestion), with
+  the recommended option first and a one-line reason for each. Never ask what a sensible default or the repo answers.
+
+## What matters most (owner, 2026-10-24)
+**First: the narration.** Narration is the most important thing. Never a teacher, never a news reader, never flat.
+It holds the viewer like a film: they feel inside the moment and lean into the story. (PLAYBOOK §7)
+
+**First, equally: curiosity in the package.** The thumbnail, title and description make a stranger feel a question
+only the film answers, and are built for how YouTube actually finds videos: search (the words people type), browse
+(the home feed) and suggested (up next). Simple, honest, never clickbait. (PLAYBOOK §13, the algorithm analysis)
+
+Then:
 1. **Indian emotion, Indian humanity, respect for India.** Every film is about people: the worker at the furnace, the
    founder who was laughed at, the family that saved for it, the crowd that cheered. Indian reactions and feelings carry
    the story. Respect for India and Indians in every line and frame: proud, never jingoistic, never mocking, honest
@@ -44,9 +65,13 @@ rules (Telugu, Bunty, HyperFrames, money films, "Know your rights. Stay practica
   Sessions can't delete branches: tell the owner which ones to delete.
 - Build in phases. At the end of each phase, stop and report what was built, what was checked and what is left.
 - Once the owner approves a cut, stop editing it.
-- **Every final film ends with a YouTube package and a merged PR** (PLAYBOOK §13): a curiosity thumbnail (main + A/B
-  challenger), the title in a click-to-copy code block, a simple description with chapter timestamps in its own
-  click-to-copy block, all saved in `films/<slug>/youtube/`.
+- **Package first:** the title, thumbnail idea and the search terms (from YouTube autocomplete `gl=IN` and the top
+  results) go in the film's brief before the script; the first 30 s deliver that promise (PLAYBOOK §13.2).
+- **Every final film ends with a YouTube package and a merged PR** (PLAYBOOK §13.11): a curiosity thumbnail (main + 2
+  challengers for Test & Compare), the title (no channel suffix) in a click-to-copy code block with the main search phrase in its first
+  ~40 characters, a simple search-built description (2–4 plain lines with the search phrases, chapters named like
+  searches, the series playlist, up to 3 hashtags) in its own click-to-copy block, English SRT captions, tags only for
+  spellings; all saved in `films/<slug>/youtube/`.
 
 ## Format
 - **Long-form cinematic documentaries** in English. The topic sets the length; about 10–16 minutes as a guide, never a
@@ -65,17 +90,20 @@ rules (Telugu, Bunty, HyperFrames, money films, "Know your rights. Stay practica
 - **India maps** use India's official boundary (PLAYBOOK §6.6). Never draw India from memory.
 
 ## Narration (PLAYBOOK §7)
-- **Simple, warm, cinematic Indian English**: the words any Indian from any state understands, told like a storyteller
-  at night, not a news reader or a lecturer. Present tense for scenes ("It's 1903. Bombay."), short punches after long
-  flowing lines, questions the viewer is already asking, `...` before reveals, `—` for turns.
+- **Immersive storytelling in simple, warm Indian English**: the words any Indian from any state understands. Start
+  inside a moment; one time, place, person and object; chain beats with "but" and "so", never "and then"; give half and
+  withhold half; curiosity loops at film, chapter and every 20–40 s; stakes in human terms; show emotion, don't name it;
+  a long line then a short punch; leave room for the picture.
+- **The lean-in test:** every paragraph has a Q column (the question the viewer is holding). Empty Q = cut or rewrite.
 - No "Welcome to…", "In this video…", "Today we'll…", "Let us understand…". No hype words ("SHOCKED the world",
   "China is TERRIFIED"). No Hindi tags ("na", "yaar"): the film belongs to every state.
 - VO text: numbers and amounts as words, rupees and lakh/crore, no digits, `₹`, `!`, double quotes or brackets;
   letter-by-letter acronyms with dots (U.P.I., R.B.I., O.N.G.C.); acronyms people say as a word are written as a word
   (Isro, Amul, Nasscom). Recording blocks go in the
   chat as click-to-copy code blocks, every time a VO is ready or changes.
-- Every narration passes the spoken-English check and an **independent audience review** (a new cloud session with no
-  repo, PLAYBOOK §7.6) before the owner sees it.
+- **Voice: Akash** (ElevenLabs, Eleven v4) for now; a thorough voice-library search comes later (owner, 2026-10-24).
+- Every narration passes the lean-in test, the spoken-English check and an **independent audience review** (a new cloud
+  session with no repo, with a lean-in map of where viewers drift; PLAYBOOK §7.8) before the owner sees it.
 
 ## Engine: Remotion (owner, 2026-10-24; PLAYBOOK §10)
 - **Remotion, pinned `4.0.534`** (every `remotion` and `@remotion/*` package on the same exact version), React +
@@ -118,7 +146,7 @@ rules (Telugu, Bunty, HyperFrames, money films, "Know your rights. Stay practica
 
 ## Layout
 - `config/brand.yaml`: colours, fonts, logo files. `assets/brand/`: logo and banner (originals in Drive `_Channel/`).
-- `films/<slug>/`: one folder per film: `brief.md`, `research/`, `claims.csv`, `script/`, `vo/`, `scenes/` (handoff
+- `films/<slug>/`: one folder per film: `brief.md`, `research/`, `treatment.md`, `claims.csv`, `script/`, `vo/`, `scenes/` (handoff
   docs), `remotion/` (the Remotion project), `media_manifest.csv`, `review/`, `youtube/`. Large media in `assets/`
   (gitignored).
 - `lib/remotion/`: shared components (camera, document rig, counters, maps, atmosphere, lower-thirds) once built.
