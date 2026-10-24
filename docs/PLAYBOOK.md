@@ -440,33 +440,41 @@ paragraph. Then check each paragraph:
   uniform. v4 guides report no style or speed sliders in v4 (if the app still shows them, leave style at 0 and speed at
   1.0). Generate **2–3 takes** of a block and keep the best; tags are guidance, not guarantees.
 
-**How we write for it (the performance layer).** The fact-checked `vo.txt` stays tag-free; a second file,
-`vo_performance.txt`, adds direction from `performance_map.tsv`. A script checks that the spoken words are identical.
-1. **Breath:** a blank line between beats (the engine resets there); one beat = one breath (§7.3, ≤ 25 words); long
-   flowing sentences are fine when commas sit where a person would breathe. `[exhales]` only after the 2–3 heaviest
-   moments of a film (it reads as a real breath, overuse sounds like sighing).
-2. **Low and high (the dynamics map):** each chapter opens **low and steady** (`[low, steady voice]`), the gravity
-   that gives a narrator depth. Intimate or sad beats go **soft** (`[softly]`, `[quietly]`). Proud and human beats go
-   **warm** (`[warmly]`, `[with quiet pride]`). Questions to the viewer go **curious**. Turns and war go **up**
-   (`[with energy]`, `[building intensity]`, `[urgent]`). Light beats go **dry or amused**. Never shout, never whisper a
-   fact the viewer must hear on a noisy bus.
-3. **Stress:** CAPITALS on **one word** at most in a beat, and only where a person would hit it ("ANY rich list", "HER
+**Owner's test, 2026-10-24: describing the voice changes the voice.** "`[low, steady voice]` — it's not coming out
+good. Too low and totally different." With a library voice like Akash, a tag that *describes a voice* (`[low, steady
+voice]`, `[warmer, conversational]`, `[warm, confident]`) makes v4 build a different voice, not direct Akash's. **So:
+never describe the voice in a tag.** Use only short emotion and pause words that leave the voice alone.
+
+**How we write for it (the performance layer).** The fact-checked `vo.txt` stays tag-free. A second file,
+`vo_performance.txt`, adds direction from `performance_map.tsv`, and a script checks that the spoken words are
+identical.
+1. **Allowed tags (one word, emotion or pause):** `[pause]`, `[long pause]`, `[curious]`, `[serious]`, `[warmly]`,
+   `[softly]` (only for the 3–5 heaviest moments: overused, it sinks the read), `[amused]`, `[urgent]`, `[relieved]`,
+   `[exhales]` (once or twice a film). **Banned:** any voice description (low, deep, steady, gravelly, warm voice,
+   confident), stacked adjectives, `[whispers]`, `[shouting]`, `[slowly]`/`[rushed]` (they change the voice's pace too
+   much). Add a tag to this list only after the owner hears it work with Akash.
+2. **Breath:** a blank line between beats (the engine resets there); one beat = one breath (§7.3, ≤ 25 words); long
+   flowing sentences are fine when commas sit where a person would breathe.
+3. **Low and high come from the writing first:** short, quiet sentences read low; questions lift; a run of short beats
+   builds energy. Tags only nudge: `[serious]` for gravity, `[softly]` for grief, `[warmly]` for pride, `[curious]` for
+   questions, `[urgent]` for a crisis line, `[amused]` for a light beat.
+4. **Stress:** CAPITALS on one word at most in a beat, and only where a person would hit it ("ANY rich list", "HER
    diamond"); 3–6 in a whole film.
-4. **Silence:** `[pause]` before a reveal, `[long pause]` before a chapter turn or a solemn passage; `...` for a held
+5. **Silence:** `[pause]` before a reveal, `[long pause]` before a chapter turn or a solemn passage; `...` for a held
    breath inside a sentence. The music edit does the rest (§12).
-5. **Density:** about one tag per 40–50 words. A tag on every line makes the read theatrical and raises the risk of a
-   tag being spoken aloud.
-6. **Depth and bass** come mostly from the voice, so pick the voice for it (§7.6). In the mix: a gentle low shelf
-   (+1.5 to +2.5 dB around 120 Hz), a high-pass at 70 Hz to remove rumble, a de-esser around 6–8 kHz, light compression
-   (2:1 to 3:1) and room tone so the voice sits in a space, not in a vacuum. Never pitch-shift a voice.
-7. **Text rules still apply:** numbers and amounts as words, no digits, `₹`, `!`, double quotes or semicolons;
+6. **Density:** about one tag per 60–70 words (Tata film v2: 38 tags in about 2,470 words). More makes the read
+   theatrical and raises the risk of a tag being spoken aloud.
+7. **Depth and bass** come from the voice, never from a tag. In the mix: a gentle low shelf (+1.5 to +2.5 dB around
+   120 Hz), a high-pass at 70 Hz to remove rumble, a de-esser around 6–8 kHz, light compression (2:1 to 3:1) and room
+   tone so the voice sits in a space. Never pitch-shift a voice.
+8. **Text rules still apply:** numbers and amounts as words, no digits, `₹`, `!`, double quotes or semicolons;
    letter-by-letter acronyms with dots (U.P.I., R.B.I., T.C.S.), word acronyms as words (Isro); names the first take
    gets wrong get a phonetic spelling or IPA in `script/phonetics.md`.
 
 **The test pack (before the full recording).** Block 1 is recorded three ways: (A) the clean text at stability 0.65,
 (B) the tagged text at stability 0.50, (C) the tagged text at 0.40. 2 takes each. The owner picks by ear; record the
-winner and settings here. If any tag is spoken aloud, move it closer to its words or describe the voice instead
-(`[low, steady voice]` rather than `[deep]`); if it keeps happening, record the clean blocks.
+winner and settings here. If any tag is spoken aloud or changes the voice, remove it from the allowed list; if it
+keeps happening, record the clean blocks.
 
 Sources: ElevenLabs TTS best practices (https://elevenlabs.io/docs/overview/capabilities/text-to-speech/best-practices),
 Eleven v4 launch (https://elevenlabs.io/blog/eleven-v4), Eleven v3 prompting (https://elevenlabs.io/docs/best-practices/prompting/eleven-v3),
