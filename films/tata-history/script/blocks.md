@@ -1,8 +1,8 @@
-# Recording blocks: tata-history (v6) · clean text, reference only: record blocks_performance.md
+# Recording blocks: tata-history (v6, full recording, punctuation only)
 
-17 blocks · voice: Akash · Eleven v4 · stability 0.50 · similarity 0.80 · speed 1.0 · style 0 if shown · speaker boost on · pause tags only
+17 blocks · voice: Akash · Eleven v4 · stability 0.50 · similarity 0.80 · speed 1.0 · style 0 if shown · speaker boost on · no tags: commas and full stops only
 
-**Block 1 of 17** · 1418 characters · save as `vo/tata-history-b01.mp3`
+**Block 1 of 17** · 1354 characters · save as `vo/tata-history-b01.mp3`
 
 ```
 Bombay. Nineteen twenty four.
@@ -32,7 +32,7 @@ The answer is in this bank. In what happens to that diamond. A choice this man m
 But to understand why a man would pawn his wife's diamond for a steel plant, we have to go back to the beginning. And the beginning is not what you think. It's not a palace. It's a family of priests, in a small town in Gujarat.
 ```
 
-**Block 2 of 17** · 1313 characters · save as `vo/tata-history-b02.mp3`
+**Block 2 of 17** · 1263 characters · save as `vo/tata-history-b02.mp3`
 
 ```
 Navsari. Eighteen thirty nine.
@@ -56,7 +56,7 @@ It's going well. And then, almost everything falls apart.
 Eighteen sixty four. Jamsetji sails to England, carrying papers that say he will be paid for a big load of cotton. But by the time his ship docks, cotton prices have crashed. The papers are worthless.
 ```
 
-**Block 3 of 17** · 1376 characters · save as `vo/tata-history-b03.mp3`
+**Block 3 of 17** · 1340 characters · save as `vo/tata-history-b03.mp3`
 
 ```
 His father's firm cannot go on. Still in his twenties, Jamsetji has to close it down, face every debt, and slowly win back the trust of the people they owe.
@@ -82,7 +82,7 @@ Jamsetji has seen those English mills with his own eyes. And one question won't 
 Like many traders of his time, his family's business ran on cotton and on opium, sold to China. That is part of this story too, and it's worth saying out loud.
 ```
 
-**Block 4 of 17** · 1404 characters · save as `vo/tata-history-b04.mp3`
+**Block 4 of 17** · 1362 characters · save as `vo/tata-history-b04.mp3`
 
 ```
 Then he builds a mill of his own. Not in Bombay, where everyone builds. In Nagpur, right where the cotton grows.
@@ -106,7 +106,7 @@ But a hotel was never his biggest dream. Jamsetji had three bigger ones.
 A steel plant, so India could make its own rails and bridges. Power from the monsoon rains of the Western Ghats. And a world class institute of science, so Indians could invent, not just buy.
 ```
 
-**Block 5 of 17** · 1315 characters · save as `vo/tata-history-b05.mp3`
+**Block 5 of 17** · 1279 characters · save as `vo/tata-history-b05.mp3`
 
 ```
 For the institute alone, he offers property worth thirty lakh rupees.
@@ -138,7 +138,7 @@ They try London first. The answer is cold.
 So in nineteen oh seven, the Tatas take a huge risk. They ask India.
 ```
 
-**Block 6 of 17** · 1399 characters · save as `vo/tata-history-b06.mp3`
+**Block 6 of 17** · 1371 characters · save as `vo/tata-history-b06.mp3`
 
 ```
 Bombay, nineteen oh seven. The share office opens.
@@ -168,7 +168,7 @@ Then the First World War comes. Britain's armies need rails, and many of them co
 Years later, as the Tata story goes, Dorabji had a reply for Upcott. If he had kept his promise, he would have had some indigestion.
 ```
 
-**Block 7 of 17** · 1429 characters · save as `vo/tata-history-b07.mp3`
+**Block 7 of 17** · 1391 characters · save as `vo/tata-history-b07.mp3`
 
 ```
 In nineteen nineteen, the town gets a new name. Jamshedpur. After the man who never saw it.
@@ -202,7 +202,7 @@ The loan comes through. The furnaces stay lit. The workers get paid.
 It was her diamond. And it went into a bank, so that families fourteen hundred kilometres away could eat.
 ```
 
-**Block 8 of 17** · 1036 characters · save as `vo/tata-history-b08.mp3`
+**Block 8 of 17** · 1006 characters · save as `vo/tata-history-b08.mp3`
 
 ```
 Did they ever get it back? Yes. We know because, eight years later, it shows up in Dorabji's will.
@@ -224,7 +224,7 @@ But the shares in Tata Sons? Those the trust keeps.
 And that means something no one had planned. A charity now owns a big piece of the empire. Keep that in mind. It's the key to the ending.
 ```
 
-**Block 9 of 17** · 1439 characters · save as `vo/tata-history-b09.mp3`
+**Block 9 of 17** · 1383 characters · save as `vo/tata-history-b09.mp3`
 
 ```
 Now the story needs a new captain. And this one flies.
@@ -258,7 +258,7 @@ It's called Tata Consultancy Services. T.C.S.
 Remember that name. One day it will carry the whole empire.
 ```
 
-**Block 10 of 17** · 980 characters · save as `vo/tata-history-b10.mp3`
+**Block 10 of 17** · 944 characters · save as `vo/tata-history-b10.mp3`
 
 ```
 And in those years, J.R.D. gets a postcard he will never forget.
@@ -278,7 +278,7 @@ February, nineteen seventy eight. A new government removes J.R.D. from Air India
 That night, someone asks how he feels. He says, I feel as you would feel if your favourite child was taken away.
 ```
 
-**Block 11 of 17** · 1421 characters · save as `vo/tata-history-b11.mp3`
+**Block 11 of 17** · 1385 characters · save as `vo/tata-history-b11.mp3`
 
 ```
 Nineteen ninety one. India comes close to running out of foreign money, and the country opens its doors to business.
@@ -308,7 +308,7 @@ You know that silence. The ride home after an interview goes wrong.
 Hold on to that silence.
 ```
 
-**Block 12 of 17** · 1425 characters · save as `vo/tata-history-b12.mp3`
+**Block 12 of 17** · 1383 characters · save as `vo/tata-history-b12.mp3`
 
 ```
 So what does Tata do? It does not sell. It fixes the car. And it starts buying.
@@ -340,7 +340,7 @@ October. The Nano factory at Singur, in West Bengal, has faced months of protest
 And then, November.
 ```
 
-**Block 13 of 17** · 988 characters · save as `vo/tata-history-b13.mp3`
+**Block 13 of 17** · 945 characters · save as `vo/tata-history-b13.mp3`
 
 ```
 The twenty sixth of November, two thousand eight. Night. Terrorists storm the Taj.
@@ -364,7 +364,7 @@ The fighting lasts three days.
 Twenty five days later, the Taj opens its doors again. The old palace wing takes almost two years to rebuild.
 ```
 
-**Block 14 of 17** · 1475 characters · save as `vo/tata-history-b14.mp3`
+**Block 14 of 17** · 1448 characters · save as `vo/tata-history-b14.mp3`
 
 ```
 Big bets come with big bills.
@@ -390,7 +390,7 @@ June, twenty twenty five. Air India flight one seven one, bound for London, cras
 The final report is not out yet, and the cause has not been established. We remember every life that was lost.
 ```
 
-**Block 15 of 17** · 1315 characters · save as `vo/tata-history-b15.mp3`
+**Block 15 of 17** · 1294 characters · save as `vo/tata-history-b15.mp3`
 
 ```
 So. Back to the bank in nineteen twenty four, and the question we started with.
@@ -418,7 +418,7 @@ So what is the fight about? Who runs Tata, and who decides that.
 This September, the Tata Sons board voted to give Chandrasekaran another term. Noel Tata voted no. The trusts say that decision doesn't count. Tata Sons says it does.
 ```
 
-**Block 16 of 17** · 955 characters · save as `vo/tata-history-b16.mp3`
+**Block 16 of 17** · 920 characters · save as `vo/tata-history-b16.mp3`
 
 ```
 And here's the catch. To the R.B.I., Tata Sons looks like a big finance company. And big finance companies must sell shares to the public. Tata Sons asked to be let off. The R.B.I. said no.

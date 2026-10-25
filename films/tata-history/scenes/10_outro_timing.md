@@ -1,10 +1,10 @@
-# Outro: sentence timing (generated from vo/timing.json)
+# Outro: sentence timing (generated from vo/timing.json, v6 recording)
 
-Chapter frames 74713–75429 in the film (11.9 s at 60 fps). Frames below are local to the chapter.
+Chapter frames 80277–80979 in the film (11.7 s at 60 fps). Frames below are local to the chapter.
 
 | id | frames | sentence |
 |---|---|---|
-| 423 | 0–106 | This is Built on Bharat. |
-| 424 | 128–316 | The empires, and the habits, that built a nation. |
-| 425 | 340–442 | Next in Empires of India. |
-| 426 | 467–702 | How did a group of farmers in a small Gujarat town build Amul? |
+| 480 | 0–102 | This is Built on Bharat. |
+| 481 | 123–300 | The empires, and the habits, that built a nation. |
+| 482 | 326–429 | Next in Empires of India. |
+| 483 | 454–686 | How did a group of farmers in a small Gujarat town build Amul? |

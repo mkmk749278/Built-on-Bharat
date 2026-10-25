@@ -1,14 +1,20 @@
 # VO timing: tata-history
 
-1257.2 s · 427 sentences · 3329 words · 11 chapters
+1349.6 s · 484 sentences · 3694 words · 11 chapters
 
 ## Sentences to check (low margin or odd length)
-- 351.80s b04 ratio 0.57 margin 0.488: Would you have done it?
-- 511.53s b06 ratio 1.75 margin 1.445: Yes.
-- 655.71s b08 ratio 2.19 margin 9.9: What it makes.
-- 657.89s b08 ratio 3.22 margin 9.9: How much.
-- 672.14s b08 ratio 2.72 margin 3.889: T.C.S.
-- 1037.87s b12 ratio 1.7 margin 9.9: And T.C.S.?
-- 1082.59s b12 ratio 1.63 margin 1.875: And the bets go on.
-- 1096.35s b13 ratio 2.51 margin 4.214: So.
-- 1200.91s b14 ratio 1.65 margin 2.7: The R.B.I. said no.
+- 13.25s b01 ratio 2.15 margin 1.795: No.
+- 198.07s b03 ratio 2.33 margin 9.9: No.
+- 478.66s b06 ratio 0.57 margin 1.119: Would you have done it?
+- 620.96s b08 ratio 2.01 margin 1.567: Yes.
+- 774.33s b09 ratio 2.82 margin 3.859: T.C.S.
+- 807.92s b10 ratio 0.57 margin 1.753: Less than ten days later, a telegram arrives.
+- 810.86s b10 ratio 3.91 margin 9.9: In Pune.
+- 975.31s b12 ratio 0.93 margin 0.045: Costs have gone up, he says.
+- 977.18s b12 ratio 1.15 margin 0.045: But a promise is a promise.
+- 1043.97s b13 ratio 2.49 margin 9.9: Waiters.
+- 1045.35s b13 ratio 3.43 margin 9.9: Cooks.
+- 1120.62s b14 ratio 2.24 margin 9.9: No.
+- 1140.28s b14 ratio 1.83 margin 0.919: And T.C.S.?
+- 1186.85s b15 ratio 2.7 margin 4.318: So.
+- 1286.42s b16 ratio 1.68 margin 1.145: The R.B.I. said no.

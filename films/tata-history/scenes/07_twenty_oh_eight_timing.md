@@ -1,55 +1,56 @@
-# Twenty oh eight: sentence timing (generated from vo/timing.json)
+# Twenty oh eight: sentence timing (generated from vo/timing.json, v6 recording)
 
-Chapter frames 51502–59362 in the film (131.0 s at 60 fps). Frames below are local to the chapter.
+Chapter frames 58001–65298 in the film (121.6 s at 60 fps). Frames below are local to the chapter.
 
 | id | frames | sentence |
 |---|---|---|
-| 296 | 0–36 | January. |
-| 297 | 63–85 | Delhi. |
-| 298 | 115–309 | Ratan Tata drives a tiny car into the television lights. |
-| 299 | 334–367 | The Nano. |
-| 300 | 393–497 | A car for one lakh rupees. |
-| 301 | 530–616 | Costs have gone up, he says. |
-| 302 | 637–736 | But a promise is a promise. |
-| 303 | 765–854 | He said later what moved him. |
-| 304 | 881–1004 | Indian families riding on scooters. |
-| 305 | 1022–1142 | Four or five people, on one scooter. |
-| 306 | 1173–1291 | He wanted to give that family a roof. |
-| 307 | 1324–1410 | You remember that family, don't you? |
-| 308 | 1436–1519 | You've probably seen them yourself. |
-| 309 | 1563–1592 | March. |
-| 310 | 1615–1764 | Ford is selling two famous British brands. |
-| 311 | 1782–1866 | Jaguar and Land Rover. |
-| 312 | 1894–1966 | And who do you think buys them? |
-| 313 | 2014–2035 | Tata. |
-| 314 | 2061–2185 | About two point three billion dollars. |
-| 315 | 2205–2535 | And according to Pravin Kadle, Bill Ford told Ratan Tata, you are doing us a big favour. |
-| 316 | 2567–2683 | Ford has never confirmed either line. |
-| 317 | 2706–2780 | But the deal is real. |
-| 318 | 2817–2849 | October. |
-| 319 | 2875–2903 | Kolkata. |
-| 320 | 2924–3343 | The Nano factory at Singur, in West Bengal, has been surrounded by protests for months, over the farmland taken to build it. |
-| 321 | 3364–3502 | Ratan Tata announces he is pulling out. |
-| 322 | 3522–3791 | As he speaks, a one word text message arrives from the Chief Minister of Gujarat. |
-| 323 | 3819–3845 | Welcome. |
-| 324 | 3870–4011 | The factory moves to Sanand, in Gujarat. |
-| 325 | 4037–4121 | And then, November. |
-| 326 | 4189–4348 | The twenty sixth of November, two thousand eight. |
-| 327 | 4378–4400 | Night. |
-| 328 | 4437–4535 | Terrorists storm the Taj. |
-| 329 | 4580–4653 | Jamsetji's hotel. |
-| 330 | 4681–4796 | The one he opened in nineteen oh three. |
-| 331 | 4829–4937 | Inside, the staff could run. |
-| 332 | 4963–5052 | They know every back exit. |
-| 333 | 5082–5230 | But many of them stay, to get the guests out. |
-| 334 | 5258–5530 | A banquet manager, just twenty four, locks the doors and turns off the lights. |
-| 335 | 5558–5780 | She keeps more than sixty guests hidden and silent in the dark. |
-| 336 | 5809–6002 | In the kitchens, young chefs lead guests out through the back. |
-| 337 | 6031–6145 | A number of them are killed doing it. |
-| 338 | 6173–6499 | The general manager, Karambir Singh Kang, has his wife and two young sons inside the hotel. |
-| 339 | 6531–6589 | They die in the fire. |
-| 340 | 6618–6883 | And when Ratan Tata asks him to go and rest, he begs to stay and help. |
-| 341 | 6971–7118 | At least thirty one people die at the Taj. |
-| 342 | 7147–7256 | The fighting lasts three days. |
-| 343 | 7343–7536 | Twenty five days later, the Taj opens its doors again. |
-| 344 | 7564–7748 | The old palace wing takes almost two years to rebuild. |
+| 345 | 0–32 | January. |
+| 346 | 57–82 | Delhi. |
+| 347 | 109–304 | Ratan Tata drives a tiny car into the television lights. |
+| 348 | 330–366 | The Nano. |
+| 349 | 391–497 | A car for one lakh rupees. |
+| 350 | 518–611 | Costs have gone up, he says. |
+| 351 | 630–743 | But a promise is a promise. |
+| 352 | 764–857 | He said later what moved him. |
+| 353 | 880–1000 | Indian families riding on scooters. |
+| 354 | 1019–1133 | Four or five people, on one scooter. |
+| 355 | 1155–1211 | You've seen that family. |
+| 356 | 1235–1346 | Maybe you were the child sitting in front. |
+| 357 | 1368–1498 | He wanted to give that family a roof. |
+| 358 | 1531–1558 | March. |
+| 359 | 1579–1721 | Ford is selling two famous British brands. |
+| 360 | 1741–1824 | Jaguar and Land Rover. |
+| 361 | 1847–1919 | And who do you think buys them? |
+| 362 | 1949–1968 | Tata. |
+| 363 | 1988–2115 | About two point three billion dollars. |
+| 364 | 2131–2454 | And according to Pravin Kadle, Bill Ford told Ratan Tata, you are doing us a big favour. |
+| 365 | 2479–2591 | Ford has never confirmed either line. |
+| 366 | 2611–2688 | But the deal is real. |
+| 367 | 2714–2743 | October. |
+| 368 | 2764–3130 | The Nano factory at Singur, in West Bengal, has faced months of protests over the farmland taken to build it. |
+| 369 | 3150–3341 | Ratan Tata pulls out, and moves the factory to Gujarat. |
+| 370 | 3365–3442 | And then, November. |
+| 371 | 3486–3651 | The twenty sixth of November, two thousand eight. |
+| 372 | 3681–3705 | Night. |
+| 373 | 3744–3843 | Terrorists storm the Taj. |
+| 374 | 3868–3933 | Jamsetji's hotel. |
+| 375 | 3962–4075 | The one he opened in nineteen oh three. |
+| 376 | 4109–4217 | Inside, the staff could run. |
+| 377 | 4242–4329 | They know every back exit. |
+| 378 | 4359–4506 | But many of them stay, to get the guests out. |
+| 379 | 4536–4612 | These are ordinary people. |
+| 380 | 4637–4708 | Waiters. |
+| 381 | 4720–4790 | Cooks. |
+| 382 | 4814–4862 | Managers on a salary. |
+| 383 | 4891–4952 | People like us. |
+| 384 | 4963–5159 | A banquet manager, just twenty four, locks the doors and turns off the lights. |
+| 385 | 5182–5404 | She keeps more than sixty guests hidden and silent in the dark. |
+| 386 | 5431–5625 | In the kitchens, young chefs lead guests out through the back. |
+| 387 | 5649–5757 | A number of them are killed doing it. |
+| 388 | 5785–6100 | The general manager, Karambir Singh Kang, has his wife and two young sons inside the hotel. |
+| 389 | 6130–6188 | They die in the fire. |
+| 390 | 6211–6474 | And when Ratan Tata asks him to go and rest, he begs to stay and help. |
+| 391 | 6496–6632 | At least thirty one people die at the Taj. |
+| 392 | 6657–6767 | The fighting lasts three days. |
+| 393 | 6791–6990 | Twenty five days later, the Taj opens its doors again. |
+| 394 | 7016–7204 | The old palace wing takes almost two years to rebuild. |
