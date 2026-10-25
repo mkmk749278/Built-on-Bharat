@@ -6,6 +6,7 @@ import {Crowd1907} from './ink/Crowd1907';
 import {ScooterFamily} from './ink/ScooterFamily';
 import {MapBombayJamshedpur, MapFlight1932} from './map/MapScenes';
 import {FurnaceScene} from './systems/FurnaceScene';
+import {OwnershipScene} from './systems/OwnershipScene';
 
 const PayWindowDev: React.FC = () => <PayWindowQueue />;
 const Crowd1907Dev: React.FC = () => <Crowd1907 />;
@@ -19,6 +20,7 @@ export const DevCompositions: React.FC = () => (
 		<Composition id="Dev-InkScooter" component={ScooterDev} durationInFrames={300} fps={60} width={1920} height={1080} />
 		<Composition id="Dev-MapBombayJamshedpur" component={MapBombayJamshedpur} durationInFrames={300} fps={60} width={1920} height={1080} />
 		<Composition id="Dev-MapFlight1932" component={MapFlight1932} durationInFrames={300} fps={60} width={1920} height={1080} />
+		<Composition id="Dev-Ownership" component={OwnershipScene} durationInFrames={600} fps={60} width={1920} height={1080} />
 		<Composition id="Dev-BlastFurnace" component={FurnaceScene} durationInFrames={720} fps={60} width={1920} height={1080} />
 		<Composition id="Dev-InkCast" component={InkCast} durationInFrames={300} fps={60} width={1920} height={1080} />
 	</>
