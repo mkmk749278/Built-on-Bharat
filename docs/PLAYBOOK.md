@@ -1112,6 +1112,20 @@ To port when needed (Creator path → what to change):
 ## 16. Lessons log
 *(Newest first. Each lesson: what happened, the rule, why.)*
 
+**Narration v6: the middle-class lens (owner, 2026-10-25).**
+- *The owner:* "Most of the Indians are from middle class, so they seek for motivation and they see how a good empire
+  starts, from rich or from poor having nothing in hands." Every film shows **where each founder really started**
+  (family, money, education) and **the fall and the comeback**, told through the viewer's own life: the house gold
+  pledged in a crisis, school fees first, savings for a daughter's wedding, the ride home after a failed interview.
+- *Honest, never a reel:* the audience panel caught "it began at the top" and "every one of them risked the same" as
+  overclaims. Admit privilege first ("Yes, he was born a Tata. But look at how he started."), and say what is true
+  ("doesn't begin with a fortune", "put something on the line").
+- *Record whole, not stitched:* the owner prefers one full re-recording over spliced blocks, so one voice and one
+  energy run through the film. Blocks never split a moment: a beat that answers or refers back ("Isn't that…",
+  "He says…") stays in the same take as the beat before it.
+- *Length:* the panel's cut list (flight log, side deals, tacked-on news) took v6 from about 26 to about 23 minutes
+  without losing the spine.
+
 **Building film 1 in Remotion (2026-10-25).**
 - *Timing without transcription:* `scripts/vo_timing.py` joins the takes, gives every chapter turn a 1.4 s breath (even
   inside a take: chapters often start mid-block), places sentences with Creator's silence aligner and snaps clause
