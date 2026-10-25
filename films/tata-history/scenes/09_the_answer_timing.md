@@ -1,51 +1,61 @@
-# The answer: sentence timing (generated from vo/timing.json)
+# The answer: sentence timing (generated from vo/timing.json, v6 recording)
 
-Chapter frames 65781–74713 in the film (148.9 s at 60 fps). Frames below are local to the chapter.
+Chapter frames 71211–80277 in the film (151.1 s at 60 fps). Frames below are local to the chapter.
 
 | id | frames | sentence |
 |---|---|---|
-| 378 | 0–22 | So. |
-| 379 | 46–281 | Back to the bank in nineteen twenty four, and the question we started with. |
-| 380 | 311–468 | Why is no Tata on top of a rich list? |
-| 381 | 545–714 | Because the Tata family doesn't own Tata. |
-| 382 | 745–1056 | About two thirds of Tata Sons, the company at the top, belongs to charitable trusts. |
-| 383 | 1073–1274 | And the biggest of them is the Sir Dorabji Tata Trust. |
-| 384 | 1301–1422 | The trust of the man with the diamond. |
-| 385 | 1445–1609 | It holds about twenty eight percent of Tata Sons. |
-| 386 | 1636–1710 | And who owns the rest? |
-| 387 | 1740–2137 | Most of it belongs to the Shapoorji Pallonji group, owned by the Mistry family, and to Tata's own companies. |
-| 388 | 2163–2483 | So when you buy that salt, or that tea, a share of the profit flows up to those trusts. |
-| 389 | 2503–2704 | And out, into hospitals, research and scholarships. |
-| 390 | 2729–2971 | For almost a hundred years, that design held the empire together. |
-| 391 | 3076–3298 | Then, in October twenty twenty four, Ratan Tata died. |
-| 392 | 3331–3551 | His body lay at a hall in South Mumbai, and thousands came. |
-| 393 | 3577–3619 | Students. |
-| 394 | 3631–3682 | Ordinary people. |
-| 395 | 3703–3806 | Strangers who had never met him. |
-| 396 | 3835–3935 | He was given a state funeral. |
-| 397 | 3966–4155 | His half brother, Noel Tata, now leads the trusts. |
-| 398 | 4176–4377 | And in twenty twenty six, the cracks are out in the open. |
-| 399 | 4404–4489 | So what is the fight about? |
-| 400 | 4514–4663 | Who runs Tata, and who decides that. |
-| 401 | 4692–4954 | This September, the Tata Sons board voted to give Chandrasekaran another term. |
-| 402 | 4981–5077 | Noel Tata voted no. |
-| 403 | 5103–5253 | The trusts say that decision doesn't count. |
-| 404 | 5279–5386 | Tata Sons says it does. |
-| 405 | 5428–5514 | And there's one more problem. |
-| 406 | 5544–5902 | Tata Sons holds shares in so many companies that the R.B.I. treats it like a big finance company. |
-| 407 | 5930–6119 | And big finance companies must list on the stock market. |
-| 408 | 6146–6248 | Tata Sons asked to be let off. |
-| 409 | 6274–6355 | The R.B.I. said no. |
-| 410 | 6387–6680 | So Tata Sons may have to sell its shares to the public, for the very first time. |
-| 411 | 6716–6885 | As this film goes out, that fight is not over. |
-| 412 | 6920–6951 | Who wins? |
-| 413 | 6976–7037 | I honestly don't know. |
-| 414 | 7063–7118 | Nobody does yet. |
-| 415 | 7155–7339 | So in the end, this fight goes back to one choice. |
-| 416 | 7370–7756 | A man who had no children gave everything to a trust, so the money would go to charity, not to a family. |
-| 417 | 7793–7981 | Eight thousand Indians bet their savings on a steel plant. |
-| 418 | 8010–8192 | A husband and wife put up their diamond to keep it alive. |
-| 419 | 8230–8447 | And a hundred years later, the question is still the same one. |
-| 420 | 8509–8664 | Who should a company like this really belong to? |
-| 421 | 8710–8750 | What do you think? |
-| 422 | 8786–8838 | Tell me in the comments. |
+| 425 | 0–24 | So. |
+| 426 | 51–279 | Back to the bank in nineteen twenty four, and the question we started with. |
+| 427 | 306–456 | Why is no Tata on top of a rich list? |
+| 428 | 481–645 | Because the Tata family doesn't own Tata. |
+| 429 | 677–809 | Tata Sons sits at the top of the group. |
+| 430 | 832–1021 | And about two thirds of it belongs to charitable trusts. |
+| 431 | 1040–1237 | And the biggest of them is the Sir Dorabji Tata Trust. |
+| 432 | 1263–1378 | The trust of the man with the diamond. |
+| 433 | 1404–1565 | It holds about twenty eight percent of Tata Sons. |
+| 434 | 1592–1658 | And who owns the rest? |
+| 435 | 1679–2065 | Most of it belongs to the Shapoorji Pallonji group, owned by the Mistry family, and to Tata's own companies. |
+| 436 | 2089–2400 | So when you buy that salt, or that tea, a share of the profit flows up to those trusts. |
+| 437 | 2417–2623 | And out, into hospitals, research and scholarships. |
+| 438 | 2645–2875 | For almost a hundred years, that design held the empire together. |
+| 439 | 2903–3137 | Then, in October twenty twenty four, Ratan Tata died. |
+| 440 | 3158–3459 | His body lay at a hall in South Mumbai, and thousands came. |
+| 441 | 3485–3527 | Students. |
+| 442 | 3542–3594 | Ordinary people. |
+| 443 | 3614–3711 | Strangers who had never met him. |
+| 444 | 3739–3840 | He was given a state funeral. |
+| 445 | 3862–4049 | His half brother, Noel Tata, now leads the trusts. |
+| 446 | 4068–4268 | And in twenty twenty six, the cracks are out in the open. |
+| 447 | 4291–4373 | So what is the fight about? |
+| 448 | 4398–4548 | Who runs Tata, and who decides that. |
+| 449 | 4570–4828 | This September, the Tata Sons board voted to give Chandrasekaran another term. |
+| 450 | 4852–4947 | Noel Tata voted no. |
+| 451 | 4972–5117 | The trusts say that decision doesn't count. |
+| 452 | 5143–5248 | Tata Sons says it does. |
+| 453 | 5292–5360 | And here's the catch. |
+| 454 | 5386–5603 | To the R.B.I., Tata Sons looks like a big finance company. |
+| 455 | 5633–5819 | And big finance companies must sell shares to the public. |
+| 456 | 5848–5948 | Tata Sons asked to be let off. |
+| 457 | 5974–6056 | The R.B.I. said no. |
+| 458 | 6087–6246 | As this film goes out, that fight is not over. |
+| 459 | 6276–6307 | Who wins? |
+| 460 | 6328–6389 | I honestly don't know. |
+| 461 | 6415–6467 | Nobody does yet. |
+| 462 | 6498–6684 | But step back for a moment, and look at who built this. |
+| 463 | 6710–6910 | A priest's son whose family nearly lost everything. |
+| 464 | 6938–7059 | Eight thousand ordinary savers. |
+| 465 | 7080–7220 | A husband and wife who pledged their diamond. |
+| 466 | 7244–7369 | An apprentice who worked without pay. |
+| 467 | 7393–7499 | A young engineer with a postcard. |
+| 468 | 7520–7678 | A man shovelling limestone next to the furnace. |
+| 469 | 7708–7768 | What do they have in common? |
+| 470 | 7794–8013 | Every one of them, at some point, put something on the line. |
+| 471 | 8043–8083 | Savings. |
+| 472 | 8109–8133 | Pride. |
+| 473 | 8159–8196 | A diamond. |
+| 474 | 8219–8319 | That part needs no fortune. |
+| 475 | 8347–8431 | That part is yours. |
+| 476 | 8458–8657 | And a hundred years later, the question is still the same one. |
+| 477 | 8683–8819 | Who should a company like this really belong to? |
+| 478 | 8852–8891 | What do you think? |
+| 479 | 8919–8972 | Tell me in the comments. |

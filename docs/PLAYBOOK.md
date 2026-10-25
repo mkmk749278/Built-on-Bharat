@@ -448,11 +448,9 @@ never describe the voice in a tag.** Use only short emotion and pause words that
 **How we write for it (the performance layer).** The fact-checked `vo.txt` stays tag-free. A second file,
 `vo_performance.txt`, adds direction from `performance_map.tsv`, and a script checks that the spoken words are
 identical.
-1. **Allowed tags: pauses only** — `[short pause]` (a held breath inside a sentence), `[pause]` (before a reveal),
-   `[long pause]` (a chapter turn or a solemn passage). **Banned:** every emotion tag (`[curious]`, `[serious]`,
-   `[warmly]`, `[softly]`, `[amused]`, `[urgent]`, `[relieved]`, `[exhales]`: owner's ear, 2026-10-24, "emotional cues
-   not coming best, it's changing feeling, synthetic"), any voice description, `[whispers]`, `[shouting]`,
-   `[slowly]`/`[rushed]`. Add a tag only after the owner hears it work with Akash.
+1. **No tags at all (owner, 2026-10-25).** Not voice descriptions (they changed the voice), not emotion tags (the
+   feeling shifted and sounded synthetic), not `...` (no gap), and not pause tags either ("not coming good, use commas
+   and dots, that's only fine"). The recording text is the fact-checked `vo.txt`; `build_performance.py` now copies it.
 2. **Breath:** a blank line between beats (the engine resets there); one beat = one breath (§7.3, ≤ 25 words); long
    flowing sentences are fine when commas sit where a person would breathe.
 3. **Low and high come only from the writing:** short, quiet sentences read low; questions lift; a run of short beats
@@ -460,11 +458,11 @@ identical.
    the wrong feeling, rewrite the line, never tag it.
 4. **Stress:** CAPITALS on one word at most in a beat, and only where a person would hit it ("ANY rich list", "HER
    diamond"); 3–6 in a whole film.
-5. **Silence:** `[short pause]` for a held breath inside a sentence, `[pause]` before a reveal, `[long pause]` before
-   a chapter turn or a solemn passage. **Never `...` for a pause:** measured with `vo_review.py` on the first full
+5. **Silence comes from punctuation:** a full stop for a beat, a comma for a breath, a new paragraph for a longer stop,
+   a one-word sentence for a hard stop ("No."). **Never `...` for a pause:** measured with `vo_review.py` on the first full
    recording (11 takes), Akash gave 0.00–0.16 s at every mid-sentence `...` (9 of 9), against 0.6–1.0 s at `[pause]`.
    The music edit does the rest (§12).
-6. **Density:** a pause tag where a storyteller would stop, about one per 80–120 words. A pause everywhere is no pause.
+6. **Long pauses belong to the edit,** not the read: the picture and music hold a breath where the story needs one (§12).
 7. **Depth and bass** come from the voice, never from a tag. In the mix: a gentle low shelf (+1.5 to +2.5 dB around
    120 Hz), a high-pass at 70 Hz to remove rumble, a de-esser around 6–8 kHz, light compression (2:1 to 3:1) and room
    tone so the voice sits in a space. Never pitch-shift a voice.
@@ -1111,6 +1109,27 @@ To port when needed (Creator path → what to change):
 
 ## 16. Lessons log
 *(Newest first. Each lesson: what happened, the rule, why.)*
+
+**Recording v6 (2026-10-25).**
+- *Tags out entirely:* the owner judged even pause tags "not coming good"; v6 was recorded from plain text (commas and
+  full stops). Result: 17 takes, 22 min 30 s, a steady 14–16 characters a second in every block.
+- *Uploads with reused numbers:* the upload folder keeps every earlier take, and the new files share their numbers
+  (`…-2.mp3`), so a glob picked nine v4 takes. Always copy the exact files named in the owner's latest message, then
+  compare checksums with older takes and characters-per-second with each block before timing.
+
+**Narration v6: the middle-class lens (owner, 2026-10-25).**
+- *The owner:* "Most of the Indians are from middle class, so they seek for motivation and they see how a good empire
+  starts, from rich or from poor having nothing in hands." Every film shows **where each founder really started**
+  (family, money, education) and **the fall and the comeback**, told through the viewer's own life: the house gold
+  pledged in a crisis, school fees first, savings for a daughter's wedding, the ride home after a failed interview.
+- *Honest, never a reel:* the audience panel caught "it began at the top" and "every one of them risked the same" as
+  overclaims. Admit privilege first ("Yes, he was born a Tata. But look at how he started."), and say what is true
+  ("doesn't begin with a fortune", "put something on the line").
+- *Record whole, not stitched:* the owner prefers one full re-recording over spliced blocks, so one voice and one
+  energy run through the film. Blocks never split a moment: a beat that answers or refers back ("Isn't that…",
+  "He says…") stays in the same take as the beat before it.
+- *Length:* the panel's cut list (flight log, side deals, tacked-on news) took v6 from about 26 to about 23 minutes
+  without losing the spine.
 
 **Shared systems for film 1: INK figures, map, furnace, ownership, kinetics (S2, 2026-10-25).**
 - *INK, first pass looked like clip-art:* round tube limbs, ball hands and pantaloon dhotis. What fixed it: tapered limbs
