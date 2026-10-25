@@ -1,5 +1,5 @@
 # (exact text in vo.txt)	(the same text with its pause tag)
-# v4 (2026-10-24): pause tags only ([short pause], [pause], [long pause]); no emotion tags, no '...'
+# v5 (2026-10-25): origin passages added; v4 (2026-10-24): pause tags only ([short pause], [pause], [long pause]); no emotion tags, no '...'
 The plane over your head. Tata.	The plane over your head. [pause] Tata.
 Two hundred and forty five carats. More than twice	Two hundred and forty five carats. [short pause] More than twice
 Why send our cotton away, when we can spin	Why send our cotton away, [short pause] when we can spin
@@ -34,3 +34,11 @@ June, twenty twenty five. Air India flight	[long pause] June, twenty twenty five
 Because the Tata family doesn't own Tata.	[pause] Because the Tata family doesn't own Tata.
 Then, in October twenty twenty four, Ratan Tata died.	[long pause] Then, in October twenty twenty four, Ratan Tata died.
 Who should a company like this really belong to?	[pause] Who should a company like this really belong to?
+You already know his name. Jamsetji Tata.	You already know his name. [short pause] Jamsetji Tata.
+And then, almost everything falls apart.	[pause] And then, almost everything falls apart.
+The papers are worthless.	[short pause] The papers are worthless.
+Do they give up? No.	Do they give up? [short pause] No.
+If you've ever failed, hold on to this.	[pause] If you've ever failed, hold on to this.
+He started as an apprentice, without pay.	He started as an apprentice, [short pause] without pay.
+at thirty four, the unpaid apprentice	at thirty four, [short pause] the unpaid apprentice
+At the steel plant in Jamshedpur, he spends	At the steel plant in Jamshedpur, [short pause] he spends
