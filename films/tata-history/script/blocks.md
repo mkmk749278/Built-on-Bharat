@@ -1,8 +1,10 @@
-# Recording blocks: tata-history
+# Recording blocks: tata-history (v5) · clean text, reference only: record blocks_performance.md
 
-15 blocks · voice: clean text, reference only: record blocks_performance.md
+19 blocks · voice: Akash · Eleven v4 · stability 0.50 · similarity 0.80 · speed 1.0 · style 0 if shown · speaker boost on · pause tags only
 
-**Block 1 of 15** · 1163 characters · save as `vo/tata-history-b01.mp3`
+Blocks marked **NEW (v5)** replace v4 blocks 02, 07 and 09; every other block is word-for-word the v4 recording.
+
+**Block 01** · 1185 characters · save as `vo/tata-history-b01.mp3`
 
 ```
 Bombay. Nineteen twenty four.
@@ -30,15 +32,53 @@ The answer is in this bank. In what happens to that diamond. Because a choice th
 By the end of this film, you'll see how. But why would a man pawn his wife's diamond for a steel plant? To understand that, we go back to the man who dreamed it.
 ```
 
-**Block 2 of 15** · 1423 characters · save as `vo/tata-history-b02.mp3`
+**Block 02a** · **NEW (v5)** · 1089 characters · save as `vo/tata-history-b02a.mp3`
 
 ```
-Eighteen sixty eight. Bombay is a city of ships and cotton, and most of the money flows one way. Out.
+Navsari, Gujarat. Eighteen thirty nine.
+
+A boy is born into a family of Parsi priests. A respected family. But not a rich one.
+
+You already know his name. Jamsetji Tata.
+
+For generations, the men of this family have been priests. His grandfather moved to Bombay and kept a small shop there. And his father breaks the old line completely. He goes into business.
+
+So what does this boy have? Not money. A sharp head for numbers. He can do big sums in his mind, and his parents notice. So they find a way to get him an education. You know how much that means in an Indian family, don't you?
+
+At fourteen, he joins his father in Bombay and studies at Elphinstone College. Soon after, he's working in his father's small trading business. He learns on the job, far from home, opening a branch in Shanghai, in China.
+
+And then, almost everything falls apart.
+
+Eighteen sixty four. Jamsetji sails to England, carrying papers that say he will be paid for a big load of cotton. But by the time his ship docks, cotton prices have crashed. The papers are worthless.
+```
+
+**Block 02b** · **NEW (v5)** · 1153 characters · save as `vo/tata-history-b02b.mp3`
+
+```
+His father's firm cannot go on. Still in his twenties, Jamsetji has to close it down, face every debt, and slowly win back the trust of the people they owe.
+
+He comes home, and Bombay is in deep trouble. Banks failing. Merchants ruined.
+
+The Tatas could have vanished right there. One more family wiped out by a crash.
+
+Do they give up? No. Then his father wins a big contract, supplying the British army. That puts the family back on its feet.
+
+And in eighteen sixty eight, at twenty nine, Jamsetji starts again. His own firm. Twenty one thousand rupees.
+
+If you've ever failed, hold on to this. The story of Tata doesn't begin with a fortune. It begins with a priest's son whose family nearly lost everything, and who started again.
+
+Now look at Bombay in those years. A city of ships and cotton, and most of the money flows one way. Out.
 
 Indian cotton sails to the mills of England. The cloth comes back, and Indians pay for it.
 
-That year, a twenty nine year old Parsi from Navsari starts a trading firm with twenty one thousand rupees. His name is Jamsetji Tata.
+And Jamsetji has seen those English mills with his own eyes.
 
+His first move is bold. He buys a bankrupt oil mill in Bombay, turns it into a cotton mill, and two years later, sells it for a profit.
+```
+
+**Block 02c** · **NEW (v5)** · 1134 characters · save as `vo/tata-history-b02c.mp3`
+
+```
 Like many traders of his time, his family's business ran on cotton and on opium, sold to China. That is part of this story too, and it's worth saying out loud.
 
 But Jamsetji keeps asking one question. Why send our cotton away, when we can spin it right here?
@@ -56,7 +96,7 @@ Now, you've probably heard the most famous Tata story. Jamsetji is turned away f
 It's a great story, isn't it? But historians have found no record that it ever happened.
 ```
 
-**Block 3 of 15** · 1466 characters · save as `vo/tata-history-b03.mp3`
+**Block 03** · 1453 characters · save as `vo/tata-history-b03.mp3`
 
 ```
 What is on record is the hotel itself. It opens in December, nineteen oh three, on the Bombay waterfront. Designed by an Indian architect. Lit by electricity. Hold on to this hotel. It comes back in this story, on the worst night of its life.
@@ -82,13 +122,13 @@ This is the letter that will build Tata Steel.
 But three months later, on a trip to Germany, Jamsetji Tata dies.
 
 He never sees those hills. No steel plant. No power company. No institute.
+```
 
+**Block 04** · 1393 characters · save as `vo/tata-history-b04.mp3`
+
+```
 So who carries the dream now? His son. Dorabji.
-```
 
-**Block 4 of 15** · 1493 characters · save as `vo/tata-history-b04.mp3`
-
-```
 And Dorabji does not run it from an office. He has already been out in the jungle himself, with the men searching for iron. Now they go back, looking for one perfect spot.
 
 They find it near a small village called Sakchi, right where two rivers meet. Ore nearby. Coal nearby. Water all year.
@@ -116,13 +156,13 @@ Would you have done it?
 Not everyone believed, of course. According to Tata's own histories, a senior British railway official, Sir Frederick Upcott, laughed at the idea. He said he would eat every pound of steel rail they managed to make.
 
 So how do you turn a hill of red rock into steel? You build a tower of fire.
+```
 
+**Block 05** · 1059 characters · save as `vo/tata-history-b05.mp3`
+
+```
 Iron ore, limestone, and coke, a kind of baked coal, go in at the top. Hot air blasts in at the bottom. And out comes iron, as a glowing liquid. Refine it, and you have steel.
-```
 
-**Block 5 of 15** · 846 characters · save as `vo/tata-history-b05.mp3`
-
-```
 The first iron flows in December nineteen eleven. The first steel, in nineteen twelve.
 
 Two years later, the world goes to war. Britain's armies need rails, in the Middle East and in Africa. And many of those rails come from Tata. Tata's own records put it at about fifteen hundred miles.
@@ -138,7 +178,7 @@ So the dreamer is gone, but every dream is alive. It should be a happy ending, s
 It isn't.
 ```
 
-**Block 6 of 15** · 1472 characters · save as `vo/tata-history-b06.mp3`
+**Block 06** · 1496 characters · save as `vo/tata-history-b06.mp3`
 
 ```
 A steel town is no fairy tale. In nineteen twenty two, the workers go on strike.
@@ -174,7 +214,7 @@ And here is the turn in this whole story. He leaves everything to a charitable t
 The Sir Dorabji Tata Trust.
 ```
 
-**Block 7 of 15** · 1408 characters · save as `vo/tata-history-b07.mp3`
+**Block 07a** · **NEW (v5)** · 824 characters · save as `vo/tata-history-b07a.mp3`
 
 ```
 A few years later, the trust sells the jewels. And that money helps build a hospital for the disease that took her. The Tata Memorial Hospital, for cancer, opens in Bombay in nineteen forty one.
@@ -192,7 +232,11 @@ His full name is long, so everyone just calls him J.R.D.
 In nineteen twenty nine, he gets India's first pilot licence.
 
 The fifteenth of October, nineteen thirty two. Karachi. Six thirty in the morning.
+```
 
+**Block 07b** · **NEW (v5)** · 984 characters · save as `vo/tata-history-b07b.mp3`
+
+```
 J.R.D. climbs into a tiny single engine plane called a Puss Moth. Behind him, bags of mail. No radio. No navigation aids, on the ground or in the air. Can you imagine flying like that?
 
 He stops in Ahmedabad, where the fuel is poured in from cans. Then he flies on, against the wind, all the way to Bombay.
@@ -201,10 +245,14 @@ There is no proper airport. Just a mud flat at Juhu, by the sea. He lands at ten
 
 That flight is the start of an airline. Tata Airlines. Later, Air India.
 
+And the man flying it? He was a Tata too. Born in Paris, to a French mother, he served a year in the French army. But when he joined Tata in nineteen twenty five, he didn't start as a boss. He started as an apprentice, without pay.
+
+Six years after that flight, at thirty four, the unpaid apprentice is chairman of the whole Tata group.
+
 For twenty years he builds it, plane by plane. But in nineteen fifty three, the government takes over the airlines.
 ```
 
-**Block 8 of 15** · 1450 characters · save as `vo/tata-history-b08.mp3`
+**Block 08** · 1500 characters · save as `vo/tata-history-b08.mp3`
 
 ```
 J.R.D. thinks it's a mistake, and he says so. So what does he do when they ask him to stay on and run Air India?
@@ -236,15 +284,27 @@ February, nineteen seventy eight. A new government removes J.R.D. from Air India
 That night, someone asks how he feels. He says, I feel as you would feel if your favourite child was taken away.
 ```
 
-**Block 9 of 15** · 1379 characters · save as `vo/tata-history-b09.mp3`
+**Block 09a** · **NEW (v5)** · 908 characters · save as `vo/tata-history-b09a.mp3`
 
 ```
-Nineteen ninety one. India comes close to running out of foreign money, and the economy is thrown open.
+Nineteen ninety one. India comes close to running out of foreign money, and the country opens its doors to business.
 
 That same year, J.R.D. hands over to a quiet, private man. Ratan Tata.
 
-Ratan inherits a group full of powerful bosses who run their companies like their own kingdoms. So he brings in a retirement age. And one by one, the old bosses step aside.
+Yes, he was born a Tata. But look at how he started.
 
+His parents separated when he was ten, and his grandmother raised him. He studied architecture in America. Then his grandmother fell ill, and he came home.
+
+His first years at Tata? On the shop floor. At the steel plant in Jamshedpur, he spends two years shovelling limestone and tending the blast furnace.
+
+The man who would one day run Tata started next to the furnace, with the workers. Can you picture that?
+
+So when his chance finally comes, he knows the shop floor. But he also inherits a group full of powerful bosses who run their companies like their own kingdoms. So he brings in a retirement age. And one by one, the old bosses step aside.
+```
+
+**Block 09b** · **NEW (v5)** · 1050 characters · save as `vo/tata-history-b09b.mp3`
+
+```
 Then he makes his first big bet. A car designed in India, by Indians. The Indica, unveiled in nineteen ninety eight. About one lakh fifteen thousand people book it.
 
 Then the complaints start. Quality. Power.
@@ -264,7 +324,7 @@ In two thousand, Tata buys Tetley, the British tea company. An Indian company bu
 Then, in two thousand seven, the biggest bet of all. Tata Steel wins Corus, the company that included British Steel, for about twelve billion dollars.
 ```
 
-**Block 10 of 15** · 1481 characters · save as `vo/tata-history-b10.mp3`
+**Block 10** · 1491 characters · save as `vo/tata-history-b10.mp3`
 
 ```
 Remember Upcott, the man who would eat every rail? A hundred years later, an Indian steel company has bought what was once British Steel.
@@ -298,13 +358,13 @@ The factory moves to Sanand, in Gujarat.
 And then, November.
 
 The twenty sixth of November, two thousand eight. Night. Terrorists storm the Taj.
+```
 
+**Block 11** · 1475 characters · save as `vo/tata-history-b11.mp3`
+
+```
 Jamsetji's hotel. The one he opened in nineteen oh three.
-```
 
-**Block 11 of 15** · 1478 characters · save as `vo/tata-history-b11.mp3`
-
-```
 Inside, the staff could run. They know every back exit. But many of them stay, to get the guests out.
 
 A banquet manager, just twenty four, locks the doors and turns off the lights. She keeps more than sixty guests hidden and silent in the dark.
@@ -326,13 +386,13 @@ A year after the Corus deal, the world economy crashes. Years of losses follow i
 And the Nano? People did not want to be seen in the cheapest car in the world. Tata itself admitted that calling it cheap was a mistake. Production ended in twenty eighteen.
 
 In twenty twelve, Ratan Tata retires. And four years later comes a boardroom war. The man who took over from him, Cyrus Mistry, is removed. The fight goes all the way to the Supreme Court, which sides with Tata Sons in twenty twenty one.
+```
 
+**Block 12** · 967 characters · save as `vo/tata-history-b12.mp3`
+
+```
 The new chairman is N. Chandrasekaran. He joined T.C.S. as a young engineer.
-```
 
-**Block 12 of 15** · 862 characters · save as `vo/tata-history-b12.mp3`
-
-```
 And T.C.S.? That little punched card unit? It's now the engine. Last year, about eighty seven percent of the profit share Tata Sons got from its companies came from T.C.S. alone.
 
 Then, in twenty twenty two, the favourite child comes home. Air India returns to Tata, sixty nine years after it was taken away. J.R.D. did not live to see it.
@@ -346,7 +406,7 @@ The final report is not out yet, and the cause has not been established. We reme
 And the bets go on. Tata now assembles iPhones in India. It's building one of India's first big chip factories, in Dholera, Gujarat. When it will make chips at full scale is still an open question.
 ```
 
-**Block 13 of 15** · 1282 characters · save as `vo/tata-history-b13.mp3`
+**Block 13** · 1303 characters · save as `vo/tata-history-b13.mp3`
 
 ```
 So. Back to the bank in nineteen twenty four, and the question we started with.
@@ -374,7 +434,7 @@ So what is the fight about? Who runs Tata, and who decides that.
 This September, the Tata Sons board voted to give Chandrasekaran another term. Noel Tata voted no. The trusts say that decision doesn't count. Tata Sons says it does.
 ```
 
-**Block 14 of 15** · 848 characters · save as `vo/tata-history-b14.mp3`
+**Block 14** · 856 characters · save as `vo/tata-history-b14.mp3`
 
 ```
 And there's one more problem. Tata Sons holds shares in so many companies that the R.B.I. treats it like a big finance company. And big finance companies must list on the stock market. Tata Sons asked to be let off. The R.B.I. said no. So Tata Sons may have to sell its shares to the public, for the very first time.
@@ -392,7 +452,7 @@ Who should a company like this really belong to?
 What do you think? Tell me in the comments.
 ```
 
-**Block 15 of 15** · 164 characters · save as `vo/tata-history-b15.mp3`
+**Block 15** · 164 characters · save as `vo/tata-history-b15.mp3`
 
 ```
 This is Built on Bharat. The empires, and the habits, that built a nation.
