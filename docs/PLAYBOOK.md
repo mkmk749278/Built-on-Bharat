@@ -1161,6 +1161,10 @@ To port when needed (Creator path → what to change):
   rivets and cross-bracing, a ladle that tilts and pours, metal that cools from white-hot to bronze with cast lines,
   steel blocks that drop and jolt the frame, and the diamond's glint as the one white point. Shares stay to scale; the
   only numbers on screen are the VO's ("TWO THIRDS", "28%"), the other holders are named, not numbered.
+- *Kinetics:* an odometer column turns only while every column below shows 9 (recursive carry); a naive
+  remainder formula left the thousands digit half-rolled at 1932. Blur only the columns that are moving. Calendar day
+  grids come from Zeller's congruence, not typed by hand. "To scale" for gems means area ∝ weight^(2/3) (similar
+  solids), each outline scaled to its own polygon area; the maths sits in a comment in `GemCompare.tsx`.
 - *Wikimedia Commons* answered 429 after about five file downloads in a minute (Special:FilePath and
   upload.wikimedia.org alike) and kept refusing for 20+ minutes: fetch references early, a few at a time.
 - *Remotion CLI:* `--crf` and `--video-bitrate` cannot both be set; use `--video-bitrate` as the cap (14M at 1080p60,
