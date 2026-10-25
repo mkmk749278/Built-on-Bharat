@@ -2,6 +2,9 @@ import React from 'react';
 import {AbsoluteFill, Audio, Composition, Sequence, staticFile} from 'remotion';
 import {LogoBug, loadBrandFonts} from '../../../../lib/remotion';
 import {chapterComp} from './Chapter';
+// ---- S2 dev systems (begin) ----
+import {DevCompositions} from './dev';
+// ---- S2 dev systems (end) ----
 import {CHAPTERS} from './chapters';
 import {FPS, T, VO_FILE} from './timing';
 
@@ -39,5 +42,8 @@ export const Root: React.FC = () => (
 				/>
 			);
 		})}
+		{/* ---- S2 dev systems (begin): Dev-* compositions for the shared systems, see src/dev/ ---- */}
+		<DevCompositions />
+		{/* ---- S2 dev systems (end) ---- */}
 	</>
 );
