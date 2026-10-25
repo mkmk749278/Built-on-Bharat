@@ -1112,6 +1112,20 @@ To port when needed (Creator path → what to change):
 ## 16. Lessons log
 *(Newest first. Each lesson: what happened, the rule, why.)*
 
+**Building film 1 in Remotion (2026-10-25).**
+- *Timing without transcription:* `scripts/vo_timing.py` joins the takes, gives every chapter turn a 1.4 s breath (even
+  inside a take: chapters often start mid-block), places sentences with Creator's silence aligner and snaps clause
+  boundaries to the voice's own pauses. 427 sentences, 3,329 words, 9 flagged (all short punch lines read slowly).
+- *Initials split sentences:* "N. Chandrasekaran" became two sentences and shifted a block's timing; the splitter now
+  never splits after a single capital and a dot.
+- *WebGL in the container:* `--gl=swangle` works for `@remotion/three`; `--gl=angle` failed. Build environment maps in
+  `onCreated` (an effect runs after a still is captured: the scene came out black). Glass transmission renders as a
+  milky blob in software GL: fake gems with mirror facets in a designed studio environment.
+- *A code-built diamond did not reach film quality in four tries* (milky, then black, then smoky quartz). Real diamond
+  footage under a RECONSTRUCTION label beats it: real before made (§6.3.6).
+- *Remotion serialises composition props:* a component passed in `defaultProps` arrives as undefined (React error 130).
+  Wrap chapters in closure components.
+
 **First full recording, Tata film (2026-10-24).**
 - *Emotion tags sound synthetic on Akash v4:* the owner heard the feeling change at each `[curious]`/`[warmly]`/
   `[serious]`. Rule: pause tags only; the feeling comes from the writing (§7.5).
