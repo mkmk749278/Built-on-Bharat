@@ -50,6 +50,15 @@ MAP = [
     ("Because the Tata family doesn't own Tata.", f"{P} Because the Tata family doesn't own Tata."),
     ("Then, in October twenty twenty four, Ratan Tata died.", f"{L} Then, in October twenty twenty four, Ratan Tata died."),
     ("Who should a company like this really belong to?", f"{P} Who should a company like this really belong to?"),
+    # v5 (2026-10-25): origin and rise passages (owner: middle-class viewers want to see how it started)
+    ("You already know his name. Jamsetji Tata.", f"You already know his name. {S} Jamsetji Tata."),
+    ("And then, almost everything falls apart.", f"{P} And then, almost everything falls apart."),
+    ("The papers are worthless.", f"{S} The papers are worthless."),
+    ("Do they give up? No.", f"Do they give up? {S} No."),
+    ("If you've ever failed, hold on to this.", f"{P} If you've ever failed, hold on to this."),
+    ("He started as an apprentice, without pay.", f"He started as an apprentice, {S} without pay."),
+    ("at thirty four, the unpaid apprentice", f"at thirty four, {S} the unpaid apprentice"),
+    ("At the steel plant in Jamshedpur, he spends", f"At the steel plant in Jamshedpur, {S} he spends"),
 ]
 
 
@@ -57,7 +66,7 @@ def main() -> None:
     vo = (HERE / "vo.txt").read_text()
     perf = vo
     rows = ["# (exact text in vo.txt)\t(the same text with its pause tag)",
-            "# v4 (2026-10-24): pause tags only ([short pause], [pause], [long pause]); no emotion tags, no '...'"]
+            "# v5 (2026-10-25): origin passages added; v4 (2026-10-24): pause tags only ([short pause], [pause], [long pause]); no emotion tags, no '...'"]
     for a, b in MAP:
         if perf.count(a) != 1:
             sys.exit(f"MAP row no longer matches exactly once: {a!r}")
