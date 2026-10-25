@@ -1134,6 +1134,10 @@ To port when needed (Creator path → what to change):
   closed ring (start = end, every distance is zero): split each ring at its farthest point first. Draw coastlines by
   stroking every country thick, then filling them all: shared land borders get covered, only the coast keeps a line;
   then draw borders on top (thin today, faint dashes on period maps such as the 1932 flight).
+- *Furnace cutaway:* a mechanism reads when its parts move on the voice: each charge drops on its word, the blast
+  races through the main and bustle ring as bright dashes, the tap bursts with sparks. Lumps (seeded polygons) beat
+  flat colour bands for the burden; tuyere pipes drawn over the cut interior read as spikes, so they run behind the
+  back wall and only the glowing nozzles show. Sources and what is still unchecked: `scenes/design-reference.md`.
 - *Wikimedia Commons* answered 429 after about five file downloads in a minute (Special:FilePath and
   upload.wikimedia.org alike) and kept refusing for 20+ minutes: fetch references early, a few at a time.
 - *Remotion CLI:* `--crf` and `--video-bitrate` cannot both be set; use `--video-bitrate` as the cap (14M at 1080p60,

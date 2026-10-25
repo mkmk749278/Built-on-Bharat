@@ -19,6 +19,7 @@ folder's imports from the film's own `node_modules` (see `films/tata-history/rem
 | `three/Diamond.tsx` | A code-built cut gem (mirror facets in a jewellery-studio environment). Not yet film quality: real diamond footage first |
 | `sfx.ts` | `SfxCue` and `shiftCues()`: systems return cues in local frames, the film shifts them into its `cues.ts` |
 | `map/` | India map (PLAYBOOK §6.6, §8.5): `indiaGeo.ts` (India POV boundary from Natural Earth via `scripts/india_map.py`), `project()`, `PLACES`, `mapCam()`/`camFit()`, `<IndiaMap style='today'|'faint'>`, `<MapPin>`, `<MapRoute>` (glowing arc, moving head: dot/train/plane, distance label), `routeStopFrames()` |
+| `furnace/BlastFurnace.tsx` | 2.5D cutaway of a 1910s blast furnace: sinking burden of ore/coke/limestone lumps, bell and skip charging, hot blast through bustle pipe and tuyeres, slag on iron, the tap. `FurnaceTimeline` event frames, `furnaceCues()`, `furnaceCamKeys()`/`camAt()` |
 | `ink/` | INK figures (PLAYBOOK §8.9), ported from Creator's rig (`reference_stick.js`): see below |
 
 ### INK figures (`ink/`)
