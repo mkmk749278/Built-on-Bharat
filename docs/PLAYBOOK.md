@@ -1112,6 +1112,26 @@ To port when needed (Creator path → what to change):
 ## 16. Lessons log
 *(Newest first. Each lesson: what happened, the rule, why.)*
 
+**Shared systems for film 1: INK figures, map, furnace, ownership, kinetics (S2, 2026-10-25).**
+- *INK, first pass looked like clip-art:* round tube limbs, ball hands and pantaloon dhotis. What fixed it: tapered limbs
+  (upper arm wider than forearm), mitten hands along the forearm, shaped feet, the dhoti as one drape whose crotch rises
+  as the legs part (no web from knee to knee in a stride), and line weight from the light: each mass is outlined twice,
+  the second copy nudged away from the light, so lines are thin where lit and heavy in shadow.
+- *INK masses:* draw every shape's outline first, then every fill, and the shapes merge into one silhouette with one
+  clean outline (both dhoti legs, a turban and its tail). Joints are jittered once per 12 fps tick with a stable id
+  (never seeded by position, or the boil runs continuously as the figure moves).
+- *One SVG filter per figure* gives the ember rim (silhouette minus a copy shifted away from the light), a soft form
+  shade and ink cross-hatching (`feImage` of a data-URI tile + `feTile`) on the far side. `feImage` data URIs work in
+  Remotion's headless Chrome. Move the hatch tile with the figure or it slides (shower-door effect).
+- *Faces for dignified beats:* a filled moustache shape reads as pouting lips; two brush strokes falling from the
+  centre read as a moustache. Keep the mouth a short thin line; eyes small with a lid line.
+- *Render cost (4-core container, concurrency 4, `--gl=swangle`):* INK scenes with 15–45 filtered figures measured
+  ~0.54 s a frame at 1080p and ~2.3–2.8 s a frame at 4K (`--scale=2`), measured while stills were rendering alongside,
+  so treat as upper bounds. A 20-minute film of INK alone would be ~19 h at 4K: use INK for short beats and render
+  them in shards.
+- *Remotion CLI:* `--crf` and `--video-bitrate` cannot both be set; use `--video-bitrate` as the cap (14M at 1080p60,
+  45M at 4K60 for tests). `interpolate()` with an `Infinity` input range throws: default "never" to `1e9`.
+
 **Building film 1 in Remotion (2026-10-25).**
 - *Timing without transcription:* `scripts/vo_timing.py` joins the takes, gives every chapter turn a 1.4 s breath (even
   inside a take: chapters often start mid-block), places sentences with Creator's silence aligner and snaps clause

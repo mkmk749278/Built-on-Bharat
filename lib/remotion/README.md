@@ -17,7 +17,23 @@ folder's imports from the film's own `node_modules` (see `films/tata-history/rem
 | `Document.tsx` | `Paper` (isometric document), `Highlight` (sweeps as the voice reads), `PaperText` |
 | `Brand.tsx` | `LogoBug`, `HonestyTag` (RECONSTRUCTION / ILLUSTRATION / ARCHIVE …) |
 | `three/Diamond.tsx` | A code-built cut gem (mirror facets in a jewellery-studio environment). Not yet film quality: real diamond footage first |
-| `ink/` | INK figures (PLAYBOOK §8.9). `reference_stick.js` is Creator's rig to port |
+| `sfx.ts` | `SfxCue` and `shiftCues()`: systems return cues in local frames, the film shifts them into its `cues.ts` |
+| `ink/` | INK figures (PLAYBOOK §8.9), ported from Creator's rig (`reference_stick.js`): see below |
+
+### INK figures (`ink/`)
+| File | What |
+|---|---|
+| `rig.ts` | Pure maths: builds (age, sex, height), bones, `Pose`, 2-bone `ik()`, `solve()` → skeleton, planted-foot `walkFoot()`, travels, the 12 fps `boil()` |
+| `actions.ts` | Data → pose: `stand`, `wait` (breathing, weight shifts, blinks, glances, queue `shuffle`s), `walk`, `ride`/`pillion`/`perch`/`lap` (vehicles), `pose`; hand sets (`clasp`, `behind`, `folded`, `cap`, `pouch`, `offer`, `cane`…); moods (dignified, tired, hopeful, warm, worried, resolute) |
+| `draw.ts` | Skeleton + costume → ink paths: union-outlined masses, heavier lines away from the light, tapered limbs, mitten hands, dhoti/nauvari drape, saree, kurta, coat, vest, turbans, pheta, Parsi hat, mill cap, faces, props (pouch, cane, cap, tiffin, bundle) |
+| `costumes.ts` | The cast: 1900–1930 (`workerCap`, `workerCloth`, `workerKurta`, `workerWoman`, `dhotiKurta`, `clerk`, `elder`, `parsi`, `youngMan`, `nauvari`, `nauvariElder`, `boy`, `girl`) and 2008 (`father2008`, `mother2008`, `boy2008`, `girl2008`); `vary()` for crowds |
+| `InkFigure.tsx` | `<InkFigure action costume x y scale facing look light seed …>`: an SVG `<g>` with an ember rim light, form shade and cross-hatching on the side away from the light (one SVG filter per figure) |
+| `InkCrowd.tsx` | `<InkCrowd>`: seeded placement, depth scale, costume/build/timing variation, `faceToward`, haze; explicit members too |
+| `InkStage.tsx` | `<InkStage>` (SVG stage on charcoal blueprint paper), `<InkPaper>`, `<InkLine>` (boiling ink line, straight or smooth) |
+| `scenery.tsx` | `DuskSky`, `Smoke`, `Steelworks` (1910s furnaces, stoves, chimneys), `TreeLine` |
+| `Scooter.tsx` | A generic 2000s step-through scooter (no brand) with turning wheels and `scooterBob()`; `SCOOTER` anchors for riders |
+
+Use: put figures inside an `<InkStage>` (or any `<svg>` 1920×1080). Scenes built on it: `films/tata-history/remotion/src/dev/ink/`.
 
 Rules (PLAYBOOK §10.2): every value is a function of the frame; `random(seed)` and `@remotion/noise` only; eased or
 spring motion only; frames come from the VO timing, never typed by hand.
