@@ -1129,6 +1129,13 @@ To port when needed (Creator path → what to change):
   ~0.54 s a frame at 1080p and ~2.3–2.8 s a frame at 4K (`--scale=2`), measured while stills were rendering alongside,
   so treat as upper bounds. A 20-minute film of INK alone would be ~19 h at 4K: use INK for short beats and render
   them in shards.
+- *India map:* `scripts/india_map.py` turns Natural Earth's India POV file into `lib/remotion/map/indiaGeo.ts`
+  (Lambert azimuthal equal-area on 80°E 22°N, 1 unit = 3 km, 14k points, sharp at 4K). Douglas–Peucker collapses a
+  closed ring (start = end, every distance is zero): split each ring at its farthest point first. Draw coastlines by
+  stroking every country thick, then filling them all: shared land borders get covered, only the coast keeps a line;
+  then draw borders on top (thin today, faint dashes on period maps such as the 1932 flight).
+- *Wikimedia Commons* answered 429 after about five file downloads in a minute (Special:FilePath and
+  upload.wikimedia.org alike) and kept refusing for 20+ minutes: fetch references early, a few at a time.
 - *Remotion CLI:* `--crf` and `--video-bitrate` cannot both be set; use `--video-bitrate` as the cap (14M at 1080p60,
   45M at 4K60 for tests). `interpolate()` with an `Infinity` input range throws: default "never" to `1e9`.
 
