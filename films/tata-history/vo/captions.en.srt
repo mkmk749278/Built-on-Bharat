@@ -1,1707 +1,1935 @@
 1
-00:00:00,000 --> 00:00:00,686
+00:00:00,000 --> 00:00:00,666
 Bombay.
 
 2
-00:00:00,925 --> 00:00:02,028
+00:00:00,874 --> 00:00:01,999
 Nineteen twenty four.
 
 3
-00:00:02,419 --> 00:00:05,686
+00:00:02,387 --> 00:00:05,635
 A man walks into a bank, carrying his wife's diamond.
 
 4
-00:00:06,017 --> 00:00:08,393
+00:00:05,880 --> 00:00:08,103
 Two hundred and forty five carats.
 
 5
-00:00:09,100 --> 00:00:12,098
+00:00:08,397 --> 00:00:11,364
 More than twice the size of the Kohinoor, as it is today.
 
 6
-00:00:12,736 --> 00:00:14,045
-He isn't here to sell it.
+00:00:11,805 --> 00:00:12,963
+Is he here to sell it?
 
 7
-00:00:14,400 --> 00:00:17,148
-He wants a loan, with the diamond as the guarantee.
+00:00:13,246 --> 00:00:13,729
+No.
 
 8
-00:00:17,661 --> 00:00:18,992
-Why would a man do that?
+00:00:13,998 --> 00:00:16,830
+He wants a loan, with the diamond as the guarantee.
 
 9
-00:00:19,408 --> 00:00:27,283
-Because more than fourteen hundred kilometres away, in a steel town cut out of the jungle, thousands of workers are waiting for their wages.
+00:00:17,181 --> 00:00:20,731
+Ask any Indian family what it means to pledge the house gold.
 
 10
-00:00:27,547 --> 00:00:30,862
-And the company that pays them is almost out of money.
+00:00:20,871 --> 00:00:22,433
+It's the last thing you do.
 
 11
-00:00:31,474 --> 00:00:33,083
-You may never have heard his name.
+00:00:22,633 --> 00:00:24,411
+When there is nothing else left.
 
 12
-00:00:33,355 --> 00:00:34,851
-Sir Dorabji Tata.
+00:00:24,675 --> 00:00:26,180
+So why is he doing it?
 
 13
-00:00:35,194 --> 00:00:37,150
-The company is Tata Steel.
+00:00:26,442 --> 00:00:34,184
+Because more than fourteen hundred kilometres away, in a steel town cut out of the jungle, thousands of workers are waiting for their wages.
 
 14
-00:00:37,568 --> 00:00:38,898
-Now look around you today.
+00:00:34,380 --> 00:00:37,674
+And the company that pays them is almost out of money.
 
 15
-00:00:39,214 --> 00:00:40,585
-The salt in your kitchen.
+00:00:37,975 --> 00:00:39,647
+You may never have heard his name.
 
 16
-00:00:40,603 --> 00:00:41,840
-The tea in your cup.
+00:00:39,880 --> 00:00:41,385
+Sir Dorabji Tata.
 
 17
-00:00:41,965 --> 00:00:43,392
-The steel in our bridges.
+00:00:41,601 --> 00:00:43,574
+The company is Tata Steel.
 
 18
-00:00:43,488 --> 00:00:44,950
-The plane over your head.
+00:00:43,886 --> 00:00:45,210
+Now look around you today.
 
 19
-00:00:45,603 --> 00:00:46,067
-Tata.
+00:00:45,494 --> 00:00:46,934
+The salt in your kitchen.
 
 20
-00:00:46,624 --> 00:00:51,117
-And yet you won't find a single Tata at the top of any rich list.
+00:00:46,886 --> 00:00:48,159
+The tea in your cup.
 
 21
-00:00:51,408 --> 00:00:52,533
-How is that possible?
+00:00:48,206 --> 00:00:49,619
+The steel in our bridges.
 
 22
-00:00:52,836 --> 00:00:54,706
-The answer is in this bank.
+00:00:49,815 --> 00:00:51,636
+Maybe even the plane over your head.
 
 23
-00:00:54,859 --> 00:00:56,947
-In what happens to that diamond.
-
-24
-00:00:57,228 --> 00:01:03,064
-Because a choice this man makes, eight years later, still decides who controls Tata today.
-
-25
-00:01:03,429 --> 00:01:07,275
-And in twenty twenty six, that choice has turned into a fight.
-
-26
-00:01:07,592 --> 00:01:09,687
-By the end of this film, you'll see how.
-
-27
-00:01:10,007 --> 00:01:13,791
-But why would a man pawn his wife's diamond for a steel plant?
-
-28
-00:01:14,062 --> 00:01:17,401
-To understand that, we go back to the man who dreamed it.
-
-29
-00:01:18,753 --> 00:01:20,252
-Eighteen sixty eight.
-
-30
-00:01:20,726 --> 00:01:25,667
-Bombay is a city of ships and cotton, and most of the money flows one way.
-
-31
-00:01:26,058 --> 00:01:26,569
-Out.
-
-32
-00:01:27,041 --> 00:01:29,548
-Indian cotton sails to the mills of England.
-
-33
-00:01:29,767 --> 00:01:32,456
-The cloth comes back, and Indians pay for it.
-
-34
-00:01:32,809 --> 00:01:39,448
-That year, a twenty nine year old Parsi from Navsari starts a trading firm with twenty one thousand rupees.
-
-35
-00:01:39,794 --> 00:01:42,093
-His name is Jamsetji Tata.
-
-36
-00:01:42,482 --> 00:01:48,708
-Like many traders of his time, his family's business ran on cotton and on opium, sold to China.
-
-37
-00:01:49,052 --> 00:01:52,355
-That is part of this story too, and it's worth saying out loud.
-
-38
-00:01:52,707 --> 00:01:55,445
-But Jamsetji keeps asking one question.
-
-39
-00:01:55,862 --> 00:01:59,746
-Why send our cotton away, when we can spin it right here?
-
-40
-00:02:00,013 --> 00:02:00,991
-So what does he do?
-
-41
-00:02:01,361 --> 00:02:02,558
-He builds a mill.
-
-42
-00:02:02,791 --> 00:02:05,002
-Not in Bombay, where everyone builds.
-
-43
-00:02:05,202 --> 00:02:07,880
-In Nagpur, right where the cotton grows.
-
-44
-00:02:08,085 --> 00:02:11,485
-It opens on the first of January, eighteen seventy seven.
-
-45
-00:02:11,678 --> 00:02:15,526
-The same day Queen Victoria is proclaimed Empress of India.
-
-46
-00:02:15,773 --> 00:02:17,945
-So he names it Empress Mills.
-
-47
-00:02:18,148 --> 00:02:20,518
-Then he does something strange for his time.
-
-48
-00:02:20,825 --> 00:02:23,256
-He starts a pension fund for his workers.
-
-49
-00:02:23,525 --> 00:02:26,377
-Later, he pays them when they're hurt on the job.
-
-50
-00:02:26,598 --> 00:02:27,906
-Was it pure kindness?
-
-51
-00:02:28,174 --> 00:02:30,882
-He answered that himself, in eighteen ninety five.
-
-52
-00:02:31,149 --> 00:02:34,012
-He was no kinder than anyone else, he said.
-
-53
-00:02:34,266 --> 00:02:37,972
-But healthy workers were the sure foundation of his success.
-
-54
-00:02:38,286 --> 00:02:41,392
-Now, you've probably heard the most famous Tata story.
-
-55
-00:02:41,601 --> 00:02:45,216
-Jamsetji is turned away from a whites only hotel in Bombay.
-
-56
-00:02:45,419 --> 00:02:48,412
-So he builds the Taj, to answer the insult.
-
-57
-00:02:48,647 --> 00:02:50,535
-It's a great story, isn't it?
-
-58
-00:02:50,784 --> 00:02:54,436
-But historians have found no record that it ever happened.
-
-59
-00:02:54,937 --> 00:02:57,495
-What is on record is the hotel itself.
-
-60
-00:02:57,891 --> 00:03:01,659
-It opens in December, nineteen oh three, on the Bombay waterfront.
-
-61
-00:03:01,880 --> 00:03:03,812
-Designed by an Indian architect.
-
-62
-00:03:03,986 --> 00:03:05,613
-Lit by electricity.
-
-63
-00:03:06,076 --> 00:03:07,272
-Hold on to this hotel.
-
-64
-00:03:08,195 --> 00:03:11,512
-It comes back in this story, on the worst night of its life.
-
-65
-00:03:12,210 --> 00:03:14,640
-But a hotel was never his biggest dream.
-
-66
-00:03:14,864 --> 00:03:17,049
-Jamsetji had three bigger ones.
-
-67
-00:03:17,287 --> 00:03:20,992
-A steel plant, so India could make its own rails and bridges.
-
-68
-00:03:21,303 --> 00:03:24,120
-Power from the monsoon rains of the Western Ghats.
-
-69
-00:03:24,330 --> 00:03:29,258
-And a world class institute of science, so Indians could invent, not just buy.
-
-70
-00:03:29,663 --> 00:03:33,816
-For the institute alone, he offers property worth thirty lakh rupees.
-
-71
-00:03:34,217 --> 00:03:36,324
-The hardest of the three is steel.
-
-72
-00:03:36,622 --> 00:03:37,104
-Why?
-
-73
-00:03:37,442 --> 00:03:43,412
-Because to make steel, you need iron ore, the right coal and water, all in one place.
-
-74
-00:03:43,706 --> 00:03:46,858
-And for years, every place he tries is wrong.
-
-75
-00:03:48,484 --> 00:03:51,291
-One site has ore, but the coal is useless.
-
-76
-00:03:51,505 --> 00:03:53,567
-Another has coal, but no water.
-
-77
-00:03:53,879 --> 00:03:58,277
-Jamsetji even crosses the world to America, to find the right engineer.
-
-78
-00:03:58,588 --> 00:04:02,279
-In a small, crowded office in New York, he finds his man.
-
-79
-00:04:02,543 --> 00:04:04,261
-An American steel expert.
-
-80
-00:04:04,600 --> 00:04:08,234
-Then, in February nineteen oh four, a letter reaches him.
-
-81
-00:04:08,483 --> 00:04:12,072
-It's from an Indian geologist, a man who studies rocks.
-
-82
-00:04:12,348 --> 00:04:13,790
-Pramatha Nath Bose.
-
-83
-00:04:14,071 --> 00:04:17,419
-He has been walking the hills of Mayurbhanj, in today's Odisha.
-
-84
-00:04:17,682 --> 00:04:19,514
-And he has found iron ore.
-
-85
-00:04:19,768 --> 00:04:20,812
-A lot of it.
-
-86
-00:04:21,045 --> 00:04:23,982
-This is the letter that will build Tata Steel.
-
-87
-00:04:25,251 --> 00:04:30,316
-But three months later, on a trip to Germany, Jamsetji Tata dies.
-
-88
-00:04:30,753 --> 00:04:32,300
-He never sees those hills.
-
-89
-00:04:32,597 --> 00:04:33,736
-No steel plant.
-
-90
-00:04:33,852 --> 00:04:35,050
-No power company.
-
-91
-00:04:35,255 --> 00:04:36,295
-No institute.
-
-92
-00:04:36,798 --> 00:04:38,657
-So who carries the dream now?
-
-93
-00:04:38,988 --> 00:04:39,684
-His son.
-
-94
-00:04:39,853 --> 00:04:40,636
-Dorabji.
-
-95
-00:04:40,989 --> 00:04:43,417
-And Dorabji does not run it from an office.
-
-96
-00:04:43,572 --> 00:04:48,020
-He has already been out in the jungle himself, with the men searching for iron.
-
-97
-00:04:48,300 --> 00:04:51,520
-Now they go back, looking for one perfect spot.
-
-98
-00:04:51,802 --> 00:04:56,529
-They find it near a small village called Sakchi, right where two rivers meet.
-
-99
-00:04:56,841 --> 00:04:57,744
-Ore nearby.
-
-100
-00:04:57,975 --> 00:04:58,856
-Coal nearby.
-
-101
-00:04:59,056 --> 00:05:00,408
-Water all year.
-
-102
-00:05:00,750 --> 00:05:02,166
-Now they need money.
-
-103
-00:05:02,420 --> 00:05:03,639
-A lot of money.
-
-104
-00:05:03,980 --> 00:05:05,327
-Where do you even find it?
-
-105
-00:05:05,578 --> 00:05:07,000
-They try London first.
-
-106
-00:05:07,175 --> 00:05:08,716
-The answer is cold.
-
-107
-00:05:08,988 --> 00:05:12,477
-So in nineteen oh seven, the Tatas take a huge risk.
-
-108
-00:05:12,869 --> 00:05:14,273
-They ask India.
-
-109
-00:05:16,091 --> 00:05:18,013
-Bombay, nineteen oh seven.
-
-110
-00:05:18,172 --> 00:05:19,671
-The share office opens.
-
-111
-00:05:19,880 --> 00:05:21,037
-And the people come.
-
-112
-00:05:21,368 --> 00:05:22,078
-Who were they?
-
-113
-00:05:22,349 --> 00:05:24,452
-One man who was there wrote it down.
-
-114
-00:05:24,671 --> 00:05:26,277
-Old and young, he said.
-
-115
-00:05:26,445 --> 00:05:27,619
-Rich and poor.
-
-116
-00:05:27,781 --> 00:05:28,976
-Men and women.
-
-117
-00:05:29,201 --> 00:05:31,291
-They came, offering their mites.
-
-118
-00:05:31,367 --> 00:05:32,336
-Their mites.
-
-119
-00:05:32,438 --> 00:05:33,698
-Their small savings.
-
-120
-00:05:33,842 --> 00:05:35,305
-A little from each of them.
-
-121
-00:05:35,576 --> 00:05:40,418
-In a matter of weeks, about eight thousand Indians put up the entire capital.
-
-122
-00:05:40,624 --> 00:05:42,900
-Two crore thirty one lakh rupees.
-
-123
-00:05:43,216 --> 00:05:45,340
-Now imagine you're standing in that line.
-
-124
-00:05:45,618 --> 00:05:47,375
-India is ruled by Britain.
-
-125
-00:05:47,545 --> 00:05:51,412
-And you're about to bet your savings that Indians can make steel.
-
-126
-00:05:51,801 --> 00:05:52,703
-Would you have done it?
-
-127
-00:05:52,993 --> 00:05:54,811
-Not everyone believed, of course.
-
-128
-00:05:54,982 --> 00:06:01,552
-According to Tata's own histories, a senior British railway official, Sir Frederick Upcott, laughed at the idea.
-
-129
-00:06:01,888 --> 00:06:05,638
-He said he would eat every pound of steel rail they managed to make.
-
-130
-00:06:05,953 --> 00:06:09,187
-So how do you turn a hill of red rock into steel?
-
-131
-00:06:09,508 --> 00:06:11,660
-You build a tower of fire.
-
-132
-00:06:12,163 --> 00:06:17,447
-Iron ore, limestone, and coke, a kind of baked coal, go in at the top.
-
-133
-00:06:17,743 --> 00:06:19,742
-Hot air blasts in at the bottom.
-
-134
-00:06:20,026 --> 00:06:22,958
-And out comes iron, as a glowing liquid.
-
-135
-00:06:23,267 --> 00:06:25,124
-Refine it, and you have steel.
-
-136
-00:06:25,582 --> 00:06:28,597
-The first iron flows in December nineteen eleven.
-
-137
-00:06:28,808 --> 00:06:30,846
-The first steel, in nineteen twelve.
-
-138
-00:06:31,338 --> 00:06:33,757
-Two years later, the world goes to war.
-
-139
-00:06:34,127 --> 00:06:37,736
-Britain's armies need rails, in the Middle East and in Africa.
-
-140
-00:06:37,996 --> 00:06:40,495
-And many of those rails come from Tata.
-
-141
-00:06:40,968 --> 00:06:44,538
-Tata's own records put it at about fifteen hundred miles.
-
-142
-00:06:44,884 --> 00:06:49,484
-Years later, as the Tata story goes, Dorabji had a reply for Upcott.
-
-143
-00:06:49,765 --> 00:06:54,178
-If he had kept his promise, he would have had some indigestion.
-
-144
-00:06:54,571 --> 00:06:57,245
-In nineteen nineteen, the town gets a new name.
-
-145
-00:06:57,492 --> 00:06:58,371
-Jamshedpur.
-
-146
-00:06:58,981 --> 00:07:00,959
-After the man who never saw it.
-
-147
-00:07:01,222 --> 00:07:03,199
-And his other dreams come true too.
-
-148
-00:07:03,428 --> 00:07:06,499
-The institute opens in Bangalore in nineteen eleven.
-
-149
-00:07:06,724 --> 00:07:09,398
-Today it's the Indian Institute of Science.
-
-150
-00:07:09,626 --> 00:07:15,071
-And from nineteen fifteen, monsoon lakes in the Western Ghats send power to Bombay's mills.
-
-151
-00:07:15,289 --> 00:07:18,700
-So the dreamer is gone, but every dream is alive.
-
-152
-00:07:19,180 --> 00:07:21,312
-It should be a happy ending, shouldn't it?
-
-153
-00:07:22,532 --> 00:07:23,244
-It isn't.
-
-154
-00:07:24,602 --> 00:07:26,822
-A steel town is no fairy tale.
-
-155
-00:07:27,101 --> 00:07:30,126
-In nineteen twenty two, the workers go on strike.
-
-156
-00:07:30,431 --> 00:07:32,061
-Then the good years end.
-
-157
-00:07:32,315 --> 00:07:33,289
-Prices fall.
-
-158
-00:07:33,537 --> 00:07:35,953
-Cheap iron and steel pour in from abroad.
-
-159
-00:07:36,367 --> 00:07:42,634
-By nineteen twenty four, the company needs close to two crore rupees, to pay its wages and the debts it owes.
-
-160
-00:07:43,053 --> 00:07:45,531
-Where do you find that kind of money, fast?
-
-161
-00:07:45,930 --> 00:07:47,457
-The banks want a guarantee.
-
-162
-00:07:47,686 --> 00:07:48,805
-Something valuable.
-
-163
-00:07:49,706 --> 00:07:51,723
-So we're back in that bank in Bombay.
-
-164
-00:07:52,019 --> 00:07:54,693
-The diamond on the counter is called the Jubilee.
-
-165
-00:07:54,989 --> 00:08:00,503
-It was found in South Africa in eighteen ninety five, and named for Queen Victoria's Diamond Jubilee.
-
-166
-00:08:00,844 --> 00:08:04,473
-Around nineteen hundred, Dorabji bought it for his wife, Meherbai.
-
-167
-00:08:04,746 --> 00:08:07,508
-She wore it at royal courts and grand occasions.
-
-168
-00:08:07,900 --> 00:08:13,738
-Now Dorabji hands it over as the guarantee, with the rest of her jewellery, to the Imperial Bank of India.
-
-169
-00:08:14,049 --> 00:08:16,663
-Today you know that bank as the State Bank of India.
-
-170
-00:08:17,122 --> 00:08:18,306
-The loan comes through.
-
-171
-00:08:18,558 --> 00:08:20,016
-The furnaces stay lit.
-
-172
-00:08:20,249 --> 00:08:21,673
-The workers get paid.
-
-173
-00:08:22,660 --> 00:08:23,925
-It was her diamond.
-
-174
-00:08:24,253 --> 00:08:29,319
-And it went into a bank, so that families fourteen hundred kilometres away could eat.
-
-175
-00:08:29,808 --> 00:08:31,097
-Did they ever get it back?
-
-176
-00:08:31,528 --> 00:08:32,061
-Yes.
-
-177
-00:08:32,334 --> 00:08:36,133
-We know because, eight years later, it shows up in Dorabji's will.
-
-178
-00:08:36,520 --> 00:08:41,008
-In nineteen thirty one, Meherbai dies of leukaemia, a cancer of the blood.
-
-179
-00:08:41,466 --> 00:08:43,613
-The next year, Dorabji dies too.
-
-180
-00:08:43,973 --> 00:08:45,134
-They have no children.
-
-181
-00:08:45,964 --> 00:08:48,469
-And here is the turn in this whole story.
-
-182
-00:08:48,925 --> 00:08:51,489
-He leaves everything to a charitable trust.
-
-183
-00:08:51,739 --> 00:08:53,254
-His shares in Tata Sons.
-
-184
-00:08:53,369 --> 00:08:54,264
-His property.
-
-185
-00:08:54,414 --> 00:08:58,756
-And twenty one pieces of Meherbai's jewellery, the Jubilee among them.
-
-186
-00:08:59,059 --> 00:09:01,130
-The Sir Dorabji Tata Trust.
-
-187
-00:09:01,641 --> 00:09:04,676
-A few years later, the trust sells the jewels.
-
-188
-00:09:04,904 --> 00:09:08,565
-And that money helps build a hospital for the disease that took her.
-
-189
-00:09:08,967 --> 00:09:14,014
-The Tata Memorial Hospital, for cancer, opens in Bombay in nineteen forty one.
-
-190
-00:09:14,901 --> 00:09:17,061
-So the diamond became a hospital.
-
-191
-00:09:17,418 --> 00:09:24,574
-If you, or someone you love, has ever been treated at Tata Memorial, you've been inside what that diamond helped build.
-
-192
-00:09:24,975 --> 00:09:26,463
-But the shares in Tata Sons?
-
-193
-00:09:26,807 --> 00:09:28,419
-Those the trust keeps.
-
-194
-00:09:28,651 --> 00:09:31,288
-And that means something no one had planned.
-
-195
-00:09:31,784 --> 00:09:34,957
-A charity now owns a big piece of the empire.
-
-196
-00:09:35,246 --> 00:09:36,199
-Keep that in mind.
-
-197
-00:09:36,311 --> 00:09:37,709
-It's the key to the ending.
-
-198
-00:09:39,672 --> 00:09:41,796
-Now the story needs a new captain.
-
-199
-00:09:41,929 --> 00:09:43,583
-And this one flies.
-
-200
-00:09:43,832 --> 00:09:47,252
-His full name is long, so everyone just calls him J.R.D.
-
-201
-00:09:47,654 --> 00:09:51,599
-In nineteen twenty nine, he gets India's first pilot licence.
-
-202
-00:09:52,077 --> 00:09:54,654
-The fifteenth of October, nineteen thirty two.
-
-203
-00:09:54,866 --> 00:09:55,486
-Karachi.
-
-204
-00:09:55,700 --> 00:09:57,065
-Six thirty in the morning.
-
-205
-00:09:57,509 --> 00:10:01,618
-J.R.D. climbs into a tiny single engine plane called a Puss Moth.
-
-206
-00:10:01,896 --> 00:10:03,711
-Behind him, bags of mail.
-
-207
-00:10:03,969 --> 00:10:04,866
-No radio.
-
-208
-00:10:04,942 --> 00:10:07,821
-No navigation aids, on the ground or in the air.
-
-209
-00:10:08,114 --> 00:10:09,958
-Can you imagine flying like that?
-
-210
-00:10:10,417 --> 00:10:14,040
-He stops in Ahmedabad, where the fuel is poured in from cans.
-
-211
-00:10:14,257 --> 00:10:18,270
-Then he flies on, against the wind, all the way to Bombay.
-
-212
-00:10:18,601 --> 00:10:20,046
-There is no proper airport.
-
-213
-00:10:20,174 --> 00:10:22,614
-Just a mud flat at Juhu, by the sea.
-
-214
-00:10:23,116 --> 00:10:25,499
-He lands at ten to two in the afternoon.
-
-215
-00:10:25,795 --> 00:10:28,376
-That flight is the start of an airline.
-
-216
-00:10:28,642 --> 00:10:29,641
-Tata Airlines.
-
-217
-00:10:29,733 --> 00:10:31,077
-Later, Air India.
-
-218
-00:10:31,502 --> 00:10:34,645
-For twenty years he builds it, plane by plane.
-
-219
-00:10:34,931 --> 00:10:38,564
-But in nineteen fifty three, the government takes over the airlines.
-
-220
-00:10:39,094 --> 00:10:42,107
-J.R.D. thinks it's a mistake, and he says so.
-
-221
-00:10:42,321 --> 00:10:46,037
-So what does he do when they ask him to stay on and run Air India?
-
-222
-00:10:46,357 --> 00:10:47,251
-He says yes.
-
-223
-00:10:47,510 --> 00:10:51,556
-And he does it without a salary, for twenty five years.
-
-224
-00:10:51,878 --> 00:10:55,463
-In these years, a company needs the government's permission to grow.
-
-225
-00:10:55,709 --> 00:10:57,587
-What it makes.
-
-226
-00:10:57,893 --> 00:10:59,664
-How much.
-
-227
-00:10:59,905 --> 00:11:01,435
-So Tata grows slowly.
-
-228
-00:11:01,626 --> 00:11:05,328
-But in nineteen sixty eight, almost quietly, it starts a small computer unit.
-
-229
-00:11:05,563 --> 00:11:08,785
-Its first jobs are punched cards for its own companies.
-
-230
-00:11:09,031 --> 00:11:11,827
-It's called Tata Consultancy Services.
-
-231
-00:11:12,145 --> 00:11:12,913
-T.C.S.
-
-232
-00:11:13,231 --> 00:11:14,202
-Remember that name.
-
-233
-00:11:14,693 --> 00:11:17,146
-One day it will carry the whole empire.
-
-234
-00:11:17,548 --> 00:11:21,534
-And in those years, J.R.D. gets a postcard he will never forget.
-
-235
-00:11:21,942 --> 00:11:24,076
-April, nineteen seventy four.
-
-236
-00:11:24,201 --> 00:11:29,404
-A young engineering student in Bangalore sees a job notice from a Tata company, Telco.
-
-237
-00:11:29,754 --> 00:11:31,366
-At the bottom, one line.
-
-238
-00:11:31,720 --> 00:11:33,744
-Lady candidates need not apply.
-
-239
-00:11:34,190 --> 00:11:35,462
-She is angry.
-
-240
-00:11:35,693 --> 00:11:37,263
-So she writes a postcard.
-
-241
-00:11:37,525 --> 00:11:39,614
-To the man at the top of the Tata group.
-
-242
-00:11:39,821 --> 00:11:43,925
-How can a company like Telco treat people differently because of their gender?
-
-243
-00:11:44,289 --> 00:11:47,033
-Less than ten days later, a telegram arrives.
-
-244
-00:11:47,250 --> 00:11:48,301
-Come for an interview.
-
-245
-00:11:48,421 --> 00:11:49,136
-In Pune.
-
-246
-00:11:49,480 --> 00:11:50,671
-She gets the job.
-
-247
-00:11:50,888 --> 00:11:54,313
-She becomes the first woman to work on Telco's shop floor.
-
-248
-00:11:54,585 --> 00:11:55,653
-You may know her name.
-
-249
-00:11:55,866 --> 00:11:56,834
-Sudha Murty.
-
-250
-00:11:57,240 --> 00:11:59,904
-But not every Tata story ends kindly.
-
-251
-00:12:00,345 --> 00:12:02,260
-February, nineteen seventy eight.
-
-252
-00:12:02,526 --> 00:12:05,439
-A new government removes J.R.D. from Air India.
-
-253
-00:12:05,724 --> 00:12:07,292
-He is not even told directly.
-
-254
-00:12:07,500 --> 00:12:09,929
-He hears it from the man who is replacing him.
-
-255
-00:12:10,358 --> 00:12:12,973
-That night, someone asks how he feels.
-
-256
-00:12:13,434 --> 00:12:18,321
-He says, I feel as you would feel if your favourite child was taken away.
-
-257
-00:12:19,676 --> 00:12:21,029
-Nineteen ninety one.
-
-258
-00:12:21,270 --> 00:12:25,851
-India comes close to running out of foreign money, and the economy is thrown open.
-
-259
-00:12:26,077 --> 00:12:30,119
-That same year, J.R.D. hands over to a quiet, private man.
-
-260
-00:12:30,453 --> 00:12:31,368
-Ratan Tata.
-
-261
-00:12:31,669 --> 00:12:37,102
-Ratan inherits a group full of powerful bosses who run their companies like their own kingdoms.
-
-262
-00:12:37,201 --> 00:12:39,501
-So he brings in a retirement age.
-
-263
-00:12:39,679 --> 00:12:42,719
-And one by one, the old bosses step aside.
-
-264
-00:12:42,917 --> 00:12:45,477
-Then he makes his first big bet.
-
-265
-00:12:45,650 --> 00:12:48,481
-A car designed in India, by Indians.
-
-266
-00:12:48,615 --> 00:12:51,670
-The Indica, unveiled in nineteen ninety eight.
-
-267
-00:12:51,773 --> 00:12:54,725
-About one lakh fifteen thousand people book it.
-
-268
-00:12:54,925 --> 00:12:56,641
-Then the complaints start.
-
-269
-00:12:56,818 --> 00:12:57,481
-Quality.
-
-270
-00:12:57,756 --> 00:12:58,276
-Power.
-
-271
-00:12:58,504 --> 00:13:04,415
-So in nineteen ninety nine, Ratan Tata and his team fly to Detroit, to the Ford Motor Company.
-
-272
-00:13:04,559 --> 00:13:05,975
-To sell the car business.
-
-273
-00:13:06,192 --> 00:13:08,927
-Tata veteran Pravin Kadle was in that room.
-
-274
-00:13:09,133 --> 00:13:13,933
-According to him, the Ford people asked why Tata had started a car business at all.
-
-275
-00:13:14,074 --> 00:13:17,388
-And buying it, they said, would be doing Tata a favour.
-
-276
-00:13:17,623 --> 00:13:18,969
-The deal is off.
-
-277
-00:13:19,124 --> 00:13:20,838
-They fly back the same evening.
-
-278
-00:13:21,042 --> 00:13:25,358
-Kadle says Ratan Tata hardly spoke, the whole ninety minute flight.
-
-279
-00:13:26,937 --> 00:13:29,069
-A long, quiet flight home.
-
-280
-00:13:30,291 --> 00:13:31,639
-Hold on to that silence.
-
-281
-00:13:31,897 --> 00:13:33,122
-So what does Tata do?
-
-282
-00:13:33,300 --> 00:13:34,343
-It does not sell.
-
-283
-00:13:34,540 --> 00:13:35,759
-It fixes the car.
-
-284
-00:13:35,926 --> 00:13:37,550
-And it starts buying.
-
-285
-00:13:37,804 --> 00:13:41,486
-In two thousand, Tata buys Tetley, the British tea company.
-
-286
-00:13:41,640 --> 00:13:44,753
-An Indian company buying a famous British name.
-
-287
-00:13:44,932 --> 00:13:48,192
-Then, in two thousand seven, the biggest bet of all.
-
-288
-00:13:48,361 --> 00:13:54,603
-Tata Steel wins Corus, the company that included British Steel, for about twelve billion dollars.
-
-289
-00:13:55,115 --> 00:13:58,329
-Remember Upcott, the man who would eat every rail?
-
-290
-00:13:58,665 --> 00:14:03,692
-A hundred years later, an Indian steel company has bought what was once British Steel.
-
-291
-00:14:04,021 --> 00:14:07,495
-But the year after that is the one that defines Ratan Tata.
-
-292
-00:14:07,723 --> 00:14:09,196
-Everything happens in it.
-
-293
-00:14:09,475 --> 00:14:10,766
-His proudest moment.
-
-294
-00:14:10,927 --> 00:14:12,224
-His sweetest revenge.
-
-295
-00:14:12,443 --> 00:14:13,805
-His hardest defeat.
-
-296
-00:14:14,606 --> 00:14:16,441
-And his darkest night.
-
-297
-00:14:18,370 --> 00:14:19,167
-January.
-
-298
-00:14:19,410 --> 00:14:19,976
-Delhi.
-
-299
-00:14:20,283 --> 00:14:23,723
-Ratan Tata drives a tiny car into the television lights.
-
-300
-00:14:23,934 --> 00:14:24,681
-The Nano.
-
-301
-00:14:24,916 --> 00:14:26,857
-A car for one lakh rupees.
-
-302
-00:14:27,192 --> 00:14:28,828
-Costs have gone up, he says.
-
-303
-00:14:28,985 --> 00:14:30,829
-But a promise is a promise.
-
-304
-00:14:31,116 --> 00:14:32,803
-He said later what moved him.
-
-305
-00:14:33,047 --> 00:14:35,297
-Indian families riding on scooters.
-
-306
-00:14:35,399 --> 00:14:37,598
-Four or five people, on one scooter.
-
-307
-00:14:37,918 --> 00:14:40,088
-He wanted to give that family a roof.
-
-308
-00:14:40,440 --> 00:14:42,062
-You remember that family, don't you?
-
-309
-00:14:42,300 --> 00:14:43,878
-You've probably seen them yourself.
-
-310
-00:14:44,419 --> 00:14:45,094
-March.
-
-311
-00:14:45,288 --> 00:14:47,971
-Ford is selling two famous British brands.
-
-312
-00:14:48,074 --> 00:14:49,664
-Jaguar and Land Rover.
-
-313
-00:14:49,937 --> 00:14:51,338
-And who do you think buys them?
-
-314
-00:14:51,938 --> 00:14:52,480
+00:00:52,019 --> 00:00:52,560
 Tata.
 
+24
+00:00:52,864 --> 00:00:57,169
+And yet you won't find a single Tata at the top of any rich list.
+
+25
+00:00:57,356 --> 00:00:58,509
+How is that possible?
+
+26
+00:00:58,801 --> 00:01:00,704
+The answer is in this bank.
+
+27
+00:01:00,831 --> 00:01:02,641
+In what happens to that diamond.
+
+28
+00:01:02,870 --> 00:01:08,119
+A choice this man makes, eight years later, still shapes who controls Tata today.
+
+29
+00:01:08,321 --> 00:01:12,298
+And in twenty twenty six, that choice has turned into a fight.
+
+30
+00:01:12,509 --> 00:01:18,745
+But to understand why a man would pawn his wife's diamond for a steel plant, we have to go back to the beginning.
+
+31
+00:01:18,938 --> 00:01:21,124
+And the beginning is not what you think.
+
+32
+00:01:21,256 --> 00:01:22,394
+It's not a palace.
+
+33
+00:01:22,546 --> 00:01:26,137
+It's a family of priests, in a small town in Gujarat.
+
+34
+00:01:27,497 --> 00:01:28,323
+Navsari.
+
+35
+00:01:28,508 --> 00:01:29,761
+Eighteen thirty nine.
+
+36
+00:01:30,032 --> 00:01:33,225
+A boy is born into a family of Parsi priests.
+
+37
+00:01:33,415 --> 00:01:34,661
+A respected family.
+
+38
+00:01:34,894 --> 00:01:36,201
+But not a rich one.
+
+39
+00:01:36,505 --> 00:01:37,850
+You already know his name.
+
+40
+00:01:38,062 --> 00:01:39,378
+Jamsetji Tata.
+
+41
+00:01:39,711 --> 00:01:43,476
+For generations, the men of this family have served as priests.
+
+42
+00:01:43,730 --> 00:01:46,885
+His grandfather moved to Bombay and kept a small shop there.
+
+43
+00:01:47,138 --> 00:01:50,253
+And his father does something the family has never done.
+
+44
+00:01:50,574 --> 00:01:53,796
+He walks away from the priesthood, and goes into business.
+
+45
+00:01:54,178 --> 00:01:55,585
+Think about that for a second.
+
+46
+00:01:55,790 --> 00:02:00,458
+In most Indian homes, even today, the safe path is the respected path.
+
+47
+00:02:00,738 --> 00:02:02,723
+His father chose the risky one.
+
+48
+00:02:03,022 --> 00:02:04,596
+So what does the boy have?
+
+49
+00:02:04,931 --> 00:02:05,688
+Not money.
+
+50
+00:02:05,863 --> 00:02:07,499
+A sharp head for numbers.
+
+51
+00:02:07,650 --> 00:02:10,921
+He can do big sums in his mind, and his parents notice.
+
+52
+00:02:11,099 --> 00:02:13,559
+So they find a way to get him an education.
+
+53
+00:02:13,768 --> 00:02:16,086
+You know what that means in an Indian family, don't you?
+
+54
+00:02:16,255 --> 00:02:17,853
+The fees come first.
+
+55
+00:02:18,103 --> 00:02:22,685
+At fourteen, he joins his father in Bombay and studies at Elphinstone College.
+
+56
+00:02:22,856 --> 00:02:26,373
+Soon after, he's working in his father's small trading business.
+
+57
+00:02:26,473 --> 00:02:31,379
+Learning on the job, far from home, opening a branch in Shanghai, in China.
+
+58
+00:02:31,560 --> 00:02:32,463
+It's going well.
+
+59
+00:02:32,737 --> 00:02:35,571
+And then, almost everything falls apart.
+
+60
+00:02:35,864 --> 00:02:37,129
+Eighteen sixty four.
+
+61
+00:02:37,393 --> 00:02:42,764
+Jamsetji sails to England, carrying papers that say he will be paid for a big load of cotton.
+
+62
+00:02:42,964 --> 00:02:46,545
+But by the time his ship docks, cotton prices have crashed.
+
+63
+00:02:46,742 --> 00:02:48,595
+The papers are worthless.
+
+64
+00:02:49,114 --> 00:02:51,335
+His father's firm cannot go on.
+
+65
+00:02:51,608 --> 00:02:59,391
+Still in his twenties, Jamsetji has to close it down, face every debt, and slowly win back the trust of the people they owe.
+
+66
+00:02:59,784 --> 00:03:02,673
+Isn't that the kind of failure most of us are scared of?
+
+67
+00:03:02,987 --> 00:03:05,330
+The kind people talk about for years.
+
+68
+00:03:05,722 --> 00:03:08,667
+He comes home, and Bombay is in deep trouble.
+
+69
+00:03:08,936 --> 00:03:09,980
+Banks failing.
+
+70
+00:03:10,120 --> 00:03:11,397
+Merchants ruined.
+
+71
+00:03:11,639 --> 00:03:13,778
+The Tatas could have vanished right there.
+
+72
+00:03:14,085 --> 00:03:16,647
+One more family wiped out by a crash.
+
+73
+00:03:16,955 --> 00:03:17,795
+Do they give up?
+
+74
+00:03:18,069 --> 00:03:18,582
+No.
+
+75
+00:03:18,835 --> 00:03:22,191
+His father wins a big contract, supplying the British army.
+
+76
+00:03:22,412 --> 00:03:24,558
+That puts the family back on its feet.
+
+77
+00:03:24,770 --> 00:03:29,079
+And in eighteen sixty eight, at twenty nine, Jamsetji starts again.
+
+78
+00:03:29,325 --> 00:03:30,323
+His own firm.
+
+79
+00:03:30,604 --> 00:03:32,453
+Twenty one thousand rupees.
+
+80
+00:03:32,701 --> 00:03:35,220
+If you've ever failed, hold on to this.
+
+81
+00:03:35,384 --> 00:03:38,135
+The story of Tata doesn't begin with a fortune.
+
+82
+00:03:38,336 --> 00:03:44,167
+It begins with a priest's son whose family nearly lost everything, and who started again.
+
+83
+00:03:44,518 --> 00:03:46,210
+Now look at Bombay in those years.
+
+84
+00:03:46,380 --> 00:03:50,431
+A city of ships and cotton, and most of the money flows one way.
+
+85
+00:03:50,754 --> 00:03:51,267
+Out.
+
+86
+00:03:51,479 --> 00:03:53,896
+Indian cotton sails to the mills of England.
+
+87
+00:03:54,030 --> 00:03:56,670
+The cloth comes back, and Indians pay for it.
+
+88
+00:03:56,747 --> 00:03:59,837
+Jamsetji has seen those English mills with his own eyes.
+
+89
+00:04:00,049 --> 00:04:02,189
+And one question won't leave him alone.
+
+90
+00:04:02,370 --> 00:04:05,443
+Why send our cotton away, when we can spin it right here?
+
+91
+00:04:05,653 --> 00:04:11,886
+Like many traders of his time, his family's business ran on cotton and on opium, sold to China.
+
+92
+00:04:12,050 --> 00:04:15,490
+That is part of this story too, and it's worth saying out loud.
+
+93
+00:04:15,992 --> 00:04:17,996
+Then he builds a mill of his own.
+
+94
+00:04:18,255 --> 00:04:20,568
+Not in Bombay, where everyone builds.
+
+95
+00:04:20,746 --> 00:04:23,540
+In Nagpur, right where the cotton grows.
+
+96
+00:04:23,829 --> 00:04:28,204
+It opens on the very day Queen Victoria is declared Empress of India.
+
+97
+00:04:28,504 --> 00:04:30,530
+So he names it Empress Mills.
+
+98
+00:04:30,846 --> 00:04:33,478
+And then he does something strange for his time.
+
+99
+00:04:33,809 --> 00:04:36,210
+He starts a pension fund for his workers.
+
+100
+00:04:36,490 --> 00:04:39,310
+Later, he pays them when they're hurt on the job.
+
+101
+00:04:39,553 --> 00:04:41,193
+Think about your own first job.
+
+102
+00:04:41,508 --> 00:04:43,355
+Did anyone promise you a pension?
+
+103
+00:04:43,628 --> 00:04:45,045
+Was it pure kindness?
+
+104
+00:04:45,347 --> 00:04:48,291
+He answered that himself, in eighteen ninety five.
+
+105
+00:04:48,629 --> 00:04:51,193
+He was no kinder than anyone else, he said.
+
+106
+00:04:51,351 --> 00:04:54,877
+But healthy workers were the sure foundation of his success.
+
+107
+00:04:55,137 --> 00:04:58,371
+Now, you've probably heard the most famous Tata story.
+
+108
+00:04:58,642 --> 00:05:02,318
+Jamsetji is turned away from a whites only hotel in Bombay.
+
+109
+00:05:02,551 --> 00:05:05,407
+So he builds the Taj, to answer the insult.
+
+110
+00:05:05,645 --> 00:05:07,250
+It's a great story, isn't it?
+
+111
+00:05:07,623 --> 00:05:11,337
+But historians have found no record that it ever happened.
+
+112
+00:05:11,568 --> 00:05:14,277
+What is on record is the hotel itself.
+
+113
+00:05:14,538 --> 00:05:18,321
+It opens in December, nineteen oh three, on the Bombay waterfront.
+
+114
+00:05:18,515 --> 00:05:20,467
+Designed by an Indian architect.
+
+115
+00:05:20,621 --> 00:05:22,291
+Lit by electricity.
+
+116
+00:05:22,551 --> 00:05:23,765
+Hold on to this hotel.
+
+117
+00:05:23,889 --> 00:05:27,447
+It comes back in this story, on the worst night of its life.
+
+118
+00:05:27,702 --> 00:05:30,026
+But a hotel was never his biggest dream.
+
+119
+00:05:30,306 --> 00:05:32,567
+Jamsetji had three bigger ones.
+
+120
+00:05:32,693 --> 00:05:36,529
+A steel plant, so India could make its own rails and bridges.
+
+121
+00:05:36,667 --> 00:05:39,592
+Power from the monsoon rains of the Western Ghats.
+
+122
+00:05:39,720 --> 00:05:44,879
+And a world class institute of science, so Indians could invent, not just buy.
+
+123
+00:05:45,394 --> 00:05:49,927
+For the institute alone, he offers property worth thirty lakh rupees.
+
+124
+00:05:50,248 --> 00:05:52,486
+The hardest of the three is steel.
+
+125
+00:05:52,733 --> 00:05:58,742
+Because to make steel, you need iron ore, the right coal and water, all in one place.
+
+126
+00:05:59,013 --> 00:06:02,083
+And for years, every place he tries is wrong.
+
+127
+00:06:03,771 --> 00:06:06,469
+One site has ore, but the coal is useless.
+
+128
+00:06:06,692 --> 00:06:08,758
+Another has coal, but no water.
+
+129
+00:06:09,238 --> 00:06:12,899
+Then, in February nineteen oh four, a letter reaches him.
+
+130
+00:06:13,216 --> 00:06:16,769
+It's from an Indian geologist, a man who studies rocks.
+
+131
+00:06:17,042 --> 00:06:18,480
+Pramatha Nath Bose.
+
+132
+00:06:18,750 --> 00:06:22,170
+He has been walking the hills of Mayurbhanj, in today's Odisha.
+
+133
+00:06:22,437 --> 00:06:24,357
+And he has found iron ore.
+
+134
+00:06:24,558 --> 00:06:25,612
+A lot of it.
+
+135
+00:06:25,877 --> 00:06:29,502
+This letter will lead them to the ore that feeds Tata Steel.
+
+136
+00:06:29,830 --> 00:06:34,382
+But three months later, on a trip to Germany, Jamsetji Tata dies.
+
+137
+00:06:34,708 --> 00:06:36,270
+He never sees those hills.
+
+138
+00:06:36,477 --> 00:06:37,601
+No steel plant.
+
+139
+00:06:37,652 --> 00:06:38,883
+No power company.
+
+140
+00:06:38,937 --> 00:06:39,969
+No institute.
+
+141
+00:06:40,365 --> 00:06:42,049
+So who carries the dream now?
+
+142
+00:06:42,388 --> 00:06:43,066
+His son.
+
+143
+00:06:43,245 --> 00:06:44,026
+Dorabji.
+
+144
+00:06:44,298 --> 00:06:46,860
+And Dorabji does not run it from an office.
+
+145
+00:06:47,005 --> 00:06:51,412
+He has already been out in the jungle himself, with the men searching for iron.
+
+146
+00:06:51,666 --> 00:06:55,065
+Now they go back, looking for one perfect spot.
+
+147
+00:06:55,305 --> 00:06:59,763
+They find it near a small village called Sakchi, right where two rivers meet.
+
+148
+00:07:00,041 --> 00:07:00,938
+Ore nearby.
+
+149
+00:07:01,060 --> 00:07:01,982
+Coal nearby.
+
+150
+00:07:02,134 --> 00:07:03,450
+Water all year.
+
+151
+00:07:03,731 --> 00:07:05,175
+Now they need money.
+
+152
+00:07:05,406 --> 00:07:06,510
+A lot of money.
+
+153
+00:07:06,736 --> 00:07:08,196
+Where do you even find it?
+
+154
+00:07:08,428 --> 00:07:09,845
+They try London first.
+
+155
+00:07:10,006 --> 00:07:11,516
+The answer is cold.
+
+156
+00:07:11,732 --> 00:07:15,139
+So in nineteen oh seven, the Tatas take a huge risk.
+
+157
+00:07:15,384 --> 00:07:16,710
+They ask India.
+
+158
+00:07:18,096 --> 00:07:20,072
+Bombay, nineteen oh seven.
+
+159
+00:07:20,331 --> 00:07:21,838
+The share office opens.
+
+160
+00:07:22,068 --> 00:07:23,114
+And the people come.
+
+161
+00:07:23,471 --> 00:07:24,141
+Who are they?
+
+162
+00:07:24,473 --> 00:07:26,570
+One man who was there wrote it down.
+
+163
+00:07:26,883 --> 00:07:28,514
+Old and young, he said.
+
+164
+00:07:28,709 --> 00:07:29,916
+Rich and poor.
+
+165
+00:07:30,130 --> 00:07:31,329
+Men and women.
+
+166
+00:07:31,592 --> 00:07:33,755
+They came, offering their mites.
+
+167
+00:07:33,909 --> 00:07:34,794
+Their mites.
+
+168
+00:07:34,961 --> 00:07:36,109
+Their few coins.
+
+169
+00:07:36,159 --> 00:07:37,510
+Their small savings.
+
+170
+00:07:37,748 --> 00:07:42,700
+In a matter of weeks, about eight thousand Indians put up the entire capital.
+
+171
+00:07:42,992 --> 00:07:45,110
+Two crore thirty one lakh rupees.
+
+172
+00:07:45,505 --> 00:07:47,749
+Now imagine you're standing in that line.
+
+173
+00:07:47,998 --> 00:07:49,676
+India is ruled by Britain.
+
+174
+00:07:49,840 --> 00:07:54,621
+You've saved this money slowly, maybe for a daughter's wedding, maybe for old age.
+
+175
+00:07:54,817 --> 00:07:58,283
+And you're about to bet it that Indians can make steel.
+
+176
+00:07:58,661 --> 00:07:59,566
+Would you have done it?
+
+177
+00:07:59,809 --> 00:08:01,449
+Not everyone believed, of course.
+
+178
+00:08:01,579 --> 00:08:08,262
+According to Tata's own histories, a senior British railway official, Sir Frederick Upcott, laughed at the idea.
+
+179
+00:08:08,518 --> 00:08:12,442
+He said he would eat every pound of steel rail they managed to make.
+
+180
+00:08:12,735 --> 00:08:16,133
+So how do you turn a hill of red rock into steel?
+
+181
+00:08:16,435 --> 00:08:18,528
+You build a tower of fire.
+
+182
+00:08:18,782 --> 00:08:22,270
+Iron ore, limestone and baked coal go in at the top.
+
+183
+00:08:22,469 --> 00:08:24,504
+Hot air blasts in at the bottom.
+
+184
+00:08:24,616 --> 00:08:27,554
+And out pours iron, glowing like lava.
+
+185
+00:08:27,761 --> 00:08:30,639
+The first iron flows in December nineteen eleven.
+
+186
+00:08:30,780 --> 00:08:32,796
+The first steel, in nineteen twelve.
+
+187
+00:08:33,100 --> 00:08:35,090
+Then the First World War comes.
+
+188
+00:08:35,265 --> 00:08:40,664
+Britain's armies need rails, and many of them come from Tata, by Tata's own records.
+
+189
+00:08:40,848 --> 00:08:45,417
+Years later, as the Tata story goes, Dorabji had a reply for Upcott.
+
+190
+00:08:45,588 --> 00:08:49,277
+If he had kept his promise, he would have had some indigestion.
+
+191
+00:08:49,787 --> 00:08:52,722
+In nineteen nineteen, the town gets a new name.
+
+192
+00:08:53,001 --> 00:08:53,957
+Jamshedpur.
+
+193
+00:08:54,277 --> 00:08:56,188
+After the man who never saw it.
+
+194
+00:08:56,435 --> 00:08:58,178
+His other dreams come true too.
+
+195
+00:08:58,418 --> 00:09:00,389
+The institute opens in Bangalore.
+
+196
+00:09:00,601 --> 00:09:03,387
+Today it's the Indian Institute of Science.
+
+197
+00:09:03,556 --> 00:09:07,555
+And monsoon lakes in the Western Ghats send power to Bombay's mills.
+
+198
+00:09:07,779 --> 00:09:11,432
+So the dreamer is gone, but every dream is alive.
+
+199
+00:09:11,770 --> 00:09:13,737
+It should be a happy ending, shouldn't it?
+
+200
+00:09:13,993 --> 00:09:14,704
+It isn't.
+
+201
+00:09:16,289 --> 00:09:18,490
+A steel town is no fairy tale.
+
+202
+00:09:18,719 --> 00:09:21,588
+In nineteen twenty two, the workers go on strike.
+
+203
+00:09:21,790 --> 00:09:23,540
+Then the good years end.
+
+204
+00:09:23,733 --> 00:09:24,771
+Prices fall.
+
+205
+00:09:24,868 --> 00:09:27,416
+Cheap iron and steel pour in from abroad.
+
+206
+00:09:27,573 --> 00:09:34,022
+By nineteen twenty four, the company needs close to two crore rupees, to pay its wages and the debts it owes.
+
+207
+00:09:34,229 --> 00:09:36,757
+Where do you find that kind of money, fast?
+
+208
+00:09:36,912 --> 00:09:38,414
+The banks want a guarantee.
+
+209
+00:09:38,595 --> 00:09:39,753
+Something valuable.
+
+210
+00:09:39,899 --> 00:09:42,319
+So we're back in that bank in Bombay.
+
+211
+00:09:42,500 --> 00:09:45,231
+The diamond on the counter is called the Jubilee.
+
+212
+00:09:45,363 --> 00:09:50,994
+It was found in South Africa in eighteen ninety five, and named for Queen Victoria's Diamond Jubilee.
+
+213
+00:09:51,155 --> 00:09:54,781
+Around nineteen hundred, Dorabji bought it for his wife, Meherbai.
+
+214
+00:09:54,928 --> 00:09:57,882
+She wore it at royal courts and grand occasions.
+
+215
+00:09:58,038 --> 00:10:04,204
+Now Dorabji hands it over as the guarantee, with the rest of her jewellery, to the Imperial Bank of India.
+
+216
+00:10:04,371 --> 00:10:07,023
+Today you know that bank as the State Bank of India.
+
+217
+00:10:07,210 --> 00:10:08,446
+The loan comes through.
+
+218
+00:10:08,599 --> 00:10:10,078
+The furnaces stay lit.
+
+219
+00:10:10,191 --> 00:10:11,623
+The workers get paid.
+
+220
+00:10:11,788 --> 00:10:13,060
+It was her diamond.
+
+221
+00:10:13,218 --> 00:10:18,542
+And it went into a bank, so that families fourteen hundred kilometres away could eat.
+
+222
+00:10:19,045 --> 00:10:20,653
+Did they ever get it back?
+
+223
+00:10:20,960 --> 00:10:21,570
+Yes.
+
+224
+00:10:21,824 --> 00:10:26,014
+We know because, eight years later, it shows up in Dorabji's will.
+
+225
+00:10:26,356 --> 00:10:30,846
+In nineteen thirty one, Meherbai dies of leukaemia, a cancer of the blood.
+
+226
+00:10:31,166 --> 00:10:33,375
+The next year, Dorabji dies too.
+
+227
+00:10:33,656 --> 00:10:34,865
+They have no children.
+
+228
+00:10:35,166 --> 00:10:37,492
+And here is the turn in this whole story.
+
+229
+00:10:37,735 --> 00:10:40,502
+He leaves everything to a charitable trust.
+
+230
+00:10:40,682 --> 00:10:42,168
+His shares in Tata Sons.
+
+231
+00:10:42,266 --> 00:10:43,207
+His property.
+
+232
+00:10:43,463 --> 00:10:47,854
+And twenty one pieces of Meherbai's jewellery, the Jubilee among them.
+
+233
+00:10:48,052 --> 00:10:50,323
+The Sir Dorabji Tata Trust.
+
+234
+00:10:50,631 --> 00:10:53,563
+A few years later, the trust sells the jewels.
+
+235
+00:10:53,739 --> 00:10:57,404
+And that money helps build a hospital for the disease that took her.
+
+236
+00:10:57,668 --> 00:11:02,815
+The Tata Memorial Hospital, for cancer, opens in Bombay in nineteen forty one.
+
+237
+00:11:03,013 --> 00:11:05,503
+So the diamond helped build a hospital.
+
+238
+00:11:05,701 --> 00:11:12,860
+If you, or someone you love, has ever been treated at Tata Memorial, you've been inside what that diamond helped build.
+
+239
+00:11:13,154 --> 00:11:14,740
+But the shares in Tata Sons?
+
+240
+00:11:14,945 --> 00:11:16,622
+Those the trust keeps.
+
+241
+00:11:16,805 --> 00:11:19,079
+And that means something no one had planned.
+
+242
+00:11:19,258 --> 00:11:22,557
+A charity now owns a big piece of the empire.
+
+243
+00:11:22,754 --> 00:11:23,714
+Keep that in mind.
+
+244
+00:11:23,803 --> 00:11:25,271
+It's the key to the ending.
+
+245
+00:11:26,628 --> 00:11:28,894
+Now the story needs a new captain.
+
+246
+00:11:29,081 --> 00:11:30,812
+And this one flies.
+
+247
+00:11:31,105 --> 00:11:34,525
+His full name is long, so everyone just calls him J.R.D.
+
+248
+00:11:34,919 --> 00:11:36,109
+He was a Tata too.
+
+249
+00:11:36,384 --> 00:11:40,525
+Born in Paris, to a French mother, he served a year in the French army.
+
+250
+00:11:40,786 --> 00:11:44,833
+But when he joined Tata in nineteen twenty five, he didn't start as a boss.
+
+251
+00:11:44,981 --> 00:11:47,683
+He started as an apprentice, without pay.
+
+252
+00:11:48,076 --> 00:11:52,043
+In nineteen twenty nine, he gets India's first pilot licence.
+
+253
+00:11:52,552 --> 00:11:55,161
+The fifteenth of October, nineteen thirty two.
+
+254
+00:11:55,469 --> 00:11:56,114
+Karachi.
+
+255
+00:11:56,374 --> 00:11:57,856
+Six thirty in the morning.
+
+256
+00:11:58,281 --> 00:12:01,326
+J.R.D. climbs into a tiny single engine plane.
+
+257
+00:12:01,554 --> 00:12:03,374
+Behind him, bags of mail.
+
+258
+00:12:03,624 --> 00:12:04,528
+No radio.
+
+259
+00:12:04,669 --> 00:12:06,409
+Can you imagine flying like that?
+
+260
+00:12:06,711 --> 00:12:10,113
+He lands in Bombay on a mud flat at Juhu, by the sea.
+
+261
+00:12:10,427 --> 00:12:12,914
+That flight is the start of an airline.
+
+262
+00:12:13,156 --> 00:12:14,141
+Tata Airlines.
+
+263
+00:12:14,249 --> 00:12:15,605
+Later, Air India.
+
+264
+00:12:15,913 --> 00:12:22,606
+Six years after that flight, at thirty four, the unpaid apprentice is chairman of the whole Tata group.
+
+265
+00:12:22,877 --> 00:12:26,203
+For twenty years he builds the airline, plane by plane.
+
+266
+00:12:26,442 --> 00:12:29,857
+But in nineteen fifty three, the government takes over the airlines.
+
+267
+00:12:30,051 --> 00:12:32,532
+J.R.D. thinks it's a mistake, and he says so.
+
+268
+00:12:32,837 --> 00:12:36,258
+So what does he do when they ask him to stay on and run Air India?
+
+269
+00:12:36,556 --> 00:12:37,653
+He says yes.
+
+270
+00:12:37,793 --> 00:12:41,487
+And he does it without a salary, for twenty five years.
+
+271
+00:12:41,807 --> 00:12:47,765
+Meanwhile, in nineteen sixty eight, almost quietly, Tata starts a small computer unit.
+
+272
+00:12:47,954 --> 00:12:51,081
+Its first jobs are punched cards for its own companies.
+
+273
+00:12:51,346 --> 00:12:54,050
+It's called Tata Consultancy Services.
+
+274
+00:12:54,334 --> 00:12:55,118
+T.C.S.
+
+275
+00:12:55,325 --> 00:12:56,384
+Remember that name.
+
+276
+00:12:56,561 --> 00:12:59,070
+One day it will carry the whole empire.
+
+277
+00:12:59,603 --> 00:13:03,901
+And in those years, J.R.D. gets a postcard he will never forget.
+
+278
+00:13:04,284 --> 00:13:06,035
+April, nineteen seventy four.
+
+279
+00:13:06,306 --> 00:13:11,562
+A young engineering student in Bangalore sees a job notice from a Tata company, Telco.
+
+280
+00:13:11,814 --> 00:13:13,532
+At the bottom, one line.
+
+281
+00:13:13,790 --> 00:13:15,889
+Lady candidates need not apply.
+
+282
+00:13:16,270 --> 00:13:17,651
+She could have kept quiet.
+
+283
+00:13:17,769 --> 00:13:18,794
+Most people would.
+
+284
+00:13:19,065 --> 00:13:21,067
+Instead, she writes a postcard.
+
+285
+00:13:21,237 --> 00:13:23,391
+To the man at the top of the Tata group.
+
+286
+00:13:23,585 --> 00:13:27,648
+How can a company like Telco treat people differently because of their gender?
+
+287
+00:13:27,922 --> 00:13:29,464
+Less than ten days later, a telegram arrives.
+
+288
+00:13:29,510 --> 00:13:30,698
+Come for an interview.
+
+289
+00:13:30,858 --> 00:13:32,591
+In Pune.
+
+290
+00:13:32,806 --> 00:13:33,895
+She gets the job.
+
+291
+00:13:33,999 --> 00:13:37,178
+She becomes the first woman to work on Telco's shop floor.
+
+292
+00:13:37,427 --> 00:13:38,466
+You may know her name.
+
+293
+00:13:38,620 --> 00:13:39,522
+Sudha Murty.
+
+294
+00:13:39,796 --> 00:13:42,293
+But not every Tata story ends kindly.
+
+295
+00:13:42,581 --> 00:13:44,543
+February, nineteen seventy eight.
+
+296
+00:13:44,744 --> 00:13:47,569
+A new government removes J.R.D. from Air India.
+
+297
+00:13:47,821 --> 00:13:49,350
+He is not even told directly.
+
+298
+00:13:49,524 --> 00:13:51,805
+He hears it from the man who is replacing him.
+
+299
+00:13:52,059 --> 00:13:54,625
+That night, someone asks how he feels.
+
+300
+00:13:54,832 --> 00:13:59,603
+He says, I feel as you would feel if your favourite child was taken away.
+
+301
+00:14:00,972 --> 00:14:02,374
+Nineteen ninety one.
+
+302
+00:14:02,618 --> 00:14:07,727
+India comes close to running out of foreign money, and the country opens its doors to business.
+
+303
+00:14:07,981 --> 00:14:12,067
+That same year, J.R.D. hands over to a quiet, private man.
+
+304
+00:14:12,379 --> 00:14:13,256
+Ratan Tata.
+
+305
+00:14:13,599 --> 00:14:15,524
+Yes, he was born a Tata.
+
+306
+00:14:15,766 --> 00:14:17,217
+But look at how he started.
+
+307
+00:14:17,446 --> 00:14:21,106
+His parents separated when he was ten, and his grandmother raised him.
+
+308
+00:14:21,354 --> 00:14:23,249
+He studied architecture in America.
+
+309
+00:14:23,543 --> 00:14:26,445
+Then his grandmother fell ill, and he came home.
+
+310
+00:14:26,743 --> 00:14:28,106
+His first years at Tata?
+
+311
+00:14:28,336 --> 00:14:29,318
+On the shop floor.
+
+312
+00:14:29,575 --> 00:14:35,594
+At the steel plant in Jamshedpur, he spends two years shovelling limestone and tending the blast furnace.
+
+313
+00:14:35,792 --> 00:14:40,794
+The man who would one day run Tata started next to the furnace, with the workers.
+
+314
+00:14:40,954 --> 00:14:42,041
+Can you picture that?
+
 315
-00:14:52,714 --> 00:14:54,988
-About two point three billion dollars.
+00:14:42,220 --> 00:14:44,542
+Then he makes his first big bet.
 
 316
-00:14:55,121 --> 00:15:00,809
-And according to Pravin Kadle, Bill Ford told Ratan Tata, you are doing us a big favour.
+00:14:44,745 --> 00:14:47,490
+A car designed in India, by Indians.
 
 317
-00:15:01,144 --> 00:15:03,277
-Ford has never confirmed either line.
+00:14:47,642 --> 00:14:50,568
+The Indica, unveiled in nineteen ninety eight.
 
 318
-00:15:03,460 --> 00:15:04,895
-But the deal is real.
+00:14:50,722 --> 00:14:53,648
+About one lakh fifteen thousand people book it.
 
 319
-00:15:05,324 --> 00:15:06,046
-October.
+00:14:53,894 --> 00:14:55,451
+Then the complaints start.
 
 320
-00:15:06,287 --> 00:15:06,950
-Kolkata.
+00:14:55,702 --> 00:14:56,341
+Quality.
 
 321
-00:15:07,103 --> 00:15:14,290
-The Nano factory at Singur, in West Bengal, has been surrounded by protests for months, over the farmland taken to build it.
+00:14:56,544 --> 00:14:57,045
+Power.
 
 322
-00:15:14,433 --> 00:15:16,936
-Ratan Tata announces he is pulling out.
+00:14:57,278 --> 00:15:02,793
+So in nineteen ninety nine, Ratan Tata and his team fly to Detroit, to the Ford Motor Company.
 
 323
-00:15:17,069 --> 00:15:21,742
-As he speaks, a one word text message arrives from the Chief Minister of Gujarat.
+00:15:02,921 --> 00:15:04,405
+To sell the car business.
 
 324
-00:15:22,021 --> 00:15:22,654
-Welcome.
+00:15:04,570 --> 00:15:07,125
+Tata veteran Pravin Kadle was in that room.
 
 325
-00:15:22,875 --> 00:15:25,413
-The factory moves to Sanand, in Gujarat.
+00:15:07,294 --> 00:15:12,012
+According to him, the Ford people asked why Tata had started a car business at all.
 
 326
-00:15:25,643 --> 00:15:27,252
-And then, November.
+00:15:12,170 --> 00:15:15,335
+And buying it, they said, would be doing Tata a favour.
 
 327
-00:15:28,187 --> 00:15:31,036
-The twenty sixth of November, two thousand eight.
+00:15:15,509 --> 00:15:16,802
+The deal is off.
 
 328
-00:15:31,330 --> 00:15:31,901
-Night.
+00:15:17,079 --> 00:15:18,709
+They fly back the same evening.
 
 329
-00:15:32,317 --> 00:15:34,158
-Terrorists storm the Taj.
+00:15:18,874 --> 00:15:23,116
+Kadle says Ratan Tata hardly spoke, the whole ninety minute flight.
 
 330
-00:15:34,699 --> 00:15:36,114
-Jamsetji's hotel.
+00:15:23,356 --> 00:15:24,568
+You know that silence.
 
 331
-00:15:36,388 --> 00:15:38,508
-The one he opened in nineteen oh three.
+00:15:24,718 --> 00:15:27,190
+The ride home after an interview goes wrong.
 
 332
-00:15:38,855 --> 00:15:40,854
-Inside, the staff could run.
+00:15:27,501 --> 00:15:28,865
+Hold on to that silence.
 
 333
-00:15:41,076 --> 00:15:42,773
-They know every back exit.
+00:15:29,393 --> 00:15:30,866
+So what does Tata do?
 
 334
-00:15:43,075 --> 00:15:45,731
-But many of them stay, to get the guests out.
+00:15:31,221 --> 00:15:32,344
+It does not sell.
 
 335
-00:15:45,992 --> 00:15:50,731
-A banquet manager, just twenty four, locks the doors and turns off the lights.
+00:15:32,586 --> 00:15:33,829
+It fixes the car.
 
 336
-00:15:51,007 --> 00:15:54,906
-She keeps more than sixty guests hidden and silent in the dark.
+00:15:33,997 --> 00:15:35,753
+And it starts buying.
 
 337
-00:15:55,188 --> 00:15:58,608
-In the kitchens, young chefs lead guests out through the back.
+00:15:36,079 --> 00:15:39,508
+Then, in two thousand seven, the biggest bet of all.
 
 338
-00:15:58,876 --> 00:16:00,985
-A number of them are killed doing it.
+00:15:39,767 --> 00:15:45,866
+Tata Steel wins Corus, the company that included British Steel, for about twelve billion dollars.
 
 339
-00:16:01,244 --> 00:16:06,887
-The general manager, Karambir Singh Kang, has his wife and two young sons inside the hotel.
+00:15:46,096 --> 00:15:49,015
+Remember Upcott, the man who would eat every rail?
 
 340
-00:16:07,209 --> 00:16:08,381
-They die in the fire.
+00:15:49,223 --> 00:15:54,614
+A hundred years later, an Indian steel company has bought what was once British Steel.
 
 341
-00:16:08,674 --> 00:16:13,290
-And when Ratan Tata asks him to go and rest, he begs to stay and help.
+00:15:54,861 --> 00:15:58,085
+But the next year tests Ratan Tata like no other.
 
 342
-00:16:14,547 --> 00:16:17,199
-At least thirty one people die at the Taj.
+00:15:58,312 --> 00:15:59,705
+His proudest moment.
 
 343
-00:16:17,484 --> 00:16:19,492
-The fighting lasts three days.
+00:15:59,868 --> 00:16:01,056
+His biggest deal.
 
 344
-00:16:20,756 --> 00:16:24,164
-Twenty five days later, the Taj opens its doors again.
+00:16:01,297 --> 00:16:02,670
+His hardest defeat.
 
 345
-00:16:24,430 --> 00:16:27,699
-The old palace wing takes almost two years to rebuild.
+00:16:02,926 --> 00:16:04,875
+And his darkest night.
 
 346
-00:16:29,365 --> 00:16:31,612
-Big bets come with big bills.
+00:16:06,682 --> 00:16:07,421
+January.
 
 347
-00:16:31,833 --> 00:16:35,255
-A year after the Corus deal, the world economy crashes.
+00:16:07,635 --> 00:16:08,254
+Delhi.
 
 348
-00:16:35,504 --> 00:16:37,526
-Years of losses follow in Britain.
+00:16:08,496 --> 00:16:11,956
+Ratan Tata drives a tiny car into the television lights.
 
 349
-00:16:37,760 --> 00:16:43,252
-And in twenty twenty four, the last blast furnaces at Port Talbot, in Wales, are shut down.
+00:16:12,187 --> 00:16:12,982
+The Nano.
 
 350
-00:16:43,564 --> 00:16:44,765
-Was Corus worth it?
+00:16:13,208 --> 00:16:15,166
+A car for one lakh rupees.
 
 351
-00:16:45,023 --> 00:16:46,731
-People still argue about that.
+00:16:15,309 --> 00:16:17,064
+Costs have gone up, he says.
 
 352
-00:16:47,013 --> 00:16:47,774
-And the Nano?
+00:16:17,182 --> 00:16:19,259
+But a promise is a promise.
 
 353
-00:16:47,980 --> 00:16:51,285
-People did not want to be seen in the cheapest car in the world.
+00:16:19,422 --> 00:16:21,164
+He said later what moved him.
 
 354
-00:16:51,515 --> 00:16:54,863
-Tata itself admitted that calling it cheap was a mistake.
+00:16:21,347 --> 00:16:23,548
+Indian families riding on scooters.
 
 355
-00:16:55,109 --> 00:16:57,105
-Production ended in twenty eighteen.
+00:16:23,673 --> 00:16:25,772
+Four or five people, on one scooter.
 
 356
-00:16:57,345 --> 00:16:59,942
-In twenty twelve, Ratan Tata retires.
+00:16:25,938 --> 00:16:27,073
+You've seen that family.
 
 357
-00:17:00,079 --> 00:17:02,767
-And four years later comes a boardroom war.
+00:16:27,265 --> 00:16:29,320
+Maybe you were the child sitting in front.
 
 358
-00:17:03,008 --> 00:17:06,525
-The man who took over from him, Cyrus Mistry, is removed.
+00:16:29,480 --> 00:16:31,852
+He wanted to give that family a roof.
 
 359
-00:17:06,713 --> 00:17:12,247
-The fight goes all the way to the Supreme Court, which sides with Tata Sons in twenty twenty one.
+00:16:32,192 --> 00:16:32,857
+March.
 
 360
-00:17:12,596 --> 00:17:15,052
-The new chairman is N. Chandrasekaran.
+00:16:33,004 --> 00:16:35,573
+Ford is selling two famous British brands.
 
 361
-00:17:15,304 --> 00:17:17,480
-He joined T.C.S. as a young engineer.
+00:16:35,705 --> 00:16:37,279
+Jaguar and Land Rover.
 
 362
-00:17:17,869 --> 00:17:18,780
-And T.C.S.?
+00:16:37,462 --> 00:16:38,864
+And who do you think buys them?
 
 363
-00:17:18,889 --> 00:17:20,592
-That little punched card unit?
+00:16:39,161 --> 00:16:39,683
+Tata.
 
 364
-00:17:20,779 --> 00:17:22,359
-It's now the engine.
+00:16:39,823 --> 00:16:42,132
+About two point three billion dollars.
 
 365
-00:17:22,713 --> 00:17:29,700
-Last year, about eighty seven percent of the profit share Tata Sons got from its companies came from T.C.S. alone.
+00:16:42,203 --> 00:16:47,780
+And according to Pravin Kadle, Bill Ford told Ratan Tata, you are doing us a big favour.
 
 366
-00:17:29,996 --> 00:17:33,837
-Then, in twenty twenty two, the favourite child comes home.
+00:16:47,996 --> 00:16:50,066
+Ford has never confirmed either line.
 
 367
-00:17:34,099 --> 00:17:38,493
-Air India returns to Tata, sixty nine years after it was taken away.
+00:16:50,204 --> 00:16:51,690
+But the deal is real.
 
 368
-00:17:39,068 --> 00:17:41,126
-J.R.D. did not live to see it.
+00:16:51,919 --> 00:16:52,602
+October.
 
 369
-00:17:41,425 --> 00:17:44,270
-But there's one more moment we have to stop for.
+00:16:52,751 --> 00:16:59,045
+The Nano factory at Singur, in West Bengal, has faced months of protests over the farmland taken to build it.
 
 370
-00:17:45,328 --> 00:17:47,051
-June, twenty twenty five.
+00:16:59,191 --> 00:17:02,572
+Ratan Tata pulls out, and moves the factory to Gujarat.
 
 371
-00:17:47,386 --> 00:17:52,832
-Air India flight one seven one, bound for London, crashes just after take off from Ahmedabad.
+00:17:02,771 --> 00:17:04,250
+And then, November.
 
 372
-00:17:53,167 --> 00:17:55,254
-Two hundred and sixty people are killed.
+00:17:04,784 --> 00:17:07,731
+The twenty sixth of November, two thousand eight.
 
 373
-00:17:55,510 --> 00:17:59,744
-The final report is not out yet, and the cause has not been established.
+00:17:08,028 --> 00:17:08,625
+Night.
 
 374
-00:17:59,970 --> 00:18:02,342
-We remember every life that was lost.
+00:17:09,084 --> 00:17:10,935
+Terrorists storm the Taj.
 
 375
-00:18:02,590 --> 00:18:04,383
-And the bets go on.
+00:17:11,146 --> 00:17:12,427
+Jamsetji's hotel.
 
 376
-00:18:04,560 --> 00:18:06,962
-Tata now assembles iPhones in India.
+00:17:12,725 --> 00:17:14,806
+The one he opened in nineteen oh three.
 
 377
-00:18:07,144 --> 00:18:11,149
-It's building one of India's first big chip factories, in Dholera, Gujarat.
+00:17:15,167 --> 00:17:17,162
+Inside, the staff could run.
 
 378
-00:18:11,421 --> 00:18:14,990
-When it will make chips at full scale is still an open question.
+00:17:17,377 --> 00:17:19,040
+They know every back exit.
 
 379
-00:18:16,347 --> 00:18:16,912
-So.
+00:17:19,340 --> 00:17:21,976
+But many of them stay, to get the guests out.
 
 380
-00:18:17,113 --> 00:18:21,236
-Back to the bank in nineteen twenty four, and the question we started with.
+00:17:22,275 --> 00:17:23,754
+These are ordinary people.
 
 381
-00:18:21,531 --> 00:18:24,350
-Why is no Tata on top of a rich list?
+00:17:23,973 --> 00:17:25,351
+Waiters.
 
 382
-00:18:25,435 --> 00:18:28,447
-Because the Tata family doesn't own Tata.
+00:17:25,349 --> 00:17:26,710
+Cooks.
 
 383
-00:18:28,770 --> 00:18:34,146
-About two thirds of Tata Sons, the company at the top, belongs to charitable trusts.
+00:17:26,923 --> 00:17:27,914
+Managers on a salary.
 
 384
-00:18:34,240 --> 00:18:37,788
-And the biggest of them is the Sir Dorabji Tata Trust.
+00:17:28,195 --> 00:17:29,412
+People like us.
 
 385
-00:18:38,028 --> 00:18:40,243
-The trust of the man with the diamond.
+00:17:29,406 --> 00:17:32,860
+A banquet manager, just twenty four, locks the doors and turns off the lights.
 
 386
-00:18:40,429 --> 00:18:43,361
-It holds about twenty eight percent of Tata Sons.
+00:17:33,054 --> 00:17:36,953
+She keeps more than sixty guests hidden and silent in the dark.
 
 387
-00:18:43,612 --> 00:18:45,049
-And who owns the rest?
+00:17:37,196 --> 00:17:40,633
+In the kitchens, young chefs lead guests out through the back.
 
 388
-00:18:45,358 --> 00:18:52,160
-Most of it belongs to the Shapoorji Pallonji group, owned by the Mistry family, and to Tata's own companies.
+00:17:40,841 --> 00:17:42,827
+A number of them are killed doing it.
 
 389
-00:18:52,397 --> 00:18:57,939
-So when you buy that salt, or that tea, a share of the profit flows up to those trusts.
+00:17:43,108 --> 00:17:48,552
+The general manager, Karambir Singh Kang, has his wife and two young sons inside the hotel.
 
 390
-00:18:58,074 --> 00:19:01,615
-And out, into hospitals, research and scholarships.
+00:17:48,852 --> 00:17:50,024
+They die in the fire.
 
 391
-00:19:01,829 --> 00:19:06,071
-For almost a hundred years, that design held the empire together.
+00:17:50,194 --> 00:17:54,781
+And when Ratan Tata asks him to go and rest, he begs to stay and help.
 
 392
-00:19:07,612 --> 00:19:11,511
-Then, in October twenty twenty four, Ratan Tata died.
+00:17:54,956 --> 00:17:57,424
+At least thirty one people die at the Taj.
 
 393
-00:19:11,864 --> 00:19:15,740
-His body lay at a hall in South Mumbai, and thousands came.
+00:17:57,630 --> 00:17:59,660
+The fighting lasts three days.
 
 394
-00:19:15,972 --> 00:19:16,862
-Students.
+00:17:59,867 --> 00:18:03,381
+Twenty five days later, the Taj opens its doors again.
 
 395
-00:19:16,869 --> 00:19:17,918
-Ordinary people.
+00:18:03,624 --> 00:18:06,946
+The old palace wing takes almost two years to rebuild.
 
 396
-00:19:18,064 --> 00:19:19,981
-Strangers who had never met him.
+00:18:08,298 --> 00:18:10,591
+Big bets come with big bills.
 
 397
-00:19:20,266 --> 00:19:22,132
-He was given a state funeral.
+00:18:10,912 --> 00:18:14,473
+A year after the Corus deal, the world economy crashes.
 
 398
-00:19:22,449 --> 00:19:25,802
-His half brother, Noel Tata, now leads the trusts.
+00:18:14,743 --> 00:18:16,852
+Years of losses follow in Britain.
 
 399
-00:19:25,953 --> 00:19:29,497
-And in twenty twenty six, the cracks are out in the open.
+00:18:17,123 --> 00:18:22,891
+And in twenty twenty four, the last blast furnaces at Port Talbot, in Wales, are shut down.
 
 400
-00:19:29,742 --> 00:19:31,369
-So what is the fight about?
+00:18:23,317 --> 00:18:24,649
+Was Corus worth it?
 
 401
-00:19:31,590 --> 00:19:34,266
-Who runs Tata, and who decides that.
+00:18:24,994 --> 00:18:26,697
+People still argue about that.
 
 402
-00:19:34,545 --> 00:19:39,111
-This September, the Tata Sons board voted to give Chandrasekaran another term.
+00:18:27,054 --> 00:18:27,813
+And the Nano?
 
 403
-00:19:39,364 --> 00:19:41,164
-Noel Tata voted no.
+00:18:28,183 --> 00:18:31,555
+People did not want to be seen in the cheapest car in the world.
 
 404
-00:19:41,408 --> 00:19:44,108
-The trusts say that decision doesn't count.
+00:18:31,785 --> 00:18:35,213
+Tata itself admitted that calling it cheap was a mistake.
 
 405
-00:19:44,341 --> 00:19:46,309
-Tata Sons says it does.
+00:18:35,498 --> 00:18:37,435
+Production ended in twenty eighteen.
 
 406
-00:19:46,819 --> 00:19:48,457
-And there's one more problem.
+00:18:37,789 --> 00:18:40,268
+So does Tata always get it right?
 
 407
-00:19:48,742 --> 00:19:54,909
-Tata Sons holds shares in so many companies that the R.B.I. treats it like a big finance company.
+00:18:40,625 --> 00:18:41,141
+No.
 
 408
-00:19:55,186 --> 00:19:58,527
-And big finance companies must list on the stock market.
+00:18:41,414 --> 00:18:43,876
+More than once, it gets it badly wrong.
 
 409
-00:19:58,787 --> 00:20:00,683
-Tata Sons asked to be let off.
+00:18:44,190 --> 00:18:50,946
+In twenty sixteen, the man who took over from Ratan Tata, Cyrus Mistry, is removed in a bitter boardroom fight.
 
 410
-00:20:00,912 --> 00:20:02,466
-The R.B.I. said no.
+00:18:51,142 --> 00:18:55,089
+It goes all the way to the Supreme Court, which sides with Tata Sons.
 
 411
-00:20:02,805 --> 00:20:07,883
-So Tata Sons may have to sell its shares to the public, for the very first time.
+00:18:55,318 --> 00:18:57,597
+The new chairman is N. Chandrasekaran.
 
 412
-00:20:08,283 --> 00:20:11,307
-As this film goes out, that fight is not over.
+00:18:57,816 --> 00:19:00,001
+He joined T.C.S. as a young engineer.
 
 413
-00:20:11,682 --> 00:20:12,394
-Who wins?
+00:19:00,276 --> 00:19:01,253
+And T.C.S.?
 
 414
-00:20:12,615 --> 00:20:13,839
-I honestly don't know.
+00:19:01,309 --> 00:19:03,101
+That little punched card unit?
 
 415
-00:20:14,061 --> 00:20:15,178
-Nobody does yet.
+00:19:03,318 --> 00:19:04,995
+It's now the engine.
 
 416
-00:20:15,603 --> 00:20:18,861
-So in the end, this fight goes back to one choice.
+00:19:05,256 --> 00:19:13,071
+Last year, of all the profit Tata's companies sent up to Tata Sons, about eighty seven percent came from T.C.S. alone.
 
 417
-00:20:19,184 --> 00:20:25,812
-A man who had no children gave everything to a trust, so the money would go to charity, not to a family.
+00:19:13,366 --> 00:19:17,222
+Then, in twenty twenty two, the favourite child comes home.
 
 418
-00:20:26,230 --> 00:20:29,566
-Eight thousand Indians bet their savings on a steel plant.
+00:19:17,527 --> 00:19:22,312
+Air India returns to Tata, sixty nine years after it was taken away.
 
 419
-00:20:29,844 --> 00:20:33,087
-A husband and wife put up their diamond to keep it alive.
+00:19:22,633 --> 00:19:24,716
+J.R.D. did not live to see it.
 
 420
-00:20:33,516 --> 00:20:37,325
-And a hundred years later, the question is still the same one.
+00:19:25,044 --> 00:19:27,637
+But there's one more moment we have to stop for.
 
 421
-00:20:38,163 --> 00:20:40,950
-Who should a company like this really belong to?
+00:19:28,005 --> 00:19:29,638
+June, twenty twenty five.
 
 422
-00:20:41,524 --> 00:20:42,387
-What do you think?
+00:19:30,044 --> 00:19:35,659
+Air India flight one seven one, bound for London, crashes just after take off from Ahmedabad.
 
 423
-00:20:42,778 --> 00:20:43,855
-Tell me in the comments.
+00:19:35,921 --> 00:19:38,278
+Two hundred and sixty people are killed.
 
 424
-00:20:45,218 --> 00:20:47,187
-This is Built on Bharat.
+00:19:38,533 --> 00:19:42,701
+The final report is not out yet, and the cause has not been established.
 
 425
-00:20:47,346 --> 00:20:50,689
-The empires, and the habits, that built a nation.
+00:19:43,007 --> 00:19:45,647
+We remember every life that was lost.
 
 426
-00:20:50,879 --> 00:20:52,784
-Next in Empires of India.
+00:19:46,847 --> 00:19:47,442
+So.
 
 427
-00:20:53,000 --> 00:20:57,118
+00:19:47,700 --> 00:19:51,708
+Back to the bank in nineteen twenty four, and the question we started with.
+
+428
+00:19:51,952 --> 00:19:54,653
+Why is no Tata on top of a rich list?
+
+429
+00:19:54,872 --> 00:19:57,800
+Because the Tata family doesn't own Tata.
+
+430
+00:19:58,135 --> 00:20:00,526
+Tata Sons sits at the top of the group.
+
+431
+00:20:00,719 --> 00:20:04,069
+And about two thirds of it belongs to charitable trusts.
+
+432
+00:20:04,181 --> 00:20:07,669
+And the biggest of them is the Sir Dorabji Tata Trust.
+
+433
+00:20:07,899 --> 00:20:10,024
+The trust of the man with the diamond.
+
+434
+00:20:10,257 --> 00:20:13,140
+It holds about twenty eight percent of Tata Sons.
+
+435
+00:20:13,376 --> 00:20:14,682
+And who owns the rest?
+
+436
+00:20:14,836 --> 00:20:21,473
+Most of it belongs to the Shapoorji Pallonji group, owned by the Mistry family, and to Tata's own companies.
+
+437
+00:20:21,667 --> 00:20:27,053
+So when you buy that salt, or that tea, a share of the profit flows up to those trusts.
+
+438
+00:20:27,134 --> 00:20:30,762
+And out, into hospitals, research and scholarships.
+
+439
+00:20:30,930 --> 00:20:34,966
+For almost a hundred years, that design held the empire together.
+
+440
+00:20:35,229 --> 00:20:39,327
+Then, in October twenty twenty four, Ratan Tata died.
+
+441
+00:20:39,477 --> 00:20:44,695
+His body lay at a hall in South Mumbai, and thousands came.
+
+442
+00:20:44,938 --> 00:20:45,835
+Students.
+
+443
+00:20:45,882 --> 00:20:46,951
+Ordinary people.
+
+444
+00:20:47,089 --> 00:20:48,903
+Strangers who had never met him.
+
+445
+00:20:49,163 --> 00:20:51,046
+He was given a state funeral.
+
+446
+00:20:51,213 --> 00:20:54,526
+His half brother, Noel Tata, now leads the trusts.
+
+447
+00:20:54,648 --> 00:20:58,182
+And in twenty twenty six, the cracks are out in the open.
+
+448
+00:20:58,372 --> 00:20:59,939
+So what is the fight about?
+
+449
+00:21:00,149 --> 00:21:02,854
+Who runs Tata, and who decides that.
+
+450
+00:21:03,013 --> 00:21:07,511
+This September, the Tata Sons board voted to give Chandrasekaran another term.
+
+451
+00:21:07,712 --> 00:21:09,507
+Noel Tata voted no.
+
+452
+00:21:09,711 --> 00:21:12,328
+The trusts say that decision doesn't count.
+
+453
+00:21:12,568 --> 00:21:14,522
+Tata Sons says it does.
+
+454
+00:21:15,046 --> 00:21:16,390
+And here's the catch.
+
+455
+00:21:16,613 --> 00:21:20,436
+To the R.B.I., Tata Sons looks like a big finance company.
+
+456
+00:21:20,739 --> 00:21:24,032
+And big finance companies must sell shares to the public.
+
+457
+00:21:24,320 --> 00:21:26,181
+Tata Sons asked to be let off.
+
+458
+00:21:26,420 --> 00:21:27,988
+The R.B.I. said no.
+
+459
+00:21:28,303 --> 00:21:31,158
+As this film goes out, that fight is not over.
+
+460
+00:21:31,455 --> 00:21:32,172
+Who wins?
+
+461
+00:21:32,312 --> 00:21:33,529
+I honestly don't know.
+
+462
+00:21:33,762 --> 00:21:34,825
+Nobody does yet.
+
+463
+00:21:35,155 --> 00:21:38,447
+But step back for a moment, and look at who built this.
+
+464
+00:21:38,676 --> 00:21:42,223
+A priest's son whose family nearly lost everything.
+
+465
+00:21:42,480 --> 00:21:44,697
+Eight thousand ordinary savers.
+
+466
+00:21:44,857 --> 00:21:47,384
+A husband and wife who pledged their diamond.
+
+467
+00:21:47,590 --> 00:21:49,864
+An apprentice who worked without pay.
+
+468
+00:21:50,062 --> 00:21:52,026
+A young engineer with a postcard.
+
+469
+00:21:52,188 --> 00:21:55,019
+A man shovelling limestone next to the furnace.
+
+470
+00:21:55,324 --> 00:21:56,510
+What do they have in common?
+
+471
+00:21:56,754 --> 00:22:00,596
+Every one of them, at some point, put something on the line.
+
+472
+00:22:00,895 --> 00:22:01,762
+Savings.
+
+473
+00:22:01,992 --> 00:22:02,607
+Pride.
+
+474
+00:22:02,827 --> 00:22:03,642
+A diamond.
+
+475
+00:22:03,834 --> 00:22:05,697
+That part needs no fortune.
+
+476
+00:22:05,971 --> 00:22:07,567
+That part is yours.
+
+477
+00:22:07,815 --> 00:22:11,338
+And a hundred years later, the question is still the same one.
+
+478
+00:22:11,565 --> 00:22:14,037
+Who should a company like this really belong to?
+
+479
+00:22:14,386 --> 00:22:15,234
+What do you think?
+
+480
+00:22:15,493 --> 00:22:16,584
+Tell me in the comments.
+
+481
+00:22:17,951 --> 00:22:19,851
+This is Built on Bharat.
+
+482
+00:22:19,998 --> 00:22:23,150
+The empires, and the habits, that built a nation.
+
+483
+00:22:23,377 --> 00:22:25,292
+Next in Empires of India.
+
+484
+00:22:25,515 --> 00:22:29,586
 How did a group of farmers in a small Gujarat town build Amul?

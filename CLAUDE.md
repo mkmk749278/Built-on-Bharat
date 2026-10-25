@@ -103,15 +103,14 @@ Then:
 - VO text: numbers and amounts as words, rupees and lakh/crore, no digits, `₹`, `!`, double quotes or brackets in the
   fact-checked `vo.txt`; letter-by-letter acronyms with dots (U.P.I., R.B.I., O.N.G.C.); acronyms people say as a word
   are written as a word (Isro, Amul, Nasscom).
-- **Performance layer for Eleven v4 (owner, 2026-10-24; PLAYBOOK §7.5):** `vo_performance.txt` adds **pause tags
-  only**: `[short pause]`, `[pause]`, `[long pause]`. **No emotion tags** (`[curious]`, `[warmly]`, `[serious]`…: the
-  owner heard the feeling change and turn synthetic) and **never a voice description** (`[low, steady voice]` made Akash
-  "too low and totally different"). **No `...` for a pause**: Akash on v4 ignored all 9 mid-sentence `...` in the first
-  recording; write `[short pause]`. Emotion comes from the writing. CAPS on one stressed word at most; the spoken words
-  stay identical to the fact-checked text (checked by script). Every take is measured with `scripts/vo_review.py`
-  (PLAYBOOK §7.9) before Claude says anything about it.
+- **No tags at all in the recording text (owner, 2026-10-25): commas and full stops only.** The owner tried every
+  layer on Akash v4 and heard each one fail: voice-description tags changed the voice ("too low and totally
+  different"), emotion tags made the feeling shift and sound synthetic, `...` gave no pause, and even `[pause]` /
+  `[short pause]` tags were "not coming good". So the recorded text is the fact-checked `vo.txt` itself: pauses come
+  from full stops, commas and paragraph breaks; feeling comes from the writing. Every take is checked by its length
+  against its block before timing (`scripts/vo_timing.py`).
 - **Recording blocks go in the chat** as click-to-copy code blocks, every time a VO is ready or changes.
-- **Voice: Akash** (ElevenLabs, Eleven v4), stability 0.50 for the tagged read, for now; a thorough voice-library search
+- **Voice: Akash** (ElevenLabs, Eleven v4), stability 0.50, for now; a thorough voice-library search
   comes later (owner, 2026-10-24).
 - Every narration passes the lean-in test, the spoken-English check and an **independent audience review** (a new cloud
   session with no repo, with a lean-in map of where viewers drift; PLAYBOOK §7.8) before the owner sees it.

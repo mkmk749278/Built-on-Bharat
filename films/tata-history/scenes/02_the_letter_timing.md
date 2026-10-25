@@ -1,40 +1,37 @@
-# The letter: sentence timing (generated from vo/timing.json)
+# The letter: sentence timing (generated from vo/timing.json, v6 recording)
 
-Chapter frames 13709–18965 in the film (87.6 s at 60 fps). Frames below are local to the chapter.
+Chapter frames 21826–26286 in the film (74.3 s at 60 fps). Frames below are local to the chapter.
 
 | id | frames | sentence |
 |---|---|---|
-| 74 | 0–156 | One site has ore, but the coal is useless. |
-| 75 | 181–293 | Another has coal, but no water. |
-| 76 | 324–576 | Jamsetji even crosses the world to America, to find the right engineer. |
-| 77 | 606–816 | In a small, crowded office in New York, he finds his man. |
-| 78 | 844–935 | An American steel expert. |
-| 79 | 967–1173 | Then, in February nineteen oh four, a letter reaches him. |
-| 80 | 1200–1403 | It's from an Indian geologist, a man who studies rocks. |
-| 81 | 1432–1506 | Pramatha Nath Bose. |
-| 82 | 1535–1724 | He has been walking the hills of Mayurbhanj, in today's Odisha. |
-| 83 | 1752–1850 | And he has found iron ore. |
-| 84 | 1877–1928 | A lot of it. |
-| 85 | 1954–2118 | This is the letter that will build Tata Steel. |
-| 86 | 2206–2498 | But three months later, on a trip to Germany, Jamsetji Tata dies. |
-| 87 | 2536–2617 | He never sees those hills. |
-| 88 | 2647–2703 | No steel plant. |
-| 89 | 2722–2782 | No power company. |
-| 90 | 2806–2857 | No institute. |
-| 91 | 2899–2998 | So who carries the dream now? |
-| 92 | 3030–3060 | His son. |
-| 93 | 3082–3117 | Dorabji. |
-| 94 | 3150–3284 | And Dorabji does not run it from an office. |
-| 95 | 3305–3560 | He has already been out in the jungle himself, with the men searching for iron. |
-| 96 | 3589–3770 | Now they go back, looking for one perfect spot. |
-| 97 | 3799–4071 | They find it near a small village called Sakchi, right where two rivers meet. |
-| 98 | 4101–4144 | Ore nearby. |
-| 99 | 4169–4210 | Coal nearby. |
-| 100 | 4234–4303 | Water all year. |
-| 101 | 4336–4409 | Now they need money. |
-| 102 | 4436–4497 | A lot of money. |
-| 103 | 4530–4599 | Where do you even find it? |
-| 104 | 4626–4699 | They try London first. |
-| 105 | 4721–4802 | The answer is cold. |
-| 106 | 4830–5028 | So in nineteen oh seven, the Tatas take a huge risk. |
-| 107 | 5063–5135 | They ask India. |
+| 126 | 0–150 | One site has ore, but the coal is useless. |
+| 127 | 176–287 | Another has coal, but no water. |
+| 128 | 328–536 | Then, in February nineteen oh four, a letter reaches him. |
+| 129 | 567–768 | It's from an Indian geologist, a man who studies rocks. |
+| 130 | 797–871 | Pramatha Nath Bose. |
+| 131 | 899–1092 | He has been walking the hills of Mayurbhanj, in today's Odisha. |
+| 132 | 1120–1223 | And he has found iron ore. |
+| 133 | 1247–1299 | A lot of it. |
+| 134 | 1327–1532 | This letter will lead them to the ore that feeds Tata Steel. |
+| 135 | 1564–1825 | But three months later, on a trip to Germany, Jamsetji Tata dies. |
+| 136 | 1856–1938 | He never sees those hills. |
+| 137 | 1963–2018 | No steel plant. |
+| 138 | 2033–2095 | No power company. |
+| 139 | 2110–2160 | No institute. |
+| 140 | 2196–2285 | So who carries the dream now? |
+| 141 | 2317–2346 | His son. |
+| 142 | 2369–2404 | Dorabji. |
+| 143 | 2432–2574 | And Dorabji does not run it from an office. |
+| 144 | 2594–2847 | He has already been out in the jungle himself, with the men searching for iron. |
+| 145 | 2874–3066 | Now they go back, looking for one perfect spot. |
+| 146 | 3092–3348 | They find it near a small village called Sakchi, right where two rivers meet. |
+| 147 | 3376–3418 | Ore nearby. |
+| 148 | 3438–3481 | Coal nearby. |
+| 149 | 3502–3569 | Water all year. |
+| 150 | 3598–3672 | Now they need money. |
+| 151 | 3698–3753 | A lot of money. |
+| 152 | 3778–3854 | Where do you even find it? |
+| 153 | 3880–3953 | They try London first. |
+| 154 | 3974–4053 | The answer is cold. |
+| 155 | 4078–4270 | So in nineteen oh seven, the Tatas take a huge risk. |
+| 156 | 4297–4365 | They ask India. |
