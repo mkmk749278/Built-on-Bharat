@@ -1,4 +1,8 @@
-# Shot list and asset needs: The Entire History of Tata (v4 narration, 20:57)
+# Shot list and asset needs: The Entire History of Tata (v6 narration, 22:29)
+
+*v6 (2026-10-27): the picture plan is now `plan_v6.md` (it replaces the timings below, which were v4). The needs below
+stay valid; the v6 additions are at the end of the list ("v6 additions"). Sourcing order: priority A first, chapter
+order second.*
 
 *Creative director's plan for the sourcing session (PLAYBOOK §11) and the scene builders (§10.3). Asset IDs are the
 `id` column of `films/tata-history/media_manifest.csv`. Real before made (§6.3.6): archive photos and documents first,
@@ -128,6 +132,42 @@ licensed stock second, our own animation and 3D third, AI never of a real person
 | J002 | Ratan Tata public tribute, NCPA, October 2024 (CC photos) | A | |
 | J003 | Noel Tata photo (CC) | B | |
 | J004 | Reserve Bank of India building; Bombay Stock Exchange | A | |
+
+### v6 additions (2026-10-27, from `plan_v6.md`)
+| id | Need | Priority | Notes |
+|---|---|---|---|
+| B013 | Navsari: old town street, Parsi fire temple exterior (archive, or present-day photo of the old town) | A | the first frame of chapter 1 |
+| B014 | British army, Abyssinia expedition 1868 (supply lines, camp; PD photos) | A | "supplying the British army" |
+| B015 | Elphinstone College, Bombay (19th-century archive or the old building) | A | |
+| B016 | Shanghai / China coast 1860s, or a 19th-century sailing ship at sea (PD engraving or photo) | A | |
+| B017 | Bombay 1860s–1870s: streets, Town Hall, banks, Back Bay (archive) | A | for the 1865 crash beat |
+| B018 | Raw cotton bolls on the plant, cotton bales (footage) | A | Pixabay |
+| B019 | Crumpling old paper / bills macro (footage) | B | Pixabay |
+| A008 | Gold bangles, a cloth bundle, a family kitchen floor (footage, today's India) | B | reference for INK + one real insert |
+| A009 | British-India coins (rupee, anna), 1900s, real photos or footage | A | the "mites" |
+| A010 | 2026 headlines on the Trusts–Sons dispute (credited screenshots of reputable Indian outlets, at 2×) | A | short credited excerpts; capture the headline area only |
+| C009 | A European spa town / railway station c. 1900–1905 (Bad Nauheim if possible) | B | Jamsetji's death |
+| C010 | Jungle and forest of Chota Nagpur / Jharkhand, bullock carts on a forest track (footage or photo) | A | prospecting beat (INK sits over it) |
+| D008 | Old typewriter typing (footage) | B | the Upcott memo |
+| D009 | Molten iron / steel pouring, sparks (high-quality footage, 4K if possible) | A | the match cut (signature 1) |
+| E007 | Diamond Jubilee 1897 (Queen Victoria, London celebrations; PD) | B | |
+| E008 | Hospital corridor today, India (footage, no patients' faces) | B | |
+| E009 | A diamond under light, rotating macro (footage, 4K) | A | the Jubilee stand-in, labelled RECONSTRUCTION |
+| F010 | Cockpit / open-cockpit dawn flight over coast (footage), propeller | A | 1932 flight |
+| F011 | Air India aircraft of the 1970s (Boeing 747 "Emperor" era), and the Maharajah mascot (PD/CC) | A | 1978 shot that returns in 2022 |
+| F012 | Telegram form or telegraph machine, 1970s India (object photo/footage) | B | |
+| F013 | Punched cards and card readers, 1960s (PD/CC photo or footage) | A | T.C.S. plant |
+| G007 | Cornell University (architecture), archive or present (CC) | B | |
+| G008 | Aircraft window at night, cabin dark (footage) and the same in daylight | A | signature 6 |
+| G009 | Engine being repaired / car assembly line (footage) | B | "It fixes the car" |
+| H007 | Sanand, Gujarat, Tata Motors plant (CC) | B | |
+| H008 | Karambir Singh Kang photo (CC, real) | B | only if licensed; otherwise his name only |
+| H009 | A single candle flame in the dark (footage) | A | used twice (26/11, AI171) |
+| H010 | The Taj dome at dawn / Gateway of India (CC photo or footage), matching the 1903 framing as closely as possible | A | signature 5 |
+| I008 | Supreme Court of India building (CC) | B | |
+| I009 | A Tata Nano parked (CC) | B | |
+| J005 | Scholarship classroom / research lab, India (footage) | B | "scholarships, research" |
+| J006 | Amul: milk cans, morning light, Anand (footage or CC) | B | next-film tease in the outro |
 
 ### Sound
 | id | Need | Notes |
