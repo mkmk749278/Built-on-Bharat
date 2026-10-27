@@ -1,3 +1,4 @@
+# (registered 2026-10-27)
 # Blender Cycles hero shots on GitHub's runners (PLAYBOOK §8.7, §10.5): a shot's frames split into shards that render
 # in parallel, so a cloud session never spends hours (or the owner's usage) on them. Each shard uploads a tar of its
 # frames to Litterbox (72 h, our own renders only, PLAYBOOK §3) and prints the URL in the log and the job summary;
