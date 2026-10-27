@@ -28,11 +28,11 @@ export const QuoteCard: React.FC<{
 	return (
 		<AbsoluteFill style={{background: '#0E0F12'}}>
 			<Camera seed={seed} drift={2} keys={[{f: at, scale: 0.96, y: 30}, {f: at + 400, scale: 1.08, y: -10}]}>
-				<Paper at={at} width={1240} tone={tone} seed={seed}>
-					<div style={{padding: '86px 96px 70px', fontFamily: fontStacks.display, color: '#2E2418'}}>
+				<Paper at={at} width={1380} tone={tone} seed={seed}>
+					<div style={{padding: '86px 100px 70px', fontFamily: fontStacks.quote, color: '#2E2418'}}>
 						<div style={{fontSize: 120, lineHeight: 0.6, color: colors.bronze, opacity: 0.7, height: 54}}>“</div>
 						{lines.map((l, i) => (
-							<div key={i} style={{position: 'relative', fontSize: 44, lineHeight: 1.5, letterSpacing: '0.01em', fontStyle: 'italic'}}>
+							<div key={i} style={{position: 'relative', fontSize: 56, lineHeight: 1.42, fontStyle: 'italic', whiteSpace: 'nowrap', width: 'fit-content'}}>
 								{i === mark ? (
 									<span
 										style={{
@@ -51,7 +51,7 @@ export const QuoteCard: React.FC<{
 								<span style={{position: 'relative'}}>{l}</span>
 							</div>
 						))}
-						<div style={{marginTop: 34, fontSize: 26, letterSpacing: '0.28em', fontStyle: 'normal', color: '#5A4426'}}>— {attribution}</div>
+						<div style={{marginTop: 34, fontFamily: fontStacks.display, fontSize: 26, letterSpacing: '0.28em', fontStyle: 'normal', color: '#5A4426'}}>— {attribution}</div>
 					</div>
 				</Paper>
 			</Camera>

@@ -14,4 +14,5 @@ export const fonts = {
   display: 'Cinzel',
   text: 'Inter',
   numbers: 'JetBrains Mono',
+  quote: 'EB Garamond',
 } as const;

@@ -15,8 +15,8 @@ export const loadBrandFonts = (): void => {
 	}
 	started = true;
 	const handle = delayRender('Loading brand fonts');
-	const f = (family: string, file: string, weight: string, unicodeRange?: string) =>
-		loadFont({family, url: staticFile(`fonts/${file}`), weight, unicodeRange});
+	const f = (family: string, file: string, weight: string, unicodeRange?: string, style = 'normal') =>
+		loadFont({family, url: staticFile(`fonts/${file}`), weight, unicodeRange, style});
 	Promise.all([
 		...['400', '600', '700'].map((w) => f(fonts.display, `cinzel-latin-${w}-normal.woff2`, w)),
 		...['400', '500', '600', '700'].flatMap((w) => [
@@ -24,6 +24,8 @@ export const loadBrandFonts = (): void => {
 			f(fonts.text, `inter-latin-ext-${w}-normal.woff2`, w, EXT),
 		]),
 		...['500', '700'].map((w) => f(fonts.numbers, `jetbrains-mono-latin-${w}-normal.woff2`, w)),
+		// EB Garamond (OFL) for quotes: a reading face with a true italic; Cinzel is capitals only.
+		...['400', '500'].flatMap((w) => ['normal', 'italic'].map((st) => f(fonts.quote, `eb-garamond-latin-${w}-${st}.woff2`, w, undefined, st))),
 	])
 		.then(() => continueRender(handle))
 		.catch((err: unknown) => {
@@ -35,4 +37,5 @@ export const fontStacks = {
 	display: `'${fonts.display}', serif`,
 	text: `'${fonts.text}', sans-serif`,
 	numbers: `'${fonts.numbers}', '${fonts.text}', monospace`,
+	quote: `'${fonts.quote}', Georgia, serif`,
 } as const;
