@@ -19,7 +19,7 @@ import {
 	tween,
 	Vignette,
 } from '../../../../../lib/remotion';
-import {GemCompare} from '../../../../../lib/remotion/kinetic';
+import {GemCompare, Glint} from '../../../../../lib/remotion/kinetic';
 import {YearRoller} from '../../../../../lib/remotion/kinetic';
 import {DepthPhoto} from '../../../../../lib/remotion/three/DepthPhoto';
 import {MapBombayJamshedpur} from '../dev/map/MapScenes';
@@ -180,6 +180,9 @@ export const ColdOpen: React.FC = () => {
 			{/* 5 · not to sell: a loan, the diamond as the guarantee */}
 			<Shot a={f.sell} b={f.ask} name="counter-2">
 				<FrameSeq dir={`${COUNTER}/c2`} prefix="c2_" last={322} />
+				{/* the stone catches the light as the lid settles: on the crown edge the render already lights */}
+				<Glint x={1128} y={686} at={284} size={180} />
+				<Glint x={868} y={646} at={298} size={110} dur={24} />
 				<HonestyTag text="RECONSTRUCTION" />
 			</Shot>
 
