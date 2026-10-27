@@ -1,8 +1,7 @@
 # (registered 2026-10-27)
 # Blender Cycles hero shots on GitHub's runners (PLAYBOOK §8.7, §10.5): a shot's frames split into shards that render
-# in parallel, so a cloud session never spends hours (or the owner's usage) on them. Each shard uploads a tar of its
-# frames to Litterbox (72 h, our own renders only, PLAYBOOK §3) and prints the URL in the log and the job summary;
-# the session downloads, checks and keeps them in Drive.
+# in parallel, so a cloud session never spends hours (or the owner's usage) on them. Each shard's frames are a workflow
+# artifact named <shot>_<range>; the session downloads them through the API, checks them and keeps them in Drive.
 name: blender-render
 on:
   workflow_dispatch:
@@ -11,7 +10,7 @@ on:
         description: "scripts/blender/<name>.py"
         default: jubilee
       shot:
-        description: "shot name (jubilee: hero | macro | table)"
+        description: "shot name (jubilee: hero | macro | table; counter: c1 | c2 | c3)"
         default: hero
       frames:
         description: "first-last frame"
@@ -65,17 +64,12 @@ jobs:
           python scripts/blender/${{ inputs.script }}.py --shot ${{ inputs.shot }} --frames ${{ matrix.range }} \
             --step ${{ inputs.step }} --out "$out" --threads 4 ${{ inputs.extra }} 2>&1 | grep --line-buffered -E "^frame|Error|Traceback"
           ls "$out" | wc -l
+      # Frames go up as a workflow artifact (kept 90 days, free on a public repo). Litterbox refused the runners'
+      # uploads on 2026-10-27 and a whole run's frames were lost, so nothing leaves GitHub any more.
       - name: Upload shard
-        run: |
-          name="${{ inputs.shot }}_${{ matrix.range }}.tar"
-          tar -cf "$name" -C out "${{ inputs.shot }}"
-          md5=$(md5sum "$name" | cut -d' ' -f1)
-          # Litterbox sometimes answers with an HTML error page (a 504 lost a shard once): retry, then fail the job.
-          for n in 1 2 3 4 5; do
-            url=$(curl -sS -F reqtype=fileupload -F time=72h -F "fileToUpload=@$name" https://litterbox.catbox.moe/resources/internals/api.php || true)
-            [[ "$url" =~ ^https://litter\.catbox\.moe/[A-Za-z0-9]+\.tar$ ]] && break
-            echo "upload try $n failed: ${url:0:80}"; url=""; sleep $((n * 15))
-          done
-          [ -n "$url" ] || { echo "::error::shard upload failed"; exit 1; }
-          echo "SHARD ${{ matrix.range }} $url md5=$md5"
-          echo "SHARD ${{ matrix.range }} $url md5=$md5" >> "$GITHUB_STEP_SUMMARY"
+        uses: actions/upload-artifact@v4.6.2
+        with:
+          name: ${{ inputs.shot }}_${{ matrix.range }}
+          path: out/${{ inputs.shot }}
+          compression-level: 0
+          if-no-files-found: error

@@ -314,5 +314,50 @@
    0.99,
    1.0
   ]
+ ],
+ "C007a": [
+  "raw/wm/C_07_samibrukhya-hill-kaptipada-jpg.jpg",
+  [
+   0,
+   0,
+   1,
+   1
+  ]
+ ],
+ "C005a": [
+  "raw/wm/C_10_bad-nauheim-hessen-ludwigstra-e-zeno-ans.jpg",
+  [
+   0.0,
+   0.08,
+   1.0,
+   0.88
+  ]
+ ],
+ "C002a": [
+  "raw/wm/C_02_tusu-parav-at-domohani-jamshedpur-25-jpg.jpg",
+  [
+   0,
+   0.1,
+   1,
+   0.85
+  ]
+ ],
+ "C008a": [
+  "loc/C008b.jpg",
+  [
+   0.1,
+   0.19,
+   0.498,
+   0.63
+  ]
+ ],
+ "C009a": [
+  "raw/wm/O_04_hematite-geodil-number-1288-jpg.jpg",
+  [
+   0,
+   0.04,
+   1,
+   0.96
+  ]
  ]
 }
