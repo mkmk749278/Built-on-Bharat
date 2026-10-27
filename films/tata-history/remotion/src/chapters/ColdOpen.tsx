@@ -3,7 +3,6 @@ import {AbsoluteFill, Sequence, useCurrentFrame, useVideoConfig} from 'remotion'
 import {
 	Atmosphere,
 	colors,
-	Counter,
 	Desk,
 	ease,
 	Footage,
@@ -30,6 +29,7 @@ import {PawnCounter} from '../shots/PawnCounter';
 import {RichLedger} from '../shots/RichLedger';
 import {Filmstrip} from '../shots/Filmstrip';
 import {T} from '../timing';
+import {CounterAt} from '../kit';
 
 // Cold open (plan_v6 §4; handoff scenes/00_cold_open.md). Every cut and landing is a VO frame from T.
 const CH = T.chapter('Cold open');
@@ -167,7 +167,7 @@ export const ColdOpen: React.FC = () => {
 			{/* 3 · the stone: Blender hero shot; 245 lands on "carats" */}
 			<Shot a={f.carats} b={f.more} name="diamond-hero">
 				<FrameSeq dir={`${DIAMOND}/hero`} prefix="hero_" last={298} />
-				<Counter to={245} start={6} land={f.caratsWord - f.carats} suffix=" CARATS" size={64} />
+				<CounterAt to={245} start={6} land={f.caratsWord - f.carats} suffix=" CARATS" size={72} y={330} />
 				<HonestyTag text="RECONSTRUCTION" />
 			</Shot>
 

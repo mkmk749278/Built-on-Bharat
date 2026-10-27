@@ -1119,6 +1119,26 @@ To port when needed (Creator path → what to change):
 ## 16. Lessons log
 *(Newest first. Each lesson: what happened, the rule, why.)*
 
+**Outside AI review of the VO; chip lines added (2026-10-27).**
+- *What happened:* the owner shared another AI's review of the v6 VO. It reported a "rogue Hindi snippet" after "held
+  the empire together" and said the September board vote was really about the R.B.I. listing. Both were wrong: the
+  audio there is 0.46 s of digital silence (−85 dB) that Whisper fills with invented words ("Our Dharmic Kalpana"),
+  and the vote is sourced (T10, T80), with the listing fight in the very next line. Its one strong idea, steel in
+  1907 → chips in 2026, became block 16b (claims T125–T128), recorded alone and spliced at the pause after "Nobody
+  does yet." (the block 16 take cut there without re-encoding, files `b16a`/`b16b`/`b16c`).
+- *The rule:* treat an outside review as claims to check against the audio and claims.csv, never as edits to apply.
+  Check a "glitch" by its loudness before cutting anything; speech-to-text invents words in silence.
+
+**Blender diamond, look development (2026-10-27).**
+- *What happened:* the first farm renders (24 samples, emissive cards only) looked like dark glass on grey plaster,
+  and the macro was noisy. The fixes: a Poly Haven studio HDRI seen only by the stone (world ray visibility camera
+  and diffuse off, plus a Light Path mix), the velvet's specular set to 0 (its rough shine was reflecting the whole
+  studio and lighting the cloth evenly), velvet built on the diffuse lobe with a facing ramp, a 70° soft spot whose
+  pool fades to black, and 160–256 samples with OIDN on accurate prefilter. A Litterbox 504 lost one shard: the
+  workflow now retries the upload and fails the job if it never gets a link.
+- *The rule:* look-develop at 800×450 / 64 samples on 2–3 key frames of every shot before sending a farm run; read
+  every shard's link before untarring.
+
 **Parallel sessions, film 1 build (2026-10-27).**
 - *What happened:* S1 (sourcing) and S2 (scenes) started beside the coordinator and both stopped on the account's usage
   limit within about 10 minutes, before either pushed anything; their work was lost. The §3 cap (two heavy sessions)

@@ -70,6 +70,12 @@ jobs:
           name="${{ inputs.shot }}_${{ matrix.range }}.tar"
           tar -cf "$name" -C out "${{ inputs.shot }}"
           md5=$(md5sum "$name" | cut -d' ' -f1)
-          url=$(curl -sS -F reqtype=fileupload -F time=72h -F "fileToUpload=@$name" https://litterbox.catbox.moe/resources/internals/api.php)
+          # Litterbox sometimes answers with an HTML error page (a 504 lost a shard once): retry, then fail the job.
+          for n in 1 2 3 4 5; do
+            url=$(curl -sS -F reqtype=fileupload -F time=72h -F "fileToUpload=@$name" https://litterbox.catbox.moe/resources/internals/api.php || true)
+            [[ "$url" =~ ^https://litter\.catbox\.moe/[A-Za-z0-9]+\.tar$ ]] && break
+            echo "upload try $n failed: ${url:0:80}"; url=""; sleep $((n * 15))
+          done
+          [ -n "$url" ] || { echo "::error::shard upload failed"; exit 1; }
           echo "SHARD ${{ matrix.range }} $url md5=$md5"
           echo "SHARD ${{ matrix.range }} $url md5=$md5" >> "$GITHUB_STEP_SUMMARY"

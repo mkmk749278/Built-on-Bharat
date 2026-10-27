@@ -1,6 +1,6 @@
 # VO timing: tata-history
 
-1349.4 s · 484 sentences · 3694 words · 11 chapters
+1383.2 s · 494 sentences · 3784 words · 11 chapters
 
 ## Sentences to check (low margin or odd length)
 - 13.25s b01 ratio 2.15 margin 1.795: No.

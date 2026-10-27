@@ -109,16 +109,30 @@
   {
    "block": 16,
    "start": 1275.046,
-   "end": 1336.296,
+   "end": 1295.106,
    "startFrame": 76503,
-   "endFrame": 80178
+   "endFrame": 77706
   },
   {
    "block": 17,
-   "start": 1337.696,
-   "end": 1349.306,
-   "startFrame": 80262,
-   "endFrame": 80958
+   "start": 1295.656,
+   "end": 1328.519,
+   "startFrame": 77739,
+   "endFrame": 79711
+  },
+  {
+   "block": 18,
+   "start": 1329.069,
+   "end": 1370.102,
+   "startFrame": 79744,
+   "endFrame": 82206
+  },
+  {
+   "block": 19,
+   "start": 1371.502,
+   "end": 1383.112,
+   "startFrame": 82290,
+   "endFrame": 82987
   }
  ],
  "sentences": [
@@ -6018,11 +6032,11 @@
    "text": "And here's the catch.",
    "tagged": "And here's the catch.",
    "start": 1275.046,
-   "end": 1276.148,
-   "ratio": 0.99,
-   "margin": 0.428,
+   "end": 1276.136,
+   "ratio": 0.9,
+   "margin": 0.396,
    "startFrame": 76503,
-   "endFrame": 76569
+   "endFrame": 76568
   },
   {
    "id": 454,
@@ -6030,11 +6044,11 @@
    "chapter": "The answer",
    "text": "To the R.B.I., Tata Sons looks like a big finance company.",
    "tagged": "To the R.B.I., Tata Sons looks like a big finance company.",
-   "start": 1276.568,
-   "end": 1280.424,
-   "ratio": 1.17,
-   "margin": 0.428,
-   "startFrame": 76594,
+   "start": 1276.556,
+   "end": 1280.412,
+   "ratio": 1.08,
+   "margin": 0.396,
+   "startFrame": 76593,
    "endFrame": 76825
   },
   {
@@ -6043,12 +6057,12 @@
    "chapter": "The answer",
    "text": "And big finance companies must sell shares to the public.",
    "tagged": "And big finance companies must sell shares to the public.",
-   "start": 1280.864,
-   "end": 1284.183,
-   "ratio": 1.02,
-   "margin": 1.344,
-   "startFrame": 76852,
-   "endFrame": 77051
+   "start": 1280.852,
+   "end": 1284.171,
+   "ratio": 0.93,
+   "margin": 1.432,
+   "startFrame": 76851,
+   "endFrame": 77050
   },
   {
    "id": 456,
@@ -6056,12 +6070,12 @@
    "chapter": "The answer",
    "text": "Tata Sons asked to be let off.",
    "tagged": "Tata Sons asked to be let off.",
-   "start": 1284.616,
-   "end": 1286.276,
-   "ratio": 1.04,
+   "start": 1284.604,
+   "end": 1286.264,
+   "ratio": 0.95,
    "margin": 9.9,
-   "startFrame": 77077,
-   "endFrame": 77177
+   "startFrame": 77076,
+   "endFrame": 77176
   },
   {
    "id": 457,
@@ -6069,12 +6083,12 @@
    "chapter": "The answer",
    "text": "The R.B.I. said no.",
    "tagged": "The R.B.I. said no.",
-   "start": 1286.736,
-   "end": 1287.999,
-   "ratio": 1.52,
+   "start": 1286.724,
+   "end": 1287.987,
+   "ratio": 1.39,
    "margin": 9.9,
-   "startFrame": 77204,
-   "endFrame": 77280
+   "startFrame": 77203,
+   "endFrame": 77279
   },
   {
    "id": 458,
@@ -6082,9 +6096,9 @@
    "chapter": "The answer",
    "text": "As this film goes out, that fight is not over.",
    "tagged": "As this film goes out, that fight is not over.",
-   "start": 1288.472,
-   "end": 1291.304,
-   "ratio": 1.17,
+   "start": 1288.46,
+   "end": 1291.292,
+   "ratio": 1.07,
    "margin": 9.9,
    "startFrame": 77308,
    "endFrame": 77478
@@ -6095,11 +6109,11 @@
    "chapter": "The answer",
    "text": "Who wins?",
    "tagged": "Who wins?",
-   "start": 1291.751,
-   "end": 1292.238,
-   "ratio": 1.0,
+   "start": 1291.739,
+   "end": 1292.226,
+   "ratio": 0.92,
    "margin": 9.9,
-   "startFrame": 77505,
+   "startFrame": 77504,
    "endFrame": 77534
   },
   {
@@ -6108,12 +6122,12 @@
    "chapter": "The answer",
    "text": "I honestly don't know.",
    "tagged": "I honestly don't know.",
-   "start": 1292.646,
-   "end": 1293.677,
-   "ratio": 0.87,
+   "start": 1292.634,
+   "end": 1293.665,
+   "ratio": 0.8,
    "margin": 9.9,
-   "startFrame": 77559,
-   "endFrame": 77621
+   "startFrame": 77558,
+   "endFrame": 77620
   },
   {
    "id": 461,
@@ -6121,298 +6135,428 @@
    "chapter": "The answer",
    "text": "Nobody does yet.",
    "tagged": "Nobody does yet.",
-   "start": 1294.047,
-   "end": 1294.964,
-   "ratio": 1.02,
-   "margin": 1.187,
-   "startFrame": 77643,
-   "endFrame": 77698
+   "start": 1294.035,
+   "end": 1294.952,
+   "ratio": 0.93,
+   "margin": 9.9,
+   "startFrame": 77642,
+   "endFrame": 77697
   },
   {
    "id": 462,
-   "block": 16,
+   "block": 17,
    "chapter": "The answer",
-   "text": "But step back for a moment, and look at who built this.",
-   "tagged": "But step back for a moment, and look at who built this.",
-   "start": 1295.413,
-   "end": 1298.563,
-   "ratio": 0.84,
-   "margin": 0.245,
-   "startFrame": 77725,
-   "endFrame": 77914
+   "text": "And while that fight goes on, the work does not stop.",
+   "tagged": "And while that fight goes on, the work does not stop.",
+   "start": 1295.656,
+   "end": 1299.07,
+   "ratio": 1.08,
+   "margin": 0.282,
+   "startFrame": 77739,
+   "endFrame": 77944
   },
   {
    "id": 463,
-   "block": 16,
+   "block": 17,
    "chapter": "The answer",
-   "text": "A priest's son whose family nearly lost everything.",
-   "tagged": "A priest's son whose family nearly lost everything.",
-   "start": 1298.986,
-   "end": 1302.278,
-   "ratio": 1.13,
-   "margin": 0.245,
-   "startFrame": 77939,
-   "endFrame": 78137
+   "text": "At a place called Dholera, in Gujarat, Tata is building a factory to make chips.",
+   "tagged": "At a place called Dholera, in Gujarat, Tata is building a factory to make chips.",
+   "start": 1299.541,
+   "end": 1304.311,
+   "ratio": 0.97,
+   "margin": 0.134,
+   "startFrame": 77972,
+   "endFrame": 78259
   },
   {
    "id": 464,
-   "block": 16,
+   "block": 17,
    "chapter": "The answer",
-   "text": "Eight thousand ordinary savers.",
-   "tagged": "Eight thousand ordinary savers.",
-   "start": 1302.729,
-   "end": 1304.649,
+   "text": "The tiny chips inside phones and cars.",
+   "tagged": "The tiny chips inside phones and cars.",
+   "start": 1304.664,
+   "end": 1307.011,
    "ratio": 1.03,
-   "margin": 9.9,
-   "startFrame": 78164,
-   "endFrame": 78279
+   "margin": 0.134,
+   "startFrame": 78280,
+   "endFrame": 78421
   },
   {
    "id": 465,
-   "block": 16,
+   "block": 17,
    "chapter": "The answer",
-   "text": "A husband and wife who pledged their diamond.",
-   "tagged": "A husband and wife who pledged their diamond.",
-   "start": 1304.975,
-   "end": 1307.288,
-   "ratio": 0.9,
-   "margin": 9.9,
-   "startFrame": 78298,
-   "endFrame": 78437
+   "text": "Ninety one thousand crore rupees.",
+   "tagged": "Ninety one thousand crore rupees.",
+   "start": 1307.432,
+   "end": 1309.779,
+   "ratio": 1.22,
+   "margin": 0.355,
+   "startFrame": 78446,
+   "endFrame": 78587
   },
   {
    "id": 466,
-   "block": 16,
+   "block": 17,
    "chapter": "The answer",
-   "text": "An apprentice who worked without pay.",
-   "tagged": "An apprentice who worked without pay.",
-   "start": 1307.617,
-   "end": 1309.688,
-   "ratio": 0.96,
-   "margin": 9.9,
-   "startFrame": 78457,
-   "endFrame": 78581
+   "text": "Today, India buys almost all of its chips from abroad.",
+   "tagged": "Today, India buys almost all of its chips from abroad.",
+   "start": 1310.233,
+   "end": 1313.514,
+   "ratio": 1.05,
+   "margin": 0.355,
+   "startFrame": 78614,
+   "endFrame": 78811
   },
   {
    "id": 467,
-   "block": 16,
+   "block": 17,
    "chapter": "The answer",
-   "text": "A young engineer with a postcard.",
-   "tagged": "A young engineer with a postcard.",
-   "start": 1310.018,
-   "end": 1311.91,
-   "ratio": 1.01,
-   "margin": 9.9,
-   "startFrame": 78601,
-   "endFrame": 78715
+   "text": "This would be the country's first big chip factory.",
+   "tagged": "This would be the country's first big chip factory.",
+   "start": 1313.943,
+   "end": 1316.757,
+   "ratio": 1.0,
+   "margin": 3.36,
+   "startFrame": 78837,
+   "endFrame": 79005
   },
   {
    "id": 468,
-   "block": 16,
+   "block": 17,
    "chapter": "The answer",
-   "text": "A man shovelling limestone next to the furnace.",
-   "tagged": "A man shovelling limestone next to the furnace.",
-   "start": 1312.208,
-   "end": 1314.959,
-   "ratio": 1.02,
-   "margin": 9.9,
-   "startFrame": 78732,
-   "endFrame": 78898
+   "text": "The government expects it to start around twenty twenty eight.",
+   "tagged": "The government expects it to start around twenty twenty eight.",
+   "start": 1317.243,
+   "end": 1319.945,
+   "ratio": 0.75,
+   "margin": 0.35,
+   "startFrame": 79035,
+   "endFrame": 79197
   },
   {
    "id": 469,
-   "block": 16,
+   "block": 17,
    "chapter": "The answer",
-   "text": "What do they have in common?",
-   "tagged": "What do they have in common?",
-   "start": 1315.359,
-   "end": 1316.416,
-   "ratio": 0.69,
-   "margin": 0.34,
-   "startFrame": 78922,
-   "endFrame": 78985
+   "text": "A hundred years ago, the bet was steel, and a furnace in the jungle.",
+   "tagged": "A hundred years ago, the bet was steel, and a furnace in the jungle.",
+   "start": 1320.439,
+   "end": 1324.262,
+   "ratio": 0.96,
+   "margin": 0.134,
+   "startFrame": 79226,
+   "endFrame": 79456
   },
   {
    "id": 470,
-   "block": 16,
+   "block": 17,
    "chapter": "The answer",
-   "text": "Every one of them, at some point, put something on the line.",
-   "tagged": "Every one of them, at some point, put something on the line.",
-   "start": 1316.786,
-   "end": 1320.49,
-   "ratio": 1.03,
-   "margin": 0.34,
-   "startFrame": 79007,
-   "endFrame": 79229
+   "text": "Now it's chips.",
+   "tagged": "Now it's chips.",
+   "start": 1324.767,
+   "end": 1325.978,
+   "ratio": 1.31,
+   "margin": 0.134,
+   "startFrame": 79486,
+   "endFrame": 79559
   },
   {
    "id": 471,
-   "block": 16,
+   "block": 17,
    "chapter": "The answer",
-   "text": "Savings.",
-   "tagged": "Savings.",
-   "start": 1320.868,
-   "end": 1321.52,
-   "ratio": 1.34,
-   "margin": 1.542,
-   "startFrame": 79252,
-   "endFrame": 79291
+   "text": "The same bet, all over again.",
+   "tagged": "The same bet, all over again.",
+   "start": 1326.418,
+   "end": 1328.356,
+   "ratio": 1.05,
+   "margin": 0.49,
+   "startFrame": 79585,
+   "endFrame": 79701
   },
   {
    "id": 472,
-   "block": 16,
+   "block": 18,
    "chapter": "The answer",
-   "text": "Pride.",
-   "tagged": "Pride.",
-   "start": 1321.902,
-   "end": 1322.312,
-   "ratio": 1.18,
-   "margin": 9.9,
-   "startFrame": 79314,
-   "endFrame": 79339
+   "text": "But step back for a moment, and look at who built this.",
+   "tagged": "But step back for a moment, and look at who built this.",
+   "start": 1329.219,
+   "end": 1332.369,
+   "ratio": 0.88,
+   "margin": 0.242,
+   "startFrame": 79753,
+   "endFrame": 79942
   },
   {
    "id": 473,
-   "block": 16,
+   "block": 18,
    "chapter": "The answer",
-   "text": "A diamond.",
-   "tagged": "A diamond.",
-   "start": 1322.672,
-   "end": 1323.294,
-   "ratio": 1.12,
-   "margin": 0.543,
-   "startFrame": 79360,
-   "endFrame": 79398
+   "text": "A priest's son whose family nearly lost everything.",
+   "tagged": "A priest's son whose family nearly lost everything.",
+   "start": 1332.792,
+   "end": 1336.084,
+   "ratio": 1.18,
+   "margin": 0.242,
+   "startFrame": 79968,
+   "endFrame": 80165
   },
   {
    "id": 474,
-   "block": 16,
+   "block": 18,
    "chapter": "The answer",
-   "text": "That part needs no fortune.",
-   "tagged": "That part needs no fortune.",
-   "start": 1323.646,
-   "end": 1325.439,
+   "text": "Eight thousand ordinary savers.",
+   "tagged": "Eight thousand ordinary savers.",
+   "start": 1336.535,
+   "end": 1338.455,
    "ratio": 1.07,
-   "margin": 0.365,
-   "startFrame": 79419,
-   "endFrame": 79526
+   "margin": 9.9,
+   "startFrame": 80192,
+   "endFrame": 80307
   },
   {
    "id": 475,
-   "block": 16,
+   "block": 18,
    "chapter": "The answer",
-   "text": "That part is yours.",
-   "tagged": "That part is yours.",
-   "start": 1325.826,
-   "end": 1327.194,
-   "ratio": 1.13,
-   "margin": 0.31,
-   "startFrame": 79550,
-   "endFrame": 79632
+   "text": "A husband and wife who pledged their diamond.",
+   "tagged": "A husband and wife who pledged their diamond.",
+   "start": 1338.782,
+   "end": 1341.094,
+   "ratio": 0.94,
+   "margin": 9.9,
+   "startFrame": 80327,
+   "endFrame": 80466
   },
   {
    "id": 476,
-   "block": 16,
+   "block": 18,
    "chapter": "The answer",
-   "text": "And a hundred years later, the question is still the same one.",
-   "tagged": "And a hundred years later, the question is still the same one.",
-   "start": 1327.575,
-   "end": 1330.905,
-   "ratio": 0.93,
-   "margin": 0.31,
-   "startFrame": 79654,
-   "endFrame": 79854
+   "text": "An apprentice who worked without pay.",
+   "tagged": "An apprentice who worked without pay.",
+   "start": 1341.423,
+   "end": 1343.494,
+   "ratio": 1.0,
+   "margin": 9.9,
+   "startFrame": 80485,
+   "endFrame": 80610
   },
   {
    "id": 477,
-   "block": 16,
+   "block": 18,
    "chapter": "The answer",
-   "text": "Who should a company like this really belong to?",
-   "tagged": "Who should a company like this really belong to?",
-   "start": 1331.287,
-   "end": 1333.737,
-   "ratio": 0.91,
-   "margin": 1.077,
-   "startFrame": 79877,
-   "endFrame": 80024
+   "text": "A young engineer with a postcard.",
+   "tagged": "A young engineer with a postcard.",
+   "start": 1343.824,
+   "end": 1345.716,
+   "ratio": 1.05,
+   "margin": 9.9,
+   "startFrame": 80629,
+   "endFrame": 80743
   },
   {
    "id": 478,
-   "block": 16,
+   "block": 18,
    "chapter": "The answer",
-   "text": "What do you think?",
-   "tagged": "What do you think?",
-   "start": 1334.194,
-   "end": 1334.87,
-   "ratio": 0.7,
+   "text": "A man shovelling limestone next to the furnace.",
+   "tagged": "A man shovelling limestone next to the furnace.",
+   "start": 1346.014,
+   "end": 1348.765,
+   "ratio": 1.06,
    "margin": 9.9,
-   "startFrame": 80052,
-   "endFrame": 80092
+   "startFrame": 80761,
+   "endFrame": 80926
   },
   {
    "id": 479,
-   "block": 16,
+   "block": 18,
    "chapter": "The answer",
-   "text": "Tell me in the comments.",
-   "tagged": "Tell me in the comments.",
-   "start": 1335.247,
-   "end": 1336.129,
-   "ratio": 0.67,
-   "margin": 9.9,
-   "startFrame": 80115,
-   "endFrame": 80168
+   "text": "What do they have in common?",
+   "tagged": "What do they have in common?",
+   "start": 1349.166,
+   "end": 1350.223,
+   "ratio": 0.72,
+   "margin": 0.353,
+   "startFrame": 80950,
+   "endFrame": 81013
   },
   {
    "id": 480,
-   "block": 17,
-   "chapter": "Outro",
-   "text": "This is Built on Bharat.",
-   "tagged": "This is Built on Bharat.",
-   "start": 1337.696,
-   "end": 1339.396,
-   "ratio": 1.14,
-   "margin": 1.536,
-   "startFrame": 80262,
-   "endFrame": 80364
+   "block": 18,
+   "chapter": "The answer",
+   "text": "Every one of them, at some point, put something on the line.",
+   "tagged": "Every one of them, at some point, put something on the line.",
+   "start": 1350.592,
+   "end": 1354.297,
+   "ratio": 1.07,
+   "margin": 0.353,
+   "startFrame": 81036,
+   "endFrame": 81258
   },
   {
    "id": 481,
-   "block": 17,
-   "chapter": "Outro",
-   "text": "The empires, and the habits, that built a nation.",
-   "tagged": "The empires, and the habits, that built a nation.",
-   "start": 1339.743,
-   "end": 1342.695,
-   "ratio": 0.93,
-   "margin": 0.758,
-   "startFrame": 80385,
-   "endFrame": 80562
+   "block": 18,
+   "chapter": "The answer",
+   "text": "Savings.",
+   "tagged": "Savings.",
+   "start": 1354.674,
+   "end": 1355.326,
+   "ratio": 1.4,
+   "margin": 1.55,
+   "startFrame": 81280,
+   "endFrame": 81320
   },
   {
    "id": 482,
-   "block": 17,
-   "chapter": "Outro",
-   "text": "Next in Empires of India.",
-   "tagged": "Next in Empires of India.",
-   "start": 1343.122,
-   "end": 1344.837,
-   "ratio": 1.09,
-   "margin": 0.758,
-   "startFrame": 80587,
-   "endFrame": 80690
+   "block": 18,
+   "chapter": "The answer",
+   "text": "Pride.",
+   "tagged": "Pride.",
+   "start": 1355.709,
+   "end": 1356.118,
+   "ratio": 1.23,
+   "margin": 9.9,
+   "startFrame": 81343,
+   "endFrame": 81367
   },
   {
    "id": 483,
-   "block": 17,
+   "block": 18,
+   "chapter": "The answer",
+   "text": "A diamond.",
+   "tagged": "A diamond.",
+   "start": 1356.478,
+   "end": 1357.101,
+   "ratio": 1.17,
+   "margin": 0.544,
+   "startFrame": 81389,
+   "endFrame": 81426
+  },
+  {
+   "id": 484,
+   "block": 18,
+   "chapter": "The answer",
+   "text": "That part needs no fortune.",
+   "tagged": "That part needs no fortune.",
+   "start": 1357.452,
+   "end": 1359.245,
+   "ratio": 1.11,
+   "margin": 0.352,
+   "startFrame": 81447,
+   "endFrame": 81555
+  },
+  {
+   "id": 485,
+   "block": 18,
+   "chapter": "The answer",
+   "text": "That part is yours.",
+   "tagged": "That part is yours.",
+   "start": 1359.633,
+   "end": 1361.0,
+   "ratio": 1.17,
+   "margin": 0.289,
+   "startFrame": 81578,
+   "endFrame": 81660
+  },
+  {
+   "id": 486,
+   "block": 18,
+   "chapter": "The answer",
+   "text": "And a hundred years later, the question is still the same one.",
+   "tagged": "And a hundred years later, the question is still the same one.",
+   "start": 1361.381,
+   "end": 1364.711,
+   "ratio": 0.97,
+   "margin": 0.289,
+   "startFrame": 81683,
+   "endFrame": 81883
+  },
+  {
+   "id": 487,
+   "block": 18,
+   "chapter": "The answer",
+   "text": "Who should a company like this really belong to?",
+   "tagged": "Who should a company like this really belong to?",
+   "start": 1365.093,
+   "end": 1367.543,
+   "ratio": 0.94,
+   "margin": 1.059,
+   "startFrame": 81906,
+   "endFrame": 82053
+  },
+  {
+   "id": 488,
+   "block": 18,
+   "chapter": "The answer",
+   "text": "What do you think?",
+   "tagged": "What do you think?",
+   "start": 1368.0,
+   "end": 1368.676,
+   "ratio": 0.72,
+   "margin": 9.9,
+   "startFrame": 82080,
+   "endFrame": 82121
+  },
+  {
+   "id": 489,
+   "block": 18,
+   "chapter": "The answer",
+   "text": "Tell me in the comments.",
+   "tagged": "Tell me in the comments.",
+   "start": 1369.053,
+   "end": 1369.935,
+   "ratio": 0.7,
+   "margin": 9.9,
+   "startFrame": 82143,
+   "endFrame": 82196
+  },
+  {
+   "id": 490,
+   "block": 19,
+   "chapter": "Outro",
+   "text": "This is Built on Bharat.",
+   "tagged": "This is Built on Bharat.",
+   "start": 1371.502,
+   "end": 1373.202,
+   "ratio": 1.14,
+   "margin": 1.536,
+   "startFrame": 82290,
+   "endFrame": 82392
+  },
+  {
+   "id": 491,
+   "block": 19,
+   "chapter": "Outro",
+   "text": "The empires, and the habits, that built a nation.",
+   "tagged": "The empires, and the habits, that built a nation.",
+   "start": 1373.549,
+   "end": 1376.501,
+   "ratio": 0.93,
+   "margin": 0.758,
+   "startFrame": 82413,
+   "endFrame": 82590
+  },
+  {
+   "id": 492,
+   "block": 19,
+   "chapter": "Outro",
+   "text": "Next in Empires of India.",
+   "tagged": "Next in Empires of India.",
+   "start": 1376.928,
+   "end": 1378.643,
+   "ratio": 1.09,
+   "margin": 0.758,
+   "startFrame": 82616,
+   "endFrame": 82719
+  },
+  {
+   "id": 493,
+   "block": 19,
    "chapter": "Outro",
    "text": "How did a group of farmers in a small Gujarat town build Amul?",
    "tagged": "How did a group of farmers in a small Gujarat town build Amul?",
-   "start": 1345.26,
-   "end": 1349.131,
+   "start": 1379.066,
+   "end": 1382.937,
    "ratio": 0.96,
    "margin": 3.009,
-   "startFrame": 80716,
-   "endFrame": 80948
+   "startFrame": 82744,
+   "endFrame": 82976
   }
  ],
  "words": [
@@ -34372,1601 +34516,2321 @@
    "s": 453,
    "w": "And",
    "start": 1275.046,
-   "end": 1275.244,
+   "end": 1275.242,
    "startFrame": 76503,
    "endFrame": 76515
   },
   {
    "s": 453,
    "w": "here's",
-   "start": 1275.244,
-   "end": 1275.575,
+   "start": 1275.242,
+   "end": 1275.569,
    "startFrame": 76515,
    "endFrame": 76534
   },
   {
    "s": 453,
    "w": "the",
-   "start": 1275.575,
-   "end": 1275.773,
+   "start": 1275.569,
+   "end": 1275.765,
    "startFrame": 76534,
    "endFrame": 76546
   },
   {
    "s": 453,
    "w": "catch.",
-   "start": 1275.773,
-   "end": 1276.148,
+   "start": 1275.765,
+   "end": 1276.136,
    "startFrame": 76546,
-   "endFrame": 76569
+   "endFrame": 76568
   },
   {
    "s": 454,
    "w": "To",
-   "start": 1276.568,
-   "end": 1276.752,
-   "startFrame": 76594,
-   "endFrame": 76605
+   "start": 1276.556,
+   "end": 1276.74,
+   "startFrame": 76593,
+   "endFrame": 76604
   },
   {
    "s": 454,
    "w": "the",
-   "start": 1276.752,
-   "end": 1276.988,
-   "startFrame": 76605,
+   "start": 1276.74,
+   "end": 1276.976,
+   "startFrame": 76604,
    "endFrame": 76619
   },
   {
    "s": 454,
    "w": "R.B.I.,",
-   "start": 1276.988,
-   "end": 1277.539,
+   "start": 1276.976,
+   "end": 1277.527,
    "startFrame": 76619,
    "endFrame": 76652
   },
   {
    "s": 454,
    "w": "Tata",
-   "start": 1277.894,
-   "end": 1278.178,
-   "startFrame": 76674,
-   "endFrame": 76691
+   "start": 1277.882,
+   "end": 1278.166,
+   "startFrame": 76673,
+   "endFrame": 76690
   },
   {
    "s": 454,
    "w": "Sons",
-   "start": 1278.178,
-   "end": 1278.462,
-   "startFrame": 76691,
-   "endFrame": 76708
+   "start": 1278.166,
+   "end": 1278.45,
+   "startFrame": 76690,
+   "endFrame": 76707
   },
   {
    "s": 454,
    "w": "looks",
-   "start": 1278.462,
-   "end": 1278.797,
-   "startFrame": 76708,
-   "endFrame": 76728
+   "start": 1278.45,
+   "end": 1278.785,
+   "startFrame": 76707,
+   "endFrame": 76727
   },
   {
    "s": 454,
    "w": "like",
-   "start": 1278.797,
-   "end": 1279.081,
-   "startFrame": 76728,
-   "endFrame": 76745
+   "start": 1278.785,
+   "end": 1279.069,
+   "startFrame": 76727,
+   "endFrame": 76744
   },
   {
    "s": 454,
    "w": "a",
-   "start": 1279.081,
-   "end": 1279.21,
-   "startFrame": 76745,
-   "endFrame": 76753
+   "start": 1279.069,
+   "end": 1279.198,
+   "startFrame": 76744,
+   "endFrame": 76752
   },
   {
    "s": 454,
    "w": "big",
-   "start": 1279.21,
-   "end": 1279.443,
-   "startFrame": 76753,
-   "endFrame": 76767
+   "start": 1279.198,
+   "end": 1279.431,
+   "startFrame": 76752,
+   "endFrame": 76766
   },
   {
    "s": 454,
    "w": "finance",
-   "start": 1279.443,
-   "end": 1279.882,
-   "startFrame": 76767,
-   "endFrame": 76793
+   "start": 1279.431,
+   "end": 1279.87,
+   "startFrame": 76766,
+   "endFrame": 76792
   },
   {
    "s": 454,
    "w": "company.",
-   "start": 1279.882,
-   "end": 1280.424,
-   "startFrame": 76793,
+   "start": 1279.87,
+   "end": 1280.412,
+   "startFrame": 76792,
    "endFrame": 76825
   },
   {
    "s": 455,
    "w": "And",
-   "start": 1280.864,
-   "end": 1281.097,
-   "startFrame": 76852,
-   "endFrame": 76866
+   "start": 1280.852,
+   "end": 1281.085,
+   "startFrame": 76851,
+   "endFrame": 76865
   },
   {
    "s": 455,
    "w": "big",
-   "start": 1281.097,
-   "end": 1281.331,
-   "startFrame": 76866,
-   "endFrame": 76880
+   "start": 1281.085,
+   "end": 1281.319,
+   "startFrame": 76865,
+   "endFrame": 76879
   },
   {
    "s": 455,
    "w": "finance",
-   "start": 1281.331,
-   "end": 1281.772,
-   "startFrame": 76880,
+   "start": 1281.319,
+   "end": 1281.76,
+   "startFrame": 76879,
    "endFrame": 76906
   },
   {
    "s": 455,
    "w": "companies",
-   "start": 1281.772,
-   "end": 1282.316,
+   "start": 1281.76,
+   "end": 1282.304,
    "startFrame": 76906,
-   "endFrame": 76939
+   "endFrame": 76938
   },
   {
    "s": 455,
    "w": "must",
-   "start": 1282.316,
-   "end": 1282.601,
-   "startFrame": 76939,
-   "endFrame": 76956
+   "start": 1282.304,
+   "end": 1282.589,
+   "startFrame": 76938,
+   "endFrame": 76955
   },
   {
    "s": 455,
    "w": "sell",
-   "start": 1282.601,
-   "end": 1282.887,
-   "startFrame": 76956,
-   "endFrame": 76973
+   "start": 1282.589,
+   "end": 1282.875,
+   "startFrame": 76955,
+   "endFrame": 76972
   },
   {
    "s": 455,
    "w": "shares",
-   "start": 1282.887,
-   "end": 1283.275,
-   "startFrame": 76973,
+   "start": 1282.875,
+   "end": 1283.263,
+   "startFrame": 76972,
    "endFrame": 76996
   },
   {
    "s": 455,
    "w": "to",
-   "start": 1283.275,
-   "end": 1283.457,
+   "start": 1283.263,
+   "end": 1283.445,
    "startFrame": 76996,
    "endFrame": 77007
   },
   {
    "s": 455,
    "w": "the",
-   "start": 1283.457,
-   "end": 1283.69,
+   "start": 1283.445,
+   "end": 1283.678,
    "startFrame": 77007,
    "endFrame": 77021
   },
   {
    "s": 455,
    "w": "public.",
-   "start": 1283.69,
-   "end": 1284.183,
+   "start": 1283.678,
+   "end": 1284.171,
    "startFrame": 77021,
-   "endFrame": 77051
+   "endFrame": 77050
   },
   {
    "s": 456,
    "w": "Tata",
-   "start": 1284.616,
-   "end": 1284.873,
-   "startFrame": 77077,
+   "start": 1284.604,
+   "end": 1284.861,
+   "startFrame": 77076,
    "endFrame": 77092
   },
   {
    "s": 456,
    "w": "Sons",
-   "start": 1284.873,
-   "end": 1285.13,
+   "start": 1284.861,
+   "end": 1285.118,
    "startFrame": 77092,
-   "endFrame": 77108
+   "endFrame": 77107
   },
   {
    "s": 456,
    "w": "asked",
-   "start": 1285.13,
-   "end": 1285.434,
-   "startFrame": 77108,
-   "endFrame": 77126
+   "start": 1285.118,
+   "end": 1285.422,
+   "startFrame": 77107,
+   "endFrame": 77125
   },
   {
    "s": 456,
    "w": "to",
-   "start": 1285.434,
-   "end": 1285.598,
-   "startFrame": 77126,
-   "endFrame": 77136
+   "start": 1285.422,
+   "end": 1285.586,
+   "startFrame": 77125,
+   "endFrame": 77135
   },
   {
    "s": 456,
    "w": "be",
-   "start": 1285.598,
-   "end": 1285.762,
-   "startFrame": 77136,
-   "endFrame": 77146
+   "start": 1285.586,
+   "end": 1285.75,
+   "startFrame": 77135,
+   "endFrame": 77145
   },
   {
    "s": 456,
    "w": "let",
-   "start": 1285.762,
-   "end": 1285.972,
-   "startFrame": 77146,
+   "start": 1285.75,
+   "end": 1285.96,
+   "startFrame": 77145,
    "endFrame": 77158
   },
   {
    "s": 456,
    "w": "off.",
-   "start": 1285.972,
-   "end": 1286.276,
+   "start": 1285.96,
+   "end": 1286.264,
    "startFrame": 77158,
-   "endFrame": 77177
+   "endFrame": 77176
   },
   {
    "s": 457,
    "w": "The",
-   "start": 1286.736,
-   "end": 1286.955,
-   "startFrame": 77204,
+   "start": 1286.724,
+   "end": 1286.943,
+   "startFrame": 77203,
    "endFrame": 77217
   },
   {
    "s": 457,
    "w": "R.B.I.",
-   "start": 1286.955,
-   "end": 1287.465,
+   "start": 1286.943,
+   "end": 1287.453,
    "startFrame": 77217,
-   "endFrame": 77248
+   "endFrame": 77247
   },
   {
    "s": 457,
    "w": "said",
-   "start": 1287.465,
-   "end": 1287.732,
-   "startFrame": 77248,
-   "endFrame": 77264
+   "start": 1287.453,
+   "end": 1287.72,
+   "startFrame": 77247,
+   "endFrame": 77263
   },
   {
    "s": 457,
    "w": "no.",
-   "start": 1287.732,
-   "end": 1287.999,
-   "startFrame": 77264,
-   "endFrame": 77280
+   "start": 1287.72,
+   "end": 1287.987,
+   "startFrame": 77263,
+   "endFrame": 77279
   },
   {
    "s": 458,
    "w": "As",
-   "start": 1288.472,
-   "end": 1288.646,
+   "start": 1288.46,
+   "end": 1288.634,
    "startFrame": 77308,
-   "endFrame": 77319
+   "endFrame": 77318
   },
   {
    "s": 458,
    "w": "this",
-   "start": 1288.646,
-   "end": 1288.918,
-   "startFrame": 77319,
-   "endFrame": 77335
+   "start": 1288.634,
+   "end": 1288.906,
+   "startFrame": 77318,
+   "endFrame": 77334
   },
   {
    "s": 458,
    "w": "film",
-   "start": 1288.918,
-   "end": 1289.191,
-   "startFrame": 77335,
+   "start": 1288.906,
+   "end": 1289.179,
+   "startFrame": 77334,
    "endFrame": 77351
   },
   {
    "s": 458,
    "w": "goes",
-   "start": 1289.191,
-   "end": 1289.464,
+   "start": 1289.179,
+   "end": 1289.452,
    "startFrame": 77351,
-   "endFrame": 77368
+   "endFrame": 77367
   },
   {
    "s": 458,
    "w": "out,",
-   "start": 1289.464,
-   "end": 1289.687,
-   "startFrame": 77368,
-   "endFrame": 77381
+   "start": 1289.452,
+   "end": 1289.675,
+   "startFrame": 77367,
+   "endFrame": 77380
   },
   {
    "s": 458,
    "w": "that",
-   "start": 1289.825,
-   "end": 1290.12,
-   "startFrame": 77390,
-   "endFrame": 77407
+   "start": 1289.813,
+   "end": 1290.108,
+   "startFrame": 77389,
+   "endFrame": 77406
   },
   {
    "s": 458,
    "w": "fight",
-   "start": 1290.12,
-   "end": 1290.47,
-   "startFrame": 77407,
-   "endFrame": 77428
+   "start": 1290.108,
+   "end": 1290.458,
+   "startFrame": 77406,
+   "endFrame": 77427
   },
   {
    "s": 458,
    "w": "is",
-   "start": 1290.47,
-   "end": 1290.658,
-   "startFrame": 77428,
+   "start": 1290.458,
+   "end": 1290.646,
+   "startFrame": 77427,
    "endFrame": 77439
   },
   {
    "s": 458,
    "w": "not",
-   "start": 1290.658,
-   "end": 1290.901,
+   "start": 1290.646,
+   "end": 1290.889,
    "startFrame": 77439,
-   "endFrame": 77454
+   "endFrame": 77453
   },
   {
    "s": 458,
    "w": "over.",
-   "start": 1290.901,
-   "end": 1291.304,
-   "startFrame": 77454,
+   "start": 1290.889,
+   "end": 1291.292,
+   "startFrame": 77453,
    "endFrame": 77478
   },
   {
    "s": 459,
    "w": "Who",
-   "start": 1291.751,
-   "end": 1291.97,
-   "startFrame": 77505,
-   "endFrame": 77518
+   "start": 1291.739,
+   "end": 1291.958,
+   "startFrame": 77504,
+   "endFrame": 77517
   },
   {
    "s": 459,
    "w": "wins?",
-   "start": 1291.97,
-   "end": 1292.238,
-   "startFrame": 77518,
+   "start": 1291.958,
+   "end": 1292.226,
+   "startFrame": 77517,
    "endFrame": 77534
   },
   {
    "s": 460,
    "w": "I",
-   "start": 1292.646,
-   "end": 1292.745,
-   "startFrame": 77559,
-   "endFrame": 77565
+   "start": 1292.634,
+   "end": 1292.733,
+   "startFrame": 77558,
+   "endFrame": 77564
   },
   {
    "s": 460,
    "w": "honestly",
-   "start": 1292.745,
-   "end": 1293.122,
-   "startFrame": 77565,
+   "start": 1292.733,
+   "end": 1293.11,
+   "startFrame": 77564,
    "endFrame": 77587
   },
   {
    "s": 460,
    "w": "don't",
-   "start": 1293.122,
-   "end": 1293.38,
+   "start": 1293.11,
+   "end": 1293.368,
    "startFrame": 77587,
-   "endFrame": 77603
+   "endFrame": 77602
   },
   {
    "s": 460,
    "w": "know.",
-   "start": 1293.38,
-   "end": 1293.677,
-   "startFrame": 77603,
-   "endFrame": 77621
+   "start": 1293.368,
+   "end": 1293.665,
+   "startFrame": 77602,
+   "endFrame": 77620
   },
   {
    "s": 461,
    "w": "Nobody",
-   "start": 1294.047,
-   "end": 1294.4,
-   "startFrame": 77643,
-   "endFrame": 77664
+   "start": 1294.035,
+   "end": 1294.388,
+   "startFrame": 77642,
+   "endFrame": 77663
   },
   {
    "s": 461,
    "w": "does",
-   "start": 1294.4,
-   "end": 1294.658,
-   "startFrame": 77664,
+   "start": 1294.388,
+   "end": 1294.646,
+   "startFrame": 77663,
    "endFrame": 77679
   },
   {
    "s": 461,
    "w": "yet.",
-   "start": 1294.658,
-   "end": 1294.964,
+   "start": 1294.646,
+   "end": 1294.952,
    "startFrame": 77679,
-   "endFrame": 77698
+   "endFrame": 77697
   },
   {
    "s": 462,
-   "w": "But",
-   "start": 1295.413,
-   "end": 1295.606,
-   "startFrame": 77725,
-   "endFrame": 77736
+   "w": "And",
+   "start": 1295.656,
+   "end": 1295.879,
+   "startFrame": 77739,
+   "endFrame": 77753
   },
   {
    "s": 462,
-   "w": "step",
-   "start": 1295.606,
-   "end": 1295.843,
-   "startFrame": 77736,
-   "endFrame": 77751
+   "w": "while",
+   "start": 1295.879,
+   "end": 1296.202,
+   "startFrame": 77753,
+   "endFrame": 77772
   },
   {
    "s": 462,
-   "w": "back",
-   "start": 1295.843,
-   "end": 1296.079,
-   "startFrame": 77751,
-   "endFrame": 77765
+   "w": "that",
+   "start": 1296.202,
+   "end": 1296.474,
+   "startFrame": 77772,
+   "endFrame": 77788
   },
   {
    "s": 462,
-   "w": "for",
-   "start": 1296.079,
-   "end": 1296.273,
-   "startFrame": 77765,
-   "endFrame": 77776
+   "w": "fight",
+   "start": 1296.474,
+   "end": 1296.797,
+   "startFrame": 77788,
+   "endFrame": 77808
   },
   {
    "s": 462,
-   "w": "a",
-   "start": 1296.273,
-   "end": 1296.38,
-   "startFrame": 77776,
-   "endFrame": 77783
+   "w": "goes",
+   "start": 1296.797,
+   "end": 1297.069,
+   "startFrame": 77808,
+   "endFrame": 77824
   },
   {
    "s": 462,
-   "w": "moment,",
-   "start": 1296.38,
-   "end": 1296.703,
-   "startFrame": 77783,
-   "endFrame": 77802
-  },
-  {
-   "s": 462,
-   "w": "and",
-   "start": 1297.043,
-   "end": 1297.257,
-   "startFrame": 77823,
+   "w": "on,",
+   "start": 1297.069,
+   "end": 1297.243,
+   "startFrame": 77824,
    "endFrame": 77835
   },
   {
    "s": 462,
-   "w": "look",
-   "start": 1297.257,
-   "end": 1297.518,
-   "startFrame": 77835,
-   "endFrame": 77851
+   "w": "the",
+   "start": 1297.449,
+   "end": 1297.714,
+   "startFrame": 77847,
+   "endFrame": 77863
   },
   {
    "s": 462,
-   "w": "at",
-   "start": 1297.518,
-   "end": 1297.684,
-   "startFrame": 77851,
-   "endFrame": 77861
+   "w": "work",
+   "start": 1297.714,
+   "end": 1298.038,
+   "startFrame": 77863,
+   "endFrame": 77882
   },
   {
    "s": 462,
-   "w": "who",
-   "start": 1297.684,
-   "end": 1297.898,
-   "startFrame": 77861,
-   "endFrame": 77874
+   "w": "does",
+   "start": 1298.038,
+   "end": 1298.363,
+   "startFrame": 77882,
+   "endFrame": 77902
   },
   {
    "s": 462,
-   "w": "built",
-   "start": 1297.898,
-   "end": 1298.207,
-   "startFrame": 77874,
-   "endFrame": 77892
+   "w": "not",
+   "start": 1298.363,
+   "end": 1298.628,
+   "startFrame": 77902,
+   "endFrame": 77918
   },
   {
    "s": 462,
-   "w": "this.",
-   "start": 1298.207,
-   "end": 1298.563,
-   "startFrame": 77892,
-   "endFrame": 77914
+   "w": "stop.",
+   "start": 1298.628,
+   "end": 1299.07,
+   "startFrame": 77918,
+   "endFrame": 77944
   },
   {
    "s": 463,
-   "w": "A",
-   "start": 1298.986,
-   "end": 1299.13,
-   "startFrame": 77939,
-   "endFrame": 77948
+   "w": "At",
+   "start": 1299.541,
+   "end": 1299.702,
+   "startFrame": 77972,
+   "endFrame": 77982
   },
   {
    "s": 463,
-   "w": "priest's",
-   "start": 1299.13,
-   "end": 1299.679,
-   "startFrame": 77948,
-   "endFrame": 77981
+   "w": "a",
+   "start": 1299.702,
+   "end": 1299.817,
+   "startFrame": 77982,
+   "endFrame": 77989
   },
   {
    "s": 463,
-   "w": "son",
-   "start": 1299.679,
-   "end": 1299.939,
-   "startFrame": 77981,
-   "endFrame": 77996
+   "w": "place",
+   "start": 1299.817,
+   "end": 1300.115,
+   "startFrame": 77989,
+   "endFrame": 78007
   },
   {
    "s": 463,
-   "w": "whose",
-   "start": 1299.939,
-   "end": 1300.314,
-   "startFrame": 77996,
-   "endFrame": 78019
+   "w": "called",
+   "start": 1300.115,
+   "end": 1300.459,
+   "startFrame": 78007,
+   "endFrame": 78028
   },
   {
    "s": 463,
-   "w": "family",
-   "start": 1300.314,
-   "end": 1300.748,
-   "startFrame": 78019,
-   "endFrame": 78045
+   "w": "Dholera,",
+   "start": 1300.459,
+   "end": 1300.85,
+   "startFrame": 78028,
+   "endFrame": 78051
   },
   {
    "s": 463,
-   "w": "nearly",
-   "start": 1300.748,
-   "end": 1301.181,
-   "startFrame": 78045,
+   "w": "in",
+   "start": 1300.993,
+   "end": 1301.189,
+   "startFrame": 78060,
    "endFrame": 78071
   },
   {
    "s": 463,
-   "w": "lost",
-   "start": 1301.181,
-   "end": 1301.498,
+   "w": "Gujarat,",
+   "start": 1301.189,
+   "end": 1301.663,
    "startFrame": 78071,
-   "endFrame": 78090
+   "endFrame": 78100
   },
   {
    "s": 463,
-   "w": "everything.",
-   "start": 1301.498,
-   "end": 1302.278,
-   "startFrame": 78090,
-   "endFrame": 78137
+   "w": "Tata",
+   "start": 1302.028,
+   "end": 1302.295,
+   "startFrame": 78122,
+   "endFrame": 78138
   },
   {
-   "s": 464,
-   "w": "Eight",
-   "start": 1302.729,
-   "end": 1303.086,
-   "startFrame": 78164,
-   "endFrame": 78185
+   "s": 463,
+   "w": "is",
+   "start": 1302.295,
+   "end": 1302.465,
+   "startFrame": 78138,
+   "endFrame": 78148
   },
   {
-   "s": 464,
-   "w": "thousand",
-   "start": 1303.086,
-   "end": 1303.607,
-   "startFrame": 78185,
-   "endFrame": 78216
+   "s": 463,
+   "w": "building",
+   "start": 1302.465,
+   "end": 1302.927,
+   "startFrame": 78148,
+   "endFrame": 78176
   },
   {
-   "s": 464,
-   "w": "ordinary",
-   "start": 1303.607,
-   "end": 1304.128,
-   "startFrame": 78216,
-   "endFrame": 78248
-  },
-  {
-   "s": 464,
-   "w": "savers.",
-   "start": 1304.128,
-   "end": 1304.649,
-   "startFrame": 78248,
-   "endFrame": 78279
-  },
-  {
-   "s": 465,
-   "w": "A",
-   "start": 1304.975,
-   "end": 1305.088,
-   "startFrame": 78298,
-   "endFrame": 78305
-  },
-  {
-   "s": 465,
-   "w": "husband",
-   "start": 1305.088,
-   "end": 1305.474,
-   "startFrame": 78305,
-   "endFrame": 78328
-  },
-  {
-   "s": 465,
-   "w": "and",
-   "start": 1305.474,
-   "end": 1305.678,
-   "startFrame": 78328,
-   "endFrame": 78341
-  },
-  {
-   "s": 465,
-   "w": "wife",
-   "start": 1305.678,
-   "end": 1305.927,
-   "startFrame": 78341,
-   "endFrame": 78356
-  },
-  {
-   "s": 465,
-   "w": "who",
-   "start": 1305.927,
-   "end": 1306.131,
-   "startFrame": 78356,
-   "endFrame": 78368
-  },
-  {
-   "s": 465,
-   "w": "pledged",
-   "start": 1306.131,
-   "end": 1306.517,
-   "startFrame": 78368,
-   "endFrame": 78391
-  },
-  {
-   "s": 465,
-   "w": "their",
-   "start": 1306.517,
-   "end": 1306.812,
-   "startFrame": 78391,
-   "endFrame": 78409
-  },
-  {
-   "s": 465,
-   "w": "diamond.",
-   "start": 1306.812,
-   "end": 1307.288,
-   "startFrame": 78409,
-   "endFrame": 78437
-  },
-  {
-   "s": 466,
-   "w": "An",
-   "start": 1307.617,
-   "end": 1307.79,
-   "startFrame": 78457,
-   "endFrame": 78467
-  },
-  {
-   "s": 466,
-   "w": "apprentice",
-   "start": 1307.79,
-   "end": 1308.357,
-   "startFrame": 78467,
-   "endFrame": 78501
-  },
-  {
-   "s": 466,
-   "w": "who",
-   "start": 1308.357,
-   "end": 1308.579,
-   "startFrame": 78501,
-   "endFrame": 78515
-  },
-  {
-   "s": 466,
-   "w": "worked",
-   "start": 1308.579,
-   "end": 1308.948,
-   "startFrame": 78515,
-   "endFrame": 78537
-  },
-  {
-   "s": 466,
-   "w": "without",
-   "start": 1308.948,
-   "end": 1309.367,
-   "startFrame": 78537,
-   "endFrame": 78562
-  },
-  {
-   "s": 466,
-   "w": "pay.",
-   "start": 1309.367,
-   "end": 1309.688,
-   "startFrame": 78562,
-   "endFrame": 78581
-  },
-  {
-   "s": 467,
-   "w": "A",
-   "start": 1310.018,
-   "end": 1310.142,
-   "startFrame": 78601,
-   "endFrame": 78609
-  },
-  {
-   "s": 467,
-   "w": "young",
-   "start": 1310.142,
-   "end": 1310.466,
-   "startFrame": 78609,
-   "endFrame": 78628
-  },
-  {
-   "s": 467,
-   "w": "engineer",
-   "start": 1310.466,
-   "end": 1310.939,
-   "startFrame": 78628,
-   "endFrame": 78656
-  },
-  {
-   "s": 467,
-   "w": "with",
-   "start": 1310.939,
-   "end": 1311.213,
-   "startFrame": 78656,
-   "endFrame": 78673
-  },
-  {
-   "s": 467,
+   "s": 463,
    "w": "a",
-   "start": 1311.213,
-   "end": 1311.337,
-   "startFrame": 78673,
-   "endFrame": 78680
+   "start": 1302.927,
+   "end": 1303.048,
+   "startFrame": 78176,
+   "endFrame": 78183
+  },
+  {
+   "s": 463,
+   "w": "factory",
+   "start": 1303.048,
+   "end": 1303.461,
+   "startFrame": 78183,
+   "endFrame": 78208
+  },
+  {
+   "s": 463,
+   "w": "to",
+   "start": 1303.461,
+   "end": 1303.631,
+   "startFrame": 78208,
+   "endFrame": 78218
+  },
+  {
+   "s": 463,
+   "w": "make",
+   "start": 1303.631,
+   "end": 1303.898,
+   "startFrame": 78218,
+   "endFrame": 78234
+  },
+  {
+   "s": 463,
+   "w": "chips.",
+   "start": 1303.898,
+   "end": 1304.311,
+   "startFrame": 78234,
+   "endFrame": 78259
+  },
+  {
+   "s": 464,
+   "w": "The",
+   "start": 1304.664,
+   "end": 1304.907,
+   "startFrame": 78280,
+   "endFrame": 78294
+  },
+  {
+   "s": 464,
+   "w": "tiny",
+   "start": 1304.907,
+   "end": 1305.204,
+   "startFrame": 78294,
+   "endFrame": 78312
+  },
+  {
+   "s": 464,
+   "w": "chips",
+   "start": 1305.204,
+   "end": 1305.554,
+   "startFrame": 78312,
+   "endFrame": 78333
+  },
+  {
+   "s": 464,
+   "w": "inside",
+   "start": 1305.554,
+   "end": 1305.959,
+   "startFrame": 78333,
+   "endFrame": 78358
+  },
+  {
+   "s": 464,
+   "w": "phones",
+   "start": 1305.959,
+   "end": 1306.364,
+   "startFrame": 78358,
+   "endFrame": 78382
+  },
+  {
+   "s": 464,
+   "w": "and",
+   "start": 1306.364,
+   "end": 1306.606,
+   "startFrame": 78382,
+   "endFrame": 78396
+  },
+  {
+   "s": 464,
+   "w": "cars.",
+   "start": 1306.606,
+   "end": 1307.011,
+   "startFrame": 78396,
+   "endFrame": 78421
+  },
+  {
+   "s": 465,
+   "w": "Ninety",
+   "start": 1307.432,
+   "end": 1307.901,
+   "startFrame": 78446,
+   "endFrame": 78474
+  },
+  {
+   "s": 465,
+   "w": "one",
+   "start": 1307.901,
+   "end": 1308.183,
+   "startFrame": 78474,
+   "endFrame": 78491
+  },
+  {
+   "s": 465,
+   "w": "thousand",
+   "start": 1308.183,
+   "end": 1308.778,
+   "startFrame": 78491,
+   "endFrame": 78527
+  },
+  {
+   "s": 465,
+   "w": "crore",
+   "start": 1308.778,
+   "end": 1309.184,
+   "startFrame": 78527,
+   "endFrame": 78551
+  },
+  {
+   "s": 465,
+   "w": "rupees.",
+   "start": 1309.184,
+   "end": 1309.779,
+   "startFrame": 78551,
+   "endFrame": 78587
+  },
+  {
+   "s": 466,
+   "w": "Today,",
+   "start": 1310.233,
+   "end": 1310.568,
+   "startFrame": 78614,
+   "endFrame": 78634
+  },
+  {
+   "s": 466,
+   "w": "India",
+   "start": 1310.741,
+   "end": 1311.078,
+   "startFrame": 78644,
+   "endFrame": 78665
+  },
+  {
+   "s": 466,
+   "w": "buys",
+   "start": 1311.078,
+   "end": 1311.363,
+   "startFrame": 78665,
+   "endFrame": 78682
+  },
+  {
+   "s": 466,
+   "w": "almost",
+   "start": 1311.363,
+   "end": 1311.752,
+   "startFrame": 78682,
+   "endFrame": 78705
+  },
+  {
+   "s": 466,
+   "w": "all",
+   "start": 1311.752,
+   "end": 1311.985,
+   "startFrame": 78705,
+   "endFrame": 78719
+  },
+  {
+   "s": 466,
+   "w": "of",
+   "start": 1311.985,
+   "end": 1312.166,
+   "startFrame": 78719,
+   "endFrame": 78730
+  },
+  {
+   "s": 466,
+   "w": "its",
+   "start": 1312.166,
+   "end": 1312.4,
+   "startFrame": 78730,
+   "endFrame": 78744
+  },
+  {
+   "s": 466,
+   "w": "chips",
+   "start": 1312.4,
+   "end": 1312.736,
+   "startFrame": 78744,
+   "endFrame": 78764
+  },
+  {
+   "s": 466,
+   "w": "from",
+   "start": 1312.736,
+   "end": 1313.022,
+   "startFrame": 78764,
+   "endFrame": 78781
+  },
+  {
+   "s": 466,
+   "w": "abroad.",
+   "start": 1313.022,
+   "end": 1313.514,
+   "startFrame": 78781,
+   "endFrame": 78811
   },
   {
    "s": 467,
-   "w": "postcard.",
-   "start": 1311.337,
-   "end": 1311.91,
-   "startFrame": 78680,
-   "endFrame": 78715
+   "w": "This",
+   "start": 1313.943,
+   "end": 1314.212,
+   "startFrame": 78837,
+   "endFrame": 78853
+  },
+  {
+   "s": 467,
+   "w": "would",
+   "start": 1314.212,
+   "end": 1314.53,
+   "startFrame": 78853,
+   "endFrame": 78872
+  },
+  {
+   "s": 467,
+   "w": "be",
+   "start": 1314.53,
+   "end": 1314.702,
+   "startFrame": 78872,
+   "endFrame": 78882
+  },
+  {
+   "s": 467,
+   "w": "the",
+   "start": 1314.702,
+   "end": 1314.922,
+   "startFrame": 78882,
+   "endFrame": 78895
+  },
+  {
+   "s": 467,
+   "w": "country's",
+   "start": 1314.922,
+   "end": 1315.436,
+   "startFrame": 78895,
+   "endFrame": 78926
+  },
+  {
+   "s": 467,
+   "w": "first",
+   "start": 1315.436,
+   "end": 1315.754,
+   "startFrame": 78926,
+   "endFrame": 78945
+  },
+  {
+   "s": 467,
+   "w": "big",
+   "start": 1315.754,
+   "end": 1315.974,
+   "startFrame": 78945,
+   "endFrame": 78958
+  },
+  {
+   "s": 467,
+   "w": "chip",
+   "start": 1315.974,
+   "end": 1316.243,
+   "startFrame": 78958,
+   "endFrame": 78975
+  },
+  {
+   "s": 467,
+   "w": "factory.",
+   "start": 1316.243,
+   "end": 1316.757,
+   "startFrame": 78975,
+   "endFrame": 79005
   },
   {
    "s": 468,
-   "w": "A",
-   "start": 1312.208,
-   "end": 1312.338,
-   "startFrame": 78732,
-   "endFrame": 78740
+   "w": "The",
+   "start": 1317.243,
+   "end": 1317.419,
+   "startFrame": 79035,
+   "endFrame": 79045
   },
   {
    "s": 468,
-   "w": "man",
-   "start": 1312.338,
-   "end": 1312.571,
-   "startFrame": 78740,
-   "endFrame": 78754
+   "w": "government",
+   "start": 1317.419,
+   "end": 1317.87,
+   "startFrame": 79045,
+   "endFrame": 79072
   },
   {
    "s": 468,
-   "w": "shovelling",
-   "start": 1312.571,
-   "end": 1313.168,
-   "startFrame": 78754,
-   "endFrame": 78790
+   "w": "expects",
+   "start": 1317.87,
+   "end": 1318.202,
+   "startFrame": 79072,
+   "endFrame": 79092
   },
   {
    "s": 468,
-   "w": "limestone",
-   "start": 1313.168,
-   "end": 1313.713,
-   "startFrame": 78790,
-   "endFrame": 78823
-  },
-  {
-   "s": 468,
-   "w": "next",
-   "start": 1313.713,
-   "end": 1313.999,
-   "startFrame": 78823,
-   "endFrame": 78840
+   "w": "it",
+   "start": 1318.202,
+   "end": 1318.339,
+   "startFrame": 79092,
+   "endFrame": 79100
   },
   {
    "s": 468,
    "w": "to",
-   "start": 1313.999,
-   "end": 1314.18,
-   "startFrame": 78840,
-   "endFrame": 78851
+   "start": 1318.339,
+   "end": 1318.477,
+   "startFrame": 79100,
+   "endFrame": 79109
   },
   {
    "s": 468,
+   "w": "start",
+   "start": 1318.477,
+   "end": 1318.731,
+   "startFrame": 79109,
+   "endFrame": 79124
+  },
+  {
+   "s": 468,
+   "w": "around",
+   "start": 1318.731,
+   "end": 1319.025,
+   "startFrame": 79124,
+   "endFrame": 79142
+  },
+  {
+   "s": 468,
+   "w": "twenty",
+   "start": 1319.025,
+   "end": 1319.318,
+   "startFrame": 79142,
+   "endFrame": 79159
+  },
+  {
+   "s": 468,
+   "w": "twenty",
+   "start": 1319.318,
+   "end": 1319.612,
+   "startFrame": 79159,
+   "endFrame": 79177
+  },
+  {
+   "s": 468,
+   "w": "eight.",
+   "start": 1319.612,
+   "end": 1319.945,
+   "startFrame": 79177,
+   "endFrame": 79197
+  },
+  {
+   "s": 469,
+   "w": "A",
+   "start": 1320.439,
+   "end": 1320.557,
+   "startFrame": 79226,
+   "endFrame": 79233
+  },
+  {
+   "s": 469,
+   "w": "hundred",
+   "start": 1320.557,
+   "end": 1320.96,
+   "startFrame": 79233,
+   "endFrame": 79258
+  },
+  {
+   "s": 469,
+   "w": "years",
+   "start": 1320.96,
+   "end": 1321.268,
+   "startFrame": 79258,
+   "endFrame": 79276
+  },
+  {
+   "s": 469,
+   "w": "ago,",
+   "start": 1321.268,
+   "end": 1321.482,
+   "startFrame": 79276,
+   "endFrame": 79289
+  },
+  {
+   "s": 469,
    "w": "the",
-   "start": 1314.18,
-   "end": 1314.414,
-   "startFrame": 78851,
-   "endFrame": 78865
-  },
-  {
-   "s": 468,
-   "w": "furnace.",
-   "start": 1314.414,
-   "end": 1314.959,
-   "startFrame": 78865,
-   "endFrame": 78898
+   "start": 1321.7,
+   "end": 1321.853,
+   "startFrame": 79302,
+   "endFrame": 79311
   },
   {
    "s": 469,
-   "w": "What",
-   "start": 1315.359,
-   "end": 1315.547,
-   "startFrame": 78922,
-   "endFrame": 78933
+   "w": "bet",
+   "start": 1321.853,
+   "end": 1322.007,
+   "startFrame": 79311,
+   "endFrame": 79320
   },
   {
    "s": 469,
-   "w": "do",
-   "start": 1315.547,
-   "end": 1315.666,
-   "startFrame": 78933,
-   "endFrame": 78940
+   "w": "was",
+   "start": 1322.007,
+   "end": 1322.16,
+   "startFrame": 79320,
+   "endFrame": 79330
   },
   {
    "s": 469,
-   "w": "they",
-   "start": 1315.666,
-   "end": 1315.853,
-   "startFrame": 78940,
-   "endFrame": 78951
+   "w": "steel,",
+   "start": 1322.16,
+   "end": 1322.381,
+   "startFrame": 79330,
+   "endFrame": 79343
   },
   {
    "s": 469,
-   "w": "have",
-   "start": 1315.853,
-   "end": 1316.041,
-   "startFrame": 78951,
-   "endFrame": 78962
+   "w": "and",
+   "start": 1322.47,
+   "end": 1322.714,
+   "startFrame": 79348,
+   "endFrame": 79363
+  },
+  {
+   "s": 469,
+   "w": "a",
+   "start": 1322.714,
+   "end": 1322.85,
+   "startFrame": 79363,
+   "endFrame": 79371
+  },
+  {
+   "s": 469,
+   "w": "furnace",
+   "start": 1322.85,
+   "end": 1323.311,
+   "startFrame": 79371,
+   "endFrame": 79399
   },
   {
    "s": 469,
    "w": "in",
-   "start": 1316.041,
-   "end": 1316.16,
-   "startFrame": 78962,
-   "endFrame": 78970
+   "start": 1323.311,
+   "end": 1323.502,
+   "startFrame": 79399,
+   "endFrame": 79410
   },
   {
    "s": 469,
-   "w": "common?",
-   "start": 1316.16,
-   "end": 1316.416,
-   "startFrame": 78970,
-   "endFrame": 78985
-  },
-  {
-   "s": 470,
-   "w": "Every",
-   "start": 1316.786,
-   "end": 1317.12,
-   "startFrame": 79007,
-   "endFrame": 79027
-  },
-  {
-   "s": 470,
-   "w": "one",
-   "start": 1317.12,
-   "end": 1317.351,
-   "startFrame": 79027,
-   "endFrame": 79041
-  },
-  {
-   "s": 470,
-   "w": "of",
-   "start": 1317.351,
-   "end": 1317.531,
-   "startFrame": 79041,
-   "endFrame": 79052
-  },
-  {
-   "s": 470,
-   "w": "them,",
-   "start": 1317.531,
-   "end": 1317.814,
-   "startFrame": 79052,
-   "endFrame": 79069
-  },
-  {
-   "s": 470,
-   "w": "at",
-   "start": 1317.978,
-   "end": 1318.179,
-   "startFrame": 79079,
-   "endFrame": 79091
-  },
-  {
-   "s": 470,
-   "w": "some",
-   "start": 1318.179,
-   "end": 1318.495,
-   "startFrame": 79091,
-   "endFrame": 79110
-  },
-  {
-   "s": 470,
-   "w": "point,",
-   "start": 1318.495,
-   "end": 1318.868,
-   "startFrame": 79110,
-   "endFrame": 79132
-  },
-  {
-   "s": 470,
-   "w": "put",
-   "start": 1319.12,
-   "end": 1319.322,
-   "startFrame": 79147,
-   "endFrame": 79159
-  },
-  {
-   "s": 470,
-   "w": "something",
-   "start": 1319.322,
-   "end": 1319.794,
-   "startFrame": 79159,
-   "endFrame": 79188
-  },
-  {
-   "s": 470,
-   "w": "on",
-   "start": 1319.794,
-   "end": 1319.951,
-   "startFrame": 79188,
-   "endFrame": 79197
-  },
-  {
-   "s": 470,
    "w": "the",
-   "start": 1319.951,
-   "end": 1320.153,
-   "startFrame": 79197,
-   "endFrame": 79209
+   "start": 1323.502,
+   "end": 1323.746,
+   "startFrame": 79410,
+   "endFrame": 79425
+  },
+  {
+   "s": 469,
+   "w": "jungle.",
+   "start": 1323.746,
+   "end": 1324.262,
+   "startFrame": 79425,
+   "endFrame": 79456
   },
   {
    "s": 470,
-   "w": "line.",
-   "start": 1320.153,
-   "end": 1320.49,
-   "startFrame": 79209,
-   "endFrame": 79229
+   "w": "Now",
+   "start": 1324.767,
+   "end": 1325.062,
+   "startFrame": 79486,
+   "endFrame": 79504
+  },
+  {
+   "s": 470,
+   "w": "it's",
+   "start": 1325.062,
+   "end": 1325.422,
+   "startFrame": 79504,
+   "endFrame": 79525
+  },
+  {
+   "s": 470,
+   "w": "chips.",
+   "start": 1325.422,
+   "end": 1325.978,
+   "startFrame": 79525,
+   "endFrame": 79559
   },
   {
    "s": 471,
-   "w": "Savings.",
-   "start": 1320.868,
-   "end": 1321.52,
-   "startFrame": 79252,
-   "endFrame": 79291
+   "w": "The",
+   "start": 1326.418,
+   "end": 1326.635,
+   "startFrame": 79585,
+   "endFrame": 79598
+  },
+  {
+   "s": 471,
+   "w": "same",
+   "start": 1326.635,
+   "end": 1326.899,
+   "startFrame": 79598,
+   "endFrame": 79614
+  },
+  {
+   "s": 471,
+   "w": "bet,",
+   "start": 1326.899,
+   "end": 1327.116,
+   "startFrame": 79614,
+   "endFrame": 79627
+  },
+  {
+   "s": 471,
+   "w": "all",
+   "start": 1327.203,
+   "end": 1327.484,
+   "startFrame": 79632,
+   "endFrame": 79649
+  },
+  {
+   "s": 471,
+   "w": "over",
+   "start": 1327.484,
+   "end": 1327.826,
+   "startFrame": 79649,
+   "endFrame": 79670
+  },
+  {
+   "s": 471,
+   "w": "again.",
+   "start": 1327.826,
+   "end": 1328.356,
+   "startFrame": 79670,
+   "endFrame": 79701
   },
   {
    "s": 472,
-   "w": "Pride.",
-   "start": 1321.902,
-   "end": 1322.312,
-   "startFrame": 79314,
-   "endFrame": 79339
+   "w": "But",
+   "start": 1329.219,
+   "end": 1329.413,
+   "startFrame": 79753,
+   "endFrame": 79765
+  },
+  {
+   "s": 472,
+   "w": "step",
+   "start": 1329.413,
+   "end": 1329.649,
+   "startFrame": 79765,
+   "endFrame": 79779
+  },
+  {
+   "s": 472,
+   "w": "back",
+   "start": 1329.649,
+   "end": 1329.886,
+   "startFrame": 79779,
+   "endFrame": 79793
+  },
+  {
+   "s": 472,
+   "w": "for",
+   "start": 1329.886,
+   "end": 1330.079,
+   "startFrame": 79793,
+   "endFrame": 79805
+  },
+  {
+   "s": 472,
+   "w": "a",
+   "start": 1330.079,
+   "end": 1330.187,
+   "startFrame": 79805,
+   "endFrame": 79811
+  },
+  {
+   "s": 472,
+   "w": "moment,",
+   "start": 1330.187,
+   "end": 1330.509,
+   "startFrame": 79811,
+   "endFrame": 79831
+  },
+  {
+   "s": 472,
+   "w": "and",
+   "start": 1330.849,
+   "end": 1331.063,
+   "startFrame": 79851,
+   "endFrame": 79864
+  },
+  {
+   "s": 472,
+   "w": "look",
+   "start": 1331.063,
+   "end": 1331.324,
+   "startFrame": 79864,
+   "endFrame": 79879
+  },
+  {
+   "s": 472,
+   "w": "at",
+   "start": 1331.324,
+   "end": 1331.491,
+   "startFrame": 79879,
+   "endFrame": 79889
+  },
+  {
+   "s": 472,
+   "w": "who",
+   "start": 1331.491,
+   "end": 1331.704,
+   "startFrame": 79889,
+   "endFrame": 79902
+  },
+  {
+   "s": 472,
+   "w": "built",
+   "start": 1331.704,
+   "end": 1332.013,
+   "startFrame": 79902,
+   "endFrame": 79921
+  },
+  {
+   "s": 472,
+   "w": "this.",
+   "start": 1332.013,
+   "end": 1332.369,
+   "startFrame": 79921,
+   "endFrame": 79942
   },
   {
    "s": 473,
    "w": "A",
-   "start": 1322.672,
-   "end": 1322.792,
-   "startFrame": 79360,
-   "endFrame": 79368
+   "start": 1332.792,
+   "end": 1332.936,
+   "startFrame": 79968,
+   "endFrame": 79976
   },
   {
    "s": 473,
+   "w": "priest's",
+   "start": 1332.936,
+   "end": 1333.485,
+   "startFrame": 79976,
+   "endFrame": 80009
+  },
+  {
+   "s": 473,
+   "w": "son",
+   "start": 1333.485,
+   "end": 1333.745,
+   "startFrame": 80009,
+   "endFrame": 80025
+  },
+  {
+   "s": 473,
+   "w": "whose",
+   "start": 1333.745,
+   "end": 1334.12,
+   "startFrame": 80025,
+   "endFrame": 80047
+  },
+  {
+   "s": 473,
+   "w": "family",
+   "start": 1334.12,
+   "end": 1334.554,
+   "startFrame": 80047,
+   "endFrame": 80073
+  },
+  {
+   "s": 473,
+   "w": "nearly",
+   "start": 1334.554,
+   "end": 1334.987,
+   "startFrame": 80073,
+   "endFrame": 80099
+  },
+  {
+   "s": 473,
+   "w": "lost",
+   "start": 1334.987,
+   "end": 1335.304,
+   "startFrame": 80099,
+   "endFrame": 80118
+  },
+  {
+   "s": 473,
+   "w": "everything.",
+   "start": 1335.304,
+   "end": 1336.084,
+   "startFrame": 80118,
+   "endFrame": 80165
+  },
+  {
+   "s": 474,
+   "w": "Eight",
+   "start": 1336.535,
+   "end": 1336.892,
+   "startFrame": 80192,
+   "endFrame": 80214
+  },
+  {
+   "s": 474,
+   "w": "thousand",
+   "start": 1336.892,
+   "end": 1337.413,
+   "startFrame": 80214,
+   "endFrame": 80245
+  },
+  {
+   "s": 474,
+   "w": "ordinary",
+   "start": 1337.413,
+   "end": 1337.934,
+   "startFrame": 80245,
+   "endFrame": 80276
+  },
+  {
+   "s": 474,
+   "w": "savers.",
+   "start": 1337.934,
+   "end": 1338.455,
+   "startFrame": 80276,
+   "endFrame": 80307
+  },
+  {
+   "s": 475,
+   "w": "A",
+   "start": 1338.782,
+   "end": 1338.895,
+   "startFrame": 80327,
+   "endFrame": 80334
+  },
+  {
+   "s": 475,
+   "w": "husband",
+   "start": 1338.895,
+   "end": 1339.281,
+   "startFrame": 80334,
+   "endFrame": 80357
+  },
+  {
+   "s": 475,
+   "w": "and",
+   "start": 1339.281,
+   "end": 1339.485,
+   "startFrame": 80357,
+   "endFrame": 80369
+  },
+  {
+   "s": 475,
+   "w": "wife",
+   "start": 1339.485,
+   "end": 1339.734,
+   "startFrame": 80369,
+   "endFrame": 80384
+  },
+  {
+   "s": 475,
+   "w": "who",
+   "start": 1339.734,
+   "end": 1339.938,
+   "startFrame": 80384,
+   "endFrame": 80396
+  },
+  {
+   "s": 475,
+   "w": "pledged",
+   "start": 1339.938,
+   "end": 1340.323,
+   "startFrame": 80396,
+   "endFrame": 80419
+  },
+  {
+   "s": 475,
+   "w": "their",
+   "start": 1340.323,
+   "end": 1340.618,
+   "startFrame": 80419,
+   "endFrame": 80437
+  },
+  {
+   "s": 475,
    "w": "diamond.",
-   "start": 1322.792,
-   "end": 1323.294,
-   "startFrame": 79368,
-   "endFrame": 79398
-  },
-  {
-   "s": 474,
-   "w": "That",
-   "start": 1323.646,
-   "end": 1323.959,
-   "startFrame": 79419,
-   "endFrame": 79438
-  },
-  {
-   "s": 474,
-   "w": "part",
-   "start": 1323.959,
-   "end": 1324.272,
-   "startFrame": 79438,
-   "endFrame": 79456
-  },
-  {
-   "s": 474,
-   "w": "needs",
-   "start": 1324.272,
-   "end": 1324.642,
-   "startFrame": 79456,
-   "endFrame": 79479
-  },
-  {
-   "s": 474,
-   "w": "no",
-   "start": 1324.642,
-   "end": 1324.841,
-   "startFrame": 79479,
-   "endFrame": 79490
-  },
-  {
-   "s": 474,
-   "w": "fortune.",
-   "start": 1324.841,
-   "end": 1325.439,
-   "startFrame": 79490,
-   "endFrame": 79526
-  },
-  {
-   "s": 475,
-   "w": "That",
-   "start": 1325.826,
-   "end": 1326.153,
-   "startFrame": 79550,
-   "endFrame": 79569
-  },
-  {
-   "s": 475,
-   "w": "part",
-   "start": 1326.153,
-   "end": 1326.48,
-   "startFrame": 79569,
-   "endFrame": 79589
-  },
-  {
-   "s": 475,
-   "w": "is",
-   "start": 1326.48,
-   "end": 1326.688,
-   "startFrame": 79589,
-   "endFrame": 79601
-  },
-  {
-   "s": 475,
-   "w": "yours.",
-   "start": 1326.688,
-   "end": 1327.194,
-   "startFrame": 79601,
-   "endFrame": 79632
+   "start": 1340.618,
+   "end": 1341.094,
+   "startFrame": 80437,
+   "endFrame": 80466
   },
   {
    "s": 476,
-   "w": "And",
-   "start": 1327.575,
-   "end": 1327.79,
-   "startFrame": 79654,
-   "endFrame": 79667
+   "w": "An",
+   "start": 1341.423,
+   "end": 1341.596,
+   "startFrame": 80485,
+   "endFrame": 80496
   },
   {
    "s": 476,
-   "w": "a",
-   "start": 1327.79,
-   "end": 1327.909,
-   "startFrame": 79667,
-   "endFrame": 79675
+   "w": "apprentice",
+   "start": 1341.596,
+   "end": 1342.163,
+   "startFrame": 80496,
+   "endFrame": 80530
   },
   {
    "s": 476,
-   "w": "hundred",
-   "start": 1327.909,
-   "end": 1328.315,
-   "startFrame": 79675,
-   "endFrame": 79699
+   "w": "who",
+   "start": 1342.163,
+   "end": 1342.385,
+   "startFrame": 80530,
+   "endFrame": 80543
   },
   {
    "s": 476,
-   "w": "years",
-   "start": 1328.315,
-   "end": 1328.625,
-   "startFrame": 79699,
-   "endFrame": 79718
+   "w": "worked",
+   "start": 1342.385,
+   "end": 1342.754,
+   "startFrame": 80543,
+   "endFrame": 80565
   },
   {
    "s": 476,
-   "w": "later,",
-   "start": 1328.625,
-   "end": 1328.935,
-   "startFrame": 79718,
-   "endFrame": 79736
+   "w": "without",
+   "start": 1342.754,
+   "end": 1343.173,
+   "startFrame": 80565,
+   "endFrame": 80590
   },
   {
    "s": 476,
-   "w": "the",
-   "start": 1329.093,
-   "end": 1329.294,
-   "startFrame": 79746,
-   "endFrame": 79758
-  },
-  {
-   "s": 476,
-   "w": "question",
-   "start": 1329.294,
-   "end": 1329.719,
-   "startFrame": 79758,
-   "endFrame": 79783
-  },
-  {
-   "s": 476,
-   "w": "is",
-   "start": 1329.719,
-   "end": 1329.876,
-   "startFrame": 79783,
-   "endFrame": 79793
-  },
-  {
-   "s": 476,
-   "w": "still",
-   "start": 1329.876,
-   "end": 1330.167,
-   "startFrame": 79793,
-   "endFrame": 79810
-  },
-  {
-   "s": 476,
-   "w": "the",
-   "start": 1330.167,
-   "end": 1330.368,
-   "startFrame": 79810,
-   "endFrame": 79822
-  },
-  {
-   "s": 476,
-   "w": "same",
-   "start": 1330.368,
-   "end": 1330.614,
-   "startFrame": 79822,
-   "endFrame": 79837
-  },
-  {
-   "s": 476,
-   "w": "one.",
-   "start": 1330.614,
-   "end": 1330.905,
-   "startFrame": 79837,
-   "endFrame": 79854
+   "w": "pay.",
+   "start": 1343.173,
+   "end": 1343.494,
+   "startFrame": 80590,
+   "endFrame": 80610
   },
   {
    "s": 477,
-   "w": "Who",
-   "start": 1331.287,
-   "end": 1331.497,
-   "startFrame": 79877,
-   "endFrame": 79890
+   "w": "A",
+   "start": 1343.824,
+   "end": 1343.948,
+   "startFrame": 80629,
+   "endFrame": 80637
   },
   {
    "s": 477,
-   "w": "should",
-   "start": 1331.497,
-   "end": 1331.847,
-   "startFrame": 79890,
-   "endFrame": 79911
+   "w": "young",
+   "start": 1343.948,
+   "end": 1344.272,
+   "startFrame": 80637,
+   "endFrame": 80656
+  },
+  {
+   "s": 477,
+   "w": "engineer",
+   "start": 1344.272,
+   "end": 1344.745,
+   "startFrame": 80656,
+   "endFrame": 80685
+  },
+  {
+   "s": 477,
+   "w": "with",
+   "start": 1344.745,
+   "end": 1345.019,
+   "startFrame": 80685,
+   "endFrame": 80701
   },
   {
    "s": 477,
    "w": "a",
-   "start": 1331.847,
-   "end": 1331.964,
-   "startFrame": 79911,
-   "endFrame": 79918
+   "start": 1345.019,
+   "end": 1345.143,
+   "startFrame": 80701,
+   "endFrame": 80709
   },
   {
    "s": 477,
-   "w": "company",
-   "start": 1331.964,
-   "end": 1332.36,
-   "startFrame": 79918,
-   "endFrame": 79942
-  },
-  {
-   "s": 477,
-   "w": "like",
-   "start": 1332.36,
-   "end": 1332.617,
-   "startFrame": 79942,
-   "endFrame": 79957
-  },
-  {
-   "s": 477,
-   "w": "this",
-   "start": 1332.617,
-   "end": 1332.874,
-   "startFrame": 79957,
-   "endFrame": 79972
-  },
-  {
-   "s": 477,
-   "w": "really",
-   "start": 1332.874,
-   "end": 1333.224,
-   "startFrame": 79972,
-   "endFrame": 79993
-  },
-  {
-   "s": 477,
-   "w": "belong",
-   "start": 1333.224,
-   "end": 1333.574,
-   "startFrame": 79993,
-   "endFrame": 80014
-  },
-  {
-   "s": 477,
-   "w": "to?",
-   "start": 1333.574,
-   "end": 1333.737,
-   "startFrame": 80014,
-   "endFrame": 80024
+   "w": "postcard.",
+   "start": 1345.143,
+   "end": 1345.716,
+   "startFrame": 80709,
+   "endFrame": 80743
   },
   {
    "s": 478,
+   "w": "A",
+   "start": 1346.014,
+   "end": 1346.144,
+   "startFrame": 80761,
+   "endFrame": 80769
+  },
+  {
+   "s": 478,
+   "w": "man",
+   "start": 1346.144,
+   "end": 1346.377,
+   "startFrame": 80769,
+   "endFrame": 80783
+  },
+  {
+   "s": 478,
+   "w": "shovelling",
+   "start": 1346.377,
+   "end": 1346.974,
+   "startFrame": 80783,
+   "endFrame": 80818
+  },
+  {
+   "s": 478,
+   "w": "limestone",
+   "start": 1346.974,
+   "end": 1347.519,
+   "startFrame": 80818,
+   "endFrame": 80851
+  },
+  {
+   "s": 478,
+   "w": "next",
+   "start": 1347.519,
+   "end": 1347.805,
+   "startFrame": 80851,
+   "endFrame": 80868
+  },
+  {
+   "s": 478,
+   "w": "to",
+   "start": 1347.805,
+   "end": 1347.986,
+   "startFrame": 80868,
+   "endFrame": 80879
+  },
+  {
+   "s": 478,
+   "w": "the",
+   "start": 1347.986,
+   "end": 1348.22,
+   "startFrame": 80879,
+   "endFrame": 80893
+  },
+  {
+   "s": 478,
+   "w": "furnace.",
+   "start": 1348.22,
+   "end": 1348.765,
+   "startFrame": 80893,
+   "endFrame": 80926
+  },
+  {
+   "s": 479,
    "w": "What",
-   "start": 1334.194,
-   "end": 1334.38,
-   "startFrame": 80052,
-   "endFrame": 80063
+   "start": 1349.166,
+   "end": 1349.354,
+   "startFrame": 80950,
+   "endFrame": 80961
   },
   {
-   "s": 478,
+   "s": 479,
    "w": "do",
-   "start": 1334.38,
-   "end": 1334.498,
-   "startFrame": 80063,
-   "endFrame": 80070
-  },
-  {
-   "s": 478,
-   "w": "you",
-   "start": 1334.498,
-   "end": 1334.65,
-   "startFrame": 80070,
-   "endFrame": 80079
-  },
-  {
-   "s": 478,
-   "w": "think?",
-   "start": 1334.65,
-   "end": 1334.87,
-   "startFrame": 80079,
-   "endFrame": 80092
+   "start": 1349.354,
+   "end": 1349.473,
+   "startFrame": 80961,
+   "endFrame": 80968
   },
   {
    "s": 479,
-   "w": "Tell",
-   "start": 1335.247,
-   "end": 1335.417,
-   "startFrame": 80115,
-   "endFrame": 80125
+   "w": "they",
+   "start": 1349.473,
+   "end": 1349.66,
+   "startFrame": 80968,
+   "endFrame": 80980
   },
   {
    "s": 479,
-   "w": "me",
-   "start": 1335.417,
-   "end": 1335.526,
-   "startFrame": 80125,
-   "endFrame": 80132
+   "w": "have",
+   "start": 1349.66,
+   "end": 1349.848,
+   "startFrame": 80980,
+   "endFrame": 80991
   },
   {
    "s": 479,
    "w": "in",
-   "start": 1335.526,
-   "end": 1335.634,
-   "startFrame": 80132,
-   "endFrame": 80138
+   "start": 1349.848,
+   "end": 1349.967,
+   "startFrame": 80991,
+   "endFrame": 80998
   },
   {
    "s": 479,
-   "w": "the",
-   "start": 1335.634,
-   "end": 1335.773,
-   "startFrame": 80138,
-   "endFrame": 80146
-  },
-  {
-   "s": 479,
-   "w": "comments.",
-   "start": 1335.773,
-   "end": 1336.129,
-   "startFrame": 80146,
-   "endFrame": 80168
+   "w": "common?",
+   "start": 1349.967,
+   "end": 1350.223,
+   "startFrame": 80998,
+   "endFrame": 81013
   },
   {
    "s": 480,
-   "w": "This",
-   "start": 1337.696,
-   "end": 1338.024,
-   "startFrame": 80262,
-   "endFrame": 80281
+   "w": "Every",
+   "start": 1350.592,
+   "end": 1350.926,
+   "startFrame": 81036,
+   "endFrame": 81056
   },
   {
    "s": 480,
-   "w": "is",
-   "start": 1338.024,
-   "end": 1338.233,
-   "startFrame": 80281,
-   "endFrame": 80294
+   "w": "one",
+   "start": 1350.926,
+   "end": 1351.158,
+   "startFrame": 81056,
+   "endFrame": 81069
   },
   {
    "s": 480,
-   "w": "Built",
-   "start": 1338.233,
-   "end": 1338.621,
-   "startFrame": 80294,
-   "endFrame": 80317
+   "w": "of",
+   "start": 1351.158,
+   "end": 1351.337,
+   "startFrame": 81069,
+   "endFrame": 81080
+  },
+  {
+   "s": 480,
+   "w": "them,",
+   "start": 1351.337,
+   "end": 1351.62,
+   "startFrame": 81080,
+   "endFrame": 81097
+  },
+  {
+   "s": 480,
+   "w": "at",
+   "start": 1351.784,
+   "end": 1351.985,
+   "startFrame": 81107,
+   "endFrame": 81119
+  },
+  {
+   "s": 480,
+   "w": "some",
+   "start": 1351.985,
+   "end": 1352.301,
+   "startFrame": 81119,
+   "endFrame": 81138
+  },
+  {
+   "s": 480,
+   "w": "point,",
+   "start": 1352.301,
+   "end": 1352.674,
+   "startFrame": 81138,
+   "endFrame": 81160
+  },
+  {
+   "s": 480,
+   "w": "put",
+   "start": 1352.926,
+   "end": 1353.128,
+   "startFrame": 81176,
+   "endFrame": 81188
+  },
+  {
+   "s": 480,
+   "w": "something",
+   "start": 1353.128,
+   "end": 1353.6,
+   "startFrame": 81188,
+   "endFrame": 81216
   },
   {
    "s": 480,
    "w": "on",
-   "start": 1338.621,
-   "end": 1338.829,
-   "startFrame": 80317,
-   "endFrame": 80330
+   "start": 1353.6,
+   "end": 1353.758,
+   "startFrame": 81216,
+   "endFrame": 81225
   },
   {
    "s": 480,
-   "w": "Bharat.",
-   "start": 1338.829,
-   "end": 1339.396,
-   "startFrame": 80330,
-   "endFrame": 80364
-  },
-  {
-   "s": 481,
-   "w": "The",
-   "start": 1339.743,
-   "end": 1340.021,
-   "startFrame": 80385,
-   "endFrame": 80401
-  },
-  {
-   "s": 481,
-   "w": "empires,",
-   "start": 1340.021,
-   "end": 1340.547,
-   "startFrame": 80401,
-   "endFrame": 80433
-  },
-  {
-   "s": 481,
-   "w": "and",
-   "start": 1340.678,
-   "end": 1340.892,
-   "startFrame": 80441,
-   "endFrame": 80454
-  },
-  {
-   "s": 481,
    "w": "the",
-   "start": 1340.892,
-   "end": 1341.106,
-   "startFrame": 80454,
-   "endFrame": 80466
+   "start": 1353.758,
+   "end": 1353.96,
+   "startFrame": 81225,
+   "endFrame": 81238
+  },
+  {
+   "s": 480,
+   "w": "line.",
+   "start": 1353.96,
+   "end": 1354.297,
+   "startFrame": 81238,
+   "endFrame": 81258
   },
   {
    "s": 481,
+   "w": "Savings.",
+   "start": 1354.674,
+   "end": 1355.326,
+   "startFrame": 81280,
+   "endFrame": 81320
+  },
+  {
+   "s": 482,
+   "w": "Pride.",
+   "start": 1355.709,
+   "end": 1356.118,
+   "startFrame": 81343,
+   "endFrame": 81367
+  },
+  {
+   "s": 483,
+   "w": "A",
+   "start": 1356.478,
+   "end": 1356.598,
+   "startFrame": 81389,
+   "endFrame": 81396
+  },
+  {
+   "s": 483,
+   "w": "diamond.",
+   "start": 1356.598,
+   "end": 1357.101,
+   "startFrame": 81396,
+   "endFrame": 81426
+  },
+  {
+   "s": 484,
+   "w": "That",
+   "start": 1357.452,
+   "end": 1357.765,
+   "startFrame": 81447,
+   "endFrame": 81466
+  },
+  {
+   "s": 484,
+   "w": "part",
+   "start": 1357.765,
+   "end": 1358.078,
+   "startFrame": 81466,
+   "endFrame": 81485
+  },
+  {
+   "s": 484,
+   "w": "needs",
+   "start": 1358.078,
+   "end": 1358.448,
+   "startFrame": 81485,
+   "endFrame": 81507
+  },
+  {
+   "s": 484,
+   "w": "no",
+   "start": 1358.448,
+   "end": 1358.647,
+   "startFrame": 81507,
+   "endFrame": 81519
+  },
+  {
+   "s": 484,
+   "w": "fortune.",
+   "start": 1358.647,
+   "end": 1359.245,
+   "startFrame": 81519,
+   "endFrame": 81555
+  },
+  {
+   "s": 485,
+   "w": "That",
+   "start": 1359.633,
+   "end": 1359.96,
+   "startFrame": 81578,
+   "endFrame": 81598
+  },
+  {
+   "s": 485,
+   "w": "part",
+   "start": 1359.96,
+   "end": 1360.287,
+   "startFrame": 81598,
+   "endFrame": 81617
+  },
+  {
+   "s": 485,
+   "w": "is",
+   "start": 1360.287,
+   "end": 1360.495,
+   "startFrame": 81617,
+   "endFrame": 81630
+  },
+  {
+   "s": 485,
+   "w": "yours.",
+   "start": 1360.495,
+   "end": 1361.0,
+   "startFrame": 81630,
+   "endFrame": 81660
+  },
+  {
+   "s": 486,
+   "w": "And",
+   "start": 1361.381,
+   "end": 1361.596,
+   "startFrame": 81683,
+   "endFrame": 81696
+  },
+  {
+   "s": 486,
+   "w": "a",
+   "start": 1361.596,
+   "end": 1361.715,
+   "startFrame": 81696,
+   "endFrame": 81703
+  },
+  {
+   "s": 486,
+   "w": "hundred",
+   "start": 1361.715,
+   "end": 1362.121,
+   "startFrame": 81703,
+   "endFrame": 81727
+  },
+  {
+   "s": 486,
+   "w": "years",
+   "start": 1362.121,
+   "end": 1362.431,
+   "startFrame": 81727,
+   "endFrame": 81746
+  },
+  {
+   "s": 486,
+   "w": "later,",
+   "start": 1362.431,
+   "end": 1362.742,
+   "startFrame": 81746,
+   "endFrame": 81765
+  },
+  {
+   "s": 486,
+   "w": "the",
+   "start": 1362.899,
+   "end": 1363.1,
+   "startFrame": 81774,
+   "endFrame": 81786
+  },
+  {
+   "s": 486,
+   "w": "question",
+   "start": 1363.1,
+   "end": 1363.525,
+   "startFrame": 81786,
+   "endFrame": 81812
+  },
+  {
+   "s": 486,
+   "w": "is",
+   "start": 1363.525,
+   "end": 1363.682,
+   "startFrame": 81812,
+   "endFrame": 81821
+  },
+  {
+   "s": 486,
+   "w": "still",
+   "start": 1363.682,
+   "end": 1363.973,
+   "startFrame": 81821,
+   "endFrame": 81838
+  },
+  {
+   "s": 486,
+   "w": "the",
+   "start": 1363.973,
+   "end": 1364.174,
+   "startFrame": 81838,
+   "endFrame": 81850
+  },
+  {
+   "s": 486,
+   "w": "same",
+   "start": 1364.174,
+   "end": 1364.42,
+   "startFrame": 81850,
+   "endFrame": 81865
+  },
+  {
+   "s": 486,
+   "w": "one.",
+   "start": 1364.42,
+   "end": 1364.711,
+   "startFrame": 81865,
+   "endFrame": 81883
+  },
+  {
+   "s": 487,
+   "w": "Who",
+   "start": 1365.093,
+   "end": 1365.303,
+   "startFrame": 81906,
+   "endFrame": 81918
+  },
+  {
+   "s": 487,
+   "w": "should",
+   "start": 1365.303,
+   "end": 1365.653,
+   "startFrame": 81918,
+   "endFrame": 81939
+  },
+  {
+   "s": 487,
+   "w": "a",
+   "start": 1365.653,
+   "end": 1365.77,
+   "startFrame": 81939,
+   "endFrame": 81946
+  },
+  {
+   "s": 487,
+   "w": "company",
+   "start": 1365.77,
+   "end": 1366.166,
+   "startFrame": 81946,
+   "endFrame": 81970
+  },
+  {
+   "s": 487,
+   "w": "like",
+   "start": 1366.166,
+   "end": 1366.423,
+   "startFrame": 81970,
+   "endFrame": 81985
+  },
+  {
+   "s": 487,
+   "w": "this",
+   "start": 1366.423,
+   "end": 1366.68,
+   "startFrame": 81985,
+   "endFrame": 82001
+  },
+  {
+   "s": 487,
+   "w": "really",
+   "start": 1366.68,
+   "end": 1367.03,
+   "startFrame": 82001,
+   "endFrame": 82022
+  },
+  {
+   "s": 487,
+   "w": "belong",
+   "start": 1367.03,
+   "end": 1367.38,
+   "startFrame": 82022,
+   "endFrame": 82043
+  },
+  {
+   "s": 487,
+   "w": "to?",
+   "start": 1367.38,
+   "end": 1367.543,
+   "startFrame": 82043,
+   "endFrame": 82053
+  },
+  {
+   "s": 488,
+   "w": "What",
+   "start": 1368.0,
+   "end": 1368.186,
+   "startFrame": 82080,
+   "endFrame": 82091
+  },
+  {
+   "s": 488,
+   "w": "do",
+   "start": 1368.186,
+   "end": 1368.304,
+   "startFrame": 82091,
+   "endFrame": 82098
+  },
+  {
+   "s": 488,
+   "w": "you",
+   "start": 1368.304,
+   "end": 1368.456,
+   "startFrame": 82098,
+   "endFrame": 82107
+  },
+  {
+   "s": 488,
+   "w": "think?",
+   "start": 1368.456,
+   "end": 1368.676,
+   "startFrame": 82107,
+   "endFrame": 82121
+  },
+  {
+   "s": 489,
+   "w": "Tell",
+   "start": 1369.053,
+   "end": 1369.223,
+   "startFrame": 82143,
+   "endFrame": 82153
+  },
+  {
+   "s": 489,
+   "w": "me",
+   "start": 1369.223,
+   "end": 1369.332,
+   "startFrame": 82153,
+   "endFrame": 82160
+  },
+  {
+   "s": 489,
+   "w": "in",
+   "start": 1369.332,
+   "end": 1369.44,
+   "startFrame": 82160,
+   "endFrame": 82166
+  },
+  {
+   "s": 489,
+   "w": "the",
+   "start": 1369.44,
+   "end": 1369.579,
+   "startFrame": 82166,
+   "endFrame": 82175
+  },
+  {
+   "s": 489,
+   "w": "comments.",
+   "start": 1369.579,
+   "end": 1369.935,
+   "startFrame": 82175,
+   "endFrame": 82196
+  },
+  {
+   "s": 490,
+   "w": "This",
+   "start": 1371.502,
+   "end": 1371.83,
+   "startFrame": 82290,
+   "endFrame": 82310
+  },
+  {
+   "s": 490,
+   "w": "is",
+   "start": 1371.83,
+   "end": 1372.039,
+   "startFrame": 82310,
+   "endFrame": 82322
+  },
+  {
+   "s": 490,
+   "w": "Built",
+   "start": 1372.039,
+   "end": 1372.427,
+   "startFrame": 82322,
+   "endFrame": 82346
+  },
+  {
+   "s": 490,
+   "w": "on",
+   "start": 1372.427,
+   "end": 1372.635,
+   "startFrame": 82346,
+   "endFrame": 82358
+  },
+  {
+   "s": 490,
+   "w": "Bharat.",
+   "start": 1372.635,
+   "end": 1373.202,
+   "startFrame": 82358,
+   "endFrame": 82392
+  },
+  {
+   "s": 491,
+   "w": "The",
+   "start": 1373.549,
+   "end": 1373.827,
+   "startFrame": 82413,
+   "endFrame": 82430
+  },
+  {
+   "s": 491,
+   "w": "empires,",
+   "start": 1373.827,
+   "end": 1374.353,
+   "startFrame": 82430,
+   "endFrame": 82461
+  },
+  {
+   "s": 491,
+   "w": "and",
+   "start": 1374.484,
+   "end": 1374.698,
+   "startFrame": 82469,
+   "endFrame": 82482
+  },
+  {
+   "s": 491,
+   "w": "the",
+   "start": 1374.698,
+   "end": 1374.912,
+   "startFrame": 82482,
+   "endFrame": 82495
+  },
+  {
+   "s": 491,
    "w": "habits,",
-   "start": 1341.106,
-   "end": 1341.463,
-   "startFrame": 80466,
-   "endFrame": 80488
+   "start": 1374.912,
+   "end": 1375.269,
+   "startFrame": 82495,
+   "endFrame": 82516
   },
   {
-   "s": 481,
+   "s": 491,
    "w": "that",
-   "start": 1341.635,
-   "end": 1341.878,
-   "startFrame": 80498,
-   "endFrame": 80513
+   "start": 1375.441,
+   "end": 1375.684,
+   "startFrame": 82526,
+   "endFrame": 82541
   },
   {
-   "s": 481,
+   "s": 491,
    "w": "built",
-   "start": 1341.878,
-   "end": 1342.165,
-   "startFrame": 80513,
-   "endFrame": 80530
+   "start": 1375.684,
+   "end": 1375.971,
+   "startFrame": 82541,
+   "endFrame": 82558
   },
   {
-   "s": 481,
+   "s": 491,
    "w": "a",
-   "start": 1342.165,
-   "end": 1342.276,
-   "startFrame": 80530,
-   "endFrame": 80537
+   "start": 1375.971,
+   "end": 1376.082,
+   "startFrame": 82558,
+   "endFrame": 82565
   },
   {
-   "s": 481,
+   "s": 491,
    "w": "nation.",
-   "start": 1342.276,
-   "end": 1342.695,
-   "startFrame": 80537,
-   "endFrame": 80562
+   "start": 1376.082,
+   "end": 1376.501,
+   "startFrame": 82565,
+   "endFrame": 82590
   },
   {
-   "s": 482,
+   "s": 492,
    "w": "Next",
-   "start": 1343.122,
-   "end": 1343.442,
-   "startFrame": 80587,
-   "endFrame": 80607
+   "start": 1376.928,
+   "end": 1377.248,
+   "startFrame": 82616,
+   "endFrame": 82635
   },
   {
-   "s": 482,
+   "s": 492,
    "w": "in",
-   "start": 1343.442,
-   "end": 1343.645,
-   "startFrame": 80607,
-   "endFrame": 80619
+   "start": 1377.248,
+   "end": 1377.451,
+   "startFrame": 82635,
+   "endFrame": 82647
   },
   {
-   "s": 482,
+   "s": 492,
    "w": "Empires",
-   "start": 1343.645,
-   "end": 1344.139,
-   "startFrame": 80619,
-   "endFrame": 80648
+   "start": 1377.451,
+   "end": 1377.945,
+   "startFrame": 82647,
+   "endFrame": 82677
   },
   {
-   "s": 482,
+   "s": 492,
    "w": "of",
-   "start": 1344.139,
-   "end": 1344.343,
-   "startFrame": 80648,
-   "endFrame": 80661
+   "start": 1377.945,
+   "end": 1378.149,
+   "startFrame": 82677,
+   "endFrame": 82689
   },
   {
-   "s": 482,
+   "s": 492,
    "w": "India.",
-   "start": 1344.343,
-   "end": 1344.837,
-   "startFrame": 80661,
-   "endFrame": 80690
+   "start": 1378.149,
+   "end": 1378.643,
+   "startFrame": 82689,
+   "endFrame": 82719
   },
   {
-   "s": 483,
+   "s": 493,
    "w": "How",
-   "start": 1345.26,
-   "end": 1345.514,
-   "startFrame": 80716,
-   "endFrame": 80731
+   "start": 1379.066,
+   "end": 1379.32,
+   "startFrame": 82744,
+   "endFrame": 82759
   },
   {
-   "s": 483,
+   "s": 493,
    "w": "did",
-   "start": 1345.514,
-   "end": 1345.769,
-   "startFrame": 80731,
-   "endFrame": 80746
+   "start": 1379.32,
+   "end": 1379.575,
+   "startFrame": 82759,
+   "endFrame": 82774
   },
   {
-   "s": 483,
+   "s": 493,
    "w": "a",
-   "start": 1345.769,
-   "end": 1345.91,
-   "startFrame": 80746,
-   "endFrame": 80755
+   "start": 1379.575,
+   "end": 1379.716,
+   "startFrame": 82774,
+   "endFrame": 82783
   },
   {
-   "s": 483,
+   "s": 493,
    "w": "group",
-   "start": 1345.91,
-   "end": 1346.277,
-   "startFrame": 80755,
-   "endFrame": 80777
+   "start": 1379.716,
+   "end": 1380.083,
+   "startFrame": 82783,
+   "endFrame": 82805
   },
   {
-   "s": 483,
+   "s": 493,
    "w": "of",
-   "start": 1346.277,
-   "end": 1346.475,
-   "startFrame": 80777,
-   "endFrame": 80788
+   "start": 1380.083,
+   "end": 1380.281,
+   "startFrame": 82805,
+   "endFrame": 82817
   },
   {
-   "s": 483,
+   "s": 493,
    "w": "farmers",
-   "start": 1346.475,
-   "end": 1346.955,
-   "startFrame": 80788,
-   "endFrame": 80817
+   "start": 1380.281,
+   "end": 1380.761,
+   "startFrame": 82817,
+   "endFrame": 82846
   },
   {
-   "s": 483,
+   "s": 493,
    "w": "in",
-   "start": 1346.955,
-   "end": 1347.153,
-   "startFrame": 80817,
-   "endFrame": 80829
+   "start": 1380.761,
+   "end": 1380.959,
+   "startFrame": 82846,
+   "endFrame": 82858
   },
   {
-   "s": 483,
+   "s": 493,
    "w": "a",
-   "start": 1347.153,
-   "end": 1347.294,
-   "startFrame": 80829,
-   "endFrame": 80838
+   "start": 1380.959,
+   "end": 1381.1,
+   "startFrame": 82858,
+   "endFrame": 82866
   },
   {
-   "s": 483,
+   "s": 493,
    "w": "small",
-   "start": 1347.294,
-   "end": 1347.662,
-   "startFrame": 80838,
-   "endFrame": 80860
+   "start": 1381.1,
+   "end": 1381.468,
+   "startFrame": 82866,
+   "endFrame": 82888
   },
   {
-   "s": 483,
+   "s": 493,
    "w": "Gujarat",
-   "start": 1347.662,
-   "end": 1348.142,
-   "startFrame": 80860,
-   "endFrame": 80889
+   "start": 1381.468,
+   "end": 1381.948,
+   "startFrame": 82888,
+   "endFrame": 82917
   },
   {
-   "s": 483,
+   "s": 493,
    "w": "town",
-   "start": 1348.142,
-   "end": 1348.453,
-   "startFrame": 80889,
-   "endFrame": 80907
+   "start": 1381.948,
+   "end": 1382.259,
+   "startFrame": 82917,
+   "endFrame": 82936
   },
   {
-   "s": 483,
+   "s": 493,
    "w": "build",
-   "start": 1348.453,
-   "end": 1348.82,
-   "startFrame": 80907,
-   "endFrame": 80929
+   "start": 1382.259,
+   "end": 1382.626,
+   "startFrame": 82936,
+   "endFrame": 82958
   },
   {
-   "s": 483,
+   "s": 493,
    "w": "Amul?",
-   "start": 1348.82,
-   "end": 1349.131,
-   "startFrame": 80929,
-   "endFrame": 80948
+   "start": 1382.626,
+   "end": 1382.937,
+   "startFrame": 82958,
+   "endFrame": 82976
   }
  ],
  "chapters": [
@@ -36022,10 +36886,10 @@
   },
   {
    "title": "Outro",
-   "start": 1337.696,
-   "startFrame": 80262
+   "start": 1371.502,
+   "startFrame": 82290
   }
  ],
- "duration": 1349.39,
- "durationInFrames": 80963
+ "duration": 1383.196,
+ "durationInFrames": 82992
 }
