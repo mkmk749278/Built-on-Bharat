@@ -14,7 +14,7 @@ import {DepthKey, DepthPhoto} from './DepthPhoto';
  * the frame centre. Keep pans at 0 in counter shots (the layer follows dolly only).
  */
 const OVERSCAN = 1.18; // DepthPhoto's Plate overscan
-const CASE_DEPTH = 0.86; // depth-map value at the case (sampled from counter_case_depth.png)
+const CASE_DEPTH = 0.7; // depth-map value at the case (mean over the case in counter_case_depth.png)
 
 const valAt = (keys: DepthKey[], frame: number): number => {
 	const ks = keys.filter((k) => k.dolly !== undefined);
