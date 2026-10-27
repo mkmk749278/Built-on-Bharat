@@ -1,7 +1,7 @@
 // Year roller (PLAYBOOK §8.4): an engraved brass odometer that rolls from one year to another with a whoosh and lands
 // with a thud. Every digit column carries like a real counter; speed blurs the digits vertically.
 import React from 'react';
-import {useCurrentFrame, useVideoConfig} from 'remotion';
+import {AbsoluteFill, useCurrentFrame, useVideoConfig} from 'remotion';
 import {colors} from '../brand';
 import {fontStacks} from '../fonts';
 import {ease, pop, tween} from '../motion';
@@ -46,6 +46,8 @@ export const YearRoller: React.FC<{from: number; to: number; start: number; land
 	const flash = frame >= land ? tween(frame, land, land + 36, 1, 0, ease.leave) : 0;
 	const enter = pop(frame, fps, start - 24, 120, 18);
 	return (
+		// centred in the frame (it was a bare block, so it sat in the top-left corner wherever a caller forgot to centre it)
+		<AbsoluteFill style={{alignItems: 'center', justifyContent: 'center', pointerEvents: 'none'}}>
 		<div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', opacity: enter, transform: `scale(${0.92 + 0.08 * enter})`}}>
 			<svg width={0} height={0} style={{position: 'absolute'}}>
 				<filter id="yr-vblur">
@@ -112,5 +114,6 @@ export const YearRoller: React.FC<{from: number; to: number; start: number; land
 				<div style={{marginTop: size * 0.14, fontFamily: fontStacks.text, fontWeight: 600, fontSize: size * 0.13, letterSpacing: '0.4em', color: colors.muted}}>{label}</div>
 			) : null}
 		</div>
+		</AbsoluteFill>
 	);
 };
