@@ -1110,6 +1110,16 @@ To port when needed (Creator path → what to change):
 ## 16. Lessons log
 *(Newest first. Each lesson: what happened, the rule, why.)*
 
+**Block 16 retake: R.B.I. (2026-10-27).**
+- *What happened:* in the v6 take of block 16, Akash said both "R.B.I." as "R and B.I." (speech-to-text heard
+  "RNBI" twice); `vo_review.py` passed it because the word diff ignores how an acronym is split. The owner changed the
+  spelling in the recording box and re-recorded the block; the new take is heard as "RBI", 100% of the words, same
+  voice (pitch −0.1 st). The full VO was re-timed: only chapters 9 and 10 moved (by 15 frames).
+- *The rule:* after every take, look at each letter-by-letter acronym in `words.json` (R.B.I., T.C.S., J.R.D.): an
+  extra word or letter inside it ("RNBI") is a misread, even when the report says 100%. Retake only that block, keep
+  the rest, and re-run `vo_timing.py`. Drive keeps each round in `<slug>/vo/vN/` (v7 holds the new b16 and the joined
+  `vo_full.wav`).
+
 **Recording v6 (2026-10-25).**
 - *Tags out entirely:* the owner judged even pause tags "not coming good"; v6 was recorded from plain text (commas and
   full stops). Result: 17 takes, 22 min 30 s, a steady 14–16 characters a second in every block.
