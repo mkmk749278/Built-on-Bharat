@@ -298,7 +298,7 @@ def build(args):
 def add_case(s, gem=False):
     """The jewellery case: dark leather outside, velvet lip, brass clasp; closed; at the lamp pool's centre.
     Returns (case root, lid hinge): move the root to slide the case, turn the hinge (−X) to open the lid."""
-    velvet = tex_mat("CaseVelvet", "velour_velvet_diff.jpg", "velour_velvet_rough.jpg", "velour_velvet_nor.jpg", scale=6, tint=(0.03, 0.045, 0.16))  # deep navy velvet: the stone reads against it
+    velvet = tex_mat("CaseVelvet", "velour_velvet_diff.jpg", "velour_velvet_rough.jpg", "velour_velvet_nor.jpg", scale=6, tint=(0.012, 0.03, 0.22))  # deep navy velvet: the stone reads against it
     leather = tex_mat("CaseLeather", None, None, "leather_red_02_nor.jpg", scale=4, color=(0.014, 0.0025, 0.003))
     br = bpy.data.materials.get("Brass") or brass()
     cx, cy = 0.0, 0.0
@@ -324,16 +324,25 @@ def add_case(s, gem=False):
         g = jubilee.build_gem()
         g.scale = (0.019, 0.019, 0.019)
         g.parent = root
-        g.location = (cx, cy - 0.004, 0.036)
-        g.rotation_euler = (math.radians(-8), 0, math.radians(8))
+        # sitting on the lining, not sunk into the solid case (a buried pavilion refracts grey velvet: a milky blob),
+        # tipped toward the camera so the crown facets catch the sparks
+        g.location = (cx, cy - 0.006, 0.048)
+        # a small velvet cushion under it, as in a real jewellery case: the stone rests on it, its pavilion free
+        bpy.ops.mesh.primitive_uv_sphere_add(radius=1, location=(cx, cy - 0.004, 0.0335), segments=48, ring_count=24)
+        pad = bpy.context.object
+        pad.scale = (0.034, 0.03, 0.0045)
+        bpy.ops.object.shade_smooth()
+        pad.data.materials.append(velvet)
+        pad.parent = root
+        g.rotation_euler = (math.radians(-24), 0, math.radians(8))
         # Light the stone only (Cycles light linking): small hard sources for fire and a soft card for the table
         # flash, none of which touch the counter, so the room keeps its one lamp.
         only = bpy.data.collections.new("GemOnly")
         s.collection.children.link(only)
         only.objects.link(g)
-        for i, (x, y, z, e, size) in enumerate([(-0.10, -0.16, 0.22, 6, 0.008), (0.14, -0.12, 0.18, 5, 0.008),
-                                                 (0.02, -0.22, 0.12, 4, 0.006), (-0.16, 0.06, 0.20, 5, 0.01),
-                                                 (0.0, -0.05, 0.30, 3, 0.12)]):
+        for i, (x, y, z, e, size) in enumerate([(-0.10, -0.16, 0.22, 24, 0.008), (0.14, -0.12, 0.18, 20, 0.008),
+                                                 (0.02, -0.22, 0.12, 16, 0.006), (-0.16, 0.06, 0.20, 20, 0.01),
+                                                 (0.06, 0.10, 0.16, 18, 0.008), (0.0, -0.05, 0.30, 10, 0.12)]):
             d = bpy.data.lights.new(f"GemLight{i}", "AREA")
             d.energy, d.size, d.color = e, size, (1.0, 0.95, 0.88)
             if size < 0.05:
@@ -400,10 +409,11 @@ def place(shot, f, cam, cd, root, hinge):
         aim(lerp3((0.0, 0.42, 0.2), (0.0, 0.18, 0.08), u), root.location + Vector((0, 0, 0.03)))
     elif shot == "c2":
         u = ease(f / 323)
-        cam.location = lerp3((0.30, -0.80, 0.30), (-0.01, -0.33, 0.21), u)
-        cd.lens = 32 + 20 * u
+        cam.location = lerp3((0.30, -0.80, 0.30), (-0.01, -0.30, 0.22), u)
+        cd.lens = 32 + 30 * u
         hinge.rotation_euler.x = math.radians(-72 * ease((f - 222) / 68))  # "the diamond as the guarantee"
-        aim((0.0, 0.05, 0.03), (0.0, 0.0, 0.04))
+        cd.dof.aperture_fstop = 1.6 + 5.0 * u  # stop down as we close in, so the stone itself is sharp
+        aim((0.0, 0.05, 0.035), (0.0, -0.006, 0.052))
     elif shot == "c3":
         u = ease(f / 122)
         cam.location = lerp3((0.62, -0.72, 0.24), (0.10, -0.90, 0.31), u)
