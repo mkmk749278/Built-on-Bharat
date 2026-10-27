@@ -1090,7 +1090,9 @@ note it here. Already ported:
 
 To port when needed (Creator path → what to change):
 - `scripts/gdrive_pull.sh` → read from `Built-on-Bharat/<slug>/…`.
-- `scripts/termux_fetch_to_drive.sh` → rclone remote rooted at `Built-on-Bharat`, raw URL to this repo.
+- `scripts/termux_fetch_to_drive.sh` (ported 2026-10-27): rclone remote `bob` rooted at `Built-on-Bharat`, files land in
+  `<slug>/footage/`; `--list films/<slug>/scenes/owner_fetch.txt` reads a named list from this repo, so the owner pastes
+  one short line; direct file links (images, PDFs, audio) are fetched with curl; finished files are skipped on a re-run.
 - `scripts/contact_sheet.py` → as is.
 - `scripts/align_script.py` (+ the word spreader in `projects/minimum-due/build/words.py`) → output frames at 60 fps.
 - `scripts/spoken_english_check.py` → relax the "you"/question targets for story narration; keep banned words.
@@ -1110,6 +1112,13 @@ To port when needed (Creator path → what to change):
 
 ## 16. Lessons log
 *(Newest first. Each lesson: what happened, the rule, why.)*
+
+**Parallel sessions, film 1 build (2026-10-27).**
+- *What happened:* S1 (sourcing) and S2 (scenes) started beside the coordinator and both stopped on the account's usage
+  limit within about 10 minutes, before either pushed anything; their work was lost. The §3 cap (two heavy sessions)
+  was still too many on that account that day.
+- *The rule:* a new session pushes (or uploads to Drive) its first finished piece within its first 10 minutes, and
+  every 20 minutes after; when the owner reports a limit, carry the work in the coordinator alone and say so.
 
 **Block 16 retake: R.B.I. (2026-10-27).**
 - *What happened:* in the v6 take of block 16, the owner heard the first "R.B.I." read as "R and B I"; the second

@@ -1,0 +1,27 @@
+# Owner phone fetch list: tata-history (scripts/termux_fetch_to_drive.sh --list, PLAYBOOK §11.4). 2026-10-27, S0.
+# Official Tata channels first; short credited news excerpts second. No AP/Reuters/AFP/stock sellers (paid licence).
+# Each clip is used only as a short, credited excerpt (credit line in the description). Names = plan_v6.md beat.
+# NAME URL  # where it goes
+Y01_nano_launch_1 https://www.youtube.com/watch?v=3brUB8IZhAo  # tatamotorsltd, Nano launch Part I: ch 7 January
+Y02_nano_launch_2 https://www.youtube.com/watch?v=j9Mw6BuMJEM  # tatamotorsltd, Nano launch Part II: "a promise is a promise"
+Y03_steel_over_years https://www.youtube.com/watch?v=2opujojC4Cw  # Tata Steel, Jamshedpur plant over the years: ch 3, ch 6
+Y04_jamshedpur_100 https://www.youtube.com/watch?v=EW8Eq8RCIUg  # Tata Steel, 100 years of Jamshedpur: ch 3 "Jamshedpur"
+Y05_steelmaking https://www.youtube.com/watch?v=SdypR_57OVY  # Tata Steel, steelmaking process: molten iron match cut
+Y06_jeh_many_lives https://www.youtube.com/watch?v=3iQczKUV0pQ  # Tata Group, J.R.D.: ch 5
+Y07_jrd_journey https://www.youtube.com/watch?v=3YDNBj9jQuc  # Tata Steel, J.R.D.'s journey: ch 5
+Y08_jrd_legacy_ai https://www.youtube.com/watch?v=Gzfb-chHMns  # Air India Express, J.R.D. legacy: ch 5 flight
+Y09_ratan_welcome_ai https://www.youtube.com/watch?v=Tl2m6m5pz3E  # Air India, Ratan Tata's welcome: ch 8 "comes home"
+Y10_air_india_new https://www.youtube.com/watch?v=_BTKpR0CQc8  # Air India, new livery: ch 8
+Y11_port_talbot_close https://www.youtube.com/watch?v=awZnx4KFuRk  # Tata Steel UK, heavy end closure: ch 8 Port Talbot
+Y12_jamsetji_trusts https://www.youtube.com/watch?v=se-CrfeKrsg  # Tata Trusts, Jamsetji: ch 1, The Answer
+Y13_jamsetji_motors https://www.youtube.com/watch?v=xfc6o3SiyqA  # Tata Motors, remembering Jamsetji: ch 1
+Y14_jamsetji_186 https://www.youtube.com/watch?v=QhpSusFGwDs  # Tata Group, founder anniversary: ch 1
+Y15_khopoli_hydro https://www.youtube.com/watch?v=Wk58tQ6Oc90  # Tata Group, Khopoli plant: ch 1 dreams, ch 3 "monsoon lakes"
+Y16_hydros_100 https://www.youtube.com/watch?v=GHadBqm5tt0  # Tata Power, 100 years of hydros: ch 3
+Y17_indica https://www.youtube.com/watch?v=lH3X0yIqGiw  # tatacars, Indica: ch 6
+Y18_sanand_plant https://www.youtube.com/watch?v=2PBwses5KWk  # TATAev, Sanand: ch 7 October
+N01_taj_back https://www.youtube.com/watch?v=L9vb4QJjKxc  # NDTV, Taj back in business: ch 7 reopening
+N02_taj_heritage_wing https://www.youtube.com/watch?v=fE7P5kPv-lU  # NDTV, heritage wing reopens: ch 7 "two years"
+N03_ratan_farewell https://www.youtube.com/watch?v=euu_SSGC03E  # ANI, farewell: The Answer "state funeral"
+N04_ncpa_gathering https://www.youtube.com/watch?v=zDcJoXXyz4U  # Times Now, NCPA crowds: The Answer "thousands came"
+N05_sanand_nano https://www.youtube.com/watch?v=NugZgIvs06A  # ET Now, Sanand Nano plant: ch 7 "moves the factory to Gujarat"
