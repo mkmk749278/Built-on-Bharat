@@ -468,7 +468,8 @@ identical.
    tone so the voice sits in a space. Never pitch-shift a voice.
 8. **Text rules still apply:** numbers and amounts as words, no digits, `₹`, `!`, double quotes or semicolons;
    letter-by-letter acronyms with dots (U.P.I., R.B.I., T.C.S.), word acronyms as words (Isro); names the first take
-   gets wrong get a phonetic spelling or IPA in `script/phonetics.md`.
+   gets wrong get a phonetic spelling or IPA in `script/phonetics.md`. A dotted acronym Akash splits ("R and B I")
+   is typed with spaced dashes in the recording box (`R - B - I`); only the misread one changes (2026-10-27).
 
 **The test pack (before the full recording).** Block 1 is recorded at stability 0.50, 2 takes; `vo_review.py` checks
 that every pause tag gave a pause and that no tag was read aloud; the owner listens. *History:* v1 voice-description
@@ -1111,12 +1112,15 @@ To port when needed (Creator path → what to change):
 *(Newest first. Each lesson: what happened, the rule, why.)*
 
 **Block 16 retake: R.B.I. (2026-10-27).**
-- *What happened:* in the v6 take of block 16, Akash said both "R.B.I." as "R and B.I." (speech-to-text heard
-  "RNBI" twice); `vo_review.py` passed it because the word diff ignores how an acronym is split. The owner changed the
-  spelling in the recording box and re-recorded the block; the new take is heard as "RBI", 100% of the words, same
-  voice (pitch −0.1 st). The full VO was re-timed: only chapters 9 and 10 moved (by 15 frames).
-- *The rule:* after every take, look at each letter-by-letter acronym in `words.json` (R.B.I., T.C.S., J.R.D.): an
-  extra word or letter inside it ("RNBI") is a misread, even when the report says 100%. Retake only that block, keep
+- *What happened:* in the v6 take of block 16, the owner heard the first "R.B.I." read as "R and B I"; the second
+  ("The R.B.I. said no.") was fine. The owner typed the first one as `R - B - I` in the recording box, kept the second
+  as `R.B.I.`, and re-recorded the block: both now come out right (speech-to-text: "RBI" twice), 100% of the words,
+  same voice (pitch −0.1 st). The full VO was re-timed: only chapters 9 and 10 moved (by 15 frames). The spelling is
+  logged in `films/tata-history/script/phonetics.md`.
+- *The rule:* `vo_review.py` passed the bad take at 100%, because the word diff ignores how an acronym is split. After
+  every take, look at each letter-by-letter acronym in `words.json` (R.B.I., T.C.S., J.R.D.): an extra letter inside
+  it ("RNBI") is a possible misread to flag for the owner's ear, not proof. Speech-to-text heard "RNBI" for both v6
+  readings though only the first was wrong. Fix only the misread one with `R - B - I`, retake only that block, keep
   the rest, and re-run `vo_timing.py`. Drive keeps each round in `<slug>/vo/vN/` (v7 holds the new b16 and the joined
   `vo_full.wav`).
 
