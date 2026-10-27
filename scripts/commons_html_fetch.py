@@ -105,7 +105,7 @@ def main():
         lic = span(page, "short")
         if not OK.match(lic) or re.search(r"\b(nc|nd)\b", lic, re.I):
             print("skip licence", lic or "?", t, file=sys.stderr); continue
-        author = span(page, "attr") or strip((re.search(r'id="fileinfotpl_aut"[^>]*>.*?</td>\s*<td[^>]*>(.*?)</td>', page, re.S) or [None, ""])[1]) or "Unknown"
+        author = span(page, "attr") or strip((re.search(r'id="fileinfotpl(?:_|&#95;)aut"[^>]*>.*?</td>\s*<td[^>]*>(.*?)</td>', page, re.S) or [None, ""])[1]) or "Unknown"
         desc = strip((re.search(r'class="description[^"]*"[^>]*>(.*?)</div>', page, re.S) or [None, ""])[1])[:200]
         name = t[5:]; idx = len(manifest) + 1
         slug = re.sub(r"[^a-z0-9]+", "-", name.lower())[:40].strip("-")

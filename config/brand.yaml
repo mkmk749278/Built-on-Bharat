@@ -15,6 +15,7 @@ fonts:                   # proposal: vendored OFL fonts, confirm the look on the
   display: "Cinzel"        # engraved capitals for place/date and chapter stamps (banner look)
   text: "Inter"            # labels, lower-thirds (load the latin-ext subset for the ₹ glyph)
   numbers: "JetBrains Mono" # counters, tabular figures
+  quote: "EB Garamond"     # quotes on paper: a reading face with a true italic
 logo:
   emblem: assets/brand/logo_emblem_1024.jpg   # reference copy; 2048 px original in Drive _Channel/
   banner: assets/brand/banner_1920.jpg        # reference copy; 2752x1536 original in Drive _Channel/

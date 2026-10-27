@@ -3,7 +3,7 @@ import {AbsoluteFill, useCurrentFrame} from 'remotion';
 import {colors, Desk, Kinetic, LowerThird, Print, QuoteCard, Stamp, tween} from '../../../../../lib/remotion';
 import {PLACES} from '../../../../../lib/remotion/map';
 import {chapterClock, CounterAt, DeskPrint, Photo, Shot} from '../kit';
-import {Blueprints, CottonCrash, DebtLedger, FeeEnvelope, MillGate, PlaceMap, Sums, TrioPins} from '../shots/ch1';
+import {CottonCrash, DebtLedger, FeeEnvelope, MillGate, PlaceMap, Sums, TrioPins} from '../shots/ch1';
 
 // Chapter 1, The dreamer (plan_v6 §4 ch 1): Navsari → the fall and the restart → cotton out, cloth back → Empress
 // Mills and the workers → the Taj myth and the real hotel → three dreams, and steel the hardest. 4 min 36 s.
@@ -65,8 +65,10 @@ const f = {
 	historians: S('But historians have found'),
 	record: S('What is on record'),
 	opens1903: S('It opens in December'),
+	designed: S('Designed by an Indian architect'),
 	hold: S('Hold on to this hotel'),
 	never: S('But a hotel was never'),
+	three: S('Jamsetji had three bigger ones'),
 	steelD: S('A steel plant, so India'),
 	power: S('Power from the monsoon'),
 	inst: S('And a world class institute'),
@@ -97,7 +99,7 @@ export const Dreamer: React.FC = () => (
 		</Shot>
 		{/* Jamsetji Tata (real photograph) */}
 		<Shot a={f.know} b={f.gen} name="jamsetji">
-			<DeskPrint file="B003a.jpg" at={f.jamsetji - f.know - 22} width={600} seed="jnt" />
+			<DeskPrint file="B003a.jpg" at={4} width={600} seed="jnt" />
 			<LowerThird name="JAMSETJI TATA" role="1839 – 1904" at={f.jamsetji - f.know + 8} until={f.gen - f.know} />
 		</Shot>
 		{/* generations of priests → a small shop in Bombay → business */}
@@ -143,9 +145,12 @@ export const Dreamer: React.FC = () => (
 		<Shot a={f.crashed} b={f.firm} name="crash" tag="ILLUSTRATION">
 			<CottonCrash crashAt={20} worthlessAt={f.worthless - f.crashed} />
 		</Shot>
-		<Shot a={f.firm} b={f.home} name="debts" tag="ILLUSTRATION">
-			<DebtLedger strikeFrom={f.still - f.firm + 60} strikeTo={f.failure - f.firm} />
-			<Dim from={f.failure - f.firm + 60} to={f.home - f.firm} amount={0.45} />
+		<Shot a={f.firm} b={f.failure} name="debts" tag="ILLUSTRATION">
+			<DebtLedger strikeFrom={f.still - f.firm + 60} strikeTo={f.failure - f.firm - 20} />
+		</Shot>
+		{/* the kind of failure people talk about for years: the street */}
+		<Shot a={f.failure} b={f.home} name="talk" fadeIn={10}>
+			<Photo file="A001b.jpg" dur={f.home - f.failure} move={[0.04, 0.2, 0.0, 0.02, 0.02, -0.01]} depth={0.24} />
 		</Shot>
 		{/* Bombay in trouble; nearly vanished */}
 		<Shot a={f.home} b={f.no} name="bombay-green">
@@ -153,7 +158,7 @@ export const Dreamer: React.FC = () => (
 			<Stamp text="BOMBAY · 1865" at={10} until={f.banks - f.home + 10} />
 			<Kinetic text="BANKS FAILING" at={f.banks - f.home} until={f.vanish - f.home} display y={-60} />
 			<Kinetic text="MERCHANTS RUINED" at={f.merch - f.home} until={f.vanish - f.home} display y={40} />
-			<Dim from={f.vanish - f.home} to={f.give - f.home} amount={0.92} />
+			<Dim from={f.vanish - f.home} to={f.give - f.home} amount={0.72} />
 		</Shot>
 		{/* No. The army contract, 1868 */}
 		<Shot a={f.no} b={f.y1868} name="abyssinia">
@@ -164,7 +169,8 @@ export const Dreamer: React.FC = () => (
 		<Shot a={f.y1868} b={f.ever} name="restart">
 			<Desk />
 			<Print file="assets/media/B003b.jpg" at={6} width={430} x={-470} rotate={-3} seed="oval" />
-			<Stamp text="BOMBAY · 1868" at={8} until={f.ever - f.y1868} />
+			{/* the year stands apart from the portrait (a later photograph), so it never reads as the photo's date */}
+			<Kinetic text="1868" at={6} until={f.rupees - f.y1868 - 44} display size={130} x={300} />
 			<CounterAt to={21000} start={f.rupees - f.y1868 - 40} land={f.rupees - f.y1868} prefix="₹" size={150} x={300} />
 		</Shot>
 		<Shot a={f.ever} b={f.lookB} name="jamsetji-2" leak={colors.ember}>
@@ -223,19 +229,34 @@ export const Dreamer: React.FC = () => (
 		<Shot a={f.famous} b={f.record} name="taj-card">
 			<DeskPrint file="raw/wm/B009_91_taj-mahal-hotel-bombay-postcard-1908-jpg.jpg" at={8} width={1100} rotate={-1.5} seed="tajcard" />
 			<Dim from={f.historians - f.famous} to={f.record - f.famous} amount={0.5} />
+			<Kinetic text="NO RECORD" at={f.historians - f.famous + 50} until={f.record - f.famous} display size={84} />
 		</Shot>
-		<Shot a={f.record} b={f.never} name="taj-record">
+		<Shot a={f.record} b={f.designed} name="taj-record">
 			<DeskPrint file="raw/wm/B009_91_taj-mahal-hotel-bombay-postcard-1908-jpg.jpg" at={-40} width={1500} rotate={0.5} seed="tajcard2" />
-			<Stamp text="BOMBAY · DECEMBER 1903" sub="THE TAJ MAHAL HOTEL" at={f.opens1903 - f.record} until={f.hold - f.record} />
+			<Stamp text="BOMBAY · DECEMBER 1903" sub="THE TAJ MAHAL HOTEL" at={f.opens1903 - f.record} until={f.designed - f.record} />
 		</Shot>
-		{/* three dreams */}
-		<Shot a={f.never} b={f.lakh} name="blueprints" tag="ILLUSTRATION">
-			<Blueprints at={[f.steelD - f.never, f.power - f.never, f.inst - f.never]} />
+		{/* the same building today (the 1903 wing): the architect's dome, then the waterfront crowd */}
+		<Shot a={f.designed} b={f.hold} name="taj-dome" fadeIn={8}>
+			<Photo file="B009c.jpg" dur={f.hold - f.designed} move={[0.02, 0.2, 0.03, 0.06, 0.02, 0.05]} grade="modern" depth={0.16} />
+			<LowerThird name="THE TAJ MAHAL PALACE" role="THE 1903 BUILDING, TODAY" at={12} until={f.hold - f.designed} />
 		</Shot>
-		<Shot a={f.lakh} b={f.hardest} name="iisc">
-			<Photo file="B011a.jpg" dur={f.hardest - f.lakh} move={[0.0, 0.14, 0.02, -0.02]} grade="modern" depth={0.18} />
-			<CounterAt to={3000000} start={f.lakhWord - f.lakh - 40} land={f.lakhWord - f.lakh} prefix="₹" size={120} y={-60} />
-			<Stamp text="BANGALORE" sub="INDIAN INSTITUTE OF SCIENCE, TODAY" at={10} until={f.hardest - f.lakh} />
+		<Shot a={f.hold} b={f.steelD} name="taj-today">
+			<Photo file="B009d.jpg" dur={f.steelD - f.hold} move={[0.0, 0.16, -0.01, 0.01]} grade="modern" depth={0.18} />
+			<Dim from={f.never - f.hold - 30} to={f.steelD - f.hold} amount={0.55} />
+		</Shot>
+		{/* three bigger dreams: rails and bridges, monsoon power, science */}
+		<Shot a={f.steelD} b={f.power} name="bridge-1901" fadeIn={8}>
+			<Photo file="B020a.jpg" dur={f.power - f.steelD} move={[0.0, 0.2, 0, 0, 0.03, -0.01]} depth={0.26} />
+			<Stamp text="AHMEDABAD · 1901" sub="AN IRON BRIDGE" at={20} until={f.power - f.steelD} />
+		</Shot>
+		<Shot a={f.power} b={f.inst} name="ghats-monsoon" fadeIn={8}>
+			<Photo file="D006a.jpg" dur={f.inst - f.power} move={[0.0, 0.14, 0.02, -0.02]} grade="modern" depth={0.2} />
+			<Stamp text="THE WESTERN GHATS" sub="MONSOON" at={16} until={f.inst - f.power} />
+		</Shot>
+		<Shot a={f.inst} b={f.hardest} name="iisc" fadeIn={8}>
+			<Photo file="B011a.jpg" dur={f.hardest - f.inst} move={[0.0, 0.18, 0.02, -0.02]} grade="modern" depth={0.07} />
+			<CounterAt to={3000000} start={f.lakhWord - f.inst - 40} land={f.lakhWord - f.inst} prefix="₹" size={120} y={-60} />
+			<Stamp text="BANGALORE" sub="INDIAN INSTITUTE OF SCIENCE, TODAY" at={20} until={f.hardest - f.inst} />
 		</Shot>
 		{/* steel: ore, coal and water never in one place */}
 		<Shot a={f.hardest} b={f.end} name="trio" atmos={false} tag="ILLUSTRATION">

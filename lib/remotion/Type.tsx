@@ -168,7 +168,17 @@ export const Counter: React.FC<{
 };
 
 /** A short kinetic word or phrase (2–4 words), PLAYBOOK §6.3.3. Rises in with tracking, fades out. */
-export const Kinetic: React.FC<{text: string; at: number; until: number; size?: number; color?: string; x?: number; y?: number; display?: boolean}> = ({
+export const Kinetic: React.FC<{
+	text: string;
+	at: number;
+	until: number;
+	size?: number;
+	color?: string;
+	x?: number;
+	y?: number;
+	display?: boolean;
+	scrim?: number;
+}> = ({
 	text,
 	at,
 	until,
@@ -177,6 +187,7 @@ export const Kinetic: React.FC<{text: string; at: number; until: number; size?: 
 	x = 0,
 	y = 0,
 	display = false,
+	scrim = 1,
 }) => {
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
@@ -184,6 +195,17 @@ export const Kinetic: React.FC<{text: string; at: number; until: number; size?: 
 	const o = Math.min(p, tween(frame, until - 14, until, 1, 0, ease.leave));
 	return (
 		<AbsoluteFill style={{alignItems: 'center', justifyContent: 'center', pointerEvents: 'none'}}>
+			{/* A soft dark pool behind the words: bronze on a sepia photograph is otherwise unreadable. */}
+			<div
+				style={{
+					position: 'absolute',
+					width: size * Math.max(4, text.length * 0.9),
+					height: size * 2.6,
+					transform: `translate(${x}px, ${y}px)`,
+					opacity: o * scrim,
+					background: 'radial-gradient(ellipse at center, rgba(8,8,10,0.78) 0%, rgba(8,8,10,0.5) 42%, rgba(8,8,10,0) 72%)',
+				}}
+			/>
 			<div
 				style={{
 					transform: `translate(${x}px, ${y + (1 - p) * 26}px)`,
