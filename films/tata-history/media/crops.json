@@ -431,5 +431,95 @@
    1,
    0.92
   ]
+ ],
+ "G001a": [
+  "loc/G001a.jpg",
+  [
+   0,
+   0.1,
+   1,
+   0.86
+  ]
+ ],
+ "J001a": [
+  "raw/wm/J_01_de-havilland-dh-80-puss-moth-06-jpg.jpg",
+  [
+   0,
+   0.08,
+   1,
+   0.92
+  ]
+ ],
+ "J003a": [
+  "raw/wm/J_03_de-havilland-dh-80-puss-moth-02-jpg.jpg",
+  [
+   0,
+   0.08,
+   1,
+   0.92
+  ]
+ ],
+ "J005a": [
+  "raw/wm/J_05_juhu-aerodrome-composite-jpg.jpg",
+  [
+   0,
+   0,
+   0.98,
+   1
+  ]
+ ],
+ "J007a": [
+  "raw/wm/J_07_juhu-beach-arial-jpg.jpg",
+  [
+   0,
+   0.12,
+   1,
+   0.87
+  ]
+ ],
+ "F048a": [
+  "raw/wm/F004_48_air-india-lockheed-l-749a-constellation.jpg",
+  [
+   0,
+   0,
+   1,
+   1
+  ]
+ ],
+ "F046a": [
+  "raw/wm/F004_46_air-india-super-constellation-heathrow-1.jpg",
+  [
+   0,
+   0.059,
+   1,
+   0.941
+  ]
+ ],
+ "Y07a": [
+  "raw/y07/y07_22.3.jpg",
+  [
+   0,
+   0.125,
+   1,
+   0.875
+  ]
+ ],
+ "Y07b": [
+  "raw/y07/y07_26.4.jpg",
+  [
+   0,
+   0.0,
+   1,
+   0.75
+  ]
+ ],
+ "Y07c": [
+  "raw/y07/y07_28.0.jpg",
+  [
+   0,
+   0.125,
+   1,
+   0.875
+  ]
  ]
 }
