@@ -341,23 +341,39 @@ export const Blueprints: React.FC<{at: [number, number, number]; rollUpAt?: numb
 
 /** "Iron ore, the right coal and water, all in one place. Every place he tries is wrong.": three pins that never land
  *  together; each attempt, one drifts away and dims. Positions are illustrative, not real deposits. */
-export const TrioPins: React.FC<{tries: number[]}> = ({tries}) => {
+/** Ore, coal and water never in one place: three pins that search the central and eastern plateau (where the real
+ *  search was) and never meet. With `landAt` (one frame per word: "Ore nearby. Coal nearby. Water all year.") they
+ *  finally land together at Sakchi, one on each word. ILLUSTRATION: the searching positions are not real sites. */
+export const TrioPins: React.FC<{tries: number[]; landAt?: [number, number, number]}> = ({tries, landAt}) => {
 	const frame = useCurrentFrame();
-	const cam = {x: 80, y: 0, zoom: 1.1};
-	const centre: LonLat = [81, 22];
+	const centre: LonLat = [84.5, 22.2];
 	const k = tries.filter((t) => frame >= t).length;
 	const spread = (i: number): LonLat => {
 		const a = (i / 3) * Math.PI * 2 + k * 1.3;
-		const r = 4.5 + 1.2 * Math.sin(k + i);
+		const r = 2.2 + 0.6 * Math.sin(k + i);
 		return [centre[0] + r * Math.cos(a), centre[1] + r * Math.sin(a) * 0.7];
 	};
+	const sakchi = PLACES.jamshedpur;
+	const landed = (i: number) => landAt !== undefined && frame >= landAt[i] - 20;
+	const near: LonLat[] = [
+		[sakchi[0] - 0.12, sakchi[1] + 0.1],
+		[sakchi[0] + 0.14, sakchi[1] + 0.06],
+		[sakchi[0], sakchi[1] - 0.12],
+	];
 	const labels = ['IRON ORE', 'COAL', 'WATER'];
+	const wide = camFit([[79, 18.5], [90, 26]], 140);
+	const close = camFit(near, 380);
+	const cam = landAt ? mapCam([{...wide, f: landAt[0] - 70}, {...close, f: landAt[0] + 10}], frame) : wide;
 	return (
 		<MapBase>
 			<IndiaMap cam={cam} style="faint" reveal={1} id="ch1-trio">
-				{labels.map((l, i) => (
-					<MapPin key={`${l}${k}`} at={spread(i)} from={k === 0 ? 10 + i * 12 : tries[k - 1] + i * 8} cam={cam} label={l} side={i === 1 ? 'left' : 'right'} />
-				))}
+				{labels.map((l, i) =>
+					landed(i) ? (
+						<MapPin key={`${l}-land`} at={near[i]} from={landAt![i] - 20} cam={cam} label={l} side={i === 1 ? 'right' : 'left'} />
+					) : (
+						<MapPin key={`${l}${k}`} at={spread(i)} from={k === 0 ? 10 + i * 12 : tries[k - 1] + i * 8} cam={cam} label={l} side={i === 1 ? 'left' : 'right'} />
+					),
+				)}
 			</IndiaMap>
 		</MapBase>
 	);

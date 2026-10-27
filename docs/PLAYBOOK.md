@@ -1129,6 +1129,13 @@ To port when needed (Creator path → what to change):
 - *The rule:* treat an outside review as claims to check against the audio and claims.csv, never as edits to apply.
   Check a "glitch" by its loudness before cutting anything; speech-to-text invents words in silence.
 
+**Render farm uploads: artifacts, not Litterbox (2026-10-27).**
+- *What happened:* a 20-shard hero render finished (about 5 min a frame at 160 samples), then every shard's Litterbox
+  upload came back as an HTML error page, five tries each; the frames died with the runners. Earlier the same day one
+  shard was lost to a single 504.
+- *The rule:* farm output goes up with `actions/upload-artifact` (pinned) and is fetched through the API; no third-party
+  host in the farm's path. Look-develop locally, then render at the lowest sample count that is clean after OIDN.
+
 **Bank counter: from depth parallax to a real 3D shot (2026-10-27).**
 - *What happened:* the counter was a 4K still moved by DepthPhoto parallax. Its brass grille against a black wall tore
   into streaks (the depth map jumps from near to far between every bar), and the case layer never showed. The counter
