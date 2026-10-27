@@ -1,0 +1,41 @@
+# id	query (search:… | Category:… | File:a|File:b)	n	must-regex (optional)
+B013	search:Navsari Parsi fire temple	4	
+B013	search:Parsi Atash Behram Navsari	3	
+B003	search:Jamsetji Tata portrait	6	(?i)tata
+B005	search:Empress Mills Nagpur	4	
+B006	search:Delhi Durbar 1877	5	
+B009	search:Taj Mahal Hotel Bombay 1905	6	(?i)taj
+B009	Category:Taj Mahal Palace Hotel in the 1900s	6	
+B011	search:Indian Institute of Science Bangalore main building	4	
+B015	search:Elphinstone College Bombay	4	
+B014	search:Abyssinia expedition 1868	6	
+B002	search:Lancashire cotton mill 19th century	5	
+C003	search:Pramatha Nath Bose	3	
+C007	search:Subarnarekha river Jamshedpur	4	
+D005	search:Mesopotamia railway 1917	5	
+E003	search:Meherbai Tata	4	
+E003	search:Lady Tata 1920	4	(?i)tata
+E004	search:Jagersfontein mine	4	
+E005	search:Tata Memorial Hospital Mumbai	4	
+E007	search:Diamond Jubilee 1897 procession London	4	
+F001	search:J. R. D. Tata	8	(?i)tata
+F002	search:de Havilland Puss Moth	6	
+F004	search:Air India Lockheed Constellation	5	
+F008	search:Sudha Murty	4	(?i)murty
+G002	search:Ratan Tata	8	(?i)ratan
+G003	search:Tata Indica	4	
+G006	search:Port Talbot steelworks	6	
+H001	search:Tata Nano	5	(?i)nano
+H003	search:Jaguar Land Rover Castle Bromwich	4	
+H005	search:Taj Mahal Palace Hotel Mumbai November 2008	6	(?i)taj
+H006	search:Taj Mahal Palace Hotel Mumbai dome	6	(?i)taj
+I003	search:Cyrus Mistry	3	(?i)mistry
+I003	search:Natarajan Chandrasekaran	3	(?i)chandrasekaran
+I004	search:Tata Consultancy Services campus	4	
+I005	search:Air India Airbus A350 new livery	4	
+I008	search:Supreme Court of India building	3	
+J001	File:BOMBAY HOUSE NIGHT.jpg	1	
+J002	search:Ratan Tata NCPA tribute 2024	4	
+J003	search:Noel Tata	3	(?i)noel
+J004	search:Reserve Bank of India Mumbai headquarters	4	
+J004	search:Bombay Stock Exchange building	3	
