@@ -1129,6 +1129,14 @@ To port when needed (Creator path → what to change):
 - *The rule:* treat an outside review as claims to check against the audio and claims.csv, never as edits to apply.
   Check a "glitch" by its loudness before cutting anything; speech-to-text invents words in silence.
 
+**Bank counter: from depth parallax to a real 3D shot (2026-10-27).**
+- *What happened:* the counter was a 4K still moved by DepthPhoto parallax. Its brass grille against a black wall tore
+  into streaks (the depth map jumps from near to far between every bar), and the case layer never showed. The counter
+  is now three animated Cycles shots (c1-c3 in `scripts/blender/counter.py`, rendered on the farm): the case slides into
+  the lamp pool, and the lid opens on "the diamond as the guarantee" with the stone lit by light-linked sparks.
+- *The rule:* depth parallax only for photographs; anything we built in 3D gets a real camera move. In Blender scripts,
+  `transform_apply` bakes an object's position into its mesh: parent such objects at location 0, never set it again.
+
 **Blender diamond, look development (2026-10-27).**
 - *What happened:* the first farm renders (24 samples, emissive cards only) looked like dark glass on grey plaster,
   and the macro was noisy. The fixes: a Poly Haven studio HDRI seen only by the stone (world ray visibility camera

@@ -21,7 +21,6 @@ import {
 } from '../../../../../lib/remotion';
 import {GemCompare} from '../../../../../lib/remotion/kinetic';
 import {YearRoller} from '../../../../../lib/remotion/kinetic';
-import {CounterShot} from '../../../../../lib/remotion/three/CounterShot';
 import {DepthPhoto} from '../../../../../lib/remotion/three/DepthPhoto';
 import {MapBombayJamshedpur} from '../dev/map/MapScenes';
 import {PayWindowQueue} from '../dev/ink/PayWindow';
@@ -29,7 +28,7 @@ import {PawnCounter} from '../shots/PawnCounter';
 import {RichLedger} from '../shots/RichLedger';
 import {Filmstrip} from '../shots/Filmstrip';
 import {T} from '../timing';
-import {CounterAt} from '../kit';
+import {CounterAt, DeskPrint} from '../kit';
 
 // Cold open (plan_v6 §4; handoff scenes/00_cold_open.md). Every cut and landing is a VO frame from T.
 const CH = T.chapter('Cold open');
@@ -40,7 +39,8 @@ const W = (sentence: string, phrase: string, after = 0): number => L(T.word(sent
 const id = (text: string): number => T.sentence(text).id;
 
 const M = 'assets/media';
-const COUNTER = `${M}/blender/counter`;
+// The bank counter: Blender shots c1-c3 (scripts/blender/counter.py), rendered every 2nd frame on the farm.
+const COUNTER = `${M}/blender`;
 
 const f = {
 	bombay: S('Bombay.'),
@@ -160,7 +160,7 @@ export const ColdOpen: React.FC = () => {
 
 			{/* 2 · the bank: the case slides into the lamp pool, landing on "diamond" */}
 			<Shot a={f.man} b={f.carats} name="counter-1">
-				<CounterShot dir={COUNTER} keys={[{f: 0, dolly: 0}, {f: f.carats - f.man, dolly: 0.1}]} caseIn={{from: 10, to: f.diamondWord - f.man + 6}} />
+				<FrameSeq dir={`${COUNTER}/c1`} prefix="c1_" last={210} />
 				<HonestyTag text="RECONSTRUCTION" />
 			</Shot>
 
@@ -179,7 +179,7 @@ export const ColdOpen: React.FC = () => {
 
 			{/* 5 · not to sell: a loan, the diamond as the guarantee */}
 			<Shot a={f.sell} b={f.ask} name="counter-2">
-				<CounterShot dir={COUNTER} keys={[{f: 0, dolly: 0.12}, {f: f.ask - f.sell, dolly: 0.26}]} caseIn={{from: -2, to: -1}} />
+				<FrameSeq dir={`${COUNTER}/c2`} prefix="c2_" last={322} />
 				<HonestyTag text="RECONSTRUCTION" />
 			</Shot>
 
@@ -206,8 +206,8 @@ export const ColdOpen: React.FC = () => {
 			{/* 9 · Sir Dorabji Tata; Tata Steel */}
 			<Shot a={f.never} b={f.look} name="dorabji">
 				<Desk />
-				<Print file={`${M}/raw/wm/A005_04_dorabji-tata-jpg.jpg`} at={f.sir - f.never - 24} width={560} rotate={-2.5} seed="dorabji" />
-				<LowerThird name="SIR DORABJI TATA" role="1859 – 1932" at={f.sir - f.never + 10} until={f.steel - f.never + 10} />
+				<Print file={`${M}/raw/wm/A005_04_dorabji-tata-jpg.jpg`} at={4} width={560} rotate={-2.5} seed="dorabji" />
+				<LowerThird name="SIR DORABJI TATA" role="1859 – 1932" at={f.sir - f.never + 10} until={f.steel - f.never - 4} />
 				<Stamp text="TATA STEEL" sub="JAMSHEDPUR" at={f.steel - f.never} until={f.look - f.never} />
 			</Shot>
 
@@ -227,7 +227,7 @@ export const ColdOpen: React.FC = () => {
 
 			{/* 12 · the answer is in this bank */}
 			<Shot a={f.answer} b={f.what} name="counter-3">
-				<CounterShot dir={COUNTER} keys={[{f: 0, dolly: 0.2}, {f: f.what - f.answer, dolly: 0.3}]} caseIn={{from: -2, to: -1}} glow={0.6} />
+				<FrameSeq dir={`${COUNTER}/c3`} prefix="c3_" last={122} />
 				<HonestyTag text="RECONSTRUCTION" />
 			</Shot>
 			<Shot a={f.what} b={f.y2026} name="diamond-table">
@@ -262,13 +262,13 @@ export const ColdOpen: React.FC = () => {
 	);
 };
 
-/** The light of the stone dissolves into dawn on a small Gujarat town (Navsari). */
+/** The ember light of the stone fades onto a period postcard of a Parsee priest (M. V. Dhurandhar, early 1900s). */
 const NavsariDawn: React.FC = () => {
 	const frame = useCurrentFrame();
 	const o = tween(frame, 0, 50, 0, 1, ease.arrive);
 	return (
 		<AbsoluteFill style={{opacity: o}}>
-			<DepthPhoto file="assets/media/B013.jpg" keys={[{f: 0, dolly: 0.0, y: 0.01}, {f: 400, dolly: 0.14}]} depth={0.2} grade="furnace" />
+			<DeskPrint file="raw/wm/P_02_parsee-priest-jpg.jpg" at={-10} width={560} rotate={-1.5} grade="furnace" seed="priest" />
 			<AbsoluteFill style={{background: `radial-gradient(ellipse 60% 50% at 50% 40%, rgba(255,170,90,${0.35 * (1 - o)}) 0%, rgba(0,0,0,0) 70%)`}} />
 		</AbsoluteFill>
 	);

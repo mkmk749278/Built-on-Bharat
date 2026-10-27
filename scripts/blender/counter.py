@@ -1,6 +1,14 @@
 """The 1924 bank counter (RECONSTRUCTION), rendered as stills for the film's recurring counter shot (plan_v6 §1).
 
   .venv-blender/bin/python scripts/blender/counter.py --out DIR [--w 3840 --h 2160] [--samples 96] [--layer plate|case|both]
+  .venv-blender/bin/python scripts/blender/counter.py --shot c1|c2|c3 --out DIR --frames a-b --step 2 [--w 1920 --h 1080]
+
+Shots (60 fps frame numbers, local to the cold-open shot; rendered every 2nd frame and blended to 60 in Remotion):
+  c1  (0-210)  "A man walks into a bank, carrying his wife's diamond": the camera settles low at the counter as the
+      case slides into the lamp pool, landing on "diamond" (frame 155)
+  c2  (0-323)  "Is he here to sell it? No. He wants a loan, with the diamond as the guarantee": a slow push in; on
+      "the diamond as the guarantee" (222-290) the lid opens and the stone catches the lamp
+  c3  (0-122)  "The answer is in this bank": a glide along the counter toward the closed case
 
 Writes, per layer, a 16-bit PNG and a depth map (<name>_depth.png, white = near, for DepthPhoto's camera move):
   plate   the counter: mahogany top, a brass teller grille with an arched window, a green-shaded banker's lamp throwing
@@ -21,6 +29,18 @@ import bpy  # noqa: I001
 from mathutils import Vector
 
 TEX = "films/tata-history/assets/media/tex"
+PH = "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/{asset}/{asset}_{kind}_2k.jpg"  # Poly Haven, CC0
+
+
+def fetch_tex(name):
+    """Poly Haven textures are not in git (large media): fetch a missing one, e.g. on a GitHub runner."""
+    path = f"{TEX}/{name}"
+    if not os.path.exists(path):
+        import urllib.request
+        asset, kind = name[:-4].rsplit("_", 1)
+        os.makedirs(TEX, exist_ok=True)
+        urllib.request.urlretrieve(PH.format(asset=asset, kind={"nor": "nor_gl"}.get(kind, kind)), path)
+    return path
 
 
 def tex_mat(name, base, rough=None, nor=None, scale=1.0, tint=(1, 1, 1), rough_k=1.0, metallic=0.0, color=None):
@@ -35,7 +55,7 @@ def tex_mat(name, base, rough=None, nor=None, scale=1.0, tint=(1, 1, 1), rough_k
 
     def img(path, non_color=False):
         t = nt.nodes.new("ShaderNodeTexImage")
-        t.image = bpy.data.images.load(os.path.abspath(path))
+        t.image = bpy.data.images.load(os.path.abspath(fetch_tex(os.path.basename(path))))
         if non_color:
             t.image.colorspace_settings.name = "Non-Color"
         nt.links.new(mp.outputs[0], t.inputs["Vector"])
@@ -164,7 +184,7 @@ def build(args):
     w.node_tree.nodes["Background"].inputs[0].default_value = (0.002, 0.0018, 0.0015, 1)
 
     mahog = tex_mat("Mahogany", "smoked_walnut_veneer_diff.jpg", "smoked_walnut_veneer_rough.jpg", "smoked_walnut_veneer_nor.jpg",
-                    scale=1.4, tint=(0.20, 0.095, 0.06), rough_k=0.6)
+                    scale=1.4, tint=(0.13, 0.06, 0.038), rough_k=0.6)
     panel = tex_mat("Panels", "dark_paneled_wood_diff.jpg", "dark_paneled_wood_rough.jpg", "dark_paneled_wood_nor.jpg",
                     scale=0.6, tint=(0.35, 0.22, 0.15))
     br = brass()
@@ -275,16 +295,55 @@ def build(args):
     return s
 
 
-def add_case(s):
-    """The jewellery case: dark leather outside, velvet lip, brass clasp; closed; at the lamp pool's centre."""
-    velvet = tex_mat("CaseVelvet", "velour_velvet_diff.jpg", "velour_velvet_rough.jpg", "velour_velvet_nor.jpg", scale=6, tint=(0.25, 0.05, 0.07))
-    leather = tex_mat("CaseLeather", None, None, "leather_red_02_nor.jpg", scale=4, color=(0.035, 0.006, 0.008))
+def add_case(s, gem=False):
+    """The jewellery case: dark leather outside, velvet lip, brass clasp; closed; at the lamp pool's centre.
+    Returns (case root, lid hinge): move the root to slide the case, turn the hinge (−X) to open the lid."""
+    velvet = tex_mat("CaseVelvet", "velour_velvet_diff.jpg", "velour_velvet_rough.jpg", "velour_velvet_nor.jpg", scale=6, tint=(0.03, 0.045, 0.16))  # deep navy velvet: the stone reads against it
+    leather = tex_mat("CaseLeather", None, None, "leather_red_02_nor.jpg", scale=4, color=(0.014, 0.0025, 0.003))
     br = bpy.data.materials.get("Brass") or brass()
     cx, cy = 0.0, 0.0
-    box("CaseBase", (0.15, 0.115, 0.03), (cx, cy, 0.015), leather, bevel=0.008)
-    box("CaseLid", (0.152, 0.117, 0.028), (cx, cy, 0.045), leather, bevel=0.012)
-    box("CaseLip", (0.146, 0.111, 0.004), (cx, cy, 0.031), velvet, bevel=0.001)
-    box("Clasp", (0.02, 0.006, 0.012), (cx, cy - 0.06, 0.032), br, bevel=0.001)
+    root = bpy.data.objects.new("CaseRoot", None)
+    s.collection.objects.link(root)
+    hinge = bpy.data.objects.new("CaseHinge", None)
+    s.collection.objects.link(hinge)
+    hinge.location = (cx, cy + 0.0585, 0.031)
+    hinge.parent = root
+    parts = [box("CaseBase", (0.15, 0.115, 0.03), (cx, cy, 0.015), leather, bevel=0.005),
+             box("CaseLip", (0.146, 0.111, 0.004), (cx, cy, 0.031), velvet, bevel=0.001),
+             box("Clasp", (0.02, 0.006, 0.012), (cx, cy - 0.06, 0.032), br, bevel=0.001)]
+    for o in parts:
+        o.parent = root  # box() bakes the position into the mesh (transform_apply), so the object sits at 0
+    lid = box("CaseLid", (0.152, 0.117, 0.028), (cx, cy, 0.045), leather, bevel=0.005)
+    lid.parent = hinge
+    lid.location = (-hinge.location.x, -hinge.location.y, -hinge.location.z)  # its mesh already carries its place
+    if gem:
+        # The stone inside, on the velvet: the same cushion brilliant as the hero shot (scripts/blender/jubilee.py),
+        # at its real size (about 38 mm across).
+        sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+        import jubilee
+        g = jubilee.build_gem()
+        g.scale = (0.019, 0.019, 0.019)
+        g.parent = root
+        g.location = (cx, cy - 0.004, 0.036)
+        g.rotation_euler = (math.radians(-8), 0, math.radians(8))
+        # Light the stone only (Cycles light linking): small hard sources for fire and a soft card for the table
+        # flash, none of which touch the counter, so the room keeps its one lamp.
+        only = bpy.data.collections.new("GemOnly")
+        s.collection.children.link(only)
+        only.objects.link(g)
+        for i, (x, y, z, e, size) in enumerate([(-0.10, -0.16, 0.22, 6, 0.008), (0.14, -0.12, 0.18, 5, 0.008),
+                                                 (0.02, -0.22, 0.12, 4, 0.006), (-0.16, 0.06, 0.20, 5, 0.01),
+                                                 (0.0, -0.05, 0.30, 3, 0.12)]):
+            d = bpy.data.lights.new(f"GemLight{i}", "AREA")
+            d.energy, d.size, d.color = e, size, (1.0, 0.95, 0.88)
+            if size < 0.05:
+                d.shape = "DISK"
+            o = bpy.data.objects.new(f"GemLight{i}", d)
+            s.collection.objects.link(o)
+            o.location = (x, y, z)
+            o.rotation_euler = (Vector((cx, cy, 0.036)) - o.location).to_track_quat("-Z", "Y").to_euler()
+            o.light_linking.receiver_collection = only
+    return root, hinge
 
 
 def render(s, out, name):
@@ -317,9 +376,69 @@ def render(s, out, name):
     print("wrote", name, flush=True)
 
 
+def ease(t: float) -> float:
+    t = max(0.0, min(1.0, t))
+    return t * t * t * (t * (6 * t - 15) + 10)
+
+
+def lerp3(a, b, u):
+    return Vector(a).lerp(Vector(b), u)
+
+
+def place(shot, f, cam, cd, root, hinge):
+    """Camera, case and lid at 60 fps frame f of a shot (moves eased, never linear)."""
+    def aim(target, focus):
+        cam.rotation_euler = (Vector(target) - cam.location).to_track_quat("-Z", "Y").to_euler()
+        cd.dof.focus_distance = (Vector(focus) - cam.location).length
+    hinge.rotation_euler.x = 0.0
+    if shot == "c1":
+        u = ease(f / 210)
+        cam.location = lerp3((0.22, -1.32, 0.46), (0.03, -0.80, 0.27), u)
+        k = ease((f - 20) / 135)  # the case slides in from the left, landing on "diamond" (155)
+        root.location = lerp3((-0.62, -0.08, 0.0), (0.0, 0.0, 0.0), k)
+        root.rotation_euler.z = math.radians(-14 * (1 - k))
+        aim(lerp3((0.0, 0.42, 0.2), (0.0, 0.18, 0.08), u), root.location + Vector((0, 0, 0.03)))
+    elif shot == "c2":
+        u = ease(f / 323)
+        cam.location = lerp3((0.30, -0.80, 0.30), (-0.01, -0.33, 0.21), u)
+        cd.lens = 32 + 20 * u
+        hinge.rotation_euler.x = math.radians(-72 * ease((f - 222) / 68))  # "the diamond as the guarantee"
+        aim((0.0, 0.05, 0.03), (0.0, 0.0, 0.04))
+    elif shot == "c3":
+        u = ease(f / 122)
+        cam.location = lerp3((0.62, -0.72, 0.24), (0.10, -0.90, 0.31), u)
+        aim(lerp3((0.1, 0.2, 0.1), (0.0, 0.3, 0.14), u), (0.0, 0.0, 0.03))
+
+
+def shots(args):
+    s = build(args)
+    s.render.threads_mode = "FIXED"
+    s.render.threads = args.threads
+    s.render.image_settings.color_depth = "8"
+    s.view_layers[0].use_pass_z = False
+    s.cycles.denoising_prefilter = "ACCURATE"
+    root, hinge = add_case(s, gem=args.shot == "c2")
+    cam, cd = s.camera, s.camera.data
+    a, b = map(int, args.frames.split("-"))
+    os.makedirs(args.out, exist_ok=True)
+    for f in range(a, b + 1, args.step):
+        path = f"{args.out}/{args.shot}_{f:04d}.png"
+        if os.path.exists(path):
+            continue  # resumable
+        place(args.shot, f, cam, cd, root, hinge)
+        s.render.filepath = path + ".tmp.png"
+        bpy.ops.render.render(write_still=True)
+        os.replace(path + ".tmp.png", path)
+        print("frame", f, flush=True)
+
+
 def main():
     argv = sys.argv[sys.argv.index("--") + 1:] if "--" in sys.argv else sys.argv[1:]
     ap = argparse.ArgumentParser()
+    ap.add_argument("--shot", help="c1 | c2 | c3: an animated shot (see the module docstring)")
+    ap.add_argument("--frames", default="0-0")
+    ap.add_argument("--step", type=int, default=2)
+    ap.add_argument("--bounces", type=int, default=8)
     ap.add_argument("--out", required=True)
     ap.add_argument("--w", type=int, default=3840)
     ap.add_argument("--h", type=int, default=2160)
@@ -328,6 +447,9 @@ def main():
     ap.add_argument("--threads", type=int, default=4)
     args = ap.parse_args(argv)
     os.makedirs(args.out, exist_ok=True)
+    if args.shot:
+        shots(args)
+        return
     if args.layer in ("plate", "both"):
         s = build(args)
         s.render.threads_mode = "FIXED"
