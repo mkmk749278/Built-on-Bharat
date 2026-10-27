@@ -5,6 +5,8 @@
 # Usage: scripts/upload_gdrive.sh [--sub <subfolder>] FILE [FILE ...]
 #   --sub taj-mahal-palace     puts the files in Built-on-Bharat/<subfolder>/ (created if missing).
 #   Drive layout: Built-on-Bharat/<slug>/ one folder per film, Built-on-Bharat/_Channel/ for channel art (PLAYBOOK §1).
+#   A single DIRECTORY argument copies its files in one resumable pass (8 at a time, files already there are skipped):
+#   use it for frame sequences, where a per-file upload dies with the session's worker part-way.
 #
 # Needs the environment variable GDRIVE_RCLONE_TOKEN: the JSON line that `rclone authorize "drive"` prints
 # (already set in this environment). Optional GDRIVE_FOLDER_ID (default: the Built-on-Bharat folder created
@@ -48,6 +50,12 @@ EOF
 export RCLONE_CONFIG_GD_TYPE=drive RCLONE_CONFIG_GD_SCOPE=drive RCLONE_CONFIG_GD_TOKEN="$TOKEN"
 export RCLONE_CONFIG_GD_ROOT_FOLDER_ID="$FOLDER_ID" RCLONE_CONFIG=/dev/null
 DEST="gd:${SUB}"
+if [[ $# -eq 1 && -d $1 ]]; then
+  "$RCLONE" copy --transfers 8 --drive-chunk-size 64M --retries 4 --low-level-retries 10 --stats-one-line --stats 60s \
+    "$1" "$DEST" >&2
+  echo "$(ls "$1" | wc -l) files in $SUB (folder copy; existing files skipped)"
+  exit 0
+fi
 for f in "$@"; do
   name=$(basename "$f")
   "$RCLONE" copyto --drive-chunk-size 64M --retries 4 --low-level-retries 10 --stats-one-line --stats 30s \

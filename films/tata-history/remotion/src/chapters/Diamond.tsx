@@ -1,7 +1,7 @@
 import React from 'react';
 import {AbsoluteFill} from 'remotion';
 import {colors, Desk, FrameSeq, Kinetic, LowerThird, Print, Stamp} from '../../../../../lib/remotion';
-import {YearRoller} from '../../../../../lib/remotion/kinetic';
+import {Glint, YearRoller} from '../../../../../lib/remotion/kinetic';
 import {PayWindowQueue} from '../dev/ink/PayWindow';
 import {chapterClock, CounterAt, DeskPrint, Photo, Shot} from '../kit';
 import {Fading} from '../shots/ch2';
@@ -119,6 +119,7 @@ export const Diamond: React.FC = () => (
 		{/* the pledge: the lid opens on the counter; the Imperial Bank of India */}
 		<Shot a={f.hands} b={f.sbi} name="pledge" tag="RECONSTRUCTION">
 			<FrameSeq dir={`${BLENDER}/c2`} prefix="c2_" last={322} rate={322 / Math.max(1, f.sbi - f.hands)} />
+			<Glint x={1128} y={686} at={(292 * (f.sbi - f.hands)) / 322} size={180} />
 			<Stamp text="IMPERIAL BANK OF INDIA" sub="BOMBAY · 1924" at={f.imperial - f.hands} until={f.sbi - f.hands} />
 		</Shot>
 		<Shot a={f.sbi} b={f.loan} name="sbi" fadeIn={8}>
