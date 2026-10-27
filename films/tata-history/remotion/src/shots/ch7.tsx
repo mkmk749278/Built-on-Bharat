@@ -284,10 +284,10 @@ export const KitchenDoors: React.FC<{stopAt: number}> = ({stopAt}) => {
 };
 
 /** A plain line of type on black, quiet (a name when no licensed photo exists, a date). */
-export const OnBlack: React.FC<{lines: {text: string; size?: number; at: number; until?: number; serif?: boolean}[]}> = ({lines}) => {
+export const OnBlack: React.FC<{lines: {text: string; size?: number; at: number; until?: number; serif?: boolean}[]; bg?: string; x?: number; y?: number}> = ({lines, bg = '#050506', x = 0, y = 0}) => {
 	const frame = useCurrentFrame();
 	return (
-		<AbsoluteFill style={{background: '#050506', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', gap: 26}}>
+		<AbsoluteFill style={{background: bg, alignItems: 'center', justifyContent: 'center', flexDirection: 'column', gap: 26, transform: `translate(${x}px, ${y}px)`}}>
 			{lines.map((l) => (
 				<div
 					key={l.text}
