@@ -719,5 +719,32 @@
    1,
    0.9219
   ]
+ ],
+ "J013a": [
+  "raw/wm/J013_09_silicon-wafer-close-view-jpg.jpg",
+  [
+   0,
+   0.125,
+   1,
+   0.875
+  ]
+ ],
+ "J013b": [
+  "raw/wm/J013_07_wafer-scale-integrated-circuit-on-300-mm.jpg",
+  [
+   0,
+   0.0687,
+   1,
+   0.9313
+  ]
+ ],
+ "J013c": [
+  "raw/wm/J013_14_partially-etched-silicon-dioxide-via-nom.jpg",
+  [
+   0,
+   0.1166,
+   1,
+   0.8834
+  ]
  ]
 }
