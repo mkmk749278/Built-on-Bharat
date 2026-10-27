@@ -51,7 +51,7 @@ Then:
 - If progress needs showing, show a **finished** piece (a complete chapter, final-quality frames), never a rough one.
 - **Don't limit yourself.** Opus 5.5 can do a lot: research deeply, write real code, build real 3D, review every frame.
   Never settle for the first idea, a template look or "good enough". Use `high`/`xhigh` effort for building and `max`
-  for fact-checks and final reviews. Get speed from parallel sessions, never from doing less.
+  for fact-checks and final reviews. Never do less to go faster.
 
 ## Owner and workflow
 - The owner (Kishore) works **only from an Android phone**: GitHub app, Claude app, Termux, SSH to a VPS. No PC.
@@ -63,8 +63,11 @@ Then:
   Google Drive connector. The `Creator` folder belongs to the other channel: never write there.
 - **All work lands on `main`.** Each session works on its own branch, opens a PR to `main` and merges it the same day.
   Sessions can't delete branches: tell the owner which ones to delete.
-- **Standing permission (owner, 2026-10-24):** open and archive cloud sessions and run any command without asking
-  each time, until the owner says no (usage limits). Allow rules are in `.claude/settings.json`. Still ask before
+- **One session does the work (owner, 2026-10-27).** No parallel sessions for building, sourcing or rendering: they
+  burn the shared usage limit, and after a reset they burn it again catching up. Open a new session **only for an
+  independent review** (the audience review, a fact-check, a fresh-eyes picture review), and archive it when done.
+- **Standing permission (owner, 2026-10-24):** archive sessions and run any command without asking each time, until
+  the owner says no (usage limits). Allow rules are in `.claude/settings.json`. Still ask before
   anything paid, anything outward-facing beyond our repos and Drive, and anything destructive.
 - Build in phases. At the end of each phase, stop and report what was built, what was checked and what is left.
 - Once the owner approves a cut, stop editing it.
@@ -146,7 +149,7 @@ Then:
 ## Cloud session traps (each cost a render on the sister channel)
 - Backgrounded commands die at ~30 min: start renders with `setsid nohup … < /dev/null & disown`, watch with Monitor,
   one render per session. An idle session's VM can be reclaimed mid-job: render in shards that skip finished parts.
-- All sessions share one IP and one usage limit: at most two heavy sessions beside a coordinator; one sourcing session.
+- All sessions share one IP and one usage limit: one working session only (owner, 2026-10-27); reviews in their own.
 - Never `pkill -f`/`pgrep -f` with a pattern that appears in the same command line; never name a shell function after a
   command it calls.
 - Bitrate-cap every encode. Large media stays out of git (Drive, or Litterbox for session-to-session hand-off).
