@@ -298,7 +298,9 @@ def build(args):
 def add_case(s, gem=False):
     """The jewellery case: dark leather outside, velvet lip, brass clasp; closed; at the lamp pool's centre.
     Returns (case root, lid hinge): move the root to slide the case, turn the hinge (−X) to open the lid."""
-    velvet = tex_mat("CaseVelvet", "velour_velvet_diff.jpg", "velour_velvet_rough.jpg", "velour_velvet_nor.jpg", scale=6, tint=(0.012, 0.03, 0.22))  # deep navy velvet: the stone reads against it
+    velvet = tex_mat("CaseVelvet", "velour_velvet_diff.jpg", "velour_velvet_rough.jpg", "velour_velvet_nor.jpg", scale=6, tint=(0.002, 0.008, 0.06))  # deep navy velvet: the stone reads against it
+    # velvet has no glossy coat: a rough dielectric specular turns it a pale grey under the lamp (as in jubilee.py)
+    velvet.node_tree.nodes["Principled BSDF"].inputs["Specular IOR Level"].default_value = 0.0
     leather = tex_mat("CaseLeather", None, None, "leather_red_02_nor.jpg", scale=4, color=(0.014, 0.0025, 0.003))
     br = bpy.data.materials.get("Brass") or brass()
     cx, cy = 0.0, 0.0
@@ -316,6 +318,12 @@ def add_case(s, gem=False):
     lid = box("CaseLid", (0.152, 0.117, 0.028), (cx, cy, 0.045), leather, bevel=0.005)
     lid.parent = hinge
     lid.location = (-hinge.location.x, -hinge.location.y, -hinge.location.z)  # its mesh already carries its place
+    # the inside of the lid: ivory satin, as in a real jewellery case. Opened, it stands behind the stone, and the
+    # crown's facets mirror it as bright planes (a leather lid there turns the stone grey)
+    satin = plain("LidSatin", (0.64, 0.6, 0.5), rough=0.3)
+    lining = box("LidLining", (0.142, 0.107, 0.002), (cx, cy, 0.0305), satin, bevel=0.0005)
+    lining.parent = hinge
+    lining.location = lid.location
     if gem:
         # The stone inside, on the velvet: the same cushion brilliant as the hero shot (scripts/blender/jubilee.py),
         # at its real size (about 38 mm across).
@@ -340,9 +348,13 @@ def add_case(s, gem=False):
         only = bpy.data.collections.new("GemOnly")
         s.collection.children.link(only)
         only.objects.link(g)
-        for i, (x, y, z, e, size) in enumerate([(-0.10, -0.16, 0.22, 24, 0.008), (0.14, -0.12, 0.18, 20, 0.008),
-                                                 (0.02, -0.22, 0.12, 16, 0.006), (-0.16, 0.06, 0.20, 20, 0.01),
-                                                 (0.06, 0.10, 0.16, 18, 0.008), (0.0, -0.05, 0.30, 10, 0.12)]):
+        # small hard sources for fire, plus white cards either side (jeweller's lighting: the crown facets read as
+        # bright planes against the dark velvet, not a grey blur)
+        for i, (x, y, z, e, size) in enumerate([(-0.10, -0.16, 0.22, 60, 0.008), (0.14, -0.12, 0.18, 50, 0.008),
+                                                 (0.02, -0.22, 0.12, 40, 0.006), (-0.16, 0.06, 0.20, 50, 0.01),
+                                                 (0.06, 0.10, 0.16, 45, 0.008), (0.0, -0.05, 0.30, 14, 0.12),
+                                                 (-0.18, -0.10, 0.10, 18, 0.07), (0.18, -0.08, 0.10, 18, 0.07),
+                                                 (0.0, 0.10, 0.22, 16, 0.06)]):
             d = bpy.data.lights.new(f"GemLight{i}", "AREA")
             d.energy, d.size, d.color = e, size, (1.0, 0.95, 0.88)
             if size < 0.05:
@@ -352,6 +364,32 @@ def add_case(s, gem=False):
             o.location = (x, y, z)
             o.rotation_euler = (Vector((cx, cy, 0.036)) - o.location).to_track_quat("-Z", "Y").to_euler()
             o.light_linking.receiver_collection = only
+        # A photo studio only the stone sees (as the hero shot's world, jubilee.py): an emissive sphere carrying the
+        # Poly Haven HDRI, invisible to the camera, to shadows and to diffuse rays, and light-linked to the stone, so
+        # its facets break into the studio's softboxes and dark gaps instead of refracting a grey or navy blur.
+        bpy.ops.mesh.primitive_uv_sphere_add(radius=0.3, location=(cx, cy, 0.05), segments=64, ring_count=32)
+        dome = bpy.context.object
+        dome.name = "GemStudio"
+        dome.parent = root
+        dm = bpy.data.materials.new("GemStudio")
+        dm.use_nodes = True
+        nt = dm.node_tree
+        nt.nodes.clear()
+        tc = nt.nodes.new("ShaderNodeTexCoord")
+        env = nt.nodes.new("ShaderNodeTexEnvironment")
+        env.image = bpy.data.images.load(os.path.abspath(jubilee.ensure_hdri("studio_small_09")))
+        nt.links.new(tc.outputs["Object"], env.inputs["Vector"])
+        em = nt.nodes.new("ShaderNodeEmission")
+        em.inputs["Strength"].default_value = 1.4
+        nt.links.new(env.outputs["Color"], em.inputs["Color"])
+        out = nt.nodes.new("ShaderNodeOutputMaterial")
+        nt.links.new(em.outputs[0], out.inputs["Surface"])
+        dome.data.materials.append(dm)
+        dome.visible_camera = False
+        dome.visible_shadow = False
+        dome.visible_diffuse = False
+        dome.visible_volume_scatter = False
+        dome.light_linking.receiver_collection = only
     return root, hinge
 
 

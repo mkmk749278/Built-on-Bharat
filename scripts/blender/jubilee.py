@@ -184,6 +184,17 @@ HDRI_DIR = "films/tata-history/assets/media/hdri"
 HDRI_URL = "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/{}_2k.hdr"  # Poly Haven, CC0
 
 
+def ensure_hdri(name: str) -> str:
+    """The Poly Haven studio's 2k HDR on disk (fetched once): the path."""
+    import os
+    import urllib.request
+    path = f"{HDRI_DIR}/{name}_2k.hdr"
+    if not os.path.exists(path):
+        os.makedirs(HDRI_DIR, exist_ok=True)
+        urllib.request.urlretrieve(HDRI_URL.format(name), path)
+    return path
+
+
 def studio_world(w, name: str, strength: float) -> None:
     """A real photo studio (Poly Haven HDRI, CC0) that only the stone sees: reflection and refraction rays get the
     studio's softboxes, windows and dark gaps (the structure a flat card can't give), while camera and diffuse rays
