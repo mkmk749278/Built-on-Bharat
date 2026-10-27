@@ -10,3 +10,4 @@ export * from './Photo';
 export * from './Type';
 export * from './Document';
 export * from './Brand';
+export * from './FrameSeq';

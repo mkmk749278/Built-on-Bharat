@@ -7,6 +7,7 @@ import {ScooterFamily} from './ink/ScooterFamily';
 import {MapBombayJamshedpur, MapFlight1932} from './map/MapScenes';
 import {FurnaceScene} from './systems/FurnaceScene';
 import {OwnershipScene} from './systems/OwnershipScene';
+import {DepthGirgaum, DepthStreet} from './systems/DepthScene';
 import {CalendarScene, GemScene, YearRollerScene} from './systems/KineticScenes';
 
 const PayWindowDev: React.FC = () => <PayWindowQueue />;
@@ -26,6 +27,8 @@ export const DevCompositions: React.FC = () => (
 		<Composition id="Dev-GemCompare" component={GemScene} durationInFrames={240} fps={60} width={1920} height={1080} />
 		<Composition id="Dev-Ownership" component={OwnershipScene} durationInFrames={600} fps={60} width={1920} height={1080} />
 		<Composition id="Dev-BlastFurnace" component={FurnaceScene} durationInFrames={720} fps={60} width={1920} height={1080} />
+		<Composition id="Dev-DepthStreet" component={DepthStreet} durationInFrames={300} fps={60} width={1920} height={1080} />
+		<Composition id="Dev-DepthGirgaum" component={DepthGirgaum} durationInFrames={300} fps={60} width={1920} height={1080} />
 		<Composition id="Dev-InkCast" component={InkCast} durationInFrames={300} fps={60} width={1920} height={1080} />
 	</>
 );

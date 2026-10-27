@@ -11,9 +11,9 @@ violet) comes from three tinted glass shaders, red/green/blue, each with its own
 the film (CLAUDE.md honesty labels): the real stone is in a private collection.
 
 Shots (all 60 fps, frame = time; camera moves are eased, never linear):
-  hero      the cold open reveal: the case is open, the camera pushes in low across the counter and the stone turns 25°
-  macro     facets fill the frame; the light warms from white to furnace orange (signature 1, the match cut)
-  table     top-down on the table facet, slow rotation (the ownership machine's glint, the last shot of the film)
+  hero      the cold open reveal (5 s): the camera pushes in low across the velvet and the stone turns 22°
+  macro     (4 s) facets fill the frame; the light warms from white to furnace orange (signature 1, the match cut)
+  table     (5 s) top-down on the table facet, slow rotation (the ownership machine's glint, the last shot of the film)
 """
 import argparse
 import math
@@ -244,18 +244,18 @@ def scene(args):
 def place_shot(shot, f, gem, cam, cam_d):
     t = f / 60.0
     if shot == "hero":
-        u = ease(t / 8.0)
+        u = ease(t / 5.0)
         dist = 9.0 - 3.2 * u
         el = math.radians(24 - 6 * u)
         az = math.radians(-90 + 10 * u)
         cam.location = Vector((dist * math.cos(el) * math.cos(az), dist * math.cos(el) * math.sin(az), dist * math.sin(el)))
         look(cam, (0, 0, 0.02))
         cam_d.dof.focus_distance = (cam.location - Vector((0, 0, 0.05))).length
-        gem.rotation_euler.z = math.radians(8 + 25 * ease(t / 8.0))
+        gem.rotation_euler.z = math.radians(8 + 22 * ease(t / 5.0))
     if shot == "macro":
-        # Signature 1: over the last 2.5 s every light in the room warms to furnace orange (then the film hard-cuts
+        # Signature 1: over the last 2 s every light in the room warms to furnace orange (then the film hard-cuts
         # to molten iron on the same colour).
-        k = ease((t - 3.5) / 2.5)
+        k = ease((t - 2.0) / 2.0)
         for e, rgb in PANELS:
             e.inputs["Color"].default_value = tuple((a + (b - a) * k) * (1 + 0.8 * k) for a, b in zip(rgb, EMBER)) + (1,)
     if shot == "macro":
@@ -263,11 +263,11 @@ def place_shot(shot, f, gem, cam, cam_d):
         look(cam, (0, 0, 0.05))
         cam_d.lens = 100
         cam_d.dof.focus_distance = (cam.location - Vector((0, 0, 0.12))).length
-        gem.rotation_euler.z = math.radians(8 + 12 * ease(t / 6.0))
+        gem.rotation_euler.z = math.radians(8 + 10 * ease(t / 4.0))
     elif shot == "table":
         cam.location = Vector((0.0, -0.05, 3.3))
         look(cam, (0, 0, 0))
-        gem.rotation_euler.z = math.radians(8 + 30 * ease(t / 10.0))
+        gem.rotation_euler.z = math.radians(8 + 20 * ease(t / 5.0))
         cam_d.dof.focus_distance = 3.15
 
 

@@ -20,7 +20,7 @@ from pathlib import Path
 
 import requests
 
-UA = {"User-Agent": "PhoneConsensusDocBot/0.1 (https://github.com/mkmk749278/Creator; documentary research)"}
+UA = {"User-Agent": "BuiltOnBharatDocBot/0.1 (https://github.com/mkmk749278/Built-on-Bharat; documentary research)"}
 OK = re.compile(r"^(public domain|pd|cc0|cc[- ]by(-sa)?([- ][0-9.]+)?( [a-z]+)?|godl-india)$", re.I)  # GODL-India: commercial use with attribution
 WIKI = "https://commons.wikimedia.org/wiki/"
 
@@ -40,34 +40,58 @@ def strip(s):
 
 
 def span(page, cls):
-    m = re.search(r'<span class="licensetpl_%s"[^>]*>(.*?)</span>' % cls, page, re.S)
+    # Commons writes the class with an escaped underscore since 2026 (licensetpl&#95;short)
+    m = re.search(r'<span class="licensetpl(?:_|&#95;)%s"[^>]*>(.*?)</span>' % cls.replace("_", "(?:_|&#95;)"), page, re.S)
     return strip(m.group(1)) if m else ""
 
 
 def file_url(name, width=None):
-    # upload.wikimedia.org path: md5 of the underscored file name
+    # md5 of the underscored file name gives the path. Thumbnails come from thumb.wikimedia.org, which kept answering
+    # on 2026-10-27 while upload.wikimedia.org and the API returned 429 for hours; it serves only standard widths
+    # (STD) and silently UPSCALES past the original, so callers pick width with std_width() from the page's size.
     n = name.replace(" ", "_"); h = hashlib.md5(n.encode()).hexdigest(); q = urllib.parse.quote(n)
-    base = "https://upload.wikimedia.org/wikipedia/commons"
-    return f"{base}/thumb/{h[0]}/{h[:2]}/{q}/{width}px-{q}" if width else f"{base}/{h[0]}/{h[:2]}/{q}"
+    if width:
+        return f"https://thumb.wikimedia.org/wikipedia/commons/thumb/{h[0]}/{h[:2]}/{q}/{width}px-{q}"
+    return f"https://upload.wikimedia.org/wikipedia/commons/{h[0]}/{h[:2]}/{q}"
+
+
+STD = (3840, 1920, 1280, 960, 500)
+
+
+def std_width(page):
+    """Largest standard thumbnail width not above the original's width (never an upscale)."""
+    m = re.search(r"Original file.*?\(([0-9,]+) × ([0-9,]+) pixels", page, re.S)
+    w = int(m.group(1).replace(",", "")) if m else 1920
+    return next((s for s in STD if s <= w), 500), w
 
 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("out"); ap.add_argument("name"); ap.add_argument("category")
     ap.add_argument("--n", type=int, default=20); ap.add_argument("--video", action="store_true")
-    ap.add_argument("--must", help="regex the file title must match"); ap.add_argument("--max-dur", type=float, default=30)
+    ap.add_argument("--must", help="regex the file title must match")
+    ap.add_argument("--list", action="store_true", help="only print candidate titles (no download)"); ap.add_argument("--max-dur", type=float, default=30)
     a = ap.parse_args()
     out = Path(a.out); out.mkdir(parents=True, exist_ok=True)
     mpath = out / "manifest.json"
     manifest = json.loads(mpath.read_text()) if mpath.exists() else []
     have = {m["source_page"] for m in manifest}
-    cat = get(WIKI + urllib.parse.quote(a.category.replace(" ", "_")))
-    titles = list(dict.fromkeys(html.unescape(t) for t in re.findall(r'class="galleryfilename[^"]*"[^>]*title="(File:[^"]+)"', cat)
-                                or re.findall(r'title="(File:[^"]+)"', cat)))
+    if a.category.startswith("File:"):  # explicit files: "File:A.jpg|File:B.jpg"
+        titles = a.category.split("|")
+    elif a.category.startswith("search:"):  # the HTML search page (the API search was rate-limited)
+        q = urllib.parse.quote(a.category[7:])
+        res = get(f"https://commons.wikimedia.org/w/index.php?search={q}&title=Special:Search&profile=advanced&fulltext=1&ns6=1&limit=60")
+        titles = list(dict.fromkeys(html.unescape(t) for t in re.findall(r'title="(File:[^"]+)"', res)))
+    else:
+        cat = get(WIKI + urllib.parse.quote(a.category.replace(" ", "_")))
+        titles = list(dict.fromkeys(html.unescape(t) for t in re.findall(r'class="galleryfilename[^"]*"[^>]*title="(File:[^"]+)"', cat)
+                                    or re.findall(r'title="(File:[^"]+)"', cat)))
     vid = re.compile(r"\.(webm|ogv|mp4|mpg)$", re.I)
     titles = [t for t in titles if bool(vid.search(t)) == a.video and not t.lower().endswith((".ogg", ".svg", ".pdf", ".tif", ".tiff"))]
     if a.must:
         titles = [t for t in titles if re.search(a.must, t, re.I)]
+    if a.list:
+        print("\n".join(titles)); return
     got = 0
     for t in titles:
         if got >= a.n: break
@@ -97,11 +121,9 @@ def main():
                                 "-c:v", "libx264", "-preset", "veryfast", "-crf", "18", "-movflags", "+faststart", str(out / fn)], check=True)
             else:
                 fn = f"{a.name}_{idx:02d}_{slug}.jpg"
-                r = subprocess.run(["curl", "-sSfL", "--max-time", "120", "-A", UA["User-Agent"], "-o", str(raw), file_url(name, 1920)])
-                if r.returncode:  # images narrower than 1920 have no 1920 thumb: take the original
-                    subprocess.run(["curl", "-sSfL", "--max-time", "120", "-A", UA["User-Agent"], "-o", str(raw), file_url(name)], check=True)
-                subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(raw), "-vf", "scale='min(1920,iw)':-2",
-                                "-q:v", "2", str(out / fn)], check=True)
+                sw, ow = std_width(page)
+                subprocess.run(["curl", "-sSfL", "--max-time", "180", "-A", UA["User-Agent"], "-o", str(raw), file_url(name, sw)], check=True)
+                subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(raw), "-q:v", "2", str(out / fn)], check=True)
         except Exception as e:  # fail soft per source
             print("skip", t, e, file=sys.stderr); raw.unlink(missing_ok=True); continue
         raw.unlink(missing_ok=True)
@@ -112,8 +134,9 @@ def main():
                          "credit": f"{name.rsplit('.', 1)[0][:60]} · {author[:50]} · {lic} · Wikimedia Commons"})
         have.add(page_url); got += 1
         print(f"+ {fn}  [{lic}]  {(desc or name)[:70]}")
+        manifest[-1]["original_width"] = ow if not a.video else None
         mpath.write_text(json.dumps(manifest, indent=1, ensure_ascii=False) + "\n")
-        time.sleep(2)
+        time.sleep(8)
     print(f"{a.name}: {got} new (of {len(titles)} candidates)")
 
 
