@@ -10,9 +10,14 @@ import {T} from './timing';
 export const chapterClock = (title: string) => {
 	const ch = T.chapter(title);
 	const L = (f: number): number => f - ch.start;
-	const S = (text: string, after = 0): number => L(T.sentence(text, after).startFrame);
+	// a lookup that lands outside the chapter matched an earlier sentence (short lines like 'Power.'): fail loud
+	const inside = (f: number, what: string): number => {
+		if (f < 0 || f > ch.end - ch.start) throw new Error(`chapterClock(${title}): "${what}" matched outside the chapter; pass an \`after\` id`);
+		return f;
+	};
+	const S = (text: string, after = 0): number => inside(L(T.sentence(text, after).startFrame), text);
 	const E = (text: string, after = 0): number => L(T.sentence(text, after).endFrame);
-	const W = (sentence: string, phrase: string, after = 0): number => L(T.word(sentence, phrase, after).startFrame);
+	const W = (sentence: string, phrase: string, after = 0): number => inside(L(T.word(sentence, phrase, after).startFrame), `${sentence} / ${phrase}`);
 	const id = (text: string): number => T.sentence(text).id;
 	return {ch, L, S, E, W, id, end: ch.end - ch.start};
 };
