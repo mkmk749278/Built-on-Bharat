@@ -121,7 +121,9 @@ export const scooterCues = (): SfxCue[] => [
 	{frame: 50, sfx: 'scooter_horn_short', gainDb: -24},
 ];
 
-export const ScooterFamily: React.FC<{camera?: boolean}> = ({camera = true}) => {
+/** `keys` overrides the camera (chapter 7 finds the child in front); `roofAt` draws a car roof's outline over the
+ *  family ("He wanted to give that family a roof"). */
+export const ScooterFamily: React.FC<{camera?: boolean; keys?: {f: number; scale: number; x?: number; y?: number}[]; roofAt?: number}> = ({camera = true, keys, roofAt}) => {
 	const frame = useCurrentFrame();
 	const {fps, durationInFrames} = useVideoConfig();
 	const t = frame / fps;
@@ -154,6 +156,20 @@ export const ScooterFamily: React.FC<{camera?: boolean}> = ({camera = true}) => 
 			<InkFigure {...fig} seed="sf-girl" costume={COSTUMES.girl2008} build={{height: 0.44, head: 1.4}} action={{type: 'lap', seat: lap, bob, mood: 'warm'}} look={[SX + 900, SY - 500]} />
 			<InkFigure {...fig} seed="sf-boy" costume={COSTUMES.boy2008} action={{type: 'perch', floor: SCOOTER.floorFront, bar: add(SCOOTER.grip, [6, 6]), bob, mood: 'hopeful'}} look={[SX + 1200, SY - 420]} />
 			<StreetLights front />
+			{roofAt !== undefined ? (
+				<path
+					d={`M ${SX - 470} ${SY - 40} L ${SX - 470} ${SY - 300} Q ${SX - 440} ${SY - 520} ${SX - 250} ${SY - 640} L ${SX + 330} ${SY - 650} Q ${SX + 470} ${SY - 600} ${SX + 560} ${SY - 380} L ${SX + 620} ${SY - 300} L ${SX + 620} ${SY - 40}`}
+					pathLength={1}
+					fill="none"
+					stroke="#E8C27A"
+					strokeWidth={5}
+					strokeLinecap="round"
+					strokeLinejoin="round"
+					strokeDasharray={1}
+					strokeDashoffset={1 - Math.min(1, Math.max(0, (frame - roofAt) / 70))}
+					style={{filter: 'drop-shadow(0 0 10px rgba(255,200,120,0.8))'}}
+				/>
+			) : null}
 		</InkStage>
 	);
 	return (
@@ -162,10 +178,12 @@ export const ScooterFamily: React.FC<{camera?: boolean}> = ({camera = true}) => 
 				<Camera
 					seed="sf-cam"
 					drift={4}
-					keys={[
-						{f: 0, scale: 1.02, x: 10, y: 4},
-						{f: durationInFrames, scale: 1.08, x: -20, y: -6},
-					]}
+					keys={
+						keys ?? [
+							{f: 0, scale: 1.02, x: 10, y: 4},
+							{f: durationInFrames, scale: 1.08, x: -20, y: -6},
+						]
+					}
 				>
 					{stage}
 				</Camera>

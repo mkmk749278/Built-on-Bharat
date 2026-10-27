@@ -575,5 +575,104 @@
    1,
    0.933
   ]
+ ],
+ "H001a": [
+  "raw/wm/H001_07_beechanahalli-dam-and-around-2014-8-jpg.jpg",
+  [
+   0,
+   0.0776,
+   1,
+   0.9224
+  ]
+ ],
+ "H001c": [
+  "raw/wm/H001_09_gedee-car-museum-indian-cars-section-tat.jpg",
+  [
+   0,
+   0.1281,
+   1,
+   0.9719
+  ]
+ ],
+ "H008a": [
+  "raw/wm/H008_21_jaguar-xf-2008-front-right-jpg.jpg",
+  [
+   0,
+   0.1281,
+   1,
+   0.9719
+  ]
+ ],
+ "H009a": [
+  "raw/wm/H009_30_2008-land-rover-defender-90-2-4-tdci-cou.jpg",
+  [
+   0,
+   0.1887,
+   1,
+   0.8113
+  ]
+ ],
+ "H012a": [
+  "raw/wm/H012_48_2008-mumbai-terror-attacks-taj-dome-burn.jpg",
+  [
+   0,
+   0.025,
+   1,
+   0.775
+  ]
+ ],
+ "H012b": [
+  "raw/wm/H012_54_2008-mumbai-terror-attacks-taj-hotel-bur.jpg",
+  [
+   0,
+   0.025,
+   1,
+   0.775
+  ]
+ ],
+ "H012c": [
+  "raw/wm/H012_52_2008-mumbai-terror-attacks-taj-full-view.jpg",
+  [
+   0,
+   0.125,
+   1,
+   0.875
+  ]
+ ],
+ "H012d": [
+  "raw/wm/H012_51_2008-mumbai-terror-attacks-taj-main-dome.jpg",
+  [
+   0,
+   0,
+   1,
+   0.75
+  ]
+ ],
+ "H005a": [
+  "raw/wm/H005_45_taj-hotel-2611-event-have-broke-ours-hea.jpg",
+  [
+   0,
+   0.125,
+   1,
+   0.875
+  ]
+ ],
+ "H006b": [
+  "raw/wm/H006_73_taj-hotel-mumbai-jpg.jpg",
+  [
+   0,
+   0,
+   1,
+   1
+  ]
+ ],
+ "H006c": [
+  "raw/wm/H006_70_the-taj-mahal-palace-hotel-old-wing-dome.jpg",
+  [
+   0,
+   0.0781,
+   1,
+   0.9219
+  ]
  ]
 }

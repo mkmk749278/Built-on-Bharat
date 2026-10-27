@@ -4,7 +4,7 @@ import {Camera, ease, Footage, fontStacks, tween} from '../../../../../lib/remot
 
 /** Old standard-definition company film (586×480 VHS) shown as what it is: a 4:3 tape window in the dark, with its
  *  label, never stretched to fill a 4K frame. */
-export const TapeFrame: React.FC<{file: string; startFrom: number; label: string}> = ({file, startFrom, label}) => {
+export const TapeFrame: React.FC<{file: string; startFrom: number; label: string; scan?: boolean; rate?: number}> = ({file, startFrom, label, scan = true, rate = 1}) => {
 	const frame = useCurrentFrame();
 	const {durationInFrames} = useVideoConfig();
 	const o = tween(frame, 0, 12, 0, 1, ease.arrive);
@@ -13,9 +13,9 @@ export const TapeFrame: React.FC<{file: string; startFrom: number; label: string
 			<Camera seed="tape" drift={2} keys={[{f: 0, scale: 1.0}, {f: durationInFrames, scale: 1.06}]}>
 				<AbsoluteFill style={{alignItems: 'center', justifyContent: 'center'}}>
 					<div style={{position: 'relative', width: 1060, height: 795, opacity: o, borderRadius: 18, overflow: 'hidden', boxShadow: '0 0 160px rgba(255,120,30,0.25), 0 40px 90px rgba(0,0,0,0.7)'}}>
-						<Footage file={file} startFrom={startFrom} grade="modern" />
-						{/* scanlines: it is a tape */}
-						<AbsoluteFill style={{background: 'repeating-linear-gradient(0deg, rgba(0,0,0,0.18) 0px, rgba(0,0,0,0.18) 1px, transparent 2px, transparent 4px)'}} />
+						<Footage file={file} startFrom={startFrom} rate={rate} grade="modern" />
+						{/* scanlines: it is a tape (off for later standard-definition video) */}
+						{scan ? <AbsoluteFill style={{background: 'repeating-linear-gradient(0deg, rgba(0,0,0,0.18) 0px, rgba(0,0,0,0.18) 1px, transparent 2px, transparent 4px)'}} /> : null}
 					</div>
 					<div style={{marginTop: 26, fontFamily: fontStacks.text, fontSize: 22, letterSpacing: '0.3em', color: 'rgba(230,220,200,0.6)', opacity: o}}>{label}</div>
 				</AbsoluteFill>
