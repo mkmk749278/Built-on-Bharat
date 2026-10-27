@@ -43,7 +43,19 @@ export const Stamp: React.FC<{text: string; sub?: string; at: number; until: num
 				pointerEvents: 'none',
 			}}
 		>
-			<div style={{opacity: o, filter: `blur(${blur}px)`, textAlign: align}}>
+			<div style={{opacity: o, filter: `blur(${blur}px)`, textAlign: align, position: 'relative'}}>
+				{/* a soft dark scrim behind the engraving, so it reads on bright archive photos too */}
+				<div
+					style={{
+						position: 'absolute',
+						left: -110,
+						right: -140,
+						top: -60,
+						bottom: -50,
+						background: 'radial-gradient(ellipse 62% 62% at 45% 50%, rgba(8,8,10,0.86) 0%, rgba(8,8,10,0.6) 45%, rgba(8,8,10,0) 78%)',
+						zIndex: -1,
+					}}
+				/>
 				<div style={{...bronzeText, fontFamily: fontStacks.display, fontWeight: 700, fontSize: size, letterSpacing: `${track}em`, lineHeight: 1.1}}>
 					{text}
 				</div>
