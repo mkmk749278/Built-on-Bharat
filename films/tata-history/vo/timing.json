@@ -109,16 +109,16 @@
   {
    "block": 16,
    "start": 1275.046,
-   "end": 1336.551,
+   "end": 1336.296,
    "startFrame": 76503,
-   "endFrame": 80193
+   "endFrame": 80178
   },
   {
    "block": 17,
-   "start": 1337.951,
-   "end": 1349.561,
-   "startFrame": 80277,
-   "endFrame": 80974
+   "start": 1337.696,
+   "end": 1349.306,
+   "startFrame": 80262,
+   "endFrame": 80958
   }
  ],
  "sentences": [
@@ -6018,11 +6018,11 @@
    "text": "And here's the catch.",
    "tagged": "And here's the catch.",
    "start": 1275.046,
-   "end": 1276.19,
-   "ratio": 1.05,
-   "margin": 0.515,
+   "end": 1276.148,
+   "ratio": 0.99,
+   "margin": 0.428,
    "startFrame": 76503,
-   "endFrame": 76571
+   "endFrame": 76569
   },
   {
    "id": 454,
@@ -6030,12 +6030,12 @@
    "chapter": "The answer",
    "text": "To the R.B.I., Tata Sons looks like a big finance company.",
    "tagged": "To the R.B.I., Tata Sons looks like a big finance company.",
-   "start": 1276.613,
-   "end": 1280.236,
-   "ratio": 1.16,
-   "margin": 0.515,
-   "startFrame": 76597,
-   "endFrame": 76814
+   "start": 1276.568,
+   "end": 1280.424,
+   "ratio": 1.17,
+   "margin": 0.428,
+   "startFrame": 76594,
+   "endFrame": 76825
   },
   {
    "id": 455,
@@ -6043,12 +6043,12 @@
    "chapter": "The answer",
    "text": "And big finance companies must sell shares to the public.",
    "tagged": "And big finance companies must sell shares to the public.",
-   "start": 1280.739,
-   "end": 1283.832,
-   "ratio": 0.97,
-   "margin": 1.458,
-   "startFrame": 76844,
-   "endFrame": 77030
+   "start": 1280.864,
+   "end": 1284.183,
+   "ratio": 1.02,
+   "margin": 1.344,
+   "startFrame": 76852,
+   "endFrame": 77051
   },
   {
    "id": 456,
@@ -6056,12 +6056,12 @@
    "chapter": "The answer",
    "text": "Tata Sons asked to be let off.",
    "tagged": "Tata Sons asked to be let off.",
-   "start": 1284.32,
-   "end": 1285.981,
-   "ratio": 1.06,
+   "start": 1284.616,
+   "end": 1286.276,
+   "ratio": 1.04,
    "margin": 9.9,
-   "startFrame": 77059,
-   "endFrame": 77159
+   "startFrame": 77077,
+   "endFrame": 77177
   },
   {
    "id": 457,
@@ -6069,12 +6069,12 @@
    "chapter": "The answer",
    "text": "The R.B.I. said no.",
    "tagged": "The R.B.I. said no.",
-   "start": 1286.42,
-   "end": 1287.788,
-   "ratio": 1.68,
-   "margin": 1.145,
-   "startFrame": 77185,
-   "endFrame": 77267
+   "start": 1286.736,
+   "end": 1287.999,
+   "ratio": 1.52,
+   "margin": 9.9,
+   "startFrame": 77204,
+   "endFrame": 77280
   },
   {
    "id": 458,
@@ -6082,12 +6082,12 @@
    "chapter": "The answer",
    "text": "As this film goes out, that fight is not over.",
    "tagged": "As this film goes out, that fight is not over.",
-   "start": 1288.303,
-   "end": 1290.958,
-   "ratio": 1.05,
-   "margin": 1.145,
-   "startFrame": 77298,
-   "endFrame": 77457
+   "start": 1288.472,
+   "end": 1291.304,
+   "ratio": 1.17,
+   "margin": 9.9,
+   "startFrame": 77308,
+   "endFrame": 77478
   },
   {
    "id": 459,
@@ -6095,12 +6095,12 @@
    "chapter": "The answer",
    "text": "Who wins?",
    "tagged": "Who wins?",
-   "start": 1291.455,
-   "end": 1291.972,
-   "ratio": 1.09,
-   "margin": 1.77,
-   "startFrame": 77487,
-   "endFrame": 77518
+   "start": 1291.751,
+   "end": 1292.238,
+   "ratio": 1.0,
+   "margin": 9.9,
+   "startFrame": 77505,
+   "endFrame": 77534
   },
   {
    "id": 460,
@@ -6108,12 +6108,12 @@
    "chapter": "The answer",
    "text": "I honestly don't know.",
    "tagged": "I honestly don't know.",
-   "start": 1292.312,
-   "end": 1293.329,
-   "ratio": 0.88,
+   "start": 1292.646,
+   "end": 1293.677,
+   "ratio": 0.87,
    "margin": 9.9,
-   "startFrame": 77539,
-   "endFrame": 77600
+   "startFrame": 77559,
+   "endFrame": 77621
   },
   {
    "id": 461,
@@ -6121,12 +6121,12 @@
    "chapter": "The answer",
    "text": "Nobody does yet.",
    "tagged": "Nobody does yet.",
-   "start": 1293.762,
-   "end": 1294.625,
-   "ratio": 0.98,
-   "margin": 1.092,
-   "startFrame": 77626,
-   "endFrame": 77678
+   "start": 1294.047,
+   "end": 1294.964,
+   "ratio": 1.02,
+   "margin": 1.187,
+   "startFrame": 77643,
+   "endFrame": 77698
   },
   {
    "id": 462,
@@ -6134,12 +6134,12 @@
    "chapter": "The answer",
    "text": "But step back for a moment, and look at who built this.",
    "tagged": "But step back for a moment, and look at who built this.",
-   "start": 1295.155,
-   "end": 1298.247,
-   "ratio": 0.99,
-   "margin": 0.894,
-   "startFrame": 77709,
-   "endFrame": 77895
+   "start": 1295.413,
+   "end": 1298.563,
+   "ratio": 0.84,
+   "margin": 0.245,
+   "startFrame": 77725,
+   "endFrame": 77914
   },
   {
    "id": 463,
@@ -6147,12 +6147,12 @@
    "chapter": "The answer",
    "text": "A priest's son whose family nearly lost everything.",
    "tagged": "A priest's son whose family nearly lost everything.",
-   "start": 1298.676,
-   "end": 1302.023,
-   "ratio": 1.17,
-   "margin": 0.894,
-   "startFrame": 77921,
-   "endFrame": 78121
+   "start": 1298.986,
+   "end": 1302.278,
+   "ratio": 1.13,
+   "margin": 0.245,
+   "startFrame": 77939,
+   "endFrame": 78137
   },
   {
    "id": 464,
@@ -6160,12 +6160,12 @@
    "chapter": "The answer",
    "text": "Eight thousand ordinary savers.",
    "tagged": "Eight thousand ordinary savers.",
-   "start": 1302.48,
-   "end": 1304.497,
-   "ratio": 1.1,
+   "start": 1302.729,
+   "end": 1304.649,
+   "ratio": 1.03,
    "margin": 9.9,
-   "startFrame": 78149,
-   "endFrame": 78270
+   "startFrame": 78164,
+   "endFrame": 78279
   },
   {
    "id": 465,
@@ -6173,12 +6173,12 @@
    "chapter": "The answer",
    "text": "A husband and wife who pledged their diamond.",
    "tagged": "A husband and wife who pledged their diamond.",
-   "start": 1304.857,
-   "end": 1307.184,
-   "ratio": 0.93,
-   "margin": 2.827,
-   "startFrame": 78291,
-   "endFrame": 78431
+   "start": 1304.975,
+   "end": 1307.288,
+   "ratio": 0.9,
+   "margin": 9.9,
+   "startFrame": 78298,
+   "endFrame": 78437
   },
   {
    "id": 466,
@@ -6186,12 +6186,12 @@
    "chapter": "The answer",
    "text": "An apprentice who worked without pay.",
    "tagged": "An apprentice who worked without pay.",
-   "start": 1307.59,
-   "end": 1309.664,
-   "ratio": 0.9,
-   "margin": 0.177,
-   "startFrame": 78455,
-   "endFrame": 78580
+   "start": 1307.617,
+   "end": 1309.688,
+   "ratio": 0.96,
+   "margin": 9.9,
+   "startFrame": 78457,
+   "endFrame": 78581
   },
   {
    "id": 467,
@@ -6199,12 +6199,12 @@
    "chapter": "The answer",
    "text": "A young engineer with a postcard.",
    "tagged": "A young engineer with a postcard.",
-   "start": 1310.062,
-   "end": 1311.826,
-   "ratio": 0.96,
-   "margin": 0.177,
-   "startFrame": 78604,
-   "endFrame": 78710
+   "start": 1310.018,
+   "end": 1311.91,
+   "ratio": 1.01,
+   "margin": 9.9,
+   "startFrame": 78601,
+   "endFrame": 78715
   },
   {
    "id": 468,
@@ -6212,12 +6212,12 @@
    "chapter": "The answer",
    "text": "A man shovelling limestone next to the furnace.",
    "tagged": "A man shovelling limestone next to the furnace.",
-   "start": 1312.188,
-   "end": 1314.819,
-   "ratio": 0.99,
+   "start": 1312.208,
+   "end": 1314.959,
+   "ratio": 1.02,
    "margin": 9.9,
-   "startFrame": 78731,
-   "endFrame": 78889
+   "startFrame": 78732,
+   "endFrame": 78898
   },
   {
    "id": 469,
@@ -6225,12 +6225,12 @@
    "chapter": "The answer",
    "text": "What do they have in common?",
    "tagged": "What do they have in common?",
-   "start": 1315.324,
-   "end": 1316.31,
-   "ratio": 0.66,
-   "margin": 0.313,
-   "startFrame": 78919,
-   "endFrame": 78979
+   "start": 1315.359,
+   "end": 1316.416,
+   "ratio": 0.69,
+   "margin": 0.34,
+   "startFrame": 78922,
+   "endFrame": 78985
   },
   {
    "id": 470,
@@ -6238,12 +6238,12 @@
    "chapter": "The answer",
    "text": "Every one of them, at some point, put something on the line.",
    "tagged": "Every one of them, at some point, put something on the line.",
-   "start": 1316.754,
-   "end": 1320.396,
-   "ratio": 1.02,
-   "margin": 0.313,
-   "startFrame": 79005,
-   "endFrame": 79224
+   "start": 1316.786,
+   "end": 1320.49,
+   "ratio": 1.03,
+   "margin": 0.34,
+   "startFrame": 79007,
+   "endFrame": 79229
   },
   {
    "id": 471,
@@ -6251,12 +6251,12 @@
    "chapter": "The answer",
    "text": "Savings.",
    "tagged": "Savings.",
-   "start": 1320.895,
-   "end": 1321.562,
-   "ratio": 1.4,
-   "margin": 1.627,
-   "startFrame": 79254,
-   "endFrame": 79294
+   "start": 1320.868,
+   "end": 1321.52,
+   "ratio": 1.34,
+   "margin": 1.542,
+   "startFrame": 79252,
+   "endFrame": 79291
   },
   {
    "id": 472,
@@ -6264,12 +6264,12 @@
    "chapter": "The answer",
    "text": "Pride.",
    "tagged": "Pride.",
-   "start": 1321.992,
-   "end": 1322.407,
-   "ratio": 1.22,
+   "start": 1321.902,
+   "end": 1322.312,
+   "ratio": 1.18,
    "margin": 9.9,
-   "startFrame": 79320,
-   "endFrame": 79344
+   "startFrame": 79314,
+   "endFrame": 79339
   },
   {
    "id": 473,
@@ -6277,12 +6277,12 @@
    "chapter": "The answer",
    "text": "A diamond.",
    "tagged": "A diamond.",
-   "start": 1322.827,
-   "end": 1323.442,
-   "ratio": 1.13,
-   "margin": 0.503,
-   "startFrame": 79370,
-   "endFrame": 79407
+   "start": 1322.672,
+   "end": 1323.294,
+   "ratio": 1.12,
+   "margin": 0.543,
+   "startFrame": 79360,
+   "endFrame": 79398
   },
   {
    "id": 474,
@@ -6290,12 +6290,12 @@
    "chapter": "The answer",
    "text": "That part needs no fortune.",
    "tagged": "That part needs no fortune.",
-   "start": 1323.834,
-   "end": 1325.497,
-   "ratio": 1.0,
-   "margin": 0.344,
-   "startFrame": 79430,
-   "endFrame": 79530
+   "start": 1323.646,
+   "end": 1325.439,
+   "ratio": 1.07,
+   "margin": 0.365,
+   "startFrame": 79419,
+   "endFrame": 79526
   },
   {
    "id": 475,
@@ -6303,12 +6303,12 @@
    "chapter": "The answer",
    "text": "That part is yours.",
    "tagged": "That part is yours.",
-   "start": 1325.971,
-   "end": 1327.367,
+   "start": 1325.826,
+   "end": 1327.194,
    "ratio": 1.13,
-   "margin": 0.305,
-   "startFrame": 79558,
-   "endFrame": 79642
+   "margin": 0.31,
+   "startFrame": 79550,
+   "endFrame": 79632
   },
   {
    "id": 476,
@@ -6316,12 +6316,12 @@
    "chapter": "The answer",
    "text": "And a hundred years later, the question is still the same one.",
    "tagged": "And a hundred years later, the question is still the same one.",
-   "start": 1327.815,
-   "end": 1331.138,
-   "ratio": 0.94,
-   "margin": 0.305,
-   "startFrame": 79669,
-   "endFrame": 79868
+   "start": 1327.575,
+   "end": 1330.905,
+   "ratio": 0.93,
+   "margin": 0.31,
+   "startFrame": 79654,
+   "endFrame": 79854
   },
   {
    "id": 477,
@@ -6329,12 +6329,12 @@
    "chapter": "The answer",
    "text": "Who should a company like this really belong to?",
    "tagged": "Who should a company like this really belong to?",
-   "start": 1331.565,
-   "end": 1333.837,
-   "ratio": 0.86,
-   "margin": 1.054,
-   "startFrame": 79894,
-   "endFrame": 80030
+   "start": 1331.287,
+   "end": 1333.737,
+   "ratio": 0.91,
+   "margin": 1.077,
+   "startFrame": 79877,
+   "endFrame": 80024
   },
   {
    "id": 478,
@@ -6342,12 +6342,12 @@
    "chapter": "The answer",
    "text": "What do you think?",
    "tagged": "What do you think?",
-   "start": 1334.386,
-   "end": 1335.034,
-   "ratio": 0.68,
+   "start": 1334.194,
+   "end": 1334.87,
+   "ratio": 0.7,
    "margin": 9.9,
-   "startFrame": 80063,
-   "endFrame": 80102
+   "startFrame": 80052,
+   "endFrame": 80092
   },
   {
    "id": 479,
@@ -6355,12 +6355,12 @@
    "chapter": "The answer",
    "text": "Tell me in the comments.",
    "tagged": "Tell me in the comments.",
-   "start": 1335.493,
-   "end": 1336.384,
-   "ratio": 0.69,
+   "start": 1335.247,
+   "end": 1336.129,
+   "ratio": 0.67,
    "margin": 9.9,
-   "startFrame": 80130,
-   "endFrame": 80183
+   "startFrame": 80115,
+   "endFrame": 80168
   },
   {
    "id": 480,
@@ -6368,12 +6368,12 @@
    "chapter": "Outro",
    "text": "This is Built on Bharat.",
    "tagged": "This is Built on Bharat.",
-   "start": 1337.951,
-   "end": 1339.651,
+   "start": 1337.696,
+   "end": 1339.396,
    "ratio": 1.14,
    "margin": 1.536,
-   "startFrame": 80277,
-   "endFrame": 80379
+   "startFrame": 80262,
+   "endFrame": 80364
   },
   {
    "id": 481,
@@ -6381,12 +6381,12 @@
    "chapter": "Outro",
    "text": "The empires, and the habits, that built a nation.",
    "tagged": "The empires, and the habits, that built a nation.",
-   "start": 1339.998,
-   "end": 1342.95,
+   "start": 1339.743,
+   "end": 1342.695,
    "ratio": 0.93,
    "margin": 0.758,
-   "startFrame": 80400,
-   "endFrame": 80577
+   "startFrame": 80385,
+   "endFrame": 80562
   },
   {
    "id": 482,
@@ -6394,12 +6394,12 @@
    "chapter": "Outro",
    "text": "Next in Empires of India.",
    "tagged": "Next in Empires of India.",
-   "start": 1343.377,
-   "end": 1345.092,
+   "start": 1343.122,
+   "end": 1344.837,
    "ratio": 1.09,
    "margin": 0.758,
-   "startFrame": 80603,
-   "endFrame": 80706
+   "startFrame": 80587,
+   "endFrame": 80690
   },
   {
    "id": 483,
@@ -6407,12 +6407,12 @@
    "chapter": "Outro",
    "text": "How did a group of farmers in a small Gujarat town build Amul?",
    "tagged": "How did a group of farmers in a small Gujarat town build Amul?",
-   "start": 1345.515,
-   "end": 1349.386,
+   "start": 1345.26,
+   "end": 1349.131,
    "ratio": 0.96,
    "margin": 3.009,
-   "startFrame": 80731,
-   "endFrame": 80963
+   "startFrame": 80716,
+   "endFrame": 80948
   }
  ],
  "words": [
@@ -34372,1601 +34372,1601 @@
    "s": 453,
    "w": "And",
    "start": 1275.046,
-   "end": 1275.252,
+   "end": 1275.244,
    "startFrame": 76503,
    "endFrame": 76515
   },
   {
    "s": 453,
    "w": "here's",
-   "start": 1275.252,
-   "end": 1275.595,
+   "start": 1275.244,
+   "end": 1275.575,
    "startFrame": 76515,
-   "endFrame": 76536
+   "endFrame": 76534
   },
   {
    "s": 453,
    "w": "the",
-   "start": 1275.595,
-   "end": 1275.801,
-   "startFrame": 76536,
-   "endFrame": 76548
+   "start": 1275.575,
+   "end": 1275.773,
+   "startFrame": 76534,
+   "endFrame": 76546
   },
   {
    "s": 453,
    "w": "catch.",
-   "start": 1275.801,
-   "end": 1276.19,
-   "startFrame": 76548,
-   "endFrame": 76571
+   "start": 1275.773,
+   "end": 1276.148,
+   "startFrame": 76546,
+   "endFrame": 76569
   },
   {
    "s": 454,
    "w": "To",
-   "start": 1276.613,
-   "end": 1276.787,
-   "startFrame": 76597,
-   "endFrame": 76607
+   "start": 1276.568,
+   "end": 1276.752,
+   "startFrame": 76594,
+   "endFrame": 76605
   },
   {
    "s": 454,
    "w": "the",
-   "start": 1276.787,
-   "end": 1277.01,
-   "startFrame": 76607,
-   "endFrame": 76621
+   "start": 1276.752,
+   "end": 1276.988,
+   "startFrame": 76605,
+   "endFrame": 76619
   },
   {
    "s": 454,
    "w": "R.B.I.,",
-   "start": 1277.01,
-   "end": 1277.531,
-   "startFrame": 76621,
+   "start": 1276.988,
+   "end": 1277.539,
+   "startFrame": 76619,
    "endFrame": 76652
   },
   {
    "s": 454,
    "w": "Tata",
-   "start": 1277.778,
-   "end": 1278.054,
-   "startFrame": 76667,
-   "endFrame": 76683
+   "start": 1277.894,
+   "end": 1278.178,
+   "startFrame": 76674,
+   "endFrame": 76691
   },
   {
    "s": 454,
    "w": "Sons",
-   "start": 1278.054,
-   "end": 1278.33,
-   "startFrame": 76683,
-   "endFrame": 76700
+   "start": 1278.178,
+   "end": 1278.462,
+   "startFrame": 76691,
+   "endFrame": 76708
   },
   {
    "s": 454,
    "w": "looks",
-   "start": 1278.33,
-   "end": 1278.656,
-   "startFrame": 76700,
-   "endFrame": 76719
+   "start": 1278.462,
+   "end": 1278.797,
+   "startFrame": 76708,
+   "endFrame": 76728
   },
   {
    "s": 454,
    "w": "like",
-   "start": 1278.656,
-   "end": 1278.932,
-   "startFrame": 76719,
-   "endFrame": 76736
+   "start": 1278.797,
+   "end": 1279.081,
+   "startFrame": 76728,
+   "endFrame": 76745
   },
   {
    "s": 454,
    "w": "a",
-   "start": 1278.932,
-   "end": 1279.057,
-   "startFrame": 76736,
-   "endFrame": 76743
+   "start": 1279.081,
+   "end": 1279.21,
+   "startFrame": 76745,
+   "endFrame": 76753
   },
   {
    "s": 454,
    "w": "big",
-   "start": 1279.057,
-   "end": 1279.283,
-   "startFrame": 76743,
-   "endFrame": 76757
+   "start": 1279.21,
+   "end": 1279.443,
+   "startFrame": 76753,
+   "endFrame": 76767
   },
   {
    "s": 454,
    "w": "finance",
-   "start": 1279.283,
-   "end": 1279.709,
-   "startFrame": 76757,
-   "endFrame": 76783
+   "start": 1279.443,
+   "end": 1279.882,
+   "startFrame": 76767,
+   "endFrame": 76793
   },
   {
    "s": 454,
    "w": "company.",
-   "start": 1279.709,
-   "end": 1280.236,
-   "startFrame": 76783,
-   "endFrame": 76814
+   "start": 1279.882,
+   "end": 1280.424,
+   "startFrame": 76793,
+   "endFrame": 76825
   },
   {
    "s": 455,
    "w": "And",
-   "start": 1280.739,
-   "end": 1280.956,
-   "startFrame": 76844,
-   "endFrame": 76857
+   "start": 1280.864,
+   "end": 1281.097,
+   "startFrame": 76852,
+   "endFrame": 76866
   },
   {
    "s": 455,
    "w": "big",
-   "start": 1280.956,
-   "end": 1281.174,
-   "startFrame": 76857,
-   "endFrame": 76870
+   "start": 1281.097,
+   "end": 1281.331,
+   "startFrame": 76866,
+   "endFrame": 76880
   },
   {
    "s": 455,
    "w": "finance",
-   "start": 1281.174,
-   "end": 1281.585,
-   "startFrame": 76870,
-   "endFrame": 76895
+   "start": 1281.331,
+   "end": 1281.772,
+   "startFrame": 76880,
+   "endFrame": 76906
   },
   {
    "s": 455,
    "w": "companies",
-   "start": 1281.585,
-   "end": 1282.092,
-   "startFrame": 76895,
-   "endFrame": 76926
+   "start": 1281.772,
+   "end": 1282.316,
+   "startFrame": 76906,
+   "endFrame": 76939
   },
   {
    "s": 455,
    "w": "must",
-   "start": 1282.092,
-   "end": 1282.358,
-   "startFrame": 76926,
-   "endFrame": 76941
+   "start": 1282.316,
+   "end": 1282.601,
+   "startFrame": 76939,
+   "endFrame": 76956
   },
   {
    "s": 455,
    "w": "sell",
-   "start": 1282.358,
-   "end": 1282.624,
-   "startFrame": 76941,
-   "endFrame": 76957
+   "start": 1282.601,
+   "end": 1282.887,
+   "startFrame": 76956,
+   "endFrame": 76973
   },
   {
    "s": 455,
    "w": "shares",
-   "start": 1282.624,
-   "end": 1282.986,
-   "startFrame": 76957,
-   "endFrame": 76979
+   "start": 1282.887,
+   "end": 1283.275,
+   "startFrame": 76973,
+   "endFrame": 76996
   },
   {
    "s": 455,
    "w": "to",
-   "start": 1282.986,
-   "end": 1283.155,
-   "startFrame": 76979,
-   "endFrame": 76989
+   "start": 1283.275,
+   "end": 1283.457,
+   "startFrame": 76996,
+   "endFrame": 77007
   },
   {
    "s": 455,
    "w": "the",
-   "start": 1283.155,
-   "end": 1283.373,
-   "startFrame": 76989,
-   "endFrame": 77002
+   "start": 1283.457,
+   "end": 1283.69,
+   "startFrame": 77007,
+   "endFrame": 77021
   },
   {
    "s": 455,
    "w": "public.",
-   "start": 1283.373,
-   "end": 1283.832,
-   "startFrame": 77002,
-   "endFrame": 77030
+   "start": 1283.69,
+   "end": 1284.183,
+   "startFrame": 77021,
+   "endFrame": 77051
   },
   {
    "s": 456,
    "w": "Tata",
-   "start": 1284.32,
-   "end": 1284.577,
-   "startFrame": 77059,
-   "endFrame": 77075
+   "start": 1284.616,
+   "end": 1284.873,
+   "startFrame": 77077,
+   "endFrame": 77092
   },
   {
    "s": 456,
    "w": "Sons",
-   "start": 1284.577,
-   "end": 1284.835,
-   "startFrame": 77075,
-   "endFrame": 77090
-  },
-  {
-   "s": 456,
-   "w": "asked",
-   "start": 1284.835,
-   "end": 1285.139,
-   "startFrame": 77090,
+   "start": 1284.873,
+   "end": 1285.13,
+   "startFrame": 77092,
    "endFrame": 77108
   },
   {
    "s": 456,
-   "w": "to",
-   "start": 1285.139,
-   "end": 1285.303,
+   "w": "asked",
+   "start": 1285.13,
+   "end": 1285.434,
    "startFrame": 77108,
-   "endFrame": 77118
+   "endFrame": 77126
+  },
+  {
+   "s": 456,
+   "w": "to",
+   "start": 1285.434,
+   "end": 1285.598,
+   "startFrame": 77126,
+   "endFrame": 77136
   },
   {
    "s": 456,
    "w": "be",
-   "start": 1285.303,
-   "end": 1285.466,
-   "startFrame": 77118,
-   "endFrame": 77128
+   "start": 1285.598,
+   "end": 1285.762,
+   "startFrame": 77136,
+   "endFrame": 77146
   },
   {
    "s": 456,
    "w": "let",
-   "start": 1285.466,
-   "end": 1285.677,
-   "startFrame": 77128,
-   "endFrame": 77141
+   "start": 1285.762,
+   "end": 1285.972,
+   "startFrame": 77146,
+   "endFrame": 77158
   },
   {
    "s": 456,
    "w": "off.",
-   "start": 1285.677,
-   "end": 1285.981,
-   "startFrame": 77141,
-   "endFrame": 77159
+   "start": 1285.972,
+   "end": 1286.276,
+   "startFrame": 77158,
+   "endFrame": 77177
   },
   {
    "s": 457,
    "w": "The",
-   "start": 1286.42,
-   "end": 1286.657,
-   "startFrame": 77185,
-   "endFrame": 77199
+   "start": 1286.736,
+   "end": 1286.955,
+   "startFrame": 77204,
+   "endFrame": 77217
   },
   {
    "s": 457,
    "w": "R.B.I.",
-   "start": 1286.657,
-   "end": 1287.209,
-   "startFrame": 77199,
-   "endFrame": 77233
+   "start": 1286.955,
+   "end": 1287.465,
+   "startFrame": 77217,
+   "endFrame": 77248
   },
   {
    "s": 457,
    "w": "said",
-   "start": 1287.209,
-   "end": 1287.499,
-   "startFrame": 77233,
-   "endFrame": 77250
+   "start": 1287.465,
+   "end": 1287.732,
+   "startFrame": 77248,
+   "endFrame": 77264
   },
   {
    "s": 457,
    "w": "no.",
-   "start": 1287.499,
-   "end": 1287.788,
-   "startFrame": 77250,
-   "endFrame": 77267
+   "start": 1287.732,
+   "end": 1287.999,
+   "startFrame": 77264,
+   "endFrame": 77280
   },
   {
    "s": 458,
    "w": "As",
-   "start": 1288.303,
-   "end": 1288.467,
-   "startFrame": 77298,
-   "endFrame": 77308
+   "start": 1288.472,
+   "end": 1288.646,
+   "startFrame": 77308,
+   "endFrame": 77319
   },
   {
    "s": 458,
    "w": "this",
-   "start": 1288.467,
-   "end": 1288.723,
-   "startFrame": 77308,
-   "endFrame": 77323
+   "start": 1288.646,
+   "end": 1288.918,
+   "startFrame": 77319,
+   "endFrame": 77335
   },
   {
    "s": 458,
    "w": "film",
-   "start": 1288.723,
-   "end": 1288.98,
-   "startFrame": 77323,
-   "endFrame": 77339
+   "start": 1288.918,
+   "end": 1289.191,
+   "startFrame": 77335,
+   "endFrame": 77351
   },
   {
    "s": 458,
    "w": "goes",
-   "start": 1288.98,
-   "end": 1289.237,
-   "startFrame": 77339,
-   "endFrame": 77354
+   "start": 1289.191,
+   "end": 1289.464,
+   "startFrame": 77351,
+   "endFrame": 77368
   },
   {
    "s": 458,
    "w": "out,",
-   "start": 1289.237,
-   "end": 1289.448,
-   "startFrame": 77354,
-   "endFrame": 77367
+   "start": 1289.464,
+   "end": 1289.687,
+   "startFrame": 77368,
+   "endFrame": 77381
   },
   {
    "s": 458,
    "w": "that",
-   "start": 1289.604,
-   "end": 1289.875,
-   "startFrame": 77376,
-   "endFrame": 77392
+   "start": 1289.825,
+   "end": 1290.12,
+   "startFrame": 77390,
+   "endFrame": 77407
   },
   {
    "s": 458,
    "w": "fight",
-   "start": 1289.875,
-   "end": 1290.195,
-   "startFrame": 77392,
-   "endFrame": 77412
+   "start": 1290.12,
+   "end": 1290.47,
+   "startFrame": 77407,
+   "endFrame": 77428
   },
   {
    "s": 458,
    "w": "is",
-   "start": 1290.195,
-   "end": 1290.367,
-   "startFrame": 77412,
-   "endFrame": 77422
+   "start": 1290.47,
+   "end": 1290.658,
+   "startFrame": 77428,
+   "endFrame": 77439
   },
   {
    "s": 458,
    "w": "not",
-   "start": 1290.367,
-   "end": 1290.589,
-   "startFrame": 77422,
-   "endFrame": 77435
+   "start": 1290.658,
+   "end": 1290.901,
+   "startFrame": 77439,
+   "endFrame": 77454
   },
   {
    "s": 458,
    "w": "over.",
-   "start": 1290.589,
-   "end": 1290.958,
-   "startFrame": 77435,
-   "endFrame": 77457
+   "start": 1290.901,
+   "end": 1291.304,
+   "startFrame": 77454,
+   "endFrame": 77478
   },
   {
    "s": 459,
    "w": "Who",
-   "start": 1291.455,
-   "end": 1291.688,
-   "startFrame": 77487,
-   "endFrame": 77501
+   "start": 1291.751,
+   "end": 1291.97,
+   "startFrame": 77505,
+   "endFrame": 77518
   },
   {
    "s": 459,
    "w": "wins?",
-   "start": 1291.688,
-   "end": 1291.972,
-   "startFrame": 77501,
-   "endFrame": 77518
+   "start": 1291.97,
+   "end": 1292.238,
+   "startFrame": 77518,
+   "endFrame": 77534
   },
   {
    "s": 460,
    "w": "I",
-   "start": 1292.312,
-   "end": 1292.41,
-   "startFrame": 77539,
-   "endFrame": 77545
+   "start": 1292.646,
+   "end": 1292.745,
+   "startFrame": 77559,
+   "endFrame": 77565
   },
   {
    "s": 460,
    "w": "honestly",
-   "start": 1292.41,
-   "end": 1292.781,
-   "startFrame": 77545,
-   "endFrame": 77567
+   "start": 1292.745,
+   "end": 1293.122,
+   "startFrame": 77565,
+   "endFrame": 77587
   },
   {
    "s": 460,
    "w": "don't",
-   "start": 1292.781,
-   "end": 1293.036,
-   "startFrame": 77567,
-   "endFrame": 77582
+   "start": 1293.122,
+   "end": 1293.38,
+   "startFrame": 77587,
+   "endFrame": 77603
   },
   {
    "s": 460,
    "w": "know.",
-   "start": 1293.036,
-   "end": 1293.329,
-   "startFrame": 77582,
-   "endFrame": 77600
+   "start": 1293.38,
+   "end": 1293.677,
+   "startFrame": 77603,
+   "endFrame": 77621
   },
   {
    "s": 461,
    "w": "Nobody",
-   "start": 1293.762,
-   "end": 1294.094,
-   "startFrame": 77626,
-   "endFrame": 77646
+   "start": 1294.047,
+   "end": 1294.4,
+   "startFrame": 77643,
+   "endFrame": 77664
   },
   {
    "s": 461,
    "w": "does",
-   "start": 1294.094,
-   "end": 1294.337,
-   "startFrame": 77646,
-   "endFrame": 77660
+   "start": 1294.4,
+   "end": 1294.658,
+   "startFrame": 77664,
+   "endFrame": 77679
   },
   {
    "s": 461,
    "w": "yet.",
-   "start": 1294.337,
-   "end": 1294.625,
-   "startFrame": 77660,
-   "endFrame": 77678
+   "start": 1294.658,
+   "end": 1294.964,
+   "startFrame": 77679,
+   "endFrame": 77698
   },
   {
    "s": 462,
    "w": "But",
-   "start": 1295.155,
-   "end": 1295.349,
-   "startFrame": 77709,
-   "endFrame": 77721
+   "start": 1295.413,
+   "end": 1295.606,
+   "startFrame": 77725,
+   "endFrame": 77736
   },
   {
    "s": 462,
    "w": "step",
-   "start": 1295.349,
-   "end": 1295.586,
-   "startFrame": 77721,
-   "endFrame": 77735
+   "start": 1295.606,
+   "end": 1295.843,
+   "startFrame": 77736,
+   "endFrame": 77751
   },
   {
    "s": 462,
    "w": "back",
-   "start": 1295.586,
-   "end": 1295.824,
-   "startFrame": 77735,
-   "endFrame": 77749
+   "start": 1295.843,
+   "end": 1296.079,
+   "startFrame": 77751,
+   "endFrame": 77765
   },
   {
    "s": 462,
    "w": "for",
-   "start": 1295.824,
-   "end": 1296.018,
-   "startFrame": 77749,
-   "endFrame": 77761
+   "start": 1296.079,
+   "end": 1296.273,
+   "startFrame": 77765,
+   "endFrame": 77776
   },
   {
    "s": 462,
    "w": "a",
-   "start": 1296.018,
-   "end": 1296.126,
-   "startFrame": 77761,
-   "endFrame": 77768
+   "start": 1296.273,
+   "end": 1296.38,
+   "startFrame": 77776,
+   "endFrame": 77783
   },
   {
    "s": 462,
    "w": "moment,",
-   "start": 1296.126,
-   "end": 1296.449,
-   "startFrame": 77768,
-   "endFrame": 77787
+   "start": 1296.38,
+   "end": 1296.703,
+   "startFrame": 77783,
+   "endFrame": 77802
   },
   {
    "s": 462,
    "w": "and",
-   "start": 1296.728,
-   "end": 1296.942,
-   "startFrame": 77804,
-   "endFrame": 77817
+   "start": 1297.043,
+   "end": 1297.257,
+   "startFrame": 77823,
+   "endFrame": 77835
   },
   {
    "s": 462,
    "w": "look",
-   "start": 1296.942,
-   "end": 1297.203,
-   "startFrame": 77817,
-   "endFrame": 77832
+   "start": 1297.257,
+   "end": 1297.518,
+   "startFrame": 77835,
+   "endFrame": 77851
   },
   {
    "s": 462,
    "w": "at",
-   "start": 1297.203,
-   "end": 1297.369,
-   "startFrame": 77832,
-   "endFrame": 77842
+   "start": 1297.518,
+   "end": 1297.684,
+   "startFrame": 77851,
+   "endFrame": 77861
   },
   {
    "s": 462,
    "w": "who",
-   "start": 1297.369,
-   "end": 1297.583,
-   "startFrame": 77842,
-   "endFrame": 77855
+   "start": 1297.684,
+   "end": 1297.898,
+   "startFrame": 77861,
+   "endFrame": 77874
   },
   {
    "s": 462,
    "w": "built",
-   "start": 1297.583,
-   "end": 1297.891,
-   "startFrame": 77855,
-   "endFrame": 77873
+   "start": 1297.898,
+   "end": 1298.207,
+   "startFrame": 77874,
+   "endFrame": 77892
   },
   {
    "s": 462,
    "w": "this.",
-   "start": 1297.891,
-   "end": 1298.247,
-   "startFrame": 77873,
-   "endFrame": 77895
+   "start": 1298.207,
+   "end": 1298.563,
+   "startFrame": 77892,
+   "endFrame": 77914
   },
   {
    "s": 463,
    "w": "A",
-   "start": 1298.676,
-   "end": 1298.823,
-   "startFrame": 77921,
-   "endFrame": 77929
+   "start": 1298.986,
+   "end": 1299.13,
+   "startFrame": 77939,
+   "endFrame": 77948
   },
   {
    "s": 463,
    "w": "priest's",
-   "start": 1298.823,
-   "end": 1299.381,
-   "startFrame": 77929,
-   "endFrame": 77963
+   "start": 1299.13,
+   "end": 1299.679,
+   "startFrame": 77948,
+   "endFrame": 77981
   },
   {
    "s": 463,
    "w": "son",
-   "start": 1299.381,
-   "end": 1299.645,
-   "startFrame": 77963,
-   "endFrame": 77979
+   "start": 1299.679,
+   "end": 1299.939,
+   "startFrame": 77981,
+   "endFrame": 77996
   },
   {
    "s": 463,
    "w": "whose",
-   "start": 1299.645,
-   "end": 1300.027,
-   "startFrame": 77979,
-   "endFrame": 78002
+   "start": 1299.939,
+   "end": 1300.314,
+   "startFrame": 77996,
+   "endFrame": 78019
   },
   {
    "s": 463,
    "w": "family",
-   "start": 1300.027,
-   "end": 1300.467,
-   "startFrame": 78002,
-   "endFrame": 78028
+   "start": 1300.314,
+   "end": 1300.748,
+   "startFrame": 78019,
+   "endFrame": 78045
   },
   {
    "s": 463,
    "w": "nearly",
-   "start": 1300.467,
-   "end": 1300.907,
-   "startFrame": 78028,
-   "endFrame": 78054
+   "start": 1300.748,
+   "end": 1301.181,
+   "startFrame": 78045,
+   "endFrame": 78071
   },
   {
    "s": 463,
    "w": "lost",
-   "start": 1300.907,
-   "end": 1301.23,
-   "startFrame": 78054,
-   "endFrame": 78074
+   "start": 1301.181,
+   "end": 1301.498,
+   "startFrame": 78071,
+   "endFrame": 78090
   },
   {
    "s": 463,
    "w": "everything.",
-   "start": 1301.23,
-   "end": 1302.023,
-   "startFrame": 78074,
-   "endFrame": 78121
+   "start": 1301.498,
+   "end": 1302.278,
+   "startFrame": 78090,
+   "endFrame": 78137
   },
   {
    "s": 464,
    "w": "Eight",
-   "start": 1302.48,
-   "end": 1302.855,
-   "startFrame": 78149,
-   "endFrame": 78171
+   "start": 1302.729,
+   "end": 1303.086,
+   "startFrame": 78164,
+   "endFrame": 78185
   },
   {
    "s": 464,
    "w": "thousand",
-   "start": 1302.855,
-   "end": 1303.402,
-   "startFrame": 78171,
-   "endFrame": 78204
+   "start": 1303.086,
+   "end": 1303.607,
+   "startFrame": 78185,
+   "endFrame": 78216
   },
   {
    "s": 464,
    "w": "ordinary",
-   "start": 1303.402,
-   "end": 1303.95,
-   "startFrame": 78204,
-   "endFrame": 78237
+   "start": 1303.607,
+   "end": 1304.128,
+   "startFrame": 78216,
+   "endFrame": 78248
   },
   {
    "s": 464,
    "w": "savers.",
-   "start": 1303.95,
-   "end": 1304.497,
-   "startFrame": 78237,
-   "endFrame": 78270
+   "start": 1304.128,
+   "end": 1304.649,
+   "startFrame": 78248,
+   "endFrame": 78279
   },
   {
    "s": 465,
    "w": "A",
-   "start": 1304.857,
-   "end": 1304.971,
-   "startFrame": 78291,
-   "endFrame": 78298
+   "start": 1304.975,
+   "end": 1305.088,
+   "startFrame": 78298,
+   "endFrame": 78305
   },
   {
    "s": 465,
    "w": "husband",
-   "start": 1304.971,
-   "end": 1305.359,
-   "startFrame": 78298,
-   "endFrame": 78322
+   "start": 1305.088,
+   "end": 1305.474,
+   "startFrame": 78305,
+   "endFrame": 78328
   },
   {
    "s": 465,
    "w": "and",
-   "start": 1305.359,
-   "end": 1305.564,
-   "startFrame": 78322,
-   "endFrame": 78334
+   "start": 1305.474,
+   "end": 1305.678,
+   "startFrame": 78328,
+   "endFrame": 78341
   },
   {
    "s": 465,
    "w": "wife",
-   "start": 1305.564,
-   "end": 1305.815,
-   "startFrame": 78334,
-   "endFrame": 78349
+   "start": 1305.678,
+   "end": 1305.927,
+   "startFrame": 78341,
+   "endFrame": 78356
   },
   {
    "s": 465,
    "w": "who",
-   "start": 1305.815,
-   "end": 1306.02,
-   "startFrame": 78349,
-   "endFrame": 78361
+   "start": 1305.927,
+   "end": 1306.131,
+   "startFrame": 78356,
+   "endFrame": 78368
   },
   {
    "s": 465,
    "w": "pledged",
-   "start": 1306.02,
-   "end": 1306.408,
-   "startFrame": 78361,
-   "endFrame": 78384
+   "start": 1306.131,
+   "end": 1306.517,
+   "startFrame": 78368,
+   "endFrame": 78391
   },
   {
    "s": 465,
    "w": "their",
-   "start": 1306.408,
-   "end": 1306.705,
-   "startFrame": 78384,
-   "endFrame": 78402
+   "start": 1306.517,
+   "end": 1306.812,
+   "startFrame": 78391,
+   "endFrame": 78409
   },
   {
    "s": 465,
    "w": "diamond.",
-   "start": 1306.705,
-   "end": 1307.184,
-   "startFrame": 78402,
-   "endFrame": 78431
+   "start": 1306.812,
+   "end": 1307.288,
+   "startFrame": 78409,
+   "endFrame": 78437
   },
   {
    "s": 466,
    "w": "An",
-   "start": 1307.59,
-   "end": 1307.763,
-   "startFrame": 78455,
-   "endFrame": 78466
+   "start": 1307.617,
+   "end": 1307.79,
+   "startFrame": 78457,
+   "endFrame": 78467
   },
   {
    "s": 466,
    "w": "apprentice",
-   "start": 1307.763,
-   "end": 1308.331,
-   "startFrame": 78466,
-   "endFrame": 78500
+   "start": 1307.79,
+   "end": 1308.357,
+   "startFrame": 78467,
+   "endFrame": 78501
   },
   {
    "s": 466,
    "w": "who",
-   "start": 1308.331,
-   "end": 1308.553,
-   "startFrame": 78500,
-   "endFrame": 78513
+   "start": 1308.357,
+   "end": 1308.579,
+   "startFrame": 78501,
+   "endFrame": 78515
   },
   {
    "s": 466,
    "w": "worked",
-   "start": 1308.553,
-   "end": 1308.923,
-   "startFrame": 78513,
-   "endFrame": 78535
+   "start": 1308.579,
+   "end": 1308.948,
+   "startFrame": 78515,
+   "endFrame": 78537
   },
   {
    "s": 466,
    "w": "without",
-   "start": 1308.923,
-   "end": 1309.343,
-   "startFrame": 78535,
-   "endFrame": 78561
+   "start": 1308.948,
+   "end": 1309.367,
+   "startFrame": 78537,
+   "endFrame": 78562
   },
   {
    "s": 466,
    "w": "pay.",
-   "start": 1309.343,
-   "end": 1309.664,
-   "startFrame": 78561,
-   "endFrame": 78580
+   "start": 1309.367,
+   "end": 1309.688,
+   "startFrame": 78562,
+   "endFrame": 78581
   },
   {
    "s": 467,
    "w": "A",
-   "start": 1310.062,
-   "end": 1310.178,
-   "startFrame": 78604,
-   "endFrame": 78611
+   "start": 1310.018,
+   "end": 1310.142,
+   "startFrame": 78601,
+   "endFrame": 78609
   },
   {
    "s": 467,
    "w": "young",
-   "start": 1310.178,
-   "end": 1310.48,
-   "startFrame": 78611,
-   "endFrame": 78629
+   "start": 1310.142,
+   "end": 1310.466,
+   "startFrame": 78609,
+   "endFrame": 78628
   },
   {
    "s": 467,
    "w": "engineer",
-   "start": 1310.48,
-   "end": 1310.921,
-   "startFrame": 78629,
-   "endFrame": 78655
+   "start": 1310.466,
+   "end": 1310.939,
+   "startFrame": 78628,
+   "endFrame": 78656
   },
   {
    "s": 467,
    "w": "with",
-   "start": 1310.921,
-   "end": 1311.176,
-   "startFrame": 78655,
-   "endFrame": 78671
+   "start": 1310.939,
+   "end": 1311.213,
+   "startFrame": 78656,
+   "endFrame": 78673
   },
   {
    "s": 467,
    "w": "a",
-   "start": 1311.176,
-   "end": 1311.292,
-   "startFrame": 78671,
-   "endFrame": 78678
+   "start": 1311.213,
+   "end": 1311.337,
+   "startFrame": 78673,
+   "endFrame": 78680
   },
   {
    "s": 467,
    "w": "postcard.",
-   "start": 1311.292,
-   "end": 1311.826,
-   "startFrame": 78678,
-   "endFrame": 78710
+   "start": 1311.337,
+   "end": 1311.91,
+   "startFrame": 78680,
+   "endFrame": 78715
   },
   {
    "s": 468,
    "w": "A",
-   "start": 1312.188,
-   "end": 1312.312,
-   "startFrame": 78731,
-   "endFrame": 78739
+   "start": 1312.208,
+   "end": 1312.338,
+   "startFrame": 78732,
+   "endFrame": 78740
   },
   {
    "s": 468,
    "w": "man",
-   "start": 1312.312,
-   "end": 1312.535,
-   "startFrame": 78739,
-   "endFrame": 78752
+   "start": 1312.338,
+   "end": 1312.571,
+   "startFrame": 78740,
+   "endFrame": 78754
   },
   {
    "s": 468,
    "w": "shovelling",
-   "start": 1312.535,
-   "end": 1313.106,
-   "startFrame": 78752,
-   "endFrame": 78786
+   "start": 1312.571,
+   "end": 1313.168,
+   "startFrame": 78754,
+   "endFrame": 78790
   },
   {
    "s": 468,
    "w": "limestone",
-   "start": 1313.106,
-   "end": 1313.628,
-   "startFrame": 78786,
-   "endFrame": 78818
+   "start": 1313.168,
+   "end": 1313.713,
+   "startFrame": 78790,
+   "endFrame": 78823
   },
   {
    "s": 468,
    "w": "next",
-   "start": 1313.628,
-   "end": 1313.901,
-   "startFrame": 78818,
-   "endFrame": 78834
+   "start": 1313.713,
+   "end": 1313.999,
+   "startFrame": 78823,
+   "endFrame": 78840
   },
   {
    "s": 468,
    "w": "to",
-   "start": 1313.901,
-   "end": 1314.074,
-   "startFrame": 78834,
-   "endFrame": 78844
+   "start": 1313.999,
+   "end": 1314.18,
+   "startFrame": 78840,
+   "endFrame": 78851
   },
   {
    "s": 468,
    "w": "the",
-   "start": 1314.074,
-   "end": 1314.298,
-   "startFrame": 78844,
-   "endFrame": 78858
+   "start": 1314.18,
+   "end": 1314.414,
+   "startFrame": 78851,
+   "endFrame": 78865
   },
   {
    "s": 468,
    "w": "furnace.",
-   "start": 1314.298,
-   "end": 1314.819,
-   "startFrame": 78858,
-   "endFrame": 78889
+   "start": 1314.414,
+   "end": 1314.959,
+   "startFrame": 78865,
+   "endFrame": 78898
   },
   {
    "s": 469,
    "w": "What",
-   "start": 1315.324,
-   "end": 1315.499,
-   "startFrame": 78919,
-   "endFrame": 78930
+   "start": 1315.359,
+   "end": 1315.547,
+   "startFrame": 78922,
+   "endFrame": 78933
   },
   {
    "s": 469,
    "w": "do",
-   "start": 1315.499,
-   "end": 1315.61,
-   "startFrame": 78930,
-   "endFrame": 78937
+   "start": 1315.547,
+   "end": 1315.666,
+   "startFrame": 78933,
+   "endFrame": 78940
   },
   {
    "s": 469,
    "w": "they",
-   "start": 1315.61,
-   "end": 1315.785,
-   "startFrame": 78937,
-   "endFrame": 78947
+   "start": 1315.666,
+   "end": 1315.853,
+   "startFrame": 78940,
+   "endFrame": 78951
   },
   {
    "s": 469,
    "w": "have",
-   "start": 1315.785,
-   "end": 1315.96,
-   "startFrame": 78947,
-   "endFrame": 78958
+   "start": 1315.853,
+   "end": 1316.041,
+   "startFrame": 78951,
+   "endFrame": 78962
   },
   {
    "s": 469,
    "w": "in",
-   "start": 1315.96,
-   "end": 1316.071,
-   "startFrame": 78958,
-   "endFrame": 78964
+   "start": 1316.041,
+   "end": 1316.16,
+   "startFrame": 78962,
+   "endFrame": 78970
   },
   {
    "s": 469,
    "w": "common?",
-   "start": 1316.071,
-   "end": 1316.31,
-   "startFrame": 78964,
-   "endFrame": 78979
+   "start": 1316.16,
+   "end": 1316.416,
+   "startFrame": 78970,
+   "endFrame": 78985
   },
   {
    "s": 470,
    "w": "Every",
-   "start": 1316.754,
-   "end": 1317.064,
-   "startFrame": 79005,
-   "endFrame": 79024
+   "start": 1316.786,
+   "end": 1317.12,
+   "startFrame": 79007,
+   "endFrame": 79027
   },
   {
    "s": 470,
    "w": "one",
-   "start": 1317.064,
-   "end": 1317.279,
-   "startFrame": 79024,
-   "endFrame": 79037
+   "start": 1317.12,
+   "end": 1317.351,
+   "startFrame": 79027,
+   "endFrame": 79041
   },
   {
    "s": 470,
    "w": "of",
-   "start": 1317.279,
-   "end": 1317.446,
-   "startFrame": 79037,
-   "endFrame": 79047
+   "start": 1317.351,
+   "end": 1317.531,
+   "startFrame": 79041,
+   "endFrame": 79052
   },
   {
    "s": 470,
    "w": "them,",
-   "start": 1317.446,
-   "end": 1317.709,
-   "startFrame": 79047,
-   "endFrame": 79063
+   "start": 1317.531,
+   "end": 1317.814,
+   "startFrame": 79052,
+   "endFrame": 79069
   },
   {
    "s": 470,
    "w": "at",
-   "start": 1317.895,
-   "end": 1318.091,
-   "startFrame": 79074,
-   "endFrame": 79085
+   "start": 1317.978,
+   "end": 1318.179,
+   "startFrame": 79079,
+   "endFrame": 79091
   },
   {
    "s": 470,
    "w": "some",
-   "start": 1318.091,
-   "end": 1318.4,
-   "startFrame": 79085,
-   "endFrame": 79104
+   "start": 1318.179,
+   "end": 1318.495,
+   "startFrame": 79091,
+   "endFrame": 79110
   },
   {
    "s": 470,
    "w": "point,",
-   "start": 1318.4,
-   "end": 1318.764,
-   "startFrame": 79104,
-   "endFrame": 79126
+   "start": 1318.495,
+   "end": 1318.868,
+   "startFrame": 79110,
+   "endFrame": 79132
   },
   {
    "s": 470,
    "w": "put",
-   "start": 1319.04,
-   "end": 1319.24,
-   "startFrame": 79142,
-   "endFrame": 79154
+   "start": 1319.12,
+   "end": 1319.322,
+   "startFrame": 79147,
+   "endFrame": 79159
   },
   {
    "s": 470,
    "w": "something",
-   "start": 1319.24,
-   "end": 1319.707,
-   "startFrame": 79154,
-   "endFrame": 79182
+   "start": 1319.322,
+   "end": 1319.794,
+   "startFrame": 79159,
+   "endFrame": 79188
   },
   {
    "s": 470,
    "w": "on",
-   "start": 1319.707,
-   "end": 1319.862,
-   "startFrame": 79182,
-   "endFrame": 79192
+   "start": 1319.794,
+   "end": 1319.951,
+   "startFrame": 79188,
+   "endFrame": 79197
   },
   {
    "s": 470,
    "w": "the",
-   "start": 1319.862,
-   "end": 1320.063,
-   "startFrame": 79192,
-   "endFrame": 79204
+   "start": 1319.951,
+   "end": 1320.153,
+   "startFrame": 79197,
+   "endFrame": 79209
   },
   {
    "s": 470,
    "w": "line.",
-   "start": 1320.063,
-   "end": 1320.396,
-   "startFrame": 79204,
-   "endFrame": 79224
+   "start": 1320.153,
+   "end": 1320.49,
+   "startFrame": 79209,
+   "endFrame": 79229
   },
   {
    "s": 471,
    "w": "Savings.",
-   "start": 1320.895,
-   "end": 1321.562,
-   "startFrame": 79254,
-   "endFrame": 79294
+   "start": 1320.868,
+   "end": 1321.52,
+   "startFrame": 79252,
+   "endFrame": 79291
   },
   {
    "s": 472,
    "w": "Pride.",
-   "start": 1321.992,
-   "end": 1322.407,
-   "startFrame": 79320,
-   "endFrame": 79344
+   "start": 1321.902,
+   "end": 1322.312,
+   "startFrame": 79314,
+   "endFrame": 79339
   },
   {
    "s": 473,
    "w": "A",
-   "start": 1322.827,
-   "end": 1322.945,
-   "startFrame": 79370,
-   "endFrame": 79377
+   "start": 1322.672,
+   "end": 1322.792,
+   "startFrame": 79360,
+   "endFrame": 79368
   },
   {
    "s": 473,
    "w": "diamond.",
-   "start": 1322.945,
-   "end": 1323.442,
-   "startFrame": 79377,
-   "endFrame": 79407
+   "start": 1322.792,
+   "end": 1323.294,
+   "startFrame": 79368,
+   "endFrame": 79398
   },
   {
    "s": 474,
    "w": "That",
-   "start": 1323.834,
-   "end": 1324.124,
-   "startFrame": 79430,
-   "endFrame": 79447
+   "start": 1323.646,
+   "end": 1323.959,
+   "startFrame": 79419,
+   "endFrame": 79438
   },
   {
    "s": 474,
    "w": "part",
-   "start": 1324.124,
-   "end": 1324.415,
-   "startFrame": 79447,
-   "endFrame": 79465
+   "start": 1323.959,
+   "end": 1324.272,
+   "startFrame": 79438,
+   "endFrame": 79456
   },
   {
    "s": 474,
    "w": "needs",
-   "start": 1324.415,
-   "end": 1324.758,
-   "startFrame": 79465,
-   "endFrame": 79485
+   "start": 1324.272,
+   "end": 1324.642,
+   "startFrame": 79456,
+   "endFrame": 79479
   },
   {
    "s": 474,
    "w": "no",
-   "start": 1324.758,
-   "end": 1324.943,
-   "startFrame": 79485,
-   "endFrame": 79497
+   "start": 1324.642,
+   "end": 1324.841,
+   "startFrame": 79479,
+   "endFrame": 79490
   },
   {
    "s": 474,
    "w": "fortune.",
-   "start": 1324.943,
-   "end": 1325.497,
-   "startFrame": 79497,
-   "endFrame": 79530
+   "start": 1324.841,
+   "end": 1325.439,
+   "startFrame": 79490,
+   "endFrame": 79526
   },
   {
    "s": 475,
    "w": "That",
-   "start": 1325.971,
-   "end": 1326.305,
-   "startFrame": 79558,
-   "endFrame": 79578
+   "start": 1325.826,
+   "end": 1326.153,
+   "startFrame": 79550,
+   "endFrame": 79569
   },
   {
    "s": 475,
    "w": "part",
-   "start": 1326.305,
-   "end": 1326.639,
-   "startFrame": 79578,
-   "endFrame": 79598
+   "start": 1326.153,
+   "end": 1326.48,
+   "startFrame": 79569,
+   "endFrame": 79589
   },
   {
    "s": 475,
    "w": "is",
-   "start": 1326.639,
-   "end": 1326.851,
-   "startFrame": 79598,
-   "endFrame": 79611
+   "start": 1326.48,
+   "end": 1326.688,
+   "startFrame": 79589,
+   "endFrame": 79601
   },
   {
    "s": 475,
    "w": "yours.",
-   "start": 1326.851,
-   "end": 1327.367,
-   "startFrame": 79611,
-   "endFrame": 79642
+   "start": 1326.688,
+   "end": 1327.194,
+   "startFrame": 79601,
+   "endFrame": 79632
   },
   {
    "s": 476,
    "w": "And",
-   "start": 1327.815,
-   "end": 1328.024,
-   "startFrame": 79669,
-   "endFrame": 79681
+   "start": 1327.575,
+   "end": 1327.79,
+   "startFrame": 79654,
+   "endFrame": 79667
   },
   {
    "s": 476,
    "w": "a",
-   "start": 1328.024,
-   "end": 1328.139,
-   "startFrame": 79681,
-   "endFrame": 79688
+   "start": 1327.79,
+   "end": 1327.909,
+   "startFrame": 79667,
+   "endFrame": 79675
   },
   {
    "s": 476,
    "w": "hundred",
-   "start": 1328.139,
-   "end": 1328.533,
-   "startFrame": 79688,
-   "endFrame": 79712
+   "start": 1327.909,
+   "end": 1328.315,
+   "startFrame": 79675,
+   "endFrame": 79699
   },
   {
    "s": 476,
    "w": "years",
-   "start": 1328.533,
-   "end": 1328.835,
-   "startFrame": 79712,
-   "endFrame": 79730
+   "start": 1328.315,
+   "end": 1328.625,
+   "startFrame": 79699,
+   "endFrame": 79718
   },
   {
    "s": 476,
    "w": "later,",
-   "start": 1328.835,
-   "end": 1329.136,
-   "startFrame": 79730,
-   "endFrame": 79748
+   "start": 1328.625,
+   "end": 1328.935,
+   "startFrame": 79718,
+   "endFrame": 79736
   },
   {
    "s": 476,
    "w": "the",
-   "start": 1329.327,
-   "end": 1329.528,
-   "startFrame": 79760,
-   "endFrame": 79772
+   "start": 1329.093,
+   "end": 1329.294,
+   "startFrame": 79746,
+   "endFrame": 79758
   },
   {
    "s": 476,
    "w": "question",
-   "start": 1329.528,
-   "end": 1329.953,
-   "startFrame": 79772,
-   "endFrame": 79797
+   "start": 1329.294,
+   "end": 1329.719,
+   "startFrame": 79758,
+   "endFrame": 79783
   },
   {
    "s": 476,
    "w": "is",
-   "start": 1329.953,
-   "end": 1330.109,
-   "startFrame": 79797,
-   "endFrame": 79807
+   "start": 1329.719,
+   "end": 1329.876,
+   "startFrame": 79783,
+   "endFrame": 79793
   },
   {
    "s": 476,
    "w": "still",
-   "start": 1330.109,
-   "end": 1330.4,
-   "startFrame": 79807,
-   "endFrame": 79824
+   "start": 1329.876,
+   "end": 1330.167,
+   "startFrame": 79793,
+   "endFrame": 79810
   },
   {
    "s": 476,
    "w": "the",
-   "start": 1330.4,
-   "end": 1330.601,
-   "startFrame": 79824,
-   "endFrame": 79836
+   "start": 1330.167,
+   "end": 1330.368,
+   "startFrame": 79810,
+   "endFrame": 79822
   },
   {
    "s": 476,
    "w": "same",
-   "start": 1330.601,
-   "end": 1330.847,
-   "startFrame": 79836,
-   "endFrame": 79851
+   "start": 1330.368,
+   "end": 1330.614,
+   "startFrame": 79822,
+   "endFrame": 79837
   },
   {
    "s": 476,
    "w": "one.",
-   "start": 1330.847,
-   "end": 1331.138,
-   "startFrame": 79851,
-   "endFrame": 79868
+   "start": 1330.614,
+   "end": 1330.905,
+   "startFrame": 79837,
+   "endFrame": 79854
   },
   {
    "s": 477,
    "w": "Who",
-   "start": 1331.565,
-   "end": 1331.76,
-   "startFrame": 79894,
-   "endFrame": 79906
+   "start": 1331.287,
+   "end": 1331.497,
+   "startFrame": 79877,
+   "endFrame": 79890
   },
   {
    "s": 477,
    "w": "should",
-   "start": 1331.76,
-   "end": 1332.084,
-   "startFrame": 79906,
-   "endFrame": 79925
+   "start": 1331.497,
+   "end": 1331.847,
+   "startFrame": 79890,
+   "endFrame": 79911
   },
   {
    "s": 477,
    "w": "a",
-   "start": 1332.084,
-   "end": 1332.193,
-   "startFrame": 79925,
-   "endFrame": 79932
+   "start": 1331.847,
+   "end": 1331.964,
+   "startFrame": 79911,
+   "endFrame": 79918
   },
   {
    "s": 477,
    "w": "company",
-   "start": 1332.193,
-   "end": 1332.56,
-   "startFrame": 79932,
-   "endFrame": 79954
+   "start": 1331.964,
+   "end": 1332.36,
+   "startFrame": 79918,
+   "endFrame": 79942
   },
   {
    "s": 477,
    "w": "like",
-   "start": 1332.56,
-   "end": 1332.798,
-   "startFrame": 79954,
-   "endFrame": 79968
+   "start": 1332.36,
+   "end": 1332.617,
+   "startFrame": 79942,
+   "endFrame": 79957
   },
   {
    "s": 477,
    "w": "this",
-   "start": 1332.798,
-   "end": 1333.036,
-   "startFrame": 79968,
-   "endFrame": 79982
+   "start": 1332.617,
+   "end": 1332.874,
+   "startFrame": 79957,
+   "endFrame": 79972
   },
   {
    "s": 477,
    "w": "really",
-   "start": 1333.036,
-   "end": 1333.361,
-   "startFrame": 79982,
-   "endFrame": 80002
+   "start": 1332.874,
+   "end": 1333.224,
+   "startFrame": 79972,
+   "endFrame": 79993
   },
   {
    "s": 477,
    "w": "belong",
-   "start": 1333.361,
-   "end": 1333.686,
-   "startFrame": 80002,
-   "endFrame": 80021
+   "start": 1333.224,
+   "end": 1333.574,
+   "startFrame": 79993,
+   "endFrame": 80014
   },
   {
    "s": 477,
    "w": "to?",
-   "start": 1333.686,
-   "end": 1333.837,
-   "startFrame": 80021,
-   "endFrame": 80030
+   "start": 1333.574,
+   "end": 1333.737,
+   "startFrame": 80014,
+   "endFrame": 80024
   },
   {
    "s": 478,
    "w": "What",
-   "start": 1334.386,
-   "end": 1334.564,
-   "startFrame": 80063,
-   "endFrame": 80074
+   "start": 1334.194,
+   "end": 1334.38,
+   "startFrame": 80052,
+   "endFrame": 80063
   },
   {
    "s": 478,
    "w": "do",
-   "start": 1334.564,
-   "end": 1334.678,
-   "startFrame": 80074,
-   "endFrame": 80081
+   "start": 1334.38,
+   "end": 1334.498,
+   "startFrame": 80063,
+   "endFrame": 80070
   },
   {
    "s": 478,
    "w": "you",
-   "start": 1334.678,
-   "end": 1334.823,
-   "startFrame": 80081,
-   "endFrame": 80089
+   "start": 1334.498,
+   "end": 1334.65,
+   "startFrame": 80070,
+   "endFrame": 80079
   },
   {
    "s": 478,
    "w": "think?",
-   "start": 1334.823,
-   "end": 1335.034,
-   "startFrame": 80089,
-   "endFrame": 80102
+   "start": 1334.65,
+   "end": 1334.87,
+   "startFrame": 80079,
+   "endFrame": 80092
   },
   {
    "s": 479,
    "w": "Tell",
-   "start": 1335.493,
-   "end": 1335.665,
-   "startFrame": 80130,
-   "endFrame": 80140
+   "start": 1335.247,
+   "end": 1335.417,
+   "startFrame": 80115,
+   "endFrame": 80125
   },
   {
    "s": 479,
    "w": "me",
-   "start": 1335.665,
-   "end": 1335.774,
-   "startFrame": 80140,
+   "start": 1335.417,
+   "end": 1335.526,
+   "startFrame": 80125,
+   "endFrame": 80132
+  },
+  {
+   "s": 479,
+   "w": "in",
+   "start": 1335.526,
+   "end": 1335.634,
+   "startFrame": 80132,
+   "endFrame": 80138
+  },
+  {
+   "s": 479,
+   "w": "the",
+   "start": 1335.634,
+   "end": 1335.773,
+   "startFrame": 80138,
    "endFrame": 80146
   },
   {
    "s": 479,
-   "w": "in",
-   "start": 1335.774,
-   "end": 1335.884,
-   "startFrame": 80146,
-   "endFrame": 80153
-  },
-  {
-   "s": 479,
-   "w": "the",
-   "start": 1335.884,
-   "end": 1336.024,
-   "startFrame": 80153,
-   "endFrame": 80161
-  },
-  {
-   "s": 479,
    "w": "comments.",
-   "start": 1336.024,
-   "end": 1336.384,
-   "startFrame": 80161,
-   "endFrame": 80183
+   "start": 1335.773,
+   "end": 1336.129,
+   "startFrame": 80146,
+   "endFrame": 80168
   },
   {
    "s": 480,
    "w": "This",
-   "start": 1337.951,
-   "end": 1338.279,
-   "startFrame": 80277,
-   "endFrame": 80297
+   "start": 1337.696,
+   "end": 1338.024,
+   "startFrame": 80262,
+   "endFrame": 80281
   },
   {
    "s": 480,
    "w": "is",
-   "start": 1338.279,
-   "end": 1338.488,
-   "startFrame": 80297,
-   "endFrame": 80309
+   "start": 1338.024,
+   "end": 1338.233,
+   "startFrame": 80281,
+   "endFrame": 80294
   },
   {
    "s": 480,
    "w": "Built",
-   "start": 1338.488,
-   "end": 1338.876,
-   "startFrame": 80309,
-   "endFrame": 80333
+   "start": 1338.233,
+   "end": 1338.621,
+   "startFrame": 80294,
+   "endFrame": 80317
   },
   {
    "s": 480,
    "w": "on",
-   "start": 1338.876,
-   "end": 1339.084,
-   "startFrame": 80333,
-   "endFrame": 80345
+   "start": 1338.621,
+   "end": 1338.829,
+   "startFrame": 80317,
+   "endFrame": 80330
   },
   {
    "s": 480,
    "w": "Bharat.",
-   "start": 1339.084,
-   "end": 1339.651,
-   "startFrame": 80345,
-   "endFrame": 80379
+   "start": 1338.829,
+   "end": 1339.396,
+   "startFrame": 80330,
+   "endFrame": 80364
   },
   {
    "s": 481,
    "w": "The",
-   "start": 1339.998,
-   "end": 1340.276,
-   "startFrame": 80400,
-   "endFrame": 80417
+   "start": 1339.743,
+   "end": 1340.021,
+   "startFrame": 80385,
+   "endFrame": 80401
   },
   {
    "s": 481,
    "w": "empires,",
-   "start": 1340.276,
-   "end": 1340.802,
-   "startFrame": 80417,
-   "endFrame": 80448
+   "start": 1340.021,
+   "end": 1340.547,
+   "startFrame": 80401,
+   "endFrame": 80433
   },
   {
    "s": 481,
    "w": "and",
-   "start": 1340.933,
-   "end": 1341.147,
-   "startFrame": 80456,
-   "endFrame": 80469
+   "start": 1340.678,
+   "end": 1340.892,
+   "startFrame": 80441,
+   "endFrame": 80454
   },
   {
    "s": 481,
    "w": "the",
-   "start": 1341.147,
-   "end": 1341.361,
-   "startFrame": 80469,
-   "endFrame": 80482
+   "start": 1340.892,
+   "end": 1341.106,
+   "startFrame": 80454,
+   "endFrame": 80466
   },
   {
    "s": 481,
    "w": "habits,",
-   "start": 1341.361,
-   "end": 1341.718,
-   "startFrame": 80482,
-   "endFrame": 80503
+   "start": 1341.106,
+   "end": 1341.463,
+   "startFrame": 80466,
+   "endFrame": 80488
   },
   {
    "s": 481,
    "w": "that",
-   "start": 1341.89,
-   "end": 1342.133,
-   "startFrame": 80513,
-   "endFrame": 80528
+   "start": 1341.635,
+   "end": 1341.878,
+   "startFrame": 80498,
+   "endFrame": 80513
   },
   {
    "s": 481,
    "w": "built",
-   "start": 1342.133,
-   "end": 1342.42,
-   "startFrame": 80528,
-   "endFrame": 80545
+   "start": 1341.878,
+   "end": 1342.165,
+   "startFrame": 80513,
+   "endFrame": 80530
   },
   {
    "s": 481,
    "w": "a",
-   "start": 1342.42,
-   "end": 1342.531,
-   "startFrame": 80545,
-   "endFrame": 80552
+   "start": 1342.165,
+   "end": 1342.276,
+   "startFrame": 80530,
+   "endFrame": 80537
   },
   {
    "s": 481,
    "w": "nation.",
-   "start": 1342.531,
-   "end": 1342.95,
-   "startFrame": 80552,
-   "endFrame": 80577
+   "start": 1342.276,
+   "end": 1342.695,
+   "startFrame": 80537,
+   "endFrame": 80562
   },
   {
    "s": 482,
    "w": "Next",
-   "start": 1343.377,
-   "end": 1343.697,
-   "startFrame": 80603,
-   "endFrame": 80622
+   "start": 1343.122,
+   "end": 1343.442,
+   "startFrame": 80587,
+   "endFrame": 80607
   },
   {
    "s": 482,
    "w": "in",
-   "start": 1343.697,
-   "end": 1343.9,
-   "startFrame": 80622,
-   "endFrame": 80634
+   "start": 1343.442,
+   "end": 1343.645,
+   "startFrame": 80607,
+   "endFrame": 80619
   },
   {
    "s": 482,
    "w": "Empires",
-   "start": 1343.9,
-   "end": 1344.394,
-   "startFrame": 80634,
-   "endFrame": 80664
+   "start": 1343.645,
+   "end": 1344.139,
+   "startFrame": 80619,
+   "endFrame": 80648
   },
   {
    "s": 482,
    "w": "of",
-   "start": 1344.394,
-   "end": 1344.598,
-   "startFrame": 80664,
-   "endFrame": 80676
+   "start": 1344.139,
+   "end": 1344.343,
+   "startFrame": 80648,
+   "endFrame": 80661
   },
   {
    "s": 482,
    "w": "India.",
-   "start": 1344.598,
-   "end": 1345.092,
-   "startFrame": 80676,
-   "endFrame": 80706
+   "start": 1344.343,
+   "end": 1344.837,
+   "startFrame": 80661,
+   "endFrame": 80690
   },
   {
    "s": 483,
    "w": "How",
-   "start": 1345.515,
+   "start": 1345.26,
+   "end": 1345.514,
+   "startFrame": 80716,
+   "endFrame": 80731
+  },
+  {
+   "s": 483,
+   "w": "did",
+   "start": 1345.514,
    "end": 1345.769,
    "startFrame": 80731,
    "endFrame": 80746
   },
   {
    "s": 483,
-   "w": "did",
-   "start": 1345.769,
-   "end": 1346.024,
-   "startFrame": 80746,
-   "endFrame": 80761
-  },
-  {
-   "s": 483,
    "w": "a",
-   "start": 1346.024,
-   "end": 1346.165,
-   "startFrame": 80761,
-   "endFrame": 80770
+   "start": 1345.769,
+   "end": 1345.91,
+   "startFrame": 80746,
+   "endFrame": 80755
   },
   {
    "s": 483,
    "w": "group",
-   "start": 1346.165,
-   "end": 1346.532,
-   "startFrame": 80770,
-   "endFrame": 80792
+   "start": 1345.91,
+   "end": 1346.277,
+   "startFrame": 80755,
+   "endFrame": 80777
   },
   {
    "s": 483,
    "w": "of",
-   "start": 1346.532,
-   "end": 1346.73,
-   "startFrame": 80792,
-   "endFrame": 80804
+   "start": 1346.277,
+   "end": 1346.475,
+   "startFrame": 80777,
+   "endFrame": 80788
   },
   {
    "s": 483,
    "w": "farmers",
-   "start": 1346.73,
-   "end": 1347.21,
-   "startFrame": 80804,
-   "endFrame": 80833
+   "start": 1346.475,
+   "end": 1346.955,
+   "startFrame": 80788,
+   "endFrame": 80817
   },
   {
    "s": 483,
    "w": "in",
-   "start": 1347.21,
-   "end": 1347.408,
-   "startFrame": 80833,
-   "endFrame": 80844
+   "start": 1346.955,
+   "end": 1347.153,
+   "startFrame": 80817,
+   "endFrame": 80829
   },
   {
    "s": 483,
    "w": "a",
-   "start": 1347.408,
-   "end": 1347.549,
-   "startFrame": 80844,
-   "endFrame": 80853
+   "start": 1347.153,
+   "end": 1347.294,
+   "startFrame": 80829,
+   "endFrame": 80838
   },
   {
    "s": 483,
    "w": "small",
-   "start": 1347.549,
-   "end": 1347.917,
-   "startFrame": 80853,
-   "endFrame": 80875
+   "start": 1347.294,
+   "end": 1347.662,
+   "startFrame": 80838,
+   "endFrame": 80860
   },
   {
    "s": 483,
    "w": "Gujarat",
-   "start": 1347.917,
-   "end": 1348.397,
-   "startFrame": 80875,
-   "endFrame": 80904
+   "start": 1347.662,
+   "end": 1348.142,
+   "startFrame": 80860,
+   "endFrame": 80889
   },
   {
    "s": 483,
    "w": "town",
-   "start": 1348.397,
-   "end": 1348.708,
-   "startFrame": 80904,
-   "endFrame": 80922
+   "start": 1348.142,
+   "end": 1348.453,
+   "startFrame": 80889,
+   "endFrame": 80907
   },
   {
    "s": 483,
    "w": "build",
-   "start": 1348.708,
-   "end": 1349.075,
-   "startFrame": 80922,
-   "endFrame": 80944
+   "start": 1348.453,
+   "end": 1348.82,
+   "startFrame": 80907,
+   "endFrame": 80929
   },
   {
    "s": 483,
    "w": "Amul?",
-   "start": 1349.075,
-   "end": 1349.386,
-   "startFrame": 80944,
-   "endFrame": 80963
+   "start": 1348.82,
+   "end": 1349.131,
+   "startFrame": 80929,
+   "endFrame": 80948
   }
  ],
  "chapters": [
@@ -36022,10 +36022,10 @@
   },
   {
    "title": "Outro",
-   "start": 1337.951,
-   "startFrame": 80277
+   "start": 1337.696,
+   "startFrame": 80262
   }
  ],
- "duration": 1349.645,
- "durationInFrames": 80979
+ "duration": 1349.39,
+ "durationInFrames": 80963
 }

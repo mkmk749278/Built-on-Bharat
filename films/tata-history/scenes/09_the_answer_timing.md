@@ -1,6 +1,6 @@
-# The answer: sentence timing (generated from vo/timing.json, v6 recording)
+# The answer: sentence timing (generated from vo/timing.json, v6 recording, block 16 retake)
 
-Chapter frames 71211–80277 in the film (151.1 s at 60 fps). Frames below are local to the chapter.
+Chapter frames 71211–80262 in the film (150.8 s at 60 fps). Frames below are local to the chapter.
 
 | id | frames | sentence |
 |---|---|---|
@@ -32,30 +32,30 @@ Chapter frames 71211–80277 in the film (151.1 s at 60 fps). Frames below are l
 | 450 | 4852–4947 | Noel Tata voted no. |
 | 451 | 4972–5117 | The trusts say that decision doesn't count. |
 | 452 | 5143–5248 | Tata Sons says it does. |
-| 453 | 5292–5360 | And here's the catch. |
-| 454 | 5386–5603 | To the R.B.I., Tata Sons looks like a big finance company. |
-| 455 | 5633–5819 | And big finance companies must sell shares to the public. |
-| 456 | 5848–5948 | Tata Sons asked to be let off. |
-| 457 | 5974–6056 | The R.B.I. said no. |
-| 458 | 6087–6246 | As this film goes out, that fight is not over. |
-| 459 | 6276–6307 | Who wins? |
-| 460 | 6328–6389 | I honestly don't know. |
-| 461 | 6415–6467 | Nobody does yet. |
-| 462 | 6498–6684 | But step back for a moment, and look at who built this. |
-| 463 | 6710–6910 | A priest's son whose family nearly lost everything. |
-| 464 | 6938–7059 | Eight thousand ordinary savers. |
-| 465 | 7080–7220 | A husband and wife who pledged their diamond. |
-| 466 | 7244–7369 | An apprentice who worked without pay. |
-| 467 | 7393–7499 | A young engineer with a postcard. |
-| 468 | 7520–7678 | A man shovelling limestone next to the furnace. |
-| 469 | 7708–7768 | What do they have in common? |
-| 470 | 7794–8013 | Every one of them, at some point, put something on the line. |
-| 471 | 8043–8083 | Savings. |
-| 472 | 8109–8133 | Pride. |
-| 473 | 8159–8196 | A diamond. |
-| 474 | 8219–8319 | That part needs no fortune. |
-| 475 | 8347–8431 | That part is yours. |
-| 476 | 8458–8657 | And a hundred years later, the question is still the same one. |
-| 477 | 8683–8819 | Who should a company like this really belong to? |
-| 478 | 8852–8891 | What do you think? |
-| 479 | 8919–8972 | Tell me in the comments. |
+| 453 | 5292–5358 | And here's the catch. |
+| 454 | 5383–5614 | To the R.B.I., Tata Sons looks like a big finance company. |
+| 455 | 5641–5840 | And big finance companies must sell shares to the public. |
+| 456 | 5866–5966 | Tata Sons asked to be let off. |
+| 457 | 5993–6069 | The R.B.I. said no. |
+| 458 | 6097–6267 | As this film goes out, that fight is not over. |
+| 459 | 6294–6323 | Who wins? |
+| 460 | 6348–6410 | I honestly don't know. |
+| 461 | 6432–6487 | Nobody does yet. |
+| 462 | 6514–6703 | But step back for a moment, and look at who built this. |
+| 463 | 6728–6926 | A priest's son whose family nearly lost everything. |
+| 464 | 6953–7068 | Eight thousand ordinary savers. |
+| 465 | 7087–7226 | A husband and wife who pledged their diamond. |
+| 466 | 7246–7370 | An apprentice who worked without pay. |
+| 467 | 7390–7504 | A young engineer with a postcard. |
+| 468 | 7521–7687 | A man shovelling limestone next to the furnace. |
+| 469 | 7711–7774 | What do they have in common? |
+| 470 | 7796–8018 | Every one of them, at some point, put something on the line. |
+| 471 | 8041–8080 | Savings. |
+| 472 | 8103–8128 | Pride. |
+| 473 | 8149–8187 | A diamond. |
+| 474 | 8208–8315 | That part needs no fortune. |
+| 475 | 8339–8421 | That part is yours. |
+| 476 | 8443–8643 | And a hundred years later, the question is still the same one. |
+| 477 | 8666–8813 | Who should a company like this really belong to? |
+| 478 | 8841–8881 | What do you think? |
+| 479 | 8904–8957 | Tell me in the comments. |
