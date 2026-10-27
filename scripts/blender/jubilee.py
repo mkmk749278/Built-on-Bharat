@@ -7,7 +7,8 @@ Run with the pinned Blender module (bpy==4.2.0 in .venv-blender, Python 3.11):
 The stone: a cushion-shaped brilliant (the real Jubilee's outline, from the Commons photo "Mouawad Jubilee", CC BY-SA
 3.0, used as a shape reference only), modelled as the convex hull of facet rings (table, stars, upper girdle, girdle,
 lower girdle, pavilion mains, culet), so every facet is truly flat. Diamond's dispersion (IOR 2.407 red → 2.451
-violet) comes from three tinted glass shaders, red/green/blue, each with its own IOR. It is labelled RECONSTRUCTION in
+violet) comes from three tinted glass shaders, red/green/blue, each with its own IOR. Light: a real photo studio (Poly Haven HDRI, CC0) seen only in the stone, a lamp pool on dark velvet, emissive
+cards and small sparks for fire. It is labelled RECONSTRUCTION in
 the film (CLAUDE.md honesty labels): the real stone is in a private collection.
 
 Shots (all 60 fps, frame = time; camera moves are eased, never linear):
@@ -96,15 +97,35 @@ def diamond_material() -> bpy.types.Material:
     return m
 
 
-def velvet_material(color=(0.0035, 0.0032, 0.0034)) -> bpy.types.Material:
+def velvet_material(color=(0.022, 0.019, 0.017)) -> bpy.types.Material:
     m = bpy.data.materials.new("Velvet")
     m.use_nodes = True
     p = m.node_tree.nodes["Principled BSDF"]
     p.inputs["Base Color"].default_value = (*color, 1)
-    p.inputs["Roughness"].default_value = 0.9
-    p.inputs["Sheen Weight"].default_value = 0.45
-    p.inputs["Sheen Tint"].default_value = (0.20, 0.15, 0.11, 1)
-    p.inputs["Sheen Roughness"].default_value = 0.5
+    p.inputs["Roughness"].default_value = 0.95
+    p.inputs["Specular IOR Level"].default_value = 0.0  # cloth has no shine; a rough specular would see the studio
+    # Velvet's look (dark face-on, warm glow at grazing angles) built on the diffuse lobe: a sheen lobe would see the
+    # studio that only the stone may see, and light the whole cloth evenly.
+    nt = m.node_tree
+    lw = nt.nodes.new("ShaderNodeLayerWeight")
+    lw.inputs["Blend"].default_value = 0.55
+    ramp = nt.nodes.new("ShaderNodeMix")
+    ramp.data_type = "RGBA"
+    ramp.inputs["A"].default_value = (*color, 1)
+    ramp.inputs["B"].default_value = (0.11, 0.085, 0.068, 1)
+    nt.links.new(lw.outputs["Facing"], ramp.inputs["Factor"])
+    nt.links.new(ramp.outputs["Result"], p.inputs["Base Color"])
+    # The pile: a fine fabric grain so the velvet reads as cloth, not as smooth plaster.
+    tc = nt.nodes.new("ShaderNodeTexCoord")
+    nz = nt.nodes.new("ShaderNodeTexNoise")
+    nz.inputs["Scale"].default_value = 900.0
+    nz.inputs["Detail"].default_value = 4.0
+    nt.links.new(tc.outputs["Object"], nz.inputs["Vector"])
+    bump = nt.nodes.new("ShaderNodeBump")
+    bump.inputs["Strength"].default_value = 0.35
+    bump.inputs["Distance"].default_value = 0.002
+    nt.links.new(nz.outputs["Fac"], bump.inputs["Height"])
+    nt.links.new(bump.outputs["Normal"], p.inputs["Normal"])
     return m
 
 
@@ -159,6 +180,52 @@ def panel(name, loc, target, size, strength, rgb):
     return o
 
 
+HDRI_DIR = "films/tata-history/assets/media/hdri"
+HDRI_URL = "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/{}_2k.hdr"  # Poly Haven, CC0
+
+
+def studio_world(w, name: str, strength: float) -> None:
+    """A real photo studio (Poly Haven HDRI, CC0) that only the stone sees: reflection and refraction rays get the
+    studio's softboxes, windows and dark gaps (the structure a flat card can't give), while camera and diffuse rays
+    get near-black, so the backdrop stays dark and the velvet is lit only by the lamp pool."""
+    import os
+    import urllib.request
+    path = f"{HDRI_DIR}/{name}_2k.hdr"
+    if not os.path.exists(path):
+        os.makedirs(HDRI_DIR, exist_ok=True)
+        urllib.request.urlretrieve(HDRI_URL.format(name), path)
+    nt = w.node_tree
+    nt.nodes.clear()
+    env = nt.nodes.new("ShaderNodeTexEnvironment")
+    env.image = bpy.data.images.load(os.path.abspath(path))
+    mp = nt.nodes.new("ShaderNodeMapping")
+    tc = nt.nodes.new("ShaderNodeTexCoord")
+    nt.links.new(tc.outputs["Generated"], mp.inputs["Vector"])
+    nt.links.new(mp.outputs[0], env.inputs["Vector"])
+    STUDIO.append(mp)
+    bright = nt.nodes.new("ShaderNodeBackground")
+    bright.inputs["Strength"].default_value = strength
+    nt.links.new(env.outputs["Color"], bright.inputs["Color"])
+    dark = nt.nodes.new("ShaderNodeBackground")
+    dark.inputs["Color"].default_value = (0.004, 0.0035, 0.003, 1)
+    lp = nt.nodes.new("ShaderNodeLightPath")
+    mx = nt.nodes.new("ShaderNodeMath")
+    mx.operation = "MAXIMUM"
+    nt.links.new(lp.outputs["Is Camera Ray"], mx.inputs[0])
+    nt.links.new(lp.outputs["Is Diffuse Ray"], mx.inputs[1])
+    mix = nt.nodes.new("ShaderNodeMixShader")
+    nt.links.new(mx.outputs[0], mix.inputs["Fac"])
+    nt.links.new(bright.outputs[0], mix.inputs[1])
+    nt.links.new(dark.outputs[0], mix.inputs[2])
+    out = nt.nodes.new("ShaderNodeOutputWorld")
+    nt.links.new(mix.outputs[0], out.inputs["Surface"])
+    # The Light Path mix alone is not enough: direct light sampling of the world still reaches diffuse surfaces.
+    w.cycles_visibility.diffuse = False
+    w.cycles_visibility.camera = False
+
+
+STUDIOS = {"hero": ("brown_photostudio_02", 1.6), "macro": ("brown_photostudio_02", 1.6), "table": ("studio_small_09", 1.0)}
+STUDIO: list = []  # the studio's mapping node: turned slowly so the reflections travel across the facets
 PANELS: list = []  # (emission node, base colour): the macro shot warms them to furnace orange
 WARM = (1.0, 0.62, 0.32)  # ~2900 K lamp
 EMBER = (1.0, 0.30, 0.04)
@@ -177,8 +244,10 @@ def scene(args):
     s.cycles.transmission_bounces = args.bounces
     s.cycles.glossy_bounces = 8
     s.cycles.diffuse_bounces = 2
+    s.cycles.denoising_prefilter = "ACCURATE"
+    s.cycles.denoising_quality = "HIGH"
     s.cycles.use_adaptive_sampling = True
-    s.cycles.adaptive_threshold = 0.02
+    s.cycles.adaptive_threshold = 0.006
     s.render.use_persistent_data = True  # keep the BVH between frames
     s.render.threads_mode = "FIXED"
     s.render.threads = args.threads  # leave a core free for Remotion stills while shots render in the background
@@ -193,7 +262,7 @@ def scene(args):
     w = bpy.data.worlds.new("W")
     s.world = w
     w.use_nodes = True
-    w.node_tree.nodes["Background"].inputs[0].default_value = (0.004, 0.0035, 0.003, 1)
+    studio_world(w, args.hdri, args.hdri_strength)
 
     gem = build_gem()
     gem.scale = (0.5, 0.5, 0.5)
@@ -201,17 +270,19 @@ def scene(args):
     gem.rotation_euler = (math.radians(0), 0, math.radians(8))
 
     # The open case: a velvet bed the stone sits in (crown up, tilted toward camera), inside a dark lid.
-    bpy.ops.mesh.primitive_plane_add(size=6, location=(0, 0, -0.39))  # the culet sinks into the velvet
+    bpy.ops.mesh.primitive_plane_add(size=30, location=(0, 0, -0.39))  # wide: its edge never shows  # the culet sinks into the velvet
     bed = bpy.context.object
     bed.data.materials.append(velvet_material())
     bpy.ops.object.modifier_add(type="SUBSURF")
     tex = bpy.data.textures.new("Folds", "CLOUDS")
-    tex.noise_scale = 0.9
+    tex.noise_scale = 3.0
     tex.noise_depth = 1
     bpy.ops.object.modifier_add(type="DISPLACE")
-    bed.modifiers["Subdivision"].levels = bed.modifiers["Subdivision"].render_levels = 6
+    bed.modifiers["Subdivision"].levels = bed.modifiers["Subdivision"].render_levels = 8
     bed.modifiers["Displace"].texture = tex
-    bed.modifiers["Displace"].strength = 0.14
+    bed.modifiers["Displace"].strength = 0.07
+    for poly in bed.data.polygons:
+        poly.use_smooth = True
 
     # Light, as a jeweller lights a stone: a diamond shows what surrounds it. Bright panels seen IN the facets
     # (emission planes, visible to reflection and refraction rays) with black gaps between them for contrast:
@@ -221,20 +292,29 @@ def scene(args):
     # then shows the pavilion's black-and-white pattern instead of a flat white mirror.
     for i, a in enumerate(range(0, 360, 60)):
         r = math.radians(a)
-        panel(f"Top{i}", (1.3 * math.cos(r), 1.3 * math.sin(r), 2.8), (0, 0, 0), (1.25, 0.8), 14.0, (1, 0.97, 0.92))
+        panel(f"Top{i}", (1.3 * math.cos(r), 1.3 * math.sin(r), 2.8), (0, 0, 0), (1.25, 0.8), args.top, (1, 0.97, 0.92))
     for i, a in enumerate(range(0, 360, 30)):
         r = math.radians(a + 15)
         panel(f"Strip{i}", (2.4 * math.cos(r), 2.4 * math.sin(r), 1.1), (0, 0, 0.2), (0.45, 1.8),
               9.0 if i % 2 else 4.0, WARM if i % 3 else (1, 0.92, 0.84))
-    area("Key", (-1.0, -0.8, 2.4), (0, 0, 0), 0.5, 70, WARM)
-    area("Rim", (1.4, 2.2, 1.2), (0, 0, 0), 0.8, 80, COOL)
+    # The lamp: a soft spot whose pool fades to black, so the velvet falls off into darkness (no horizon line).
+    kd = bpy.data.lights.new("Key", "SPOT")
+    kd.energy, kd.color, kd.shadow_soft_size = args.key, (1.0, 0.80, 0.60), 0.9  # big soft source: a soft shadow
+    kd.spot_size, kd.spot_blend = math.radians(args.pool), 1.0
+    key = bpy.data.objects.new("Key", kd)
+    bpy.context.collection.objects.link(key)
+    key.location = (-1.0, -0.8, 2.4)
+    look(key, (0, 0, 0))
+    # Rim and sparks are for the stone only (glossy and refraction rays): the velvet stays in the lamp's pool.
+    rim = area("Rim", (1.4, 2.2, 1.2), (0, 0, 0), 0.8, 80, COOL)
+    rim.visible_diffuse = False
     for i, (x, y, z) in enumerate([(-0.6, -1.8, 1.9), (0.9, -1.4, 2.2), (0.2, -2.2, 1.0), (-1.2, 0.8, 1.6)]):
-        area(f"Spark{i}", (x, y, z), (0, 0, 0), 0.04, 30, (1, 1, 1), "DISK")
+        area(f"Spark{i}", (x, y, z), (0, 0, 0), 0.04, 30, (1, 1, 1), "DISK").visible_diffuse = False
 
     cam_d = bpy.data.cameras.new("Cam")
     cam_d.lens = 85
     cam_d.dof.use_dof = True
-    cam_d.dof.aperture_fstop = 2.8
+    cam_d.dof.aperture_fstop = 2.0
     cam = bpy.data.objects.new("Cam", cam_d)
     bpy.context.collection.objects.link(cam)
     s.camera = cam
@@ -243,6 +323,8 @@ def scene(args):
 
 def place_shot(shot, f, gem, cam, cam_d):
     t = f / 60.0
+    for mp in STUDIO:  # the studio turns slowly, so reflections travel across the facets
+        mp.inputs["Rotation"].default_value[2] = math.radians(30 * t)
     if shot == "hero":
         u = ease(t / 5.0)
         dist = 9.0 - 3.2 * u
@@ -283,8 +365,18 @@ def main():
     ap.add_argument("--samples", type=int, default=64)
     ap.add_argument("--bounces", type=int, default=12)
     ap.add_argument("--threads", type=int, default=4)
+    ap.add_argument("--hdri", help="Poly Haven studio; default per shot (see STUDIOS)")
+    ap.add_argument("--hdri_strength", type=float)
+    ap.add_argument("--top", type=float, default=2.0, help="overhead softbox ring strength")
+    ap.add_argument("--key", type=float, default=400.0, help="lamp (spot) power, W")
+    ap.add_argument("--pool", type=float, default=70.0, help="lamp cone, degrees: the lit pool on the velvet")
     ap.add_argument("--step", type=int, default=1, help="render every Nth frame (2 = 30 fps, blended to 60 in Remotion)")
     args = ap.parse_args(argv)
+    # Per shot: the low hero and macro angles want the warm brown studio; top-down, its strip light crosses the table
+    # facet like a scratch, so the table shot uses the small softbox studio, dimmer, for blacker contrast.
+    hdri, strength = STUDIOS.get(args.shot, STUDIOS["hero"])
+    args.hdri = args.hdri or hdri
+    args.hdri_strength = args.hdri_strength if args.hdri_strength is not None else strength
     s, gem, cam, cam_d = scene(args)
     a, b = map(int, args.frames.split("-"))
     frames = [args.still] if args.still is not None else range(a, b + 1, args.step)

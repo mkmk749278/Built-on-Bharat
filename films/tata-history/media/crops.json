@@ -1,11 +1,282 @@
 {
  "_note": "Crop boxes as fractions of the source (x0, y0, x1, y1). Stereo cards: the left frame, inside the arch. scripts/media_prep.py",
- "A001a": ["loc/A001a.jpg", [0.08, 0.135, 0.955, 0.93]],
- "A001b": ["loc/A001b.jpg", [0.095, 0.17, 0.495, 0.87]],
- "A001c": ["loc/A001c.jpg", [0.07, 0.17, 0.495, 0.87]],
- "B001a": ["loc/B001a.jpg", [0.07, 0.17, 0.485, 0.84]],
- "B001b": ["loc/B001b.jpg", [0.02, 0.02, 0.98, 0.98]],
- "B017a": ["loc/B017a.jpg", [0.09, 0.17, 0.495, 0.87]],
- "B017c": ["loc/B017c.jpg", [0.07, 0.17, 0.49, 0.87]],
- "B017d": ["loc/B017d.jpg", [0.02, 0.02, 0.98, 0.98]]
+ "A001a": [
+  "loc/A001a.jpg",
+  [
+   0.08,
+   0.135,
+   0.955,
+   0.93
+  ]
+ ],
+ "A001b": [
+  "loc/A001b.jpg",
+  [
+   0.095,
+   0.17,
+   0.495,
+   0.87
+  ]
+ ],
+ "A001c": [
+  "loc/A001c.jpg",
+  [
+   0.07,
+   0.17,
+   0.495,
+   0.87
+  ]
+ ],
+ "B001a": [
+  "loc/B001a.jpg",
+  [
+   0.07,
+   0.17,
+   0.485,
+   0.84
+  ]
+ ],
+ "B001b": [
+  "loc/B001b.jpg",
+  [
+   0.02,
+   0.02,
+   0.98,
+   0.98
+  ]
+ ],
+ "B017a": [
+  "loc/B017a.jpg",
+  [
+   0.09,
+   0.17,
+   0.495,
+   0.87
+  ]
+ ],
+ "B017c": [
+  "loc/B017c.jpg",
+  [
+   0.07,
+   0.17,
+   0.49,
+   0.87
+  ]
+ ],
+ "B017d": [
+  "loc/B017d.jpg",
+  [
+   0.02,
+   0.02,
+   0.98,
+   0.98
+  ]
+ ],
+ "B009a": [
+  "raw/wm/B009_91_taj-mahal-hotel-bombay-postcard-1908-jpg.jpg",
+  [
+   0.04,
+   0.03,
+   0.495,
+   0.86
+  ]
+ ],
+ "B009b": [
+  "raw/wm/B009_92_the-gateway-and-the-taj-hotel-next-to-it.jpg",
+  [
+   0.0,
+   0.0,
+   1.0,
+   1.0
+  ]
+ ],
+ "B003a": [
+  "raw/wm/B003_93_sir-j-n-tata-jpg.jpg",
+  [
+   0.0,
+   0.0,
+   1.0,
+   1.0
+  ]
+ ],
+ "B003b": [
+  "raw/wm/B003_94_jamshedji-nusserwanji-tata-from-andhrapa.jpg",
+  [
+   0.0,
+   0.0,
+   1.0,
+   1.0
+  ]
+ ],
+ "B002a": [
+  "raw/wm/B002_97_baines-1835-weaving-shed-png.jpg",
+  [
+   0.03,
+   0.03,
+   0.97,
+   0.9
+  ]
+ ],
+ "B004a": [
+  "raw/wm/B004_106_the-opium-clipper-lanrick-jpg.jpg",
+  [
+   0.02,
+   0.03,
+   0.98,
+   0.84
+  ]
+ ],
+ "B004b": [
+  "raw/wm/B004_107_water-witch-opium-clipper-barque-built-k.jpg",
+  [
+   0.03,
+   0.04,
+   0.97,
+   0.86
+  ]
+ ],
+ "B006a": [
+  "raw/wm/B006_11_on-the-way-to-the-proclamation-1877-jpg.jpg",
+  [
+   0.0,
+   0.0,
+   1.0,
+   1.0
+  ]
+ ],
+ "B006b": [
+  "raw/wm/B006_10_the-imperial-assemblage-at-delhi-1877-jp.jpg",
+  [
+   0.04,
+   0.06,
+   0.96,
+   0.92
+  ]
+ ],
+ "B011a": [
+  "raw/wm/B011_14_main-building-indian-institute-of-scienc.jpg",
+  [
+   0.0,
+   0.0,
+   1.0,
+   1.0
+  ]
+ ],
+ "B014a": [
+  "raw/wm/B014_23_1867-68-abyssinia-expedition-47-magdala.jpg",
+  [
+   0.0,
+   0.0,
+   1.0,
+   1.0
+  ]
+ ],
+ "B014b": [
+  "raw/wm/B014_22_the-war-in-abyssinia-magdala-from-the-da.jpg",
+  [
+   0.07,
+   0.03,
+   0.98,
+   0.97
+  ]
+ ],
+ "B015a": [
+  "raw/wm/B015_96_elphinstone-college-1905-jpeg.jpg",
+  [
+   0.0,
+   0.0,
+   1.0,
+   1.0
+  ]
+ ],
+ "B016a": [
+  "raw/wm/B016_104_western-warehouses-of-the-bund-at-shangh.jpg",
+  [
+   0.0,
+   0.0,
+   1.0,
+   1.0
+  ]
+ ],
+ "B017f": [
+  "raw/wm/B017_102_street-in-bombay-in-the-1860s-jpg.jpg",
+  [
+   0.0,
+   0.0,
+   1.0,
+   1.0
+  ]
+ ],
+ "B017g": [
+  "raw/wm/B017_103_bombay-green-c-1860s-jpg.jpg",
+  [
+   0.0,
+   0.0,
+   1.0,
+   1.0
+  ]
+ ],
+ "B018a": [
+  "raw/wm/B018_98_cotton-bales-at-the-port-in-bombay-in-th.jpg",
+  [
+   0.0,
+   0.0,
+   1.0,
+   1.0
+  ]
+ ],
+ "B018b": [
+  "raw/wm/B018_99_cotton-bales-lying-at-the-bombay-terminu.jpg",
+  [
+   0.02,
+   0.02,
+   0.98,
+   0.9
+  ]
+ ],
+ "B018c": [
+  "raw/wm/B018_101_kitlv-87171-william-johnson-cotton-weigh.jpg",
+  [
+   0.0,
+   0.0,
+   1.0,
+   1.0
+  ]
+ ],
+ "A005e": [
+  "raw/wm/A005_05_lady-dorabji-tata-esme-howard-au-centre.jpg",
+  [
+   0.0,
+   0.0,
+   1.0,
+   1.0
+  ]
+ ],
+ "A005d": [
+  "raw/wm/A005_04_dorabji-tata-jpg.jpg",
+  [
+   0.0,
+   0.0,
+   1.0,
+   1.0
+  ]
+ ],
+ "B019a": [
+  "loc/B019a.jpg",
+  [
+   0.07,
+   0.17,
+   0.49,
+   0.87
+  ]
+ ],
+ "B019b": [
+  "loc/B019b.jpg",
+  [
+   0.07,
+   0.17,
+   0.49,
+   0.87
+  ]
+ ]
 }

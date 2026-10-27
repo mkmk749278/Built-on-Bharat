@@ -418,13 +418,29 @@ So what is the fight about? Who runs Tata, and who decides that.
 This September, the Tata Sons board voted to give Chandrasekaran another term. Noel Tata voted no. The trusts say that decision doesn't count. Tata Sons says it does.
 ```
 
-**Block 16 of 17** · 920 characters · save as `vo/tata-history-b16.mp3`
+**Block 16a** · 287 characters · save as `vo/tata-history-b16a.mp3` · already recorded (cut from the block 16 take)
 
 ```
 And here's the catch. To the R.B.I., Tata Sons looks like a big finance company. And big finance companies must sell shares to the public. Tata Sons asked to be let off. The R.B.I. said no.
 
 As this film goes out, that fight is not over. Who wins? I honestly don't know. Nobody does yet.
+```
 
+**Block 16b** · 495 characters · save as `vo/tata-history-b16b.mp3` · NEW: record this one
+
+```
+And while that fight goes on, the work does not stop.
+
+At a place called Dholera, in Gujarat, Tata is building a factory to make chips. The tiny chips inside phones and cars. Ninety one thousand crore rupees.
+
+Today, India buys almost all of its chips from abroad. This would be the country's first big chip factory. The government expects it to start around twenty twenty eight.
+
+A hundred years ago, the bet was steel, and a furnace in the jungle. Now it's chips. The same bet, all over again.
+```
+
+**Block 16c** · 631 characters · save as `vo/tata-history-b16c.mp3` · already recorded (cut from the block 16 take)
+
+```
 But step back for a moment, and look at who built this.
 
 A priest's son whose family nearly lost everything. Eight thousand ordinary savers. A husband and wife who pledged their diamond. An apprentice who worked without pay. A young engineer with a postcard. A man shovelling limestone next to the furnace.

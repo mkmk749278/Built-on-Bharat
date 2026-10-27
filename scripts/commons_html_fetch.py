@@ -59,10 +59,11 @@ STD = (3840, 1920, 1280, 960, 500)
 
 
 def std_width(page):
-    """Largest standard thumbnail width not above the original's width (never an upscale)."""
+    """Smallest standard thumbnail width at or above the original's width (all of its detail; the host interpolates the
+    rest, as we would), capped at 3840. The original's own width is kept in the manifest, so we know the true detail."""
     m = re.search(r"Original file.*?\(([0-9,]+) × ([0-9,]+) pixels", page, re.S)
     w = int(m.group(1).replace(",", "")) if m else 1920
-    return next((s for s in STD if s <= w), 500), w
+    return next((s for s in reversed(STD) if s >= w), 3840), w
 
 
 def main():

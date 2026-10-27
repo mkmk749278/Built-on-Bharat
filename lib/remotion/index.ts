@@ -11,3 +11,4 @@ export * from './Type';
 export * from './Document';
 export * from './Brand';
 export * from './FrameSeq';
+export * from './QuoteCard';
