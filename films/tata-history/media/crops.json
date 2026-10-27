@@ -674,5 +674,50 @@
    1,
    0.9219
   ]
+ ],
+ "I011a": [
+  "raw/wm/I011_10_supreme-court-of-india-01-jpg.jpg",
+  [
+   0,
+   0.0485,
+   1,
+   0.9515
+  ]
+ ],
+ "I012a": [
+  "raw/wm/I012_12_tata-consultancy-services-electronic-cit.jpg",
+  [
+   0,
+   0.0663,
+   1,
+   0.9337
+  ]
+ ],
+ "I014a": [
+  "raw/wm/I014_15_a350-b777x-jpg.jpg",
+  [
+   0,
+   0.195,
+   1,
+   0.645
+  ]
+ ],
+ "G006b": [
+  "raw/wm/G006_58_port-talbot-steelworks-geograph-org-uk-3.jpg",
+  [
+   0,
+   0.1425,
+   1,
+   0.8575
+  ]
+ ],
+ "G006c": [
+  "raw/wm/G006_62_port-talbot-steelworks-luftbild-nachtans.jpg",
+  [
+   0,
+   0.0781,
+   1,
+   0.9219
+  ]
  ]
 }
