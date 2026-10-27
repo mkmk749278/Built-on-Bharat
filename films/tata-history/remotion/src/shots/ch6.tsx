@@ -184,13 +184,16 @@ export const GlassTable: React.FC<{darkAt?: number}> = ({darkAt = 1e9}) => {
 
 /** Signature 6, the silence: a night plane window, city lights far below, and a slow count of minutes with no tick.
  *  `fadeAt`: the window dies to near-black and holds ("Hold on to that silence"). ILLUSTRATION. */
-export const Porthole: React.FC<{file: string; startFrom: number; countFrom: number; countTo: number; minutes: number; fadeAt: number}> = ({
+export const Porthole: React.FC<{file: string; startFrom: number; countFrom?: number; countTo?: number; minutes?: number; fadeAt?: number; side?: React.ReactNode; x?: number; brightness?: number}> = ({
 	file,
 	startFrom,
-	countFrom,
-	countTo,
-	minutes,
-	fadeAt,
+	countFrom = 1e9,
+	countTo = 1e9 + 1,
+	minutes = 0,
+	fadeAt = 1e9,
+	side,
+	x = -80,
+	brightness = 0.62,
 }) => {
 	const frame = useCurrentFrame();
 	const {durationInFrames} = useVideoConfig();
@@ -204,9 +207,9 @@ export const Porthole: React.FC<{file: string; startFrom: number; countFrom: num
 					{/* cabin wall */}
 					<AbsoluteFill style={{background: 'radial-gradient(ellipse 50% 60% at 46% 50%, #23262B 0%, #121417 60%, #08090B 100%)'}} />
 					<AbsoluteFill style={{alignItems: 'center', justifyContent: 'center'}}>
-						<div style={{position: 'relative', left: -80, width: 560, height: 780, borderRadius: '46% / 40%', padding: 34, background: 'linear-gradient(160deg, #3A3E44 0%, #1B1D21 100%)', boxShadow: '0 30px 80px rgba(0,0,0,0.7)'}}>
+						<div style={{position: 'relative', left: x, width: 560, height: 780, borderRadius: '46% / 40%', padding: 34, background: 'linear-gradient(160deg, #3A3E44 0%, #1B1D21 100%)', boxShadow: '0 30px 80px rgba(0,0,0,0.7)'}}>
 							<div style={{position: 'relative', width: '100%', height: '100%', borderRadius: '44% / 38%', overflow: 'hidden', boxShadow: 'inset 0 0 50px 18px rgba(0,0,0,0.9)'}}>
-								<div style={{position: 'absolute', inset: 0, filter: 'brightness(0.62) saturate(0.8)'}}>
+								<div style={{position: 'absolute', inset: 0, filter: `brightness(${brightness}) saturate(0.8)`}}>
 									<Footage file={file} startFrom={startFrom} grade="modern" />
 								</div>
 								<AbsoluteFill style={{boxShadow: 'inset 0 0 60px 26px rgba(0,0,0,0.85)', borderRadius: '44% / 38%'}} />
@@ -217,6 +220,7 @@ export const Porthole: React.FC<{file: string; startFrom: number; countFrom: num
 					</AbsoluteFill>
 				</Camera>
 			</AbsoluteFill>
+			{side}
 			{/* the minutes: no tick, just the number */}
 			<div style={{position: 'absolute', right: 230, top: 470, textAlign: 'right', opacity: co}}>
 				<div style={{fontFamily: fontStacks.numbers, fontSize: 120, color: colors.ink, letterSpacing: '0.04em', lineHeight: 1}}>{n}</div>

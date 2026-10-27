@@ -89,13 +89,14 @@ export const CounterAt: React.FC<{
 	x?: number;
 	y?: number;
 	label?: string;
-}> = ({to, start, land, prefix, suffix, size = 130, x = 0, y = 0, label}) => {
+	format?: (n: number) => string;
+}> = ({to, start, land, prefix, suffix, size = 130, x = 0, y = 0, label, format}) => {
 	const frame = useCurrentFrame();
 	const o = tween(frame, start - 4, start + 10, 0, 1, ease.arrive);
 	return (
 		<AbsoluteFill style={{alignItems: 'center', justifyContent: 'center', pointerEvents: 'none', opacity: o}}>
 			<div style={{transform: `translate(${x}px, ${y}px)`}}>
-				<Counter to={to} start={start} land={land} prefix={prefix} suffix={suffix} size={size} label={label} />
+				<Counter to={to} start={start} land={land} prefix={prefix} suffix={suffix} size={size} label={label} format={format} />
 			</div>
 		</AbsoluteFill>
 	);

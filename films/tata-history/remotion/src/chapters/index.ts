@@ -6,6 +6,7 @@ import {Eight} from './Eight';
 import {Diamond} from './Diamond';
 import {Pilot} from './Pilot';
 import {Humiliation} from './Humiliation';
+import {TwentyOhEight} from './TwentyOhEight';
 
 // Chapter registry: id (composition id) → chapter title in vo.txt (must match timing.json) → component.
 export type ChapterDef = {id: string; title: string; Body: React.FC};
@@ -17,4 +18,5 @@ export const CHAPTERS: ChapterDef[] = [
 	{id: 'Ch04-Diamond', title: 'The diamond', Body: Diamond},
 	{id: 'Ch05-Pilot', title: 'The pilot', Body: Pilot},
 	{id: 'Ch06-Humiliation', title: 'The humiliation', Body: Humiliation},
+	{id: 'Ch07-TwentyOhEight', title: 'Twenty oh eight', Body: TwentyOhEight},
 ];
