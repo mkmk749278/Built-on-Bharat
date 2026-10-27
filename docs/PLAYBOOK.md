@@ -116,6 +116,12 @@ marked "(Recommended)", each with a one-line reason. Decide everything else your
 
 ## 3. Parallel sessions
 
+**Owner's rule (2026-10-27): one session does the work.** Building, sourcing and rendering all happen in one session.
+A new session is opened only for an **independent review** (audience review §7.8, fact-check, fresh-eyes picture
+review §14) and archived when it is done. *Why (owner):* "multiple sessions eat usage, and after the limit resets they
+continue where they left off and eat much more". The measurements below stay as background; the session plan at the
+end of this section no longer applies.
+
 Measured on Creator (Oct 2026):
 - Each cloud session is its own VM: about **4 vCPU, 16 GB RAM, 30 GB disk**. N sessions = N× CPU for rendering.
 - Subagents share their session's VM: they speed up research, fact-checks and contact-sheet reading, not rendering.
@@ -1372,3 +1378,8 @@ only. Both carry the generator's sparkle mark bottom-right (clean before use, §
 > this creativity things and YouTube algorithm things and curiosity things.
 
 *(Lightly punctuated for reading.) Answers he selected the same day are recorded in §17.*
+
+## G.5 Owner's message (2026-10-27)
+
+> From now don't open parallel sessions for work, open when you need independent review, because with multiple
+> sessions eating usage, and after limit reset just to continue where they left, eating much limit.

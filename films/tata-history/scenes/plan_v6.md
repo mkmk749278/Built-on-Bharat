@@ -274,11 +274,9 @@ Long chapter (4.6 min): five scenes, each its own look so it never feels like a 
 6. `Blueprints`: three dream blueprints that unroll, roll up (1904), and unroll as photos (1919).
 7. `RollCall`: frames re-used from earlier shots with matched framing (exports each shot's frame as a still).
 
-## 6. Who builds what (PLAYBOOK §3)
-- **S0 (this session):** this plan, the sourcing list, reviewing every chapter's frames, the sound mix, final assembly.
-- **S1 sourcing (one session):** `shotlist.md` v6 list → `media_manifest.csv`, contact sheets, files to Drive
-  `tata-history/media/`, depth maps.
-- **S2 scenes:** `DepthPhoto`, `CounterSet`, `QuoteCard`; Cold open, ch 3, ch 4, The Answer, Outro (the diamond line).
-- **S3 scenes:** INK additions, `Blueprints`, `TrioPins`; ch 1, ch 2, ch 5, ch 6, ch 7, ch 8.
-- Each chapter: its handoff doc (`scenes/NN_<name>.md`, §10.3) → code in `remotion/src/chapters/` → stills every 2 s
-  reviewed → 1080p preview render (inside the session) → S0 review → 4K shards.
+## 6. Order of work (one session, owner 2026-10-27)
+One session does everything, in this order, pushing every finished piece: sourcing per chapter (manifest, contact
+sheets, Drive `tata-history/media/`, depth maps) → shared pieces (`DepthPhoto`, `CounterSet`, `QuoteCard`) → chapters
+in film order: handoff doc (`scenes/NN_<name>.md`, §10.3) → code in `remotion/src/chapters/` → stills every 2 s
+reviewed → 1080p preview → 4K shards. Independent reviews (audience, fact-check, fresh-eyes picture) run in their own
+session and are archived after.
