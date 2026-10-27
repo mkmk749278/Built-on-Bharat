@@ -521,5 +521,59 @@
    1,
    0.875
   ]
+ ],
+ "G004a": [
+  "raw/wm/G004_33_ford-world-headquarters-1-american-road.jpg",
+  [
+   0.007,
+   0,
+   0.993,
+   1
+  ]
+ ],
+ "G005a": [
+  "raw/wm/G005_40_advertisement-for-tetley-s-teas-matchsaf.jpg",
+  [
+   0,
+   0.14,
+   1,
+   0.865
+  ]
+ ],
+ "G009a": [
+  "raw/wm/G009_51_corus-tata-steel-velsen-ijmuiden-jpg.jpg",
+  [
+   0,
+   0.08,
+   1,
+   0.924
+  ]
+ ],
+ "G008a": [
+  "raw/wm/G008_20_bombay-stock-exchange-2-jpg.jpg",
+  [
+   0,
+   0.12,
+   1,
+   0.54
+  ]
+ ],
+ "G006a": [
+  "raw/wm/G006_61_port-talbot-steelworks-luftbild-jpg.jpg",
+  [
+   0,
+   0.2,
+   0.8,
+   0.8
+  ]
+ ],
+ "G010a": [
+  "raw/wm/G001_04_indien-1991-jpg.jpg",
+  [
+   0,
+   0.067,
+   1,
+   0.933
+  ]
  ]
 }

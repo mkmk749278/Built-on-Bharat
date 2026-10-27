@@ -64,7 +64,7 @@ const f = {
 const UPCOTT = ['Why, I will undertake to eat', 'every pound of steel rail', 'they succeed in making.'];
 
 /** The furnace cutaway, its charges and tap on the voice's words (frames local to the shot). */
-const Furnace: React.FC<{tl: FurnaceTimeline}> = ({tl}) => {
+export const Furnace: React.FC<{tl: FurnaceTimeline}> = ({tl}) => {
 	const frame = useCurrentFrame();
 	const cam = camAt(furnaceCamKeys(tl), frame);
 	return (

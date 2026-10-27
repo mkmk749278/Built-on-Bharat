@@ -1119,6 +1119,16 @@ To port when needed (Creator path → what to change):
 ## 16. Lessons log
 *(Newest first. Each lesson: what happened, the rule, why.)*
 
+**Short VO lines and new crop ids (2026-10-27, chapter 6).**
+- *What happened:* `S('Power.')` matched an earlier sentence that starts with "Power…", so the word POWER slammed in
+  before the voice said "Quality". Separately, a new crop for the 1991 street took the id `G001a`, already the Paris
+  photo of chapter 5, and silently overwrote it on disk.
+- *The rule:* `chapterClock` now throws when a sentence or word lookup lands outside its chapter; a chapter with short
+  lines scopes every lookup from its own first sentence (`after = C.id(first line)`). Before adding a crop id, check
+  `media/crops.json` for it; new ids continue the letter series (`G010a`…), never reuse one.
+- *Why:* both failures were silent and looked fine in the chapter being built; they only show up as a wrong word on
+  the wrong beat, or a wrong picture in a finished chapter.
+
 **Outside AI review of the VO; chip lines added (2026-10-27).**
 - *What happened:* the owner shared another AI's review of the v6 VO. It reported a "rogue Hindi snippet" after "held
   the empire together" and said the September board vote was really about the R.B.I. listing. Both were wrong: the
