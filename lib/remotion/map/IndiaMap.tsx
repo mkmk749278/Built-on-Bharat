@@ -100,7 +100,7 @@ export type MapStyle = 'today' | 'faint';
 export type GroundPlate = {file: string; bounds: [number, number, number, number]; px?: number};
 export const SatGround = createContext<{plates: GroundPlate[]; grade?: string} | null>(null);
 const GROUND_GRADE = 'saturate(0.8) contrast(1.1) brightness(0.84) sepia(0.12)';
-const FAINT_GRADE = 'saturate(0.38) sepia(0.5) contrast(1.12) brightness(0.8)';
+const FAINT_GRADE = 'saturate(0.45) sepia(0.45) contrast(1.08) brightness(1.0)';
 
 export type IndiaMapProps = {
 	cam: MapCam;

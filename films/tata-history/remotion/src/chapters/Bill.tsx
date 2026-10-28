@@ -1,6 +1,6 @@
 import React from 'react';
 import {AbsoluteFill} from 'remotion';
-import {Camera, colors, Desk, Footage, Kinetic, LowerThird, Print, Stamp} from '../../../../../lib/remotion';
+import {Camera, colors, Desk, Footage, Kinetic, LowerThird, PortraitPlate, Print, Stamp} from '../../../../../lib/remotion';
 import {chapterClock, DeskPrint, Photo, Shot} from '../kit';
 import {Fading} from '../shots/ch2';
 import {OnBlack} from '../shots/ch7';
@@ -124,7 +124,7 @@ export const Bill: React.FC = () => (
 			<Stamp text="AIR INDIA · BACK WITH TATA" sub="SIXTY NINE YEARS AFTER 1953" at={30} until={f.jrd - f.returns} />
 		</Shot>
 		<Shot a={f.jrd} b={f.stop} name="jrd-held">
-			<DeskPrint file="raw/wm/F001_38_j-r-d-tata-1955-jpg.jpg" at={-40} width={520} rotate={-1} grade="archive" seed="jrd-2022" />
+			<PortraitPlate file="assets/media/jrd/jrd_late.jpg" place="assets/media/I014a.jpg" side="left" share={0.5} focus="50% 30%" grade="archive" />
 			<LowerThird name="J.R.D. TATA" role="CHAIRMAN 1938 TO 1991 · DIED 1993" at={20} until={f.stop - f.jrd} />
 		</Shot>
 		{/* AI171: no aircraft, no crash imagery; black, a candle, the facts quietly */}

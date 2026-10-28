@@ -1,6 +1,6 @@
 import React from 'react';
 import {AbsoluteFill} from 'remotion';
-import {Camera, colors, Footage, Kinetic, LowerThird, QuoteCard, Stamp} from '../../../../../lib/remotion';
+import {Camera, colors, Footage, Kinetic, LowerThird, PortraitPlate, QuoteCard, Stamp} from '../../../../../lib/remotion';
 import {YearRoller} from '../../../../../lib/remotion/kinetic';
 import {MapFlight1932} from '../dev/map/MapScenes';
 import {chapterClock, DeskPrint, Photo, Shot} from '../kit';
@@ -73,7 +73,7 @@ export const Pilot: React.FC = () => (
 		</Shot>
 		{/* J.R.D. */}
 		<Shot a={f.name} b={f.paris} name="jrd-1955">
-			<DeskPrint file="raw/wm/F001_38_j-r-d-tata-1955-jpg.jpg" at={4} width={520} rotate={-2} seed="jrd55" />
+			<PortraitPlate file={`${M}/raw/wm/F001_38_j-r-d-tata-1955-jpg.jpg`} place={`${M}/J003a.jpg`} side="right" share={0.46} focus="50% 25%" />
 			<LowerThird name="JEHANGIR RATANJI DADABHOY TATA" role="J.R.D. · 1955" at={30} until={f.paris - f.name} />
 		</Shot>
 		<Shot a={f.paris} b={f.joined} name="paris">
@@ -129,10 +129,12 @@ export const Pilot: React.FC = () => (
 			<Kinetic text="1953 · THE GOVERNMENT TAKES OVER" at={20} until={f.stay - f.y1953} display size={60} y={380} />
 		</Shot>
 		<Shot a={f.stay} b={f.salary} name="stays-on">
-			<DeskPrint file="raw/wm/F001_38_j-r-d-tata-1955-jpg.jpg" at={4} width={500} rotate={1.5} seed="jrd-stay" />
+			<PortraitPlate file={`${M}/jrd/jrd_pen.jpg`} place={`${M}/F048a.jpg`} side="left" share={0.46} focus="45% 25%" />
 		</Shot>
 		<Shot a={f.salary} b={f.y1968} name="unpaid" atmos={false}>
-			<AbsoluteFill style={{background: 'radial-gradient(ellipse 60% 50% at 50% 55%, #1A2433 0%, #0B0B0C 72%)'}} />
+			<AbsoluteFill style={{filter: 'brightness(0.38)'}}>
+				<Photo file="F046a.jpg" dur={f.y1968 - f.salary} move={[0.04, 0.16, 0.02, -0.02]} grade="aviation" depth={0.14} />
+			</AbsoluteFill>
 			<YearRoller from={1953} to={1978} start={10} land={f.y1968 - f.salary - 30} label="WITHOUT A SALARY" />
 		</Shot>
 		{/* 1968: punched cards; T.C.S. */}
@@ -144,7 +146,9 @@ export const Pilot: React.FC = () => (
 			<DeskPrint file="raw/wm/J_10_ibm-1130-dup-control-card-png.jpg" at={4} width={1300} rotate={-1} grade="modern" seed="card" />
 		</Shot>
 		<Shot a={f.called} b={f.postcard} name="tcs" atmos={false}>
-			<AbsoluteFill style={{background: 'radial-gradient(ellipse 60% 50% at 50% 50%, #1D2530 0%, #0B0B0C 72%)'}} />
+			{/* the name, over the punched card on the desk (never on a black card) */}
+			<DeskPrint file="raw/wm/J_10_ibm-1130-dup-control-card-png.jpg" at={-60} width={1500} rotate={1.5} grade="modern" seed="card2" />
+			<AbsoluteFill style={{background: 'rgba(6,6,8,0.62)'}} />
 			<Camera seed="tcs" keys={[{f: 0, scale: 1.0}, {f: f.postcard - f.called, scale: 1.12}]}>
 				<Kinetic text="TATA CONSULTANCY SERVICES" at={8} until={f.tcs - f.called - 4} display size={64} />
 				<Kinetic text="T.C.S." at={f.tcs - f.called} until={f.postcard - f.called} display size={200} color={colors.gold} />
@@ -166,7 +170,7 @@ export const Pilot: React.FC = () => (
 			<Postcard at={-200} flipAt={f.writes - f.quiet} />
 		</Shot>
 		<Shot a={f.top} b={f.telegram} name="to-jrd">
-			<DeskPrint file="raw/wm/F001_38_j-r-d-tata-1955-jpg.jpg" at={-20} width={480} rotate={1.5} seed="jrd-pc" />
+			<Photo file="jrd/jrd_late.jpg" dur={f.telegram - f.top} move={[0.04, 0.16, 0.0, 0.0, 0.02, 0.0]} grade="archive" depth={0.16} />
 		</Shot>
 		<Shot a={f.telegram} b={f.job} name="telegram" tag="ILLUSTRATION">
 			<Telegram at={10} line1At={f.come - f.telegram} line2At={f.pune - f.telegram} />
@@ -189,7 +193,7 @@ export const Pilot: React.FC = () => (
 			<Stamp text="FEBRUARY 1978" at={f.feb - f.kindly} until={f.removes - f.kindly + 40} />
 		</Shot>
 		<Shot a={f.night} b={f.end} name="favourite-child">
-			<DeskPrint file="raw/wm/F001_38_j-r-d-tata-1955-jpg.jpg" at={-60} width={500} rotate={-1} grade="archive" seed="jrd-end" />
+			<PortraitPlate file={`${M}/raw/wm/F001_38_j-r-d-tata-1955-jpg.jpg`} place={`${M}/F048a.jpg`} side="right" share={0.5} focus="50% 25%" push={[1.06, 1.16]} />
 		</Shot>
 	</AbsoluteFill>
 );
