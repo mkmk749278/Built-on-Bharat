@@ -762,6 +762,10 @@ parallel sessions from these docs, so a scene can be rebuilt without retiming.
   ambience or diegetic beats.
 
 ### 10.5 Rendering
+- **720p first, 4K last (owner, 2026-10-28):** "First render in 720, after finalising we do render everything in 4K."
+  Every review cut renders at 1280×720 (`scale` 0.6666667 on `remotion-render.yml`, CRF 18); the 4K master
+  (`scale` 2) runs only once the owner has approved the cut. *Why:* a 4K run takes hours of runner time and is wasted
+  if the cut changes; 720p shows the picture, motion and timing well enough on a phone to decide.
 - **Where (owner, 2026-10-28):** full-film and long renders (Blender shots, the 1080p review copy, the 4K master) run on
   GitHub's runners, never in the Claude session: `.github/workflows/remotion-render.yml` (Remotion) and
   `blender-render.yml` (Cycles). The session builds, renders review stills and short segments, and checks the result.
