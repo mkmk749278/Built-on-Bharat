@@ -125,7 +125,7 @@ Then:
 - **Remotion, pinned `4.0.534`** (every `remotion` and `@remotion/*` package on the same exact version), React +
   TypeScript, inline style objects or Tailwind. The owner's motion directive (PLAYBOOK Part G.1) is the standard.
 - **Review renders in 720p, 4K only once a cut is final (owner, 2026-10-28):** every review cut renders at 720p
-  (`--scale=0.6666667`); the 4K master renders only after the owner approves the cut.
+  (`scale` 2/3, written as a fraction: a rounded decimal gives a non-integer size); the 4K master renders only after the owner approves the cut.
 - **60 fps**, authored at 1920×1080 and rendered to **4K with `--scale=2`** (true 4K text and vectors). Sources must be
   sharp enough for 4K.
 - Every animation is a pure function of the frame: `useCurrentFrame()`, `interpolate()` (clamped) and `spring()`; no

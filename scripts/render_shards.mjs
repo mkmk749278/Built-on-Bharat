@@ -24,7 +24,10 @@ const opt = (name, def) => {
 	return i >= 0 ? rest[i + 1] : def;
 };
 const seconds = Number(opt('seconds', 30));
-const scale = Number(opt('scale', 1));
+// A fraction ("2/3") gives an exact scale: 1920×1080 × 2/3 = 1280×720. A rounded decimal (0.6666667) gives 720.00004
+// and Remotion refuses a non-integer frame size (run 40675765062, 2026-10-28).
+const scaleArg = String(opt('scale', 1));
+const scale = scaleArg.includes('/') ? Number(scaleArg.split('/')[0]) / Number(scaleArg.split('/')[1]) : Number(scaleArg);
 const crf = Number(opt('crf', 18));
 const concurrency = Number(opt('concurrency', 4));
 const audio = opt('audio', null);
