@@ -27,9 +27,17 @@ on:
       name:
         description: "output file name in Drive <film>/renders/"
         default: tata-history_4k60.mp4
+      join_from:
+        description: "run id: skip rendering, join that run's shards (kept 7 days)"
+        default: ""
+
+permissions:
+  contents: read
+  actions: read
 
 jobs:
   plan:
+    if: inputs.join_from == ''
     runs-on: ubuntu-24.04
     outputs:
       blocks: ${{ steps.p.outputs.blocks }}
@@ -90,13 +98,16 @@ jobs:
 
   join:
     needs: render
+    if: always() && (needs.render.result == 'success' || inputs.join_from != '')
     runs-on: ubuntu-24.04
     timeout-minutes: 120
     env:
       GDRIVE_RCLONE_TOKEN: ${{ secrets.GDRIVE_RCLONE_TOKEN }}
     steps:
-      - name: Free disk (a 4K film and its shards need ~12 GB)
-        run: sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc /opt/hostedtoolcache/CodeQL && df -h /
+      - name: Free disk (a 4K film and its shards need ~12 GB); ffmpeg for the join
+        run: |
+          sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc /opt/hostedtoolcache/CodeQL && df -h /
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg > /dev/null && ffmpeg -version | head -1
       - uses: actions/checkout@v4.2.2
       - uses: actions/setup-node@v4.1.0
         with:
@@ -109,10 +120,13 @@ jobs:
           pattern: shards_*
           path: out
           merge-multiple: true
+          run-id: ${{ inputs.join_from || github.run_id }}
+          github-token: ${{ github.token }}
       - name: Mix from Drive
         run: scripts/gdrive_pull.sh ${{ inputs.film }}/mix mix
       - name: Join, lay the sound, check
         run: |
+          mkdir -p films/${{ inputs.film }}/assets  # public/assets points here; the join bundles but needs no media
           node scripts/render_shards.mjs films/${{ inputs.film }}/remotion ${{ inputs.comp }} out --join-only \
             --audio mix/mix.wav --out "${{ inputs.name }}" 2>&1 | grep -vE "differing memory|CGroup|MemAvailable|--memory flag|lower amount of memory"
           rm -rf out
