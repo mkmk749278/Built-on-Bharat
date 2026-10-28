@@ -1,8 +1,8 @@
 import React from 'react';
-import {AbsoluteFill, useCurrentFrame} from 'remotion';
+import {AbsoluteFill, useCurrentFrame, useVideoConfig} from 'remotion';
 import {Grain, LightLeak, Vignette, colors, ease, tween} from '../../../../../../lib/remotion';
 import {InkPaper} from '../../../../../../lib/remotion/ink';
-import {IndiaMap, MapPin, MapRoute, PLACES, SatMap, camFit, mapCam, project, routeStopFrames, tiltAt} from '../../../../../../lib/remotion/map';
+import {IndiaMap, LonLat, MapPin, MapRoute, PLACES, SatMap, camFit, mapCam, project, routeStopFrames, tiltAt} from '../../../../../../lib/remotion/map';
 import {PLATES} from '../../plates';
 import {SfxCue} from '../../../../../../lib/remotion/sfx';
 
@@ -114,3 +114,48 @@ export const MapFlight1932: React.FC = () => {
 		</Base>
 	);
 };
+
+/**
+ * A descent onto real ground (plan_v7 §2.4): from all of India, down through the haze onto one place, the ground
+ * tilting away as the camera arrives. `target` is where the camera lands; `zoomTo` how close (px per map unit; a
+ * Sentinel-2 plate of 24 km is sharp at about 160); pins drop on their frames.
+ */
+export const SatPlace: React.FC<{
+	target: LonLat;
+	zoomTo: number;
+	landAt: number;
+	pins?: {at: LonLat; label: string; sub?: string; from: number; side?: 'left' | 'right'; color?: string}[];
+	fromIndia?: boolean;
+	tiltTo?: number;
+	id: string;
+}> = ({target, zoomTo, landAt, pins = [], fromIndia = true, tiltTo = 38, id}) => {
+	const frame = useCurrentFrame();
+	const {durationInFrames} = useVideoConfig();
+	const t = project(target);
+	const start = fromIndia ? {x: 60, y: -10, zoom: 1.05} : {x: t[0], y: t[1], zoom: zoomTo * 0.25};
+	const cam = mapCam(
+		[
+			{f: 0, ...start},
+			{f: Math.max(1, landAt), x: t[0], y: t[1], zoom: zoomTo},
+			{f: durationInFrames, x: t[0] + 0.25, y: t[1] + 0.12, zoom: zoomTo * 1.12},
+		],
+		frame,
+	);
+	const tilt = tiltAt(frame, [
+		{f: 0, t: fromIndia ? 0 : 20},
+		{f: Math.max(2, landAt), t: tiltTo},
+	]);
+	return (
+		<AbsoluteFill>
+			<SatMap cam={cam} tilt={tilt} plates={GROUND_PLATES} dimOutside={0.5} id={id}>
+				{pins.map((p) => (
+					<MapPin key={p.label} at={p.at} from={p.from} cam={cam} label={p.label} sub={p.sub} side={p.side ?? 'right'} color={p.color} />
+				))}
+			</SatMap>
+			<Vignette strength={0.45} />
+			<Grain opacity={0.1} id={`${id}-g`} />
+		</AbsoluteFill>
+	);
+};
+
+const GROUND_PLATES = [PLATES.india_bm, PLATES.chotanagpur, PLATES.sakchi, PLATES.mayurbhanj, PLATES.navsari, PLATES.nagpur, PLATES.bombay, PLATES.singur, PLATES.sanand, PLATES.dholera2026];
