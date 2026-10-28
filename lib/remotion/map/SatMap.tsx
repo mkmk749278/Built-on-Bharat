@@ -83,7 +83,7 @@ export const SatMap: React.FC<{
 								const base = plates[0];
 								const baseSharp = base.px ? base.px / (base.bounds[2] - base.bounds[0]) : 1;
 								const [za, zb] = p.fade ?? [baseSharp * 0.9, baseSharp * 3];
-								const o = i === 0 ? 1 : interpolate(Math.log(cam.zoom), [Math.log(za), Math.log(zb)], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+								const o = i === 0 || za <= 0 ? 1 : interpolate(Math.log(cam.zoom), [Math.log(za), Math.log(zb)], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
 								return o > 0.001 ? (
 									<image
 										key={p.file}
