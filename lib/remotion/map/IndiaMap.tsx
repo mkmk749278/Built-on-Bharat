@@ -7,6 +7,7 @@ import {colors} from '../brand';
 import {fontStacks} from '../fonts';
 import {ease, pop, tween} from '../motion';
 import {COUNTRIES, MAP_PROJ} from './indiaGeo';
+import {PlateImage} from './PlateImage';
 
 export type LonLat = [number, number];
 export type MapPoint = [number, number];
@@ -456,7 +457,7 @@ const GroundMap: React.FC<{cam: MapCam; style: MapStyle; reveal: number; id: str
 						const near = Math.abs(cam.x - (x0 + x1) / 2) < 960 / cam.zoom + (x1 - x0) && Math.abs(cam.y - (y0 + y1) / 2) < 540 / cam.zoom + (y1 - y0);
 						const o = i === 0 ? 1 : near ? interpolate(lz, [Math.log(baseSharp * 0.9), Math.log(baseSharp * 3)], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'}) : 0;
 						return o > 0.001 ? (
-							<image key={p.file} href={staticFile(p.file)} x={x0} y={y0} width={x1 - x0} height={y1 - y0} preserveAspectRatio="none" opacity={o} mask={i === 0 ? undefined : `url(#${id}-mask)`} />
+							<PlateImage key={p.file} href={staticFile(p.file)} x={x0} y={y0} width={x1 - x0} height={y1 - y0} preserveAspectRatio="none" opacity={o} mask={i === 0 ? undefined : `url(#${id}-mask)`} />
 						) : null;
 					})}
 				</g>

@@ -1,6 +1,6 @@
 import React from 'react';
-import {AbsoluteFill} from 'remotion';
-import {Camera, colors, Desk, Footage, Kinetic, LowerThird, PortraitPlate, Print, Stamp} from '../../../../../lib/remotion';
+import {AbsoluteFill, useCurrentFrame} from 'remotion';
+import {Camera, colors, Desk, ease, Footage, Kinetic, LowerThird, PortraitPlate, Print, Stamp, tween} from '../../../../../lib/remotion';
 import {chapterClock, DeskPrint, Photo, Shot} from '../kit';
 import {Fading} from '../shots/ch2';
 import {OnBlack} from '../shots/ch7';
@@ -129,21 +129,19 @@ export const Bill: React.FC = () => (
 			<LowerThird name="J.R.D. TATA" role="CHAIRMAN 1938 TO 1991 · DIED 1993" at={20} until={f.stop - f.jrd} />
 		</Shot>
 		{/* AI171: no aircraft, no crash imagery; black, a candle, the facts quietly */}
-		<Shot a={f.stop} b={f.june} name="to-black" atmos={false}>
-			<AbsoluteFill style={{background: '#050506'}} />
-		</Shot>
-		<Shot a={f.june} b={f.end} name="ai171" atmos={false}>
-			<AbsoluteFill style={{opacity: 0.85}}>
+		{/* the candle rises out of the dark through the pause (plan_v7: no flat black) */}
+		<Shot a={f.stop} b={f.end} name="ai171" atmos={false}>
+			<CandleRise until={f.june - f.stop}>
 				<Footage file={`${M}/pix/pixabay_51749.mp4`} startFrom={0} rate={0.8} grade="modern" />
-			</AbsoluteFill>
+			</CandleRise>
 			<OnBlack
 				bg="transparent"
 				x={330}
 				y={40}
 				lines={[
-					{text: 'AIR INDIA FLIGHT 171', at: 20, serif: true, size: 48, until: f.report - f.june - 30},
-					{text: 'JUNE 2025 · AHMEDABAD', at: f.ai171 - f.june + 30, size: 22, until: f.report - f.june - 30},
-					{text: '260 LIVES', at: f.killed - f.june, size: 26, until: f.report - f.june - 30},
+					{text: 'AIR INDIA FLIGHT 171', at: f.june - f.stop + 20, serif: true, size: 48, until: f.report - f.stop - 30},
+					{text: 'JUNE 2025 · AHMEDABAD', at: f.ai171 - f.stop + 30, size: 22, until: f.report - f.stop - 30},
+					{text: '260 LIVES', at: f.killed - f.stop, size: 26, until: f.report - f.stop - 30},
 				]}
 			/>
 		</Shot>
@@ -151,3 +149,8 @@ export const Bill: React.FC = () => (
 );
 
 export const billFrames = f;
+
+/** The candle footage rising from near-dark to its held level over the silence before the facts. */
+const CandleRise: React.FC<{until: number; children: React.ReactNode}> = ({until, children}) => (
+	<AbsoluteFill style={{opacity: tween(useCurrentFrame(), 0, until, 0.12, 0.85, ease.arrive)}}>{children}</AbsoluteFill>
+);

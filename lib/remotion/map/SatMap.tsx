@@ -8,6 +8,7 @@ import {colors} from '../brand';
 import {ease} from '../motion';
 import {COUNTRIES} from './indiaGeo';
 import {MapCam} from './IndiaMap';
+import {PlateImage} from './PlateImage';
 
 export type SatPlate = {
 	file: string;
@@ -30,6 +31,8 @@ const GRADE: Record<SatGrade, {filter: string; tint: string}> = {
 };
 
 const src = (f: string): string => (f.startsWith('http') ? f : staticFile(f));
+
+
 
 export const SatMap: React.FC<{
 	cam: MapCam;
@@ -85,7 +88,7 @@ export const SatMap: React.FC<{
 								const [za, zb] = p.fade ?? [baseSharp * 0.9, baseSharp * 3];
 								const o = i === 0 || za <= 0 ? 1 : interpolate(Math.log(cam.zoom), [Math.log(za), Math.log(zb)], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
 								return o > 0.001 ? (
-									<image
+									<PlateImage
 										key={p.file}
 										href={src(p.file)}
 										x={x0}

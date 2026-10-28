@@ -194,7 +194,7 @@ export const Answer: React.FC = () => (
 		{/* Dholera: the same bet, again */}
 		<Shot a={f.work} b={f.dholera} name="work-goes-on">
 			<Camera seed="sanand9" keys={[{f: 0, scale: 1.02}, {f: f.dholera - f.work, scale: 1.1}]}>
-				<ArchiveClip file={`${M}/footage/Y18_sanand_plant.mp4`} startFrom={66 * 60} clear={0.14} anchor="50% 0%" grade="modern" push={0} />
+				<ArchiveClip file={`${M}/footage/Y18_sanand_plant.mp4`} startFrom={60 * 60} clear={0.14} anchor="50% 0%" grade="modern" push={0} />
 			</Camera>
 			<Stamp text="A TATA FACTORY" sub="TODAY" at={20} until={f.dholera - f.work} />
 		</Shot>

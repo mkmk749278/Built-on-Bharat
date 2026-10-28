@@ -776,6 +776,14 @@ parallel sessions from these docs, so a scene can be rebuilt without retiming.
   goes back to Drive `<film>/renders/`. *Why:* the session's VM restarted twice in one night and killed the render
   each time; the runners are free, parallel (a 23-minute 4K film is about 20 × 1.2 h instead of a day), and the
   session spends no usage waiting.
+- **Every image must hold the frame until it has loaded (2026-10-28).** Remotion waits for `<Img>`, `<OffthreadVideo>`
+  and fonts, but **not** for an SVG `<image>`: on the v7 720p cut the Dholera satellite plate rendered as brown blur for
+  about 3 s, then popped in sharp. SVG plates go through `lib/remotion/map/PlateImage.tsx` (a `delayRender` released
+  by the element's own `onLoad`); any new SVG or canvas image does the same. *Why:* stills in the session looked right
+  (the image was cached), so only the farm render showed it.
+- **Depth relief tears small or soft photos.** `DepthPhoto` displacement gave a stair-stepped edge round J.R.D.'s face
+  on a 1200×960 frame even at depth 0.04; at depth 0 it is clean. Use `depth={0}` (push-in only) for frames under
+  about 1600 px wide or with a soft depth map, and look at the edge at full size before keeping relief.
 - Author 1920×1080 at 60 fps; render 4K with `--scale=2` (true 4K for text, SVG and DOM; images and video need 4K-worthy
   sources; WebGL canvases may need their own size handling, test it on the first 3D scene).
 - `npx remotion render <comp> out.mp4 --codec=h264 --scale=2 --concurrency=4 --crf=16 --frames=<a>-<b>`, with a

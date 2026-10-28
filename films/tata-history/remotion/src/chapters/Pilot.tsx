@@ -170,7 +170,7 @@ export const Pilot: React.FC = () => (
 			<Postcard at={-200} flipAt={f.writes - f.quiet} />
 		</Shot>
 		<Shot a={f.top} b={f.telegram} name="to-jrd">
-			<Photo file="jrd/jrd_late.jpg" dur={f.telegram - f.top} move={[0.04, 0.16, 0.0, 0.0, 0.02, 0.0]} grade="archive" depth={0.16} />
+			<Photo file="jrd/jrd_late.jpg" dur={f.telegram - f.top} move={[0.04, 0.16, 0.0, 0.0, 0.02, 0.0]} grade="archive" depth={0} />
 		</Shot>
 		<Shot a={f.telegram} b={f.job} name="telegram" tag="ILLUSTRATION">
 			<Telegram at={10} line1At={f.come - f.telegram} line2At={f.pune - f.telegram} />
