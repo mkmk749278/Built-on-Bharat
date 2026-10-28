@@ -4,7 +4,6 @@ import {colors, Desk, ease, Footage, Grain, Kinetic, LightLeak, LowerThird, Port
 import {InkPaper} from '../../../../../lib/remotion/ink';
 import {DeskCalendar} from '../../../../../lib/remotion/kinetic';
 import {camFit, IndiaMap, MapPin, MapRoute, mapCam, PLACES} from '../../../../../lib/remotion/map';
-import {ScooterFamily} from '../dev/ink/ScooterFamily';
 import {chapterClock, CounterAt, DeskPrint, Photo, Shot} from '../kit';
 import {TapeFrame} from '../shots/ch3';
 import {Fading} from '../shots/ch2';

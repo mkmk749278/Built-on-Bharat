@@ -87,6 +87,9 @@ Then:
   → an emotional landing on what it means for India today. **Channel name and logo sting only in the outro.**
 - **The look** (PLAYBOOK §6): dark matte charcoal, bronze/gold accents, blueprint grid, sparks and warm light, the world
   of the logo (`assets/brand/`, tokens in `config/brand.yaml`). Each film still gets its own art direction inside it.
+- **No void, no drawn people (2026-10-28, PLAYBOOK §6.4, §8.9–8.10).** Every frame stands on a real base: archive
+  photo, footage, satellite ground for maps, the rendered archive table for documents, a portrait plate for people.
+  One photo of a person at most twice; a hero 3D object only at its moments; no third-party clip with news UI.
 - **Every frame moves.** Nothing static, ever: slow push-ins, pans, parallax, isometric tilts. A visual change every
   3.5 s or so; no flat colour or plain gradient canvas; never a slide deck (no bullet lists, text cards, icon grids).
 - **Three layers in every frame:** a moving base (real footage, an animated archive photo, or a 3D/2.5D scene) →

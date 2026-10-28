@@ -3,7 +3,6 @@ import {AbsoluteFill} from 'remotion';
 import {colors, Desk, FrameSeq, Kinetic, LowerThird, PortraitPlate, Print, Stamp} from '../../../../../lib/remotion';
 import {DepthPhoto} from '../../../../../lib/remotion/three/DepthPhoto';
 import {Glint, YearRoller} from '../../../../../lib/remotion/kinetic';
-import {PayWindowQueue} from '../dev/ink/PayWindow';
 import {chapterClock, CounterAt, DeskPrint, Photo, Shot} from '../kit';
 import {Fading} from '../shots/ch2';
 import {CaptionCrop, TrustLedger} from '../shots/ch4';
