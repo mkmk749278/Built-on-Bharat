@@ -178,7 +178,7 @@ def main() -> None:
                 # thumb.wikimedia.org keep serving (2026-10-28). Largest standard width not above the original.
                 path = urllib.parse.urlparse(it['url']).path.replace('/wikipedia/commons/', '/wikipedia/commons/thumb/')
                 name = path.rsplit('/', 1)[1]
-                urls = [f'https://thumb.wikimedia.org{path}/{w}px-{name}' for w in (3840, 1920) if w <= it['width']] + urls
+                urls = [f'https://thumb.wikimedia.org{path}/{w}px-{name}' for w in (3840, 1920, 1280) if w <= it['width']] + urls
             for u in urls:
                 if subprocess.run(['curl', '-sSfL', '-m', '300', '-A', UA['User-Agent'], '-o', str(dest), u]).returncode == 0:
                     print('  from', u)
@@ -187,6 +187,8 @@ def main() -> None:
                 print('FAILED', it['title'])
                 continue
             print(dest, it['width'], it['height'], it['license'], it['license_version'], it['foreign_landing_url'])
+            with open(to / 'manifest.jsonl', 'a') as mf:  # for media_manifest.csv rows (licence and credit per file)
+                mf.write(json.dumps({'file': dest.name, **{k: it.get(k) for k in ('title', 'creator', 'license', 'license_version', 'foreign_landing_url', 'url', 'width', 'height', 'attribution')}}) + '\n')
             print('  credit:', it['attribution'])
             time.sleep(3)
         return

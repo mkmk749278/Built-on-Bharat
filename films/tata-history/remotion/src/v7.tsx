@@ -2,6 +2,8 @@ import React from 'react';
 import {AbsoluteFill, interpolate, useCurrentFrame, useVideoConfig} from 'remotion';
 import {ArchiveTable, CamKey, ease, Footage, Grade, TableMeta} from '../../../../lib/remotion';
 import top from './tables/top.json';
+import {SatGround} from '../../../../lib/remotion/map';
+import {PLATES} from './plates';
 
 // v7 kit (scenes/plan_v7.md): the archive table every document lies on, and archive footage cropped clear of the
 // captions some official films burn into their lower frame.
@@ -39,3 +41,7 @@ export const ArchiveClip: React.FC<{file: string; startFrom?: number; clear?: nu
 		</AbsoluteFill>
 	);
 };
+
+/** Real ground under every map in the film: the all-India plate first, then the Sentinel-2 close-ups. */
+const GROUND = [PLATES.india_bm, ...Object.entries(PLATES).filter(([k]) => k !== 'india_bm' && k !== 'dholera2023').map(([, p]) => p)];
+export const FilmGround: React.FC<{children: React.ReactNode}> = ({children}) => <SatGround.Provider value={{plates: GROUND}}>{children}</SatGround.Provider>;

@@ -1,9 +1,12 @@
 import React from 'react';
 import {AbsoluteFill, useCurrentFrame} from 'remotion';
-import {colors, Desk, Kinetic, LowerThird, Print, QuoteCard, Stamp, tween} from '../../../../../lib/remotion';
+import {Img, staticFile} from 'remotion';
+import {colors, Desk, Footage, Kinetic, LowerThird, PortraitPlate, Print, QuoteCard, Stamp, TableDoc, tween} from '../../../../../lib/remotion';
+import {DepthPhoto} from '../../../../../lib/remotion/three/DepthPhoto';
+import {Table} from '../v7';
 import {PLACES} from '../../../../../lib/remotion/map';
 import {chapterClock, CounterAt, DeskPrint, Photo, Shot} from '../kit';
-import {CottonCrash, DebtLedger, FeeEnvelope, MillGate, PlaceMap, Sums, TrioPins} from '../shots/ch1';
+import {CottonCrash, DebtLedger, PlaceMap, Sums, TrioPins} from '../shots/ch1';
 
 // Chapter 1, The dreamer (plan_v6 §4 ch 1): Navsari → the fall and the restart → cotton out, cloth back → Empress
 // Mills and the workers → the Taj myth and the real hotel → three dreams, and steel the hardest. 4 min 36 s.
@@ -46,6 +49,7 @@ const f = {
 	y1868: S('And in eighteen sixty eight'),
 	rupees: W('Twenty one thousand rupees', 'rupees'),
 	ever: S("If you've ever failed"),
+	begins: S('It begins with a priest'),
 	lookB: S('Now look at Bombay in those years'),
 	out: S('Out.'),
 	sails: S('Indian cotton sails to the mills'),
@@ -59,6 +63,8 @@ const f = {
 	names: S('So he names it Empress Mills'),
 	strange: S('And then he does something strange'),
 	hurt: S('Later, he pays them'),
+	firstJob: S('Think about your own first job'),
+	pension: S('Did anyone promise you a pension'),
 	kind: S('Was it pure kindness'),
 	healthy: S('But healthy workers'),
 	famous: S("Now, you've probably heard"),
@@ -99,7 +105,7 @@ export const Dreamer: React.FC = () => (
 		</Shot>
 		{/* Jamsetji Tata (real photograph) */}
 		<Shot a={f.know} b={f.gen} name="jamsetji">
-			<DeskPrint file="B003a.jpg" at={4} width={600} seed="jnt" />
+			<PortraitPlate file="assets/media/B003a.jpg" place="assets/media/B017f.jpg" side="right" share={0.5} focus="50% 20%" />
 			<LowerThird name="JAMSETJI TATA" role="1839 – 1904" at={f.jamsetji - f.know + 8} until={f.gen - f.know} />
 		</Shot>
 		{/* generations of priests → a small shop in Bombay → business */}
@@ -121,8 +127,8 @@ export const Dreamer: React.FC = () => (
 		<Shot a={f.what} b={f.youknow} name="sums" tag="ILLUSTRATION">
 			<Sums landAt={f.mind - f.what} />
 		</Shot>
-		<Shot a={f.youknow} b={f.fourteen} name="fees" tag="ILLUSTRATION">
-			<FeeEnvelope giveAt={f.fees - f.youknow} />
+		<Shot a={f.youknow} b={f.fourteen} name="fees">
+			<DepthPhoto file="assets/media/cm/cm_parayar-school-children-jpg.jpg" keys={[{f: 0, dolly: 0.02, x: -0.01}, {f: f.fourteen - f.youknow, dolly: 0.18, x: 0.01}]} depth={0.18} grade="modern" />
 		</Shot>
 		{/* Elphinstone College; the trading business; Shanghai */}
 		<Shot a={f.fourteen} b={f.soon} name="elphinstone">
@@ -173,8 +179,11 @@ export const Dreamer: React.FC = () => (
 			<Kinetic text="1868" at={6} until={f.rupees - f.y1868 - 44} display size={130} x={300} />
 			<CounterAt to={21000} start={f.rupees - f.y1868 - 40} land={f.rupees - f.y1868} prefix="₹" size={150} x={300} />
 		</Shot>
-		<Shot a={f.ever} b={f.lookB} name="jamsetji-2" leak={colors.ember}>
-			<DeskPrint file="B003a.jpg" at={-30} width={560} rotate={1.5} grade="furnace" seed="jnt2" />
+		<Shot a={f.ever} b={f.begins} name="ordinary-faces" leak={colors.ember}>
+			<DepthPhoto file="assets/media/loc7/L03c.jpg" keys={[{f: 0, dolly: 0.12, y: 0.05}, {f: f.begins - f.ever, dolly: 0.3, y: 0.07}]} depth={0.22} grade="archive" />
+		</Shot>
+		<Shot a={f.begins} b={f.lookB} name="priests-son" leak={colors.ember}>
+			<PortraitPlate file="assets/media/B003b.jpg" place="assets/media/B019b.jpg" side="left" share={0.46} focus="50% 30%" grade="furnace" />
 		</Shot>
 		{/* ships and cotton: money flows out */}
 		<Shot a={f.lookB} b={f.out} name="harbour">
@@ -211,8 +220,20 @@ export const Dreamer: React.FC = () => (
 			<Kinetic text="EMPRESS MILLS" at={f.names - f.opens} until={f.strange - f.opens} display size={96} color={colors.gold} />
 		</Shot>
 		{/* a pension fund; healthy workers */}
-		<Shot a={f.strange} b={f.kind} name="mill-gate" tag="ILLUSTRATION">
-			<MillGate handAt={f.hurt - f.strange} />
+		<Shot a={f.strange} b={f.firstJob} name="workers-1895">
+			<Table seed="w1895" keys={[{f: 0, scale: 1.7, x: 40, y: 20}, {f: f.firstJob - f.strange, scale: 1.95, x: 60, y: 30}]}>
+				<TableDoc w={20} h={18.4} x={0} y={0} rot={-2.5} at={4} paper="#EFE7D6" seed="w95">
+					<Img src={staticFile('assets/media/loc7/L04.jpg')} style={{position: 'absolute', inset: 18, width: 'calc(100% - 36px)', height: 'calc(100% - 36px)', objectFit: 'cover', filter: 'sepia(0.45) contrast(1.08) brightness(0.95)'}} />
+				</TableDoc>
+			</Table>
+			<Stamp text="INDIAN WORKERS · 1890s" sub="A RAILWAY WORKSHOP" at={20} until={f.firstJob - f.strange} />
+		</Shot>
+		<Shot a={f.firstJob} b={f.pension} name="first-job">
+			<Footage file="assets/media/pix/pixabay_262484.mp4" startFrom={60} grade="modern" />
+			<Stamp text="A TEXTILE MILL · TODAY" at={20} until={f.pension - f.firstJob} />
+		</Shot>
+		<Shot a={f.pension} b={f.kind} name="pension">
+			<Footage file="assets/media/pix/pixabay_265356.mp4" startFrom={120} grade="modern" />
 		</Shot>
 		<Shot a={f.kind} b={f.famous} name="quote-1895">
 			<QuoteCard
@@ -232,7 +253,7 @@ export const Dreamer: React.FC = () => (
 			<Kinetic text="NO RECORD" at={f.historians - f.famous + 50} until={f.record - f.famous} display size={84} />
 		</Shot>
 		<Shot a={f.record} b={f.designed} name="taj-record">
-			<DeskPrint file="raw/wm/B009_91_taj-mahal-hotel-bombay-postcard-1908-jpg.jpg" at={-40} width={1500} rotate={0.5} seed="tajcard2" />
+			<DeskPrint file="B009b.jpg" at={-10} width={1250} rotate={-1} seed="tajcard2" />
 			<Stamp text="BOMBAY · DECEMBER 1903" sub="THE TAJ MAHAL HOTEL" at={f.opens1903 - f.record} until={f.designed - f.record} />
 		</Shot>
 		{/* the same building today (the 1903 wing): the architect's dome, then the waterfront crowd */}

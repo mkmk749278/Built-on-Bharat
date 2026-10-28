@@ -2,6 +2,7 @@ import React from 'react';
 import {AbsoluteFill, Audio, staticFile} from 'remotion';
 import {LogoBug, loadBrandFonts} from '../../../../lib/remotion';
 import {T, VO_FILE} from './timing';
+import {FilmGround} from './v7';
 
 loadBrandFonts();
 
@@ -14,7 +15,9 @@ export const chapterComp = (title: string, Body: React.FC): React.FC => {
 		const {start, end} = T.chapter(title);
 		return (
 			<AbsoluteFill style={{background: '#0D0E11'}}>
-				<Body />
+				<FilmGround>
+					<Body />
+				</FilmGround>
 				<LogoBug />
 				<Audio src={staticFile(VO_FILE)} startFrom={start} endAt={end} />
 			</AbsoluteFill>
