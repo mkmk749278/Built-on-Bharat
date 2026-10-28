@@ -1,0 +1,31 @@
+{
+  "_doc": "Score placement for scripts/score_mix.py (PLAYBOOK §12). Times are film seconds or anchors: 's:<id>' is a VO sentence start, 'e:<id>' its end, 'w:<id>:<word>' a word's start, each optionally '+/-seconds'. offset = where in the track to start. Gaps between slots are silence (score_plan.md).",
+  "slots": [
+    {"track": "Long Note Three", "from": 0, "to": "s:24", "fade_in": 2.5, "fade_out": 1.2, "why": "held breath under the bank; falls away at 'How is that possible?'"},
+    {"track": "Long Note Three", "from": "e:24+1.2", "to": "s:32", "offset": 70, "fade_in": 1.5, "fade_out": 2.0, "why": "the map, the queue, Dorabji, today, the ledger"},
+    {"track": "Dhaka", "from": "s:32", "to": "s:58", "fade_in": 2.0, "fade_out": 1.5, "gain_db": -1, "why": "a small town in Gujarat: the only overtly Indian colour of the opening"},
+    {"track": "Redletter", "from": "s:58", "to": "s:74", "fade_in": 1.0, "fade_out": 1.5, "why": "1864: almost everything falls apart"},
+    {"track": "Majestic Hills", "from": "s:74", "to": "s:106", "fade_in": 1.5, "fade_out": 2.0, "why": "starts again; cotton; Empress Mills"},
+    {"track": "Procession of the King", "from": "s:106", "to": "s:125+1.5", "fade_in": 2.0, "fade_out": 2.0, "why": "the Taj and three dreams; fades under 'every place he tries is wrong'"},
+    {"track": "Drums of the Deep", "from": "s:126", "to": "s:135", "fade_in": 1.0, "fade_out": 0.4, "why": "the search; stops dead on 'Jamsetji Tata dies'"},
+    {"track": "Lost Time", "from": "e:135+1.0", "to": "s:157", "fade_in": 2.5, "fade_out": 2.5, "why": "he never sees those hills"},
+    {"track": "Crusade - Heavy Industry", "from": "s:157", "to": "s:199", "fade_in": 2.0, "fade_out": 0.3, "why": "the queue, the furnace, first steel; hard out on 'It isn't.'"},
+    {"track": "Heavy Heart", "from": "e:199+1.5", "to": "s:224", "fade_in": 2.0, "fade_out": 2.0, "why": "the diamond: sad and hopeful"},
+    {"track": "Lost Time", "from": "s:224", "to": "s:244", "offset": 40, "fade_in": 2.0, "fade_out": 2.0, "why": "the deaths and the will"},
+    {"track": "Americana", "from": "s:244", "to": "s:294", "fade_in": 2.0, "fade_out": 2.0, "why": "the pilot, 1932 to the postcard"},
+    {"track": "End of the Era", "from": "s:294", "to": "s:300", "fade_in": 1.5, "fade_out": 1.5, "why": "1978: the favourite child taken away"},
+    {"track": "The Escalation", "from": "s:300", "to": "s:327", "fade_in": 2.0, "fade_out": 1.5, "why": "Ratan Tata, the Indica, Detroit"},
+    {"track": "The Escalation", "from": "s:332", "to": "e:344+0.5", "offset": 175, "fade_in": 1.5, "fade_out": 2.0, "why": "after the silent flight: the build returns for Corus"},
+    {"track": "Tempting Secrets", "from": "s:345", "to": "s:370+2.0", "fade_in": 1.0, "fade_out": 2.5, "why": "2008: the Nano, J.L.R., Singur; dies as the November page darkens"},
+    {"track": "Wounded", "from": "s:373", "to": "s:391", "fade_in": 3.0, "fade_out": 1.0, "why": "26/11: the staff; silence at 'At least thirty one people die'"},
+    {"track": "Heart of Nowhere", "from": "s:393", "to": "e:394+0.5", "fade_in": 2.5, "fade_out": 2.0, "why": "the Taj opens again"},
+    {"track": "On the Passing of Time", "from": "s:395", "to": "s:419", "fade_in": 1.5, "fade_out": 3.0, "why": "the bill: solo piano; gone before AI171"},
+    {"track": "Lost Frontier", "from": "e:428+1.5", "to": "s:472", "fade_in": 3.0, "fade_out": 2.0, "why": "after the silence of the answer: the machine, the funeral, the fight, Dholera"},
+    {"track": "Promises to Keep", "from": "s:472", "to": "e:489+2.5", "fade_in": 2.0, "fade_out": 2.5, "why": "the roll call and the question; the last chord rings under 'Tell me in the comments'"},
+    {"track": "Dhaka", "from": "s:492", "to": "end", "offset": 30, "fade_in": 1.0, "fade_out": 1.5, "gain_db": -4, "why": "the next film: a little Indian colour under the tease"}
+  ],
+  "rooms": [
+    {"what": "cabin", "from": "s:327", "to": "s:332", "gain_db": -36, "why": "signature 6: no score, only the drone of the plane"},
+    {"what": "room", "from": "s:420", "to": "e:424+2.0", "gain_db": -44, "why": "AI171: no music at all, a faint room"}
+  ]
+}

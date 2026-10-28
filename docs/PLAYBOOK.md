@@ -1119,6 +1119,19 @@ To port when needed (Creator path → what to change):
 ## 16. Lessons log
 *(Newest first. Each lesson: what happened, the rule, why.)*
 
+**The first full mix and render pipeline (2026-10-28, film 1).**
+- *What happened:* the score was placed as slots on VO anchors (`sound/score.json`: sentence and word anchors, not
+  seconds, so a re-timed VO moves the music with it), SFX as cues on the same anchors (`sound/sfx.json`), and
+  `scripts/score_mix.py` builds the stems and the master. At −20 dBFS RMS per slot the music sat only 5–6 dB under the
+  voice in speech: too loud. At −23 dBFS RMS and an 11 dB duck it sits 9–10 dB under the voice and swells in the pauses.
+  The master lands at −14.2 LUFS, −1.2 dBTP with one static gain, a −1.5 dBFS limiter and one corrective pass.
+- *The rule:* measure stem balance (voice vs bed RMS over speech windows) before the master; silences the plan calls
+  for are gaps in `score.json`, with a faint room tone (cabin, room) so they are never digital zero.
+  Long renders use `scripts/render_shards.mjs` (bundle once, 30 s shards, resumable, length check, audio laid under).
+  Measured: ~270 ms a frame at 1080p for the full film on the 4-core container (about 6 h for 23 min at 60 fps).
+- *Why:* the voice leads (§12); a mix that is only right "by ear" can't be heard from a cloud session, so it is right
+  by numbers first and by the review render second.
+
 **Short VO lines and new crop ids (2026-10-27, chapter 6).**
 - *What happened:* `S('Power.')` matched an earlier sentence that starts with "Power…", so the word POWER slammed in
   before the voice said "Quality". Separately, a new crop for the 1991 street took the id `G001a`, already the Paris
