@@ -2,7 +2,8 @@ import React from 'react';
 import {AbsoluteFill, useCurrentFrame} from 'remotion';
 import {Grain, LightLeak, Vignette, colors, ease, tween} from '../../../../../../lib/remotion';
 import {InkPaper} from '../../../../../../lib/remotion/ink';
-import {IndiaMap, MapPin, MapRoute, PLACES, camFit, mapCam, routeStopFrames} from '../../../../../../lib/remotion/map';
+import {IndiaMap, MapPin, MapRoute, PLACES, SatMap, camFit, mapCam, project, routeStopFrames, tiltAt} from '../../../../../../lib/remotion/map';
+import {PLATES} from '../../plates';
 import {SfxCue} from '../../../../../../lib/remotion/sfx';
 
 // Map systems for the film (PLAYBOOK §6.6, §8.5). Frames are local to the shot; chapters place the shot on the VO.
@@ -30,29 +31,48 @@ export const coldOpenMapCues = (): SfxCue[] => {
 	];
 };
 
-export const MapBombayJamshedpur: React.FC = () => {
+/**
+ * Real ground (plan_v7 §2.4): over Bombay, up and out until India holds both cities while the line runs 1,400 km
+ * east, then down through the haze onto Jamshedpur: the plateau's red earth, the two rivers, the works.
+ * `dur` = the shot's length; the descent lands as the voice reaches "jungle".
+ */
+export const MapBombayJamshedpur: React.FC<{dur?: number}> = ({dur = 304}) => {
 	const frame = useCurrentFrame();
-	// open close on Bombay, pull out with the line until all of India holds the two cities
-	const bom = camFit([PLACES.bombay], 0);
-	const all = {x: 80, y: 0, zoom: 0.92};
+	const bom = project(PLACES.bombay);
+	const works = project([86.195, 22.79]);
+	const all = {x: 60, y: -10, zoom: 1.05};
+	const land = dur - 60;
 	const cam = mapCam(
 		[
-			{f: 0, x: bom.x + 60, y: bom.y - 20, zoom: 2.6},
-			{f: 40, x: bom.x + 90, y: bom.y - 30, zoom: 2.3},
-			{f: 190, ...all},
-			{f: 300, x: all.x + 6, y: all.y - 8, zoom: all.zoom * 1.04},
+			{f: 0, x: bom[0] + 4, y: bom[1] - 2, zoom: 9},
+			{f: 24, x: bom[0] + 8, y: bom[1] - 4, zoom: 7},
+			{f: 130, ...all},
+			{f: 165, x: all.x + 10, y: all.y - 4, zoom: all.zoom * 1.06},
+			{f: land, x: works[0], y: works[1], zoom: 140},
+			{f: dur, x: works[0] + 0.3, y: works[1] + 0.15, zoom: 165},
 		],
 		frame,
 	);
+	const tilt = tiltAt(frame, [
+		{f: 0, t: 32},
+		{f: 120, t: 4},
+		{f: 170, t: 6},
+		{f: land, t: 42},
+	]);
 	const [, arrive] = routeStopFrames([PLACES.bombay, PLACES.jamshedpur], COLD_MAP.routeFrom, COLD_MAP.routeDur);
+	const route = 1 - tween(frame, land - 50, land - 10, 0, 1, ease.leave);
 	return (
-		<Base>
-			<IndiaMap cam={cam} reveal={tween(frame, 0, 40, 0.2, 1, ease.arrive)} id="m1">
-				<MapRoute stops={[PLACES.bombay, PLACES.jamshedpur]} from={COLD_MAP.routeFrom} dur={COLD_MAP.routeDur} cam={cam} head="train" label="1,400+ KM" labelAt={COLD_MAP.labelAt} />
-				<MapPin at={PLACES.bombay} from={COLD_MAP.pinA} cam={cam} label="BOMBAY" side="left" />
-				<MapPin at={PLACES.jamshedpur} from={arrive} cam={cam} label="JAMSHEDPUR" sub="SAKCHI" side="right" />
-			</IndiaMap>
-		</Base>
+		<AbsoluteFill>
+			<SatMap cam={cam} tilt={tilt} plates={[PLATES.india_bm, PLATES.chotanagpur, PLATES.sakchi]} dimOutside={0.5} id="m1">
+				<g opacity={route}>
+					<MapRoute stops={[PLACES.bombay, PLACES.jamshedpur]} from={COLD_MAP.routeFrom} dur={COLD_MAP.routeDur} cam={cam} head="train" label="1,400+ KM" labelAt={COLD_MAP.labelAt} />
+					<MapPin at={PLACES.bombay} from={COLD_MAP.pinA} cam={cam} label="BOMBAY" side="left" until={land - 10} />
+				</g>
+				<MapPin at={[86.195, 22.79]} from={arrive} cam={cam} label="JAMSHEDPUR" sub="TATA STEEL" side="right" />
+			</SatMap>
+			<Vignette strength={0.45} />
+			<Grain opacity={0.1} id="map-g" />
+		</AbsoluteFill>
 	);
 };
 

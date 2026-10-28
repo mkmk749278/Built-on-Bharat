@@ -1,9 +1,8 @@
 import React from 'react';
-import {AbsoluteFill, Sequence, useCurrentFrame, useVideoConfig} from 'remotion';
+import {AbsoluteFill, Img, Sequence, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 import {
 	Atmosphere,
 	colors,
-	Desk,
 	ease,
 	Footage,
 	FrameSeq,
@@ -14,8 +13,9 @@ import {
 	Letterbox,
 	LowerThird,
 	pop,
-	Print,
+	PortraitPlate,
 	Stamp,
+	TableDoc,
 	tween,
 	Vignette,
 } from '../../../../../lib/remotion';
@@ -23,12 +23,11 @@ import {GemCompare, Glint} from '../../../../../lib/remotion/kinetic';
 import {YearRoller} from '../../../../../lib/remotion/kinetic';
 import {DepthPhoto} from '../../../../../lib/remotion/three/DepthPhoto';
 import {MapBombayJamshedpur} from '../dev/map/MapScenes';
-import {PayWindowQueue} from '../dev/ink/PayWindow';
-import {PawnCounter} from '../shots/PawnCounter';
-import {RichLedger} from '../shots/RichLedger';
+import {RichList} from '../shots/RichList';
+import {ArchiveClip, Table} from '../v7';
 import {Filmstrip} from '../shots/Filmstrip';
 import {T} from '../timing';
-import {CounterAt, DeskPrint} from '../kit';
+import {CounterAt} from '../kit';
 
 // Cold open (plan_v6 §4; handoff scenes/00_cold_open.md). Every cut and landing is a VO frame from T.
 const CH = T.chapter('Cold open');
@@ -63,6 +62,7 @@ const f = {
 	because: S('Because more than fourteen hundred'),
 	kms: W('Because more than fourteen hundred', 'kilometres'),
 	town: W('Because more than fourteen hundred', 'steel town'),
+	thousands: W('Because more than fourteen hundred', 'thousands'),
 	company: S('And the company that pays them'),
 	never: S('You may never have heard his name'),
 	sir: S('Sir Dorabji Tata'),
@@ -186,30 +186,37 @@ export const ColdOpen: React.FC = () => {
 				<HonestyTag text="RECONSTRUCTION" />
 			</Shot>
 
-			{/* 6 · every Indian family knows this counter too (INK) */}
-			<Shot a={f.ask} b={f.why} name="pawn" fadeIn={10}>
-				<PawnCounter placeAt={f.last - f.ask} dimAt={f.nothing - f.ask} />
-				<HonestyTag text="ILLUSTRATION" />
+			{/* 6 · the house gold (plan_v7): a real hand, real bangles; the light drops on "nothing else left" */}
+			<Shot a={f.ask} b={f.last} name="house-gold" fadeIn={10}>
+				<DepthPhoto file={`${M}/cm/cm_4-bangles-jpg.jpg`} keys={[{f: 0, dolly: 0.02, x: 0.012}, {f: f.last - f.ask, dolly: 0.17, x: -0.01}]} depth={0.16} grade="furnace" />
+			</Shot>
+			<Shot a={f.last} b={f.why} name="last-thing">
+				{/* a cut-in on the same bangles: tighter, the light going */}
+				<DepthPhoto file={`${M}/cm/cm_4-bangles-jpg.jpg`} keys={[{f: 0, dolly: 0.24, x: 0.085, y: -0.01}, {f: f.why - f.last, dolly: 0.32, x: 0.08, y: 0.0}]} depth={0.16} grade="furnace" />
+				<AbsoluteFill style={{background: '#050403', opacity: tween(frame - f.last, f.nothing - f.last, f.why - f.last, 0, 0.55, ease.leave)}} />
 			</Shot>
 
-			{/* 7 · back to the stone */}
-			<Shot a={f.why} b={f.because} name="diamond-macro-1">
-				<FrameSeq dir={`${DIAMOND}/macro`} prefix="macro_" last={238} />
+			{/* 7 · so why: the man and his wife, their own photograph (BnF, public domain) */}
+			<Shot a={f.why} b={f.because} name="the-couple-co">
+				<DepthPhoto file={`${M}/A005e.jpg`} keys={[{f: 0, dolly: 0.2, x: 0.07}, {f: f.because - f.why, dolly: 0.22, x: -0.07}]} depth={0.16} grade="archive" />
 			</Shot>
 
 			{/* 8 · 1,400 km away: the map, then the queue at the pay window */}
-			<Shot a={f.because} b={f.town} name="map" atmos={false}>
-				<MapBombayJamshedpur />
+			<Shot a={f.because} b={f.thousands} name="map" atmos={false}>
+				<MapBombayJamshedpur dur={f.thousands - f.because} />
 			</Shot>
-			<Shot a={f.town} b={f.never} name="pay-window" leak={colors.ember}>
-				<PayWindowQueue />
-				<HonestyTag text="ILLUSTRATION" />
+			{/* the workers and the works: Tata Steel's own archive film, cropped clear of its captions */}
+			<Shot a={f.thousands} b={f.company} name="worker" leak={colors.ember}>
+				<ArchiveClip file={`${M}/footage/Y04_jamshedpur_100.mp4`} startFrom={54 * 60} rate={0.7} clear={0.26} anchor="50% 8%" grade="furnace" />
+				<Stamp text="JAMSHEDPUR" sub="FROM A TATA STEEL FILM" at={10} until={f.company - f.thousands} />
+			</Shot>
+			<Shot a={f.company} b={f.never} name="works" leak={colors.ember}>
+				<ArchiveClip file={`${M}/footage/Y04_jamshedpur_100.mp4`} startFrom={44 * 60} rate={0.8} clear={0.26} anchor="50% 0%" grade="furnace" />
 			</Shot>
 
 			{/* 9 · Sir Dorabji Tata; Tata Steel */}
 			<Shot a={f.never} b={f.look} name="dorabji">
-				<Desk />
-				<Print file={`${M}/raw/wm/A005_04_dorabji-tata-jpg.jpg`} at={4} width={560} rotate={-2.5} seed="dorabji" />
+				<PortraitPlate file={`${M}/A005d.jpg`} place={`${M}/A001a.jpg`} side="right" share={0.52} focus="50% 22%" />
 				<LowerThird name="SIR DORABJI TATA" role="1859 – 1932" at={f.sir - f.never + 10} until={f.steel - f.never - 4} />
 				<Stamp text="TATA STEEL" sub="JAMSHEDPUR" at={f.steel - f.never} until={f.look - f.never} />
 			</Shot>
@@ -224,24 +231,36 @@ export const ColdOpen: React.FC = () => {
 
 			{/* 11 · and yet: no Tata on any rich list */}
 			<Shot a={f.yet} b={f.answer} name="ledger">
-				<RichLedger gapAt={W('And yet you won', 'single') - f.yet} holdFrom={f.how - f.yet} />
+				<RichList dur={f.answer - f.yet} holdFrom={f.how - f.yet} />
 				<HonestyTag text="ILLUSTRATION" />
 			</Shot>
 
-			{/* 12 · the answer is in this bank */}
-			<Shot a={f.answer} b={f.what} name="counter-3">
-				<FrameSeq dir={`${COUNTER}/c3`} prefix="c3_" last={122} />
-				<HonestyTag text="RECONSTRUCTION" />
-			</Shot>
-			<Shot a={f.what} b={f.y2026} name="diamond-table">
-				<FrameSeq dir={`${DIAMOND}/table`} prefix="table_" last={298} rate={0.7} />
-				<Sequence from={f.choice - f.what}>
-					<AbsoluteFill style={{background: 'rgba(11,11,12,0.55)'}} />
+			{/* 12 · the answer is in this bank (plan_v7: on the archive table, not the counter again): the Imperial Bank's
+			    seal; her photograph; his; the years roll to 1932 */}
+			<Shot a={f.answer} b={f.y2026} name="the-choice">
+				<Table
+					seed="choice"
+					keys={[
+						{f: 0, scale: 1.9, x: -230, y: -40},
+						{f: f.what - f.answer, scale: 1.55, x: 60, y: 0},
+						{f: f.choice - f.answer, scale: 1.3, x: 40, y: 10},
+						{f: f.y2026 - f.answer, scale: 1.36, x: 30, y: 10},
+					]}
+				>
+					<TableDoc w={11} h={10.7} x={9} y={-1} rot={5} at={-30} paper="#E6DABE" seed="seal">
+						<Img src={staticFile(`${M}/raw/wm/F_06_sbi-imperial-bank-seal-jpg.jpg`)} style={{width: '100%', height: '100%', objectFit: 'cover', mixBlendMode: 'multiply'}} />
+					</TableDoc>
+					<TableDoc w={9.5} h={19.5} x={-5} y={0} rot={-4} at={f.what - f.answer} paper="#F1EADB" seed="meh">
+						<Img src={staticFile(`${M}/E003a.jpg`)} style={{position: 'absolute', inset: 14, width: 'calc(100% - 28px)', height: 'calc(100% - 28px)', objectFit: 'cover', filter: 'sepia(0.3) contrast(1.06)'}} />
+					</TableDoc>
+					<TableDoc w={13} h={15.2} x={-17} y={1} rot={3} at={f.choice - f.answer} paper="#F1EADB" seed="dor2">
+						<Img src={staticFile(`${M}/A005d.jpg`)} style={{position: 'absolute', inset: 16, width: 'calc(100% - 32px)', height: 'calc(100% - 32px)', objectFit: 'cover', filter: 'sepia(0.3) contrast(1.06)'}} />
+					</TableDoc>
+				</Table>
+				<Sequence from={f.choice - f.answer}>
 					<YearRoller from={1924} to={1932} start={8} land={f.eight - f.choice} />
 				</Sequence>
-				<HonestyTag text="RECONSTRUCTION" />
 			</Shot>
-
 			{/* 13 · twenty twenty six: Bombay House, the fight */}
 			<Shot a={f.y2026} b={f.but} name="bombay-house">
 				<DepthPhoto file={`${M}/raw/wm/A005_02_bombay-house-mast-jpg.jpg`} keys={[{f: 0, dolly: 0.04}, {f: f.but - f.y2026, dolly: 0.16}]} depth={0.14} grade="steel" />
@@ -251,28 +270,16 @@ export const ColdOpen: React.FC = () => {
 			</Shot>
 
 			{/* 14 · the stone warms to furnace orange; we go back to the beginning */}
-			<Shot a={f.but} b={f.end} name="diamond-macro-2" leak={colors.ember}>
-				<FrameSeq dir={`${DIAMOND}/macro`} prefix="macro_" last={238} from={60} rate={(238 - 60) / Math.max(1, f.palace - f.but)} />
-				<Sequence from={f.palace - f.but}>
-					<NavsariDawn />
-				</Sequence>
+			<Shot a={f.but} b={f.beginning} name="the-plant" leak={colors.ember}>
+				<ArchiveClip file={`${M}/footage/Y04_jamshedpur_100.mp4`} startFrom={48 * 60} rate={0.6} clear={0.26} anchor="50% 0%" grade="furnace" />
+			</Shot>
+			<Shot a={f.beginning} b={f.end} name="priests" fadeIn={16}>
+				<DepthPhoto file={`${M}/B019a.jpg`} keys={[{f: 0, dolly: 0.0, x: -0.02}, {f: f.end - f.beginning, dolly: 0.2, x: 0.02}]} depth={0.2} grade="furnace" />
 			</Shot>
 
 			<Letterbox amount={bars} />
 			<Vignette strength={0.25} />
 			<Grain opacity={0.08} id="co-g" />
-		</AbsoluteFill>
-	);
-};
-
-/** The ember light of the stone fades onto a period postcard of a Parsee priest (M. V. Dhurandhar, early 1900s). */
-const NavsariDawn: React.FC = () => {
-	const frame = useCurrentFrame();
-	const o = tween(frame, 0, 50, 0, 1, ease.arrive);
-	return (
-		<AbsoluteFill style={{opacity: o}}>
-			<DeskPrint file="raw/wm/P_02_parsee-priest-jpg.jpg" at={-10} width={560} rotate={-1.5} grade="furnace" seed="priest" />
-			<AbsoluteFill style={{background: `radial-gradient(ellipse 60% 50% at 50% 40%, rgba(255,170,90,${0.35 * (1 - o)}) 0%, rgba(0,0,0,0) 70%)`}} />
 		</AbsoluteFill>
 	);
 };
