@@ -12,3 +12,5 @@ export * from './Document';
 export * from './Brand';
 export * from './FrameSeq';
 export * from './QuoteCard';
+export * from './ArchiveTable';
+export * from './PortraitPlate';

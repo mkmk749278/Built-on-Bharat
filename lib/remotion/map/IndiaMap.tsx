@@ -1,8 +1,8 @@
 // India map (PLAYBOOK §6.6, §8.5): India's official boundary from Natural Earth's India point-of-view file, filled and
 // glowing; neighbours dimmed; city pins that drop in on a frame; routes drawn as glowing arcs with a moving head and a
 // distance label. Everything is a pure function of the frame. Map units: 1 unit = 3 km (see indiaGeo.ts).
-import React, {useMemo} from 'react';
-import {interpolate, useCurrentFrame, useVideoConfig} from 'remotion';
+import React, {createContext, useContext, useMemo} from 'react';
+import {interpolate, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 import {colors} from '../brand';
 import {fontStacks} from '../fonts';
 import {ease, pop, tween} from '../motion';
@@ -94,6 +94,14 @@ const GRATICULE: string[] = (() => {
 
 export type MapStyle = 'today' | 'faint';
 
+/** Real ground under every IndiaMap (plan_v7 §2.4): when a film provides satellite plates (all-India first, then
+ *  detail plates), IndiaMap draws them in place of the flat land fills; detail plates fade in as the camera closes on
+ *  them, feathered into the base, and the boundary file gives way to the real coast at close range. */
+export type GroundPlate = {file: string; bounds: [number, number, number, number]; px?: number};
+export const SatGround = createContext<{plates: GroundPlate[]; grade?: string} | null>(null);
+const GROUND_GRADE = 'saturate(0.8) contrast(1.1) brightness(0.84) sepia(0.12)';
+const FAINT_GRADE = 'saturate(0.45) sepia(0.45) contrast(1.08) brightness(1.0)';
+
 export type IndiaMapProps = {
 	cam: MapCam;
 	/** 'today': India filled and glowing, neighbours dim. 'faint': all of today's borders drawn faintly (period routes). */
@@ -114,6 +122,10 @@ export const IndiaMap: React.FC<IndiaMapProps> = ({cam, style = 'today', reveal 
 	const others = useMemo(() => Object.entries(COUNTRIES).filter(([k]) => k !== 'IND'), []);
 	const india = COUNTRIES.IND;
 	const today = style === 'today';
+	const ground = useContext(SatGround);
+	if (ground && ground.plates.length) {
+		return <GroundMap cam={cam} style={style} reveal={reveal} id={id} plates={ground.plates}>{children}</GroundMap>;
+	}
 	return (
 		<svg width={1920} height={1080} viewBox="0 0 1920 1080" style={{position: 'absolute', inset: 0}}>
 			<defs>
@@ -400,4 +412,86 @@ export const routeStopFrames = (stops: LonLat[], from: number, dur: number): num
 	const total = lens.reduce((a, b) => a + b, 0);
 	let acc = 0;
 	return [from, ...lens.map((l) => Math.round(from + ((acc += l) / total) * dur))];
+};
+
+/** IndiaMap on real ground (see SatGround). */
+const GroundMap: React.FC<{cam: MapCam; style: MapStyle; reveal: number; id: string; plates: GroundPlate[]; children?: React.ReactNode}> = ({
+	cam,
+	style,
+	reveal,
+	id,
+	plates,
+	children,
+}) => {
+	const frame = useCurrentFrame();
+	const breathe = 0.85 + 0.15 * Math.sin(frame / 50);
+	const tf = `translate(960 540) scale(${cam.zoom.toFixed(5)}) translate(${(-cam.x).toFixed(3)} ${(-cam.y).toFixed(3)})`;
+	const india = COUNTRIES.IND;
+	const others = useMemo(() => Object.entries(COUNTRIES).filter(([k]) => k !== 'IND'), []);
+	const today = style === 'today';
+	const lz = Math.log(cam.zoom);
+	const lines = interpolate(lz, [Math.log(3), Math.log(7)], [1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+	const base = plates[0];
+	const baseSharp = base.px ? base.px / (base.bounds[2] - base.bounds[0]) : 1;
+	const outside = `M-5000 -5000H5000V5000H-5000Z ${india.join(' ')}`;
+	return (
+		<svg width={1920} height={1080} viewBox="0 0 1920 1080" style={{position: 'absolute', inset: 0, background: '#07080A'}}>
+			<defs>
+				<filter id={`${id}-glow`} x="-20%" y="-20%" width="140%" height="140%">
+					<feGaussianBlur stdDeviation={8} />
+				</filter>
+				<radialGradient id={`${id}-feather`} cx="0.5" cy="0.5" r="0.5">
+					<stop offset="0.62" stopColor="#fff" />
+					<stop offset="1" stopColor="#000" />
+				</radialGradient>
+				<mask id={`${id}-mask`} maskContentUnits="objectBoundingBox">
+					<rect width={1} height={1} fill={`url(#${id}-feather)`} />
+				</mask>
+			</defs>
+			<g transform={tf}>
+				<g style={{filter: today ? GROUND_GRADE : FAINT_GRADE}} opacity={0.35 + 0.65 * reveal}>
+					{plates.map((p, i) => {
+						const [x0, y0, x1, y1] = p.bounds;
+						// a detail plate only matters once the camera is near it
+						const near = Math.abs(cam.x - (x0 + x1) / 2) < 960 / cam.zoom + (x1 - x0) && Math.abs(cam.y - (y0 + y1) / 2) < 540 / cam.zoom + (y1 - y0);
+						const o = i === 0 ? 1 : near ? interpolate(lz, [Math.log(baseSharp * 0.9), Math.log(baseSharp * 3)], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'}) : 0;
+						return o > 0.001 ? (
+							<image key={p.file} href={staticFile(p.file)} x={x0} y={y0} width={x1 - x0} height={y1 - y0} preserveAspectRatio="none" opacity={o} mask={i === 0 ? undefined : `url(#${id}-mask)`} />
+						) : null;
+					})}
+				</g>
+				<path d={outside} fill="#05060A" fillOpacity={0.5 * lines} fillRule="evenodd" />
+				{lines > 0.001 ? (
+					<g opacity={lines}>
+						{others.map(([code, ds]) =>
+							ds.map((d, i) => (
+								<path key={`b${code}${i}`} d={d} fill="none" stroke={colors.muted} strokeOpacity={0.4} strokeWidth={0.9} strokeDasharray={today ? undefined : '4 5'} vectorEffect="non-scaling-stroke" />
+							)),
+						)}
+						{today ? (
+							<g filter={`url(#${id}-glow)`} opacity={0.55 * reveal * breathe}>
+								{india.map((d, i) => (
+									<path key={i} d={d} fill="none" stroke={colors.bronze} strokeWidth={8} vectorEffect="non-scaling-stroke" />
+								))}
+							</g>
+						) : null}
+						{india.map((d, i) => (
+							<path
+								key={`s${i}`}
+								d={d}
+								fill="none"
+								stroke={today ? colors.gold : '#C9B48E'}
+								strokeOpacity={today ? 0.4 + 0.4 * reveal : 0.55}
+								strokeWidth={today ? 1.6 : 1}
+								strokeDasharray={today ? undefined : '4 5'}
+								strokeLinejoin="round"
+								vectorEffect="non-scaling-stroke"
+							/>
+						))}
+					</g>
+				) : null}
+				{children}
+			</g>
+		</svg>
+	);
 };

@@ -1,6 +1,6 @@
 import React from 'react';
 import {AbsoluteFill, random, useCurrentFrame, useVideoConfig} from 'remotion';
-import {Camera, colors, Dust, ease, fontStacks, Grain, LightLeak, pop, tween, Vignette} from '../../../../../lib/remotion';
+import {Camera, colors, Desk, Dust, ease, fontStacks, Grain, LightLeak, pop, tween, Vignette} from '../../../../../lib/remotion';
 import {DuskSky, InkFigure, InkLine, InkPaper, InkStage, TreeLine, V2} from '../../../../../lib/remotion/ink';
 import {IndiaMap, LonLat, MapPin, PLACES, camFit, mapCam} from '../../../../../lib/remotion/map';
 
@@ -140,6 +140,7 @@ export const Sums: React.FC<{landAt: number}> = ({landAt}) => {
 	const total = rows.reduce((a, b) => a + b, 0);
 	return (
 		<AbsoluteFill style={{background: '#0E0F12', alignItems: 'center', justifyContent: 'center'}}>
+			<Desk />
 			<Camera seed="sums" drift={2} keys={[{f: 0, scale: 1.0, tiltX: 10}, {f: landAt + 80, scale: 1.18, tiltX: 6, y: -40}]}>
 				<AbsoluteFill style={{alignItems: 'center', justifyContent: 'center'}}>
 					<div style={{width: 760, padding: '60px 80px', background: 'linear-gradient(170deg, #ECE2CB 0%, #D9CBAA 100%)', boxShadow: '0 40px 90px rgba(0,0,0,0.6)'}}>
@@ -171,6 +172,7 @@ export const DebtLedger: React.FC<{strikeFrom: number; strikeTo: number}> = ({st
 	const n = 12;
 	return (
 		<AbsoluteFill style={{background: '#0E0F12'}}>
+			<Desk />
 			<Camera seed="debt" drift={2} keys={[{f: 0, scale: 1.02, tiltX: 12, y: 40}, {f: durationInFrames, scale: 1.16, tiltX: 8, y: -60}]}>
 				<AbsoluteFill style={{alignItems: 'center', justifyContent: 'center'}}>
 					<div style={{position: 'relative', width: 1100, height: 900, background: 'linear-gradient(170deg, #E6DBC2 0%, #D2C29F 100%)', boxShadow: '0 40px 90px rgba(0,0,0,0.6)'}}>
@@ -181,8 +183,13 @@ export const DebtLedger: React.FC<{strikeFrom: number; strikeTo: number}> = ({st
 							const w = 420 + random(`dl${i}`) * 300;
 							return (
 								<div key={i} style={{position: 'absolute', left: 80, top: y, width: 940, height: 50}}>
-									<div style={{position: 'absolute', left: 0, top: 22, width: w, height: 16, borderRadius: 8, background: '#7A6440', opacity: 0.35, filter: 'blur(3px)'}} />
-									<div style={{position: 'absolute', right: 0, top: 22, width: 140, height: 16, borderRadius: 8, background: '#7A6440', opacity: 0.3, filter: 'blur(3px)'}} />
+									{/* ink entries, out of focus: seeded letters so no line can be read as a real name or sum */}
+									<div style={{position: 'absolute', left: 0, top: 4, width: w, fontFamily: fontStacks.quote, fontStyle: 'italic', fontSize: 38, color: '#3A2A18', opacity: 0.75, filter: 'blur(2.6px)', whiteSpace: 'nowrap', overflow: 'hidden'}}>
+										{Array.from({length: 4}, (_, k) => Array.from({length: 3 + Math.floor(random(`dw${i}${k}`) * 6)}, (_, j) => String.fromCharCode(97 + Math.floor(random(`dc${i}${k}${j}`) * 26))).join('')).join(' ')}
+									</div>
+									<div style={{position: 'absolute', right: 0, top: 6, width: 160, textAlign: 'right', fontFamily: fontStacks.quote, fontStyle: 'italic', fontSize: 36, color: '#3A2A18', opacity: 0.7, filter: 'blur(2.6px)'}}>
+										{Math.floor(100 + random(`dn${i}`) * 9000)}
+									</div>
 									<div style={{position: 'absolute', left: -10, top: 28, height: 4, width: `${s * 960}px`, background: '#8B2E1C', opacity: 0.85, borderRadius: 2}} />
 									<div style={{position: 'absolute', left: 0, right: 0, bottom: 0, height: 1, background: '#8A6A3A', opacity: 0.35}} />
 								</div>
@@ -394,6 +401,7 @@ export const CottonCrash: React.FC<{crashAt: number; worthlessAt: number}> = ({c
 	});
 	return (
 		<AbsoluteFill style={{background: '#0E0F12', alignItems: 'center', justifyContent: 'center'}}>
+			<Desk />
 			<Camera seed="crash" drift={2} keys={[{f: 0, scale: 1.0, tiltX: 10}, {f: worthlessAt + 60, scale: 1.12, tiltX: 6}]}>
 				<AbsoluteFill style={{alignItems: 'center', justifyContent: 'center'}}>
 					<div

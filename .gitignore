@@ -13,3 +13,4 @@ films/*/remotion/out/
 docs/research/*/run.log
 __pycache__/
 .venv-blender/
+.venv-geo/

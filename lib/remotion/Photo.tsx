@@ -111,23 +111,22 @@ export const Print: React.FC<{
 	);
 };
 
-/** The dark desk the prints and papers lie on: charcoal with a faint blueprint grid and a pool of warm light. */
-export const Desk: React.FC<{light?: string; grid?: boolean}> = ({light = 'rgba(255,170,90,0.20)', grid = true}) => {
+/**
+ * The desk the prints and papers lie on (plan_v7 §2.3): the film's rendered archive table (scripts/blender/
+ * archive_table.py, `assets/media/table/table_top.png`), never a void. `grid` is kept for old call sites and ignored.
+ * The plate drifts very slowly so the frame is never still; the lamp's pool is warmed a touch.
+ */
+export const Desk: React.FC<{light?: string; grid?: boolean; plate?: string}> = ({light = 'rgba(255,170,90,0.16)', plate = 'assets/media/table/table_top.png'}) => {
 	const frame = useCurrentFrame();
 	const lx = 50 + noise2D('desk', frame / 400, 0) * 4;
+	const dx = noise2D('deskx', frame / 600, 0) * 14;
+	const dy = noise2D('desky', 0, frame / 650) * 10;
 	return (
-		<AbsoluteFill style={{background: '#0E0F12'}}>
-			{grid ? (
-				<AbsoluteFill
-					style={{
-						opacity: 0.12,
-						backgroundImage:
-							'linear-gradient(rgba(142,146,155,0.6) 1px, transparent 1px), linear-gradient(90deg, rgba(142,146,155,0.6) 1px, transparent 1px)',
-						backgroundSize: '64px 64px',
-					}}
-				/>
-			) : null}
-			<AbsoluteFill style={{background: `radial-gradient(ellipse 55% 60% at ${lx}% 45%, ${light} 0%, rgba(0,0,0,0) 70%)`}} />
+		<AbsoluteFill style={{background: '#0A0907', overflow: 'hidden'}}>
+			<AbsoluteFill style={{transform: `translate(${dx}px, ${dy}px) scale(1.14)`}}>
+				<Img src={src(plate)} style={{width: '100%', height: '100%', objectFit: 'cover', filter: 'brightness(0.82)'}} />
+			</AbsoluteFill>
+			<AbsoluteFill style={{background: `radial-gradient(ellipse 55% 60% at ${lx}% 45%, ${light} 0%, rgba(0,0,0,0) 70%)`, mixBlendMode: 'screen'}} />
 		</AbsoluteFill>
 	);
 };

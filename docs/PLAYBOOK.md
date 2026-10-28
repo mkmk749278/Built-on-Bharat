@@ -300,6 +300,14 @@ world. **That is our visual world: industrial heritage meets modern India, dark 
 8. **No stock clip more than twice** a film (count clip sources, not shot rows). No anonymous office-workers-typing stock.
 
 ### 6.4 Looks to avoid (extend this list)
+**The void (2026-10-28, outside review of film 1 plus our own audit):** a print, a quote card, a name or a drawing
+floating on an empty charcoal or grid background. It reads as "a collage of templates". Every frame stands on a real
+base: an archive photo, footage, a satellite plate, the archive table (§8.10), or the machine-room diagrams (furnace,
+dividend bar, ownership flow). Also avoid: **drawn people** (thin line figures read as an app explainer; on a tragedy
+they read as detached), **flat vector maps** (use real ground, §6.6), **one photograph of a person repeated** (each
+image at most twice, the second time as a deliberate callback), **the same 3D object as filler** (a hero object
+appears at its two or three moments only), and **third-party clips with news UI, logos or burned-in captions** in
+frame (crop them clear or skip them; never vertical phone clips).
 Floating glass cards, neon-on-black dashboards, a centred title + subtitle on a gradient, icon grids, emoji, whiteboard
 maths, handwriting fonts, cartoon characters, generic "scientist with test tube", generic space/lab filler, stock
 globes with fake glow, lens-flare overload, AI images with garbled text (the banner's rocket shows invented lettering:
@@ -318,7 +326,12 @@ never let that into a film).
 ### 6.6 Maps of India
 Draw India with **its official boundary** (Natural Earth's India point-of-view countries file,
 `ne_10m_admin_0_countries_ind.geojson`, public domain: full Jammu & Kashmir and Ladakh, Arunachal Pradesh, Andaman &
-Nicobar and Lakshadweep). Never land-only shapes that merge India with its neighbours, never a map drawn from memory or an
+Nicobar and Lakshadweep). **On real ground (2026-10-28):** every map now sits on satellite plates in the film's own
+projection: NASA Blue Marble (public domain) for all-India views (`scripts/bluemarble_india.py`) and our own cloud-free
+median of Copernicus Sentinel-2 scenes (10 m, free for commercial use with "Contains modified Copernicus Sentinel data
+<year>") with Copernicus DEM relief for close-ups (`scripts/sat_crop.py`, `lib/remotion/map/SatMap.tsx`; `IndiaMap`
+picks the plates up from the `SatGround` context). The boundary file is drawn at country scale and fades out close in,
+where the real coast and rivers are the line. EOX s2cloudless is CC BY-NC-SA for us: never. Never land-only shapes that merge India with its neighbours, never a map drawn from memory or an
 unofficial source. *Why:* map-border law in India, and the owner flagged an inaccurate India map on Creator
 (2026-10-16). Fill India, glow its edge, dim the neighbours. Rail network: DataMeet Indian Railways (CC0).
 
@@ -600,7 +613,26 @@ SwiftShader hash noise): read them before building 3D.
 Name lower-third: "NAME · role · years". Place/date stamp: "BOMBAY · 1903" in the display serif. Chapter cards are
 **in-world** (a stamped date over moving footage, a word engraved on metal), never a black slide.
 
-### 8.9 INK figures: drawn people for the moments no camera caught (2026-10-24)
+### 8.10 The archive table and portrait plates (2026-10-28)
+- **The archive table** (`scripts/blender/archive_table.py` → `assets/media/table/`, `lib/remotion/ArchiveTable.tsx`): one
+  Cycles-rendered desk (teak, green leather blotter, a brass lamp off frame) with a light pass and the reference card's
+  corners. A `TableDoc` is placed in centimetres and mapped with the plate's own homography, lit by the light pass and
+  grounded by a contact shadow. `Desk` (and so every `Print`, `DeskPrint`, `QuoteCard`) now draws this table.
+- **Portrait plates** (`PortraitPlate`): a real person's photograph full height on one side, feathered into a real place
+  from the same story (with depth parallax) on the other. Never a portrait on a void.
+- **Sourcing that works from the cloud (2026-10-28):** `scripts/candidates.py` contact-sheets Commons through its search
+  page (the API and `upload.wikimedia.org` originals answer 429 for this IP), reads the licence from the file page, and
+  downloads standard-width thumbnails (3840/1920/1280) from `thumb.wikimedia.org`, which keep serving. LoC stereo cards:
+  crop the left frame inside the arch.
+
+### 8.9 INK figures: retired (2026-10-28)
+**Retired from documentaries.** The outside review of film 1 called the line figures "an onboarding explainer for a
+fintech wallet" and "sterile" on 26/11, and our audit agreed: next to archive photographs they break the film's world.
+Anonymous Indians now come from real photographs and footage (Commons, LoC, official films, licensed stock), labelled
+where a viewer could take them for the real event. The rig stays in `lib/remotion/ink/` for Shorts or a film whose whole
+world is drawn. The original rules follow for the record.
+
+#### (record) INK figures: drawn people for the moments no camera caught (2026-10-24)
 *Why:* Creator's owner approved hand-drawn acting characters on 2026-10-24 (Creator PLAYBOOK §4a-3 item 3, after its
 stick-man demo `video/stickman/`), and our first priority is Indian humanity (§4.1). History rarely photographed the
 ordinary people who made it happen: the 8,000 investors, the steelworkers at the pay window, the family on a scooter.
@@ -1128,6 +1160,18 @@ To port when needed (Creator path → what to change):
 
 ## 16. Lessons log
 *(Newest first. Each lesson: what happened, the rule, why.)*
+
+**Film 1 visual rework v7 (2026-10-28).**
+- *What happened:* the owner shared an outside review of the v6 cut: narration 9.5/10, visuals 5.5/10, "five design
+  universes colliding" (drawn line figures, the Blender diamond box 11 times, flat vector maps, a liquid "vat" for the
+  ownership, a vertical ANI clip with its UI, generic PCB stock for chips). The session audited the cut itself (one
+  frame every 3 s, 462 frames) and found the common cause: things floating on a void. Its praised shots (Taj drone,
+  furnace cutaway, night window, dividend bar, sting) were all grounded.
+- *Checked before acting (§16, "an outside review is claims"):* its "TCS 87% dividend yield" and "$350B" were wrong or
+  unsourced (claims T70 is 87% of Tata Sons' dividend income); its "Copernicus maps in the Oleshky UPSC video" exist in
+  neither repo. Its visual diagnosis was right.
+- *The rule:* plan_v7 (§6.4 void, §6.6 real ground, §8.9 INK retired, §8.10 table and plates). Look at the whole cut as
+  a contact sheet before calling a film finished: one bad system repeated across chapters is invisible shot by shot.
 
 **Renders move to GitHub's runners (2026-10-28).**
 - *What happened:* the 1080p review render of film 1 (≈270 ms a frame, ≈6 h on the session's 4 CPUs) died twice when

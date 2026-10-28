@@ -7,19 +7,22 @@ import {DevCompositions} from './dev';
 // ---- S2 dev systems (end) ----
 import {CHAPTERS} from './chapters';
 import {FPS, T, VO_FILE} from './timing';
+import {FilmGround} from './v7';
 
 loadBrandFonts();
 
 const Film: React.FC = () => (
 	<AbsoluteFill style={{background: '#0D0E11'}}>
-		{CHAPTERS.map(({title, Body}) => {
-			const {start, end} = T.chapter(title);
-			return (
-				<Sequence key={title} from={start} durationInFrames={end - start} name={title}>
-					<Body />
-				</Sequence>
-			);
-		})}
+		<FilmGround>
+			{CHAPTERS.map(({title, Body}) => {
+				const {start, end} = T.chapter(title);
+				return (
+					<Sequence key={title} from={start} durationInFrames={end - start} name={title}>
+						<Body />
+					</Sequence>
+				);
+			})}
+		</FilmGround>
 		<LogoBug />
 		<Audio src={staticFile(VO_FILE)} />
 	</AbsoluteFill>

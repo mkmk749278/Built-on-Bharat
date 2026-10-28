@@ -1,8 +1,8 @@
 import React from 'react';
 import {AbsoluteFill} from 'remotion';
-import {colors, Desk, FrameSeq, Kinetic, LowerThird, Print, Stamp} from '../../../../../lib/remotion';
+import {colors, Desk, FrameSeq, Kinetic, LowerThird, PortraitPlate, Print, Stamp} from '../../../../../lib/remotion';
+import {DepthPhoto} from '../../../../../lib/remotion/three/DepthPhoto';
 import {Glint, YearRoller} from '../../../../../lib/remotion/kinetic';
-import {PayWindowQueue} from '../dev/ink/PayWindow';
 import {chapterClock, CounterAt, DeskPrint, Photo, Shot} from '../kit';
 import {Fading} from '../shots/ch2';
 import {CaptionCrop, TrustLedger} from '../shots/ch4';
@@ -133,22 +133,25 @@ export const Diamond: React.FC = () => (
 		<Shot a={f.furnaces} b={f.paid} name="furnaces" leak={colors.ember}>
 			<CaptionCrop file={Y04} startFrom={44 * 60} />
 		</Shot>
-		<Shot a={f.paid} b={f.hers} name="paid" tag="ILLUSTRATION">
-			<PayWindowQueue />
+		<Shot a={f.paid} b={f.hers} name="paid" leak={colors.ember}>
+			<CaptionCrop file={Y04} startFrom={58 * 60} rate={0.6} />
 		</Shot>
 		{/* her diamond, so that families could eat */}
 		<Shot a={f.hers} b={f.eat} name="hers" leak={colors.gold}>
-			<DeskPrint file="E003a.jpg" at={-60} width={520} rotate={-1} seed="meher2" />
+			<DepthPhoto file={`${M}/A005e.jpg`} keys={[{f: 0, dolly: 0.24, x: 0.09, y: 0.02}, {f: f.eat - f.hers, dolly: 0.32, x: 0.085, y: 0.02}]} depth={0.16} grade="archive" />
 		</Shot>
+		{/* families in a steel town: a Tata steelworker's family at home (United Nations photo, 1957) */}
 		<Shot a={f.eat} b={f.back2} name="families">
-			<CaptionCrop file={Y04} startFrom={52 * 60} rate={0.45} />
+			<DepthPhoto file={`${M}/raw/wm/A005_07_1957-photo-of-the-family-of-a-tata-iron.jpg`} keys={[{f: 0, dolly: 0.06}, {f: f.back2 - f.eat, dolly: 0.2, y: 0.01}]} depth={0.2} grade="archive" />
+			<Stamp text="A STEELWORKER'S FAMILY" sub="JAMSHEDPUR · 1957" at={30} until={f.back2 - f.eat} />
 		</Shot>
 		{/* did they get it back? yes: in the will, 1932 */}
-		<Shot a={f.back2} b={f.will} name="it-came-back" tag="RECONSTRUCTION">
-			<FrameSeq dir={`${BLENDER}/table`} prefix="table_" last={298} rate={0.7} />
+		<Shot a={f.back2} b={f.will} name="it-came-back">
+			<PortraitPlate file={`${M}/E003a.jpg`} place={`${M}/B017a.jpg`} side="right" share={0.42} focus="50% 18%" />
 		</Shot>
 		<Shot a={f.will} b={f.meher} name="will-year" atmos={false}>
-			<AbsoluteFill style={{background: 'radial-gradient(ellipse 60% 50% at 50% 55%, #2A2018 0%, #0B0B0C 70%)'}} />
+			<Desk />
+			<AbsoluteFill style={{background: 'rgba(8,7,6,0.45)'}} />
 			<YearRoller from={1924} to={1932} start={10} land={W('We know because, eight years later', 'will') - f.will} label="DORABJI'S WILL" />
 		</Shot>
 		{/* two deaths, no children */}
@@ -171,30 +174,37 @@ export const Diamond: React.FC = () => (
 		</Shot>
 		{/* everything to a trust */}
 		<Shot a={f.trust} b={f.name} name="trust-ledger" tag="ILLUSTRATION">
+			<Desk />
 			<TrustLedger at={[f.shares - f.trust, f.property - f.trust, f.jewels - f.trust]} seed="ledger1" />
 		</Shot>
 		<Shot a={f.name} b={f.sells} name="trust-name" atmos={false}>
-			<AbsoluteFill style={{background: 'radial-gradient(ellipse 60% 50% at 50% 50%, #2A2018 0%, #0B0B0C 72%)'}} />
+			<Desk />
+			<AbsoluteFill style={{filter: 'brightness(0.4) blur(3px)'}}>
+				<TrustLedger at={[-200, -200, -200]} seed="ledger1b" />
+			</AbsoluteFill>
 			<Kinetic text="THE SIR DORABJI TATA TRUST" at={8} until={f.sells - f.name} display size={84} color={colors.gold} />
 		</Shot>
 		{/* the jewels sold; the hospital */}
 		<Shot a={f.sells} b={f.tmh} name="jewels-sold" leak={colors.ember}>
+			{/* the jewels sold: the ledger's twenty one lights go out (ILLUSTRATION) */}
 			<Fading from={f.hospital - f.sells}>
-				<FrameSeq dir={`${BLENDER}/macro`} prefix="macro_" last={238} rate={0.6} />
+				<Desk />
+				<TrustLedger at={[-200, -200, -200]} keepFrom={10} seed="ledger-sold" />
 			</Fading>
 		</Shot>
 		<Shot a={f.tmh} b={f.helped} name="tata-memorial" fadeIn={10}>
 			<Photo file="E005a.jpg" dur={f.helped - f.tmh} move={[0.0, 0.14, 0.01, -0.01]} grade="modern" depth={0.04} />
 			<Stamp text="TATA MEMORIAL HOSPITAL" sub="OPENED 1941 · MUMBAI, TODAY" at={30} until={f.helped - f.tmh} />
 		</Shot>
-		<Shot a={f.helped} b={f.you} name="diamond-in-hospital" tag="RECONSTRUCTION" leak={colors.gold}>
-			<FrameSeq dir={`${BLENDER}/hero`} prefix="hero_" last={298} from={200} rate={0.4} />
+		<Shot a={f.helped} b={f.you} name="hospital-block" leak={colors.gold}>
+			<Photo file="cm/cm_tata-memorial-hospital-jpg.jpg" dur={f.you - f.helped} move={[0.02, 0.16, 0.02, -0.01]} grade="modern" depth={0.16} />
 		</Shot>
 		<Shot a={f.you} b={f.keeps} name="tata-memorial-2" fadeIn={12}>
 			<Photo file="E005a.jpg" dur={f.keeps - f.you} move={[0.16, 0.3, -0.02, 0.0, 0.03, 0.04]} grade="modern" depth={0.04} />
 		</Shot>
 		{/* the shares the trust keeps: the key to the ending */}
 		<Shot a={f.keeps} b={f.end} name="shares-kept" tag="ILLUSTRATION">
+			<Desk />
 			<TrustLedger at={[-200, -200, -200]} keepFrom={f.keep2 - f.keeps} lockAt={f.key - f.keeps + 20} seed="ledger2" />
 		</Shot>
 	</AbsoluteFill>

@@ -10,6 +10,10 @@ export const TapeFrame: React.FC<{file: string; startFrom: number; label: string
 	const o = tween(frame, 0, 12, 0, 1, ease.arrive);
 	return (
 		<AbsoluteFill style={{background: '#0B0B0C'}}>
+			{/* never a void around the tape: the same footage, enlarged, blurred and dark, fills the frame (plan_v7 §2.1) */}
+			<AbsoluteFill style={{transform: `scale(${1.25 + 0.05 * tween(frame, 0, durationInFrames, 0, 1)})`, filter: 'blur(28px) brightness(0.32) saturate(0.8)'}}>
+				<Footage file={file} startFrom={startFrom} rate={rate} grade="modern" />
+			</AbsoluteFill>
 			<Camera seed="tape" drift={2} keys={[{f: 0, scale: 1.0}, {f: durationInFrames, scale: 1.06}]}>
 				<AbsoluteFill style={{alignItems: 'center', justifyContent: 'center'}}>
 					<div style={{position: 'relative', width: 1060, height: 795, opacity: o, borderRadius: 18, overflow: 'hidden', boxShadow: '0 0 160px rgba(255,120,30,0.25), 0 40px 90px rgba(0,0,0,0.7)'}}>

@@ -1,11 +1,12 @@
 import React from 'react';
 import {AbsoluteFill} from 'remotion';
-import {Camera, colors, Desk, Footage, Kinetic, LowerThird, Print, QuoteCard, Stamp} from '../../../../../lib/remotion';
+import {Camera, colors, Desk, Footage, Kinetic, LowerThird, PortraitPlate, Print, QuoteCard, Stamp} from '../../../../../lib/remotion';
 import {DeskCalendar, YearRoller} from '../../../../../lib/remotion/kinetic';
 import {FurnaceTimeline} from '../../../../../lib/remotion/furnace/BlastFurnace';
 import {chapterClock, CounterAt, DeskPrint, Photo, Shot} from '../kit';
 import {Furnace} from './Eight';
 import {TapeFrame} from '../shots/ch3';
+import {Fading} from '../shots/ch2';
 import {CaptionCrop} from '../shots/ch4';
 import {Drafting, GlassTable, Porthole, SteelWords} from '../shots/ch6';
 
@@ -106,7 +107,7 @@ export const Humiliation: React.FC = () => {
 				<Print file={`${M}/raw/wm/G002_54_ratantata-jpg.jpg`} at={f.quiet - f.hands} width={420} x={320} rotate={2} grade="modern" seed="rt-h" />
 			</Shot>
 			<Shot a={f.ratan} b={f.look} name="ratan">
-				<DeskPrint file="raw/wm/G002_55_shri-ratan-naval-tata-jpg.jpg" at={4} width={560} rotate={-1.5} grade="modern" seed="ratan" />
+				<PortraitPlate file="assets/media/raw/wm/G002_55_shri-ratan-naval-tata-jpg.jpg" place="assets/media/raw/wm/A005_02_bombay-house-mast-jpg.jpg" side="right" share={0.48} focus="50% 22%" grade="modern" />
 				<LowerThird name="RATAN NAVAL TATA" role="CHAIRMAN OF THE TATA GROUP, 1991 TO 2012" at={10} until={f.look - f.ratan} />
 			</Shot>
 			{/* a boy raised by his grandmother: an empty room, a curtain in the wind */}
@@ -116,7 +117,8 @@ export const Humiliation: React.FC = () => {
 				</Camera>
 			</Shot>
 			<Shot a={f.arch} b={f.home} name="architecture" atmos={false}>
-				<Drafting />
+				<Photo file="cm/cm_cornell-university-sibley-hall-01-jpg.jpg" dur={f.home - f.arch} move={[0.02, 0.16, 0.02, -0.02]} grade="archive" depth={0.16} />
+				<Stamp text="CORNELL UNIVERSITY" sub="ITHACA, NEW YORK · TODAY" at={20} until={f.home - f.arch} />
 				<Kinetic text="ARCHITECTURE · CORNELL, AMERICA" at={30} until={f.home - f.arch} size={40} y={430} />
 			</Shot>
 			<Shot a={f.home} b={f.first} name="home" tag="ILLUSTRATIVE FOOTAGE">
@@ -139,7 +141,7 @@ export const Humiliation: React.FC = () => {
 			</Shot>
 			{/* the architect's lines become a car */}
 			<Shot a={f.bet} b={f.indica} name="drawing-a-car" atmos={false} tag="ILLUSTRATION">
-				<Drafting buildingFrom={-200} carAt={f.car - f.bet - 30} />
+				<Photo file="raw/wm/G003_06_1999-indica-jpg.jpg" dur={f.indica - f.bet} move={[0.0, 0.18, 0.02, -0.02]} grade="modern" depth={0.16} />
 				<Kinetic text="DESIGNED IN INDIA" at={f.car - f.bet + 60} until={f.indica - f.bet} size={44} y={-400} />
 			</Shot>
 			<Shot a={f.indica} b={f.book} name="indica">
@@ -151,7 +153,11 @@ export const Humiliation: React.FC = () => {
 				<CounterAt to={115000} start={10} land={f.complaints - f.book - 40} size={140} label="BOOKINGS · ABOUT" />
 			</Shot>
 			<Shot a={f.complaints} b={f.detroit} name="complaints" atmos={false}>
-				<SteelWords words={[{text: 'QUALITY', at: f.quality - f.complaints}, {text: 'POWER', at: f.power - f.complaints}]} />
+				<AbsoluteFill style={{filter: 'brightness(0.42) saturate(0.6)'}}>
+					<Photo file="raw/wm/G003_09_2007-10-09-india-rhotang-pass-tourist-re.jpg" dur={f.detroit - f.complaints} move={[0.12, 0.26, 0.0, 0.02]} grade="steel" depth={0.16} />
+				</AbsoluteFill>
+				<Kinetic text="QUALITY" at={f.quality - f.complaints} until={f.detroit - f.complaints} display size={130} y={-70} />
+				<Kinetic text="POWER" at={f.power - f.complaints} until={f.detroit - f.complaints} display size={130} y={80} />
 			</Shot>
 			{/* Detroit, 1999 */}
 			<Shot a={f.detroit} b={f.kadle} name="ford">
@@ -160,8 +166,10 @@ export const Humiliation: React.FC = () => {
 				<Stamp text="FORD MOTOR COMPANY" sub="HEADQUARTERS · DEARBORN, NEAR DETROIT" at={f.ford - f.detroit} until={f.sell - f.detroit} />
 				<Kinetic text="TO SELL THE CAR BUSINESS" at={f.sell - f.detroit + 6} until={f.kadle - f.detroit} display size={64} y={360} />
 			</Shot>
-			<Shot a={f.kadle} b={f.asked} name="the-room" atmos={false} tag="ILLUSTRATION">
-				<GlassTable />
+			<Shot a={f.kadle} b={f.asked} name="the-room">
+				<AbsoluteFill style={{filter: 'brightness(0.55)'}}>
+					<Photo file="G004a.jpg" dur={f.asked - f.kadle} move={[0.22, 0.34, -0.03, -0.04, 0.03, 0.02]} grade="steel" depth={0.12} />
+				</AbsoluteFill>
 				<LowerThird name="PRAVIN KADLE" role="TATA VETERAN · IN THE ROOM IN 1999" at={20} until={f.asked - f.kadle} />
 			</Shot>
 			<Shot a={f.asked} b={f.favourS} name="why">
@@ -188,8 +196,10 @@ export const Humiliation: React.FC = () => {
 					seed="q-favour"
 				/>
 			</Shot>
-			<Shot a={f.off} b={f.back} name="deal-off" atmos={false} tag="ILLUSTRATION">
-				<GlassTable darkAt={6} />
+			<Shot a={f.off} b={f.back} name="deal-off" atmos={false}>
+				<Fading from={6}>
+					<Photo file="G004a.jpg" dur={f.back - f.off} move={[0.36, 0.4, -0.04, -0.05, 0.02, 0.02]} grade="night" depth={0.12} />
+				</Fading>
 			</Shot>
 			{/* signature 6: the silence */}
 			<Shot a={f.back} b={f.what} name="silence" atmos={false} tag="ILLUSTRATION">
@@ -203,7 +213,7 @@ export const Humiliation: React.FC = () => {
 				/>
 			</Shot>
 			<Shot a={f.what} b={f.notSell} name="what-now">
-				<DeskPrint file="raw/wm/G002_51_ratan-naval-tata-in-2011-jpg.jpg" at={-40} width={600} rotate={1.5} grade="modern" seed="ratan-what" />
+				<PortraitPlate file="assets/media/raw/wm/G002_57_ratan-tata-1-jpg.jpg" place="assets/media/raw/wm/G003_06_1999-indica-jpg.jpg" side="left" share={0.46} focus="50% 25%" grade="modern" />
 			</Shot>
 			{/* three verbs, three cuts */}
 			<Shot a={f.notSell} b={f.fixes} name="does-not-sell">
@@ -238,7 +248,7 @@ export const Humiliation: React.FC = () => {
 				<YearRoller from={1907} to={2007} start={20} land={f.next - f.hundred - 90} label="BRITISH STEEL · NOW TATA'S" />
 			</Shot>
 			<Shot a={f.next} b={f.proudest} name="tested">
-				<DeskPrint file="raw/wm/G002_55_shri-ratan-naval-tata-jpg.jpg" at={-60} width={540} rotate={-1} grade="archive" seed="ratan-tested" />
+				<PortraitPlate file="assets/media/raw/wm/G002_51_ratan-naval-tata-in-2011-jpg.jpg" place="assets/media/B009c.jpg" side="right" share={0.46} focus="50% 25%" grade="modern" />
 			</Shot>
 			{/* four pages of 2008 */}
 			<Shot a={f.proudest} b={f.end} name="calendar-2008" atmos={false}>

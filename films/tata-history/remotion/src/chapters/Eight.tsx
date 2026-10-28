@@ -5,6 +5,8 @@ import {BlastFurnace, camAt, furnaceCamKeys, FurnaceTimeline} from '../../../../
 import {InkPaper} from '../../../../../lib/remotion/ink';
 import {YearRoller} from '../../../../../lib/remotion/kinetic';
 import {Crowd1907} from '../dev/ink/Crowd1907';
+import {DepthPhoto} from '../../../../../lib/remotion/three/DepthPhoto';
+import {ArchiveClip} from '../v7';
 import {chapterClock, CounterAt, DeskPrint, Photo, Shot} from '../kit';
 import {PLACES} from '../../../../../lib/remotion/map';
 import {PlaceMap} from '../shots/ch1';
@@ -99,8 +101,8 @@ export const Eight: React.FC = () => {
 	return (
 		<AbsoluteFill style={{background: '#0B0B0C'}}>
 			{/* Bombay, 1907: the share office opens, and the people come */}
-			<Shot a={0} b={f.wrote} name="crowd-1907" tag="ILLUSTRATION">
-				<Crowd1907 />
+			<Shot a={0} b={f.wrote} name="crowd-1907">
+				<DepthPhoto file="assets/media/loc7/L01c.jpg" keys={[{f: 0, dolly: 0.0, y: -0.02}, {f: f.wrote, dolly: 0.2, y: 0.02}]} depth={0.24} grade="archive" />
 				<Stamp text="BOMBAY · 1907" at={10} until={f.office + 40} />
 			</Shot>
 			{/* one man who was there wrote it down */}
@@ -121,33 +123,28 @@ export const Eight: React.FC = () => {
 				<Stamp text="ONE RUPEE · 1907" at={30} until={f.weeks - f.coins} />
 			</Shot>
 			{/* eight thousand Indians; two crore thirty one lakh */}
-			<Shot a={f.weeks} b={f.imagine} name="counter-1907" tag="ILLUSTRATION">
-				<AbsoluteFill style={{filter: 'brightness(0.42) blur(2px)'}}>
-					<Crowd1907 />
+			<Shot a={f.weeks} b={f.imagine} name="counter-1907">
+				<AbsoluteFill style={{filter: 'brightness(0.45) blur(2px)'}}>
+					<DepthPhoto file="assets/media/loc7/L02c.jpg" keys={[{f: 0, dolly: 0.02}, {f: f.imagine - f.weeks, dolly: 0.16}]} depth={0.22} grade="archive" />
 				</AbsoluteFill>
 				<Kinetic text="8,000 INDIANS" at={f.eight - f.weeks} until={f.crore - f.weeks + 10} display size={84} y={-150} />
 				<CounterAt to={23175000} start={f.crore - f.weeks - 50} land={f.crWord - f.weeks} prefix="₹" size={150} y={40} />
 			</Shot>
 			{/* stand in that line */}
-			<Shot a={f.imagine} b={f.raj} name="line" tag="ILLUSTRATION">
-				<Camera seed="line-cam" keys={[{f: 0, scale: 1.0}, {f: f.raj - f.imagine, scale: 1.25, x: -120, y: -40}]}>
-					<Crowd1907 camera={false} />
-				</Camera>
+			<Shot a={f.imagine} b={f.raj} name="line">
+				<DepthPhoto file="assets/media/A001b.jpg" keys={[{f: 0, dolly: 0.04, x: -0.02}, {f: f.raj - f.imagine, dolly: 0.26, x: 0.03, y: 0.02}]} depth={0.24} grade="archive" />
 			</Shot>
 			<Shot a={f.raj} b={f.saved} name="raj">
 				<Photo file="E001a.jpg" dur={f.saved - f.raj} move={[0.0, 0.14, 0.02, -0.02]} depth={0.12} />
 				<Stamp text="DELHI DURBAR · 1903" sub="A PAINTING" at={10} until={f.saved - f.raj} />
 			</Shot>
 			{/* savings for a daughter's wedding: close on the woman with her pouch, then the lit door */}
-			<Shot a={f.saved} b={f.bet} name="savings" tag="ILLUSTRATION">
-				<Camera seed="save-cam" keys={[{f: 0, scale: 2.1, x: 560, y: -330}, {f: f.bet - f.saved, scale: 2.25, x: 520, y: -340}]}>
-					<Crowd1907 camera={false} />
-				</Camera>
+			<Shot a={f.saved} b={f.bet} name="savings">
+				<DepthPhoto file="assets/media/cm/cm_4-bangles-jpg.jpg" keys={[{f: 0, dolly: 0.1, x: -0.02}, {f: f.bet - f.saved, dolly: 0.2, x: 0.0}]} depth={0.16} grade="archive" />
 			</Shot>
-			<Shot a={f.bet} b={f.believed} name="would" tag="ILLUSTRATION">
-				<Camera seed="would-cam" keys={[{f: 0, scale: 1.2, x: -200, y: -40}, {f: f.believed - f.bet, scale: 1.45, x: -300, y: -70}]}>
-					<Crowd1907 camera={false} />
-				</Camera>
+			{/* would you have done it: into the faces of the Bombay street, 1906 */}
+			<Shot a={f.bet} b={f.believed} name="would">
+				<DepthPhoto file="assets/media/loc7/L03c.jpg" keys={[{f: 0, dolly: 0.3, x: -0.05, y: -0.13}, {f: f.believed - f.bet, dolly: 0.42, x: -0.06, y: -0.14}]} depth={0.24} grade="archive" />
 			</Shot>
 			{/* Upcott laughs */}
 			<Shot a={f.believed} b={f.how} name="upcott">
@@ -163,7 +160,9 @@ export const Eight: React.FC = () => {
 			</Shot>
 			{/* 1911, 1912 */}
 			<Shot a={f.iron1911 + 90} b={f.war} name="years" atmos={false}>
-				<AbsoluteFill style={{background: 'radial-gradient(ellipse 60% 50% at 50% 55%, #3A1A08 0%, #0B0B0C 70%)'}} />
+				<AbsoluteFill style={{filter: 'brightness(0.42)'}}>
+					<ArchiveClip file="assets/media/footage/Y04_jamshedpur_100.mp4" startFrom={45 * 60} rate={0.5} clear={0.26} anchor="50% 0%" grade="furnace" />
+				</AbsoluteFill>
 				<Embers count={24} seed="yr-emb" intensity={0.6} />
 				<Sequence durationInFrames={f.steel1912 - f.iron1911 - 90}>
 					<YearRoller from={1907} to={1911} start={0} land={W('The first iron flows', 'eleven') - f.iron1911 - 90} label="FIRST IRON" />

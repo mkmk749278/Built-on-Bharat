@@ -4,6 +4,7 @@ import {colors} from './brand';
 import {fontStacks} from './fonts';
 import {Camera} from './Camera';
 import {Paper} from './Document';
+import {Desk} from './Photo';
 import {ease, tween} from './motion';
 
 /**
@@ -27,6 +28,7 @@ export const QuoteCard: React.FC<{
 	const sweep = tween(frame, markFrom, markTo, 0, 1, ease.sweep);
 	return (
 		<AbsoluteFill style={{background: '#0E0F12'}}>
+			<Desk />
 			<Camera seed={seed} drift={2} keys={[{f: at, scale: 0.96, y: 30}, {f: at + 400, scale: 1.08, y: -10}]}>
 				<Paper at={at} width={1380} tone={tone} seed={seed}>
 					<div style={{padding: '86px 100px 70px', fontFamily: fontStacks.quote, color: '#2E2418'}}>

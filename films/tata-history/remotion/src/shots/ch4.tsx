@@ -13,7 +13,7 @@ export const TrustLedger: React.FC<{at: [number, number, number]; keepFrom?: num
 	const lock = tween(frame, lockAt, lockAt + 30, 0, 1, ease.leave);
 	const lines = ['His shares in Tata Sons', 'His property', 'Twenty one pieces of jewellery'];
 	return (
-		<AbsoluteFill style={{background: '#0E0F12'}}>
+		<AbsoluteFill>
 			<Camera seed={seed} drift={2} keys={[{f: 0, scale: 0.98, tiltX: 12}, {f: durationInFrames, scale: 1.1, tiltX: 8}]}>
 				<AbsoluteFill style={{alignItems: 'center', justifyContent: 'center'}}>
 					<div

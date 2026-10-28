@@ -1,7 +1,8 @@
 import React from 'react';
 import {AbsoluteFill, useCurrentFrame} from 'remotion';
-import {Camera, Footage, LowerThird, Stamp, tween} from '../../../../../lib/remotion';
+import {Camera, Footage, LowerThird, PortraitPlate, Stamp, tween} from '../../../../../lib/remotion';
 import {PLACES} from '../../../../../lib/remotion/map';
+import {SatPlace} from '../dev/map/MapScenes';
 import {chapterClock, DeskPrint, Photo, Shot} from '../kit';
 import {PlaceMap, TrioPins} from '../shots/ch1';
 import {Envelope, Fading} from '../shots/ch2';
@@ -63,7 +64,7 @@ export const Letter: React.FC = () => (
 			<Stamp text="FEBRUARY · 1904" at={f.feb - f.letter} until={f.geologist - f.letter} />
 		</Shot>
 		<Shot a={f.geologist} b={f.walking} name="bose">
-			<DeskPrint file="raw/wm/C003_25_photograph-of-pramatha-nath-bose-jpg.jpg" at={4} width={560} rotate={1.5} seed="bose" />
+			<PortraitPlate file="assets/media/raw/wm/C003_25_photograph-of-pramatha-nath-bose-jpg.jpg" place="assets/media/C007a.jpg" side="right" share={0.48} focus="50% 25%" grade="archive" />
 			<LowerThird name="PRAMATHA NATH BOSE" role="GEOLOGIST" at={f.bose - f.geologist} until={f.walking - f.geologist} />
 		</Shot>
 		{/* the hills of Mayurbhanj, and the ore */}
@@ -76,7 +77,16 @@ export const Letter: React.FC = () => (
 			<Stamp text="IRON ORE" sub="HEMATITE, A MUSEUM SPECIMEN" at={20} until={f.lead - f.found} />
 		</Shot>
 		<Shot a={f.lead} b={f.three} name="ore-map" atmos={false}>
-			<PlaceMap pinAt={20} place={PLACES.mayurbhanj} label="MAYURBHANJ" sub="IRON ORE" dim={{at: PLACES.jamshedpur, label: 'TATA STEEL'}} />
+			<SatPlace
+				id="ore-map"
+				target={[86.3, 22.25]}
+				zoomTo={140}
+				landAt={f.three - f.lead - 70}
+				pins={[
+					{at: PLACES.jamshedpur, label: 'TATA STEEL', sub: 'JAMSHEDPUR', from: 30, side: 'right'},
+					{at: [86.3, 22.25], label: 'MAYURBHANJ', sub: 'THE IRON HILLS', from: 70, side: 'left'},
+				]}
+			/>
 		</Shot>
 		{/* three months later: Germany */}
 		<Shot a={f.three} b={f.never} name="germany">
@@ -106,7 +116,7 @@ export const Letter: React.FC = () => (
 		</Shot>
 		{/* his son, Dorabji */}
 		<Shot a={f.who} b={f.office} name="dorabji">
-			<DeskPrint file="raw/wm/A005_04_dorabji-tata-jpg.jpg" at={4} width={560} rotate={-2} seed="dorabji2" />
+			<PortraitPlate file="assets/media/A005d.jpg" place="assets/media/pix/pixabay_301181_still.jpg" side="left" share={0.48} focus="50% 22%" />
 			<LowerThird name="DORABJI TATA" role="JAMSETJI'S ELDER SON" at={f.dorabji - f.who} until={f.office - f.who} />
 		</Shot>
 		{/* not from an office: the jungle */}
@@ -121,8 +131,8 @@ export const Letter: React.FC = () => (
 			<TrioPins tries={[30, 110]} />
 		</Shot>
 		<Shot a={f.sakchi} b={f.ore} name="domuhani" fadeIn={10}>
-			<Photo file="C002a.jpg" dur={f.ore - f.sakchi} move={[0.0, 0.16, 0.02, -0.02]} grade="modern" depth={0.2} />
-			<AbsoluteFill style={{background: 'linear-gradient(to top, rgba(8,8,10,0.92) 0%, rgba(8,8,10,0.7) 22%, rgba(8,8,10,0) 50%)'}} />
+			{/* the real confluence from orbit (Copernicus Sentinel-2, 2025): the Subarnarekha and the Kharkai */}
+			<SatPlace id="sakchi" target={[86.17, 22.825]} zoomTo={250} landAt={f.rivers - f.sakchi} fromIndia={false} tiltTo={34} />
 			<Stamp text="WHERE THE TWO RIVERS MEET" sub="SUBARNAREKHA AND KHARKAI · DOMUHANI, TODAY" at={f.rivers - f.sakchi - 10} until={f.ore - f.sakchi} />
 		</Shot>
 		<Shot a={f.ore} b={f.money} name="trio-land" atmos={false} tag="ILLUSTRATION">
