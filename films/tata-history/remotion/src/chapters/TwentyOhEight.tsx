@@ -114,7 +114,7 @@ const SingurToSanand: React.FC<{routeFrom: number; sanandAt: number}> = ({routeF
 /** The November page: it tears in from October, then the light on the desk goes out. */
 const Darkening: React.FC<{from: number; children: React.ReactNode}> = ({from, children}) => {
 	const frame = useCurrentFrame();
-	return <AbsoluteFill style={{filter: `brightness(${1 - 0.92 * tween(frame, from, from + 70, 0, 1, ease.leave)})`}}>{children}</AbsoluteFill>;
+	return <AbsoluteFill style={{filter: `brightness(${1 - 0.8 * tween(frame, from, from + 70, 0, 1, ease.leave)})`}}>{children}</AbsoluteFill>;
 };
 
 const Calendar: React.FC<{tears: number[]}> = ({tears}) => (

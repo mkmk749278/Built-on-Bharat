@@ -184,10 +184,10 @@ export const DebtLedger: React.FC<{strikeFrom: number; strikeTo: number}> = ({st
 							return (
 								<div key={i} style={{position: 'absolute', left: 80, top: y, width: 940, height: 50}}>
 									{/* ink entries, out of focus: seeded letters so no line can be read as a real name or sum */}
-									<div style={{position: 'absolute', left: 0, top: 4, width: w, fontFamily: fontStacks.quote, fontStyle: 'italic', fontSize: 38, color: '#3A2A18', opacity: 0.75, filter: 'blur(2.6px)', whiteSpace: 'nowrap', overflow: 'hidden'}}>
+									<div style={{position: 'absolute', left: 0, top: 4, width: w, fontFamily: fontStacks.quote, fontStyle: 'italic', fontSize: 38, color: '#3A2A18', opacity: 0.75, filter: `blur(${5.5 + (i % 3) * 0.8}px)`, whiteSpace: 'nowrap', overflow: 'hidden'}}>
 										{Array.from({length: 4}, (_, k) => Array.from({length: 3 + Math.floor(random(`dw${i}${k}`) * 6)}, (_, j) => String.fromCharCode(97 + Math.floor(random(`dc${i}${k}${j}`) * 26))).join('')).join(' ')}
 									</div>
-									<div style={{position: 'absolute', right: 0, top: 6, width: 160, textAlign: 'right', fontFamily: fontStacks.quote, fontStyle: 'italic', fontSize: 36, color: '#3A2A18', opacity: 0.7, filter: 'blur(2.6px)'}}>
+									<div style={{position: 'absolute', right: 0, top: 6, width: 160, textAlign: 'right', fontFamily: fontStacks.quote, fontStyle: 'italic', fontSize: 36, color: '#3A2A18', opacity: 0.7, filter: 'blur(4.5px)'}}>
 										{Math.floor(100 + random(`dn${i}`) * 9000)}
 									</div>
 									<div style={{position: 'absolute', left: -10, top: 28, height: 4, width: `${s * 960}px`, background: '#8B2E1C', opacity: 0.85, borderRadius: 2}} />
@@ -370,7 +370,9 @@ export const TrioPins: React.FC<{tries: number[]; landAt?: [number, number, numb
 	const labels = ['IRON ORE', 'COAL', 'WATER'];
 	const wide = camFit([[79, 18.5], [90, 26]], 140);
 	const close = camFit(near, 380);
-	const cam = landAt ? mapCam([{...wide, f: landAt[0] - 70}, {...close, f: landAt[0] + 10}], frame) : wide;
+	// the ground never sits still while the pins search: a slow aerial drift east across the plateau
+	const drift = mapCam([{...wide, f: 0, zoom: wide.zoom * 0.97, x: wide.x - 14}, {...wide, f: 1200, zoom: wide.zoom * 1.1, x: wide.x + 18, y: wide.y - 6}], frame);
+	const cam = landAt ? mapCam([{...wide, f: landAt[0] - 70}, {...close, f: landAt[0] + 10}], frame) : drift;
 	return (
 		<MapBase>
 			<IndiaMap cam={cam} style="faint" reveal={1} id="ch1-trio">

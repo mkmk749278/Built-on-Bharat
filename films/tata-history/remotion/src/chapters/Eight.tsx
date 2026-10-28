@@ -10,7 +10,7 @@ import {ArchiveClip} from '../v7';
 import {chapterClock, CounterAt, DeskPrint, Photo, Shot} from '../kit';
 import {PLACES} from '../../../../../lib/remotion/map';
 import {PlaceMap} from '../shots/ch1';
-import {LastEmber, TapeFrame} from '../shots/ch3';
+import {TapeFrame} from '../shots/ch3';
 
 // Chapter 3, The eight thousand (plan_v6 §4 ch 3): the share office, Sahlin's words, the coins, the counter →
 // standing in the line under the Raj → Upcott's boast → the furnace cutaway and real molten iron → 1911/1912 → war
@@ -86,6 +86,19 @@ const WarmHold: React.FC<{children: React.ReactNode}> = ({children}) => {
 			{children}
 			<AbsoluteFill style={{background: `rgba(255,150,60,${0.12 * tween(frame, 0, 60, 0, 1)})`, mixBlendMode: 'soft-light'}} />
 		</AbsoluteFill>
+	);
+};
+
+/** The lamp on the archive table going down: the edges first, the photograph last, never to black. */
+const LampDown: React.FC<{from: number; to: number}> = ({from, to}) => {
+	const k = tween(useCurrentFrame(), from, to, 0, 1);
+	return (
+		<AbsoluteFill
+			style={{
+				background: `radial-gradient(ellipse 34% 46% at 50% 48%, rgba(5,5,6,${0.35 * k}) 0%, rgba(5,5,6,${0.8 * k}) 70%, rgba(5,5,6,${0.9 * k}) 100%)`,
+				pointerEvents: 'none',
+			}}
+		/>
 	);
 };
 
@@ -202,13 +215,12 @@ export const Eight: React.FC = () => {
 				</Camera>
 				<Stamp text="THE WESTERN GHATS" sub="TATA POWER'S HYDRO LAKES, TODAY" at={20} until={f.gone - f.lakes} />
 			</Shot>
-			<Shot a={f.gone} b={f.isnt} name="alive">
+			{/* "It isn't.": the lamp goes down on his photograph (plan_v7: no void, so no ember on black) */}
+			<Shot a={f.gone} b={f.end} name="alive">
 				<WarmHold>
 					<DeskPrint file="B003a.jpg" at={-40} width={600} rotate={1} grade="furnace" seed="jnt-end" />
 				</WarmHold>
-			</Shot>
-			<Shot a={f.isnt} b={f.end} name="it-isnt" atmos={false}>
-				<LastEmber />
+				<LampDown from={f.isnt - f.gone} to={f.end - f.gone} />
 			</Shot>
 		</AbsoluteFill>
 	);
