@@ -56,8 +56,10 @@ export const Bill: React.FC = () => (
 		<Shot a={0} b={f.crash} name="port-talbot-furnace">
 			<Photo file="G006b.jpg" dur={f.crash} move={[0.0, 0.18, 0.02, -0.02]} grade="steel" depth={0.12} />
 		</Shot>
-		<Shot a={f.crash} b={f.losses} name="crash-2008" tag="ILLUSTRATIVE FOOTAGE">
-			<Footage file={`${M}/pix/pixabay_166289.mp4`} startFrom={2 * 60} grade="steel" />
+		<Shot a={f.crash} b={f.losses} name="crash-2008">
+			<Camera seed="pt-crash" keys={[{f: 0, scale: 1.04}, {f: f.losses - f.crash, scale: 1.1}]}>
+				<Footage file={`${M}/footage/Y11_port_talbot_close.mp4`} startFrom={250 * 60} rate={0.8} grade="steel" />
+			</Camera>
 			<Stamp text="2008" sub="THE WORLD ECONOMY CRASHES" at={20} until={f.losses - f.crash} />
 		</Shot>
 		<Shot a={f.losses} b={f.y2024} name="losses">
@@ -90,8 +92,7 @@ export const Bill: React.FC = () => (
 			<Kinetic text="NO." at={f.no - f.right} until={f.wrong - f.right + 40} display size={160} scrim={0.6} />
 		</Shot>
 		<Shot a={f.y2016} b={f.court} name="mistry">
-			<Desk />
-			<Print file={`${M}/raw/wm/I010_02_cyrus-mistry-jpg.jpg`} at={f.mistry - f.y2016 - 10} width={460} rotate={-1.5} grade="modern" seed="mistry" />
+			<PortraitPlate file="assets/media/raw/wm/I010_02_cyrus-mistry-jpg.jpg" place="assets/media/raw/wm/A005_02_bombay-house-mast-jpg.jpg" side="right" share={0.46} focus="50% 25%" grade="modern" />
 			<Kinetic text="2016" at={10} until={f.mistry - f.y2016 - 10} display size={150} />
 			<LowerThird name="CYRUS MISTRY" role="CHAIRMAN OF TATA SONS, 2012 TO 2016" at={f.mistry - f.y2016 + 30} until={f.court - f.y2016} />
 		</Shot>
@@ -100,7 +101,7 @@ export const Bill: React.FC = () => (
 			<Stamp text="SUPREME COURT OF INDIA" sub="2021 · IT SIDES WITH TATA SONS" at={20} until={f.chandra - f.court} />
 		</Shot>
 		<Shot a={f.chandra} b={f.tcs} name="chandrasekaran">
-			<DeskPrint file="raw/wm/I003_75_natarajan-chandrasekaran-at-wef-2011-jpg.jpg" at={4} width={520} rotate={1.5} grade="modern" seed="chandra" />
+			<PortraitPlate file="assets/media/raw/wm/I003_75_natarajan-chandrasekaran-at-wef-2011-jpg.jpg" place="assets/media/I012a.jpg" side="left" share={0.46} focus="50% 25%" grade="modern" />
 			<LowerThird name="N. CHANDRASEKARAN" role="CHAIRMAN OF TATA SONS FROM 2017 · JOINED T.C.S. IN 1987" at={30} until={f.tcs - f.chandra} />
 		</Shot>
 		{/* T.C.S., the engine */}
