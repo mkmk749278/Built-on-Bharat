@@ -16,8 +16,8 @@ on:
         description: "composition id"
         default: TataHistory
       scale:
-        description: "1 = 1080p, 2 = 4K"
-        default: "2"
+        description: "0.6666667 = 720p review cut (always first), 1 = 1080p, 2 = 4K master (only after the owner approves)"
+        default: "0.6666667"
       runners:
         description: "parallel runners (1-20)"
         default: "20"
