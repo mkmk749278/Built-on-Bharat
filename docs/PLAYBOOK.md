@@ -730,6 +730,16 @@ parallel sessions from these docs, so a scene can be rebuilt without retiming.
   ambience or diegetic beats.
 
 ### 10.5 Rendering
+- **Where (owner, 2026-10-28):** full-film and long renders (Blender shots, the 1080p review copy, the 4K master) run on
+  GitHub's runners, never in the Claude session: `.github/workflows/remotion-render.yml` (Remotion) and
+  `blender-render.yml` (Cycles). The session builds, renders review stills and short segments, and checks the result.
+  GitHub facts (docs.github.com, read 2026-10-28): standard runners are free and unlimited on a public repo; a
+  public-repo `ubuntu-24.04` runner is 4 CPU / 16 GB RAM / 14 GB SSD; each job may run 6 h; 20 jobs at once on the
+  Free plan; artifacts kept up to 90 days (we keep shards 7). Media reaches the runners from Drive
+  (`<film>/render-media`, `<film>/vo-render`, `<film>/mix`) with the repo secret `GDRIVE_RCLONE_TOKEN`; the film
+  goes back to Drive `<film>/renders/`. *Why:* the session's VM restarted twice in one night and killed the render
+  each time; the runners are free, parallel (a 23-minute 4K film is about 20 × 1.2 h instead of a day), and the
+  session spends no usage waiting.
 - Author 1920×1080 at 60 fps; render 4K with `--scale=2` (true 4K for text, SVG and DOM; images and video need 4K-worthy
   sources; WebGL canvases may need their own size handling, test it on the first 3D scene).
 - `npx remotion render <comp> out.mp4 --codec=h264 --scale=2 --concurrency=4 --crf=16 --frames=<a>-<b>`, with a
@@ -1118,6 +1128,15 @@ To port when needed (Creator path → what to change):
 
 ## 16. Lessons log
 *(Newest first. Each lesson: what happened, the rule, why.)*
+
+**Renders move to GitHub's runners (2026-10-28).**
+- *What happened:* the 1080p review render of film 1 (≈270 ms a frame, ≈6 h on the session's 4 CPUs) died twice when
+  the session's VM restarted (uptime 2 min, render process gone), with one 30 s shard done.
+- *The rule:* long renders run on `remotion-render.yml` (20 runners, 30 s shards per runner block, joined with the
+  master mix in one copy pass, lengths checked, film to Drive). Keep `render-media` in Drive in sync before a run
+  (`RCLONE_EXCLUDE=… scripts/upload_gdrive.sh --sub <film>/render-media films/<film>/assets/media`: a folder copy
+  that skips files already there).
+- *Why:* free and unlimited on a public repo, parallel, immune to session restarts, and it saves the session's usage.
 
 **The first full mix and render pipeline (2026-10-28, film 1).**
 - *What happened:* the score was placed as slots on VO anchors (`sound/score.json`: sentence and word anchors, not
