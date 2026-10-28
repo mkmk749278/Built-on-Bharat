@@ -195,7 +195,7 @@ def main() -> None:
     out.mkdir(parents=True, exist_ok=True)
     timing = json.loads((film / "vo/timing.json").read_text())
     A = Anchors(timing)
-    n = int(round(timing["duration"] * SR)) + SR
+    n = int(round(timing["durationInFrames"] / timing["fps"] * SR))  # exactly the picture's length
 
     # ---- voice: peaks at −3 dBFS
     voice = decode(film / "assets/vo/vo_full.wav")[:n]

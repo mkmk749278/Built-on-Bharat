@@ -286,8 +286,10 @@ export const KitchenDoors: React.FC<{stopAt: number}> = ({stopAt}) => {
 /** A plain line of type on black, quiet (a name when no licensed photo exists, a date). */
 export const OnBlack: React.FC<{lines: {text: string; size?: number; at: number; until?: number; serif?: boolean}[]; bg?: string; x?: number; y?: number}> = ({lines, bg = '#050506', x = 0, y = 0}) => {
 	const frame = useCurrentFrame();
+	const {durationInFrames} = useVideoConfig();
+	const push = 1 + 0.06 * tween(frame, 0, durationInFrames, 0, 1, ease.camera); // never a still frame
 	return (
-		<AbsoluteFill style={{background: bg, alignItems: 'center', justifyContent: 'center', flexDirection: 'column', gap: 26, transform: `translate(${x}px, ${y}px)`}}>
+		<AbsoluteFill style={{background: bg, alignItems: 'center', justifyContent: 'center', flexDirection: 'column', gap: 26, transform: `translate(${x}px, ${y}px) scale(${push})`}}>
 			{lines.map((l) => (
 				<div
 					key={l.text}

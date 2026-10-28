@@ -145,8 +145,10 @@ export const Pilot: React.FC = () => (
 		</Shot>
 		<Shot a={f.called} b={f.postcard} name="tcs" atmos={false}>
 			<AbsoluteFill style={{background: 'radial-gradient(ellipse 60% 50% at 50% 50%, #1D2530 0%, #0B0B0C 72%)'}} />
-			<Kinetic text="TATA CONSULTANCY SERVICES" at={8} until={f.tcs} display size={64} />
-			<Kinetic text="T.C.S." at={f.tcs - f.called} until={f.postcard - f.called} display size={200} color={colors.gold} />
+			<Camera seed="tcs" keys={[{f: 0, scale: 1.0}, {f: f.postcard - f.called, scale: 1.12}]}>
+				<Kinetic text="TATA CONSULTANCY SERVICES" at={8} until={f.tcs - f.called - 4} display size={64} />
+				<Kinetic text="T.C.S." at={f.tcs - f.called} until={f.postcard - f.called} display size={200} color={colors.gold} />
+			</Camera>
 		</Shot>
 		{/* April 1974: the postcard */}
 		<Shot a={f.postcard} b={f.student} name="postcard" tag="ILLUSTRATION">

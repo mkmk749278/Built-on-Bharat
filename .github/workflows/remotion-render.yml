@@ -84,6 +84,7 @@ jobs:
           scripts/gdrive_pull.sh ${{ inputs.film }}/vo-render films/${{ inputs.film }}/assets/vo
           du -sh films/${{ inputs.film }}/assets/media
       - name: Render
+        shell: bash  # -eo pipefail: a failed render fails the step even through the log filter
         run: |
           node scripts/render_shards.mjs films/${{ inputs.film }}/remotion ${{ inputs.comp }} out --seconds 30 \
             --scale ${{ inputs.scale }} --crf ${{ inputs.crf }} --concurrency 4 --frames ${{ matrix.block }} --render-only \
@@ -125,6 +126,7 @@ jobs:
       - name: Mix from Drive
         run: scripts/gdrive_pull.sh ${{ inputs.film }}/mix mix
       - name: Join, lay the sound, check
+        shell: bash
         run: |
           mkdir -p films/${{ inputs.film }}/assets  # public/assets points here; the join bundles but needs no media
           node scripts/render_shards.mjs films/${{ inputs.film }}/remotion ${{ inputs.comp }} out --join-only \
