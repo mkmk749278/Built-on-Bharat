@@ -1,12 +1,13 @@
 import React from 'react';
 import {AbsoluteFill, useCurrentFrame, useVideoConfig} from 'remotion';
-import {colors, Desk, ease, Footage, Grain, Kinetic, LightLeak, LowerThird, Print, QuoteCard, Stamp, tween, Vignette} from '../../../../../lib/remotion';
+import {colors, Desk, ease, Footage, Grain, Kinetic, LightLeak, LowerThird, PortraitPlate, Print, QuoteCard, Stamp, tween, Vignette} from '../../../../../lib/remotion';
 import {InkPaper} from '../../../../../lib/remotion/ink';
 import {DeskCalendar} from '../../../../../lib/remotion/kinetic';
 import {camFit, IndiaMap, MapPin, MapRoute, mapCam, PLACES} from '../../../../../lib/remotion/map';
 import {ScooterFamily} from '../dev/ink/ScooterFamily';
 import {chapterClock, CounterAt, DeskPrint, Photo, Shot} from '../kit';
 import {TapeFrame} from '../shots/ch3';
+import {Fading} from '../shots/ch2';
 import {Porthole} from '../shots/ch6';
 import {BanquetHall, Corridor, KitchenDoors, OnBlack, Uniforms} from '../shots/ch7';
 
@@ -150,18 +151,12 @@ export const TwentyOhEight: React.FC = () => (
 		<Shot a={f.later} b={f.four} name="his-slide">
 			<TapeFrame file={`${M}/footage/Y01_nano_launch_1.mp4`} startFrom={154 * 60} scan={false} label="FROM HIS LAUNCH PRESENTATION, 2008" />
 		</Shot>
-		<Shot a={f.four} b={f.march} name="scooter" atmos={false}>
-			<ScooterFamily
-				roofAt={f.roofW - f.four - 10}
-				keys={[
-					{f: 0, scale: 1.02, x: 10, y: 4},
-					{f: f.child - f.four - 10, scale: 1.06, x: -10, y: 0},
-					{f: f.child - f.four + 70, scale: 1.55, x: -260, y: 120},
-					{f: f.roof - f.four - 10, scale: 1.55, x: -280, y: 120},
-					{f: f.roof - f.four + 60, scale: 1.0, x: 0, y: 30},
-					{f: f.march - f.four, scale: 0.98, x: 0, y: 30},
-				]}
-			/>
+		<Shot a={f.four} b={f.child} name="scooter">
+			<Photo file="cm/cm_chennairanfamily-on-scooter-jpg.jpg" dur={f.child - f.four} move={[0.04, 0.2, 0.03, -0.02]} grade="modern" depth={0.2} />
+			<Stamp text="CHENNAI" sub="A FAMILY ON ONE SCOOTER, IN THE RAIN" at={30} until={f.seen - f.four} />
+		</Shot>
+		<Shot a={f.child} b={f.march} name="scooter-child">
+			<Photo file="cm/cm_family-on-scooter-bangalore-india-162883.jpg" dur={f.march - f.child} move={[0.18, 0.3, 0.04, 0.06, 0.0, 0.01]} grade="modern" depth={0.2} />
 		</Shot>
 		{/* MARCH: Jaguar Land Rover */}
 		<Shot a={f.march} b={f.ford} name="cal-march" atmos={false}>
@@ -216,7 +211,11 @@ export const TwentyOhEight: React.FC = () => (
 			</Darkening>
 		</Shot>
 		<Shot a={f.date} b={f.storm} name="the-date" atmos={false}>
+			<AbsoluteFill style={{filter: 'brightness(0.42) contrast(1.1)'}}>
+				<Photo file="cm/cm_rain-soaked-taj-mahal-palace-hotel-35980.jpg" dur={f.storm - f.date} move={[0.02, 0.14, 0.0, 0.0, 0.01, -0.01]} grade="night" depth={0.14} />
+			</AbsoluteFill>
 			<OnBlack
+				bg="transparent"
 				lines={[
 					{text: '26 NOVEMBER 2008', at: 12, serif: true, size: 64},
 					{text: 'NIGHT', at: f.night - f.date, size: 26},
@@ -233,22 +232,38 @@ export const TwentyOhEight: React.FC = () => (
 			<LowerThird name="JAMSETJI'S HOTEL" role="OPENED IN 1903" at={30} until={f.inside - f.jamsetji} />
 		</Shot>
 		{/* the staff: spaces and silhouettes, never faces */}
-		<Shot a={f.inside} b={f.ordinary} name="corridor" atmos={false} tag="ILLUSTRATION">
-			<Corridor outFrom={30} outStep={36} walkFrom={f.stay - f.inside} />
+		<Shot a={f.inside} b={f.ordinary} name="corridor" leak={colors.ember}>
+			<AbsoluteFill style={{filter: 'brightness(0.8) saturate(0.75)'}}>
+				<Photo file="cm/cm_staircase-taj-hotel-jpg.jpg" dur={f.ordinary - f.inside} move={[0.04, 0.22, 0.0, 0.0, 0.02, -0.03]} grade="night" depth={0.18} />
+			</AbsoluteFill>
 		</Shot>
-		<Shot a={f.ordinary} b={f.banquet} name="uniforms" tag="ILLUSTRATION">
-			<Uniforms at={[20, f.cooks - f.ordinary, f.managers - f.ordinary]} allAt={f.likeUs - f.ordinary} />
+		<Shot a={f.ordinary} b={f.banquet} name="uniforms" leak={colors.ember}>
+			<AbsoluteFill style={{filter: 'brightness(0.6) saturate(0.7)'}}>
+				<Photo file="cm/cm_taj-reception-jpg.jpg" dur={f.banquet - f.ordinary} move={[0.06, 0.2, 0.0, 0.0, 0.02, -0.02]} grade="night" depth={0.16} />
+			</AbsoluteFill>
+			<Kinetic text="WAITERS" at={f.waiters - f.ordinary} until={f.banquet - f.ordinary} size={46} y={-90} />
+			<Kinetic text="COOKS" at={f.cooks - f.ordinary} until={f.banquet - f.ordinary} size={46} y={-10} />
+			<Kinetic text="MANAGERS" at={f.managers - f.ordinary} until={f.banquet - f.ordinary} size={46} y={70} />
 		</Shot>
-		<Shot a={f.banquet} b={f.kitchens} name="banquet-hall" atmos={false} tag="ILLUSTRATION">
-			<BanquetHall doorsAt={f.locks - f.banquet} lightsAt={f.lights - f.banquet} />
+		<Shot a={f.banquet} b={f.kitchens} name="banquet-hall" atmos={false}>
+			<Darkening from={f.lights - f.banquet}>
+				<Photo file="cm/cm_india-mumbai-magnifient-interior-stairca.jpg" dur={f.kitchens - f.banquet} move={[0.02, 0.18, -0.02, 0.02]} grade="night" depth={0.16} />
+			</Darkening>
 			<Kinetic text="MORE THAN SIXTY GUESTS · SILENT IN THE DARK" at={f.sixty - f.banquet + 30} until={f.kitchens - f.banquet} size={30} y={-400} />
 		</Shot>
-		<Shot a={f.kitchens} b={f.kang} name="kitchen-doors" atmos={false} tag="ILLUSTRATION">
-			<KitchenDoors stopAt={f.killed - f.kitchens} />
+		<Shot a={f.kitchens} b={f.kang} name="back-entrance" atmos={false}>
+			<Fading from={f.killed - f.kitchens}>
+				<Photo file="cm/cm_2008-mumbai-terror-attacks-taj-back-entr.jpg" dur={f.kang - f.kitchens} move={[0.2, 0.3, 0.07, 0.08, 0.0, 0.01]} grade="steel" depth={0.16} />
+			</Fading>
+			<Stamp text="THE TAJ'S BACK ENTRANCE" sub="2008" at={30} until={f.killed - f.kitchens} />
 		</Shot>
 		{/* no licensed photograph of Karambir Singh Kang: his name, quietly */}
 		<Shot a={f.kang} b={f.rest} name="kang" atmos={false}>
+			<AbsoluteFill style={{filter: 'brightness(0.32) saturate(0.4)'}}>
+				<Photo file="H012c.jpg" dur={f.rest - f.kang} move={[0.04, 0.12]} grade="night" depth={0.1} />
+			</AbsoluteFill>
 			<OnBlack
+				bg="transparent"
 				lines={[
 					{text: 'KARAMBIR SINGH KANG', at: 20, serif: true, size: 60},
 					{text: 'GENERAL MANAGER, THE TAJ', at: 60, size: 26},
@@ -256,7 +271,7 @@ export const TwentyOhEight: React.FC = () => (
 			/>
 		</Shot>
 		<Shot a={f.rest} b={f.thirtyOne} name="ratan-asks">
-			<DeskPrint file="raw/wm/G002_54_ratantata-jpg.jpg" at={-40} width={520} rotate={-1} grade="archive" seed="ratan-taj" />
+			<PortraitPlate file="assets/media/raw/wm/G002_54_ratantata-jpg.jpg" place="assets/media/H012d.jpg" side="left" share={0.46} focus="50% 25%" grade="steel" />
 		</Shot>
 		<Shot a={f.thirtyOne} b={f.three} name="candle">
 			<Footage file={`${M}/pix/pixabay_31440.mp4`} startFrom={2 * 60} grade="modern" />
