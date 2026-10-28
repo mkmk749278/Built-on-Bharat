@@ -133,7 +133,7 @@ export const Bill: React.FC = () => (
 		</Shot>
 		<Shot a={f.june} b={f.end} name="ai171" atmos={false}>
 			<AbsoluteFill style={{opacity: 0.85}}>
-				<Footage file={`${M}/pix/pixabay_51749.mp4`} startFrom={2 * 60} grade="modern" />
+				<Footage file={`${M}/pix/pixabay_51749.mp4`} startFrom={0} rate={0.8} grade="modern" />
 			</AbsoluteFill>
 			<OnBlack
 				bg="transparent"

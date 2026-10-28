@@ -73,7 +73,7 @@ fs.writeFileSync(list, shards.map(([a]) => `file 'shard_${String(a).padStart(6, 
 const missing = shards.filter(([a]) => !fs.existsSync(path.join(out, `shard_${String(a).padStart(6, '0')}.mp4`)));
 if (missing.length) throw new Error(`missing shards: ${missing.map(([a]) => a).join(', ')}`);
 const args = ['-y', '-v', 'error', '-f', 'concat', '-safe', '0', '-i', list];
-if (audio) args.push('-i', audio, '-map', '0:v', '-map', '1:a', '-c:a', 'aac', '-b:a', '320k', '-ac', '2');
+if (audio) args.push('-i', audio, '-map', '0:v', '-map', '1:a', '-c:a', 'aac', '-b:a', '320k', '-ac', '2', '-shortest');
 args.push('-c:v', 'copy', '-movflags', '+faststart', final);
 execFileSync('ffmpeg', args);
 const probe = (stream) => Number(execFileSync('ffprobe', ['-v', 'error', '-select_streams', stream, '-show_entries', 'stream=duration', '-of', 'csv=p=0', final]).toString());
