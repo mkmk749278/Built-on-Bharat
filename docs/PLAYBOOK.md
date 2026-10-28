@@ -763,7 +763,7 @@ parallel sessions from these docs, so a scene can be rebuilt without retiming.
 
 ### 10.5 Rendering
 - **720p first, 4K last (owner, 2026-10-28):** "First render in 720, after finalising we do render everything in 4K."
-  Every review cut renders at 1280×720 (`scale` 0.6666667 on `remotion-render.yml`, CRF 18); the 4K master
+  Every review cut renders at 1280×720 (`scale` "2/3" on `remotion-render.yml`, CRF 18; written as a fraction, since 0.6666667 gives 720.00004 px and Remotion refuses it); the 4K master
   (`scale` 2) runs only once the owner has approved the cut. *Why:* a 4K run takes hours of runner time and is wasted
   if the cut changes; 720p shows the picture, motion and timing well enough on a phone to decide.
 - **Where (owner, 2026-10-28):** full-film and long renders (Blender shots, the 1080p review copy, the 4K master) run on
