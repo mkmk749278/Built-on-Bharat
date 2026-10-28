@@ -151,11 +151,11 @@ export const Answer: React.FC = () => (
 		</Shot>
 		<Shot a={f.hall} b={f.funeral} name="farewell">
 			<Photo file="cm/cm_campus-of-national-centre-for-the-perfor.jpg" dur={f.funeral - f.hall} move={[0.02, 0.2, 0.02, -0.02]} grade="archive" depth={0.16} />
-			<Stamp text="THE NCPA · SOUTH MUMBAI" sub="WHERE THOUSANDS CAME TO SAY GOODBYE, OCTOBER 2024" at={20} until={f.funeral - f.hall} />
+			<Stamp text="THE NCPA · SOUTH MUMBAI" sub="ARCHIVAL PHOTOGRAPH" at={20} until={f.funeral - f.hall} />
 		</Shot>
 		<Shot a={f.funeral} b={f.noel} name="state-funeral">
-			<PortraitPlate file="assets/media/raw/wm/G002_54_ratantata-jpg.jpg" place="assets/media/cm/cm_campus-of-national-centre-for-the-perfor.jpg" side="left" share={0.5} focus="50% 25%" grade="archive" push={[1.04, 1.12]} />
-			<Stamp text="A STATE FUNERAL" sub="MUMBAI · OCTOBER 2024" at={20} until={f.noel - f.funeral} />
+			<PortraitPlate file="assets/media/cm/ratan_tata_dgr_girish.jpg" place="assets/media/cm/cm_campus-of-national-centre-for-the-perfor.jpg" side="left" share={0.42} focus="50% 22%" grade="archive" push={[1.0, 1.05]} />
+			<Stamp text="A STATE FUNERAL" sub="MUMBAI" at={20} until={f.noel - f.funeral} />
 		</Shot>
 		<Shot a={f.noel} b={f.cracks} name="noel">
 			<PortraitPlate file="assets/media/raw/wm/J010_01_noel-tata-png.jpg" place="assets/media/raw/wm/A005_02_bombay-house-mast-jpg.jpg" side="right" share={0.44} focus="50% 25%" grade="modern" />
