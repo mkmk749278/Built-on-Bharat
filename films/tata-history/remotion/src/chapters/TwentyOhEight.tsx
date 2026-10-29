@@ -139,7 +139,7 @@ export const TwentyOhEight: React.FC = () => (
 		<Shot a={f.nano} b={f.costs} name="nano">
 			<Photo file="H001c.jpg" dur={f.costs - f.nano} move={[0.0, 0.2, 0.02, -0.02]} grade="modern" depth={0.12} />
 			<Kinetic text="THE NANO" at={6} until={f.lakh - f.nano} display size={110} scrim={0.6} />
-			<CounterAt to={100000} start={f.lakh - f.nano} land={f.lakh - f.nano + 70} prefix="₹" size={140} label="ONE LAKH RUPEES" />
+			<CounterAt to={100000} start={f.lakh - f.nano} land={f.lakh - f.nano + 70} prefix="Rs. " size={140} label="ONE LAKH RUPEES" />
 		</Shot>
 		<Shot a={f.costs} b={f.promise} name="costs">
 			<TapeFrame file={`${M}/footage/Y02_nano_launch_2.mp4`} startFrom={155 * 60} scan={false} label="DELHI AUTO EXPO · 10 JANUARY 2008" />

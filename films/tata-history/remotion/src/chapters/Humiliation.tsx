@@ -92,7 +92,7 @@ export const Humiliation: React.FC = () => {
 		<AbsoluteFill style={{background: '#0B0B0C'}}>
 			{/* 1991 */}
 			<Shot a={0} b={f.opens} name="india-1991" fadeIn={8}>
-				<Photo file="G010a.jpg" dur={f.opens} move={[0.0, 0.2, 0.02, -0.02]} grade="archive" depth={0.14} />
+				<Photo file="G010a.jpg" dur={f.opens} move={[0.0, 0.2, 0.02, -0.02]} grade="modern" depth={0.14} />
 				<Kinetic text="1991" at={4} until={f.crisis - 6} display size={170} />
 				<Stamp text="INDIA · 1991" sub="A STREET THAT YEAR" at={f.crisis} until={f.opens} />
 			</Shot>
@@ -107,7 +107,7 @@ export const Humiliation: React.FC = () => {
 				<Print file={`${M}/raw/wm/G002_54_ratantata-jpg.jpg`} at={f.quiet - f.hands} width={420} x={320} rotate={2} grade="modern" seed="rt-h" />
 			</Shot>
 			<Shot a={f.ratan} b={f.look} name="ratan">
-				<PortraitPlate file="assets/media/raw/wm/G002_55_shri-ratan-naval-tata-jpg.jpg" place="assets/media/raw/wm/A005_02_bombay-house-mast-jpg.jpg" side="right" share={0.48} focus="50% 22%" grade="modern" />
+				<PortraitPlate file="assets/media/raw/wm/G002_55_shri-ratan-naval-tata-jpg.jpg" place="assets/media/B009d.jpg" side="right" share={0.48} focus="50% 22%" grade="modern" />
 				<LowerThird name="RATAN NAVAL TATA" role="CHAIRMAN OF THE TATA GROUP, 1991 TO 2012" at={10} until={f.look - f.ratan} />
 			</Shot>
 			{/* a boy raised by his grandmother: an empty room, a curtain in the wind */}
@@ -118,8 +118,7 @@ export const Humiliation: React.FC = () => {
 			</Shot>
 			<Shot a={f.arch} b={f.home} name="architecture" atmos={false}>
 				<Photo file="cm/cm_cornell-university-sibley-hall-01-jpg.jpg" dur={f.home - f.arch} move={[0.02, 0.16, 0.02, -0.02]} grade="archive" depth={0.16} />
-				<Stamp text="CORNELL UNIVERSITY" sub="ITHACA, NEW YORK · TODAY" at={20} until={f.home - f.arch} />
-				<Kinetic text="ARCHITECTURE · CORNELL, AMERICA" at={30} until={f.home - f.arch} size={40} y={430} />
+				<Stamp text="CORNELL UNIVERSITY" sub="HE STUDIED ARCHITECTURE HERE · ITHACA, NEW YORK, TODAY" at={20} until={f.home - f.arch} />
 			</Shot>
 			<Shot a={f.home} b={f.first} name="home" tag="ILLUSTRATIVE FOOTAGE">
 				<Camera seed="wing" keys={[{f: 0, scale: 1.0}, {f: f.first - f.home, scale: 1.08}]}>
@@ -136,8 +135,7 @@ export const Humiliation: React.FC = () => {
 				<Stamp text="JAMSHEDPUR" sub="TWO YEARS AT THE BLAST FURNACE" at={20} until={f.lime - f.steel} />
 			</Shot>
 			<Shot a={f.man} b={f.bet} name="workers">
-				<CaptionCrop file={`${M}/footage/Y04_jamshedpur_100.mp4`} startFrom={49.5 * 60} rate={0.55} />
-				<Stamp text="JAMSHEDPUR'S STEELWORKERS" sub="FROM A JAMSHEDPUR CENTENARY FILM" at={30} until={f.picture - f.man} />
+				<TapeFrame file={`${M}/footage/Y05_steelmaking.mp4`} startFrom={116 * 60} label="JAMSHEDPUR · FROM AN OLD TATA STEEL FILM" />
 			</Shot>
 			{/* the architect's lines become a car */}
 			<Shot a={f.bet} b={f.indica} name="drawing-a-car" atmos={false} tag="ILLUSTRATION">
@@ -247,14 +245,11 @@ export const Humiliation: React.FC = () => {
 				<AbsoluteFill style={{background: 'radial-gradient(ellipse 38% 32% at 50% 52%, rgba(8,8,10,0.78) 0%, transparent 100%)'}} />
 				<YearRoller from={1907} to={2007} start={20} land={f.next - f.hundred - 90} label="BRITISH STEEL · NOW TATA'S" />
 			</Shot>
-			<Shot a={f.next} b={f.proudest} name="tested">
-				<PortraitPlate file="assets/media/raw/wm/G002_51_ratan-naval-tata-in-2011-jpg.jpg" place="assets/media/B009c.jpg" side="right" share={0.46} focus="50% 25%" grade="modern" />
-			</Shot>
-			{/* four pages of 2008 */}
-			<Shot a={f.proudest} b={f.end} name="calendar-2008" atmos={false}>
+			{/* four pages of 2008 (v8: from "the next year", not over a smiling portrait that would lead into 26/11) */}
+			<Shot a={f.next} b={f.end} name="calendar-2008" atmos={false}>
 				<Desk light="rgba(255,190,120,0.16)" />
-				<Camera seed="cal" keys={[{f: 0, scale: 1.0}, {f: f.end - f.proudest, scale: 1.1, y: -10}]}>
-					<DeskCalendar tears={[f.biggest - f.proudest - 6, f.hardest - f.proudest - 6, f.darkest - f.proudest - 6]} scale={1.05} />
+				<Camera seed="cal" keys={[{f: 0, scale: 1.0}, {f: f.end - f.next, scale: 1.12, y: -10}]}>
+					<DeskCalendar tears={[f.biggest - f.next - 6, f.hardest - f.next - 6, f.darkest - f.next - 6]} scale={1.05} />
 				</Camera>
 				<Kinetic text="2008" at={6} until={f.end - f.proudest} display size={60} y={-470} color={colors.gold} />
 			</Shot>

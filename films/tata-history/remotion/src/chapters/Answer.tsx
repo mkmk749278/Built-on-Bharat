@@ -107,15 +107,10 @@ export const Answer: React.FC = () => (
 		<Shot a={f.why} b={f.because} name="rich-list" tag="ILLUSTRATION">
 			<RichList dur={f.because - f.why} holdFrom={f.because - f.why - 60} />
 		</Shot>
-		<Shot a={f.because} b={f.sits} name="bombay-house">
-			<Photo file="raw/wm/A005_02_bombay-house-mast-jpg.jpg" dur={f.sits - f.because} move={[0.02, 0.18, 0.01, -0.01]} grade="steel" depth={0.14} />
-			<Stamp text="BOMBAY HOUSE" sub="TATA SONS · MUMBAI" at={20} until={f.sits - f.because} />
-		</Shot>
-		{/* signature 8: the ownership machine, on the voice's numbers */}
-		<Shot a={f.sits} b={f.salt} name="ownership" atmos={false}>
+		{/* signature 8: the ownership machine, on the voice's numbers (v8: from "Because", in the machine room, no façade) */}
+		<Shot a={f.because} b={f.salt} name="ownership" atmos={false}>
 			<OwnershipFlow
-				t={{sons: 10, trusts: f.twoThirds - f.sits, dorabji: f.biggest - f.sits, shapoorji: f.shapoorji - f.sits, companies: f.own - f.sits, up: 1e9, out: 1e9}}
-				background="assets/media/raw/wm/A005_02_bombay-house-mast-jpg.jpg"
+				t={{sons: f.sits - f.because + 10, trusts: f.twoThirds - f.because, dorabji: f.biggest - f.because, shapoorji: f.shapoorji - f.because, companies: f.own - f.because, up: 1e9, out: 1e9}}
 			/>
 		</Shot>
 		{/* salt and tea: a share flows up to the trusts, and out */}
@@ -128,7 +123,7 @@ export const Answer: React.FC = () => (
 			</Camera>
 		</Shot>
 		<Shot a={f.flows} b={f.out} name="up-to-the-trusts" atmos={false}>
-			<OwnershipFlow t={{...FLOW_HELD, up: 0, out: 1e9}} background="assets/media/raw/wm/A005_02_bombay-house-mast-jpg.jpg" />
+			<OwnershipFlow t={{...FLOW_HELD, up: 0, out: 1e9}} />
 		</Shot>
 		<Shot a={f.out} b={f.research} name="hospitals">
 			<Photo file="E005a.jpg" dur={f.research - f.out} move={[0.0, 0.14]} grade="modern" depth={0.06} />
@@ -142,7 +137,7 @@ export const Answer: React.FC = () => (
 			<Photo file="cm/cm_school-children-wash-in-schools-india-26.jpg" dur={f.design - f.scholarships} move={[0.04, 0.18, 0.0, 0.0, 0.02, -0.02]} grade="modern" depth={0.18} />
 		</Shot>
 		<Shot a={f.design} b={f.died} name="held-together" atmos={false}>
-			<OwnershipFlow t={FLOW_HELD} background="assets/media/raw/wm/A005_02_bombay-house-mast-jpg.jpg" />
+			<OwnershipFlow t={FLOW_HELD} />
 		</Shot>
 		{/* October 2024 */}
 		<Shot a={f.died} b={f.hall} name="ratan-dies">
@@ -151,14 +146,14 @@ export const Answer: React.FC = () => (
 		</Shot>
 		<Shot a={f.hall} b={f.funeral} name="farewell">
 			<Photo file="cm/cm_campus-of-national-centre-for-the-perfor.jpg" dur={f.funeral - f.hall} move={[0.02, 0.2, 0.02, -0.02]} grade="archive" depth={0.16} />
-			<Stamp text="THE NCPA · SOUTH MUMBAI" sub="ARCHIVAL PHOTOGRAPH" at={20} until={f.funeral - f.hall} />
+			<Stamp text="THE NCPA · SOUTH MUMBAI" sub="THE BUILDING, PHOTOGRAPHED IN 2024" at={20} until={f.funeral - f.hall} />
 		</Shot>
 		<Shot a={f.funeral} b={f.noel} name="state-funeral">
 			<PortraitPlate file="assets/media/cm/ratan_tata_dgr_girish.jpg" place="assets/media/cm/cm_campus-of-national-centre-for-the-perfor.jpg" side="left" share={0.42} focus="50% 22%" grade="archive" push={[1.0, 1.05]} />
 			<Stamp text="A STATE FUNERAL" sub="MUMBAI" at={20} until={f.noel - f.funeral} />
 		</Shot>
 		<Shot a={f.noel} b={f.cracks} name="noel">
-			<PortraitPlate file="assets/media/raw/wm/J010_01_noel-tata-png.jpg" place="assets/media/raw/wm/A005_02_bombay-house-mast-jpg.jpg" side="right" share={0.44} focus="50% 25%" grade="modern" />
+			<PortraitPlate file="assets/media/raw/wm/J010_01_noel-tata-png.jpg" place="assets/media/B009d.jpg" side="right" share={0.44} focus="50% 25%" grade="modern" />
 			<LowerThird name="NOEL TATA" role="CHAIRMAN OF THE TATA TRUSTS" at={30} until={f.cracks - f.noel} />
 		</Shot>
 		{/* 2026 */}
@@ -173,8 +168,8 @@ export const Answer: React.FC = () => (
 			<Stamp text="SEPTEMBER 2026" sub="THE TATA SONS BOARD" at={10} until={f.voted - f.board} />
 		</Shot>
 		<Shot a={f.trusts} b={f.catch} name="two-sides">
-			<Photo file="raw/wm/A005_02_bombay-house-mast-jpg.jpg" dur={f.catch - f.trusts} move={[0.26, 0.34]} grade="steel" depth={0.14} />
-			<AbsoluteFill style={{background: 'rgba(8,9,11,0.6)'}} />
+			<OwnershipFlow t={FLOW_HELD} />
+			<AbsoluteFill style={{background: 'rgba(8,9,11,0.45)'}} />
 			<Kinetic text="THE TRUSTS: THE DECISION DOES NOT COUNT" at={10} until={f.catch - f.trusts} size={40} y={-60} />
 			<Kinetic text="TATA SONS: IT DOES" at={f.sons - f.trusts} until={f.catch - f.trusts} size={40} y={40} color={colors.gold} />
 		</Shot>
@@ -183,13 +178,17 @@ export const Answer: React.FC = () => (
 			<Photo file="raw/wm/J011_06_rbi-tower-jpg.jpg" dur={f.public - f.catch} move={[0.02, 0.18, 0.0, 0.0, 0.03, -0.02]} grade="steel" depth={0.14} />
 			<LowerThird name="RESERVE BANK OF INDIA" role="MUMBAI" at={f.rbi - f.catch + 20} until={f.public - f.catch} />
 		</Shot>
-		<Shot a={f.public} b={f.notOver} name="listing">
-			<Photo file="G008a.jpg" dur={f.notOver - f.public} move={[0.0, 0.2, 0.0, 0.0, 0.02, -0.04]} grade="modern" depth={0.12} />
+		<Shot a={f.public} b={f.letOff} name="listing">
+			<Photo file="G008a.jpg" dur={f.letOff - f.public} move={[0.0, 0.2, 0.0, 0.0, 0.02, -0.04]} grade="modern" depth={0.12} />
 			<Stamp text="SELL SHARES TO THE PUBLIC" sub="BOMBAY STOCK EXCHANGE" at={20} until={f.letOff - f.public} />
-			<Kinetic text="THE R.B.I. SAID NO" at={f.no - f.public} until={f.notOver - f.public} display size={80} scrim={0.6} />
+		</Shot>
+		{/* v8: the refusal lands on the RBI itself, not on the stock exchange */}
+		<Shot a={f.letOff} b={f.notOver} name="rbi-no">
+			<Photo file="raw/wm/J011_06_rbi-tower-jpg.jpg" dur={f.notOver - f.letOff} move={[0.18, 0.3, 0.0, 0.0, 0.0, -0.02]} grade="steel" depth={0.14} />
+			<Kinetic text="THE R.B.I. SAID NO" at={f.no - f.letOff} until={f.notOver - f.letOff} display size={80} scrim={0.6} />
 		</Shot>
 		<Shot a={f.notOver} b={f.work} name="at-rest" atmos={false}>
-			<OwnershipFlow t={FLOW_HELD} background="assets/media/raw/wm/A005_02_bombay-house-mast-jpg.jpg" />
+			<OwnershipFlow t={FLOW_HELD} />
 		</Shot>
 		{/* Dholera: the same bet, again */}
 		<Shot a={f.work} b={f.dholera} name="work-goes-on">
@@ -213,8 +212,7 @@ export const Answer: React.FC = () => (
 		</Shot>
 		<Shot a={f.abroad} b={f.first} name="abroad">
 			<Photo file="cm/cm_photolithography-lab-in-the-lcn-cleanroo.jpg" dur={f.first - f.abroad} move={[0.02, 0.18, 0.02, -0.02]} grade="modern" depth={0.16} />
-			<Stamp text="A CHIP CLEANROOM" sub="LONDON" at={20} until={f.first - f.abroad} />
-			<Kinetic text="ALMOST ALL OF INDIA'S CHIPS · BOUGHT FROM ABROAD" at={30} until={f.first - f.abroad} size={36} y={380} scrim={0.6} />
+			<Stamp text="A CHIP CLEANROOM" sub="ALMOST ALL OF INDIA'S CHIPS ARE BOUGHT FROM ABROAD" at={20} until={f.first - f.abroad} />
 		</Shot>
 		<Shot a={f.first} b={f.y2028} name="first-fab">
 			<Photo file="cm/cm_clean-room-jpg.jpg" dur={f.y2028 - f.first} move={[0.04, 0.2, 0.0, 0.02]} grade="cyan" depth={0.16} />
@@ -255,7 +253,7 @@ export const Answer: React.FC = () => (
 			<PortraitPlate file="assets/media/raw/wm/J_14_sudha-murty-at-jaipur-literature-festiva.jpg" place="assets/media/E002a.jpg" side="right" share={0.46} focus="50% 25%" grade="modern" />
 		</Shot>
 		<Shot a={f.shovel} b={f.common} name="rc-shovel" leak={colors.ember}>
-			<ArchiveClip file={`${M}/footage/Y04_jamshedpur_100.mp4`} startFrom={60 * 60} rate={0.6} clear={0.26} anchor="50% 0%" grade="furnace" />
+			<ArchiveClip file={`${M}/footage/Y05_steelmaking.mp4`} startFrom={123 * 60} rate={0.6} anchor="50% 50%" grade="furnace" />
 		</Shot>
 		<Shot a={f.common} b={f.savings} name="six">
 			<SixPrints
@@ -280,13 +278,10 @@ export const Answer: React.FC = () => (
 		<Shot a={f.diamond} b={f.fortune} name="echo-diamond">
 			<PortraitPlate file={`${M}/E003a.jpg`} place={`${M}/A001a.jpg`} side="right" share={0.42} focus="50% 18%" />
 		</Shot>
-		<Shot a={f.fortune} b={f.hundred} name="your-place">
-			<DepthPhoto file={`${M}/loc7/L03c.jpg`} keys={[{f: 0, dolly: 0.1, x: -0.02, y: -0.06}, {f: f.hundred - f.fortune, dolly: 0.36, x: -0.05, y: -0.13}]} depth={0.24} grade="archive" />
+		<Shot a={f.fortune} b={f.belong} name="your-place">
+			<DepthPhoto file={`${M}/loc7/L03c.jpg`} keys={[{f: 0, dolly: 0.1, x: -0.02, y: -0.06}, {f: f.belong - f.fortune, dolly: 0.42, x: -0.06, y: -0.15}]} depth={0.24} grade="archive" />
 		</Shot>
 		{/* the question */}
-		<Shot a={f.hundred} b={f.belong} name="bombay-house-last">
-			<Photo file="raw/wm/A005_02_bombay-house-mast-jpg.jpg" dur={f.belong - f.hundred} move={[0.2, 0.32, 0.0, 0.0, 0.02, 0.0]} grade="night" depth={0.14} />
-		</Shot>
 		<Shot a={f.belong} b={f.think} name="stone-alone" tag="RECONSTRUCTION">
 			<Camera seed="alone" keys={[{f: 0, scale: 1.0}, {f: f.think - f.belong, scale: 1.08}]}>
 				<FrameSeq dir={`${B}/c2`} prefix="c2_" last={322} from={322} />

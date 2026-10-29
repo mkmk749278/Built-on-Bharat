@@ -81,8 +81,9 @@ export const Pilot: React.FC = () => (
 			<Stamp text="PARIS" sub="AROUND 1900" at={20} until={f.joined - f.paris} />
 		</Shot>
 		<Shot a={f.joined} b={f.licence} name="apprentice">
-			<Photo file="raw/wm/A005_02_bombay-house-mast-jpg.jpg" dur={f.licence - f.joined} move={[0.04, 0.18, 0.01, -0.01]} grade="archive" depth={0.14} />
-			<Stamp text="BOMBAY HOUSE" sub="TATA'S HEAD OFFICE, TODAY" at={20} until={f.apprentice - f.joined} />
+			{/* v8: a Bombay business street of the period (LoC), not today's Bombay House with its window AC units */}
+			<Photo file="loc7/L01c.jpg" dur={f.licence - f.joined} move={[0.04, 0.18, 0.01, -0.01]} grade="archive" depth={0.2} />
+			<Stamp text="BOMBAY" sub="A BUSINESS STREET OF THE TIME" at={20} until={f.apprentice - f.joined} />
 			<Kinetic text="1925 · APPRENTICE · NO PAY" at={f.apprentice - f.joined + 30} until={f.licence - f.joined} display size={72} />
 		</Shot>
 		<Shot a={f.licence} b={f.oct} name="licence">
@@ -188,12 +189,13 @@ export const Pilot: React.FC = () => (
 		{/* 1978: his favourite child taken away */}
 		<Shot a={f.kindly} b={f.night} name="removed">
 			<Fading from={f.removes - f.kindly}>
-				<Photo file="F048a.jpg" dur={f.night - f.kindly} move={[0.2, 0.02, -0.02, 0.0]} grade="archive" depth={0.14} />
+				{/* v8: J.R.D. at Air India in his later years (age-matched), not a 1950s Constellation */}
+				<Photo file="v8/V8_jrd_747.jpg" dur={f.night - f.kindly} move={[0.2, 0.06, 0.02, 0.0]} grade="archive" depth={0.1} />
 			</Fading>
 			<Stamp text="FEBRUARY 1978" at={f.feb - f.kindly} until={f.removes - f.kindly + 40} />
 		</Shot>
 		<Shot a={f.night} b={f.end} name="favourite-child">
-			<PortraitPlate file={`${M}/raw/wm/F001_38_j-r-d-tata-1955-jpg.jpg`} place={`${M}/F048a.jpg`} side="right" share={0.5} focus="50% 25%" push={[1.06, 1.16]} />
+			<PortraitPlate file={`${M}/v8/V8_jrd_older.jpg`} place={`${M}/F048a.jpg`} side="right" share={0.5} focus="60% 30%" push={[1.06, 1.16]} />
 		</Shot>
 	</AbsoluteFill>
 );

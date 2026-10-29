@@ -3,7 +3,7 @@ import {AbsoluteFill, useCurrentFrame} from 'remotion';
 import {Img, staticFile} from 'remotion';
 import {colors, Desk, Footage, Kinetic, LowerThird, PortraitPlate, Print, QuoteCard, Stamp, TableDoc, tween} from '../../../../../lib/remotion';
 import {DepthPhoto} from '../../../../../lib/remotion/three/DepthPhoto';
-import {Table} from '../v7';
+import {Table, TablePhoto} from '../v7';
 import {PLACES} from '../../../../../lib/remotion/map';
 import {chapterClock, CounterAt, DeskPrint, Photo, Shot} from '../kit';
 import {CottonCrash, DebtLedger, PlaceMap, Sums, TrioPins} from '../shots/ch1';
@@ -177,7 +177,7 @@ export const Dreamer: React.FC = () => (
 			<Print file="assets/media/B003b.jpg" at={6} width={430} x={-470} rotate={-3} seed="oval" />
 			{/* the year stands apart from the portrait (a later photograph), so it never reads as the photo's date */}
 			<Kinetic text="1868" at={6} until={f.rupees - f.y1868 - 44} display size={130} x={300} />
-			<CounterAt to={21000} start={f.rupees - f.y1868 - 40} land={f.rupees - f.y1868} prefix="₹" size={150} x={300} />
+			<CounterAt to={21000} start={f.rupees - f.y1868 - 40} land={f.rupees - f.y1868} prefix="Rs. " size={150} x={300} />
 		</Shot>
 		<Shot a={f.ever} b={f.begins} name="ordinary-faces" leak={colors.ember}>
 			<DepthPhoto file="assets/media/loc7/L03c.jpg" keys={[{f: 0, dolly: 0.12, y: 0.05}, {f: f.begins - f.ever, dolly: 0.3, y: 0.07}]} depth={0.22} grade="archive" />
@@ -214,26 +214,28 @@ export const Dreamer: React.FC = () => (
 		<Shot a={f.mill} b={f.opens} name="nagpur" atmos={false}>
 			<PlaceMap pinAt={f.nagpur - f.mill} place={PLACES.nagpur} label="NAGPUR" sub="WHERE THE COTTON GROWS" dim={{at: PLACES.bombay, label: 'BOMBAY'}} />
 		</Shot>
-		<Shot a={f.opens} b={f.strange} name="proclamation">
-			<Photo file="B006a.jpg" dur={f.strange - f.opens} move={[0.0, 0.16, 0.02, -0.02]} depth={0.2} />
+		<Shot a={f.opens} b={f.names} name="proclamation">
+			<Photo file="B006a.jpg" dur={f.names - f.opens} move={[0.0, 0.12, 0.02, -0.01]} depth={0.2} />
 			<Stamp text="1 JANUARY 1877" sub="VICTORIA PROCLAIMED EMPRESS OF INDIA" at={10} until={f.names - f.opens} />
-			<Kinetic text="EMPRESS MILLS" at={f.names - f.opens} until={f.strange - f.opens} display size={96} color={colors.gold} />
 		</Shot>
-		{/* a pension fund; healthy workers */}
-		<Shot a={f.strange} b={f.firstJob} name="workers-1895">
-			<Table seed="w1895" keys={[{f: 0, scale: 1.7, x: 40, y: 20}, {f: f.firstJob - f.strange, scale: 1.95, x: 60, y: 30}]}>
-				<TableDoc w={20} h={18.4} x={0} y={0} rot={-2.5} at={4} paper="#EFE7D6" seed="w95">
-					<Img src={staticFile('assets/media/loc7/L04.jpg')} style={{position: 'absolute', inset: 18, width: 'calc(100% - 36px)', height: 'calc(100% - 36px)', objectFit: 'cover', filter: 'sepia(0.45) contrast(1.08) brightness(0.95)'}} />
-				</TableDoc>
-			</Table>
-			<Stamp text="INDIAN WORKERS · 1890s" sub="A RAILWAY WORKSHOP" at={20} until={f.firstJob - f.strange} />
+		{/* v8: the real mill, from the period photographs in a Tata film (replaces modern stock of a mill today) */}
+		<Shot a={f.names} b={f.strange} name="empress-gate">
+			<TablePhoto file="v8/V8_empress_gate.jpg" dur={f.strange - f.names} aspect={960 / 640} seed="empress-gate" />
+			<Kinetic text="EMPRESS MILLS" at={6} until={f.strange - f.names} display size={96} color={colors.gold} y={-330} />
+			<Stamp text="NAGPUR" sub="FROM A TATA MOTORS FILM" at={30} until={f.strange - f.names} />
 		</Shot>
-		<Shot a={f.firstJob} b={f.pension} name="first-job">
-			<Footage file="assets/media/pix/pixabay_262484.mp4" startFrom={60} grade="modern" />
-			<Stamp text="A TEXTILE MILL · TODAY" at={20} until={f.pension - f.firstJob} />
+		{/* a pension fund; paid when hurt; the viewer's own first job */}
+		<Shot a={f.strange} b={f.firstJob} name="empress-floor">
+			<TablePhoto file="v8/V8_empress_spindles.jpg" dur={f.firstJob - f.strange} aspect={960 / 648} seed="empress-floor" />
+			<Stamp text="THE SPINNING FLOOR" sub="EMPRESS MILLS · FROM A TATA MOTORS FILM" at={20} until={f.firstJob - f.strange} />
 		</Shot>
-		<Shot a={f.pension} b={f.kind} name="pension">
-			<Footage file="assets/media/pix/pixabay_265356.mp4" startFrom={120} grade="modern" />
+		<Shot a={f.firstJob} b={f.pension} name="empress-creche">
+			<TablePhoto file="v8/V8_empress_creche.jpg" dur={f.pension - f.firstJob} aspect={960 / 648} rot={1.2} seed="empress-creche" />
+			<Stamp text="THE MILL CRÈCHE" sub="EMPRESS MILLS" at={20} until={f.pension - f.firstJob} />
+		</Shot>
+		<Shot a={f.pension} b={f.kind} name="empress-dispensary">
+			<TablePhoto file="v8/V8_empress_dispensary.jpg" dur={f.kind - f.pension} aspect={960 / 648} rot={-0.8} seed="empress-disp" />
+			<Stamp text="THE MILL DISPENSARY" sub="EMPRESS MILLS" at={14} until={f.kind - f.pension} />
 		</Shot>
 		<Shot a={f.kind} b={f.famous} name="quote-1895">
 			<QuoteCard
@@ -253,8 +255,9 @@ export const Dreamer: React.FC = () => (
 			<Kinetic text="NO RECORD" at={f.historians - f.famous + 50} until={f.record - f.famous} display size={84} />
 		</Shot>
 		<Shot a={f.record} b={f.designed} name="taj-record">
-			<DeskPrint file="B009b.jpg" at={-10} width={1250} rotate={-1} seed="tajcard2" />
-			<Stamp text="BOMBAY · DECEMBER 1903" sub="THE TAJ MAHAL HOTEL" at={f.opens1903 - f.record} until={f.designed - f.record} />
+			{/* v8: a Clifton & Co. view of about 1905 (KITLV 90282). The c.1930 view (B009b) showed the Gateway, finished 1924 */}
+			<DeskPrint file="v8/V8_taj_c1905.jpg" at={-10} width={1250} rotate={-1} seed="tajcard2" />
+			<Stamp text="BOMBAY · DECEMBER 1903" sub="THE TAJ MAHAL HOTEL · PHOTOGRAPHED ABOUT 1905" at={f.opens1903 - f.record} until={f.designed - f.record} />
 		</Shot>
 		{/* the same building today (the 1903 wing): the architect's dome, then the waterfront crowd */}
 		<Shot a={f.designed} b={f.hold} name="taj-dome" fadeIn={8}>
@@ -276,7 +279,7 @@ export const Dreamer: React.FC = () => (
 		</Shot>
 		<Shot a={f.inst} b={f.hardest} name="iisc" fadeIn={8}>
 			<Photo file="B011a.jpg" dur={f.hardest - f.inst} move={[0.0, 0.18, 0.02, -0.02]} grade="modern" depth={0.07} />
-			<CounterAt to={3000000} start={f.lakhWord - f.inst - 40} land={f.lakhWord - f.inst} prefix="₹" size={120} y={-60} />
+			<CounterAt to={3000000} start={f.lakhWord - f.inst - 40} land={f.lakhWord - f.inst} prefix="Rs. " size={120} y={-60} />
 			<Stamp text="BANGALORE" sub="INDIAN INSTITUTE OF SCIENCE, TODAY" at={20} until={f.hardest - f.inst} />
 		</Shot>
 		{/* steel: ore, coal and water never in one place */}
