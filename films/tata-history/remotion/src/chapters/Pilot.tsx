@@ -190,7 +190,7 @@ export const Pilot: React.FC = () => (
 		<Shot a={f.kindly} b={f.night} name="removed">
 			<Fading from={f.removes - f.kindly}>
 				{/* v8: J.R.D. at Air India in his later years (age-matched), not a 1950s Constellation */}
-				<Photo file="v8/V8_jrd_747.jpg" dur={f.night - f.kindly} move={[0.2, 0.06, 0.02, 0.0]} grade="archive" depth={0.1} />
+				<Photo file="v8/V8_jrd_747.jpg" dur={f.night - f.kindly} move={[0.16, 0.06, 0.1, 0.1]} grade="archive" depth={0.1} />
 			</Fading>
 			<Stamp text="FEBRUARY 1978" at={f.feb - f.kindly} until={f.removes - f.kindly + 40} />
 		</Shot>

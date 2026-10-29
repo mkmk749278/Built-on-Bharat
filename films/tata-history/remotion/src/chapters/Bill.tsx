@@ -89,7 +89,7 @@ export const Bill: React.FC = () => (
 		</Shot>
 		{/* "No." */}
 		<Shot a={f.right} b={f.y2016} name="bombay-house">
-			<Footage file={`${M}/footage/Y11_port_talbot_close.mp4`} startFrom={700 * 60} rate={0.7} grade="steel" />
+			<Footage file={`${M}/footage/Y11_port_talbot_close.mp4`} startFrom={1096 * 60} rate={0.55} grade="steel" />
 			<Kinetic text="NO." at={f.no - f.right} until={f.wrong - f.right + 40} display size={160} scrim={0.6} />
 		</Shot>
 		<Shot a={f.y2016} b={f.court} name="mistry">
@@ -124,7 +124,7 @@ export const Bill: React.FC = () => (
 		</Shot>
 		<Shot a={f.returns} b={f.jrd} name="air-india-today">
 			{/* v8: Air India's own footage of its new livery, its corner logo cropped (the A350 photo carried a Boeing 777X tail) */}
-			<ArchiveClip file={`${M}/footage/Y10_air_india_new.mp4`} startFrom={3.3 * 60} rate={0.8} clear={0.12} anchor="0% 100%" grade="modern" />
+			<ArchiveClip file={`${M}/footage/Y10_air_india_new.mp4`} startFrom={15.4 * 60} rate={0.28} clear={0.12} anchor="50% 100%" grade="modern" />
 			<Stamp text="AIR INDIA · BACK WITH TATA" sub="SIXTY NINE YEARS AFTER 1953" at={30} until={f.jrd - f.returns} />
 		</Shot>
 		<Shot a={f.jrd} b={f.stop} name="jrd-held">

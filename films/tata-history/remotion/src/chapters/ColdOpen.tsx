@@ -1,4 +1,5 @@
 import React from 'react';
+import {TapeFrame} from '../shots/ch3';
 import {AbsoluteFill, Img, Sequence, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 import {
 	Atmosphere,
@@ -272,7 +273,7 @@ export const ColdOpen: React.FC = () => {
 
 			{/* 14 · the stone warms to furnace orange; we go back to the beginning */}
 			<Shot a={f.but} b={f.beginning} name="the-plant" leak={colors.ember}>
-				<ArchiveClip file={`${M}/footage/Y05_steelmaking.mp4`} startFrom={120 * 60} rate={0.6} anchor="50% 50%" grade="furnace" />
+				<TapeFrame file={`${M}/footage/Y05_steelmaking.mp4`} startFrom={120 * 60} rate={0.6} label="FROM AN OLD TATA STEEL FILM" />
 			</Shot>
 			<Shot a={f.beginning} b={f.end} name="priests" fadeIn={16}>
 				<DepthPhoto file={`${M}/B019a.jpg`} keys={[{f: 0, dolly: 0.0, x: -0.02}, {f: f.end - f.beginning, dolly: 0.2, x: 0.02}]} depth={0.2} grade="furnace" />

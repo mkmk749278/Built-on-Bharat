@@ -169,9 +169,9 @@ export const Answer: React.FC = () => (
 		</Shot>
 		<Shot a={f.trusts} b={f.catch} name="two-sides">
 			<OwnershipFlow t={FLOW_HELD} />
-			<AbsoluteFill style={{background: 'rgba(8,9,11,0.45)'}} />
-			<Kinetic text="THE TRUSTS: THE DECISION DOES NOT COUNT" at={10} until={f.catch - f.trusts} size={40} y={-60} />
-			<Kinetic text="TATA SONS: IT DOES" at={f.sons - f.trusts} until={f.catch - f.trusts} size={40} y={40} color={colors.gold} />
+			<AbsoluteFill style={{background: 'rgba(8,9,11,0.72)'}} />
+			<Kinetic text="THE TRUSTS: THE DECISION DOES NOT COUNT" at={10} until={f.catch - f.trusts} size={54} y={-60} />
+			<Kinetic text="TATA SONS: IT DOES" at={f.sons - f.trusts} until={f.catch - f.trusts} size={54} y={50} color={colors.gold} />
 		</Shot>
 		{/* the R.B.I. */}
 		<Shot a={f.catch} b={f.public} name="rbi">
@@ -253,7 +253,7 @@ export const Answer: React.FC = () => (
 			<PortraitPlate file="assets/media/raw/wm/J_14_sudha-murty-at-jaipur-literature-festiva.jpg" place="assets/media/E002a.jpg" side="right" share={0.46} focus="50% 25%" grade="modern" />
 		</Shot>
 		<Shot a={f.shovel} b={f.common} name="rc-shovel" leak={colors.ember}>
-			<ArchiveClip file={`${M}/footage/Y05_steelmaking.mp4`} startFrom={123 * 60} rate={0.6} anchor="50% 50%" grade="furnace" />
+			<TapeFrame file={`${M}/footage/Y05_steelmaking.mp4`} startFrom={116 * 60} label="JAMSHEDPUR · FROM AN OLD TATA STEEL FILM" />
 		</Shot>
 		<Shot a={f.common} b={f.savings} name="six">
 			<SixPrints
