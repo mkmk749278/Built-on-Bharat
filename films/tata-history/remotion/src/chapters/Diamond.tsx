@@ -1,6 +1,6 @@
 import React from 'react';
 import {AbsoluteFill} from 'remotion';
-import {colors, Desk, FrameSeq, Kinetic, LowerThird, PortraitPlate, Print, Stamp} from '../../../../../lib/remotion';
+import {Camera, colors, Desk, FrameSeq, HonestyTag, Kinetic, LowerThird, PortraitPlate, Print, Stamp} from '../../../../../lib/remotion';
 import {DepthPhoto} from '../../../../../lib/remotion/three/DepthPhoto';
 import {Glint, YearRoller} from '../../../../../lib/remotion/kinetic';
 import {chapterClock, CounterAt, DeskPrint, Photo, Shot} from '../kit';
@@ -109,9 +109,8 @@ export const Diamond: React.FC = () => (
 		{/* Dorabji and Meherbai */}
 		{/* each from their own photograph (the 1920s press photo of Lady Meherbai names no one else we can verify) */}
 		<Shot a={f.bought} b={f.courts} name="the-couple">
-			<Desk />
-			<Print file={`${M}/raw/wm/A005_04_dorabji-tata-jpg.jpg`} at={4} width={440} x={-330} rotate={-2.5} seed="dor-c" />
-			<Print file={`${M}/E003a.jpg`} at={40} width={360} x={330} rotate={2} seed="meh-c" />
+			{/* v8: the two of them in one real photograph (1927, BnF) */}
+			<TablePhoto file="A005e.jpg" dur={f.courts - f.bought} aspect={1.38} w={26} seed="couple-1927" />
 		</Shot>
 		<Shot a={f.courts} b={f.hands} name="meherbai" leak={colors.gold}>
 			<DeskPrint file="E003a.jpg" at={-20} width={480} rotate={1.5} seed="meher" />
@@ -139,7 +138,12 @@ export const Diamond: React.FC = () => (
 		</Shot>
 		{/* her diamond, so that families could eat */}
 		<Shot a={f.hers} b={f.eat} name="hers" leak={colors.gold}>
-			<DepthPhoto file={`${M}/A005e.jpg`} keys={[{f: 0, dolly: 0.24, x: 0.09, y: 0.02}, {f: f.eat - f.hers, dolly: 0.32, x: 0.085, y: 0.02}]} depth={0.16} grade="archive" />
+			{/* v8: the stone itself, back on the bank's counter (her photograph is kept for her own moments) */}
+			<Camera seed="hers" keys={[{f: 0, scale: 1.04}, {f: f.eat - f.hers, scale: 1.14, y: -10}]}>
+				<FrameSeq dir={`${BLENDER}/c2`} prefix="c2_" last={322} from={322} rate={0} />
+			</Camera>
+			<AbsoluteFill style={{background: 'radial-gradient(ellipse 30% 26% at 55% 60%, rgba(255,176,96,0.2) 0%, rgba(255,150,80,0) 70%)', mixBlendMode: 'screen'}} />
+			<HonestyTag text="RECONSTRUCTION" />
 		</Shot>
 		{/* families in a steel town: a Tata steelworker's family at home (United Nations photo, 1957) */}
 		<Shot a={f.eat} b={f.back2} name="families">
@@ -148,7 +152,9 @@ export const Diamond: React.FC = () => (
 		</Shot>
 		{/* did they get it back? yes: in the will, 1932 */}
 		<Shot a={f.back2} b={f.will} name="it-came-back">
-			<PortraitPlate file={`${M}/E003a.jpg`} place={`${M}/B017a.jpg`} side="right" share={0.42} focus="50% 18%" />
+			{/* v8: the closed case on the counter, the camera moving round it (Blender c3) */}
+			<FrameSeq dir={`${BLENDER}/c3`} prefix="c3_" last={122} rate={122 / Math.max(1, f.will - f.back2)} />
+			<HonestyTag text="RECONSTRUCTION" />
 		</Shot>
 		<Shot a={f.will} b={f.meher} name="will-year" atmos={false}>
 			<Desk />
@@ -169,9 +175,8 @@ export const Diamond: React.FC = () => (
 			<Stamp text="SIR DORABJI TATA · DIED 1932" at={20} until={f.children - f.dorabji} />
 		</Shot>
 		<Shot a={f.children} b={f.trust} name="the-couple-2">
-			<Desk />
-			<Print file={`${M}/raw/wm/A005_04_dorabji-tata-jpg.jpg`} at={-80} width={400} x={-300} rotate={-2.5} seed="dor-c2" />
-			<Print file={`${M}/E003a.jpg`} at={-80} width={330} x={300} rotate={2} seed="meh-c2" />
+			{/* v8: the two of them together, their own photograph (1927, BnF), held */}
+			<DepthPhoto file={`${M}/A005e.jpg`} keys={[{f: 0, dolly: 0.1, x: 0.0}, {f: f.trust - f.children, dolly: 0.2, x: 0.02}]} depth={0.16} grade="archive" />
 		</Shot>
 		{/* everything to a trust */}
 		<Shot a={f.trust} b={f.name} name="trust-ledger" tag="ILLUSTRATION">

@@ -128,7 +128,7 @@ export const Bill: React.FC = () => (
 			<Stamp text="AIR INDIA · BACK WITH TATA" sub="SIXTY NINE YEARS AFTER 1953" at={30} until={f.jrd - f.returns} />
 		</Shot>
 		<Shot a={f.jrd} b={f.stop} name="jrd-held">
-			<PortraitPlate file="assets/media/jrd/jrd_late.jpg" place="assets/media/F048a.jpg" side="left" share={0.5} focus="50% 30%" grade="archive" />
+			<PortraitPlate file="assets/media/jrd/jrd_late.jpg" place="assets/media/J005a.jpg" side="left" share={0.5} focus="50% 30%" grade="archive" />
 			<LowerThird name="J.R.D. TATA" role="CHAIRMAN 1938 TO 1991 · DIED 1993" at={20} until={f.stop - f.jrd} />
 		</Shot>
 		{/* AI171 (v8, owner's choice): its own quiet card, not the 26/11 candle. No aircraft, no crash imagery: a dark

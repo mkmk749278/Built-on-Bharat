@@ -39,13 +39,40 @@ export const Postcard: React.FC<{at: number; flipAt?: number}> = ({at, flipAt = 
 								{side === 0 ? (
 									<>
 										<div style={{fontFamily: fontStacks.text, fontWeight: 600, fontSize: 30, letterSpacing: '0.4em', color: '#7A2E1C'}}>POST CARD</div>
+										{/* v8: no longer blank. A stamp, a Bangalore postmark of April 1974 and his name in her hand (the
+										    narration's facts only; no address is claimed) */}
 										<div style={{position: 'absolute', right: 40, top: 36, width: 110, height: 130, border: '3px solid #7A2E1C', opacity: 0.7}} />
+										<div style={{position: 'absolute', right: 52, top: 48, width: 86, height: 106, background: 'linear-gradient(160deg, #9B4A2E, #6E2C1B)', outline: '3px dotted #EADBB0', outlineOffset: -4}} />
+										<svg style={{position: 'absolute', right: 96, top: 60, width: 190, height: 190, overflow: 'visible', opacity: 0.62, transform: 'rotate(-14deg)'}} viewBox="-95 -95 190 190">
+											<circle r={78} fill="none" stroke="#2A2A3A" strokeWidth={3} />
+											<circle r={52} fill="none" stroke="#2A2A3A" strokeWidth={2} />
+											<path id="pm-arc" d="M -64 0 A 64 64 0 0 1 64 0" fill="none" />
+											<text fontFamily={fontStacks.text} fontWeight={700} fontSize={17} letterSpacing="0.18em" fill="#2A2A3A">
+												<textPath href="#pm-arc" startOffset="50%" textAnchor="middle">BANGALORE</textPath>
+											</text>
+											<text y={8} textAnchor="middle" fontFamily={fontStacks.text} fontWeight={700} fontSize={20} letterSpacing="0.1em" fill="#2A2A3A">APR 1974</text>
+											{[0, 1, 2, 3].map((k) => <path key={k} d={`M 90 ${-30 + k * 20} q 40 -10 80 0 t 80 0`} fill="none" stroke="#2A2A3A" strokeWidth={3} />)}
+										</svg>
 										<div style={{position: 'absolute', left: 420, top: 110, bottom: 40, width: 2, background: '#7A2E1C', opacity: 0.4}} />
 										{[0, 1, 2, 3].map((k) => (
 											<div key={k} style={{position: 'absolute', left: 450, right: 40, top: 250 + k * 60, height: 2, background: '#7A2E1C', opacity: 0.35}} />
 										))}
+										<div style={{position: 'absolute', left: 462, top: 196, fontFamily: fontStacks.quote, fontStyle: 'italic', fontSize: 50, color: '#1F2A4A', transform: 'rotate(-2deg)'}}>
+											Mr. J.R.D. Tata
+										</div>
 									</>
-								) : null}
+								) : (
+									<>
+										{/* her message, as ink strokes only: we do not invent her words */}
+										{Array.from({length: 7}, (_, k) => (
+											<div key={k} style={{position: 'absolute', left: 50, top: 70 + k * 58, display: 'flex', gap: 14, transform: `rotate(${-1 + (k % 3) * 0.4}deg)`, filter: 'blur(1.6px)'}}>
+												{Array.from({length: 4 + (k % 3)}, (_, j) => (
+													<div key={j} style={{height: 9, width: 60 + ((k * 37 + j * 53) % 90), borderRadius: 5, background: '#1F2A4A', opacity: 0.55}} />
+												))}
+											</div>
+										))}
+									</>
+								)}
 							</div>
 						))}
 					</div>

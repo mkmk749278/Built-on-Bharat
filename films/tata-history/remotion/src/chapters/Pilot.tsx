@@ -117,7 +117,7 @@ export const Pilot: React.FC = () => (
 		</Shot>
 		{/* chairman at thirty four */}
 		<Shot a={f.six} b={f.builds} name="chairman">
-			<Photo file="Y07a.jpg" dur={f.builds - f.six} move={[0.0, 0.18]} grade="archive" depth={0.12} />
+			<Photo file="Y07b.jpg" dur={f.builds - f.six} move={[0.0, 0.18]} grade="archive" depth={0.12} />
 			<LowerThird name="J.R.D. TATA" role="CHAIRMAN OF THE TATA GROUP FROM 1938" at={W('Six years after that flight', 'chairman') - f.six} until={f.builds - f.six} />
 		</Shot>
 		<Shot a={f.builds} b={f.y1953} name="constellation">
@@ -195,7 +195,7 @@ export const Pilot: React.FC = () => (
 			<Stamp text="FEBRUARY 1978" at={f.feb - f.kindly} until={f.removes - f.kindly + 40} />
 		</Shot>
 		<Shot a={f.night} b={f.end} name="favourite-child">
-			<PortraitPlate file={`${M}/v8/V8_jrd_older.jpg`} place={`${M}/F048a.jpg`} side="right" share={0.5} focus="60% 30%" push={[1.06, 1.16]} />
+			<PortraitPlate file={`${M}/v8/V8_jrd_older.jpg`} place={`${M}/F046a.jpg`} side="right" share={0.5} focus="60% 30%" push={[1.06, 1.16]} />
 		</Shot>
 	</AbsoluteFill>
 );
