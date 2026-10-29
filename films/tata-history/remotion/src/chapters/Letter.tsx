@@ -56,7 +56,7 @@ export const Letter: React.FC = () => (
 	<AbsoluteFill style={{background: '#0B0B0C'}}>
 		{/* the search keeps failing */}
 		<Shot a={0} b={f.letter} name="trio-fail" atmos={false} tag="ILLUSTRATION">
-			<TrioPins tries={[f.another - 10, f.another + 70]} />
+			<TrioPins tries={[W('One site has ore', 'ore') - 6, f.another + 4]} notes={[['ONE SITE: ORE', 'BUT THE COAL IS USELESS'], ['ANOTHER: COAL', 'BUT NO WATER']]} />
 		</Shot>
 		{/* February 1904: a letter */}
 		<Shot a={f.letter} b={f.geologist} name="envelope" tag="ILLUSTRATION">
@@ -128,7 +128,7 @@ export const Letter: React.FC = () => (
 		</Shot>
 		{/* the search, once more; then Sakchi, where the two rivers meet */}
 		<Shot a={f.back} b={f.sakchi} name="trio-search" atmos={false} tag="ILLUSTRATION">
-			<TrioPins tries={[30, 110]} />
+			<TrioPins tries={[20, 90]} />
 		</Shot>
 		<Shot a={f.sakchi} b={f.ore} name="domuhani" fadeIn={10}>
 			{/* the real confluence from orbit (Copernicus Sentinel-2, 2025): the Subarnarekha and the Kharkai */}

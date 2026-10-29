@@ -6,6 +6,7 @@ import {Glint, YearRoller} from '../../../../../lib/remotion/kinetic';
 import {chapterClock, CounterAt, DeskPrint, Photo, Shot} from '../kit';
 import {Fading} from '../shots/ch2';
 import {CaptionCrop, TrustLedger} from '../shots/ch4';
+import {TablePhoto} from '../v7';
 
 // Chapter 4, The diamond (plan_v6 §4 ch 4): the strike and the slump → close to two crore → back in the bank →
 // the Jubilee's story and Meherbai → the pledge to the Imperial Bank (today SBI) → the loan, the furnaces, the wages →
@@ -66,8 +67,8 @@ export const Diamond: React.FC = () => (
 	<AbsoluteFill style={{background: '#0B0B0C'}}>
 		{/* a steel town is no fairy tale: Jamshedpur's people, from a Tata Steel film */}
 		<Shot a={0} b={f.good} name="workers">
-			<CaptionCrop file={Y04} startFrom={56 * 60} />
-			<Stamp text="JAMSHEDPUR" sub="FROM A TATA STEEL FILM" at={20} until={f.strike} />
+			<TablePhoto file="v8/V8_tisco_water.jpg" dur={f.good} aspect={900 / 420} w={30} seed="tisco-water" />
+			<Stamp text="JAMSHEDPUR" sub="THE STEEL WORKS · AN EARLY PHOTOGRAPH" at={20} until={f.strike} />
 			<Kinetic text="1922 · A STRIKE" at={f.strikeW - 20} until={f.good} display size={76} y={-60} />
 		</Shot>
 		{/* the good years end: the harbour where cheap steel comes in */}
@@ -77,11 +78,11 @@ export const Diamond: React.FC = () => (
 		</Shot>
 		{/* close to two crore */}
 		<Shot a={f.y1924} b={f.where} name="two-crore">
-			<AbsoluteFill style={{filter: 'brightness(0.4)'}}>
-				<CaptionCrop file={Y04} startFrom={44 * 60} />
+			<AbsoluteFill style={{filter: 'brightness(0.42)'}}>
+				<TablePhoto file="v8/V8_works_aerial.jpg" dur={f.where - f.y1924} aspect={960 / 600} w={28} seed="works-aerial" />
 			</AbsoluteFill>
 			<Stamp text="1924" at={10} until={f.where - f.y1924} />
-			<CounterAt to={20000000} start={f.crore - f.y1924 - 60} land={f.crore - f.y1924} prefix="₹" size={150} label="CLOSE TO" />
+			<CounterAt to={20000000} start={f.crore - f.y1924 - 60} land={f.crore - f.y1924} prefix="Rs. " size={150} label="CLOSE TO" />
 		</Shot>
 		{/* the banks want a guarantee: an Imperial Bank padlock */}
 		<Shot a={f.where} b={f.back} name="padlock">
@@ -134,7 +135,7 @@ export const Diamond: React.FC = () => (
 			<CaptionCrop file={Y04} startFrom={44 * 60} />
 		</Shot>
 		<Shot a={f.paid} b={f.hers} name="paid" leak={colors.ember}>
-			<CaptionCrop file={Y04} startFrom={58 * 60} rate={0.6} />
+			<TablePhoto file="v8/V8_workers_crowd.jpg" dur={f.hers - f.paid} aspect={960 / 560} w={28} rot={1} seed="crowd" />
 		</Shot>
 		{/* her diamond, so that families could eat */}
 		<Shot a={f.hers} b={f.eat} name="hers" leak={colors.gold}>

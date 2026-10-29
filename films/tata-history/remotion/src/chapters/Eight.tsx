@@ -141,7 +141,7 @@ export const Eight: React.FC = () => {
 					<DepthPhoto file="assets/media/loc7/L02c.jpg" keys={[{f: 0, dolly: 0.02}, {f: f.imagine - f.weeks, dolly: 0.16}]} depth={0.22} grade="archive" />
 				</AbsoluteFill>
 				<Kinetic text="8,000 INDIANS" at={f.eight - f.weeks} until={f.crore - f.weeks + 10} display size={84} y={-150} />
-				<CounterAt to={23175000} start={f.crore - f.weeks - 50} land={f.crWord - f.weeks} prefix="₹" size={150} y={40} />
+				<CounterAt to={23175000} start={f.crore - f.weeks - 50} land={f.crWord - f.weeks} prefix="Rs. " size={150} y={40} />
 			</Shot>
 			{/* stand in that line */}
 			<Shot a={f.imagine} b={f.raj} name="line">

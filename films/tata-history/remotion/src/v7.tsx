@@ -1,6 +1,6 @@
 import React from 'react';
-import {AbsoluteFill, interpolate, useCurrentFrame, useVideoConfig} from 'remotion';
-import {ArchiveTable, CamKey, ease, Footage, Grade, TableMeta} from '../../../../lib/remotion';
+import {AbsoluteFill, Img, interpolate, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
+import {ArchiveTable, CamKey, ease, Footage, Grade, TableDoc, TableMeta} from '../../../../lib/remotion';
 import top from './tables/top.json';
 import {SatGround} from '../../../../lib/remotion/map';
 import {PLATES} from './plates';
@@ -45,3 +45,27 @@ export const ArchiveClip: React.FC<{file: string; startFrom?: number; clear?: nu
 /** Real ground under every map in the film: the all-India plate first, then the Sentinel-2 close-ups. */
 const GROUND = [PLATES.india_bm, ...Object.entries(PLATES).filter(([k]) => k !== 'india_bm' && k !== 'dholera2023').map(([, p]) => p)];
 export const FilmGround: React.FC<{children: React.ReactNode}> = ({children}) => <SatGround.Provider value={{plates: GROUND}}>{children}</SatGround.Provider>;
+
+/**
+ * v8: a period photograph as a print on the archive table, the camera drifting in (`push` adds to the table scale).
+ * `w` is the print's width in table cm; its height follows the photo's aspect (`aspect` = width / height).
+ */
+export const TablePhoto: React.FC<{file: string; dur: number; aspect: number; w?: number; rot?: number; push?: number; seed: string; at?: number}> = ({
+	file,
+	dur,
+	aspect,
+	w = 25,
+	rot = -1.5,
+	push = 0.2,
+	seed,
+	at = 0,
+}) => (
+	<Table seed={seed} keys={[{f: 0, scale: 1.78, x: 30, y: 10}, {f: dur, scale: 1.78 + push, x: 50, y: 18}]}>
+		<TableDoc w={w} h={w / aspect} x={0} y={0} rot={rot} at={at} paper="#EFE7D6" seed={`${seed}-doc`}>
+			<Img
+				src={staticFile(`assets/media/${file}`)}
+				style={{position: 'absolute', inset: 16, width: 'calc(100% - 32px)', height: 'calc(100% - 32px)', objectFit: 'cover', filter: 'sepia(0.3) contrast(1.06) brightness(0.96)'}}
+			/>
+		</TableDoc>
+	</Table>
+);

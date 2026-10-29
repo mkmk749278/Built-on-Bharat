@@ -183,13 +183,13 @@ export const DebtLedger: React.FC<{strikeFrom: number; strikeTo: number}> = ({st
 							const w = 420 + random(`dl${i}`) * 300;
 							return (
 								<div key={i} style={{position: 'absolute', left: 80, top: y, width: 940, height: 50}}>
-									{/* ink entries, out of focus: seeded letters so no line can be read as a real name or sum */}
-									<div style={{position: 'absolute', left: 0, top: 4, width: w, fontFamily: fontStacks.quote, fontStyle: 'italic', fontSize: 38, color: '#3A2A18', opacity: 0.75, filter: `blur(${5.5 + (i % 3) * 0.8}px)`, whiteSpace: 'nowrap', overflow: 'hidden'}}>
-										{Array.from({length: 4}, (_, k) => Array.from({length: 3 + Math.floor(random(`dw${i}${k}`) * 6)}, (_, j) => String.fromCharCode(97 + Math.floor(random(`dc${i}${k}${j}`) * 26))).join('')).join(' ')}
+									{/* ink entries, out of focus: v8, strokes with no letterforms (invented script reads as fake on pause) */}
+									<div style={{position: 'absolute', left: 0, top: 16, display: 'flex', gap: 16, filter: `blur(${2.4 + (i % 3) * 0.5}px)`}}>
+										{Array.from({length: 3}, (_, k) => (
+											<div key={k} style={{height: 12, width: (w / 3) * (0.55 + random(`dw${i}${k}`) * 0.6), borderRadius: 6, background: '#3A2A18', opacity: 0.55}} />
+										))}
 									</div>
-									<div style={{position: 'absolute', right: 0, top: 6, width: 160, textAlign: 'right', fontFamily: fontStacks.quote, fontStyle: 'italic', fontSize: 36, color: '#3A2A18', opacity: 0.7, filter: 'blur(4.5px)'}}>
-										{Math.floor(100 + random(`dn${i}`) * 9000)}
-									</div>
+									<div style={{position: 'absolute', right: 0, top: 16, height: 12, width: 70 + random(`dn${i}`) * 60, borderRadius: 6, background: '#3A2A18', opacity: 0.5, filter: 'blur(2.4px)'}} />
 									<div style={{position: 'absolute', left: -10, top: 28, height: 4, width: `${s * 960}px`, background: '#8B2E1C', opacity: 0.85, borderRadius: 2}} />
 									<div style={{position: 'absolute', left: 0, right: 0, bottom: 0, height: 1, background: '#8A6A3A', opacity: 0.35}} />
 								</div>
@@ -348,20 +348,21 @@ export const Blueprints: React.FC<{at: [number, number, number]; rollUpAt?: numb
 
 /** "Iron ore, the right coal and water, all in one place. Every place he tries is wrong.": three pins that never land
  *  together; each attempt, one drifts away and dims. Positions are illustrative, not real deposits. */
-/** Ore, coal and water never in one place: three pins that search the central and eastern plateau (where the real
- *  search was) and never meet. With `landAt` (one frame per word: "Ore nearby. Coal nearby. Water all year.") they
- *  finally land together at Sakchi, one on each word. ILLUSTRATION: the searching positions are not real sites. */
-export const TrioPins: React.FC<{tries: number[]; landAt?: [number, number, number]}> = ({tries, landAt}) => {
+/**
+ * The search for a steel site (ILLUSTRATION). v8: every trial site is its own fixed marker that stays where it is and
+ * says what it lacked (the narration's words), dimming when the next one appears; no pins jump or swap. The sites are
+ * unnamed points on the plateau, never claimed as real places. `landAt` (Sakchi): iron ore, coal and water land
+ * together, close around the real confluence.
+ */
+export const TrioPins: React.FC<{tries: number[]; notes?: [string, string][]; landAt?: [number, number, number]}> = ({tries, notes, landAt}) => {
 	const frame = useCurrentFrame();
-	const centre: LonLat = [84.5, 22.2];
-	const k = tries.filter((t) => frame >= t).length;
-	const spread = (i: number): LonLat => {
-		const a = (i / 3) * Math.PI * 2 + k * 1.3;
-		const r = 2.2 + 0.6 * Math.sin(k + i);
-		return [centre[0] + r * Math.cos(a), centre[1] + r * Math.sin(a) * 0.7];
-	};
+	const SITES: LonLat[] = [
+		[80.6, 20.3],
+		[82.2, 21.4],
+		[81.2, 22.6],
+		[83.4, 20.6],
+	];
 	const sakchi = PLACES.jamshedpur;
-	const landed = (i: number) => landAt !== undefined && frame >= landAt[i] - 20;
 	const near: LonLat[] = [
 		[sakchi[0] - 0.12, sakchi[1] + 0.1],
 		[sakchi[0] + 0.14, sakchi[1] + 0.06],
@@ -370,19 +371,27 @@ export const TrioPins: React.FC<{tries: number[]; landAt?: [number, number, numb
 	const labels = ['IRON ORE', 'COAL', 'WATER'];
 	const wide = camFit([[79, 18.5], [90, 26]], 140);
 	const close = camFit(near, 380);
-	// the ground never sits still while the pins search: a slow aerial drift east across the plateau
+	// the ground never sits still while the search goes on: a slow aerial drift east across the plateau
 	const drift = mapCam([{...wide, f: 0, zoom: wide.zoom * 0.97, x: wide.x - 14}, {...wide, f: 1200, zoom: wide.zoom * 1.1, x: wide.x + 18, y: wide.y - 6}], frame);
 	const cam = landAt ? mapCam([{...wide, f: landAt[0] - 70}, {...close, f: landAt[0] + 10}], frame) : drift;
+	const note = (i: number): [string, string] => notes?.[i] ?? ['A TRIAL SITE', 'NOT ALL THREE IN ONE PLACE'];
 	return (
 		<MapBase>
 			<IndiaMap cam={cam} style="faint" reveal={1} id="ch1-trio">
-				{labels.map((l, i) =>
-					landed(i) ? (
-						<MapPin key={`${l}-land`} at={near[i]} from={landAt![i] - 20} cam={cam} label={l} side={i === 1 ? 'right' : 'left'} />
-					) : (
-						<MapPin key={`${l}${k}`} at={spread(i)} from={k === 0 ? 10 + i * 12 : tries[k - 1] + i * 8} cam={cam} label={l} side={i === 1 ? 'left' : 'right'} />
-					),
-				)}
+				{landAt
+					? labels.map((l, i) => <MapPin key={`${l}-land`} at={near[i]} from={landAt[i] - 20} cam={cam} label={l} side={i === 1 ? 'right' : 'left'} />)
+					: tries.map((t, i) => (
+							<MapPin
+								key={`site${i}`}
+								at={SITES[i % SITES.length]}
+								from={t}
+								cam={cam}
+								label={note(i)[0]}
+								sub={note(i)[1]}
+								side={i % 2 ? 'left' : 'right'}
+								color={i < tries.length - 1 && frame >= tries[i + 1] ? colors.muted : colors.gold}
+							/>
+						))}
 			</IndiaMap>
 		</MapBase>
 	);

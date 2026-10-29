@@ -234,8 +234,8 @@ export const MapPin: React.FC<{
 					textAnchor={anchor}
 					fontFamily={fontStacks.display}
 					fontWeight={700}
-					fontSize={34}
-					letterSpacing={`${0.18 + 0.1 * (1 - lab)}em`}
+					fontSize={38}
+					letterSpacing={`${0.16 + 0.1 * (1 - lab)}em`}
 					fill={colors.ink}
 					stroke="#0D0E11"
 					strokeWidth={6}
@@ -245,13 +245,13 @@ export const MapPin: React.FC<{
 				</text>
 				{sub ? (
 					<text
-						y={30}
+						y={38}
 						textAnchor={anchor}
 						fontFamily={fontStacks.text}
-						fontWeight={600}
-						fontSize={19}
-						letterSpacing="0.28em"
-						fill={colors.muted}
+						fontWeight={700}
+						fontSize={27}
+						letterSpacing="0.14em"
+						fill="#D8CDB8"
 						stroke="#0D0E11"
 						strokeWidth={5}
 						paintOrder="stroke"

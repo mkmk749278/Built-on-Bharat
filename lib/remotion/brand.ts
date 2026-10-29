@@ -12,7 +12,7 @@ export const colors = {
 
 export const fonts = {
   display: 'Cinzel',
-  text: 'Inter',
-  numbers: 'JetBrains Mono',
+  text: 'EB Garamond',
+  numbers: 'EB Garamond',
   quote: 'EB Garamond',
 } as const;

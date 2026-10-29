@@ -70,7 +70,7 @@ export const Stamp: React.FC<{text: string; sub?: string; at: number; until: num
 					}}
 				/>
 				{sub ? (
-					<div style={{fontFamily: fontStacks.text, fontWeight: 500, fontSize: size * 0.42, letterSpacing: '0.28em', color: colors.muted, marginTop: 14, textTransform: 'uppercase'}}>
+					<div style={{fontFamily: fontStacks.text, fontWeight: 600, fontSize: size * 0.56, letterSpacing: '0.16em', color: '#D8CDB8', marginTop: 12, textTransform: 'uppercase'}}>
 						{sub}
 					</div>
 				) : null}
@@ -79,35 +79,13 @@ export const Stamp: React.FC<{text: string; sub?: string; at: number; until: num
 	);
 };
 
-/** Name lower-third: "NAME · role · years" (PLAYBOOK §8.8), on a soft dark scrim, lower left. */
-export const LowerThird: React.FC<{name: string; role?: string; at: number; until: number}> = ({name, role, at, until}) => {
-	const frame = useCurrentFrame();
-	const {fps} = useVideoConfig();
-	const p = pop(frame, fps, at, 140, 20);
-	const o = Math.min(p, tween(frame, until - 16, until, 1, 0, ease.leave));
-	const rule = tween(frame, at + 4, at + 34, 0, 1, ease.arrive);
-	return (
-		<AbsoluteFill style={{justifyContent: 'flex-end', alignItems: 'flex-start', padding: '0 0 110px 120px', pointerEvents: 'none'}}>
-			<div
-				style={{
-					opacity: o,
-					transform: `translateX(${(1 - p) * -40}px)`,
-					padding: '22px 34px 22px 28px',
-					background: 'linear-gradient(90deg, rgba(8,8,10,0.78) 0%, rgba(8,8,10,0.5) 75%, rgba(8,8,10,0) 100%)',
-					borderLeft: `3px solid ${colors.bronze}`,
-				}}
-			>
-				<div style={{fontFamily: fontStacks.text, fontWeight: 700, fontSize: 44, color: colors.ink, letterSpacing: '0.02em'}}>{name}</div>
-				<div style={{height: 2, width: `${rule * 100}%`, background: colors.gold, opacity: 0.8, margin: '10px 0'}} />
-				{role ? (
-					<div style={{fontFamily: fontStacks.text, fontWeight: 500, fontSize: 24, color: colors.muted, letterSpacing: '0.16em', textTransform: 'uppercase'}}>
-						{role}
-					</div>
-				) : null}
-			</div>
-		</AbsoluteFill>
-	);
-};
+/**
+ * Name lower-third: "NAME · role · years" (PLAYBOOK §8.8). v8: the same engraving as the Stamp (one caption system
+ * for the film): the name in Cinzel bronze, a hairline, the role in Garamond, on the Stamp's soft scrim. No box.
+ */
+export const LowerThird: React.FC<{name: string; role?: string; at: number; until: number}> = ({name, role, at, until}) => (
+	<Stamp text={name} sub={role} at={at} until={until} size={44} />
+);
 
 /** Indian grouping: 23175000 → 2,31,75,000. */
 export const inr = (n: number): string => {
@@ -148,7 +126,7 @@ export const Counter: React.FC<{
 					fontFamily: fontStacks.numbers,
 					fontWeight: 700,
 					fontSize: size,
-					fontVariantNumeric: 'tabular-nums',
+					fontVariantNumeric: 'lining-nums tabular-nums',
 					letterSpacing: '0.02em',
 					color: landed ? colors.gold : color,
 					textShadow: `0 0 ${40 * flash}px rgba(212,175,55,${0.8 * flash}), 0 4px 18px rgba(0,0,0,0.8)`,

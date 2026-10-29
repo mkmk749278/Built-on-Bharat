@@ -1,4 +1,5 @@
 import React from 'react';
+import {TapeFrame} from '../shots/ch3';
 import {AbsoluteFill, Img, Sequence, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 import {
 	Atmosphere,
@@ -207,11 +208,12 @@ export const ColdOpen: React.FC = () => {
 			</Shot>
 			{/* the workers and the works: Tata Steel's own archive film, cropped clear of its captions */}
 			<Shot a={f.thousands} b={f.company} name="worker" leak={colors.ember}>
-				<ArchiveClip file={`${M}/footage/Y04_jamshedpur_100.mp4`} startFrom={54 * 60} rate={0.7} clear={0.26} anchor="50% 8%" grade="furnace" />
-				<Stamp text="JAMSHEDPUR" sub="FROM A TATA STEEL FILM" at={10} until={f.company - f.thousands} />
+				{/* v8: the early works (period photographs at 0:44–0:49 of the centenary film); 0:50 on is modern, graded sepia */}
+				<ArchiveClip file={`${M}/footage/Y04_jamshedpur_100.mp4`} startFrom={48 * 60} rate={0.4} clear={0.26} anchor="50% 0%" grade="furnace" />
+				<Stamp text="JAMSHEDPUR" sub="THE EARLY WORKS · FROM A TATA STEEL FILM" at={10} until={f.company - f.thousands} />
 			</Shot>
 			<Shot a={f.company} b={f.never} name="works" leak={colors.ember}>
-				<ArchiveClip file={`${M}/footage/Y04_jamshedpur_100.mp4`} startFrom={44 * 60} rate={0.8} clear={0.26} anchor="50% 0%" grade="furnace" />
+				<ArchiveClip file={`${M}/footage/Y04_jamshedpur_100.mp4`} startFrom={44 * 60} rate={0.5} clear={0.26} anchor="50% 0%" grade="furnace" />
 			</Shot>
 
 			{/* 9 · Sir Dorabji Tata; Tata Steel */}
@@ -271,7 +273,7 @@ export const ColdOpen: React.FC = () => {
 
 			{/* 14 · the stone warms to furnace orange; we go back to the beginning */}
 			<Shot a={f.but} b={f.beginning} name="the-plant" leak={colors.ember}>
-				<ArchiveClip file={`${M}/footage/Y04_jamshedpur_100.mp4`} startFrom={48 * 60} rate={0.6} clear={0.26} anchor="50% 0%" grade="furnace" />
+				<TapeFrame file={`${M}/footage/Y05_steelmaking.mp4`} startFrom={120 * 60} rate={0.6} label="FROM AN OLD TATA STEEL FILM" />
 			</Shot>
 			<Shot a={f.beginning} b={f.end} name="priests" fadeIn={16}>
 				<DepthPhoto file={`${M}/B019a.jpg`} keys={[{f: 0, dolly: 0.0, x: -0.02}, {f: f.end - f.beginning, dolly: 0.2, x: 0.02}]} depth={0.2} grade="furnace" />

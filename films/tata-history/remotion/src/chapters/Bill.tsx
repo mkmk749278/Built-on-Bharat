@@ -1,7 +1,8 @@
 import React from 'react';
 import {AbsoluteFill, useCurrentFrame} from 'remotion';
-import {Camera, colors, Desk, ease, Footage, Kinetic, LowerThird, PortraitPlate, Print, Stamp, tween} from '../../../../../lib/remotion';
+import {Camera, colors, Desk, ease, Footage, Grain, Kinetic, LowerThird, PortraitPlate, Print, Stamp, tween, Vignette} from '../../../../../lib/remotion';
 import {chapterClock, DeskPrint, Photo, Shot} from '../kit';
+import {ArchiveClip} from '../v7';
 import {Fading} from '../shots/ch2';
 import {OnBlack} from '../shots/ch7';
 import {ProfitBar, SplitPair} from '../shots/ch8';
@@ -88,11 +89,11 @@ export const Bill: React.FC = () => (
 		</Shot>
 		{/* "No." */}
 		<Shot a={f.right} b={f.y2016} name="bombay-house">
-			<Photo file="raw/wm/A005_02_bombay-house-mast-jpg.jpg" dur={f.y2016 - f.right} move={[0.0, 0.2, 0.02, -0.02]} grade="steel" depth={0.14} />
+			<Footage file={`${M}/footage/Y11_port_talbot_close.mp4`} startFrom={1096 * 60} rate={0.55} grade="steel" />
 			<Kinetic text="NO." at={f.no - f.right} until={f.wrong - f.right + 40} display size={160} scrim={0.6} />
 		</Shot>
 		<Shot a={f.y2016} b={f.court} name="mistry">
-			<PortraitPlate file="assets/media/raw/wm/I010_02_cyrus-mistry-jpg.jpg" place="assets/media/raw/wm/A005_02_bombay-house-mast-jpg.jpg" side="right" share={0.46} focus="50% 25%" grade="modern" />
+			<PortraitPlate file="assets/media/raw/wm/I010_02_cyrus-mistry-jpg.jpg" place="assets/media/I011a.jpg" side="right" share={0.46} focus="50% 25%" grade="modern" />
 			<Kinetic text="2016" at={10} until={f.mistry - f.y2016 - 10} display size={150} />
 			<LowerThird name="CYRUS MISTRY" role="CHAIRMAN OF TATA SONS, 2012 TO 2016" at={f.mistry - f.y2016 + 30} until={f.court - f.y2016} />
 		</Shot>
@@ -117,31 +118,31 @@ export const Bill: React.FC = () => (
 		</Shot>
 		{/* 2022: the favourite child comes home */}
 		<Shot a={f.y2022} b={f.returns} name="constellation-returns">
-			<Photo file="F048a.jpg" dur={f.returns - f.y2022} move={[0.02, 0.24, -0.02, 0.0]} grade="archive" depth={0.14} />
+			{/* v8: January 2022 itself (The Quint, the first day after the takeover), not a 1950s Constellation; its logo cropped */}
+			<ArchiveClip file={`${M}/footage/N09_quint_ai_2022.mp4`} startFrom={0.5 * 60} rate={0.7} clear={0.12} anchor="100% 100%" grade="steel" />
 			<Kinetic text="2022" at={20} until={f.returns - f.y2022} display size={150} color={colors.gold} scrim={0.5} />
 		</Shot>
 		<Shot a={f.returns} b={f.jrd} name="air-india-today">
-			<Photo file="I014a.jpg" dur={f.jrd - f.returns} move={[0.0, 0.2, 0.02, -0.02]} grade="modern" depth={0.12} />
+			{/* v8: Air India's own footage of its new livery, its corner logo cropped (the A350 photo carried a Boeing 777X tail) */}
+			<ArchiveClip file={`${M}/footage/Y10_air_india_new.mp4`} startFrom={15.4 * 60} rate={0.28} clear={0.12} anchor="50% 100%" grade="modern" />
 			<Stamp text="AIR INDIA · BACK WITH TATA" sub="SIXTY NINE YEARS AFTER 1953" at={30} until={f.jrd - f.returns} />
 		</Shot>
 		<Shot a={f.jrd} b={f.stop} name="jrd-held">
-			<PortraitPlate file="assets/media/jrd/jrd_late.jpg" place="assets/media/I014a.jpg" side="left" share={0.5} focus="50% 30%" grade="archive" />
+			<PortraitPlate file="assets/media/jrd/jrd_late.jpg" place="assets/media/F048a.jpg" side="left" share={0.5} focus="50% 30%" grade="archive" />
 			<LowerThird name="J.R.D. TATA" role="CHAIRMAN 1938 TO 1991 · DIED 1993" at={20} until={f.stop - f.jrd} />
 		</Shot>
-		{/* AI171: no aircraft, no crash imagery; black, a candle, the facts quietly */}
-		{/* the candle rises out of the dark through the pause (plan_v7: no flat black) */}
+		{/* AI171 (v8, owner's choice): its own quiet card, not the 26/11 candle. No aircraft, no crash imagery: a dark
+		    frame that breathes, the name and the date, and room tone under the voice */}
 		<Shot a={f.stop} b={f.end} name="ai171" atmos={false}>
-			<CandleRise until={f.june - f.stop}>
-				<Footage file={`${M}/pix/pixabay_51749.mp4`} startFrom={0} rate={0.8} grade="modern" />
-			</CandleRise>
+			<QuietCard />
 			<OnBlack
 				bg="transparent"
-				x={330}
-				y={40}
+				x={0}
+				y={0}
 				lines={[
-					{text: 'AIR INDIA FLIGHT 171', at: f.june - f.stop + 20, serif: true, size: 48, until: f.report - f.stop - 30},
-					{text: 'JUNE 2025 · AHMEDABAD', at: f.ai171 - f.stop + 30, size: 22, until: f.report - f.stop - 30},
-					{text: '260 LIVES', at: f.killed - f.stop, size: 26, until: f.report - f.stop - 30},
+					{text: 'AIR INDIA FLIGHT 171', at: f.june - f.stop + 20, serif: true, size: 56, until: f.report - f.stop - 30},
+					{text: 'JUNE 2025 · AHMEDABAD', at: f.ai171 - f.stop + 30, size: 30, until: f.report - f.stop - 30},
+					{text: '260 LIVES', at: f.killed - f.stop, size: 32, until: f.report - f.stop - 30},
 				]}
 			/>
 		</Shot>
@@ -150,7 +151,20 @@ export const Bill: React.FC = () => (
 
 export const billFrames = f;
 
-/** The candle footage rising from near-dark to its held level over the silence before the facts. */
-const CandleRise: React.FC<{until: number; children: React.ReactNode}> = ({until, children}) => (
-	<AbsoluteFill style={{opacity: tween(useCurrentFrame(), 0, until, 0.12, 0.85, ease.arrive)}}>{children}</AbsoluteFill>
-);
+/** A near-black ground with a faint pool of warm light that breathes slowly, and film grain: dark, never frozen. */
+const QuietCard: React.FC = () => {
+	const frame = useCurrentFrame();
+	const breath = 0.5 + 0.5 * Math.sin(frame / 95);
+	return (
+		<AbsoluteFill style={{background: '#050506'}}>
+			<AbsoluteFill
+				style={{
+					background: `radial-gradient(ellipse 46% 40% at 50% 52%, rgba(120,92,60,${0.1 + 0.05 * breath}) 0%, rgba(40,30,22,0.05) 55%, rgba(0,0,0,0) 80%)`,
+					opacity: tween(frame, 0, 90, 0, 1, ease.arrive),
+				}}
+			/>
+			<Grain opacity={0.1} id="ai171-g" />
+			<Vignette strength={0.7} />
+		</AbsoluteFill>
+	);
+};
