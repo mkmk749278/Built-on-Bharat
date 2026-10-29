@@ -87,11 +87,12 @@ const SingurToSanand: React.FC<{routeFrom: number; sanandAt: number}> = ({routeF
 	const sing = camFit([PLACES.singur], 380);
 	const near = {x: sing.x, y: sing.y, zoom: 2.2};
 	const both = camFit([PLACES.singur, PLACES.sanand], 300);
+	// v8: the protest footage now sets the place, so the map opens close on Singur (a 3.6 s shot has no room for the
+	// wide establishing move) and pulls out to both towns as the route draws
 	const cam = mapCam(
 		[
-			{f: 0, x: 80, y: 0, zoom: 0.92},
-			{...near, f: 60, zoom: near.zoom * 0.9},
-			{...near, f: routeFrom - 10, zoom: near.zoom * 0.95},
+			{...near, f: 0, zoom: near.zoom * 0.9},
+			{...near, f: Math.max(1, routeFrom - 10), zoom: near.zoom * 0.95},
 			{...both, f: routeFrom + 90},
 			{...both, f: durationInFrames, zoom: both.zoom * 1.06},
 		],
@@ -102,7 +103,7 @@ const SingurToSanand: React.FC<{routeFrom: number; sanandAt: number}> = ({routeF
 			<InkPaper grid={0.06} />
 			<IndiaMap cam={cam} reveal={tween(frame, 0, 30, 0.3, 1, ease.arrive)} id="ch7-singur">
 				<MapRoute stops={[PLACES.singur, PLACES.sanand]} from={routeFrom} dur={sanandAt - routeFrom} cam={cam} bend={-0.12} />
-				<MapPin at={PLACES.singur} from={30} cam={cam} label="SINGUR" sub="WEST BENGAL" side="right" color={frame > routeFrom ? colors.muted : colors.gold} />
+				<MapPin at={PLACES.singur} from={0} cam={cam} label="SINGUR" sub="WEST BENGAL" side="right" color={frame > routeFrom ? colors.muted : colors.gold} />
 				<MapPin at={PLACES.sanand} from={sanandAt} cam={cam} label="SANAND" sub="GUJARAT" side="left" />
 			</IndiaMap>
 			<LightLeak color={colors.ember} side="left" strength={0.1} seed="ch7-map-leak" />
@@ -204,7 +205,8 @@ export const TwentyOhEight: React.FC = () => (
 			<Calendar tears={[GONE, 4]} />
 		</Shot>
 		<Shot a={f.singur} b={f.pulls} name="singur-protests">
-			<ArchiveClip file={`${M}/footage/N07_singur_ndtv_2008.mp4`} startFrom={58.6 * 60} rate={0.8} clear={0.22} anchor="50% 30%" grade="steel" />
+			{/* only the crowd (57.52-61.44 s in the report): at 0.8 the shot ran into NDTV's statement card, news UI */}
+			<ArchiveClip file={`${M}/footage/N07_singur_ndtv_2008.mp4`} startFrom={57.6 * 60} rate={0.56} clear={0.22} anchor="50% 30%" grade="steel" />
 			<Stamp text="SINGUR · 2008" sub="FROM AN NDTV REPORT" at={14} until={f.pulls - f.singur} />
 		</Shot>
 		<Shot a={f.pulls} b={f.nov} name="singur-sanand" atmos={false}>

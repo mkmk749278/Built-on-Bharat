@@ -116,12 +116,14 @@ def build(a):
     key.data.color = (1.0, 0.72, 0.42)
     key.data.spot_size = math.radians(72)
     key.data.spot_blend = 1.0
-    key.data.shadow_soft_size = 0.04
+    # v8: a bulb the size of the shade's mouth, not a point: at 0.04 the folder stack threw a dead-black, hard-edged
+    # shadow that read as a black notched block at the frame's edge (outside review B)
+    key.data.shadow_soft_size = 0.26
     key.rotation_euler = (Vector((0.02, -0.03, 0)) - key.location).to_track_quat('-Z', 'Y').to_euler()
     # a faint cool window fill from the right, so the shadows are not dead black
     bpy.ops.object.light_add(type='AREA', location=(1.2, -0.3, 1.0))
     fill = bpy.context.object
-    fill.data.energy = 10
+    fill.data.energy = 18
     fill.data.size = 1.2
     fill.data.color = (0.55, 0.68, 0.9)
     fill.rotation_euler = (Vector((0, 0, 0)) - fill.location).to_track_quat('-Z', 'Y').to_euler()
@@ -158,12 +160,22 @@ def main():
     ap.add_argument('--h', type=int, default=2304)
     ap.add_argument('--samples', type=int, default=160)
     ap.add_argument('--skip-light', action='store_true')
+    ap.add_argument('--gain', type=float, default=0.33, help='linear exposure gain on the plate (not the light pass)')
     a = ap.parse_args(sys.argv[sys.argv.index('--') + 1:] if '--' in sys.argv else None)
     os.makedirs(a.out, exist_ok=True)
     s, card = build(a)
     cam = camera(s, a.angle)
     s.render.filepath = os.path.abspath(f'{a.out}/table_{a.angle}.png')
     bpy.ops.render.render(write_still=True)
+    if a.gain != 1.0:
+        # v8: the softer, larger bulb lights the whole desk more; bring the plate back to the v7 exposure (blotter
+        # centre ~33/255) on the output, in linear light, so a hundred desk shots keep their mood
+        from PIL import Image
+        import numpy as np
+        im = Image.open(s.render.filepath)
+        px = np.asarray(im).astype(np.float32)
+        px[..., :3] = np.clip(((px[..., :3] / 255) ** 2.2 * a.gain) ** (1 / 2.2) * 255 + 0.5, 0, 255)
+        Image.fromarray(px.astype(np.uint8), im.mode).save(s.render.filepath)
     # corners of the card in output pixels (y down), for the film's matrix3d
     corners = []
     for v in [(-0.5, 0.5), (0.5, 0.5), (0.5, -0.5), (-0.5, -0.5)]:  # tl, tr, br, bl as seen from the front

@@ -1173,6 +1173,31 @@ To port when needed (Creator path → what to change):
 ## 16. Lessons log
 *(Newest first. Each lesson: what happened, the rule, why.)*
 
+**The pre-render still sweep of v8 (2026-10-29).**
+- *What happened:* the three v8 phases were merged, each checked at the stills of its own changes. A sweep of the whole
+  film (a still every 3 s, 468 frames) still found:
+  - A crash at 17:01. Splitting the Singur shot in two left the map's camera keys at 0, 60, 20, so `interpolate` threw.
+    This only shows when that exact frame renders, so a farm run would have died there.
+  - The table's "black notch", reported fixed in phase 1, was still in the plate: pure black (L < 15) at the edge of
+    every desk shot. The real cause was a near-point lamp; it is now re-rendered with a larger, softer bulb at the old
+    exposure (`archive_table.py --gain`).
+  - The new J.R.D. stills, taken from a news video, still carried the channel's logo in a corner.
+  - Three pushes that cut off a face, a half-dissolve frame of the old J.R.D. still, a soft halftone torn by depth
+    displacement, and a 0.8× clip running into NDTV's statement card.
+  - About a second of shapeless brown in the Dholera zoom: no satellite plate covered the middle of the move.
+- *Rule:*
+  - Before every farm render, run a whole-film sweep (`remotion_stills.mjs … 90-END:180`), then open each changed or
+    suspicious frame at full size.
+  - When a shot is split or shortened, re-time every key inside its components.
+  - A "fixed" claim on an asset is checked in the asset's pixels, not in the commit message.
+  - Crop the logos off news-video stills.
+  - Keep depth at 0 for high-key or halftone prints.
+  - Run a borrowed clip's in and out points against its own cuts (`ffmpeg … select='gt(scene,0.25)'`).
+  - A map zoom needs a plate at every scale it passes through: travel while high, then descend over the plates
+    (khambhat for Dholera, chotanagpur for Sakchi).
+- *Why:* every one of these would have reached the owner in a cut sold as finished. The sweep took about 40 minutes
+  of container time; a crashed or flawed farm render costs hours and the owner's trust.
+
 **Outside review of v7b: take the eye, not the facts (2026-10-29).**
 - *What happened:* an outside AI "directorial audit" of the v7b cut was right about the picture almost everywhere it
   pointed (the cold-open diamond still floating on black, modern schoolchildren in an 1850s beat, the cotton crash as a

@@ -19,7 +19,10 @@ export const DholeraFromOrbit: React.FC<{landAt: number}> = ({landAt}) => {
 		fromIndia
 			? [
 					{f: 0, x: 60, y: -10, zoom: 1.05},
-					{f: Math.max(1, landAt + 60), x: c[0], y: c[1], zoom: 150},
+					// v8: travel to Gujarat while still high (the all-India plate is sharp there), then drop straight down
+					// through the Gulf of Khambhat plate: a diagonal path crossed central India at a zoom no plate covers
+					{f: Math.max(1, Math.round(landAt * 0.45)), x: c[0], y: c[1], zoom: 2.4},
+					{f: Math.max(2, landAt + 60), x: c[0], y: c[1], zoom: 150},
 					{f: durationInFrames, x: c[0], y: c[1] + 0.3, zoom: 172},
 				]
 			: [
@@ -31,15 +34,19 @@ export const DholeraFromOrbit: React.FC<{landAt: number}> = ({landAt}) => {
 	const tilt = fromIndia ? tiltAt(frame, [{f: 0, t: 0}, {f: landAt + 60, t: 30}]) : 30;
 	// the later image fades in once the camera has arrived
 	const later = fromIndia ? tween(frame, landAt + 90, landAt + 200, 0, 1, ease.camera) : 1;
+	// v8: the Gulf of Khambhat plate (190 km, Sentinel-2) carries the zoom between the all-India plate and the Dholera
+	// close-up; without it the middle of the move was a second of stretched, shapeless brown; it is fully in
+	// before the base plate goes soft
+	const gulf = {...PLATES.khambhat, fade: [1.6, 3.2] as [number, number]};
 	const d23 = {...PLATES.dholera2023, fade: [0, 0] as [number, number]};
 	const d26 = {...PLATES.dholera2026, fade: [0, 0] as [number, number]};
 	return (
 		<AbsoluteFill>
-			<SatMap cam={cam} tilt={tilt} plates={[PLATES.india_bm, d23]} dimOutside={0.5} id="dh23">
+			<SatMap cam={cam} tilt={tilt} plates={[PLATES.india_bm, gulf, d23]} dimOutside={0.5} id="dh23">
 				{fromIndia ? <MapPin at={[72.2, 22.25]} from={landAt} cam={cam} label="DHOLERA" sub="GUJARAT" side="right" until={landAt + 80} /> : null}
 			</SatMap>
 			<AbsoluteFill style={{opacity: later}}>
-				<SatMap cam={cam} tilt={tilt} plates={[PLATES.india_bm, d26]} dimOutside={0.5} id="dh26" />
+				<SatMap cam={cam} tilt={tilt} plates={[PLATES.india_bm, gulf, d26]} dimOutside={0.5} id="dh26" />
 			</AbsoluteFill>
 			{fromIndia ? (
 				<Stamp
