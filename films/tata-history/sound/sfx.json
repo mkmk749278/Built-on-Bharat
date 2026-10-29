@@ -1,32 +1,250 @@
 {
-  "_doc": "SFX cues for scripts/score_mix.py, on the same anchors as score.json. Sounds are synthesized by the script (no third-party SFX library is licensed yet); gain_db is relative to the SFX bus (PLAYBOOK §12: impacts -6 to -8, small SFX -8 to -10 below the voice peaks).",
-  "cues": [
-    {"at": "w:3:carats", "sfx": "counter_land", "gain_db": -12, "why": "245 carats lands"},
-    {"at": "s:5+4.73", "sfx": "glint", "gain_db": -14, "why": "the stone catches the light as the lid settles (cold open)"},
-    {"at": "w:170:rupees", "sfx": "counter_land", "gain_db": -10, "why": "two crore thirty one lakh lands"},
-    {"at": "s:181-0.6", "to": "s:184+2", "sfx": "furnace_bed", "gain_db": -20, "why": "the furnace cutaway breathes"},
-    {"at": "s:183", "sfx": "impact_low", "gain_db": -10, "why": "the tap: out pours iron"},
-    {"at": "s:199", "sfx": "ember_tail", "gain_db": -18, "why": "It isn't.: one ember, the room goes quiet"},
-    {"at": "s:311-0.3", "to": "s:312+3", "sfx": "furnace_bed", "gain_db": -22, "why": "Ratan Tata at the blast furnace"},
-    {"at": "s:318-0.67", "sfx": "counter_land", "gain_db": -12, "why": "one lakh fifteen thousand bookings"},
-    {"at": "s:319", "sfx": "metal_slam", "gain_db": -8, "why": "QUALITY stamped in steel"},
-    {"at": "s:320", "sfx": "metal_slam", "gain_db": -7, "why": "POWER stamped in steel"},
-    {"at": "w:337:twelve+0.33", "sfx": "counter_land", "gain_db": -11, "why": "about twelve billion dollars"},
-    {"at": "s:342-0.1", "sfx": "paper_tear", "gain_db": -12, "why": "2008 calendar page"},
-    {"at": "s:343-0.1", "sfx": "paper_tear", "gain_db": -12, "why": "2008 calendar page"},
-    {"at": "s:344-0.1", "sfx": "paper_tear", "gain_db": -12, "why": "2008 calendar page"},
-    {"at": "s:349+1.17", "sfx": "counter_land", "gain_db": -11, "why": "one lakh rupees"},
-    {"at": "s:358+0.07", "sfx": "paper_tear", "gain_db": -11, "why": "January tears to March"},
-    {"at": "s:363+1.17", "sfx": "counter_land", "gain_db": -11, "why": "two point three billion dollars"},
-    {"at": "s:367+0.07", "sfx": "paper_tear", "gain_db": -11, "why": "March tears to October"},
-    {"at": "s:370+0.1", "sfx": "paper_tear", "gain_db": -12, "why": "October tears to November (it then darkens)"},
-    {"at": "s:465+1.17", "sfx": "counter_land", "gain_db": -11, "why": "ninety one thousand crore"},
-    {"at": "s:478-0.2", "to": "s:479", "sfx": "furnace_bed", "gain_db": -24, "why": "roll call: the furnace"},
-    {"at": "s:487+0.67", "sfx": "glint", "gain_db": -13, "why": "the stone alone on the counter"},
-    {"at": "s:490", "sfx": "riser", "gain_db": -12, "why": "sting: forge light"},
-    {"at": "s:490+1.2", "sfx": "metal_slam", "gain_db": -6, "why": "sting: the strike"},
-    {"at": "s:490+1.23", "sfx": "sparks", "gain_db": -12, "why": "sting: spark burst"},
-    {"at": "s:490+1.97", "sfx": "glint", "gain_db": -12, "why": "sting: glint across the metal"},
-    {"at": "s:490+2.5", "sfx": "whoosh", "gain_db": -14, "why": "sting: name and tagline"}
-  ]
+ "_doc": "SFX cues for scripts/score_mix.py, on the same anchors as score.json. Sounds are synthesized by the script (no third-party SFX library is licensed yet); gain_db is relative to the SFX bus (PLAYBOOK §12: impacts -6 to -8, small SFX -8 to -10 below the voice peaks).",
+ "cues": [
+  {
+   "at": "w:3:carats",
+   "sfx": "counter_land",
+   "gain_db": -12,
+   "why": "245 carats lands"
+  },
+  {
+   "at": "s:5+4.73",
+   "sfx": "glint",
+   "gain_db": -14,
+   "why": "the stone catches the light as the lid settles (cold open)"
+  },
+  {
+   "at": "w:170:rupees",
+   "sfx": "counter_land",
+   "gain_db": -10,
+   "why": "two crore thirty one lakh lands"
+  },
+  {
+   "at": "s:181-0.6",
+   "to": "s:184+2",
+   "sfx": "furnace_bed",
+   "gain_db": -20,
+   "why": "the furnace cutaway breathes"
+  },
+  {
+   "at": "s:183",
+   "sfx": "impact_low",
+   "gain_db": -10,
+   "why": "the tap: out pours iron"
+  },
+  {
+   "at": "s:199",
+   "sfx": "ember_tail",
+   "gain_db": -18,
+   "why": "It isn't.: one ember, the room goes quiet"
+  },
+  {
+   "at": "s:311-0.3",
+   "to": "s:312+3",
+   "sfx": "furnace_bed",
+   "gain_db": -22,
+   "why": "Ratan Tata at the blast furnace"
+  },
+  {
+   "at": "s:318-0.67",
+   "sfx": "counter_land",
+   "gain_db": -12,
+   "why": "one lakh fifteen thousand bookings"
+  },
+  {
+   "at": "s:319",
+   "sfx": "metal_slam",
+   "gain_db": -8,
+   "why": "QUALITY stamped in steel"
+  },
+  {
+   "at": "s:320",
+   "sfx": "metal_slam",
+   "gain_db": -7,
+   "why": "POWER stamped in steel"
+  },
+  {
+   "at": "w:337:twelve+0.33",
+   "sfx": "counter_land",
+   "gain_db": -11,
+   "why": "about twelve billion dollars"
+  },
+  {
+   "at": "s:342-0.1",
+   "sfx": "paper_tear",
+   "gain_db": -12,
+   "why": "2008 calendar page"
+  },
+  {
+   "at": "s:343-0.1",
+   "sfx": "paper_tear",
+   "gain_db": -12,
+   "why": "2008 calendar page"
+  },
+  {
+   "at": "s:344-0.1",
+   "sfx": "paper_tear",
+   "gain_db": -12,
+   "why": "2008 calendar page"
+  },
+  {
+   "at": "s:349+1.17",
+   "sfx": "counter_land",
+   "gain_db": -11,
+   "why": "one lakh rupees"
+  },
+  {
+   "at": "s:358+0.07",
+   "sfx": "paper_tear",
+   "gain_db": -11,
+   "why": "January tears to March"
+  },
+  {
+   "at": "s:363+1.17",
+   "sfx": "counter_land",
+   "gain_db": -11,
+   "why": "two point three billion dollars"
+  },
+  {
+   "at": "s:367+0.07",
+   "sfx": "paper_tear",
+   "gain_db": -11,
+   "why": "March tears to October"
+  },
+  {
+   "at": "s:370+0.1",
+   "sfx": "paper_tear",
+   "gain_db": -12,
+   "why": "October tears to November (it then darkens)"
+  },
+  {
+   "at": "s:465+1.17",
+   "sfx": "counter_land",
+   "gain_db": -11,
+   "why": "ninety one thousand crore"
+  },
+  {
+   "at": "s:478-0.2",
+   "to": "s:479",
+   "sfx": "furnace_bed",
+   "gain_db": -24,
+   "why": "roll call: the furnace"
+  },
+  {
+   "at": "s:487+0.67",
+   "sfx": "glint",
+   "gain_db": -13,
+   "why": "the stone alone on the counter"
+  },
+  {
+   "at": "s:490",
+   "sfx": "riser",
+   "gain_db": -12,
+   "why": "sting: forge light"
+  },
+  {
+   "at": "s:490+1.2",
+   "sfx": "metal_slam",
+   "gain_db": -6,
+   "why": "sting: the strike"
+  },
+  {
+   "at": "s:490+1.23",
+   "sfx": "sparks",
+   "gain_db": -12,
+   "why": "sting: spark burst"
+  },
+  {
+   "at": "s:490+1.97",
+   "sfx": "glint",
+   "gain_db": -12,
+   "why": "sting: glint across the metal"
+  },
+  {
+   "at": "s:490+2.5",
+   "sfx": "whoosh",
+   "gain_db": -14,
+   "why": "sting: name and tagline"
+  },
+  {
+   "at": "s:85",
+   "to": "s:92",
+   "sfx": "harbour",
+   "gain_db": -24,
+   "why": "v8 foley: cotton sails from Bombay harbour"
+  },
+  {
+   "at": "s:92+1.0",
+   "to": "s:97+2.0",
+   "sfx": "loom",
+   "gain_db": -26,
+   "why": "v8 foley: Empress Mills"
+  },
+  {
+   "at": "s:157",
+   "to": "s:160",
+   "sfx": "bells",
+   "gain_db": -26,
+   "why": "v8 foley: the Bombay street, 1907"
+  },
+  {
+   "at": "s:181",
+   "to": "s:184+2.0",
+   "sfx": "furnace_bed",
+   "gain_db": -24,
+   "why": "v8 foley: the furnace roar"
+  },
+  {
+   "at": "s:184+0.6",
+   "sfx": "metal_slam",
+   "gain_db": -22,
+   "why": "v8 foley: the tap opens, first iron"
+  },
+  {
+   "at": "s:209+0.3",
+   "sfx": "vault",
+   "gain_db": -20,
+   "why": "v8 foley: back in the bank, the vault"
+  },
+  {
+   "at": "s:210+0.6",
+   "sfx": "coin",
+   "gain_db": -22,
+   "why": "v8 foley: the case set on the counter"
+  },
+  {
+   "at": "s:216+0.2",
+   "sfx": "stamp",
+   "gain_db": -18,
+   "why": "v8 foley: the loan stamped"
+  },
+  {
+   "at": "s:255",
+   "to": "s:259",
+   "sfx": "engine",
+   "gain_db": -26,
+   "why": "v8 foley: the Puss Moth starts and climbs"
+  },
+  {
+   "at": "s:271",
+   "to": "s:271+3.5",
+   "sfx": "cardreader",
+   "gain_db": -26,
+   "why": "v8 foley: punched cards"
+  },
+  {
+   "at": "s:286",
+   "to": "s:286+2.6",
+   "sfx": "telegraph",
+   "gain_db": -24,
+   "why": "v8 foley: the telegram"
+  },
+  {
+   "at": "s:463",
+   "to": "s:463+6",
+   "sfx": "cleanroom",
+   "gain_db": -30,
+   "why": "v8 foley: cleanroom air"
+  }
+ ]
 }

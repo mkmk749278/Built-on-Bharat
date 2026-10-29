@@ -145,6 +145,93 @@ def synth(name: str, seed: int, dur: float = 0) -> np.ndarray:
         x = _low(rng.standard_normal(n), 250)
         crackle = np.convolve((rng.random(n) < 0.0008).astype(float), np.hanning(40), mode="same")
         return (x * 0.6 + _band(crackle, 2000, 8000) * 2) * _env(n, 0.3, 0.9)
+    # ---- v8 foley (both outside reviews: "no room to breathe", foley buried): beds take `dur`, hits are short
+    if name == "loom":  # shuttle clatter and a heavy beat, about 2.2 picks a second
+        n = int(dur * SR)
+        out = np.zeros(n)
+        hit = _band(rng.standard_normal(int(0.08 * SR)), 600, 5000) * _env(int(0.08 * SR), 0.0005, 0.018)
+        thud = np.sin(2 * np.pi * 70 * np.arange(int(0.2 * SR)) / SR) * _env(int(0.2 * SR), 0.002, 0.05)
+        t = 0.0
+        while t < dur - 0.3:
+            i = int(t * SR)
+            out[i:i + len(hit)] += hit * rng.uniform(0.6, 1.0)
+            j = i + int(0.11 * SR)
+            out[j:j + len(thud)] += thud[: max(0, min(len(thud), n - j))] * 0.8
+            t += 0.45 + rng.uniform(-0.03, 0.03)
+        out += _low(rng.standard_normal(n), 300) * 0.05
+        return _fade(out, dur)
+    if name == "harbour":  # water lapping and a slow rigging creak
+        n = int(dur * SR)
+        lap = _band(rng.standard_normal(n), 120, 1400) * (0.5 + 0.5 * np.sin(2 * np.pi * 0.35 * np.arange(n) / SR + rng.uniform(0, 6))) ** 2
+        creak = np.zeros(n)
+        for c in np.arange(rng.uniform(0.5, 2), dur - 1, rng.uniform(2.5, 4)):
+            m = int(0.6 * SR)
+            tt = np.arange(m) / SR
+            f = 180 + 60 * np.sin(2 * np.pi * 1.3 * tt)
+            creak[int(c * SR):int(c * SR) + m] += np.sign(np.sin(2 * np.pi * np.cumsum(f) / SR)) * np.sin(np.pi * tt / 0.6) * 0.06
+        return _fade(lap * 0.5 + _band(creak, 200, 2500), dur)
+    if name == "bells":  # bullock bells, jingling at a walk, and street murmur
+        n = int(dur * SR)
+        out = _band(rng.standard_normal(n), 200, 2500) * 0.12
+        for t in np.arange(0.2, dur - 0.5, 0.33):
+            m = int(0.5 * SR)
+            tt = np.arange(m) / SR
+            fr = rng.choice([2093, 2349, 2637]) * rng.uniform(0.98, 1.02)
+            ring = (np.sin(2 * np.pi * fr * tt) + 0.4 * np.sin(2 * np.pi * fr * 2.76 * tt)) * _env(m, 0.001, 0.12)
+            i = int((t + rng.uniform(-0.04, 0.04)) * SR)
+            out[i:i + m] += ring[: max(0, min(m, n - i))] * rng.uniform(0.2, 0.45)
+        return _fade(out, dur)
+    if name in ("telegraph", "cardreader"):  # a key's dots and dashes; a card reader's fast chatter
+        n = int(dur * SR)
+        out = np.zeros(n)
+        click = _band(rng.standard_normal(int(0.02 * SR)), 1500, 7000) * _env(int(0.02 * SR), 0.0003, 0.004)
+        step = 0.07 if name == "telegraph" else 0.028
+        t = 0.1
+        while t < dur - 0.2:
+            if name == "telegraph":
+                on = rng.choice([0.07, 0.21])
+                i = int(t * SR)
+                out[i:i + len(click)] += click
+                tone = np.sin(2 * np.pi * 700 * np.arange(int(on * SR)) / SR) * 0.12
+                out[i:i + len(tone)] += tone[: max(0, min(len(tone), n - i))]
+                t += on + rng.choice([0.07, 0.07, 0.21])
+            else:
+                i = int(t * SR)
+                out[i:i + len(click)] += click * rng.uniform(0.5, 1)
+                t += step * rng.uniform(0.8, 1.2)
+        return _fade(out, dur)
+    if name == "engine":  # a small 1930s engine: a cough, then a steady prop drone
+        n = int(dur * SR)
+        tt = np.arange(n) / SR
+        rpm = np.clip(tt / 1.2, 0.15, 1)
+        f = 38 * rpm
+        firing = (np.sin(2 * np.pi * np.cumsum(f) / SR) > 0.6).astype(float)
+        x = _low(firing * rng.standard_normal(n), 900) + _band(rng.standard_normal(n), 60, 400) * 0.4 * rpm
+        cough = (tt < 0.9) * (rng.random(n) < 0.0004)
+        x += np.convolve(cough.astype(float), np.hanning(800), mode="same") * 2
+        return _fade(x, dur)
+    if name == "cleanroom":  # air handling: a filtered hiss and a low fan hum
+        n = int(dur * SR)
+        x = _band(rng.standard_normal(n), 800, 7000) * 0.3 + np.sin(2 * np.pi * 120 * np.arange(n) / SR) * 0.05
+        return _fade(x, dur)
+    if name == "coin":  # a coin set down on the counter
+        n = int(0.9 * SR)
+        tt = np.arange(n) / SR
+        ring = sum(np.sin(2 * np.pi * fr * tt) * a * np.exp(-tt / d) for fr, a, d in [(3150, 0.5, 0.25), (5200, 0.3, 0.15), (7900, 0.2, 0.08)])
+        return ring + _band(rng.standard_normal(n), 2000, 9000) * _env(n, 0.0002, 0.006)
+    if name == "stamp":  # a rubber stamp on paper
+        n = int(0.5 * SR)
+        return _low(rng.standard_normal(n), 1200) * _env(n, 0.001, 0.03) + np.sin(2 * np.pi * 110 * np.arange(n) / SR) * _env(n, 0.002, 0.05)
+    if name == "vault":  # a vault tumbler turning and its bolt
+        n = int(1.4 * SR)
+        out = np.zeros(n)
+        click = _band(rng.standard_normal(int(0.015 * SR)), 1200, 6000) * _env(int(0.015 * SR), 0.0003, 0.003)
+        for k in range(8):
+            i = int((0.08 + k * 0.09) * SR)
+            out[i:i + len(click)] += click * 0.6
+        bolt = synth("impact_low", seed + 3)[: int(0.6 * SR)] * 0.5
+        out[int(0.85 * SR):int(0.85 * SR) + len(bolt)] += bolt[: n - int(0.85 * SR)]
+        return out
     if name in ("furnace_bed", "cabin", "room"):
         n = int(dur * SR)
         x = np.cumsum(rng.standard_normal(n))  # brown
@@ -160,6 +247,14 @@ def synth(name: str, seed: int, dur: float = 0) -> np.ndarray:
         x[-fade:] *= np.linspace(1, 0, fade)
         return x / (np.sqrt(np.mean(x ** 2)) + 1e-9) * 0.1
     raise ValueError(name)
+
+
+def _fade(x: np.ndarray, dur: float) -> np.ndarray:
+    fade = int(min(1.0, dur / 4) * SR)
+    x = x.copy()
+    x[:fade] *= np.linspace(0, 1, fade)
+    x[-fade:] *= np.linspace(1, 0, fade)
+    return x
 
 
 def place(bus: np.ndarray, x: np.ndarray, t: float, gain: float) -> None:
@@ -248,6 +343,19 @@ def main() -> None:
         x = synth(c["sfx"], 100 + k, (A(c["to"]) - t0) if "to" in c else 0)
         x = x / (np.max(np.abs(x)) + 1e-9) * db(-3)
         place(sfx, x, t0, db(c["gain_db"] + 3))
+
+    # ---- quiet zones (v8): the whole mix steps down where the film should breathe (the tragedies, the question), so
+    # the loudness range opens up; 1 s ramps; the master's one static gain is applied after
+    zone = np.zeros(n)
+    for z in score.get("quiet", []):
+        i0, i1 = int(A(z["from"]) * SR), int(A(z["to"]) * SR)
+        zone[i0:i1] = np.minimum(zone[i0:i1], z["gain_db"])
+    k = SR  # 1 s ramp
+    if score.get("quiet"):  # moving average by cumulative sum (a 1 s kernel over the whole film)
+        c = np.cumsum(np.pad(zone, (k // 2, k - k // 2), mode="edge"), dtype=np.float64)
+        zone = (c[k:k + n] - c[:n]) / k
+    zg = (10 ** (zone / 20))[:, None].astype(np.float32)
+    voice, bed, sfx = voice * zg, bed * zg, sfx * zg
 
     for name, x in (("voice", voice), ("bed", bed), ("sfx", sfx)):
         wavfile.write(out / f"{name}.wav", SR, x.astype(np.float32))
