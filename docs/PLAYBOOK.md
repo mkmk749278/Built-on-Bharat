@@ -1186,6 +1186,16 @@ To port when needed (Creator path → what to change):
   them on every cut, because the most-watched seconds are where a known fault hides longest.
 - *Why:* a reviewer that watches frames is a good eye and a poor historian; adopting its fixes whole would have put
   false facts and fabricated images into a fact-checked film.
+- *Second audit, same day (`films/tata-history/review/v8_plan.md`):* a frame-by-frame visual audit found what our own
+  checks had not: ₹ on 1868–1924 sums (the sign dates from 2010), a c.1930 photo with the Gateway (finished 1924)
+  captioned 1903, a 2007 hard-hat clip graded sepia under "1924", window AC units under 1925, invented letterforms on
+  "documents", and two caption type systems. New rules:
+  - **Period truth on screen:** no ₹ before 2010 (write "Rs."), every photo's own date checked against its caption,
+    and modern footage only in colour, labelled "today".
+  - **No invented letterforms:** real scans, or ruled lines with no glyphs.
+  - **One caption type system per film.**
+  - A summary that relays a review can carry an earlier reviewer's error (the AI171 "hallucination" came back that
+    way). Verify the claim at its source, not in the summary.
 
 **Film 1 visual rework v7 (2026-10-28).**
 - *What happened:* the owner shared an outside review of the v6 cut: narration 9.5/10, visuals 5.5/10, "five design
