@@ -26,6 +26,7 @@ import {DepthPhoto} from '../../../../../lib/remotion/three/DepthPhoto';
 import {MapBombayJamshedpur} from '../dev/map/MapScenes';
 import {RichList} from '../shots/RichList';
 import {ArchiveClip, Table} from '../v7';
+import {Camera} from '../../../../../lib/remotion';
 import {Filmstrip} from '../shots/Filmstrip';
 import {T} from '../timing';
 import {CounterAt} from '../kit';
@@ -46,6 +47,7 @@ const f = {
 	bombay: S('Bombay.'),
 	year: S('Nineteen twenty four'),
 	man: S('A man walks into a bank'),
+	wife: W('A man walks into a bank', "wife's"),
 	diamondWord: W('A man walks into a bank', 'diamond'),
 	carats: S('Two hundred and forty five carats'),
 	caratsWord: W('Two hundred and forty five carats', 'carats'),
@@ -159,23 +161,22 @@ export const ColdOpen: React.FC = () => {
 				<Stamp text="BOMBAY · 1924" at={f.year - 6} until={f.man} />
 			</Shot>
 
-			{/* 2 · the bank: the case slides into the lamp pool, landing on "diamond" */}
-			<Shot a={f.man} b={f.carats} name="counter-1">
+			{/* 2 · the bank: the case slides into the lamp pool */}
+			<Shot a={f.man} b={f.wife} name="counter-1">
 				<FrameSeq dir={`${COUNTER}/c1`} prefix="c1_" last={210} />
 				<HonestyTag text="RECONSTRUCTION" />
 			</Shot>
 
-			{/* 3 · the stone: Blender hero shot; 245 lands on "carats" */}
-			<Shot a={f.carats} b={f.more} name="diamond-hero">
-				<FrameSeq dir={`${DIAMOND}/hero`} prefix="hero_" last={298} />
-				<CounterAt to={245} start={6} land={f.caratsWord - f.carats} suffix=" CARATS" size={72} y={330} />
-				<HonestyTag text="RECONSTRUCTION" />
+			{/* 3 · v8: whose diamond it was, first: Meherbai herself (BnF, public domain; no free photograph of her
+			    wearing the Jubilee exists, so none is claimed). The weight is stamped once and held, never counted up */}
+			<Shot a={f.wife} b={f.more} name="meherbai" fadeIn={8}>
+				<PortraitPlate file={`${M}/E003a.jpg`} place={`${M}/A001a.jpg`} side="right" share={0.46} focus="50% 16%" push={[1.0, 1.12]} />
+				<Stamp text="LADY MEHERBAI TATA" sub="THE JUBILEE · 245.35 CARATS" at={f.caratsWord - f.wife - 20} until={f.more - f.wife} />
 			</Shot>
 
-			{/* 4 · to scale beside the Koh-i-Noor as it is today */}
-			<Shot a={f.more} b={f.sell} name="gems" leak={colors.ember}>
-				<AbsoluteFill style={{background: 'radial-gradient(ellipse 70% 60% at 50% 45%, #17181C 0%, #0B0B0C 75%)'}} />
-				<GemCompare kohinoorAt={f.kohinoor - f.more - 20} jubileeAt={f.twice - f.more} />
+			{/* 4 · to scale on the archive table: a glass copy of the Koh-i-Noor (Chris 73, CC BY-SA) beside our 3D model of the Jubilee, both to scale */}
+			<Shot a={f.more} b={f.sell} name="gems">
+				<GemTable kohinoorAt={f.kohinoor - f.more - 10} jubileeAt={f.twice - f.more} dur={f.sell - f.more} />
 			</Shot>
 
 			{/* 5 · not to sell: a loan, the diamond as the guarantee */}
@@ -191,10 +192,13 @@ export const ColdOpen: React.FC = () => {
 			<Shot a={f.ask} b={f.last} name="house-gold" fadeIn={10}>
 				<DepthPhoto file={`${M}/cm/cm_4-bangles-jpg.jpg`} keys={[{f: 0, dolly: 0.02, x: 0.012}, {f: f.last - f.ask, dolly: 0.17, x: -0.01}]} depth={0.16} grade="furnace" />
 			</Shot>
-			<Shot a={f.last} b={f.why} name="last-thing">
-				{/* a cut-in on the same bangles: tighter, the light going */}
-				<DepthPhoto file={`${M}/cm/cm_4-bangles-jpg.jpg`} keys={[{f: 0, dolly: 0.24, x: 0.085, y: -0.01}, {f: f.why - f.last, dolly: 0.32, x: 0.08, y: 0.0}]} depth={0.16} grade="furnace" />
-				<AbsoluteFill style={{background: '#050403', opacity: tween(frame - f.last, f.nothing - f.last, f.why - f.last, 0, 0.55, ease.leave)}} />
+			{/* v8: "the last thing you do": back to the open case on the counter, the lamp going down */}
+			<Shot a={f.last} b={f.why} name="last-thing" atmos={false}>
+				<Camera seed="lastthing" keys={[{f: 0, scale: 1.0}, {f: f.why - f.last, scale: 1.08}]}>
+					<FrameSeq dir={`${COUNTER}/c2`} prefix="c2_" last={322} from={322} rate={0} />
+				</Camera>
+				<AbsoluteFill style={{background: '#050403', opacity: tween(frame - f.last, f.nothing - f.last, f.why - f.last, 0, 0.6, ease.leave)}} />
+				<HonestyTag text="RECONSTRUCTION" />
 			</Shot>
 
 			{/* 7 · so why: the man and his wife, their own photograph (BnF, public domain) */}
@@ -287,3 +291,23 @@ export const ColdOpen: React.FC = () => {
 };
 
 export const coldOpenFrames = f;
+
+/** The two stones on the archive table, each print landing on its word: the Koh-i-Noor as cut today (a museum glass
+ *  copy), then the Jubilee (our model, labelled so); their real weights typed under each. */
+const GemTable: React.FC<{kohinoorAt: number; jubileeAt: number; dur: number}> = ({kohinoorAt, jubileeAt, dur}) => {
+	const card = (file: string, at: number, x: number, w: number, label: string, sub: string, seed: string) => (
+		<TableDoc w={w} h={w * 0.86} x={x} y={-1} rot={x < 0 ? -2 : 1.5} at={at} paper="#EFE7D6" seed={seed}>
+			<Img src={staticFile(`${M}/v8/${file}`)} style={{position: 'absolute', left: 14, right: 14, top: 14, height: '72%', width: 'calc(100% - 28px)', objectFit: 'cover'}} />
+			<div style={{position: 'absolute', left: 0, right: 0, bottom: 18, textAlign: 'center', color: '#2B2318'}}>
+				<div style={{fontFamily: fontStacks.display, fontWeight: 700, fontSize: 30, letterSpacing: '0.18em'}}>{label}</div>
+				<div style={{fontFamily: fontStacks.text, fontWeight: 600, fontSize: 22, letterSpacing: '0.12em', marginTop: 4}}>{sub}</div>
+			</div>
+		</TableDoc>
+	);
+	return (
+		<Table seed="gems" keys={[{f: 0, scale: 1.5, x: 0, y: 20}, {f: dur, scale: 1.62, x: 10, y: 24}]}>
+			{card('V8_kohinoor_today_replica.jpg', kohinoorAt, -6.5, 11, 'KOH-I-NOOR', '105.6 CARATS · AS CUT TODAY', 'gem-k')}
+			{card('V8_jubilee_model.jpg', jubileeAt, 7, 14.5, 'JUBILEE', '245.35 CARATS · OUR 3D MODEL', 'gem-j')}
+		</Table>
+	);
+};

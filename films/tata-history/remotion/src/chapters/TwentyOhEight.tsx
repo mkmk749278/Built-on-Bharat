@@ -4,6 +4,7 @@ import {colors, Desk, ease, Footage, Grain, Kinetic, LightLeak, LowerThird, Port
 import {InkPaper} from '../../../../../lib/remotion/ink';
 import {DeskCalendar} from '../../../../../lib/remotion/kinetic';
 import {camFit, IndiaMap, MapPin, MapRoute, mapCam, PLACES} from '../../../../../lib/remotion/map';
+import {ArchiveClip} from '../v7';
 import {chapterClock, CounterAt, DeskPrint, Photo, Shot} from '../kit';
 import {TapeFrame} from '../shots/ch3';
 import {Fading} from '../shots/ch2';
@@ -166,13 +167,15 @@ export const TwentyOhEight: React.FC = () => (
 			<Stamp text="FORD MOTOR COMPANY" sub="2008" at={14} until={f.jlr - f.ford} />
 		</Shot>
 		<Shot a={f.jlr} b={f.bn} name="jaguar-land-rover">
-			<Desk />
-			<Print file={`${M}/raw/wm/H008_21_jaguar-xf-2008-front-right-jpg.jpg`} at={2} width={680} x={-380} y={-20} rotate={-2} grade="modern" caption="JAGUAR" seed="jag" />
-			<Print file={`${M}/raw/wm/H009_30_2008-land-rover-defender-90-2-4-tdci-cou.jpg`} at={f.landRover - f.jlr} width={600} x={380} y={10} rotate={2} grade="modern" caption="LAND ROVER" seed="lr" />
+			{/* v8: Land Rover's own Solihull plant on film (c.2010), not two car-show snapshots */}
+			<ArchiveClip file={`${M}/footage/J02_landrover_solihull.mp4`} startFrom={10.5 * 60} rate={0.6} grade="steel" />
+			<Stamp text="SOLIHULL, ENGLAND" sub="LAND ROVER'S HOME" at={14} until={f.tata - f.jlr} />
 			<Kinetic text="TATA" at={f.tata - f.jlr} until={f.bn - f.jlr} display size={200} color={colors.gold} scrim={0.7} />
 		</Shot>
 		<Shot a={f.bn} b={f.kadle} name="two-point-three">
-			<Photo file="H009a.jpg" dur={f.kadle - f.bn} move={[0.0, 0.18]} grade="modern" depth={0.12} />
+			<AbsoluteFill style={{filter: 'brightness(0.55)'}}>
+				<ArchiveClip file={`${M}/footage/J02_landrover_solihull.mp4`} startFrom={311 * 60} rate={0.7} grade="steel" />
+			</AbsoluteFill>
 			<CounterAt to={2.3} start={6} land={70} prefix="$" suffix=" BILLION" size={140} label="ABOUT" format={(n) => n.toFixed(1)} />
 		</Shot>
 		{/* signature 6 paid off: the same window, in daylight */}
@@ -193,15 +196,19 @@ export const TwentyOhEight: React.FC = () => (
 			/>
 		</Shot>
 		<Shot a={f.real} b={f.oct} name="deal-real">
-			<Photo file="H008a.jpg" dur={f.oct - f.real} move={[0.0, 0.16, 0.02, -0.02]} grade="modern" depth={0.12} />
+			<ArchiveClip file={`${M}/footage/J02_landrover_solihull.mp4`} startFrom={407 * 60} rate={0.7} grade="steel" />
 			<Stamp text="JAGUAR LAND ROVER" sub="BOUGHT FROM FORD, 2008" at={10} until={f.oct - f.real} />
 		</Shot>
 		{/* OCTOBER: Singur to Sanand */}
 		<Shot a={f.oct} b={f.singur} name="cal-october" atmos={false}>
 			<Calendar tears={[GONE, 4]} />
 		</Shot>
-		<Shot a={f.singur} b={f.nov} name="singur-sanand" atmos={false}>
-			<SingurToSanand routeFrom={f.pulls - f.singur + 30} sanandAt={f.gujarat - f.singur} />
+		<Shot a={f.singur} b={f.pulls} name="singur-protests">
+			<ArchiveClip file={`${M}/footage/N07_singur_ndtv_2008.mp4`} startFrom={58.6 * 60} rate={0.8} clear={0.22} anchor="50% 30%" grade="steel" />
+			<Stamp text="SINGUR · 2008" sub="FROM AN NDTV REPORT" at={14} until={f.pulls - f.singur} />
+		</Shot>
+		<Shot a={f.pulls} b={f.nov} name="singur-sanand" atmos={false}>
+			<SingurToSanand routeFrom={30} sanandAt={f.gujarat - f.pulls} />
 		</Shot>
 		{/* NOVEMBER: the page tears in, then the light goes out */}
 		<Shot a={f.nov} b={f.date} name="cal-november" atmos={false}>
@@ -237,18 +244,19 @@ export const TwentyOhEight: React.FC = () => (
 			</AbsoluteFill>
 		</Shot>
 		<Shot a={f.ordinary} b={f.banquet} name="uniforms" leak={colors.ember}>
-			<AbsoluteFill style={{filter: 'brightness(0.6) saturate(0.7)'}}>
-				<Photo file="cm/cm_taj-reception-jpg.jpg" dur={f.banquet - f.ordinary} move={[0.06, 0.2, 0.0, 0.0, 0.02, -0.02]} grade="night" depth={0.16} />
+			{/* v8: the Taj's own scarred windows, November 2008 (Commons), not a lobby of flowers and guests */}
+			<AbsoluteFill style={{filter: 'brightness(0.5) saturate(0.6)'}}>
+				<Photo file="H012b.jpg" dur={f.banquet - f.ordinary} move={[0.08, 0.16, 0.0, 0.0, 0.0, -0.01]} grade="night" depth={0.1} />
 			</AbsoluteFill>
-			<Kinetic text="WAITERS" at={f.waiters - f.ordinary} until={f.banquet - f.ordinary} size={46} y={-90} />
-			<Kinetic text="COOKS" at={f.cooks - f.ordinary} until={f.banquet - f.ordinary} size={46} y={-10} />
-			<Kinetic text="MANAGERS" at={f.managers - f.ordinary} until={f.banquet - f.ordinary} size={46} y={70} />
+			<Kinetic text="WAITERS" at={f.waiters - f.ordinary} until={f.banquet - f.ordinary} size={64} y={-110} display />
+			<Kinetic text="COOKS" at={f.cooks - f.ordinary} until={f.banquet - f.ordinary} size={64} y={-10} display />
+			<Kinetic text="MANAGERS" at={f.managers - f.ordinary} until={f.banquet - f.ordinary} size={64} y={90} display />
 		</Shot>
 		<Shot a={f.banquet} b={f.kitchens} name="banquet-hall" atmos={false}>
 			<Darkening from={f.lights - f.banquet}>
 				<Photo file="cm/cm_india-mumbai-magnifient-interior-stairca.jpg" dur={f.kitchens - f.banquet} move={[0.02, 0.18, -0.02, 0.02]} grade="night" depth={0.16} />
 			</Darkening>
-			<Kinetic text="MORE THAN SIXTY GUESTS · SILENT IN THE DARK" at={f.sixty - f.banquet + 30} until={f.kitchens - f.banquet} size={30} y={-400} />
+			<Kinetic text="MORE THAN SIXTY GUESTS · SILENT IN THE DARK" at={f.sixty - f.banquet + 30} until={f.kitchens - f.banquet} size={42} y={-380} />
 		</Shot>
 		<Shot a={f.kitchens} b={f.kang} name="back-entrance" atmos={false}>
 			<Fading from={f.killed - f.kitchens}>
@@ -259,7 +267,8 @@ export const TwentyOhEight: React.FC = () => (
 		{/* no licensed photograph of Karambir Singh Kang: his name, quietly */}
 		<Shot a={f.kang} b={f.rest} name="kang" atmos={false}>
 			<AbsoluteFill style={{filter: 'brightness(0.32) saturate(0.4)'}}>
-				<Photo file="H012c.jpg" dur={f.rest - f.kang} move={[0.04, 0.12]} grade="night" depth={0.1} />
+				{/* held, nearly still: let the name stay in the room (outside review) */}
+				<Photo file="H012c.jpg" dur={f.rest - f.kang} move={[0.06, 0.075]} grade="night" depth={0.06} />
 			</AbsoluteFill>
 			<OnBlack
 				bg="transparent"
@@ -274,7 +283,7 @@ export const TwentyOhEight: React.FC = () => (
 		</Shot>
 		<Shot a={f.thirtyOne} b={f.three} name="candle">
 			<Footage file={`${M}/pix/pixabay_31440.mp4`} startFrom={2 * 60} grade="modern" />
-			<Kinetic text="AT LEAST 31 PEOPLE DIED AT THE TAJ" at={24} until={f.three - f.thirtyOne} size={28} y={400} />
+			<Kinetic text="AT LEAST 31 PEOPLE DIED AT THE TAJ" at={24} until={f.three - f.thirtyOne} size={40} y={390} />
 		</Shot>
 		<Shot a={f.three} b={f.reopens} name="three-days">
 			<Photo file="H012d.jpg" dur={f.reopens - f.three} move={[0.0, 0.16, 0.0, 0.0, 0.03, -0.01]} grade="modern" depth={0.12} />

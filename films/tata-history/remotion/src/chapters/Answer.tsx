@@ -110,7 +110,7 @@ export const Answer: React.FC = () => (
 		{/* signature 8: the ownership machine, on the voice's numbers (v8: from "Because", in the machine room, no façade) */}
 		<Shot a={f.because} b={f.salt} name="ownership" atmos={false}>
 			<OwnershipFlow
-				t={{sons: f.sits - f.because + 10, trusts: f.twoThirds - f.because, dorabji: f.biggest - f.because, shapoorji: f.shapoorji - f.because, companies: f.own - f.because, up: 1e9, out: 1e9}}
+				t={{sons: 10, trusts: f.twoThirds - f.because, dorabji: f.biggest - f.because, shapoorji: f.shapoorji - f.because, companies: f.own - f.because, up: 1e9, out: 1e9}}
 			/>
 		</Shot>
 		{/* salt and tea: a share flows up to the trusts, and out */}
@@ -126,8 +126,9 @@ export const Answer: React.FC = () => (
 			<OwnershipFlow t={{...FLOW_HELD, up: 0, out: 1e9}} />
 		</Shot>
 		<Shot a={f.out} b={f.research} name="hospitals">
-			<Photo file="E005a.jpg" dur={f.research - f.out} move={[0.0, 0.14]} grade="modern" depth={0.06} />
-			<Stamp text="TATA MEMORIAL HOSPITAL" sub="MUMBAI" at={6} until={f.research - f.out} />
+			{/* v8: a second Tata hospital (Tata Steel's own film), not the Tata Memorial atrium a third time */}
+			<ArchiveClip file={`${M}/footage/Y04_jamshedpur_100.mp4`} startFrom={100 * 60} rate={0.6} clear={0.26} anchor="50% 0%" grade="modern" />
+			<Stamp text="TATA MAIN HOSPITAL" sub="JAMSHEDPUR" at={6} until={f.research - f.out} />
 		</Shot>
 		<Shot a={f.research} b={f.scholarships} name="research">
 			<Photo file="E002a.jpg" dur={f.scholarships - f.research} move={[0.0, 0.14]} grade="modern" depth={0.08} />
@@ -276,22 +277,26 @@ export const Answer: React.FC = () => (
 			<Porthole file={`${M}/pix/pixabay_255761.mp4`} startFrom={6 * 60} />
 		</Shot>
 		<Shot a={f.diamond} b={f.fortune} name="echo-diamond">
-			<PortraitPlate file={`${M}/E003a.jpg`} place={`${M}/A001a.jpg`} side="right" share={0.42} focus="50% 18%" />
+			{/* v8: the stone itself (her photograph is kept for the last image) */}
+			<Camera seed="echo-d" keys={[{f: 0, scale: 1.1}, {f: f.fortune - f.diamond, scale: 1.18}]}>
+				<FrameSeq dir={`${B}/c2`} prefix="c2_" last={322} from={322} rate={0} />
+			</Camera>
 		</Shot>
 		<Shot a={f.fortune} b={f.belong} name="your-place">
 			<DepthPhoto file={`${M}/loc7/L03c.jpg`} keys={[{f: 0, dolly: 0.1, x: -0.02, y: -0.06}, {f: f.belong - f.fortune, dolly: 0.42, x: -0.06, y: -0.15}]} depth={0.24} grade="archive" />
 		</Shot>
 		{/* the question */}
-		<Shot a={f.belong} b={f.think} name="stone-alone" tag="RECONSTRUCTION">
-			<Camera seed="alone" keys={[{f: 0, scale: 1.0}, {f: f.think - f.belong, scale: 1.08}]}>
+		<Shot a={f.belong} b={f.end} name="stone-alone" tag="RECONSTRUCTION">
+			<Camera seed="alone" keys={[{f: 0, scale: 1.0}, {f: f.end - f.belong, scale: 1.12}]}>
 				<FrameSeq dir={`${B}/c2`} prefix="c2_" last={322} from={322} />
 			</Camera>
+			{/* the banker's lamp, warm on the stone */}
+			<AbsoluteFill style={{background: 'radial-gradient(ellipse 30% 26% at 55% 60%, rgba(255,176,96,0.22) 0%, rgba(255,150,80,0) 70%)', mixBlendMode: 'screen'}} />
 			<Glint x={1128} y={686} at={40} size={170} dur={46} />
 		</Shot>
-		<Shot a={f.think} b={f.end} name="empty-counter" tag="RECONSTRUCTION">
-			<Camera seed="empty" keys={[{f: 0, scale: 1.22, x: -260}, {f: f.end - f.think, scale: 1.28, x: -280}]}>
-				<FrameSeq dir={`${B}/c1`} prefix="c1_" last={210} from={0} rate={0} />
-			</Camera>
+		{/* v8: the loop closes on her: the stone dissolves into Meherbai's own photograph (BnF, public domain) */}
+		<Shot a={f.think} b={f.end} name="meherbai-last" fadeIn={70} atmos={false}>
+			<PortraitPlate file={`${M}/E003a.jpg`} place={`${M}/A001a.jpg`} side="right" share={0.46} focus="50% 16%" push={[1.06, 1.14]} />
 		</Shot>
 	</AbsoluteFill>
 );

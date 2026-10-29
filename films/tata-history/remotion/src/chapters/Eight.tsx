@@ -7,6 +7,7 @@ import {YearRoller} from '../../../../../lib/remotion/kinetic';
 import {Crowd1907} from '../dev/ink/Crowd1907';
 import {DepthPhoto} from '../../../../../lib/remotion/three/DepthPhoto';
 import {ArchiveClip} from '../v7';
+import {TablePhoto} from '../v7';
 import {chapterClock, CounterAt, DeskPrint, Photo, Shot} from '../kit';
 import {PLACES} from '../../../../../lib/remotion/map';
 import {PlaceMap} from '../shots/ch1';
@@ -194,7 +195,8 @@ export const Eight: React.FC = () => {
 			</Shot>
 			{/* "some indigestion" */}
 			<Shot a={f.reply} b={f.y1919} name="indigestion">
-				<QuoteCard lines={UPCOTT} attribution="SIR FREDERICK UPCOTT · AS TOLD IN TATA'S HISTORIES" at={-200} mark={0} markFrom={f.indigestion - f.reply} markTo={f.indigestion - f.reply + 80} tone="newsprint" seed="q-upcott2" />
+				{/* v8: the payoff on the works that made the rails, not the same quote card again 30 s later */}
+				<TablePhoto file="v8/V8_tisco_aerial.jpg" dur={f.y1919 - f.reply} aspect={960 / 560} w={28} seed="tisco-aerial" />
 				<Kinetic text="SOME INDIGESTION" at={f.indigestion - f.reply + 110} until={f.y1919 - f.reply} display size={70} y={330} />
 			</Shot>
 			{/* 1919: Jamshedpur, after the man who never saw it */}

@@ -29,35 +29,30 @@ export const TrustLedger: React.FC<{at: [number, number, number]; keepFrom?: num
 						<div style={{height: 2, background: '#8A6A3A', margin: '18px 0 34px', opacity: 0.6}} />
 						{lines.map((l, i) => {
 							const o = tween(frame, at[i], at[i] + 24, 0, 1, ease.arrive);
-							const sweep = tween(frame, at[i], at[i] + 50, 0, 100, ease.sweep);
+							// v8: struck letter by letter like a 1932 typewriter (uneven ink, a slight wander off the line), not swept
+							const typed = Math.max(0, Math.floor((frame - at[i]) / 2));
 							const fade = i === 0 ? 1 : 1 - 0.8 * keep;
 							return (
-								<div key={l} style={{position: 'relative', fontFamily: fontStacks.quote, fontStyle: 'italic', fontSize: 58, lineHeight: 1.55, color: '#2E2418', opacity: o * fade}}>
+								<div key={l} style={{position: 'relative', fontFamily: fontStacks.text, fontWeight: 500, fontSize: 56, lineHeight: 1.55, color: '#22190F', opacity: Math.min(1, o * 2) * fade, letterSpacing: '0.02em'}}>
 									{i === 0 ? <span style={{position: 'absolute', left: -10, top: '14%', height: '74%', width: `calc(${keep * 100}% + 20px)`, maxWidth: 760, background: colors.gold, opacity: 0.4, borderRadius: 6}} /> : null}
-									<span style={{position: 'relative', clipPath: `inset(0 ${100 - sweep}% 0 0)`}}>{l}</span>
+									<span style={{position: 'relative'}}>
+										{l.split('').map((ch, k) => (
+											<span
+												key={k}
+												style={{
+													opacity: k < typed ? 0.72 + 0.28 * random(`${seed}${i}${k}o`) : 0,
+													display: 'inline-block',
+													transform: `translateY(${(random(`${seed}${i}${k}y`) - 0.5) * 3}px)`,
+													whiteSpace: 'pre',
+												}}
+											>
+												{ch}
+											</span>
+										))}
+									</span>
 								</div>
 							);
 						})}
-						{/* the jewellery: twenty one small lights, the Jubilee the brightest */}
-						<div style={{display: 'flex', gap: 22, marginTop: 26, opacity: tween(frame, at[2] + 30, at[2] + 60, 0, 1) * (1 - 0.8 * keep)}}>
-							{new Array(21).fill(0).map((_, k) => {
-								const jub = k === 10;
-								const tw = 0.6 + 0.4 * Math.sin(frame / 9 + random(`${seed}${k}`) * 6);
-								return (
-									<div
-										key={k}
-										style={{
-											width: jub ? 22 : 12,
-											height: jub ? 22 : 12,
-											marginTop: jub ? 0 : 5,
-											borderRadius: '50%',
-											background: jub ? '#FFFFFF' : '#F4E3B8',
-											boxShadow: `0 0 ${jub ? 26 : 10}px ${jub ? 8 : 3}px rgba(255,236,190,${(jub ? 0.9 : 0.5) * tw})`,
-										}}
-									/>
-								);
-							})}
-						</div>
 					</div>
 				</AbsoluteFill>
 			</Camera>
