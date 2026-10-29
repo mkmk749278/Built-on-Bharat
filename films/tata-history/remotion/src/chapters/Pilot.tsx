@@ -110,14 +110,21 @@ export const Pilot: React.FC = () => (
 			<MapFlight1932 />
 		</Shot>
 		<Shot a={f.start} b={f.six} name="anniversary">
-			<Photo file="Y07c.jpg" dur={f.six - f.start} move={[0.0, 0.2, 0.02, -0.02]} grade="archive" depth={0.16} />
+			{/* v8: the clean print of the 1962 photograph (the video still was soft, and its push cut his face off); the source's
+			    corner logo cropped off (…c.jpg); flat, since even shallow depth tore his white shirt's edge; the high-key print
+			    taken down a touch */}
+			<AbsoluteFill style={{filter: 'brightness(0.86)'}}>
+				<Photo file="v8/V8_jrd_1962c.jpg" dur={f.six - f.start} move={[-0.04, 0.0, -0.06, -0.05, 0.065, 0.085]} grade="archive" depth={0} />
+			</AbsoluteFill>
 			<Stamp text="1962 · THIRTY YEARS ON" sub="J.R.D. FLIES THE SAME ROUTE AGAIN" at={30} until={f.airlines - f.start} />
-			<Kinetic text="TATA AIRLINES" at={f.airlines - f.start} until={f.later - f.start + 10} display size={84} y={-300} />
-			<Kinetic text="AIR INDIA" at={f.later - f.start + 14} until={f.six - f.start} display size={84} y={-300} color={colors.gold} />
+			<Kinetic text="TATA AIRLINES" at={f.airlines - f.start} until={f.later - f.start + 10} display size={84} y={330} />
+			<Kinetic text="AIR INDIA" at={f.later - f.start + 14} until={f.six - f.start} display size={84} y={330} color={colors.gold} />
 		</Shot>
 		{/* chairman at thirty four */}
 		<Shot a={f.six} b={f.builds} name="chairman">
-			<Photo file="Y07b.jpg" dur={f.builds - f.six} move={[0.0, 0.18]} grade="archive" depth={0.12} />
+			{/* v8: J.R.D. at the chairman's desk (the old frame was caught mid-dissolve, a street and TATA STEEL ghosted
+			    through his jacket); the source's corner logo cropped off */}
+			<Photo file="v8/V8_jrd_deskc.jpg" dur={f.builds - f.six} move={[0.02, 0.12, -0.03, -0.02, 0.05, 0.06]} grade="archive" depth={0.08} />
 			<LowerThird name="J.R.D. TATA" role="CHAIRMAN OF THE TATA GROUP FROM 1938" at={W('Six years after that flight', 'chairman') - f.six} until={f.builds - f.six} />
 		</Shot>
 		<Shot a={f.builds} b={f.y1953} name="constellation">
@@ -189,8 +196,9 @@ export const Pilot: React.FC = () => (
 		{/* 1978: his favourite child taken away */}
 		<Shot a={f.kindly} b={f.night} name="removed">
 			<Fading from={f.removes - f.kindly}>
-				{/* v8: J.R.D. at Air India in his later years (age-matched), not a 1950s Constellation */}
-				<Photo file="v8/V8_jrd_747.jpg" dur={f.night - f.kindly} move={[0.16, 0.06, 0.1, 0.1]} grade="archive" depth={0.1} />
+				{/* v8: J.R.D. at Air India in his later years (age-matched), not a 1950s Constellation; the source's corner
+				    logo cropped off (…c.jpg), held near full frame and flat (the soft print broke up and tore when pushed in) */}
+				<Photo file="v8/V8_jrd_747c.jpg" dur={f.night - f.kindly} move={[0.0, 0.06, 0.03, 0.05, 0.05, 0.06]} grade="archive" depth={0} />
 			</Fading>
 			<Stamp text="FEBRUARY 1978" at={f.feb - f.kindly} until={f.removes - f.kindly + 40} />
 		</Shot>

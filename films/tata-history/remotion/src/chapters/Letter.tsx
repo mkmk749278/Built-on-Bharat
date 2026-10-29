@@ -5,6 +5,7 @@ import {PLACES} from '../../../../../lib/remotion/map';
 import {SatPlace} from '../dev/map/MapScenes';
 import {chapterClock, DeskPrint, Photo, Shot} from '../kit';
 import {PlaceMap, TrioPins} from '../shots/ch1';
+import {TablePhoto} from '../v7';
 import {Envelope, Fading} from '../shots/ch2';
 
 // Chapter 2, The letter (plan_v6 §4 ch 2): the search fails → P.N. Bose's letter, Mayurbhanj → Jamsetji dies in
@@ -64,7 +65,8 @@ export const Letter: React.FC = () => (
 			<Stamp text="FEBRUARY · 1904" at={f.feb - f.letter} until={f.geologist - f.letter} />
 		</Shot>
 		<Shot a={f.geologist} b={f.walking} name="bose">
-			<PortraitPlate file="assets/media/raw/wm/C003_25_photograph-of-pramatha-nath-bose-jpg.jpg" place="assets/media/C007a.jpg" side="right" share={0.48} focus="50% 25%" grade="archive" />
+			{/* v8: his photograph as a print on the table: the high-key halftone blew out and tore at the edges as a cut-out */}
+			<TablePhoto file="raw/wm/C003_25_photograph-of-pramatha-nath-bose-jpg.jpg" dur={f.walking - f.geologist} aspect={960 / 1408} w={14} rot={1.5} push={0.16} seed="bose" />
 			<LowerThird name="PRAMATHA NATH BOSE" role="GEOLOGIST" at={f.bose - f.geologist} until={f.walking - f.geologist} />
 		</Shot>
 		{/* the hills of Mayurbhanj, and the ore */}

@@ -7,6 +7,7 @@ export const PLATES = {
 	dholera2023: {file: 'assets/media/sat/dholera2023_relief.jpg', bounds: [-271.286, -18.361, -263.286, -13.861], px: 3840},
 	dholera2026: {file: 'assets/media/sat/dholera2026_relief.jpg', bounds: [-271.286, -18.361, -263.286, -13.861], px: 3840},
 	india_bm: {file: 'assets/media/sat/india_bm.jpg', bounds: [-1050.000, -900.000, 1150.000, 720.000], px: 5280},
+	khambhat: {file: 'assets/media/sat/khambhat_relief.jpg', bounds: [-290.473, -28.943, -239.817, 1.702], px: 2981},
 	mayurbhanj: {file: 'assets/media/sat/mayurbhanj_relief.jpg', bounds: [208.468, -17.949, 223.468, -9.512], px: 3840},
 	nagpur: {file: 'assets/media/sat/nagpur_relief.jpg', bounds: [-36.458, 28.600, -28.458, 33.100], px: 3072},
 	navsari: {file: 'assets/media/sat/navsari_relief.jpg', bounds: [-249.914, 31.608, -239.914, 37.233], px: 3840},
