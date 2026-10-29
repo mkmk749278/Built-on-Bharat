@@ -1,0 +1,13 @@
+# Owner phone fetch list for v8: tata-history (scripts/termux_fetch_to_drive.sh --list, PLAYBOOK §11.4). 2026-10-29.
+# Official channels and Indian news first. No AP/AFP/Reuters/CNN archive or stock sellers such as WildFilmsIndia: paid
+# licences. Whole clips are short; the session picks the seconds and uses each only as a short credited excerpt.
+# NAME URL  # channel, upload date: where it goes (v8_plan.md)
+N06_taj_staff_2018 https://www.youtube.com/watch?v=FrqfFJyqOFw  # Hindustan Times, 2018: 26/11 staff, replaces the lobby flowers
+N07_singur_ndtv_2008 https://www.youtube.com/watch?v=5Mm806pw2hY  # NDTV, 30 Aug 2008: Singur standoff, ch 7 October
+N08_singur_theprint https://www.youtube.com/watch?v=6KjtgmkaR0U  # ThePrint, 2023: Singur archive shots, ch 7 October
+J01_jlr_solihull https://www.youtube.com/watch?v=twrle6ELpQI  # AutoMotoTV (JLR press footage), 2026: J.L.R. beat, replaces car-show snapshots
+J02_landrover_solihull https://www.youtube.com/watch?v=iR3F53RLLQc  # WorldofLandRover, 2010: Solihull plant, J.L.R. beat
+Y09_ratan_welcome_ai https://www.youtube.com/watch?v=Tl2m6m5pz3E  # Air India Official, Feb 2022: "the favourite child comes home"
+N09_quint_ai_2022 https://www.youtube.com/watch?v=cgBkTGKHfbI  # The Quint, 29 Jan 2022: first day after the takeover
+Y19_indica_ad_savings https://www.youtube.com/watch?v=8pcQer_epeg  # tatacars: Indica TV ad, ch 6
+Y20_indica_ad_mil https://www.youtube.com/watch?v=JB6hmwA3pFY  # tatacars: Indica TV ad, ch 6
