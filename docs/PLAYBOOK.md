@@ -1173,6 +1173,20 @@ To port when needed (Creator path → what to change):
 ## 16. Lessons log
 *(Newest first. Each lesson: what happened, the rule, why.)*
 
+**Outside review of v7b: take the eye, not the facts (2026-10-29).**
+- *What happened:* an outside AI "directorial audit" of the v7b cut was right about the picture almost everywhere it
+  pointed (the cold-open diamond still floating on black, modern schoolchildren in an 1850s beat, the cotton crash as a
+  spreadsheet line, lobby flowers under "waiters, cooks, managers" for 26/11). But it called AI171 a "hallucination"
+  (its knowledge predates June 2025) and reported Hindi audio that no source in the mix can produce. Its fixes added
+  unsourced drama ("tiger-infested", "Ford on the brink of bankruptcy") and invented evidence (an "authentic" appraisal
+  with seals, Ratan Tata's reflection in a plane window). Verdict per point: `films/tata-history/review/outside_review_v7b.md`.
+- *Rule:* check every claim in an outside review against the cut itself (frames at its timestamps, the code, the mix)
+  before acting on it. Take its diagnosis of the picture. Put every fact it adds through §9 and every image it proposes
+  through the honesty rules, like any other source. Our own rules still catch the void: check the cold open against
+  them on every cut, because the most-watched seconds are where a known fault hides longest.
+- *Why:* a reviewer that watches frames is a good eye and a poor historian; adopting its fixes whole would have put
+  false facts and fabricated images into a fact-checked film.
+
 **Film 1 visual rework v7 (2026-10-28).**
 - *What happened:* the owner shared an outside review of the v6 cut: narration 9.5/10, visuals 5.5/10, "five design
   universes colliding" (drawn line figures, the Blender diamond box 11 times, flat vector maps, a liquid "vat" for the
