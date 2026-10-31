@@ -30,9 +30,23 @@ const val = (keys: DepthKey[], frame: number, p: keyof Omit<DepthKey, 'f'>): num
 	});
 };
 
-const useTextures = (file: string, depthFile: string): [THREE.Texture, THREE.Texture, number] | null => {
+/**
+ * The hold is released only once the canvas exists and has drawn (`ready`, from onCreated), never when the textures
+ * arrive: between `setTex` and the ThreeCanvas mounting there is a tick with no hold, and a render tab that starts
+ * mid-shot captured that tick as a black frame (v8 720p: 28 one-frame black flashes, 2026-10-31).
+ */
+const useTextures = (file: string, depthFile: string): [[THREE.Texture, THREE.Texture, number] | null, () => void] => {
 	const [handle] = useState(() => delayRender(`DepthPhoto ${file}`));
 	const [tex, setTex] = useState<[THREE.Texture, THREE.Texture, number] | null>(null);
+	const ready = useMemo(() => {
+		let done = false;
+		return () => {
+			if (done) return;
+			done = true;
+			// two animation frames: R3F renders the scene on the frame after onCreated
+			requestAnimationFrame(() => requestAnimationFrame(() => continueRender(handle)));
+		};
+	}, [handle]);
 	useEffect(() => {
 		const loader = new THREE.TextureLoader();
 		const url = (f: string) => (f.startsWith('http') ? f : staticFile(f));
@@ -43,13 +57,12 @@ const useTextures = (file: string, depthFile: string): [THREE.Texture, THREE.Tex
 				img.minFilter = THREE.LinearMipmapLinearFilter;
 				const im = img.image as HTMLImageElement;
 				setTex([img, dep, im.width / im.height]);
-				continueRender(handle);
 			})
 			.catch((e) => {
 				throw new Error(`DepthPhoto: could not load ${file}: ${e}`);
 			});
 	}, [file, depthFile, handle]);
-	return tex;
+	return [tex, ready];
 };
 
 const FOV = 30;
@@ -94,7 +107,7 @@ export const DepthPhoto: React.FC<{
 }> = ({file, depthFile, keys, depth = 0.22, grade = 'archive', drift = 0.004}) => {
 	const frame = useCurrentFrame();
 	const {width, height} = useVideoConfig();
-	const tex = useTextures(file, depthFile ?? file.replace(/\.(jpe?g|png)$/i, '_depth.png'));
+	const [tex, ready] = useTextures(file, depthFile ?? file.replace(/\.(jpe?g|png)$/i, '_depth.png'));
 	const viewAspect = width / height;
 	const h = 2 * Math.tan(((FOV / 2) * Math.PI) / 180);
 	const dolly = val(keys, frame, 'dolly');
@@ -113,6 +126,7 @@ export const DepthPhoto: React.FC<{
 						camera={{fov: FOV, position: [0, 0, 1], near: 0.01, far: 10}}
 						onCreated={({gl}) => {
 							gl.outputColorSpace = THREE.SRGBColorSpace;
+							ready();
 						}}
 					>
 						<CameraRig z={1 - dolly} x={x} y={y} roll={roll} />

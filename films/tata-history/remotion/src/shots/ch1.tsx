@@ -9,9 +9,10 @@ import {IndiaMap, LonLat, MapPin, PLACES, camFit, mapCam} from '../../../../../l
 const MapBase: React.FC<{children: React.ReactNode}> = ({children}) => (
 	<AbsoluteFill style={{background: 'radial-gradient(ellipse 80% 70% at 50% 45%, #15161A 0%, #0D0E11 70%)'}}>
 		<InkPaper grid={0.06} />
-		{children}
+		{/* v9: the satellite ground a third brighter (v8 read as underexposed on a phone) */}
+		<AbsoluteFill style={{filter: 'brightness(1.32) contrast(1.04)'}}>{children}</AbsoluteFill>
 		<LightLeak color={colors.ember} side="left" strength={0.1} seed="ch1-map-leak" />
-		<Vignette strength={0.6} />
+		<Vignette strength={0.45} />
 		<Grain opacity={0.12} id="ch1-map-g" />
 	</AbsoluteFill>
 );
@@ -374,7 +375,7 @@ export const TrioPins: React.FC<{tries: number[]; notes?: [string, string][]; la
 	// the ground never sits still while the search goes on: a slow aerial drift east across the plateau
 	const drift = mapCam([{...wide, f: 0, zoom: wide.zoom * 0.97, x: wide.x - 14}, {...wide, f: 1200, zoom: wide.zoom * 1.1, x: wide.x + 18, y: wide.y - 6}], frame);
 	const cam = landAt ? mapCam([{...wide, f: landAt[0] - 70}, {...close, f: landAt[0] + 10}], frame) : drift;
-	const note = (i: number): [string, string] => notes?.[i] ?? ['A TRIAL SITE', 'NOT ALL THREE IN ONE PLACE'];
+	const note = (i: number): [string, string] => notes?.[i] ?? ['TRIED · WRONG', 'NEVER ALL THREE IN ONE PLACE'];
 	return (
 		<MapBase>
 			<IndiaMap cam={cam} style="faint" reveal={1} id="ch1-trio">
@@ -427,7 +428,7 @@ export const CottonCrash: React.FC<{crashAt: number; worthlessAt: number}> = ({c
 							opacity: 1 - 0.6 * crumple,
 						}}
 					>
-						<div style={{fontFamily: fontStacks.display, fontSize: 40, letterSpacing: '0.24em', color: '#3A2C1A'}}>BILL OF EXCHANGE · COTTON</div>
+						<div style={{fontFamily: fontStacks.display, fontSize: 40, letterSpacing: '0.24em', color: '#3A2C1A'}}>COTTON PRICES · 1865</div>
 						<div style={{height: 2, background: '#8A6A3A', margin: '18px 0 30px', opacity: 0.6}} />
 						<svg width={900} height={480}>
 							<polyline points={pts.join(' ')} fill="none" stroke="#8B2E1C" strokeWidth={5} strokeLinejoin="round" />

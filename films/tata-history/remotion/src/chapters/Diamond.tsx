@@ -15,7 +15,7 @@ const C = chapterClock('The diamond');
 const {S, W} = C;
 const M = 'assets/media';
 const BLENDER = `${M}/blender`;
-const Y04 = `${M}/footage/Y04_jamshedpur_100.mp4`;
+const Y04 = `${M}/footage/Y04_j100_43_60.mp4`;
 
 const f = {
 	strike: S('In nineteen twenty two'),
@@ -73,8 +73,8 @@ export const Diamond: React.FC = () => (
 		</Shot>
 		{/* the good years end: the harbour where cheap steel comes in */}
 		<Shot a={f.good} b={f.y1924} name="imports">
-			<Photo file="B001b.jpg" dur={f.y1924 - f.good} move={[0.06, 0.2, 0.02, -0.02]} grade="modern" depth={0.18} />
-			<Stamp text="BOMBAY HARBOUR" at={20} until={f.y1924 - f.good} />
+			<Photo file="B001a.jpg" dur={f.y1924 - f.good} move={[0.12, 0.26, -0.02, 0.02]} depth={0.2} />
+			<Stamp text="BOMBAY HARBOUR" sub="WHERE THE CHEAP STEEL CAME IN" at={20} until={f.y1924 - f.good} />
 		</Shot>
 		{/* close to two crore */}
 		<Shot a={f.y1924} b={f.where} name="two-crore">
@@ -94,7 +94,9 @@ export const Diamond: React.FC = () => (
 			<FrameSeq dir={`${BLENDER}/c1`} prefix="c1_" last={210} from={150} rate={0.5} />
 		</Shot>
 		<Shot a={f.called} b={f.found} name="jubilee" tag="RECONSTRUCTION">
-			<FrameSeq dir={`${BLENDER}/hero`} prefix="hero_" last={298} from={120} rate={0.8} />
+			<Camera seed="jubilee-counter" keys={[{f: 0, scale: 1.0}, {f: f.found - f.called, scale: 1.16, y: -14}]}>
+				<FrameSeq dir={`${BLENDER}/c2`} prefix="c2_" last={322} from={322} rate={0} />
+			</Camera>
 			<Stamp text="THE JUBILEE" sub="245 CARATS" at={40} until={f.found - f.called} />
 		</Shot>
 		{/* South Africa 1895; the Diamond Jubilee */}
@@ -131,7 +133,7 @@ export const Diamond: React.FC = () => (
 			<DeskPrint file="raw/wm/F_06_sbi-imperial-bank-seal-jpg.jpg" at={-10} width={520} rotate={-2} seed="seal" />
 		</Shot>
 		<Shot a={f.furnaces} b={f.paid} name="furnaces" leak={colors.ember}>
-			<CaptionCrop file={Y04} startFrom={44 * 60} />
+			<CaptionCrop file={Y04} startFrom={1 * 60} />
 		</Shot>
 		<Shot a={f.paid} b={f.hers} name="paid" leak={colors.ember}>
 			<TablePhoto file="v8/V8_workers_crowd.jpg" dur={f.hers - f.paid} aspect={960 / 560} w={28} rot={1} seed="crowd" />
@@ -174,19 +176,21 @@ export const Diamond: React.FC = () => (
 			</Fading>
 			<Stamp text="SIR DORABJI TATA · DIED 1932" at={20} until={f.children - f.dorabji} />
 		</Shot>
-		<Shot a={f.children} b={f.trust} name="the-couple-2">
-			{/* v8: the two of them together, their own photograph (1927, BnF), held */}
-			<DepthPhoto file={`${M}/A005e.jpg`} keys={[{f: 0, dolly: 0.1, x: 0.0}, {f: f.trust - f.children, dolly: 0.2, x: 0.02}]} depth={0.16} grade="archive" />
+		{/* v9: "they have no children": where the line ends, his mausoleum at Brookwood (Commons, CC0, 2016), not the
+		    1927 photograph a fourth time */}
+		<Shot a={f.children} b={f.trust} name="mausoleum">
+			<Photo file="E006_dorabji_mausoleum.jpg" dur={f.trust - f.children} move={[0.02, 0.16, -0.01, 0.01, 0.0, -0.01]} grade="archive" depth={0} />
+			<Stamp text="SIR DORABJI TATA'S MAUSOLEUM" sub="BROOKWOOD, ENGLAND · PHOTOGRAPHED IN 2016" at={20} until={f.trust - f.children} />
 		</Shot>
 		{/* everything to a trust */}
 		<Shot a={f.trust} b={f.name} name="trust-ledger" tag="ILLUSTRATION">
 			<Desk />
-			<TrustLedger at={[f.shares - f.trust, f.property - f.trust, f.jewels - f.trust]} seed="ledger1" />
+			<TrustLedger at={[f.shares - f.trust, f.property - f.trust, f.jewels - f.trust]} headAt={8} seed="ledger1" />
 		</Shot>
 		<Shot a={f.name} b={f.sells} name="trust-name" atmos={false}>
 			<Desk />
 			<AbsoluteFill style={{filter: 'brightness(0.4) blur(3px)'}}>
-				<TrustLedger at={[-200, -200, -200]} seed="ledger1b" />
+				<TrustLedger at={[-200, -200, -200]} headAt={-100} seed="ledger1b" />
 			</AbsoluteFill>
 			<Kinetic text="THE SIR DORABJI TATA TRUST" at={8} until={f.sells - f.name} display size={84} color={colors.gold} />
 		</Shot>
@@ -195,7 +199,7 @@ export const Diamond: React.FC = () => (
 			{/* the jewels sold: the ledger's twenty one lights go out (ILLUSTRATION) */}
 			<Fading from={f.hospital - f.sells}>
 				<Desk />
-				<TrustLedger at={[-200, -200, -200]} keepFrom={10} seed="ledger-sold" />
+				<TrustLedger at={[-200, -200, -200]} soldFrom={10} headAt={-100} seed="ledger-sold" />
 			</Fading>
 		</Shot>
 		<Shot a={f.tmh} b={f.helped} name="tata-memorial" fadeIn={10}>
@@ -211,7 +215,7 @@ export const Diamond: React.FC = () => (
 		{/* the shares the trust keeps: the key to the ending */}
 		<Shot a={f.keeps} b={f.end} name="shares-kept" tag="ILLUSTRATION">
 			<Desk />
-			<TrustLedger at={[-200, -200, -200]} keepFrom={f.keep2 - f.keeps} lockAt={f.key - f.keeps + 20} seed="ledger2" />
+			<TrustLedger at={[-200, -200, -200]} keepFrom={f.keep2 - f.keeps} lockAt={f.key - f.keeps + 20} headAt={-100} seed="ledger2" />
 		</Shot>
 	</AbsoluteFill>
 );

@@ -77,7 +77,8 @@ export const MapBombayJamshedpur: React.FC<{dur?: number}> = ({dur = 304}) => {
 };
 
 /** J.R.D.'s first mail flight, 15 October 1932: Karachi → Ahmedabad → Bombay (Juhu). Today's borders, faint. */
-export const FLIGHT_MAP = {pinA: 16, routeFrom: 40, routeDur: 190} as const;
+// v9: the plane reaches Juhu on the word "Juhu" (about 110 frames into the 3.7 s line; in v8 it was still at Ahmedabad)
+export const FLIGHT_MAP = {pinA: 4, routeFrom: 8, routeDur: 104} as const;
 const FLIGHT = [PLACES.karachi, PLACES.ahmedabad, PLACES.juhu];
 const AVIATION = '#9CC9E8';
 
@@ -97,8 +98,8 @@ export const MapFlight1932: React.FC = () => {
 	const cam = mapCam(
 		[
 			{f: 0, x: fit.x - 60, y: fit.y - 30, zoom: fit.zoom * 1.15},
-			{...fit, f: 160},
-			{f: 300, x: fit.x + 20, y: fit.y + 24, zoom: fit.zoom * 1.06},
+			{...fit, f: 100},
+			{f: 230, x: fit.x + 20, y: fit.y + 24, zoom: fit.zoom * 1.06},
 		],
 		frame,
 	);

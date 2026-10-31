@@ -1,6 +1,27 @@
 import React from 'react';
-import {AbsoluteFill, useCurrentFrame, useVideoConfig} from 'remotion';
+import {AbsoluteFill, random, useCurrentFrame, useVideoConfig} from 'remotion';
 import {Camera, Desk, ease, fontStacks, pop, tween} from '../../../../../lib/remotion';
+
+/** One line of illegible cursive: pen loops (a prolate cycloid) broken into word-length runs. No letterforms. */
+const scribble = (seed: string, x0: number, y0: number, len: number): string => {
+	let d = '';
+	let x = x0;
+	let w = 0;
+	while (x < x0 + len) {
+		const n = 4 + Math.floor(random(`${seed}-n${w}`) * 6); // loops in this word
+		const h = 9 + random(`${seed}-h${w}`) * 6;
+		for (let i = 0; i <= n * 12; i++) {
+			const t = (i / 12) * Math.PI * 2;
+			const tall = random(`${seed}-t${w}-${Math.floor(i / 12)}`) > 0.78 ? 2.1 : 1;
+			const px = x + t * 3.1 - 6.5 * Math.sin(t);
+			const py = y0 - h * tall * (0.5 - 0.5 * Math.cos(t)) + Math.sin(t * 0.13) * 1.5;
+			d += `${i === 0 ? 'M' : 'L'}${px.toFixed(1)} ${py.toFixed(1)} `;
+		}
+		x += n * Math.PI * 2 * 3.1 + 22 + random(`${seed}-g${w}`) * 14;
+		w++;
+	}
+	return d;
+};
 
 /** A blank 1970s inland postcard on the desk, turned over: an object only. Her words stay in the narration; nothing is
  *  written on it (never a recreated letter, PLAYBOOK §8.6). ILLUSTRATION. */
@@ -63,14 +84,27 @@ export const Postcard: React.FC<{at: number; flipAt?: number}> = ({at, flipAt = 
 									</>
 								) : (
 									<>
-										{/* her message, as ink strokes only: we do not invent her words */}
-										{Array.from({length: 7}, (_, k) => (
-											<div key={k} style={{position: 'absolute', left: 50, top: 70 + k * 58, display: 'flex', gap: 14, transform: `rotate(${-1 + (k % 3) * 0.4}deg)`, filter: 'blur(1.6px)'}}>
-												{Array.from({length: 4 + (k % 3)}, (_, j) => (
-													<div key={j} style={{height: 9, width: 60 + ((k * 37 + j * 53) % 90), borderRadius: 5, background: '#1F2A4A', opacity: 0.55}} />
-												))}
-											</div>
-										))}
+										{/* her message as handwriting seen too far off to read (v9: v8's grey bars read as unfinished): pen loops in
+										    ink, written on as she "writes a postcard", never letters, so none of her words is invented */}
+										<svg style={{position: 'absolute', inset: 0, overflow: 'hidden'}} viewBox="0 0 820 520">
+											<g transform="translate(40 0) skewX(-14)">
+											{Array.from({length: 6}, (_, k) => (
+												<path
+													key={k}
+													d={scribble(`pc-line${k}`, 40, 92 + k * 66, k === 5 ? 320 : 600)}
+													pathLength={1}
+													fill="none"
+													stroke="#1F2A4A"
+													strokeWidth={2.2}
+													strokeLinecap="round"
+													strokeLinejoin="round"
+													strokeDasharray="1 1"
+													strokeDashoffset={1 - tween(frame, flipAt + 30 + k * 26, flipAt + 30 + (k + 1) * 26, 0, 1)}
+													opacity={0.82}
+												/>
+											))}
+											</g>
+										</svg>
 									</>
 								)}
 							</div>

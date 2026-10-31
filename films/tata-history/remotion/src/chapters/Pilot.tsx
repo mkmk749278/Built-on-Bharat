@@ -82,13 +82,14 @@ export const Pilot: React.FC = () => (
 		</Shot>
 		<Shot a={f.joined} b={f.licence} name="apprentice">
 			{/* v8: a Bombay business street of the period (LoC), not today's Bombay House with its window AC units */}
-			<Photo file="loc7/L01c.jpg" dur={f.licence - f.joined} move={[0.04, 0.18, 0.01, -0.01]} grade="archive" depth={0.2} />
+			<Photo file="B017c.jpg" dur={f.licence - f.joined} move={[0.04, 0.18, 0.01, -0.01]} grade="archive" depth={0.2} />
 			<Stamp text="BOMBAY" sub="A BUSINESS STREET OF THE TIME" at={20} until={f.apprentice - f.joined} />
 			<Kinetic text="1925 · APPRENTICE · NO PAY" at={f.apprentice - f.joined + 30} until={f.licence - f.joined} display size={72} />
 		</Shot>
 		<Shot a={f.licence} b={f.oct} name="licence">
-			{/* the year over open sky, never over a later portrait (it would read as the photo's date) */}
-			<Footage file={`${M}/pix/pixabay_1844.mp4`} startFrom={22 * 60} grade="modern" />
+			{/* v9: a pilot's licence is an aeroplane, not a stock sunset: the Puss Moth's own type, the year kept clear of it */}
+			<Photo file="J001a.jpg" dur={f.oct - f.licence} move={[0.3, 0.42, -0.04, 0.02, 0.02, 0.0]} grade="aviation" depth={0.12} />
+			<AbsoluteFill style={{background: 'rgba(6,8,12,0.35)'}} />
 			<Kinetic text="1929" at={20} until={f.oct - f.licence} display size={150} y={-60} />
 			<Kinetic text="INDIA'S FIRST PILOT LICENCE" at={50} until={f.oct - f.licence} size={40} y={70} />
 		</Shot>
@@ -168,7 +169,7 @@ export const Pilot: React.FC = () => (
 			<Stamp text="APRIL 1974" at={f.april - f.postcard} until={f.student - f.postcard} />
 		</Shot>
 		<Shot a={f.student} b={f.bottom} name="iisc-1974">
-			<Photo file="E002a.jpg" dur={f.bottom - f.student} move={[0.1, 0.24, 0.02, -0.02]} grade="archive" depth={0.1} />
+			<Photo file="raw/wm/B011_16_iisc-main-building-jpg.jpg" dur={f.bottom - f.student} move={[0.04, 0.2, 0.0, 0.0, -0.06, -0.02]} grade="modern" depth={0} />
 			<Stamp text="BANGALORE" sub="THE INSTITUTE, TODAY" at={20} until={f.bottom - f.student} />
 		</Shot>
 		<Shot a={f.bottom} b={f.quiet} name="notice">
@@ -180,8 +181,8 @@ export const Pilot: React.FC = () => (
 		<Shot a={f.top} b={f.telegram} name="to-jrd">
 			<Photo file="jrd/jrd_late.jpg" dur={f.telegram - f.top} move={[0.04, 0.16, 0.0, 0.0, 0.02, 0.0]} grade="archive" depth={0} />
 		</Shot>
-		<Shot a={f.telegram} b={f.job} name="telegram" tag="ILLUSTRATION">
-			<Telegram at={10} line1At={f.come - f.telegram} line2At={f.pune - f.telegram} />
+		<Shot a={f.telegram} b={f.job} name="telegram" tag="RECONSTRUCTION">
+			<Telegram at={10} line1At={f.come - f.telegram} line2At={f.pune - f.telegram - 10} />
 		</Shot>
 		<Shot a={f.job} b={f.know} name="shop-floor">
 			<Camera seed="sanand" keys={[{f: 0, scale: 1.02}, {f: f.know - f.job, scale: 1.1}]}>
@@ -200,7 +201,7 @@ export const Pilot: React.FC = () => (
 				    logo cropped off (…c.jpg), held near full frame and flat (the soft print broke up and tore when pushed in) */}
 				<Photo file="v8/V8_jrd_747c.jpg" dur={f.night - f.kindly} move={[0.0, 0.06, 0.03, 0.05, 0.05, 0.06]} grade="archive" depth={0} />
 			</Fading>
-			<Stamp text="FEBRUARY 1978" at={f.feb - f.kindly} until={f.removes - f.kindly + 40} />
+			<Stamp text="J.R.D. AT AIR INDIA" sub="THE 1970s" at={f.feb - f.kindly} until={f.removes - f.kindly + 40} />
 		</Shot>
 		<Shot a={f.night} b={f.end} name="favourite-child">
 			<PortraitPlate file={`${M}/v8/V8_jrd_older.jpg`} place={`${M}/F046a.jpg`} side="right" share={0.5} focus="60% 30%" push={[1.06, 1.16]} />

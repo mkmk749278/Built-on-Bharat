@@ -1,5 +1,5 @@
 import React from 'react';
-import {AbsoluteFill, Sequence, useCurrentFrame} from 'remotion';
+import {AbsoluteFill, Freeze, Sequence, useCurrentFrame} from 'remotion';
 import {Atmosphere, Counter, Desk, ease, Grade, HonestyTag, Print, tween} from '../../../../lib/remotion';
 import {DepthKey, DepthPhoto} from '../../../../lib/remotion/three/DepthPhoto';
 import {T} from './timing';
@@ -31,13 +31,25 @@ export const Shot: React.FC<{
 	atmos?: boolean;
 	leak?: string | false;
 	tag?: 'RECONSTRUCTION' | 'ILLUSTRATION' | 'ARCHIVE' | 'ILLUSTRATIVE FOOTAGE';
-}> = ({a, b, name, children, fadeIn = 0, atmos = true, leak = false, tag}) => (
-	<Sequence from={a} durationInFrames={Math.max(1, b - a)} name={name}>
-		<FadeIn frames={fadeIn}>{children}</FadeIn>
-		{atmos ? <Atmosphere leak={leak} dust seed={name} /> : null}
-		{tag ? <HonestyTag text={tag} /> : null}
-	</Sequence>
-);
+}> = ({a, b, name, children, fadeIn = 0, atmos = true, leak = false, tag}) => {
+	// v9: a fade-in is a true dissolve. The shot starts `k` frames early, over the end of the shot before it (still
+	// mounted underneath), holding its own first frame until `a`; in v8 it started at `a` over an empty frame and
+	// dipped to black. A chapter's first shot has nothing under it, so it cuts.
+	const k = Math.min(fadeIn, a);
+	return (
+		<Sequence from={a - k} durationInFrames={Math.max(1, b - a + k)} name={name}>
+			<FadeIn frames={k}>
+				<Freeze frame={k} active={(f) => f < k}>
+					<Sequence from={k} name={`${name}-body`}>
+						{children}
+					</Sequence>
+				</Freeze>
+			</FadeIn>
+			{atmos ? <Atmosphere leak={leak} dust seed={name} /> : null}
+			{tag ? <HonestyTag text={tag} /> : null}
+		</Sequence>
+	);
+};
 
 export const FadeIn: React.FC<{frames: number; children: React.ReactNode}> = ({frames, children}) => {
 	const frame = useCurrentFrame();
@@ -59,7 +71,8 @@ export const Photo: React.FC<{file: string; dur: number; move?: number[]; depth?
 		{f: 0, dolly: d0, x: x0, y: y0},
 		{f: dur, dolly: d1, x: x1, y: y1},
 	];
-	return <DepthPhoto file={`${M}/${file}`} keys={keys} depth={depth} grade={grade} />;
+	// depth 0 = push-in only: no depth map is needed, so the photo stands in for its own (it is never displaced)
+	return <DepthPhoto file={`${M}/${file}`} depthFile={depth === 0 ? `${M}/${file}` : undefined} keys={keys} depth={depth} grade={grade} />;
 };
 
 /** A small archive original shown as a print on the desk (never stretched to full frame). */

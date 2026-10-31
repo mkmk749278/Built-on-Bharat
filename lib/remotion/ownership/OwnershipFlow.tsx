@@ -154,13 +154,13 @@ export const OwnershipFlow: React.FC<{t: FlowTimeline; background?: string}> = (
 				</Card>
 				<Card x={330} y={525} w={430} h={140} at={t.trusts}>
 					<div style={{position: 'absolute', left: 34, top: 24}}>
-						<Label size={25}>CHARITABLE TRUSTS</Label>
+						<Label size={31} spacing="0.1em">CHARITABLE TRUSTS</Label>
 						<div style={{fontFamily: fontStacks.numbers, fontSize: 56, fontWeight: 700, color: '#8C4F1E', marginTop: 6, opacity: tween(frame, t.trusts + 20, t.trusts + 40, 0, 1)}}>TWO THIRDS</div>
 					</div>
 				</Card>
 				<Card x={330} y={675} w={430} h={120} at={t.dorabji} glow={`rgba(212,175,55,${0.25 + 0.3 * glint})`}>
 					<div style={{position: 'absolute', left: 34, top: 18}}>
-						<Label size={23} color={GOLD_INK}>SIR DORABJI TATA TRUST</Label>
+						<Label size={25} spacing="0.04em" color={GOLD_INK}>SIR DORABJI TATA TRUST</Label>
 						<div style={{fontFamily: fontStacks.numbers, fontSize: 54, fontWeight: 700, color: GOLD_INK, marginTop: 4}}>28%</div>
 					</div>
 					{/* the diamond's light: the one white point */}
@@ -170,25 +170,26 @@ export const OwnershipFlow: React.FC<{t: FlowTimeline; background?: string}> = (
 				</Card>
 				<Card x={1560} y={470} w={460} h={90} at={t.shapoorji}>
 					<div style={{position: 'absolute', left: 30, top: 30}}>
-						<Label size={24}>SHAPOORJI PALLONJI GROUP</Label>
+						<Label size={26} spacing="0.03em">SHAPOORJI PALLONJI GROUP</Label>
 					</div>
 				</Card>
 				<Card x={1560} y={620} w={460} h={90} at={t.companies}>
 					<div style={{position: 'absolute', left: 30, top: 30}}>
-						<Label size={24}>TATA'S OWN COMPANIES</Label>
+						<Label size={29} spacing="0.08em">TATA'S OWN COMPANIES</Label>
 					</div>
 				</Card>
 				{COMPANIES.map((c, i) => (
-					<Card key={c} x={260 + i * 280} y={965} w={240} h={84} at={t.sons + 50 + i * 8} dim={0.85}>
+					<Card key={c} x={260 + i * 280} y={965} w={264} h={88} at={t.sons + 50 + i * 8} dim={0.85}>
 						<div style={{position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-							<Label size={22} spacing="0.14em">{c}</Label>
+							{/* v9: readable on a phone (22 px read as about 6 px in the 720p cut) */}
+							<Label size={27} spacing="0.02em">{c}</Label>
 						</div>
 					</Card>
 				))}
 				{['HOSPITALS', 'RESEARCH', 'SCHOLARSHIPS'].map((c, i) => (
 					<Card key={c} x={130 + i * 210} y={805} w={200} h={60} at={t.out + i * 12} glow="rgba(181,84,42,0.25)">
 						<div style={{position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-							<Label size={19} spacing="0.1em" color={OCHRE}>{c}</Label>
+							<Label size={24} spacing="0.04em" color={OCHRE}>{c}</Label>
 						</div>
 					</Card>
 				))}

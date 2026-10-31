@@ -158,7 +158,9 @@ export const Eight: React.FC = () => {
 			</Shot>
 			{/* would you have done it: into the faces of the Bombay street, 1906 */}
 			<Shot a={f.bet} b={f.believed} name="would">
-				<DepthPhoto file="assets/media/loc7/L03c.jpg" keys={[{f: 0, dolly: 0.3, x: -0.05, y: -0.13}, {f: f.believed - f.bet, dolly: 0.42, x: -0.06, y: -0.14}]} depth={0.24} grade="archive" />
+				{/* v9: "bet that Indians can make steel": Indian workers building railway coaches, 1895 (not the street again) */}
+				<DepthPhoto file="assets/media/loc7/L04.jpg" keys={[{f: 0, dolly: 0.06, x: -0.02}, {f: f.believed - f.bet, dolly: 0.22, x: 0.02}]} depth={0.2} grade="archive" />
+				<Stamp text="INDIAN WORKERS" sub="BUILDING RAILWAY COACHES · ABOUT 1895" at={20} until={f.believed - f.bet} />
 			</Shot>
 			{/* Upcott laughs */}
 			<Shot a={f.believed} b={f.how} name="upcott">
@@ -175,7 +177,7 @@ export const Eight: React.FC = () => {
 			{/* 1911, 1912 */}
 			<Shot a={f.iron1911 + 90} b={f.war} name="years" atmos={false}>
 				<AbsoluteFill style={{filter: 'brightness(0.42)'}}>
-					<ArchiveClip file="assets/media/footage/Y04_jamshedpur_100.mp4" startFrom={45 * 60} rate={0.5} clear={0.26} anchor="50% 0%" grade="furnace" />
+					<ArchiveClip file="assets/media/footage/Y04_j100_43_60.mp4" startFrom={2 * 60} rate={0.5} clear={0.26} anchor="50% 0%" grade="furnace" />
 				</AbsoluteFill>
 				<Embers count={24} seed="yr-emb" intensity={0.6} />
 				<Sequence durationInFrames={f.steel1912 - f.iron1911 - 90}>

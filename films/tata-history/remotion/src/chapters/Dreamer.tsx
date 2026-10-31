@@ -1,12 +1,12 @@
 import React from 'react';
-import {AbsoluteFill, useCurrentFrame} from 'remotion';
+import {AbsoluteFill, Sequence, useCurrentFrame} from 'remotion';
 import {Img, staticFile} from 'remotion';
 import {colors, Desk, Footage, Kinetic, LowerThird, PortraitPlate, Print, QuoteCard, Stamp, TableDoc, tween} from '../../../../../lib/remotion';
 import {DepthPhoto} from '../../../../../lib/remotion/three/DepthPhoto';
 import {Table, TablePhoto} from '../v7';
 import {PLACES} from '../../../../../lib/remotion/map';
-import {chapterClock, CounterAt, DeskPrint, Photo, Shot} from '../kit';
-import {CottonCrash, DebtLedger, PlaceMap, Sums, TrioPins} from '../shots/ch1';
+import {chapterClock, CounterAt, DeskPrint, FadeIn, Photo, Shot} from '../kit';
+import {CottonCrash, PlaceMap, Sums, TrioPins} from '../shots/ch1';
 
 // Chapter 1, The dreamer (plan_v6 §4 ch 1): Navsari → the fall and the restart → cotton out, cloth back → Empress
 // Mills and the workers → the Taj myth and the real hotel → three dreams, and steel the hardest. 4 min 36 s.
@@ -38,6 +38,7 @@ const f = {
 	worthless: S('The papers are worthless'),
 	firm: S("His father's firm cannot go on"),
 	still: S('Still in his twenties'),
+	debt: W('Still in his twenties', 'debt'),
 	failure: S("Isn't that the kind of failure"),
 	home: S('He comes home'),
 	banks: S('Banks failing'),
@@ -101,7 +102,7 @@ export const Dreamer: React.FC = () => (
 		</Shot>
 		<Shot a={f.boy} b={f.know} name="parsis-prayer" fadeIn={14}>
 			<Photo file="B019a.jpg" dur={f.know - f.boy} move={[0.0, 0.16, 0.01, -0.01]} depth={0.2} />
-			<Stamp text="PARSIS AT PRAYER" sub="BOMBAY · 1903" at={30} until={f.know - f.boy} />
+			<Stamp text="THE PARSI FAITH" sub="PRAYER AT SUNSET · PHOTOGRAPHED IN BOMBAY, 1903" at={30} until={f.know - f.boy} />
 		</Shot>
 		{/* Jamsetji Tata (real photograph) */}
 		<Shot a={f.know} b={f.gen} name="jamsetji">
@@ -120,8 +121,12 @@ export const Dreamer: React.FC = () => (
 			<Photo file="B018c.jpg" dur={f.think - f.father} move={[0.0, 0.18, 0, 0, 0.04, -0.02]} depth={0.22} />
 		</Shot>
 		{/* the safe path and the risky one */}
-		<Shot a={f.think} b={f.what} name="harbour-risk">
-			<Photo file="B001a.jpg" dur={f.what - f.think} move={[0.0, 0.2, 0.02, -0.02]} depth={0.2} />
+		<Shot a={f.think} b={f.risky} name="safe-path">
+			<Photo file="B019b.jpg" dur={f.risky - f.think} move={[0.16, 0.26, 0.02, -0.01]} depth={0.2} />
+		</Shot>
+		<Shot a={f.risky} b={f.what} name="harbour-risk">
+			<Photo file="B001a.jpg" dur={f.what - f.risky} move={[0.0, 0.2, 0.02, -0.02]} depth={0.2} />
+			<Stamp text="BOMBAY HARBOUR" sub="TRADE: THE RISKY PATH" at={14} until={f.what - f.risky} />
 		</Shot>
 		{/* a head for numbers; the fees come first */}
 		<Shot a={f.what} b={f.youknow} name="sums" tag="ILLUSTRATION">
@@ -129,19 +134,20 @@ export const Dreamer: React.FC = () => (
 		</Shot>
 		<Shot a={f.youknow} b={f.fourteen} name="fees">
 			<DepthPhoto file="assets/media/cm/cm_parayar-school-children-jpg.jpg" keys={[{f: 0, dolly: 0.02, x: -0.01}, {f: f.fourteen - f.youknow, dolly: 0.18, x: 0.01}]} depth={0.18} grade="modern" />
+			<Stamp text="TODAY" sub="SCHOOLCHILDREN IN INDIA" at={20} until={f.fourteen - f.youknow} />
 		</Shot>
 		{/* Elphinstone College; the trading business; Shanghai */}
 		<Shot a={f.fourteen} b={f.soon} name="elphinstone">
 			<Photo file="B015a.jpg" dur={f.soon - f.fourteen} move={[0.0, 0.12, -0.01, 0.01]} />
-			<Stamp text="ELPHINSTONE COLLEGE" sub="BOMBAY" at={20} until={f.soon - f.fourteen} />
+			<Stamp text="ELPHINSTONE COLLEGE" sub="BOMBAY · ITS LATER BUILDING, PHOTOGRAPHED IN 1905" at={20} until={f.soon - f.fourteen} />
 		</Shot>
 		<Shot a={f.soon} b={f.learning} name="bales">
 			<Photo file="B018a.jpg" dur={f.learning - f.soon} move={[0.02, 0.15, 0.015, -0.015]} />
 		</Shot>
 		<Shot a={f.learning} b={f.y1864} name="shanghai">
 			<Photo file="B016a.jpg" dur={f.y1864 - f.learning} move={[0.0, 0.14, -0.02, 0.02]} grade="modern" depth={0.16} />
-			<Stamp text="SHANGHAI · CHINA" at={f.shanghai - f.learning} until={f.falls - f.learning} />
-			<Dim from={f.falls - f.learning} to={f.y1864 - f.learning} />
+			<Stamp text="SHANGHAI · THE BUND" sub="WESTERN WAREHOUSES, ABOUT 1850" at={f.shanghai - f.learning} until={f.falls - f.learning} />
+			<Dim from={f.falls - f.learning} to={f.y1864 - f.learning} amount={0.35} />
 		</Shot>
 		{/* 1864: the voyage and the crash */}
 		<Shot a={f.y1864} b={f.crashed} name="voyage">
@@ -151,8 +157,12 @@ export const Dreamer: React.FC = () => (
 		<Shot a={f.crashed} b={f.firm} name="crash" tag="ILLUSTRATION">
 			<CottonCrash crashAt={20} worthlessAt={f.worthless - f.crashed} />
 		</Shot>
-		<Shot a={f.firm} b={f.failure} name="debts" tag="ILLUSTRATION">
-			<DebtLedger strikeFrom={f.still - f.firm + 60} strikeTo={f.failure - f.firm - 20} />
+		{/* v9: the firm closes on real cotton, not a blank ledger (v8's grey lines read as unfinished) */}
+		<Shot a={f.firm} b={f.failure} name="debts">
+			<Photo file="B018b.jpg" dur={f.failure - f.firm} move={[0.02, 0.22, 0.02, -0.03, 0.01, -0.01]} depth={0.2} />
+			<Stamp text="COTTON BALES · BOMBAY" sub="AT THE RAILWAY TERMINUS" at={14} until={f.debt - f.firm} />
+			<Kinetic text="EVERY DEBT" at={f.debt - f.firm} until={f.failure - f.firm} display size={110} y={-40} />
+			<Dim from={f.debt - f.firm} to={f.failure - f.firm} amount={0.3} />
 		</Shot>
 		{/* the kind of failure people talk about for years: the street */}
 		<Shot a={f.failure} b={f.home} name="talk" fadeIn={10}>
@@ -164,7 +174,7 @@ export const Dreamer: React.FC = () => (
 			<Stamp text="BOMBAY · 1865" at={10} until={f.banks - f.home + 10} />
 			<Kinetic text="BANKS FAILING" at={f.banks - f.home} until={f.vanish - f.home} display y={-60} />
 			<Kinetic text="MERCHANTS RUINED" at={f.merch - f.home} until={f.vanish - f.home} display y={40} />
-			<Dim from={f.vanish - f.home} to={f.give - f.home} amount={0.72} />
+			<Dim from={f.vanish - f.home} to={f.give - f.home} amount={0.38} />
 		</Shot>
 		{/* No. The army contract, 1868 */}
 		<Shot a={f.no} b={f.y1868} name="abyssinia">
@@ -183,11 +193,12 @@ export const Dreamer: React.FC = () => (
 			<DepthPhoto file="assets/media/loc7/L03c.jpg" keys={[{f: 0, dolly: 0.12, y: 0.05}, {f: f.begins - f.ever, dolly: 0.3, y: 0.07}]} depth={0.22} grade="archive" />
 		</Shot>
 		<Shot a={f.begins} b={f.lookB} name="priests-son" leak={colors.ember}>
-			<PortraitPlate file="assets/media/B003b.jpg" place="assets/media/B019b.jpg" side="left" share={0.46} focus="50% 30%" grade="furnace" />
+			<PortraitPlate file="assets/media/B003a.jpg" place="assets/media/B019a.jpg" side="left" share={0.46} focus="50% 22%" grade="furnace" />
 		</Shot>
 		{/* ships and cotton: money flows out */}
 		<Shot a={f.lookB} b={f.out} name="harbour">
 			<Photo file="B001b.jpg" dur={f.out - f.lookB} move={[0.0, 0.12, 0.02, -0.02]} grade="modern" />
+			<Stamp text="BOMBAY HARBOUR" sub="A LATER VIEW, THE 1890s" at={14} until={f.out - f.lookB} />
 		</Shot>
 		<Shot a={f.out} b={f.sails} name="bales-terminus">
 			<Photo file="B018b.jpg" dur={f.sails - f.out} move={[0.04, 0.16, 0.02, -0.02]} />
@@ -208,7 +219,12 @@ export const Dreamer: React.FC = () => (
 		{/* the opium trade, said plainly */}
 		<Shot a={f.opium} b={f.mill} name="opium">
 			<Photo file="B004a.jpg" dur={f.mill - f.opium} move={[0.0, 0.1, 0.01, -0.01]} depth={0.12} />
-			<Stamp text="OPIUM CLIPPER · 1830s" sub="ILLUSTRATION OF THE TRADE" at={30} until={f.mill - f.opium} />
+			<Sequence from={Math.round((f.mill - f.opium) / 2)}>
+				<FadeIn frames={14}>
+					<Photo file="B004b.jpg" dur={Math.round((f.mill - f.opium) / 2)} move={[0.04, 0.14, -0.01, 0.01]} depth={0.12} />
+				</FadeIn>
+			</Sequence>
+			<Stamp text="OPIUM CLIPPERS · 1830s–1850s" sub="PAINTINGS OF THE TRADE" at={30} until={f.mill - f.opium} />
 		</Shot>
 		{/* Empress Mills, Nagpur, 1 January 1877 */}
 		<Shot a={f.mill} b={f.opens} name="nagpur" atmos={false}>
@@ -225,23 +241,26 @@ export const Dreamer: React.FC = () => (
 			<Stamp text="NAGPUR" sub="FROM A TATA MOTORS FILM" at={30} until={f.strange - f.names} />
 		</Shot>
 		{/* a pension fund; paid when hurt; the viewer's own first job */}
-		<Shot a={f.strange} b={f.firstJob} name="empress-floor">
-			<TablePhoto file="v8/V8_empress_spindles.jpg" dur={f.firstJob - f.strange} aspect={960 / 648} seed="empress-floor" />
-			<Stamp text="THE SPINNING FLOOR" sub="EMPRESS MILLS · FROM A TATA MOTORS FILM" at={20} until={f.firstJob - f.strange} />
+		<Shot a={f.strange} b={f.hurt} name="empress-floor">
+			<TablePhoto file="v8/V8_empress_spindles.jpg" dur={f.hurt - f.strange} aspect={960 / 648} seed="empress-floor" />
+			<Stamp text="THE SPINNING FLOOR" sub="EMPRESS MILLS · FROM A TATA MOTORS FILM" at={20} until={f.hurt - f.strange} />
 		</Shot>
-		<Shot a={f.firstJob} b={f.pension} name="empress-creche">
-			<TablePhoto file="v8/V8_empress_creche.jpg" dur={f.pension - f.firstJob} aspect={960 / 648} rot={1.2} seed="empress-creche" />
-			<Stamp text="THE MILL CRÈCHE" sub="EMPRESS MILLS" at={20} until={f.pension - f.firstJob} />
+		<Shot a={f.hurt} b={f.firstJob} name="empress-dispensary">
+			<TablePhoto file="v8/V8_empress_dispensary.jpg" dur={f.firstJob - f.hurt} aspect={960 / 648} rot={-0.8} seed="empress-disp" />
+			<Stamp text="THE MILL DISPENSARY" sub="EMPRESS MILLS" at={14} until={f.firstJob - f.hurt} />
 		</Shot>
-		<Shot a={f.pension} b={f.kind} name="empress-dispensary">
-			<TablePhoto file="v8/V8_empress_dispensary.jpg" dur={f.kind - f.pension} aspect={960 / 648} rot={-0.8} seed="empress-disp" />
-			<Stamp text="THE MILL DISPENSARY" sub="EMPRESS MILLS" at={14} until={f.kind - f.pension} />
+		{/* v9: "your own first job" is the viewer's: a mill worker today, in colour and labelled so */}
+		<Shot a={f.firstJob} b={f.kind} name="first-job">
+			<AbsoluteFill style={{transform: `scale(1.06)`}}>
+				<Footage file="assets/media/pix/pixabay_262484.mp4" startFrom={30} grade="modern" />
+			</AbsoluteFill>
+			<Stamp text="TODAY" sub="A TEXTILE MILL" at={14} until={f.kind - f.firstJob} />
 		</Shot>
 		<Shot a={f.kind} b={f.famous} name="quote-1895">
 			<QuoteCard
 				lines={['We do not claim to be more unselfish,', 'more generous, or more philanthropic', 'than other people … the health and welfare', 'of our employees the sure foundation', 'of our prosperity.']}
 				attribution="JAMSETJI TATA · 1895"
-				at={4}
+				at={-24}
 				mark={3}
 				markFrom={f.healthy - f.kind}
 				markTo={f.famous - f.kind - 20}
@@ -265,8 +284,22 @@ export const Dreamer: React.FC = () => (
 			<LowerThird name="THE TAJ MAHAL PALACE" role="THE 1903 BUILDING, TODAY" at={12} until={f.hold - f.designed} />
 		</Shot>
 		<Shot a={f.hold} b={f.steelD} name="taj-today">
-			<Photo file="B009d.jpg" dur={f.steelD - f.hold} move={[0.0, 0.16, -0.01, 0.01]} grade="modern" depth={0.18} />
-			<Dim from={f.never - f.hold - 30} to={f.steelD - f.hold} amount={0.55} />
+			<Photo file="B009d.jpg" dur={f.three - f.hold} move={[0.0, 0.16, -0.01, 0.01]} grade="modern" depth={0.18} />
+			<Dim from={f.never - f.hold - 30} to={f.three - f.hold} amount={0.4} />
+		</Shot>
+		{/* v9: "three bigger ones": three prints dealt onto the table, one per dream, before each gets its own shot */}
+		<Shot a={f.three} b={f.steelD} name="three-dreams">
+			<Table seed="three" keys={[{f: 0, scale: 1.42, x: 0, y: 20}, {f: f.steelD - f.three, scale: 1.55, x: 0, y: 26}]}>
+				{[
+					{file: 'v8/V8_tisco_water.jpg', w: 15, h: 7.5, x: -15, rot: -3},
+					{file: 'D006a.jpg', w: 13, h: 8.8, x: 0, rot: 1.5},
+					{file: 'B011a.jpg', w: 13, h: 8.8, x: 14.5, rot: -1},
+				].map((d, i) => (
+					<TableDoc key={d.file} w={d.w} h={d.h} x={d.x} y={0} rot={d.rot} at={8 + i * 16} paper="#EFE7D6" seed={`three-${i}`}>
+						<Img src={staticFile(`assets/media/${d.file}`)} style={{position: 'absolute', inset: 14, width: 'calc(100% - 28px)', height: 'calc(100% - 28px)', objectFit: 'cover', filter: 'sepia(0.3) contrast(1.05)'}} />
+					</TableDoc>
+				))}
+			</Table>
 		</Shot>
 		{/* three bigger dreams: rails and bridges, monsoon power, science */}
 		<Shot a={f.steelD} b={f.power} name="bridge-1901" fadeIn={8}>
@@ -280,11 +313,21 @@ export const Dreamer: React.FC = () => (
 		<Shot a={f.inst} b={f.hardest} name="iisc" fadeIn={8}>
 			<Photo file="B011a.jpg" dur={f.hardest - f.inst} move={[0.0, 0.18, 0.02, -0.02]} grade="modern" depth={0.07} />
 			<CounterAt to={3000000} start={f.lakhWord - f.inst - 40} land={f.lakhWord - f.inst} prefix="Rs. " size={120} y={-60} />
+			<Sequence from={f.lakhWord - f.inst + 50}>
+				<FadeIn frames={16}>
+					<Photo file="raw/wm/B011_17_iisc-campus-jpg.jpg" dur={f.hardest - f.lakhWord - 50} move={[0.02, 0.14, -0.02, 0.02]} grade="modern" depth={0} />
+				</FadeIn>
+			</Sequence>
 			<Stamp text="BANGALORE" sub="INDIAN INSTITUTE OF SCIENCE, TODAY" at={20} until={f.hardest - f.inst} />
 		</Shot>
 		{/* steel: ore, coal and water never in one place */}
-		<Shot a={f.hardest} b={f.end} name="trio" atmos={false} tag="ILLUSTRATION">
-			<TrioPins tries={[f.because - f.hardest + 160, f.years - f.hardest, f.years - f.hardest + 80]} />
+		{/* v9: "the hardest of the three is steel": the works it became, before the search map */}
+		<Shot a={f.hardest} b={f.because} name="steel-hardest">
+			<Photo file="v8/V8_tisco_aerial.jpg" dur={f.because - f.hardest} move={[0.02, 0.14, 0.02, -0.02, 0, 0]} depth={0} />
+			<Stamp text="STEEL" sub="THE WORKS IT BECAME · AN EARLY VIEW" at={10} until={f.because - f.hardest} />
+		</Shot>
+		<Shot a={f.because} b={f.end} name="trio" atmos={false} tag="ILLUSTRATION">
+			<TrioPins tries={[f.because - f.because + 160, f.years - f.because, f.years - f.because + 80]} />
 		</Shot>
 	</AbsoluteFill>
 );

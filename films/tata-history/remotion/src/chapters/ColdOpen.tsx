@@ -29,7 +29,7 @@ import {ArchiveClip, Table} from '../v7';
 import {Camera} from '../../../../../lib/remotion';
 import {Filmstrip} from '../shots/Filmstrip';
 import {T} from '../timing';
-import {CounterAt} from '../kit';
+import {CounterAt, Photo, Shot} from '../kit';
 
 // Cold open (plan_v6 §4; handoff scenes/00_cold_open.md). Every cut and landing is a VO frame from T.
 const CH = T.chapter('Cold open');
@@ -93,27 +93,6 @@ const f = {
 	end: CH.end - CH.start,
 };
 
-/** A shot: a Sequence from `a` to `b` (chapter-local), with an optional fade-in and the standard atmosphere. */
-const Shot: React.FC<{a: number; b: number; children: React.ReactNode; name: string; fadeIn?: number; atmos?: boolean; leak?: string | false}> = ({
-	a,
-	b,
-	children,
-	name,
-	fadeIn = 0,
-	atmos = true,
-	leak = false,
-}) => (
-	<Sequence from={a} durationInFrames={Math.max(1, b - a)} name={name}>
-		<FadeIn frames={fadeIn}>{children}</FadeIn>
-		{atmos ? <Atmosphere leak={leak} dust seed={name} /> : null}
-	</Sequence>
-);
-
-const FadeIn: React.FC<{frames: number; children: React.ReactNode}> = ({frames, children}) => {
-	const frame = useCurrentFrame();
-	return <AbsoluteFill style={{opacity: frames ? tween(frame, 0, frames, 0, 1, ease.arrive) : 1}}>{children}</AbsoluteFill>;
-};
-
 /** Four modern shots for "look around you today": each cut on its sentence, a slow push inside. */
 const Today: React.FC = () => {
 	const frame = useCurrentFrame();
@@ -123,7 +102,8 @@ const Today: React.FC = () => {
 		<AbsoluteFill>
 			<Sequence from={0} durationInFrames={at(f.salt)}>
 				<AbsoluteFill style={{transform: `scale(${push(0)})`}}>
-					<Footage file={`${M}/pix/pixabay_30329.mp4`} startFrom={60} grade="modern" />
+					{/* v9: a Mumbai road tonight (the chai clip now plays once, on "the tea in your cup") */}
+					<Footage file={`${M}/pix/pixabay_24544_60.mp4`} startFrom={30} grade="modern" />
 				</AbsoluteFill>
 			</Sequence>
 			<Sequence from={at(f.salt)} durationInFrames={at(f.tea) - at(f.salt)}>
@@ -176,7 +156,7 @@ export const ColdOpen: React.FC = () => {
 
 			{/* 4 · to scale on the archive table: a glass copy of the Koh-i-Noor (Chris 73, CC BY-SA) beside our 3D model of the Jubilee, both to scale */}
 			<Shot a={f.more} b={f.sell} name="gems">
-				<GemTable kohinoorAt={f.kohinoor - f.more - 10} jubileeAt={f.twice - f.more} dur={f.sell - f.more} />
+				<GemTable kohinoorAt={f.kohinoor - f.more - 10} jubileeAt={-30} dur={f.sell - f.more} />
 			</Shot>
 
 			{/* 5 · not to sell: a loan, the diamond as the guarantee */}
@@ -213,18 +193,22 @@ export const ColdOpen: React.FC = () => {
 			{/* the workers and the works: Tata Steel's own archive film, cropped clear of its captions */}
 			<Shot a={f.thousands} b={f.company} name="worker" leak={colors.ember}>
 				{/* v8: the early works (period photographs at 0:44–0:49 of the centenary film); 0:50 on is modern, graded sepia */}
-				<ArchiveClip file={`${M}/footage/Y04_jamshedpur_100.mp4`} startFrom={48 * 60} rate={0.4} clear={0.26} anchor="50% 0%" grade="furnace" />
+				<ArchiveClip file={`${M}/footage/Y04_j100_43_60.mp4`} startFrom={5 * 60} rate={0.4} clear={0.26} anchor="50% 0%" grade="furnace" />
 				<Stamp text="JAMSHEDPUR" sub="THE EARLY WORKS · FROM A TATA STEEL FILM" at={10} until={f.company - f.thousands} />
 			</Shot>
 			<Shot a={f.company} b={f.never} name="works" leak={colors.ember}>
-				<ArchiveClip file={`${M}/footage/Y04_jamshedpur_100.mp4`} startFrom={44 * 60} rate={0.5} clear={0.26} anchor="50% 0%" grade="furnace" />
+				<ArchiveClip file={`${M}/footage/Y04_j100_43_60.mp4`} startFrom={1 * 60} rate={0.5} clear={0.26} anchor="50% 0%" grade="furnace" />
 			</Shot>
 
 			{/* 9 · Sir Dorabji Tata; Tata Steel */}
-			<Shot a={f.never} b={f.look} name="dorabji">
+			<Shot a={f.never} b={f.steel} name="dorabji">
 				<PortraitPlate file={`${M}/A005d.jpg`} place={`${M}/A001a.jpg`} side="right" share={0.52} focus="50% 22%" />
-				<LowerThird name="SIR DORABJI TATA" role="1859 – 1932" at={f.sir - f.never + 10} until={f.steel - f.never - 4} />
-				<Stamp text="TATA STEEL" sub="JAMSHEDPUR" at={f.steel - f.never} until={f.look - f.never} />
+				<LowerThird name="SIR DORABJI TATA" role="1859 – 1932" at={f.sir - f.never + 10} until={f.steel - f.never} />
+			</Shot>
+			{/* v9: "The company is Tata Steel": the works themselves, an early photograph, not his portrait again */}
+			<Shot a={f.steel} b={f.look} name="tata-steel">
+				<Photo file="v8/V8_tisco_water.jpg" dur={f.look - f.steel} move={[0.02, 0.16, -0.02, 0.02, 0, 0]} depth={0} />
+				<Stamp text="TATA STEEL" sub="JAMSHEDPUR · AN EARLY PHOTOGRAPH" at={6} until={f.look - f.steel} />
 			</Shot>
 
 			{/* 10 · today: salt, tea, a bridge, a plane overhead */}
@@ -266,13 +250,21 @@ export const ColdOpen: React.FC = () => {
 				<Sequence from={f.choice - f.answer}>
 					<YearRoller from={1924} to={1932} start={8} land={f.eight - f.choice} />
 				</Sequence>
+				{/* v9: "in this bank" is the bank: the counter, dissolving to the table on "what happens to that diamond" */}
+				<Sequence durationInFrames={f.what - f.answer + 18}>
+					<AbsoluteFill style={{opacity: tween(frame - f.answer, f.what - f.answer - 6, f.what - f.answer + 18, 1, 0)}}>
+						<FrameSeq dir={`${COUNTER}/c1`} prefix="c1_" last={210} from={40} rate={0.5} />
+						<HonestyTag text="RECONSTRUCTION" />
+					</AbsoluteFill>
+				</Sequence>
 			</Shot>
 			{/* 13 · twenty twenty six: Bombay House, the fight */}
 			<Shot a={f.y2026} b={f.but} name="bombay-house">
 				<DepthPhoto file={`${M}/raw/wm/A005_02_bombay-house-mast-jpg.jpg`} keys={[{f: 0, dolly: 0.04}, {f: f.but - f.y2026, dolly: 0.16}]} depth={0.14} grade="steel" />
 				<Stamp text="BOMBAY HOUSE · 2026" at={6} until={f.but - f.y2026} />
-				<Kinetic text="THE TRUSTS" at={f.fight - f.y2026} until={f.but - f.y2026} x={-360} y={-140} display />
-				<Kinetic text="TATA SONS" at={f.fight - f.y2026 + 8} until={f.but - f.y2026} x={360} y={-140} display />
+				{/* v9: above the façade, clear of the BOMBAY HOUSE sign */}
+				<Kinetic text="THE TRUSTS" at={f.fight - f.y2026} until={f.but - f.y2026} x={-360} y={-360} display scrim={0.7} />
+				<Kinetic text="TATA SONS" at={f.fight - f.y2026 + 8} until={f.but - f.y2026} x={360} y={-360} display scrim={0.7} />
 			</Shot>
 
 			{/* 14 · the stone warms to furnace orange; we go back to the beginning */}

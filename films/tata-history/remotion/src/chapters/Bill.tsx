@@ -124,7 +124,9 @@ export const Bill: React.FC = () => (
 		</Shot>
 		<Shot a={f.returns} b={f.jrd} name="air-india-today">
 			{/* v8: Air India's own footage of its new livery, its corner logo cropped (the A350 photo carried a Boeing 777X tail) */}
-			<ArchiveClip file={`${M}/footage/Y10_air_india_new.mp4`} startFrom={15.4 * 60} rate={0.28} clear={0.12} anchor="50% 100%" grade="modern" />
+			{/* v9: only the aircraft (15.78-16.60 s of the advert; v8 opened on its London cut-away), slowed 6.2x by motion
+			    interpolation into its own clip so the slow motion stays smooth (scripts: Y10_plane_slow in PLAYBOOK §16) */}
+			<ArchiveClip file={`${M}/footage/Y10_plane_slow.mp4`} startFrom={0} rate={1} clear={0.12} anchor="50% 100%" grade="modern" />
 			<Stamp text="AIR INDIA · BACK WITH TATA" sub="SIXTY NINE YEARS AFTER 1953" at={30} until={f.jrd - f.returns} />
 		</Shot>
 		<Shot a={f.jrd} b={f.stop} name="jrd-held">
@@ -140,9 +142,10 @@ export const Bill: React.FC = () => (
 				x={0}
 				y={0}
 				lines={[
-					{text: 'AIR INDIA FLIGHT 171', at: f.june - f.stop + 20, serif: true, size: 56, until: f.report - f.stop - 30},
-					{text: 'JUNE 2025 · AHMEDABAD', at: f.ai171 - f.stop + 30, size: 30, until: f.report - f.stop - 30},
-					{text: '260 LIVES', at: f.killed - f.stop, size: 32, until: f.report - f.stop - 30},
+					// v9: twice the size, and held to the end of the passage: 9 s of plain black after it read as a frozen video
+					{text: 'AIR INDIA FLIGHT 171', at: f.june - f.stop + 20, serif: true, size: 96},
+					{text: 'JUNE 2025 · AHMEDABAD', at: f.ai171 - f.stop + 30, size: 46},
+					{text: '260 LIVES', at: f.killed - f.stop, size: 50},
 				]}
 			/>
 		</Shot>
@@ -159,7 +162,7 @@ const QuietCard: React.FC = () => {
 		<AbsoluteFill style={{background: '#050506'}}>
 			<AbsoluteFill
 				style={{
-					background: `radial-gradient(ellipse 46% 40% at 50% 52%, rgba(120,92,60,${0.1 + 0.05 * breath}) 0%, rgba(40,30,22,0.05) 55%, rgba(0,0,0,0) 80%)`,
+					background: `radial-gradient(ellipse 46% 40% at 50% 52%, rgba(140,104,66,${0.18 + 0.08 * breath}) 0%, rgba(40,30,22,0.05) 55%, rgba(0,0,0,0) 80%)`,
 					opacity: tween(frame, 0, 90, 0, 1, ease.arrive),
 				}}
 			/>

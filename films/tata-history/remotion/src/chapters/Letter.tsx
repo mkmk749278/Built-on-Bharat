@@ -124,18 +124,17 @@ export const Letter: React.FC = () => (
 		{/* not from an office: the jungle */}
 		<Shot a={f.office} b={f.back} name="jungle" leak={false}>
 			<Camera seed="jungle" drift={3} keys={[{f: 0, scale: 1.04}, {f: f.back - f.office, scale: 1.14, x: -30}]}>
-				<Footage file="assets/media/pix/pixabay_301181.mp4" startFrom={30} grade="modern" />
+				{/* v9: slowed so the clip ends before the hikers walk in (they appear about 6 s into the source) */}
+				<Footage file="assets/media/pix/pixabay_301181.mp4" startFrom={30} rate={0.68} grade="modern" />
 			</Camera>
 			<Stamp text="THE FORESTS OF ODISHA" sub="TODAY" at={60} until={f.back - f.office} />
 		</Shot>
 		{/* the search, once more; then Sakchi, where the two rivers meet */}
-		<Shot a={f.back} b={f.sakchi} name="trio-search" atmos={false} tag="ILLUSTRATION">
-			<TrioPins tries={[20, 90]} />
-		</Shot>
-		<Shot a={f.sakchi} b={f.ore} name="domuhani" fadeIn={10}>
-			{/* the real confluence from orbit (Copernicus Sentinel-2, 2025): the Subarnarekha and the Kharkai */}
-			<SatPlace id="sakchi" target={[86.17, 22.825]} zoomTo={250} landAt={f.rivers - f.sakchi} fromIndia={false} tiltTo={34} />
-			<Stamp text="WHERE THE TWO RIVERS MEET" sub="SUBARNAREKHA AND KHARKAI · DOMUHANI, TODAY" at={f.rivers - f.sakchi - 10} until={f.ore - f.sakchi} />
+		{/* v9: "they go back, looking for one perfect spot": one continuous descent from all of India onto the real
+		    confluence (Copernicus Sentinel-2, 2025), instead of the unnamed trial pins a second time */}
+		<Shot a={f.back} b={f.ore} name="domuhani">
+			<SatPlace id="sakchi" target={[86.17, 22.825]} zoomTo={250} landAt={f.rivers - f.back} fromIndia tiltTo={34} />
+			<Stamp text="WHERE THE TWO RIVERS MEET" sub="SUBARNAREKHA AND KHARKAI · DOMUHANI, TODAY" at={f.rivers - f.back - 10} until={f.ore - f.back} />
 		</Shot>
 		<Shot a={f.ore} b={f.money} name="trio-land" atmos={false} tag="ILLUSTRATION">
 			<TrioPins tries={[]} landAt={[0, f.coal - f.ore, f.water - f.ore]} />
@@ -151,7 +150,7 @@ export const Letter: React.FC = () => (
 			<ColdLight from={f.cold - f.london} to={f.risk - f.london} />
 		</Shot>
 		{/* 1907: they ask India */}
-		<Shot a={f.risk} b={f.end} name="ask-india" fadeIn={8}>
+		<Shot a={f.risk} b={f.end} name="ask-india">
 			<Photo file="A001c.jpg" dur={f.end - f.risk} move={[0.0, 0.18, -0.01, 0.01]} depth={0.22} />
 			<Stamp text="BOMBAY · 1907" at={f.india - f.risk - 10} until={f.end - f.risk} />
 		</Shot>
