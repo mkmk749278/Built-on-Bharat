@@ -78,6 +78,8 @@ jobs:
       - name: Install
         working-directory: films/${{ inputs.film }}/remotion
         run: npm ci --no-audit --no-fund && npx remotion browser ensure
+      - name: ffmpeg for the dark-flash check on every shard (scripts/render_shards.mjs)
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg > /dev/null && ffmpeg -version | head -1
       - name: Media and voice from Drive
         run: |
           scripts/gdrive_pull.sh ${{ inputs.film }}/render-media films/${{ inputs.film }}/assets/media > /dev/null
