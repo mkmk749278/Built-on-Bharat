@@ -276,10 +276,10 @@ export const BlastFurnace: React.FC<BlastFurnaceProps> = ({timeline = furnaceDef
 						strokeWidth={8}
 						fill="none"
 						strokeDasharray="40 60"
-						strokeDashoffset={-frame * 14}
+						strokeDashoffset={-frame * 3.2 /* v9: 14 px a frame on an 80 px dash read as a 13 fps stutter */}
 						filter="url(#bf-blur3)"
 					/>
-					<ellipse cx={0} cy={BUSTLE_Y} rx={BUSTLE_R} ry={BUSTLE_R * ELL} fill="none" stroke="#FFD39A" strokeWidth={7} strokeDasharray="30 50" strokeDashoffset={-frame * 12} filter="url(#bf-blur3)" />
+					<ellipse cx={0} cy={BUSTLE_Y} rx={BUSTLE_R} ry={BUSTLE_R * ELL} fill="none" stroke="#FFD39A" strokeWidth={7} strokeDasharray="30 50" strokeDashoffset={-frame * 2.8} filter="url(#bf-blur3)" />
 				</g>
 
 				{/* back tuyeres: their pipes run behind the furnace; only the glowing nozzles show on the back wall */}
@@ -365,7 +365,7 @@ export const BlastFurnace: React.FC<BlastFurnaceProps> = ({timeline = furnaceDef
 					stroke="#FFD39A"
 					strokeWidth={7}
 					strokeDasharray="30 50"
-					strokeDashoffset={frame * 12}
+					strokeDashoffset={frame * 2.8}
 					filter="url(#bf-blur3)"
 					opacity={blast > 0.3 ? (blast - 0.3) / 0.7 : 0}
 				/>

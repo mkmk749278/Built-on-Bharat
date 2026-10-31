@@ -1,0 +1,5 @@
+# Owner phone fetch list for v9: tata-history (scripts/termux_fetch_to_drive.sh --list, PLAYBOOK §11.4). 2026-10-31.
+# Found with the YouTube Data API (research/yt_api_2026-10-31.md). Optional: v9 is complete without it. If fetched,
+# a few seconds become a short credited excerpt under "The old palace wing takes almost two years to rebuild" (18:03).
+# NAME URL  # channel, upload date: where it goes
+N10_taj_wing_2010 https://www.youtube.com/watch?v=fE7P5kPv-lU  # NDTV, 13 Aug 2010: "Taj's iconic heritage wing to reopen", ch 7 palace wing

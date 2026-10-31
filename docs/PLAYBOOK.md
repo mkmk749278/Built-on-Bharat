@@ -1128,6 +1128,8 @@ Nothing reaches the owner without passing all of these (and §1's "polished only
 ### 14.2 Picture gate (every cut)
 - **Audio-synced frame review:** one frame per second with the words heard in that second; read **every** sheet; fix
   every frame that doesn't show what is said, is empty, unreadable, covered or off-frame. Then a whole-film pass.
+  (v9: two frames a second on 4×6 sheets, the words under each, from the rendered cut; and the measured flash check:
+  no frame darker than 45 % of both neighbours.)
 - **Independent viewer review** (Creator, owner 2026-10-16): a new cloud session without the repo gets only the cut (a
   Drive download link) and the narration with timecodes, and gives a blunt verdict, a per-scene score table and the top
   10 fixes. Check its claims against sources and rules before changing anything. *Why:* on Creator it caught a broken
@@ -1172,6 +1174,42 @@ To port when needed (Creator path → what to change):
 
 ## 16. Lessons log
 *(Newest first. Each lesson: what happened, the rule, why.)*
+
+**v9: every word against its picture, and the cut made smooth (2026-10-31).**
+- *Black flash frames (28 in the v8 720p cut, Y ≈ 25 on 0–255, one frame each, some inside a continuous shot):* the
+  cause was `DepthPhoto` releasing its `delayRender` the moment its textures loaded, a tick before the `ThreeCanvas`
+  mounted and drew. A render tab that started mid-shot captured that tick as black. The hold is now released only
+  from the canvas's `onCreated`, two animation frames later. *Rule:* an async component releases its hold only once
+  its pixels are on screen, never when its data arrives. And `scripts/render_shards.mjs` now measures every shard
+  (64×36 mean luma; a frame under 45 % of both neighbours, one or two frames long), renders a shard with a flash again
+  at concurrency 1, and fails loud if it is still there. *Why:* stills never show it; only a farm render did.
+- *Fade-ins were dips to black:* `Shot fadeIn` started the shot at its own first frame over an empty frame, since the
+  shot before had ended. The `Shot` now starts `fadeIn` frames early over the previous shot, holding its own first frame
+  (`Freeze`) until its start: a true dissolve. A chapter's first shot cuts (nothing is under it). Verified on a render:
+  brightness holds flat through the dissolve. The same goes for "dims": no dim goes below 30 % brightness mid-sentence.
+- *Low-frame-rate archive stutters at 60 fps:* the Jamshedpur film, the Land Rover plant and the Singur report are
+  12–17 fps inside 25 fps files. `mpdecimate` (drop the duplicates) then `minterpolate=fps=60:mi_mode=mci` on the real
+  timestamps makes them smooth. A 12.8 s 1080p clip took over 7 min on 4 cores, so only the seconds the film uses are
+  interpolated, into their own short files (`*_60.mp4`, offsets moved). Slow motion of 0.17× on a 25 fps clip steps,
+  so the Air India plane is interpolated to 372 fps and retimed into its own clip (`Y10_plane_slow.mp4`). A dash
+  pattern moving 14 px a frame on an 80 px period read as a 13 fps stutter in the furnace cutaway: 3 px a frame.
+- *The word-to-scene pass:* one frame each half-second, with the words heard in that second under it, 58 sheets for 23
+  minutes, every sheet read. It found what three earlier still sweeps missed: a map that ends at Ahmedabad while the
+  voice lands at Juhu, "Jaguar" over a Land Rover yard, "March." over a January page mid-flip, "The company is Tata
+  Steel" over Dorabji's portrait, "your own first job" over a 1900s mill floor, the jewellery highlighted while the
+  ledger said the shares, "back to the bank" over a street, a 1955 J.R.D. handing over in 1991. *Rule:* the
+  word-to-scene sheet is part of the picture gate (§14.2) for every cut, not only stills of changed shots.
+- *Placeholders that are not text:* grey bars stood in for names and handwriting so that nothing was invented; on a
+  phone they read as unfinished. What works instead: a ruled register with a pencilled "Tata?" that searches it, pen
+  loops (a prolate cycloid, slanted) that read as handwriting too far off to read, a real photograph in place of a
+  blank ledger.
+- *Lower-thirds:* lifted to about 81 % of the height (above YouTube's progress bar and caption band), the sub line at
+  least 30 px, brighter. Higher than that, they collide with prints on the table.
+- *The YouTube Data API works from the cloud* with the channel's OAuth token (search, view counts, upload, captions),
+  even when yt-dlp is bot-blocked. Use it for package research and to verify a clip before asking the owner to fetch
+  it. Wikimedia's API rate-limits the shared IP (429) while `Special:FilePath` and `action=raw` still answer.
+- *"Doubled words" from a transcript are not always in the voice:* the reviewer heard "time. time." and "engine.
+  engine."; the voice track is silent right after each word. Check the WAV before trimming anything.
 
 **The pre-render still sweep of v8 (2026-10-29).**
 - *What happened:* the three v8 phases were merged, each checked at the stills of its own changes. A sweep of the whole

@@ -199,7 +199,7 @@ export const Porthole: React.FC<{file: string; startFrom: number; countFrom?: nu
 	const {durationInFrames} = useVideoConfig();
 	const n = Math.round(tween(frame, countFrom, countTo, 0, minutes, ease.camera));
 	const co = tween(frame, countFrom - 10, countFrom + 20, 0, 1) * tween(frame, fadeAt - 30, fadeAt, 1, 0);
-	const fade = tween(frame, fadeAt, fadeAt + 50, 1, 0.05, ease.leave);
+	const fade = tween(frame, fadeAt, fadeAt + 50, 1, 0.3, ease.leave); // v9: dims, never to black (0.05 read as a frozen frame)
 	return (
 		<AbsoluteFill style={{background: '#08090B'}}>
 			<AbsoluteFill style={{opacity: fade}}>

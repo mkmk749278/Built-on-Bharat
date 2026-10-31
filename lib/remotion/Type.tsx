@@ -23,7 +23,7 @@ export const Stamp: React.FC<{text: string; sub?: string; at: number; until: num
 	at,
 	until,
 	align = 'left',
-	size = 46,
+	size = 50,
 	y = 0,
 }) => {
 	const frame = useCurrentFrame();
@@ -38,7 +38,8 @@ export const Stamp: React.FC<{text: string; sub?: string; at: number; until: num
 			style={{
 				justifyContent: 'flex-end',
 				alignItems: align === 'left' ? 'flex-start' : 'center',
-				padding: align === 'left' ? '0 0 120px 120px' : '0 0 140px 0',
+				// v9: lifted to about 81 % of the height, clear of YouTube's progress bar and caption band on a phone
+				padding: align === 'left' ? '0 0 200px 120px' : '0 0 200px 0',
 				transform: `translateY(${y}px)`,
 				pointerEvents: 'none',
 			}}
@@ -52,7 +53,7 @@ export const Stamp: React.FC<{text: string; sub?: string; at: number; until: num
 						right: -140,
 						top: -60,
 						bottom: -50,
-						background: 'radial-gradient(ellipse 62% 62% at 45% 50%, rgba(8,8,10,0.86) 0%, rgba(8,8,10,0.6) 45%, rgba(8,8,10,0) 78%)',
+						background: 'radial-gradient(ellipse 64% 66% at 45% 50%, rgba(8,8,10,0.9) 0%, rgba(8,8,10,0.7) 48%, rgba(8,8,10,0) 80%)',
 						zIndex: -1,
 					}}
 				/>
@@ -70,7 +71,7 @@ export const Stamp: React.FC<{text: string; sub?: string; at: number; until: num
 					}}
 				/>
 				{sub ? (
-					<div style={{fontFamily: fontStacks.text, fontWeight: 600, fontSize: size * 0.56, letterSpacing: '0.16em', color: '#D8CDB8', marginTop: 12, textTransform: 'uppercase'}}>
+					<div style={{fontFamily: fontStacks.text, fontWeight: 600, fontSize: Math.max(30, size * 0.62), letterSpacing: '0.12em', color: '#EFE6D3', marginTop: 12, textTransform: 'uppercase', textShadow: '0 2px 8px rgba(0,0,0,0.85)'}}>
 						{sub}
 					</div>
 				) : null}
@@ -84,7 +85,7 @@ export const Stamp: React.FC<{text: string; sub?: string; at: number; until: num
  * for the film): the name in Cinzel bronze, a hairline, the role in Garamond, on the Stamp's soft scrim. No box.
  */
 export const LowerThird: React.FC<{name: string; role?: string; at: number; until: number}> = ({name, role, at, until}) => (
-	<Stamp text={name} sub={role} at={at} until={until} size={44} />
+	<Stamp text={name} sub={role} at={at} until={until} size={50} />
 );
 
 /** Indian grouping: 23175000 → 2,31,75,000. */

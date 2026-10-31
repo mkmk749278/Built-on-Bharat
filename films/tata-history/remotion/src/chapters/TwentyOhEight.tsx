@@ -1,10 +1,10 @@
 import React from 'react';
-import {AbsoluteFill, useCurrentFrame, useVideoConfig} from 'remotion';
-import {colors, Desk, ease, Footage, Grain, Kinetic, LightLeak, LowerThird, PortraitPlate, Print, QuoteCard, Stamp, tween, Vignette} from '../../../../../lib/remotion';
+import {AbsoluteFill, Img, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
+import {colors, Desk, ease, fontStacks, Footage, Grain, TableDoc, Kinetic, LightLeak, LowerThird, PortraitPlate, Print, QuoteCard, Stamp, tween, Vignette} from '../../../../../lib/remotion';
 import {InkPaper} from '../../../../../lib/remotion/ink';
 import {DeskCalendar} from '../../../../../lib/remotion/kinetic';
 import {camFit, IndiaMap, MapPin, MapRoute, mapCam, PLACES} from '../../../../../lib/remotion/map';
-import {ArchiveClip} from '../v7';
+import {ArchiveClip, Table} from '../v7';
 import {chapterClock, CounterAt, DeskPrint, Photo, Shot} from '../kit';
 import {TapeFrame} from '../shots/ch3';
 import {Fading} from '../shots/ch2';
@@ -129,6 +129,12 @@ const Calendar: React.FC<{tears: number[]}> = ({tears}) => (
 
 const GONE = -1000; // a page torn before the shot opens
 
+/** A warm wash over a print from `at` on (the name being said). */
+const Lit: React.FC<{at: number}> = ({at}) => {
+	const k = tween(useCurrentFrame(), at, at + 14, 0, 1, ease.arrive);
+	return <AbsoluteFill style={{boxShadow: `inset 0 0 0 ${6 * k}px ${colors.gold}`, background: `rgba(229,168,90,${0.1 * k})`, pointerEvents: 'none'}} />;
+};
+
 export const TwentyOhEight: React.FC = () => (
 	<AbsoluteFill style={{background: '#0B0B0C'}}>
 		{/* JANUARY: Delhi, the Nano */}
@@ -161,21 +167,35 @@ export const TwentyOhEight: React.FC = () => (
 		</Shot>
 		{/* MARCH: Jaguar Land Rover */}
 		<Shot a={f.march} b={f.ford} name="cal-march" atmos={false}>
-			<Calendar tears={[4]} />
+			{/* v9: the March page is already down when the word lands (the 1 s shot ended mid-flip on January) */}
+			<Calendar tears={[-60]} />
 		</Shot>
-		<Shot a={f.ford} b={f.jlr} name="ford-2008">
-			<Photo file="G004a.jpg" dur={f.jlr - f.ford} move={[0.1, 0.26, -0.02, 0.02]} grade="modern" depth={0.12} />
-			<Stamp text="FORD MOTOR COMPANY" sub="2008" at={14} until={f.jlr - f.ford} />
+		{/* v9: "two famous British brands. Jaguar and Land Rover.": the two cars dealt onto the table, each lit on its name
+		    (the Ford headquarters had been on screen twice already) */}
+		<Shot a={f.ford} b={f.landRover} name="two-brands">
+			<Table seed="jlr" keys={[{f: 0, scale: 1.45, x: 0, y: 10}, {f: f.landRover - f.ford, scale: 1.6, x: 0, y: 14}]}>
+				{[
+					{file: 'H008a.jpg', x: -8.2, rot: -2, at: 10, lit: f.jlr - f.ford, label: 'JAGUAR'},
+					{file: 'H009a.jpg', x: 8.2, rot: 1.5, at: 26, lit: f.landRover - f.ford - 4, label: 'LAND ROVER'},
+				].map((d) => (
+					<TableDoc key={d.file} w={15} h={10.2} x={d.x} y={0} rot={d.rot} at={d.at} paper="#EFE7D6" seed={`jlr-${d.label}`}>
+						<Img src={staticFile(`${M}/${d.file}`)} style={{position: 'absolute', left: 14, right: 14, top: 14, height: '76%', width: 'calc(100% - 28px)', objectFit: 'cover'}} />
+						<div style={{position: 'absolute', left: 0, right: 0, bottom: 16, textAlign: 'center', fontFamily: fontStacks.display, fontWeight: 700, fontSize: 34, letterSpacing: '0.2em', color: '#2B2318'}}>{d.label}</div>
+						<Lit at={d.lit} />
+					</TableDoc>
+				))}
+			</Table>
+			<Kinetic text="FORD SELLS · 2008" at={14} until={f.jlr - f.ford} display size={60} y={-370} color={colors.gold} />
 		</Shot>
-		<Shot a={f.jlr} b={f.bn} name="jaguar-land-rover">
+		<Shot a={f.landRover} b={f.bn} name="jaguar-land-rover">
 			{/* v8: Land Rover's own Solihull plant on film (c.2010), not two car-show snapshots */}
-			<ArchiveClip file={`${M}/footage/J02_landrover_solihull.mp4`} startFrom={10.5 * 60} rate={0.6} grade="steel" />
-			<Stamp text="SOLIHULL, ENGLAND" sub="LAND ROVER'S HOME" at={14} until={f.tata - f.jlr} />
-			<Kinetic text="TATA" at={f.tata - f.jlr} until={f.bn - f.jlr} display size={200} color={colors.gold} scrim={0.7} />
+			<ArchiveClip file={`${M}/footage/J02_lr_10_60.mp4`} startFrom={0.5 * 60} rate={0.6} grade="steel" />
+			<Stamp text="SOLIHULL, ENGLAND" sub="LAND ROVER'S HOME" at={14} until={f.tata - f.landRover} />
+			<Kinetic text="TATA" at={f.tata - f.landRover} until={f.bn - f.landRover} display size={200} color={colors.gold} scrim={0.7} />
 		</Shot>
 		<Shot a={f.bn} b={f.kadle} name="two-point-three">
 			<AbsoluteFill style={{filter: 'brightness(0.55)'}}>
-				<ArchiveClip file={`${M}/footage/J02_landrover_solihull.mp4`} startFrom={311 * 60} rate={0.7} grade="steel" />
+				<ArchiveClip file={`${M}/footage/J02_lr_310_60.mp4`} startFrom={1 * 60} rate={0.7} grade="steel" />
 			</AbsoluteFill>
 			<CounterAt to={2.3} start={6} land={70} prefix="$" suffix=" BILLION" size={140} label="ABOUT" format={(n) => n.toFixed(1)} />
 		</Shot>
@@ -197,16 +217,16 @@ export const TwentyOhEight: React.FC = () => (
 			/>
 		</Shot>
 		<Shot a={f.real} b={f.oct} name="deal-real">
-			<ArchiveClip file={`${M}/footage/J02_landrover_solihull.mp4`} startFrom={407 * 60} rate={0.7} grade="steel" />
+			<ArchiveClip file={`${M}/footage/J02_lr_406_60.mp4`} startFrom={1 * 60} rate={0.7} grade="steel" />
 			<Stamp text="JAGUAR LAND ROVER" sub="BOUGHT FROM FORD, 2008" at={10} until={f.oct - f.real} />
 		</Shot>
 		{/* OCTOBER: Singur to Sanand */}
 		<Shot a={f.oct} b={f.singur} name="cal-october" atmos={false}>
-			<Calendar tears={[GONE, 4]} />
+			<Calendar tears={[GONE, -60]} />
 		</Shot>
 		<Shot a={f.singur} b={f.pulls} name="singur-protests">
 			{/* only the crowd (57.52-61.44 s in the report): at 0.8 the shot ran into NDTV's statement card, news UI */}
-			<ArchiveClip file={`${M}/footage/N07_singur_ndtv_2008.mp4`} startFrom={57.6 * 60} rate={0.56} clear={0.22} anchor="50% 30%" grade="steel" />
+			<ArchiveClip file={`${M}/footage/N07_singur_57_60.mp4`} startFrom={0.6 * 60} rate={0.56} clear={0.22} anchor="50% 30%" grade="steel" />
 			<Stamp text="SINGUR · 2008" sub="FROM AN NDTV REPORT" at={14} until={f.pulls - f.singur} />
 		</Shot>
 		<Shot a={f.pulls} b={f.nov} name="singur-sanand" atmos={false}>
@@ -258,7 +278,7 @@ export const TwentyOhEight: React.FC = () => (
 			<Darkening from={f.lights - f.banquet}>
 				<Photo file="cm/cm_india-mumbai-magnifient-interior-stairca.jpg" dur={f.kitchens - f.banquet} move={[0.02, 0.18, -0.02, 0.02]} grade="night" depth={0.16} />
 			</Darkening>
-			<Kinetic text="MORE THAN SIXTY GUESTS · SILENT IN THE DARK" at={f.sixty - f.banquet + 30} until={f.kitchens - f.banquet} size={42} y={-380} />
+			<Kinetic text="MORE THAN SIXTY GUESTS · SILENT IN THE DARK" at={f.sixty - f.banquet + 30} until={f.kitchens - f.banquet} size={64} y={-330} />
 		</Shot>
 		<Shot a={f.kitchens} b={f.kang} name="back-entrance" atmos={false}>
 			<Fading from={f.killed - f.kitchens}>

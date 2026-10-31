@@ -50,6 +50,7 @@ const f = {
 	design: S('For almost a hundred years, that design'),
 	died: S('Then, in October twenty twenty four'),
 	hall: S('His body lay at a hall'),
+	thousands: W('His body lay at a hall', 'thousands'),
 	students: S('Students.'),
 	funeral: S('He was given a state funeral'),
 	noel: S('His half brother, Noel Tata'),
@@ -97,11 +98,17 @@ const f = {
 	end: C.end,
 };
 
+/** Takes a photograph down a stop from `at`, so a line of type reads over it. */
+const Dimmer: React.FC<{at: number}> = ({at}) => (
+	<AbsoluteFill style={{background: `rgba(8,8,10,${0.38 * tween(useCurrentFrame(), at, at + 20, 0, 1)})`, pointerEvents: 'none'}} />
+);
+
 export const Answer: React.FC = () => (
 	<AbsoluteFill style={{background: '#0B0B0C'}}>
 		{/* back to the bank, 1924: the third time */}
-		<Shot a={0} b={f.why} name="bombay-again" fadeIn={10}>
-			<DepthPhoto file={`${M}/A001a.jpg`} keys={[{f: 0, dolly: 0.12, x: 0.01}, {f: f.why, dolly: 0.26, x: -0.01}]} depth={0.24} grade="archive" />
+		{/* v9: "back to the bank in 1924" is the bank: the counter and the case (the street had been on screen five times) */}
+		<Shot a={0} b={f.why} name="bank-again" tag="RECONSTRUCTION">
+			<FrameSeq dir={`${B}/c1`} prefix="c1_" last={210} from={20} rate={0.6} />
 			<Stamp text="BOMBAY · 1924" at={f.back + 30} until={f.why} />
 		</Shot>
 		<Shot a={f.why} b={f.because} name="rich-list" tag="ILLUSTRATION">
@@ -127,11 +134,11 @@ export const Answer: React.FC = () => (
 		</Shot>
 		<Shot a={f.out} b={f.research} name="hospitals">
 			{/* v8: a second Tata hospital (Tata Steel's own film), not the Tata Memorial atrium a third time */}
-			<ArchiveClip file={`${M}/footage/Y04_jamshedpur_100.mp4`} startFrom={100 * 60} rate={0.6} clear={0.26} anchor="50% 0%" grade="modern" />
+			<ArchiveClip file={`${M}/footage/Y04_j100_99_60.mp4`} startFrom={1 * 60} rate={0.6} clear={0.26} anchor="50% 0%" grade="modern" />
 			<Stamp text="TATA MAIN HOSPITAL" sub="JAMSHEDPUR" at={6} until={f.research - f.out} />
 		</Shot>
 		<Shot a={f.research} b={f.scholarships} name="research">
-			<Photo file="E002a.jpg" dur={f.scholarships - f.research} move={[0.0, 0.14]} grade="modern" depth={0.08} />
+			<Photo file="raw/wm/B011_17_iisc-campus-jpg.jpg" dur={f.scholarships - f.research} move={[0.04, 0.16, -0.02, 0.02]} grade="modern" depth={0} />
 			<Stamp text="INDIAN INSTITUTE OF SCIENCE" sub="BENGALURU" at={6} until={f.scholarships - f.research} />
 		</Shot>
 		<Shot a={f.scholarships} b={f.design} name="scholarships">
@@ -145,13 +152,17 @@ export const Answer: React.FC = () => (
 			<PortraitPlate file="assets/media/raw/wm/G002_57_ratan-tata-1-jpg.jpg" place="assets/media/B009c.jpg" side="right" share={0.48} focus="50% 25%" grade="archive" />
 			<LowerThird name="RATAN TATA" role="DIED 9 OCTOBER 2024" at={30} until={f.hall - f.died} />
 		</Shot>
-		<Shot a={f.hall} b={f.funeral} name="farewell">
-			<Photo file="cm/cm_campus-of-national-centre-for-the-perfor.jpg" dur={f.funeral - f.hall} move={[0.02, 0.2, 0.02, -0.02]} grade="archive" depth={0.16} />
-			<Stamp text="THE NCPA · SOUTH MUMBAI" sub="THE BUILDING, PHOTOGRAPHED IN 2024" at={20} until={f.funeral - f.hall} />
+		<Shot a={f.hall} b={f.thousands} name="farewell">
+			<Photo file="cm/cm_campus-of-national-centre-for-the-perfor.jpg" dur={f.thousands - f.hall} move={[0.02, 0.14, 0.02, -0.01]} grade="archive" depth={0.16} />
+			<Stamp text="THE NCPA · SOUTH MUMBAI" sub="THE BUILDING, PHOTOGRAPHED IN 2024" at={20} until={f.thousands - f.hall} />
+		</Shot>
+		{/* v9: the people who came, and the funeral itself, on the day's news footage (ANI, 10 October 2024), cropped
+		    clear of its banner; never a portrait of him alive beside the word "funeral" */}
+		<Shot a={f.thousands} b={f.funeral} name="mourners">
+			<TapeFrame file={`${M}/footage/N03_crowd.mp4`} startFrom={0} scan={false} label="MUMBAI · 10 OCTOBER 2024 · ANI" />
 		</Shot>
 		<Shot a={f.funeral} b={f.noel} name="state-funeral">
-			<PortraitPlate file="assets/media/cm/ratan_tata_dgr_girish.jpg" place="assets/media/cm/cm_campus-of-national-centre-for-the-perfor.jpg" side="left" share={0.42} focus="50% 22%" grade="archive" push={[1.0, 1.05]} />
-			<Stamp text="A STATE FUNERAL" sub="MUMBAI" at={20} until={f.noel - f.funeral} />
+			<TapeFrame file={`${M}/footage/N03_coffin.mp4`} startFrom={2 * 60} scan={false} label="A STATE FUNERAL · MUMBAI, 10 OCTOBER 2024 · ANI" />
 		</Shot>
 		<Shot a={f.noel} b={f.cracks} name="noel">
 			<PortraitPlate file="assets/media/raw/wm/J010_01_noel-tata-png.jpg" place="assets/media/B009d.jpg" side="right" share={0.44} focus="50% 25%" grade="modern" />
@@ -161,8 +172,10 @@ export const Answer: React.FC = () => (
 		<Shot a={f.cracks} b={f.board} name="cracks">
 			<Photo file="raw/wm/A005_02_bombay-house-mast-jpg.jpg" dur={f.board - f.cracks} move={[0.06, 0.26, -0.02, 0.02]} grade="steel" depth={0.14} />
 			<Kinetic text="2026" at={10} until={f.fight - f.cracks} display size={150} scrim={0.5} />
-			<Kinetic text="WHO RUNS TATA" at={f.who - f.cracks} until={f.board - f.cracks} display size={70} y={-80} scrim={0.6} />
-			<Kinetic text="AND WHO DECIDES THAT" at={W('Who runs Tata, and who decides', 'who') - f.cracks + 30} until={f.board - f.cracks} size={44} y={30} scrim={0.6} />
+			{/* v9: the words sit in the sky band above the façade, on a dimmed plate, not across the BOMBAY HOUSE sign */}
+			<Dimmer at={f.who - f.cracks - 10} />
+			<Kinetic text="WHO RUNS TATA" at={f.who - f.cracks} until={f.board - f.cracks} display size={74} y={-360} scrim={0.6} />
+			<Kinetic text="AND WHO DECIDES THAT" at={W('Who runs Tata, and who decides', 'who') - f.cracks + 30} until={f.board - f.cracks} size={46} y={-270} scrim={0.6} />
 		</Shot>
 		<Shot a={f.board} b={f.trusts} name="the-vote" tag="ILLUSTRATION">
 			<BoardNote voteAt={W('This September, the Tata Sons board', 'voted') - f.board} noAt={f.voted - f.board} dur={f.trusts - f.board} />
@@ -209,7 +222,7 @@ export const Answer: React.FC = () => (
 			<AbsoluteFill style={{filter: 'brightness(0.45)'}}>
 				<DholeraFromOrbit landAt={-1} />
 			</AbsoluteFill>
-			<CounterAt to={91000} start={6} land={70} prefix="₹" suffix=" CRORE" size={130} />
+			<CounterAt to={91000} start={6} land={70} prefix="Rs. " suffix=" CRORE" size={130} />
 		</Shot>
 		<Shot a={f.abroad} b={f.first} name="abroad">
 			<Photo file="cm/cm_photolithography-lab-in-the-lcn-cleanroo.jpg" dur={f.first - f.abroad} move={[0.02, 0.18, 0.02, -0.02]} grade="modern" depth={0.16} />
@@ -283,7 +296,8 @@ export const Answer: React.FC = () => (
 			</Camera>
 		</Shot>
 		<Shot a={f.fortune} b={f.belong} name="your-place">
-			<DepthPhoto file={`${M}/loc7/L03c.jpg`} keys={[{f: 0, dolly: 0.1, x: -0.02, y: -0.06}, {f: f.belong - f.fortune, dolly: 0.42, x: -0.06, y: -0.15}]} depth={0.24} grade="archive" />
+			{/* v9: "that part is yours": the viewer's India today, a family on one scooter (the 1906 street had been on twice) */}
+			<DepthPhoto file={`${M}/cm/cm_chennairanfamily-on-scooter-jpg.jpg`} keys={[{f: 0, dolly: 0.08, x: 0.02}, {f: f.belong - f.fortune, dolly: 0.26, x: -0.02}]} depth={0.2} grade="modern" />
 		</Shot>
 		{/* the question */}
 		<Shot a={f.belong} b={f.end} name="stone-alone" tag="RECONSTRUCTION">

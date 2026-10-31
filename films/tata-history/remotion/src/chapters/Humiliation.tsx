@@ -2,9 +2,7 @@ import React from 'react';
 import {AbsoluteFill} from 'remotion';
 import {Camera, colors, Desk, Footage, Kinetic, LowerThird, PortraitPlate, Print, QuoteCard, Stamp} from '../../../../../lib/remotion';
 import {DeskCalendar, YearRoller} from '../../../../../lib/remotion/kinetic';
-import {FurnaceTimeline} from '../../../../../lib/remotion/furnace/BlastFurnace';
 import {chapterClock, CounterAt, DeskPrint, Photo, Shot} from '../kit';
-import {Furnace} from './Eight';
 import {TapeFrame} from '../shots/ch3';
 import {Fading} from '../shots/ch2';
 import {CaptionCrop} from '../shots/ch4';
@@ -80,21 +78,13 @@ const f = {
 const UPCOTT = ['Why, I will undertake to eat', 'every pound of steel rail', 'they succeed in making.'];
 
 export const Humiliation: React.FC = () => {
-	const tl: FurnaceTimeline = {
-		// the camera keys need coke + 40 < blast - 30: the coke charge comes just before the blast if the words are close
-		ore: Math.min(f.lime - f.steel, f.blast - f.steel - 105) - 80,
-		limestone: Math.min(f.lime - f.steel, f.blast - f.steel - 105),
-		coke: f.blast - f.steel - 75,
-		blast: f.blast - f.steel,
-		tap: f.man - f.steel + 10,
-	};
 	return (
 		<AbsoluteFill style={{background: '#0B0B0C'}}>
 			{/* 1991 */}
 			<Shot a={0} b={f.opens} name="india-1991" fadeIn={8}>
 				<Photo file="G010a.jpg" dur={f.opens} move={[0.0, 0.2, 0.02, -0.02]} grade="modern" depth={0.14} />
 				<Kinetic text="1991" at={4} until={f.crisis - 6} display size={170} />
-				<Stamp text="INDIA · 1991" sub="A STREET THAT YEAR" at={f.crisis} until={f.opens} />
+				<Stamp text="INDIA · 1991" sub="PHOTOGRAPHED THAT YEAR" at={f.crisis} until={f.opens} />
 			</Shot>
 			<Shot a={f.opens} b={f.hands} name="bse">
 				<Photo file="G008a.jpg" dur={f.hands - f.opens} move={[0.0, 0.18, 0.0, 0.0, 0.02, -0.04]} grade="modern" depth={0.12} />
@@ -103,7 +93,7 @@ export const Humiliation: React.FC = () => {
 			{/* J.R.D. hands over to a quiet, private man */}
 			<Shot a={f.hands} b={f.ratan} name="handover">
 				<Desk />
-				<Print file={`${M}/raw/wm/F001_38_j-r-d-tata-1955-jpg.jpg`} at={4} width={400} x={-320} rotate={-2.5} seed="jrd-h" />
+				<Print file={`${M}/v8/V8_jrd_older.jpg`} at={4} width={560} x={-330} rotate={-2.5} seed="jrd-h" />
 				<Print file={`${M}/raw/wm/G002_54_ratantata-jpg.jpg`} at={f.quiet - f.hands} width={420} x={320} rotate={2} grade="modern" seed="rt-h" />
 			</Shot>
 			<Shot a={f.ratan} b={f.look} name="ratan">
@@ -130,9 +120,10 @@ export const Humiliation: React.FC = () => {
 			<Shot a={f.first} b={f.steel} name="shop-floor">
 				<TapeFrame file={`${M}/footage/Y05_steelmaking.mp4`} startFrom={92 * 60} label="JAMSHEDPUR · FROM AN OLD TATA STEEL FILM" />
 			</Shot>
-			<Shot a={f.steel} b={f.man} name="furnace" atmos={false} tag="ILLUSTRATION">
-				<Furnace tl={tl} />
-				<Stamp text="JAMSHEDPUR" sub="TWO YEARS AT THE BLAST FURNACE" at={20} until={f.lime - f.steel} />
+			{/* v9: the blast furnaces themselves, on film (the cutaway drawing is kept for chapter 3) */}
+			<Shot a={f.steel} b={f.man} name="furnace" leak={colors.ember}>
+				<TapeFrame file={`${M}/footage/Y05_steelmaking.mp4`} startFrom={100 * 60} label="JAMSHEDPUR · FROM AN OLD TATA STEEL FILM" />
+				<Stamp text="JAMSHEDPUR" sub="TWO YEARS AT THE BLAST FURNACE" at={20} until={f.man - f.steel} />
 			</Shot>
 			<Shot a={f.man} b={f.bet} name="workers">
 				<TapeFrame file={`${M}/footage/Y05_steelmaking.mp4`} startFrom={116 * 60} label="JAMSHEDPUR · FROM AN OLD TATA STEEL FILM" />
@@ -243,7 +234,7 @@ export const Humiliation: React.FC = () => {
 					<Footage file={`${M}/footage/Y11_port_talbot_close.mp4`} startFrom={900 * 60} grade="modern" />
 				</AbsoluteFill>
 				<AbsoluteFill style={{background: 'radial-gradient(ellipse 38% 32% at 50% 52%, rgba(8,8,10,0.78) 0%, transparent 100%)'}} />
-				<YearRoller from={1907} to={2007} start={20} land={f.next - f.hundred - 90} label="BRITISH STEEL · NOW TATA'S" />
+				<YearRoller from={1907} to={2007} start={20} land={f.next - f.hundred - 150} label="BRITISH STEEL · NOW TATA'S" />
 			</Shot>
 			{/* four pages of 2008 (v8: from "the next year", not over a smiling portrait that would lead into 26/11) */}
 			<Shot a={f.next} b={f.end} name="calendar-2008" atmos={false}>

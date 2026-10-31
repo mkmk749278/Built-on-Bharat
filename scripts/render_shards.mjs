@@ -52,6 +52,22 @@ const shards = [];
 for (let a = 0; a < total; a += per) shards.push([a, Math.min(total, a + per) - 1]);
 console.log(`${comp}: ${total} frames, ${shards.length} shards of ${per}, scale ${scale}`);
 
+/** Frames (0-based in `file`) darker than 45 % of both neighbours, on 64×36 mean luma (the picture-gate test). */
+const flashes = (file) => {
+	const y = execFileSync('ffmpeg', ['-v', 'error', '-i', file, '-an', '-vf', 'scale=64:36,signalstats,metadata=print:key=lavfi.signalstats.YAVG:file=-', '-f', 'null', '-'], {maxBuffer: 1 << 28})
+		.toString()
+		.split('\n')
+		.filter((l) => l.includes('YAVG'))
+		.map((l) => Number(l.split('=')[1]));
+	const dark = (v, a, b) => a > 12 && b > 12 && v < 0.45 * a && v < 0.45 * b;
+	const bad = [];
+	for (let i = 1; i < y.length - 1; i++) {
+		if (dark(y[i], y[i - 1], y[i + 1])) bad.push(i); // one frame
+		else if (i < y.length - 2 && dark(Math.max(y[i], y[i + 1]), y[i - 1], y[i + 2])) bad.push(i); // two frames
+	}
+	return bad;
+};
+
 for (const [a, b] of rest.includes('--join-only') ? [] : shards) {
 	if (only && (a < only[0] || a > only[1])) continue;
 	const name = `shard_${String(a).padStart(6, '0')}.mp4`;
@@ -59,11 +75,20 @@ for (const [a, b] of rest.includes('--join-only') ? [] : shards) {
 	if (fs.existsSync(file)) continue;
 	const tmp = path.join(out, `tmp_${name}`);
 	const t0 = Date.now();
-	await renderMedia({
-		serveUrl, composition, codec: 'h264', outputLocation: tmp, frameRange: [a, b], scale, crf, concurrency,
-		muted: true, chromiumOptions, x264Preset: 'medium', pixelFormat: 'yuv420p',
-		encodingMaxRate: maxrate, encodingBufferSize: `${parseInt(maxrate) * 2}M`,
-	});
+	// A frame captured before its image or 3D canvas was ready comes out as one near-black frame between two lit ones
+	// (v8 720p: 28 of them). Every shard is measured; a shard with a flash is rendered again, then the film fails loud.
+	for (let attempt = 1; ; attempt++) {
+		await renderMedia({
+			serveUrl, composition, codec: 'h264', outputLocation: tmp, frameRange: [a, b], scale, crf,
+			concurrency: attempt === 1 ? concurrency : 1,
+			muted: true, chromiumOptions, x264Preset: 'medium', pixelFormat: 'yuv420p',
+			encodingMaxRate: maxrate, encodingBufferSize: `${parseInt(maxrate) * 2}M`,
+		});
+		const bad = flashes(tmp);
+		if (!bad.length) break;
+		console.log(`shard ${a}-${b}: dark flash at frame ${bad.map((i) => a + i).join(', ')} (attempt ${attempt})`);
+		if (attempt === 2) throw new Error(`shard ${a}-${b} still has dark flash frames: ${bad.map((i) => a + i).join(', ')}`);
+	}
 	fs.renameSync(tmp, file);
 	console.log(`shard ${a}-${b} ${((Date.now() - t0) / (b - a + 1)).toFixed(0)} ms/frame`);
 }
