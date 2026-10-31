@@ -79,3 +79,13 @@ Method: every frame of v8 measured for black flashes. Then two frames a second w
 - The outro's Amul card sits left on purpose: the right half is kept for YouTube's end-screen elements.
 - The 1:19 Parsi photo and the 15:46 Upcott card stay: one is captioned honestly, the other is the deliberate callback.
 - The finale roll call (22:09–22:33) repeats faces on purpose: it is the callback the film is built for.
+
+## Status at session close (2026-10-31, 07:00 UTC; the owner's weekly limit)
+- All code, docs and media are merged to `main` (PRs #60, #61, #62) and in Drive `tata-history/render-media`.
+- The 720p render is running on GitHub: remotion-render run 41176709701, output `tata-history_v9_720p.mp4` in Drive
+  `tata-history/renders/`. The first v9 run failed only because the render runners had no ffmpeg for the new flash
+  check (fixed in #62).
+- **Next session, first:** confirm that run succeeded (re-run failed jobs if any). Pull the cut and run the flash
+  check over the whole file (`flashes()` in `scripts/render_shards.mjs`, or ffmpeg signalstats YAVG: no frame under
+  45 % of both neighbours). Run `scripts/word_sheets.py` on it and read the sheets for the changed shots. Then send
+  the owner the Drive link. Nothing is waiting on the owner.
