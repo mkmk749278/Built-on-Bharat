@@ -315,9 +315,11 @@ export const TwentyOhEight: React.FC = () => (
 			<Photo file="H006c.jpg" dur={f.wing - f.reopens} move={[0.0, 0.2, 0.0, 0.0, 0.02, -0.02]} grade="modern" depth={0.14} />
 			<Stamp text="21 DECEMBER 2008" sub="THE TAJ OPENS AGAIN · THE DOME TODAY" at={W('Twenty five days later', 'opens') - f.reopens} until={f.wing - f.reopens} />
 		</Shot>
+		{/* v9b: "almost two years to rebuild": the restored wing itself, inside (NDTV, August 2010, 38.2-41.7 s: the
+		    atrium skylight, a corridor), cropped above the report's caption banner and logo; a short credited excerpt */}
 		<Shot a={f.wing} b={f.end} name="palace-wing">
-			<Photo file="H006b.jpg" dur={f.end - f.wing} move={[0.0, 0.16, -0.02, 0.02]} grade="modern" depth={0.14} />
-			<Stamp text="THE PALACE WING" sub="REOPENED AUGUST 2010" at={20} until={f.end - f.wing} />
+			<ArchiveClip file={`${M}/footage/N10_taj_wing_2010.mp4`} startFrom={38.2 * 60} rate={0.7} clear={0.36} anchor="50% 0%" grade="modern" push={0.03} />
+			<Stamp text="THE PALACE WING, RESTORED" sub="REOPENED AUGUST 2010 · FROM AN NDTV REPORT" at={20} until={f.end - f.wing} />
 		</Shot>
 	</AbsoluteFill>
 );

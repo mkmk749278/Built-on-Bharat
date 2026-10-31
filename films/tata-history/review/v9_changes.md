@@ -60,6 +60,8 @@ Method: every frame of v8 measured for black flashes. Then two frames a second w
 - 16:32 "March.": the March page is down on the word.
 - 16:33 "Ford is selling two famous British brands. Jaguar and Land Rover": the two cars dealt onto the table, each lit
   on its name, then the Land Rover plant (Ford's headquarters had been on screen twice).
+- 18:03 "The old palace wing takes almost two years to rebuild": the restored wing inside (atrium skylight,
+  corridor), from NDTV's August 2010 report, which the owner fetched; cropped above its caption banner.
 - 17:33 "MORE THAN SIXTY GUESTS · SILENT IN THE DARK" at 64 px.
 - 19:47 "Back to the bank in 1924": the bank counter, not the street a fifth time.
 - 20:00 the org chart's company names about 40 % larger.
