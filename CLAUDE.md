@@ -92,6 +92,11 @@ Then:
   One photo of a person at most twice; a hero 3D object only at its moments; no third-party clip with news UI.
 - **Every frame moves.** Nothing static, ever: slow push-ins, pans, parallax, isometric tilts. A visual change every
   3.5 s or so; no flat colour or plain gradient canvas; never a slide deck (no bullet lists, text cards, icon grids).
+  Only motion a viewer can see counts: grain, dust and a faint drift are not motion (PLAYBOOK §6.3).
+- **Readable on a phone and on the family TV (2026-11-03; PLAYBOOK §6.3a):** at 1080, ≥ 44 px for what the narration
+  points to and ≥ 32 px for every other fact; small text in white or gold on a dark scrim; ₹ with Indian grouping,
+  dates day-first; every frame read at 480p size. Lists and named parts build on their own words; every document in
+  one pose. Outside review notes are checked point by point before any fix.
 - **Three layers in every frame:** a moving base (real footage, an animated archive photo, or a 3D/2.5D scene) →
   atmosphere (grain, vignette, light, dust, sparks) → kinetic accents (counters, dates, places, highlighted documents).
 - **Semantic lock:** every shot shows what the narration says at that moment. Real footage and real archives before
