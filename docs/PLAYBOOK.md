@@ -284,6 +284,12 @@ world. **That is our visual world: industrial heritage meets modern India, dark 
 1. **Continuous micro-movement in every frame (the 3.5-second rule).** Nothing static: slow push-ins (scale 1.00 →
    1.06), pans, isometric tilts, parallax. A visual change (cut, angle shift, push-in, callout) about every 3.5 s;
    no unmoving frame over 1.5 s. Exceptions: a deliberate held reaction shot that itself moves (a slow push on a face).
+   **Only motion a viewer can see counts (2026-11-03):** a push or pan that visibly moves the picture (about 3% scale
+   or 30 px across a 4 s hold at 1080), a counter rolling, a highlight drawing, a new element arriving on its word.
+   Grain, dust, a faint grid drift or a 2% zoom over 15 s do not count. The usual dead spots: after a type-on, after a
+   counter lands, after every line of a card has arrived, after a push ends on a page; each needs its next move in
+   the scene handoff. *Why:* an outside review of a finished cut on another production found 5–9 s holds that had
+   passed two reviews because they "moved" by grain and drift alone.
 2. **Easing:** `spring()` and eased `interpolate()` for everything; no linear camera or text moves.
 3. **Text ≤ 15% of the screen**: dates, places, names, numbers, 2–4-word labels. **Never** paragraphs, bullet lists,
    full-screen text cards, icon grids or summary slides. *Why (Creator):* its first film was rejected as "a boring
@@ -298,6 +304,24 @@ world. **That is our visual world: industrial heritage meets modern India, dark 
 7. **Indian faces, places and money** in every stand-in. A European street, shop or face is a reshoot. No dollars or
    euros in a rupee story.
 8. **No stock clip more than twice** a film (count clip sources, not shot rows). No anonymous office-workers-typing stock.
+
+### 6.3a Readable on a phone and on the family TV (2026-11-03)
+Most of our viewers watch on a phone, many are older, and YouTube reached over 75 million adults in India on connected
+TVs in April 2025 (YouTube India, Brandcast 2025, [blog](https://blog.google/intl/en-in/brandcast-2025-ctv-shorts-and-youtube-as-indias-new-tv/)):
+a long documentary is also watched across a room. Presbyopia is common after 40 and many people have no reading
+glasses (in a Mahabubnagar survey, 63.7% of people over 35 had presbyopia and 19% of them had glasses for it:
+Marmamula, Keeffe & Rao 2009, [record](https://repository.ias.ac.in/25039)). At the 1920×1080 authoring size:
+- **≥ 44 px** for what the narration points to (the number, the name, the 2–4-word label); **≥ 32 px** for every other
+  fact (dates, places, credits, source tags). Our serifs (Cinzel, EB Garamond) have thin strokes and EB Garamond a
+  small x-height, which video compression thins further, so these floors sit above a sans-serif channel's.
+- **Contrast on the charcoal:** white `#FFFFFF` (19:1) and gold `#D4AF37` (9:1) for small text; muted `#8E929B` (6:1)
+  and bronze `#C57D3C` (5.7:1) only at 44 px and up; always on a dark scrim over footage.
+- **Indian forms on screen:** ₹ with Indian grouping (₹1,25,000), lakh and crore, dates day-first (`15 AUG 1947`).
+- **Nothing clipped** at a panel's edge, nothing on a grid line, all text inside the central 90% of the frame.
+- **The test:** read every contact-sheet frame at 480p size (854×480); a word that isn't plainly readable there fails,
+  and a word an outside reviewer misreads is too small.
+- *Why:* small, low-contrast labels were the commonest fault in the outside visual review of 2026-11-03, and for a
+  film about India's people the viewer who remembers the event (often the oldest one) must be able to read its date.
 
 ### 6.4 Looks to avoid (extend this list)
 **The void (2026-10-28, outside review of film 1 plus our own audit):** a print, a quote card, a name or a drawing
@@ -581,6 +605,10 @@ Archive clippings, letters, gazette pages and treaties sit on a 3D isometric pla
 across the quoted words **exactly as the narration reads them**. The highlighted words fill at least a third of the
 frame width at the end of the push, so they read on a phone (Creator lesson). Shoot web sources at 2× device scale and
 remove pop-ups, cookie bars and ads before the screenshot.
+**One pose for every document in a film (2026-11-03):** archive clippings, gazettes, letters and web screenshots all
+keep this plane after the push (never flattened to a pasted-on overlay), with the same paper texture, light and
+contact shadow; a web screenshot gets the paper texture too. *Why:* on another production, filings shot from HTML
+lay flat on pure white beside scanned pages and read as overlays, not exhibits.
 
 ### 8.4 Numbers, money and dates (owner's directive, Part G.1 §2)
 - Counters spring up and land exactly on the spoken word. Rupees (₹ glyph: vendor a font subset that has it), crores and
@@ -590,7 +618,10 @@ remove pop-ups, cookie bars and ads before the screenshot.
   small, in a lower-third.
 - Timeline jumps: a year counter rolls with a whoosh; the world changes around it.
 - **No on-screen number that contradicts the narration**; a label naming a number never stays while a counter rolls past
-  it.
+  it, and a counter never disagrees with the picture beside it (one driver for both).
+- **Builds follow the words (2026-11-03):** a list, family tree, diagram or exploded view with named parts never arrives
+  all at once; each part enters on its own word. A highlight starts a few frames before its word and finishes as it
+  lands.
 
 ### 8.5 Maps and journeys
 India map (§6.6), routes drawn as glowing paths (ships, trains, flights), city pins in narration order, satellite
@@ -1140,6 +1171,10 @@ Nothing reaches the owner without passing all of these (and §1's "polished only
 - [ ] Labels on reconstructions, illustrations, colourised and stand-in footage; credits on archive footage.
 - [ ] No stock clip more than twice; Indian faces, places and money in every stand-in.
 - [ ] Text readable on a phone; nothing important under YouTube's overlays; logo bug clear of scenes.
+- [ ] **§6.3a measured:** ≥ 44 px for what the narration points to, ≥ 32 px for every other fact, small text white or
+      gold on a scrim, nothing clipped or on a grid line; every sheet frame read at 480p size.
+- [ ] **Motion a viewer can see** in every hold (§6.3 rule 1); builds on their words; every document in the one pose.
+- [ ] Outside review notes checked point by point before any fix (§16, v7b lesson; 2026-11-03).
 - [ ] India maps official; no AI garbled text anywhere.
 - [ ] No black or dead frames; music never restarts audibly; −14 LUFS, −1 dBTP checked in the final file.
 - [ ] Stream check: picture = film length; audio/video within 0.15 s.
@@ -1174,6 +1209,18 @@ To port when needed (Creator path → what to change):
 
 ## 16. Lessons log
 *(Newest first. Each lesson: what happened, the rule, why.)*
+
+**Picture lessons from an outside visual review, adapted for our viewers (2026-11-03).**
+- *What happened:* the owner shared an outside review of a finished documentary cut made on another production. We
+  checked every point against that film's code, timing and frames: five were right, five real with another cause or
+  fix, two wrong (a "typo" that was a misread of small text; CSS values and word times that were not the film's), and
+  two of its timing fixes would have made the sync worse. Our v7b lesson below held again.
+- *Rules carried over:* only motion a viewer can see counts (§6.3 rule 1); legibility floors for a phone and a family
+  TV, set higher for our serifs and our older viewers (§6.3a); one pose for every document (§8.3); builds on their
+  words, counters agreeing with their picture (§8.4).
+- *Not carried over:* its clinical HUD micro-text, blinking dots and corner readouts. Our films stay warm and
+  cinematic: few words on screen, each in the narration's own simple words.
+- *When it applies:* from the next cut of any film still in review; a cut the owner has approved is not reopened.
 
 **v9: every word against its picture, and the cut made smooth (2026-10-31).**
 - *Black flash frames (28 in the v8 720p cut, Y ≈ 25 on 0–255, one frame each, some inside a continuous shot):* the
