@@ -847,7 +847,8 @@ Tested from Creator's cloud sessions (Oct 2026). Sites change: re-test a source 
 - **B-roll:** Pixabay API (`PIXABAY_API_KEY`, set; AI-generated results hidden) → Coverr → NASA/ESA (public domain /
   CC) → archive.org Prelinger. Pexels has no new API keys (Oct 2026); the owner can download named Pexels clips on the
   phone into the film's `footage/` folder.
-- **Music:** YouTube Audio Library (owner downloads; free for monetised channels) → Pixabay music (the owner downloads;
+- **Music:** the channel's own Lyria 3.5 library (§12.1; owner, 2026-11-04) → YouTube Audio Library (owner downloads;
+  free for monetised channels) → Pixabay music (the owner downloads;
   only tracks whose page doesn't say "Content ID Registered": on Creator 15 of 21 checked were registered) →
   Incompetech (CC BY) / FreePD (CC0) → ccMixter/FMA without NC.
 - **SFX:** Openverse audio (CC0/BY; Freesound previews 403 from the cloud) → Freesound API with a token → synthesised
@@ -894,12 +895,48 @@ made-up cab display, non-Indian signals and a wrong track layout were caught by 
 - **Cinematic score:** music follows the act shape (wonder → tension → loss → rise → pride). One bed per act, crossfaded,
   never an audible restart. Indian instruments (shehnai, sitar, tabla, bansuri) where they fit the story, never as a
   cliché on every scene.
+- **Where the music comes from:** the channel's own library (§12.1), one bed per act from its `use` column.
 - **Diegetic moments:** let real sound breathe: a steam whistle, a launch countdown, a crowd, a speech. The VO stops for
   2–6 s; never talk over real dialogue.
 - **SFX on every visual event** from `cues.ts` (§10.2).
 - **Master:** stereo made explicitly before measuring, −14 LUFS integrated, −1 dBTP, one static gain plus a limiter,
   measured twice, then checked per channel in the final MP4 (`ebur128` + `astats`). *Why (Creator):* linear `loudnorm`
   backed off to −15.9 LUFS, `-ac 2` upmix lost 3 dB, and an AAC re-encode overshot a channel.
+
+### 12.1 The music library (owner, 2026-11-04)
+The channel's music is its own library, generated with **Google Lyria 3.5 through the Gemini API** (`GEMINI_API_KEY`)
+and kept in **one Drive folder: `Music-Library/bharat/`** (id `1ZA6rPmTqwmxhjyYxbsThw3rUCvW-CY09`, inside
+`Music-Library`, id `1F5r-bgyORTxPM66DXViM3Oxrrr7ukJY8`, at the top of My Drive). *Why:* Pixabay music is mostly
+Content ID registered, Incompetech's CC BY needs a printed credit, YouTube Audio Library picks need the owner's phone;
+Lyria output is ours to use (Google claims no ownership of output under the Gemini API terms), costs $0.08 a track,
+and carries an inaudible SynthID watermark.
+- **The record:** `config/music_library.csv` (id, title, what it is for, mood, tempo, key, length, loudness, the
+  instruments heard); `config/music_library.json` holds the exact prompts. Each WAV in Drive has a JSON sidecar with
+  the prompt, the Lyria interaction id and the listening check.
+- **The palette** follows the act shape: `bh01_wonder` (cold open, wonder), `bh02_ambition` (the founder's dream),
+  `bh03_tension` (against the odds), `bh04_loss` (setback, death, tragedy with dignity), `bh05_rise` (the comeback),
+  `bh06_pride` (the climax and landing), `bh07_archive` (1900s–1950s nostalgia), `bh08_modern` (today's India),
+  `bh09_furnace` (workers, mills, grit), `bh10_countdown` (suspense before a launch or a first run; **still to make**:
+  it failed five takes on choir and the run stopped at the project's spending cap, prompt already rewritten),
+  `bh11_reflective` (the outro), `bh12_shorts` (vertical Shorts, about a minute, starts at full energy).
+- **Use:** pull the beds with `scripts/music_pull.sh films/<slug>/assets/music bh01_wonder bh04_loss …`, place them
+  as slots in `sound/score.json` (one bed per act, crossfaded; a long film reuses a bed with a `from` offset, never
+  from its first bar twice), and log each in `sound/music_manifest.csv` and `media_manifest.csv`: source
+  `Music-Library/bharat/<id>.wav`, licence "Generated with Google Lyria 3.5 (Gemini API, Paid Tier); Google claims no
+  ownership of output; SynthID watermark", no credit line needed.
+- **Level:** tracks arrive mastered loud (about −11 to −13 LUFS, peaks near 0 dBFS); the mixer sets each slot by RMS
+  (§16, −23 dBFS RMS per slot, 11 dB duck). Never use a track at its delivered level.
+- **A new track** (a film needs a colour the palette lacks): add an entry to `config/music_library.json` (id
+  `bh<NN>_<name>`, a prompt with tempo, key, instruments and shape, and a one-line `brief`), run
+  `python3 scripts/lyria_music.py generate config/music_library.json films/<slug>/assets/lyria --only <id>`, listen to
+  the kept take, push it with `scripts/music_pull.sh --push films/<slug>/assets/lyria`, rebuild the CSV with
+  `scripts/lyria_music.py catalog` over the whole palette pulled from Drive, and commit both files.
+- **The check:** Lyria has no instrumental switch and often adds choir or "ooh" pads even when the prompt forbids
+  them. `lyria_music.py` has two Gemini models listen to every take: `gemini-3.5-flash` for vocals, defects, a hard
+  ending, an unsteady level and the fit to the brief, then `gemini-3.1-pro-preview` for voices alone (it caught choir
+  pads in 3 of the first 15 takes the first listener passed). A take either flags is made again, up to five times;
+  only clean takes are kept (`--attempts 5`). A person
+  still listens to a track before its first film. Never prompt for a named artist, film score or song.
 
 ## 13. Discovery and packaging: how YouTube finds our films (analysis, 2026-10-24)
 
@@ -1209,6 +1246,21 @@ To port when needed (Creator path → what to change):
 
 ## 16. Lessons log
 *(Newest first. Each lesson: what happened, the rule, why.)*
+
+**The music library (2026-11-04).**
+- *What happened:* the owner asked for all the music our films use, generated once with Lyria 3.5 and kept in one
+  Drive folder. 102 takes were billed for 38 kept tracks (61 rejected, mostly for choir or "ooh" pads and vocal chops
+  despite "Instrumental only, no vocals" in the prompt); the stronger second listener caught pads in 3 of the first 15
+  tracks the first listener had passed. Prompts that ask for sustained "pads", "drones" or "harmonics", or for
+  epic suspense, drift into choir most often: ask for bowed strings, piano, electric hum or analogue synth bass instead.
+  Asking for "about three minutes" gave beds of close to three minutes (about two by default).
+- *The rule:* music comes from the library (§12.1); every generated take is checked by ear before it is kept, and a
+  person listens before a track's first film.
+- *Why:* licence-clean music found once should never be searched for again, and a voice in the bed fights the narrator.
+- *The Gemini project has a monthly spending cap* (set in AI Studio, ai.studio/spend). The first run hit it after
+  about $8.25 of Lyria takes plus the listening checks, and every request then returned HTTP 429 "exceeded its monthly
+  spending cap". **Rule:** before a batch, estimate takes × $0.08 × about 2.7 (the first run's takes per kept track)
+  and tell the owner if it needs a higher cap.
 
 **Picture lessons from an outside visual review, adapted for our viewers (2026-11-03).**
 - *What happened:* the owner shared an outside review of a finished documentary cut made on another production. We
