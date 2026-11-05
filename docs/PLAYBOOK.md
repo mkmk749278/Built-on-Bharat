@@ -30,7 +30,7 @@ rule came from there, it says so, with the measured reason. Its files are a refe
   live and die inside the session. When a phase report needs pictures, they are finished frames from the final build.
   *Why:* the owner judges the channel's quality from what he sees; a rough sample wastes his review and lowers the bar.
 - **Google Drive is the delivery shelf.**
-  - Channel folder: **`Built-on-Bharat`** at the top of My Drive, id `1rp3UL-oAMrSoEZXHIU5L78qIukdgzR1n`
+  - Channel folder: **`Creator/Built-on-Bharat`** (moved there 2026-11-05, same id), id `1rp3UL-oAMrSoEZXHIU5L78qIukdgzR1n`
     (created 2026-10-24, a sibling of the other channel's `Creator` folder, which we never write to).
   - Layout: `Built-on-Bharat/<slug>/` one folder per film (the repo slug); `Built-on-Bharat/_Channel/` for channel art
     (logo and banner originals are there since 2026-10-24); `Built-on-Bharat/<slug>/footage/` for clips the owner

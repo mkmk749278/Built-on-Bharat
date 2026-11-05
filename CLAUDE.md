@@ -11,8 +11,10 @@ the Taj, Air India and ISRO, Bombay High and UPI, Amul and the dabbawalas, the c
 > `mkmk749278/Creator` (rules: its CLAUDE.md and PLAYBOOK §1; the directive word for word in its `docs/archive/PLAYBOOK_2026-11-05.md` Part I).
 > For the Tata release: the package follows Be Practical with Kishore's rules (title under 45 characters, no suffix;
 > Sunday 11:30 AM IST, scheduled as early as the final is ready; added to the playlist), and the final film and
-> package go to Drive `Creator/Playlists/Built-on-Bharat/tata-history/`. Working files already in
-> `Built-on-Bharat/tata-history/` stay where they are. Everything below still governs the work left on Tata.
+> package go in its Drive folder as before. **The Drive folder moved (2026-11-05):** `Built-on-Bharat` is now inside
+> `Creator` (`Creator/Built-on-Bharat/`), with the same folder id, so every script here works unchanged. When Tata is
+> released, the owner archives this repo (GitHub → Settings → Archive). Everything below still governs the work left on
+> Tata.
 
 This file holds the rules every session must follow. **`docs/PLAYBOOK.md` is the only other instruction file**: full
 specs, how-tos, the reason behind each rule, and the owner's directives word for word (Part G). Read the parts that apply
@@ -66,12 +68,11 @@ Then:
 ## Owner and workflow
 - The owner (Kishore) works **only from an Android phone**: GitHub app, Claude app, Termux, SSH to a VPS. No PC.
   Everything runs in cloud sessions, GitHub Actions or the VPS. Results must be viewable on a phone.
-- **Google Drive:** the channel folder is **`Built-on-Bharat`** at the top of My Drive (id
+- **Google Drive:** the folder is **`Creator/Built-on-Bharat`** (moved from the top of My Drive on 2026-11-05; id
   `1rp3UL-oAMrSoEZXHIU5L78qIukdgzR1n`, created 2026-10-24). One folder per film, `Built-on-Bharat/<slug>/`; channel art
   in `Built-on-Bharat/_Channel/`. Nothing loose in the top folder. Videos go up with `scripts/upload_gdrive.sh --sub
   <slug> FILE…` (needs `GDRIVE_RCLONE_TOKEN`, already set in this environment); small text files can go up through the
-  Google Drive connector. The `Creator` folder belonged to the other channel; since 2026-11-05 the final Tata film and package go to
-  `Creator/Playlists/Built-on-Bharat/tata-history/` (see the note at the top).
+  Google Drive connector.
 - **All work lands on `main`.** Each session works on its own branch, opens a PR to `main` and merges it the same day.
   Sessions can't delete branches: tell the owner which ones to delete.
 - **One session does the work (owner, 2026-10-27).** No parallel sessions for building, sourcing or rendering: they
