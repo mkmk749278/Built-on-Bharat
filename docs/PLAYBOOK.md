@@ -1598,6 +1598,16 @@ only. Both carry the generator's sparkle mark bottom-right (clean before use, §
 
 ---
 
+# Part F: Channel retired, playlist on Be Practical with Kishore (owner, 2026-11-05)
+
+The owner's master directive of 2026-11-05 retires Built on Bharat as a channel. Its films are published on Be Practical
+with Kishore in the playlist "Built on Bharat | The Industrial Backbone", with the 158-year Tata film as the anchor. The
+directive is kept word for word in `mkmk749278/Creator`, `docs/PLAYBOOK.md` Part I, and its rules and research are in
+§4a-13 there. The owner chose (2026-11-05) to finish Tata v10 here and then freeze this repo; new films are built in
+Creator. *Why this playbook still matters:* it holds the channel's Remotion craft (real ground, the archive table,
+portrait plates, the `DepthPhoto` black-flash fix, 720p review cuts, readability at 480p). Creator copies from it when
+the roadmap films move to Remotion.
+
 # Part G: the owner's directives, verbatim
 
 ## G.1 Motion directive (file `Claude.md`, received 2026-10-24)
