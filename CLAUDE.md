@@ -8,7 +8,7 @@ the Taj, Air India and ISRO, Bombay High and UPI, Amul and the dabbawalas, the c
 > **Be Practical with Kishore**, in the playlist **"Built on Bharat | The Industrial Backbone"**, with the Tata film as
 > the anchor. **This repo finishes the Tata film (v10, then the 4K master and the package) and is then frozen** as an
 > archive and a Remotion reference. Every new film, including the 25-film industrial roadmap, is built in
-> `mkmk749278/Creator` (rules: its CLAUDE.md and PLAYBOOK §4a-13; the directive verbatim in its PLAYBOOK Part I).
+> `mkmk749278/Creator` (rules: its CLAUDE.md and PLAYBOOK §1; the directive word for word in its `docs/archive/PLAYBOOK_2026-11-05.md` Part I).
 > For the Tata release: the package follows Be Practical with Kishore's rules (title under 45 characters, no suffix;
 > Sunday 11:30 AM IST, scheduled as early as the final is ready; added to the playlist), and the final film and
 > package go to Drive `Creator/Playlists/Built-on-Bharat/tata-history/`. Working files already in
