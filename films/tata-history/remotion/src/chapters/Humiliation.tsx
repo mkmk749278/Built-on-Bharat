@@ -134,7 +134,7 @@ export const Humiliation: React.FC = () => {
 				<Kinetic text="DESIGNED IN INDIA" at={f.car - f.bet + 60} until={f.indica - f.bet} size={44} y={-400} />
 			</Shot>
 			<Shot a={f.indica} b={f.book} name="indica">
-				<TapeFrame file={`${M}/footage/Y17_indica.mp4`} startFrom={2 * 60} label="THE TATA INDICA · A TELEVISION ADVERT" />
+				<TapeFrame file={`${M}/footage/Y17_indica.mp4`} startFrom={1.45 * 60} rate={0.56} label="THE TATA INDICA · A TELEVISION ADVERT" />
 				<Kinetic text="1998" at={W('The Indica, unveiled', 'nineteen') - f.indica} until={f.book - f.indica} display size={90} y={-470} />
 			</Shot>
 			<Shot a={f.book} b={f.complaints} name="bookings">

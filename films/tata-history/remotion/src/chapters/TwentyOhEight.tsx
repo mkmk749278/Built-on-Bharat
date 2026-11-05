@@ -135,6 +135,11 @@ const Lit: React.FC<{at: number}> = ({at}) => {
 	return <AbsoluteFill style={{boxShadow: `inset 0 0 0 ${6 * k}px ${colors.gold}`, background: `rgba(229,168,90,${0.1 * k})`, pointerEvents: 'none'}} />;
 };
 
+const FloorShade: React.FC<{from: number}> = ({from}) => {
+	const frame = useCurrentFrame();
+	return <AbsoluteFill style={{background: 'linear-gradient(0deg, rgba(6,6,7,0.75) 0%, rgba(6,6,7,0) 45%)', opacity: tween(frame, from - 10, from + 10, 0, 1)}} />;
+};
+
 export const TwentyOhEight: React.FC = () => (
 	<AbsoluteFill style={{background: '#0B0B0C'}}>
 		{/* JANUARY: Delhi, the Nano */}
@@ -142,7 +147,7 @@ export const TwentyOhEight: React.FC = () => (
 			<Calendar tears={[]} />
 		</Shot>
 		<Shot a={f.delhi} b={f.nano} name="expo">
-			<TapeFrame file={`${M}/footage/Y02_nano_launch_2.mp4`} startFrom={111.5 * 60} scan={false} label="DELHI AUTO EXPO · 10 JANUARY 2008" />
+			<TapeFrame file={`${M}/footage/Y02_nano_launch_2.mp4`} startFrom={115.0 * 60} scan={false} label="DELHI AUTO EXPO · 10 JANUARY 2008" />
 		</Shot>
 		<Shot a={f.nano} b={f.costs} name="nano">
 			<Photo file="H001c.jpg" dur={f.costs - f.nano} move={[0.0, 0.2, 0.02, -0.02]} grade="modern" depth={0.12} />
@@ -191,7 +196,9 @@ export const TwentyOhEight: React.FC = () => (
 			{/* v8: Land Rover's own Solihull plant on film (c.2010), not two car-show snapshots */}
 			<ArchiveClip file={`${M}/footage/J02_lr_10_60.mp4`} startFrom={0.5 * 60} rate={0.6} grade="steel" />
 			<Stamp text="SOLIHULL, ENGLAND" sub="LAND ROVER'S HOME" at={14} until={f.tata - f.landRover} />
-			<Kinetic text="TATA" at={f.tata - f.landRover} until={f.bn - f.landRover} display size={200} color={colors.gold} scrim={0.7} />
+			{/* v10: the word sits low, clear of the plant's WELCOME TO LAND ROVER sign (v9 read 'LCOME TO TATA D ROVER') */}
+			
+			<Kinetic text="TATA" at={f.tata - f.landRover} until={f.bn - f.landRover} display size={200} color={colors.gold} scrim={0.7} x={470} y={40} />
 		</Shot>
 		<Shot a={f.bn} b={f.kadle} name="two-point-three">
 			<AbsoluteFill style={{filter: 'brightness(0.55)'}}>
@@ -305,7 +312,7 @@ export const TwentyOhEight: React.FC = () => (
 		</Shot>
 		<Shot a={f.thirtyOne} b={f.three} name="candle">
 			<Footage file={`${M}/pix/pixabay_31440.mp4`} startFrom={2 * 60} grade="modern" />
-			<Kinetic text="AT LEAST 31 PEOPLE DIED AT THE TAJ" at={24} until={f.three - f.thirtyOne} size={40} y={390} />
+			<Kinetic text="AT LEAST 31 PEOPLE DIED AT THE TAJ" at={24} until={f.three - f.thirtyOne} size={52} y={360} scrim={0.6} />
 		</Shot>
 		<Shot a={f.three} b={f.reopens} name="three-days">
 			<Photo file="H012d.jpg" dur={f.reopens - f.three} move={[0.0, 0.16, 0.0, 0.0, 0.03, -0.01]} grade="modern" depth={0.12} />

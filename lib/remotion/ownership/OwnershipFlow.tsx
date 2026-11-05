@@ -105,8 +105,9 @@ export const OwnershipFlow: React.FC<{t: FlowTimeline; background?: string}> = (
 	const open = tween(frame, t.trusts - 50, t.trusts + 30, 0, 1, ease.camera);
 	// never a still frame: a slow push and a lateral drift for the whole shot (the v7b cut froze here for 10 s)
 	const drift = tween(frame, 0, durationInFrames, 0, 1, ease.camera);
-	const zoom = 1.3 - 0.28 * open + 0.07 * drift;
-	const camX = 40 - 80 * drift;
+	// v10: ends at ~0.99 so the whole chart stays inside the frame (v9 ended at 1.09 and cut HOSPITALS off the left edge)
+	const zoom = 1.3 - 0.36 * open + 0.05 * drift;
+	const camX = 20 - 40 * drift;
 	const camY = 170 * (1 - open);
 	// the share bar inside Tata Sons, to scale
 	const BW = 640;
@@ -159,8 +160,8 @@ export const OwnershipFlow: React.FC<{t: FlowTimeline; background?: string}> = (
 					</div>
 				</Card>
 				<Card x={330} y={675} w={430} h={120} at={t.dorabji} glow={`rgba(212,175,55,${0.25 + 0.3 * glint})`}>
-					<div style={{position: 'absolute', left: 34, top: 18}}>
-						<Label size={25} spacing="0.04em" color={GOLD_INK}>SIR DORABJI TATA TRUST</Label>
+					<div style={{position: 'absolute', left: 24, top: 18}}>
+						<Label size={28} spacing="0" color={GOLD_INK}>SIR DORABJI TATA TRUST</Label>
 						<div style={{fontFamily: fontStacks.numbers, fontSize: 54, fontWeight: 700, color: GOLD_INK, marginTop: 4}}>28%</div>
 					</div>
 					{/* the diamond's light: the one white point */}
@@ -168,28 +169,28 @@ export const OwnershipFlow: React.FC<{t: FlowTimeline; background?: string}> = (
 						<path d={`M0 ${-26 - 10 * glint} L4 -4 L${26 + 10 * glint} 0 L4 4 L0 ${26 + 10 * glint} L-4 4 L${-26 - 10 * glint} 0 L-4 -4 Z`} fill={GOLD_INK} transform={`rotate(${frame * 0.15})`} />
 					</svg>
 				</Card>
-				<Card x={1560} y={470} w={460} h={90} at={t.shapoorji}>
-					<div style={{position: 'absolute', left: 30, top: 30}}>
-						<Label size={26} spacing="0.03em">SHAPOORJI PALLONJI GROUP</Label>
+				<Card x={1560} y={470} w={540} h={96} at={t.shapoorji}>
+					<div style={{position: 'absolute', left: 28, top: 28}}>
+						<Label size={33} spacing="0.02em">SHAPOORJI PALLONJI GROUP</Label>
 					</div>
 				</Card>
-				<Card x={1560} y={620} w={460} h={90} at={t.companies}>
-					<div style={{position: 'absolute', left: 30, top: 30}}>
-						<Label size={29} spacing="0.08em">TATA'S OWN COMPANIES</Label>
+				<Card x={1560} y={620} w={540} h={96} at={t.companies}>
+					<div style={{position: 'absolute', left: 28, top: 28}}>
+						<Label size={33} spacing="0.06em">TATA'S OWN COMPANIES</Label>
 					</div>
 				</Card>
 				{COMPANIES.map((c, i) => (
 					<Card key={c} x={260 + i * 280} y={965} w={264} h={88} at={t.sons + 50 + i * 8} dim={0.85}>
 						<div style={{position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
 							{/* v9: readable on a phone (22 px read as about 6 px in the 720p cut) */}
-							<Label size={27} spacing="0.02em">{c}</Label>
+							<Label size={28} spacing="0">{c}</Label>
 						</div>
 					</Card>
 				))}
 				{['HOSPITALS', 'RESEARCH', 'SCHOLARSHIPS'].map((c, i) => (
-					<Card key={c} x={130 + i * 210} y={805} w={200} h={60} at={t.out + i * 12} glow="rgba(181,84,42,0.25)">
+					<Card key={c} x={170 + i * 250} y={808} w={238} h={64} at={t.out + i * 12} glow="rgba(181,84,42,0.25)">
 						<div style={{position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-							<Label size={24} spacing="0.04em" color={OCHRE}>{c}</Label>
+							<Label size={27} spacing="0" color={OCHRE}>{c}</Label>
 						</div>
 					</Card>
 				))}

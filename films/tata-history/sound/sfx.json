@@ -137,36 +137,6 @@
    "why": "the stone alone on the counter"
   },
   {
-   "at": "s:490",
-   "sfx": "riser",
-   "gain_db": -12,
-   "why": "sting: forge light"
-  },
-  {
-   "at": "s:490+1.2",
-   "sfx": "metal_slam",
-   "gain_db": -6,
-   "why": "sting: the strike"
-  },
-  {
-   "at": "s:490+1.23",
-   "sfx": "sparks",
-   "gain_db": -12,
-   "why": "sting: spark burst"
-  },
-  {
-   "at": "s:490+1.97",
-   "sfx": "glint",
-   "gain_db": -12,
-   "why": "sting: glint across the metal"
-  },
-  {
-   "at": "s:490+2.5",
-   "sfx": "whoosh",
-   "gain_db": -14,
-   "why": "sting: name and tagline"
-  },
-  {
    "at": "s:85",
    "to": "s:92",
    "sfx": "harbour",
@@ -245,6 +215,30 @@
    "sfx": "cleanroom",
    "gain_db": -30,
    "why": "v8 foley: cleanroom air"
+  },
+  {
+   "at": "s:490-0.1",
+   "sfx": "riser",
+   "gain_db": -14,
+   "why": "BPK sting: circuit lines draw in"
+  },
+  {
+   "at": "s:490+0.3",
+   "sfx": "whoosh",
+   "gain_db": -14,
+   "why": "BPK sting: BE PRACTICAL rises"
+  },
+  {
+   "at": "s:490+0.8",
+   "sfx": "glint",
+   "gain_db": -14,
+   "why": "BPK sting: the circuit dots light"
+  },
+  {
+   "at": "s:490+1.95",
+   "sfx": "glint",
+   "gain_db": -15,
+   "why": "BPK sting: light sweep across the name"
   }
  ]
 }

@@ -290,14 +290,18 @@ export const OnBlack: React.FC<{lines: {text: string; size?: number; at: number;
 	const push = 1 + 0.06 * tween(frame, 0, durationInFrames, 0, 1, ease.camera); // never a still frame
 	return (
 		<AbsoluteFill style={{background: bg, alignItems: 'center', justifyContent: 'center', flexDirection: 'column', gap: 26, transform: `translate(${x}px, ${y}px) scale(${push})`}}>
+			{/* v10: a soft dark scrim behind the words, so they read at 7:1 over a photograph too (480p test) */}
+			<AbsoluteFill style={{background: 'radial-gradient(ellipse 46% 30% at 50% 50%, rgba(5,5,6,0.62) 0%, rgba(5,5,6,0.35) 55%, transparent 100%)'}} />
 			{lines.map((l) => (
 				<div
 					key={l.text}
 					style={{
 						fontFamily: l.serif ? fontStacks.display : fontStacks.text,
-						fontSize: l.size ?? 34,
-						letterSpacing: l.serif ? '0.16em' : '0.4em',
-						color: 'rgba(236,226,206,0.88)',
+						fontSize: Math.max(34, l.size ?? 34),
+						letterSpacing: l.serif ? '0.16em' : '0.3em',
+						color: '#F4ECDC',
+						textShadow: '0 2px 14px rgba(0,0,0,0.9), 0 0 3px rgba(0,0,0,0.85)',
+						position: 'relative',
 						opacity: tween(frame, l.at, l.at + 30, 0, 1) * tween(frame, l.until ?? 1e9, (l.until ?? 1e9) + 30, 1, 0),
 					}}
 				>

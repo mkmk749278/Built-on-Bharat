@@ -26,7 +26,7 @@ export const ProfitBar: React.FC<{fillAt: number; share: number}> = ({fillAt, sh
 			<Camera seed="bar" drift={1.5} keys={[{f: 0, scale: 1.0, x: 20}, {f: durationInFrames, scale: 1.07, x: -20}]}>
 				<AbsoluteFill style={{alignItems: 'center', justifyContent: 'center'}}>
 					<div style={{width: W}}>
-						<div style={{fontFamily: fontStacks.text, fontWeight: 700, fontSize: 32, letterSpacing: '0.2em', color: INK, marginBottom: 26, opacity: grow}}>
+						<div style={{fontFamily: fontStacks.text, fontWeight: 700, fontSize: 40, letterSpacing: '0.16em', color: INK, marginBottom: 26, opacity: grow}}>
 							DIVIDENDS SENT UP TO TATA SONS · LAST YEAR
 						</div>
 						<div
@@ -47,7 +47,7 @@ export const ProfitBar: React.FC<{fillAt: number; share: number}> = ({fillAt, sh
 								{Math.round(fill * 100)}%
 								<span style={{fontFamily: fontStacks.text, fontWeight: 700, fontSize: 40, letterSpacing: '0.2em', marginLeft: 26, color: INK}}>T.C.S.</span>
 							</div>
-							<div style={{position: 'absolute', right: 0, top: 36, textAlign: 'right', fontFamily: fontStacks.text, fontWeight: 700, fontSize: 30, letterSpacing: '0.16em', color: INK, opacity: tween(frame, fillAt + 90, fillAt + 120, 0, 1)}}>
+							<div style={{position: 'absolute', right: 0, top: 36, textAlign: 'right', fontFamily: fontStacks.text, fontWeight: 700, fontSize: 38, letterSpacing: '0.12em', color: INK, opacity: tween(frame, fillAt + 90, fillAt + 120, 0, 1)}}>
 								EVERY OTHER TATA COMPANY
 							</div>
 						</div>
@@ -68,7 +68,7 @@ export const SplitPair: React.FC<{left: string; right: string; leftLabel: string
 		return (
 			<div style={{position: 'absolute', top: 0, bottom: 0, width: 954, left: side < 0 ? 0 : 966, overflow: 'hidden', opacity: o}}>
 				<Img src={staticFile(`${M}/${file}`)} style={{width: '100%', height: '100%', objectFit: 'cover', transform: `scale(${s}) translateX(${side * -10 * tween(frame, 0, durationInFrames, 0, 1)}px)`, filter: grades[grade].filter}} />
-				<div style={{position: 'absolute', left: 0, right: 0, bottom: 70, textAlign: 'center', fontFamily: fontStacks.text, fontSize: 24, letterSpacing: '0.34em', color: 'rgba(240,232,214,0.9)', textShadow: '0 2px 12px rgba(0,0,0,0.9)'}}>{label}</div>
+				<div style={{position: 'absolute', left: 0, right: 0, bottom: 70, textAlign: 'center', fontFamily: fontStacks.text, fontSize: 36, letterSpacing: '0.26em', color: 'rgba(240,232,214,0.9)', textShadow: '0 2px 12px rgba(0,0,0,0.9)'}}>{label}</div>
 			</div>
 		);
 	};

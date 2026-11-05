@@ -1,10 +1,12 @@
 import React from 'react';
 import {AbsoluteFill, Audio, staticFile} from 'remotion';
-import {LogoBug, loadBrandFonts} from '../../../../lib/remotion';
+import {loadBrandFonts} from '../../../../lib/remotion';
+import {ChannelBug, loadBpkFonts} from './bpk';
 import {T, VO_FILE} from './timing';
 import {FilmGround} from './v7';
 
 loadBrandFonts();
+loadBpkFonts();
 
 /**
  * One chapter as its own composition (for stills and shard renders): the chapter's picture plus the VO from the
@@ -18,7 +20,7 @@ export const chapterComp = (title: string, Body: React.FC): React.FC => {
 				<FilmGround>
 					<Body />
 				</FilmGround>
-				<LogoBug />
+				<ChannelBug hideFrom={T.chapter('Outro').start - start} />
 				<Audio src={staticFile(VO_FILE)} startFrom={start} endAt={end} />
 			</AbsoluteFill>
 		);

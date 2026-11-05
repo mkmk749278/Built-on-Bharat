@@ -186,7 +186,7 @@ export const Pilot: React.FC = () => (
 		</Shot>
 		<Shot a={f.job} b={f.know} name="shop-floor">
 			<Camera seed="sanand" keys={[{f: 0, scale: 1.02}, {f: f.know - f.job, scale: 1.1}]}>
-				<Footage file={`${M}/footage/Y18_sanand_plant.mp4`} startFrom={60 * 60} grade="modern" />
+				<Footage file={`${M}/footage/Y18_sanand_plant.mp4`} startFrom={51.3 * 60} grade="modern" />
 			</Camera>
 			<Stamp text="A TATA MOTORS SHOP FLOOR" sub="TODAY" at={30} until={f.know - f.job} />
 		</Shot>

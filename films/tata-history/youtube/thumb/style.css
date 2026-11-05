@@ -1,0 +1,8 @@
+@font-face{font-family:Inter;font-weight:800;src:url(inter-latin-800-normal.woff2)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:1280px;height:720px;overflow:hidden;background:#07090d;font-family:Inter,sans-serif;position:relative}
+.img{position:absolute;background-size:cover;background-position:center}
+.words{position:absolute;font-weight:800;color:#fff;line-height:.95;letter-spacing:-.01em;text-shadow:0 6px 0 rgba(0,0,0,.55),0 0 28px rgba(0,0,0,.85)}
+.y{color:#ffd34d}
+.logo{position:absolute;right:22px;top:22px;width:74px;height:74px;border-radius:12px;box-shadow:0 4px 16px rgba(0,0,0,.6)}
+.tag{position:absolute;font-weight:800;font-size:22px;letter-spacing:.18em;color:#f3e6cc;background:rgba(0,0,0,.55);padding:6px 12px;border-radius:6px}
