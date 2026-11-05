@@ -134,7 +134,7 @@ export const Answer: React.FC = () => (
 		</Shot>
 		<Shot a={f.out} b={f.research} name="hospitals">
 			{/* v8: a second Tata hospital (Tata Steel's own film), not the Tata Memorial atrium a third time */}
-			<ArchiveClip file={`${M}/footage/Y04_j100_99_60.mp4`} startFrom={1 * 60} rate={0.6} clear={0.26} anchor="50% 0%" grade="modern" />
+			<ArchiveClip file={`${M}/footage/Y04_j100_99_60.mp4`} startFrom={1.68 * 60} rate={0.6} clear={0.26} anchor="50% 0%" grade="modern" />
 			<Stamp text="TATA MAIN HOSPITAL" sub="JAMSHEDPUR" at={6} until={f.research - f.out} />
 		</Shot>
 		<Shot a={f.research} b={f.scholarships} name="research">
@@ -171,7 +171,7 @@ export const Answer: React.FC = () => (
 		{/* 2026 */}
 		<Shot a={f.cracks} b={f.board} name="cracks">
 			<Photo file="raw/wm/A005_02_bombay-house-mast-jpg.jpg" dur={f.board - f.cracks} move={[0.06, 0.26, -0.02, 0.02]} grade="steel" depth={0.14} />
-			<Kinetic text="2026" at={10} until={f.fight - f.cracks} display size={150} scrim={0.5} />
+			<Kinetic text="2026" at={10} until={f.fight - f.cracks} display size={150} scrim={0.5} y={-330} />
 			{/* v9: the words sit in the sky band above the façade, on a dimmed plate, not across the BOMBAY HOUSE sign */}
 			<Dimmer at={f.who - f.cracks - 10} />
 			<Kinetic text="WHO RUNS TATA" at={f.who - f.cracks} until={f.board - f.cracks} display size={74} y={-360} scrim={0.6} />
@@ -179,7 +179,6 @@ export const Answer: React.FC = () => (
 		</Shot>
 		<Shot a={f.board} b={f.trusts} name="the-vote" tag="ILLUSTRATION">
 			<BoardNote voteAt={W('This September, the Tata Sons board', 'voted') - f.board} noAt={f.voted - f.board} dur={f.trusts - f.board} />
-			<Stamp text="SEPTEMBER 2026" sub="THE TATA SONS BOARD" at={10} until={f.voted - f.board} />
 		</Shot>
 		<Shot a={f.trusts} b={f.catch} name="two-sides">
 			<OwnershipFlow t={FLOW_HELD} />
@@ -207,7 +206,7 @@ export const Answer: React.FC = () => (
 		{/* Dholera: the same bet, again */}
 		<Shot a={f.work} b={f.dholera} name="work-goes-on">
 			<Camera seed="sanand9" keys={[{f: 0, scale: 1.02}, {f: f.dholera - f.work, scale: 1.1}]}>
-				<ArchiveClip file={`${M}/footage/Y18_sanand_plant.mp4`} startFrom={60 * 60} clear={0.14} anchor="50% 0%" grade="modern" push={0} />
+				<ArchiveClip file={`${M}/footage/Y18_sanand_plant.mp4`} startFrom={75.85 * 60} clear={0.14} anchor="50% 0%" grade="modern" push={0} />
 			</Camera>
 			<Stamp text="A TATA FACTORY" sub="TODAY" at={20} until={f.dholera - f.work} />
 		</Shot>
@@ -222,7 +221,7 @@ export const Answer: React.FC = () => (
 			<AbsoluteFill style={{filter: 'brightness(0.45)'}}>
 				<DholeraFromOrbit landAt={-1} />
 			</AbsoluteFill>
-			<CounterAt to={91000} start={6} land={70} prefix="Rs. " suffix=" CRORE" size={130} />
+			<CounterAt to={91000} start={6} land={70} prefix="₹" suffix=" CRORE" size={130} />
 		</Shot>
 		<Shot a={f.abroad} b={f.first} name="abroad">
 			<Photo file="cm/cm_photolithography-lab-in-the-lcn-cleanroo.jpg" dur={f.first - f.abroad} move={[0.02, 0.18, 0.02, -0.02]} grade="modern" depth={0.16} />

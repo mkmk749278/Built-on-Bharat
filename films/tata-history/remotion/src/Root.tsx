@@ -1,6 +1,7 @@
 import React from 'react';
 import {AbsoluteFill, Audio, Composition, Sequence, staticFile} from 'remotion';
-import {LogoBug, loadBrandFonts} from '../../../../lib/remotion';
+import {loadBrandFonts} from '../../../../lib/remotion';
+import {ChannelBug, loadBpkFonts} from './bpk';
 import {chapterComp} from './Chapter';
 // ---- S2 dev systems (begin) ----
 import {DevCompositions} from './dev';
@@ -10,6 +11,7 @@ import {FPS, T, VO_FILE} from './timing';
 import {FilmGround} from './v7';
 
 loadBrandFonts();
+loadBpkFonts();
 
 const Film: React.FC = () => (
 	<AbsoluteFill style={{background: '#0D0E11'}}>
@@ -23,7 +25,7 @@ const Film: React.FC = () => (
 				);
 			})}
 		</FilmGround>
-		<LogoBug />
+		<ChannelBug hideFrom={T.chapter('Outro').start} />
 		<Audio src={staticFile(VO_FILE)} />
 	</AbsoluteFill>
 );

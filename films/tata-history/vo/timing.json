@@ -130,9 +130,9 @@
   {
    "block": 19,
    "start": 1371.502,
-   "end": 1383.112,
+   "end": 1382.222,
    "startFrame": 82290,
-   "endFrame": 82987
+   "endFrame": 82933
   }
  ],
  "sentences": [
@@ -6510,53 +6510,66 @@
    "id": 490,
    "block": 19,
    "chapter": "Outro",
-   "text": "This is Built on Bharat.",
-   "tagged": "This is Built on Bharat.",
+   "text": "This is Be Practical with Kishore.",
+   "tagged": "This is Be Practical with Kishore.",
    "start": 1371.502,
-   "end": 1373.202,
-   "ratio": 1.14,
-   "margin": 1.536,
+   "end": 1373.262,
+   "ratio": 1.0,
+   "margin": 0.0,
    "startFrame": 82290,
-   "endFrame": 82392
+   "endFrame": 82396
   },
   {
    "id": 491,
    "block": 19,
    "chapter": "Outro",
-   "text": "The empires, and the habits, that built a nation.",
-   "tagged": "The empires, and the habits, that built a nation.",
-   "start": 1373.549,
-   "end": 1376.501,
-   "ratio": 0.93,
-   "margin": 0.758,
-   "startFrame": 82413,
-   "endFrame": 82590
+   "text": "Next in our Built on Bharat series.",
+   "tagged": "Next in our Built on Bharat series.",
+   "start": 1373.712,
+   "end": 1375.802,
+   "ratio": 1.0,
+   "margin": 0.0,
+   "startFrame": 82423,
+   "endFrame": 82548
   },
   {
    "id": 492,
    "block": 19,
    "chapter": "Outro",
-   "text": "Next in Empires of India.",
-   "tagged": "Next in Empires of India.",
-   "start": 1376.928,
-   "end": 1378.643,
-   "ratio": 1.09,
-   "margin": 0.758,
-   "startFrame": 82616,
-   "endFrame": 82719
+   "text": "How did a group of farmers in a small Gujarat town build Amul?",
+   "tagged": "How did a group of farmers in a small Gujarat town build Amul?",
+   "start": 1376.232,
+   "end": 1380.172,
+   "ratio": 1.0,
+   "margin": 0.0,
+   "startFrame": 82574,
+   "endFrame": 82810
   },
   {
    "id": 493,
    "block": 19,
    "chapter": "Outro",
-   "text": "How did a group of farmers in a small Gujarat town build Amul?",
-   "tagged": "How did a group of farmers in a small Gujarat town build Amul?",
-   "start": 1379.066,
-   "end": 1382.937,
-   "ratio": 0.96,
-   "margin": 3.009,
-   "startFrame": 82744,
-   "endFrame": 82976
+   "text": "Stay practical.",
+   "tagged": "Stay practical.",
+   "start": 1380.652,
+   "end": 1381.422,
+   "ratio": 1.0,
+   "margin": 0.0,
+   "startFrame": 82839,
+   "endFrame": 82885
+  },
+  {
+   "id": 494,
+   "block": 19,
+   "chapter": "Outro",
+   "text": "Jai Hind.",
+   "tagged": "Jai Hind.",
+   "start": 1381.772,
+   "end": 1382.222,
+   "ratio": 1.0,
+   "margin": 0.0,
+   "startFrame": 82906,
+   "endFrame": 82933
   }
  ],
  "words": [
@@ -36580,257 +36593,241 @@
    "s": 490,
    "w": "This",
    "start": 1371.502,
-   "end": 1371.83,
+   "end": 1371.633,
    "startFrame": 82290,
-   "endFrame": 82310
+   "endFrame": 82298
   },
   {
    "s": 490,
    "w": "is",
-   "start": 1371.83,
-   "end": 1372.039,
-   "startFrame": 82310,
-   "endFrame": 82322
+   "start": 1371.633,
+   "end": 1371.801,
+   "startFrame": 82298,
+   "endFrame": 82308
   },
   {
    "s": 490,
+   "w": "Be",
+   "start": 1371.801,
+   "end": 1371.97,
+   "startFrame": 82308,
+   "endFrame": 82318
+  },
+  {
+   "s": 490,
+   "w": "Practical",
+   "start": 1371.97,
+   "end": 1372.532,
+   "startFrame": 82318,
+   "endFrame": 82352
+  },
+  {
+   "s": 490,
+   "w": "with",
+   "start": 1372.532,
+   "end": 1372.813,
+   "startFrame": 82352,
+   "endFrame": 82369
+  },
+  {
+   "s": 490,
+   "w": "Kishore.",
+   "start": 1372.813,
+   "end": 1373.262,
+   "startFrame": 82369,
+   "endFrame": 82396
+  },
+  {
+   "s": 491,
+   "w": "Next",
+   "start": 1373.712,
+   "end": 1374.011,
+   "startFrame": 82423,
+   "endFrame": 82441
+  },
+  {
+   "s": 491,
+   "w": "in",
+   "start": 1374.011,
+   "end": 1374.19,
+   "startFrame": 82441,
+   "endFrame": 82451
+  },
+  {
+   "s": 491,
+   "w": "our",
+   "start": 1374.19,
+   "end": 1374.429,
+   "startFrame": 82451,
+   "endFrame": 82466
+  },
+  {
+   "s": 491,
    "w": "Built",
-   "start": 1372.039,
-   "end": 1372.427,
-   "startFrame": 82322,
-   "endFrame": 82346
+   "start": 1374.429,
+   "end": 1374.787,
+   "startFrame": 82466,
+   "endFrame": 82487
   },
   {
-   "s": 490,
+   "s": 491,
    "w": "on",
-   "start": 1372.427,
-   "end": 1372.635,
-   "startFrame": 82346,
-   "endFrame": 82358
-  },
-  {
-   "s": 490,
-   "w": "Bharat.",
-   "start": 1372.635,
-   "end": 1373.202,
-   "startFrame": 82358,
-   "endFrame": 82392
+   "start": 1374.787,
+   "end": 1374.966,
+   "startFrame": 82487,
+   "endFrame": 82498
   },
   {
    "s": 491,
-   "w": "The",
-   "start": 1373.549,
-   "end": 1373.827,
-   "startFrame": 82413,
-   "endFrame": 82430
+   "w": "Bharat",
+   "start": 1374.966,
+   "end": 1375.384,
+   "startFrame": 82498,
+   "endFrame": 82523
   },
   {
    "s": 491,
-   "w": "empires,",
-   "start": 1373.827,
-   "end": 1374.353,
-   "startFrame": 82430,
-   "endFrame": 82461
-  },
-  {
-   "s": 491,
-   "w": "and",
-   "start": 1374.484,
-   "end": 1374.698,
-   "startFrame": 82469,
-   "endFrame": 82482
-  },
-  {
-   "s": 491,
-   "w": "the",
-   "start": 1374.698,
-   "end": 1374.912,
-   "startFrame": 82482,
-   "endFrame": 82495
-  },
-  {
-   "s": 491,
-   "w": "habits,",
-   "start": 1374.912,
-   "end": 1375.269,
-   "startFrame": 82495,
-   "endFrame": 82516
-  },
-  {
-   "s": 491,
-   "w": "that",
-   "start": 1375.441,
-   "end": 1375.684,
-   "startFrame": 82526,
-   "endFrame": 82541
-  },
-  {
-   "s": 491,
-   "w": "built",
-   "start": 1375.684,
-   "end": 1375.971,
-   "startFrame": 82541,
-   "endFrame": 82558
-  },
-  {
-   "s": 491,
-   "w": "a",
-   "start": 1375.971,
-   "end": 1376.082,
-   "startFrame": 82558,
-   "endFrame": 82565
-  },
-  {
-   "s": 491,
-   "w": "nation.",
-   "start": 1376.082,
-   "end": 1376.501,
-   "startFrame": 82565,
-   "endFrame": 82590
+   "w": "series.",
+   "start": 1375.384,
+   "end": 1375.802,
+   "startFrame": 82523,
+   "endFrame": 82548
   },
   {
    "s": 492,
-   "w": "Next",
-   "start": 1376.928,
-   "end": 1377.248,
-   "startFrame": 82616,
+   "w": "How",
+   "start": 1376.232,
+   "end": 1376.486,
+   "startFrame": 82574,
+   "endFrame": 82589
+  },
+  {
+   "s": 492,
+   "w": "did",
+   "start": 1376.486,
+   "end": 1376.74,
+   "startFrame": 82589,
+   "endFrame": 82604
+  },
+  {
+   "s": 492,
+   "w": "a",
+   "start": 1376.74,
+   "end": 1376.867,
+   "startFrame": 82604,
+   "endFrame": 82612
+  },
+  {
+   "s": 492,
+   "w": "group",
+   "start": 1376.867,
+   "end": 1377.249,
+   "startFrame": 82612,
    "endFrame": 82635
   },
   {
    "s": 492,
-   "w": "in",
-   "start": 1377.248,
-   "end": 1377.451,
+   "w": "of",
+   "start": 1377.249,
+   "end": 1377.439,
    "startFrame": 82635,
-   "endFrame": 82647
+   "endFrame": 82646
   },
   {
    "s": 492,
-   "w": "Empires",
-   "start": 1377.451,
-   "end": 1377.945,
-   "startFrame": 82647,
+   "w": "farmers",
+   "start": 1377.439,
+   "end": 1377.948,
+   "startFrame": 82646,
    "endFrame": 82677
   },
   {
    "s": 492,
-   "w": "of",
-   "start": 1377.945,
-   "end": 1378.149,
+   "w": "in",
+   "start": 1377.948,
+   "end": 1378.138,
    "startFrame": 82677,
-   "endFrame": 82689
+   "endFrame": 82688
   },
   {
    "s": 492,
-   "w": "India.",
-   "start": 1378.149,
-   "end": 1378.643,
-   "startFrame": 82689,
+   "w": "a",
+   "start": 1378.138,
+   "end": 1378.266,
+   "startFrame": 82688,
+   "endFrame": 82696
+  },
+  {
+   "s": 492,
+   "w": "small",
+   "start": 1378.266,
+   "end": 1378.647,
+   "startFrame": 82696,
    "endFrame": 82719
   },
   {
-   "s": 493,
-   "w": "How",
-   "start": 1379.066,
-   "end": 1379.32,
-   "startFrame": 82744,
-   "endFrame": 82759
-  },
-  {
-   "s": 493,
-   "w": "did",
-   "start": 1379.32,
-   "end": 1379.575,
-   "startFrame": 82759,
-   "endFrame": 82774
-  },
-  {
-   "s": 493,
-   "w": "a",
-   "start": 1379.575,
-   "end": 1379.716,
-   "startFrame": 82774,
-   "endFrame": 82783
-  },
-  {
-   "s": 493,
-   "w": "group",
-   "start": 1379.716,
-   "end": 1380.083,
-   "startFrame": 82783,
-   "endFrame": 82805
-  },
-  {
-   "s": 493,
-   "w": "of",
-   "start": 1380.083,
-   "end": 1380.281,
-   "startFrame": 82805,
-   "endFrame": 82817
-  },
-  {
-   "s": 493,
-   "w": "farmers",
-   "start": 1380.281,
-   "end": 1380.761,
-   "startFrame": 82817,
-   "endFrame": 82846
-  },
-  {
-   "s": 493,
-   "w": "in",
-   "start": 1380.761,
-   "end": 1380.959,
-   "startFrame": 82846,
-   "endFrame": 82858
-  },
-  {
-   "s": 493,
-   "w": "a",
-   "start": 1380.959,
-   "end": 1381.1,
-   "startFrame": 82858,
-   "endFrame": 82866
-  },
-  {
-   "s": 493,
-   "w": "small",
-   "start": 1381.1,
-   "end": 1381.468,
-   "startFrame": 82866,
-   "endFrame": 82888
-  },
-  {
-   "s": 493,
+   "s": 492,
    "w": "Gujarat",
-   "start": 1381.468,
-   "end": 1381.948,
-   "startFrame": 82888,
-   "endFrame": 82917
+   "start": 1378.647,
+   "end": 1379.155,
+   "startFrame": 82719,
+   "endFrame": 82749
   },
   {
-   "s": 493,
+   "s": 492,
    "w": "town",
-   "start": 1381.948,
-   "end": 1382.259,
-   "startFrame": 82917,
-   "endFrame": 82936
+   "start": 1379.155,
+   "end": 1379.473,
+   "startFrame": 82749,
+   "endFrame": 82768
   },
   {
-   "s": 493,
+   "s": 492,
    "w": "build",
-   "start": 1382.259,
-   "end": 1382.626,
-   "startFrame": 82936,
-   "endFrame": 82958
+   "start": 1379.473,
+   "end": 1379.854,
+   "startFrame": 82768,
+   "endFrame": 82791
+  },
+  {
+   "s": 492,
+   "w": "Amul?",
+   "start": 1379.854,
+   "end": 1380.172,
+   "startFrame": 82791,
+   "endFrame": 82810
   },
   {
    "s": 493,
-   "w": "Amul?",
-   "start": 1382.626,
-   "end": 1382.937,
-   "startFrame": 82958,
-   "endFrame": 82976
+   "w": "Stay",
+   "start": 1380.652,
+   "end": 1380.909,
+   "startFrame": 82839,
+   "endFrame": 82855
+  },
+  {
+   "s": 493,
+   "w": "practical.",
+   "start": 1380.909,
+   "end": 1381.422,
+   "startFrame": 82855,
+   "endFrame": 82885
+  },
+  {
+   "s": 494,
+   "w": "Jai",
+   "start": 1381.772,
+   "end": 1381.972,
+   "startFrame": 82906,
+   "endFrame": 82918
+  },
+  {
+   "s": 494,
+   "w": "Hind.",
+   "start": 1381.972,
+   "end": 1382.222,
+   "startFrame": 82918,
+   "endFrame": 82933
   }
  ],
  "chapters": [
@@ -36890,6 +36887,6 @@
    "startFrame": 82290
   }
  ],
- "duration": 1383.196,
- "durationInFrames": 82992
+ "duration": 1386.456,
+ "durationInFrames": 83187
 }

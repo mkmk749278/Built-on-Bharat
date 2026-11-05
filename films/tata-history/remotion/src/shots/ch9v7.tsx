@@ -72,10 +72,10 @@ export const BoardNote: React.FC<{voteAt: number; noAt: number; dur: number}> = 
 		<Table seed="board" keys={[{f: 0, scale: 1.55, y: 20}, {f: dur, scale: 1.75, y: 40}]}>
 			<TableDoc w={24} h={15} x={0} y={0} rot={-1.5} at={4} paper="#ECE4D0" seed="bnote">
 				<div style={{padding: '56px 64px', fontFamily: fontStacks.numbers, color: '#2B2318'}}>
-					<div style={{fontFamily: fontStacks.display, fontSize: 34, letterSpacing: '0.24em'}}>TATA SONS BOARD · SEPTEMBER 2026</div>
+					<div style={{fontFamily: fontStacks.display, fontSize: 40, letterSpacing: '0.18em', lineHeight: 1.3}}>TATA SONS BOARD<br />SEPTEMBER 2026</div>
 					<div style={{height: 2, background: '#2B2318', opacity: 0.6, margin: '16px 0 34px'}} />
-					<div style={{fontSize: 36, opacity: line(voteAt)}}>ANOTHER TERM FOR N. CHANDRASEKARAN</div>
-					<div style={{position: 'relative', fontSize: 36, marginTop: 26, opacity: line(noAt), width: 'fit-content'}}>
+					<div style={{fontSize: 40, opacity: line(voteAt)}}>ANOTHER TERM FOR N. CHANDRASEKARAN</div>
+					<div style={{position: 'relative', fontSize: 40, marginTop: 26, opacity: line(noAt), width: 'fit-content'}}>
 						<span style={{position: 'absolute', left: -8, top: '10%', height: '80%', width: `calc(${mark * 100}% + 16px)`, background: colors.gold, opacity: 0.45, borderRadius: 4}} />
 						<span style={{position: 'relative'}}>NOEL TATA · VOTED NO</span>
 					</div>

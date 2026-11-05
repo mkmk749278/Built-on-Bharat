@@ -457,7 +457,9 @@ What do you think? Tell me in the comments.
 **Block 17 of 17** · 164 characters · save as `vo/tata-history-b17.mp3`
 
 ```
-This is Built on Bharat. The empires, and the habits, that built a nation.
+This is Be Practical with Kishore.
 
-Next in Empires of India. How did a group of farmers in a small Gujarat town build Amul?
+Next in our Built on Bharat series. How did a group of farmers in a small Gujarat town build Amul?
+
+Stay practical. Jai Hind.
 ```
