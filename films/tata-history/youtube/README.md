@@ -3,7 +3,12 @@
 Upload file: Drive `Built-on-Bharat/tata-history/renders/tata-history_v10_4k60.mp4` (3840×2160, 60 fps, 23:06).
 Channel: **Be Practical with Kishore**, playlist **Built on Bharat** (episode 1).
 
-## Title (main search phrase "history of Tata" in the first 40 characters)
+## Title (LOCKED by the owner, 2026-11-06: Option A, the rich-list paradox)
+```
+Why No Tata Is on the Rich List (The 150-Year Story)
+```
+Thumbnail for this title: `thumbnail_rich_list.jpg` (WHERE'S TATA?: Jamsetji Tata beside an unnamed rich list with
+Tata outside it; no real names or figures on the list). Superseded title, kept for reference:
 ```
 The Entire History of Tata (and the Diamond That Saved It) | Be Practical With Kishore
 ```
